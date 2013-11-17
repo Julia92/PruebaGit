@@ -24,7 +24,9 @@ public abstract class BreederBase
     implements IBreeder {
   /** String containing the CVS revision. Read out via reflection!*/
   private final static String CVS_REVISION = "$Revision: 1.10 $";
-
+  /*Agregando algo para ver los cambios (commits)*/
+  public int select;
+  
   public BreederBase() {
   }
 
