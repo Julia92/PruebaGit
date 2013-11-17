@@ -26,8 +26,8 @@ public abstract class BreederBase
   private final static String CVS_REVISION = "$Revision: 1.10 $";
   /*Agregando algo para ver los cambios (commits)*/
   public int select;
-  /*Merge*/
-  public int merge;
+  /*Merge, ahora si está creado*/
+  public int merge_2;
   /
   
   public BreederBase() {
