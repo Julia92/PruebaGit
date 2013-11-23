@@ -1,0 +1,204 @@
+.TH "org.jgap.eval.PopulationHistoryIndexed" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.eval.PopulationHistoryIndexed \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPopulationHistoryIndexed\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddPopulation\fP (int a_index, int a_event, \fBPopulationContext\fP a_pop)"
+.br
+.ti -1c
+.RI "Map< Integer, \fBPopulationContext\fP > \fBgetPopulations\fP (int a_index)"
+.br
+.ti -1c
+.RI "Map< Integer, Map > \fBgetPopulationsHistory\fP ()"
+.br
+.ti -1c
+.RI "\fBPopulationContext\fP \fBgetPopulation\fP (int a_index, int a_event)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Map< Integer, Map > \fBm_evolutions\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.2 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Manages populations\&. See class EvolutionMonitor for a description of events and how populations are tracked\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file PopulationHistoryIndexed\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.eval\&.PopulationHistoryIndexed\&.PopulationHistoryIndexed ()\fC [inline]\fP"
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 35 of file PopulationHistoryIndexed\&.java\&.
+.PP
+References org\&.jgap\&.eval\&.PopulationHistoryIndexed\&.m_evolutions\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.eval\&.PopulationHistoryIndexed\&.addPopulation (inta_index, inta_event, \fBPopulationContext\fPa_pop)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP evolution number or any other appropriate index 
+.br
+\fIa_event\fP unique identifier of an event (if needed)\&. See class EvolutionMonitor for event constants 
+.br
+\fIa_pop\fP the population to add
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 49 of file PopulationHistoryIndexed\&.java\&.
+.SS "\fBPopulationContext\fP org\&.jgap\&.eval\&.PopulationHistoryIndexed\&.getPopulation (inta_index, inta_event)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP evolution number or any other appropriate index 
+.br
+\fIa_event\fP unique identifier of an event (if needed)\&. See class EvolutionMonitor for event constants 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the population together with its context
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 90 of file PopulationHistoryIndexed\&.java\&.
+.PP
+References org\&.jgap\&.eval\&.PopulationHistoryIndexed\&.getPopulations()\&.
+.SS "Map<Integer, \fBPopulationContext\fP> org\&.jgap\&.eval\&.PopulationHistoryIndexed\&.getPopulations (inta_index)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP evolution number or any other appropriate index 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Map with tuples <event, \fBPopulation\fP>
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 66 of file PopulationHistoryIndexed\&.java\&.
+.PP
+Referenced by org\&.jgap\&.eval\&.PopulationHistoryIndexed\&.getPopulation()\&.
+.SS "Map<Integer, Map> org\&.jgap\&.eval\&.PopulationHistoryIndexed\&.getPopulationsHistory ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+complete population history
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 76 of file PopulationHistoryIndexed\&.java\&.
+.PP
+References org\&.jgap\&.eval\&.PopulationHistoryIndexed\&.m_evolutions\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.eval\&.PopulationHistoryIndexed\&.CVS_REVISION = '$Revision: 1\&.2 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file PopulationHistoryIndexed\&.java\&.
+.SS "Map<Integer, Map> org\&.jgap\&.eval\&.PopulationHistoryIndexed\&.m_evolutions\fC [private]\fP"
+
+.PP
+Definition at line 28 of file PopulationHistoryIndexed\&.java\&.
+.PP
+Referenced by org\&.jgap\&.eval\&.PopulationHistoryIndexed\&.getPopulationsHistory(), and org\&.jgap\&.eval\&.PopulationHistoryIndexed\&.PopulationHistoryIndexed()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,111 @@
+.TH "org.jgap.event.IEventManager" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.event.IEventManager \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable\&.
+.PP
+Inherited by \fBorg\&.jgap\&.event\&.EventManager\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBaddEventListener\fP (String a_eventName, \fBGeneticEventListener\fP a_eventListenerToAdd)"
+.br
+.ti -1c
+.RI "void \fBremoveEventListener\fP (String a_eventName, \fBGeneticEventListener\fP a_eventListenerToRemove)"
+.br
+.ti -1c
+.RI "void \fBfireGeneticEvent\fP (\fBGeneticEvent\fP a_eventToFire)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Interface for event managers (e\&.g\&., see class \fBEventManager\fP)\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.PP
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file IEventManager\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.event\&.IEventManager\&.addEventListener (Stringa_eventName, \fBGeneticEventListener\fPa_eventListenerToAdd)"
+Adds a new listener that will be notified when the event represented by the given name is fired\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_eventName\fP the name of the event to which the given listener should be subscribed\&. Standard events are represented by constants in the \fBGeneticEvent\fP class 
+.br
+\fIa_eventListenerToAdd\fP the genetic listener to subscribe to notifications of the given event
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 (since 1\&.0 in \fBEventManager\fP) 
+.RE
+.PP
+
+.SS "void org\&.jgap\&.event\&.IEventManager\&.fireGeneticEvent (\fBGeneticEvent\fPa_eventToFire)"
+Fires a genetic event\&. All subscribers of that particular event type (as determined by the name of the event) will be notified of it having been fired\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_eventToFire\fP the representation of the genetic event to fire
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 (since 1\&.0 in \fBEventManager\fP) 
+.RE
+.PP
+
+.SS "void org\&.jgap\&.event\&.IEventManager\&.removeEventListener (Stringa_eventName, \fBGeneticEventListener\fPa_eventListenerToRemove)"
+Removes the given listener from subscription of the indicated event\&. The listener will no longer be notified when the given event occurs\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_eventName\fP the name of the event to which the given listener should be removed\&. Standard events are represented by constants in the \fBGeneticEvent\fP class 
+.br
+\fIa_eventListenerToRemove\fP the genetic listener to unsubscribe from notifications of the given event
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 (since 1\&.0 in \fBEventManager\fP) 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

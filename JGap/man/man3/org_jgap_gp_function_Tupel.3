@@ -1,0 +1,234 @@
+.TH "org.jgap.gp.function.Tupel" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.function.Tupel \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandGene\fP, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTupel\fP (final GPConfiguration a_conf, Class[] a_types)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBTupel\fP (final GPConfiguration a_conf, Class[] a_types, Class a_returnType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "Object \fBexecute_object\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Class[] \fBm_types\fP"
+.br
+.ti -1c
+.RI "Object[] \fBm_values\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.2 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Holds a tupel of n values of arbitrary type\&. Useful to server as a return type with more than one component\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file Tupel\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.function\&.Tupel\&.Tupel (final GPConfigurationa_conf, Class[]a_types) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 34 of file Tupel\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.Tupel\&.clone(), org\&.jgap\&.gp\&.function\&.Tupel\&.compareTo(), and org\&.jgap\&.gp\&.function\&.Tupel\&.equals()\&.
+.SS "org\&.jgap\&.gp\&.function\&.Tupel\&.Tupel (final GPConfigurationa_conf, Class[]a_types, Classa_returnType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 39 of file Tupel\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.Tupel\&.m_types\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.gp\&.function\&.Tupel\&.clone ()\fC [inline]\fP"
+Clones the object\&. Simple and straight forward implementation here\&.
+.PP
+\fBReturns:\fP
+.RS 4
+cloned instance of this object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 119 of file Tupel\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.getReturnType(), org\&.jgap\&.gp\&.function\&.Tupel\&.m_types, and org\&.jgap\&.gp\&.function\&.Tupel\&.Tupel()\&.
+.SS "int org\&.jgap\&.gp\&.function\&.Tupel\&.compareTo (Objecta_other)\fC [inline]\fP"
+The compareTo-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+-1, 0, 1
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 79 of file Tupel\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.Tupel\&.m_types, and org\&.jgap\&.gp\&.function\&.Tupel\&.Tupel()\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.Tupel\&.equals (Objecta_other)\fC [inline]\fP"
+The equals-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the objects are seen as equal
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 99 of file Tupel\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.Tupel\&.m_types, and org\&.jgap\&.gp\&.function\&.Tupel\&.Tupel()\&.
+.SS "Object org\&.jgap\&.gp\&.function\&.Tupel\&.execute_object (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 60 of file Tupel\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.Tupel\&.m_values, and org\&.jgap\&.gp\&.CommandGene\&.size()\&.
+.SS "String org\&.jgap\&.gp\&.function\&.Tupel\&.getName ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+textual name of this command
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 56 of file Tupel\&.java\&.
+.SS "String org\&.jgap\&.gp\&.function\&.Tupel\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 46 of file Tupel\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.Tupel\&.m_types\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.function\&.Tupel\&.CVS_REVISION = '$Revision: 1\&.2 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 28 of file Tupel\&.java\&.
+.SS "Class [] org\&.jgap\&.gp\&.function\&.Tupel\&.m_types\fC [private]\fP"
+
+.PP
+Definition at line 30 of file Tupel\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.Tupel\&.clone(), org\&.jgap\&.gp\&.function\&.Tupel\&.compareTo(), org\&.jgap\&.gp\&.function\&.Tupel\&.equals(), org\&.jgap\&.gp\&.function\&.Tupel\&.toString(), and org\&.jgap\&.gp\&.function\&.Tupel\&.Tupel()\&.
+.SS "Object [] org\&.jgap\&.gp\&.function\&.Tupel\&.m_values\fC [private]\fP"
+
+.PP
+Definition at line 32 of file Tupel\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.Tupel\&.execute_object()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

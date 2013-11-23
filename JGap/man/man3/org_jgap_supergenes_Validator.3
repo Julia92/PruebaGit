@@ -1,0 +1,137 @@
+.TH "org.jgap.supergenes.Validator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.supergenes.Validator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.supergenes\&.SupergeneValidator\fP\&.
+.PP
+Inherited by org\&.jgap\&.supergenes\&.TestValidator\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBValidator\fP (\fBConfiguration\fP a_conf)"
+.br
+.ti -1c
+.RI "abstract boolean \fBisValid\fP (\fBGene\fP[] a_genes, \fBSupergene\fP a_for_supergene)"
+.br
+.ti -1c
+.RI "String \fBgetPersistent\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetFromPersistent\fP (final String a_from)"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBgetConfiguration\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "transient \fBConfiguration\fP \fBm_conf\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.9 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The abstract supergeneValidator, hiding the getPersisten() and \fBsetFromPersistent()\fP methods that are not always required\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file Validator\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.supergenes\&.Validator\&.Validator (\fBConfiguration\fPa_conf)\fC [inline]\fP"
+
+.PP
+Definition at line 28 of file Validator\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.Validator\&.m_conf\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBConfiguration\fP org\&.jgap\&.supergenes\&.Validator\&.getConfiguration ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the configuration used
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 52 of file Validator\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.Validator\&.m_conf\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.SupergenePersistentRepresentationTest\&.testValidatorPers_0()\&.
+.SS "String org\&.jgap\&.supergenes\&.Validator\&.getPersistent ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+persistent string representation (if needed) of this validator\&. The method name is different allowing the same class to implement both \fBSupergene\fP and supergeneValidator\&.
+.RE
+.PP
+ The default implementation returns an empty string\&. 
+.PP
+Implements \fBorg\&.jgap\&.supergenes\&.SupergeneValidator\fP\&.
+.PP
+Definition at line 37 of file Validator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.SupergenePersistentRepresentationTest\&.testValidatorPers_0()\&.
+.SS "abstract boolean org\&.jgap\&.supergenes\&.Validator\&.isValid (\fBGene\fP[]a_genes, \fBSupergene\fPa_for_supergene)\fC [pure virtual]\fP"
+Return true if this gene combination is valid for the given supergene  
+.PP
+Implements \fBorg\&.jgap\&.supergenes\&.SupergeneValidator\fP\&.
+.SS "void org\&.jgap\&.supergenes\&.Validator\&.setFromPersistent (final Stringa_from)\fC [inline]\fP"
+The default implementation does nothing\&. 
+.PP
+Definition at line 43 of file Validator\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.supergenes\&.Validator\&.CVS_REVISION = '$Revision: 1\&.9 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 24 of file Validator\&.java\&.
+.SS "transient \fBConfiguration\fP org\&.jgap\&.supergenes\&.Validator\&.m_conf\fC [private]\fP"
+
+.PP
+Definition at line 26 of file Validator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.Validator\&.getConfiguration(), and org\&.jgap\&.supergenes\&.Validator\&.Validator()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

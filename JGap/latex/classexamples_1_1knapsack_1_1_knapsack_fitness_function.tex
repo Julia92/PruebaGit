@@ -1,0 +1,380 @@
+\hypertarget{classexamples_1_1knapsack_1_1_knapsack_fitness_function}{\section{examples.\-knapsack.\-Knapsack\-Fitness\-Function Class Reference}
+\label{classexamples_1_1knapsack_1_1_knapsack_fitness_function}\index{examples.\-knapsack.\-Knapsack\-Fitness\-Function@{examples.\-knapsack.\-Knapsack\-Fitness\-Function}}
+}
+
+
+Inheritance diagram for examples.\-knapsack.\-Knapsack\-Fitness\-Function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classexamples_1_1knapsack_1_1_knapsack_fitness_function__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for examples.\-knapsack.\-Knapsack\-Fitness\-Function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classexamples_1_1knapsack_1_1_knapsack_fitness_function__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a74d93b0e78bd322b56e751c1bae51582}{Knapsack\-Fitness\-Function} (double a\-\_\-knapsack\-Volume)
+\item 
+double \hyperlink{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a8d003722d94dff21269c417e3691025b}{evaluate} (I\-Chromosome a\-\_\-subject)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \hyperlink{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a161d2eb9b204b94ad6f764055905c559}{get\-Total\-Volume} (I\-Chromosome a\-\_\-potential\-Solution)
+\item 
+static int \hyperlink{classexamples_1_1knapsack_1_1_knapsack_fitness_function_ac53f5254719f0b8ac26ea871edbecca2}{get\-Number\-Of\-Items\-At\-Gene} (I\-Chromosome a\-\_\-potential\-Solution, int a\-\_\-position)
+\item 
+static int \hyperlink{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a036f9f8d3684828777849e73ff3c650f}{get\-Total\-Number\-Of\-Items} (I\-Chromosome a\-\_\-potential\-Solution)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final double \hyperlink{classexamples_1_1knapsack_1_1_knapsack_fitness_function_ac8acc4adf78a41b5209d5cd185179c4a}{M\-A\-X\-\_\-\-B\-O\-U\-N\-D} = 1000000000.\-0d
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a083c94f14dba01fc8162b7df78aa0409}{volume\-Difference\-Bonus} (double a\-\_\-max\-Fitness, double a\-\_\-volume\-Difference)
+\item 
+double \hyperlink{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a979b3b045933eaafa8f26d3d3e2b6d76}{compute\-Item\-Number\-Penalty} (double a\-\_\-max\-Fitness, int a\-\_\-items)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final double \hyperlink{classexamples_1_1knapsack_1_1_knapsack_fitness_function_aadc99ed7dd059c4858f1288d60a6f46f}{m\-\_\-knapsack\-Volume}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a5c29ecffcf941f87258d2a20311fe914}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-5 \$\char`\"{}
+\item 
+static final double \hyperlink{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a72ab901a09447f44aa3e1660af2a5b0f}{Z\-E\-R\-O\-\_\-\-D\-I\-F\-F\-E\-R\-E\-N\-C\-E\-\_\-\-F\-I\-T\-N\-E\-S\-S} = Math.\-sqrt(\hyperlink{classexamples_1_1knapsack_1_1_knapsack_fitness_function_ac8acc4adf78a41b5209d5cd185179c4a}{M\-A\-X\-\_\-\-B\-O\-U\-N\-D})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fitness function for the knapsack example.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-3 
+\end{DoxySince}
+
+
+Definition at line 20 of file Knapsack\-Fitness\-Function.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a74d93b0e78bd322b56e751c1bae51582}{\index{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}!Knapsack\-Fitness\-Function@{Knapsack\-Fitness\-Function}}
+\index{Knapsack\-Fitness\-Function@{Knapsack\-Fitness\-Function}!examples::knapsack::KnapsackFitnessFunction@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}}
+\subsubsection[{Knapsack\-Fitness\-Function}]{\setlength{\rightskip}{0pt plus 5cm}examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-Knapsack\-Fitness\-Function (
+\begin{DoxyParamCaption}
+\item[{double}]{a\-\_\-knapsack\-Volume}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a74d93b0e78bd322b56e751c1bae51582}
+
+
+Definition at line 31 of file Knapsack\-Fitness\-Function.\-java.
+
+
+
+References examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-m\-\_\-knapsack\-Volume, and examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-M\-A\-X\-\_\-\-B\-O\-U\-N\-D.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a979b3b045933eaafa8f26d3d3e2b6d76}{\index{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}!compute\-Item\-Number\-Penalty@{compute\-Item\-Number\-Penalty}}
+\index{compute\-Item\-Number\-Penalty@{compute\-Item\-Number\-Penalty}!examples::knapsack::KnapsackFitnessFunction@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}}
+\subsubsection[{compute\-Item\-Number\-Penalty}]{\setlength{\rightskip}{0pt plus 5cm}double examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-compute\-Item\-Number\-Penalty (
+\begin{DoxyParamCaption}
+\item[{double}]{a\-\_\-max\-Fitness, }
+\item[{int}]{a\-\_\-items}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a979b3b045933eaafa8f26d3d3e2b6d76}
+Calculates the penalty to apply to the fitness value based on the amount of items in the solution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-max\-Fitness} & upper boundary for fitness value possible \\
+\hline
+{\em a\-\_\-items} & number of items in the solution \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a penalty for the fitness value based on the number of items
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-3 
+\end{DoxySince}
+
+
+Definition at line 121 of file Knapsack\-Fitness\-Function.\-java.
+
+
+
+Referenced by examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-evaluate().
+
+\hypertarget{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a8d003722d94dff21269c417e3691025b}{\index{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!examples::knapsack::KnapsackFitnessFunction@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}}
+\subsubsection[{evaluate}]{\setlength{\rightskip}{0pt plus 5cm}double examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-evaluate (
+\begin{DoxyParamCaption}
+\item[{I\-Chromosome}]{a\-\_\-subject}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a8d003722d94dff21269c417e3691025b}
+Determine the fitness of the given Chromosome instance. The higher the return value, the more fit the instance. This method should always return the same fitness value for two equivalent Chromosome instances.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-subject} & the Chromosome instance to evaluate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a positive double reflecting the fitness rating of the given Chromosome
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-3 
+\end{DoxySince}
+
+
+Definition at line 51 of file Knapsack\-Fitness\-Function.\-java.
+
+
+
+References examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-compute\-Item\-Number\-Penalty(), examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-get\-Total\-Number\-Of\-Items(), examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-get\-Total\-Volume(), examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-m\-\_\-knapsack\-Volume, examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-M\-A\-X\-\_\-\-B\-O\-U\-N\-D, and examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-volume\-Difference\-Bonus().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a8d003722d94dff21269c417e3691025b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classexamples_1_1knapsack_1_1_knapsack_fitness_function_ac53f5254719f0b8ac26ea871edbecca2}{\index{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}!get\-Number\-Of\-Items\-At\-Gene@{get\-Number\-Of\-Items\-At\-Gene}}
+\index{get\-Number\-Of\-Items\-At\-Gene@{get\-Number\-Of\-Items\-At\-Gene}!examples::knapsack::KnapsackFitnessFunction@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}}
+\subsubsection[{get\-Number\-Of\-Items\-At\-Gene}]{\setlength{\rightskip}{0pt plus 5cm}static int examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-get\-Number\-Of\-Items\-At\-Gene (
+\begin{DoxyParamCaption}
+\item[{I\-Chromosome}]{a\-\_\-potential\-Solution, }
+\item[{int}]{a\-\_\-position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classexamples_1_1knapsack_1_1_knapsack_fitness_function_ac53f5254719f0b8ac26ea871edbecca2}
+Retrieves the number of items represented by the given potential solution at the given gene position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-potential\-Solution} & the potential solution to evaluate \\
+\hline
+{\em a\-\_\-position} & the gene position to evaluate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of items represented by the potential solution at the given gene position
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-3 
+\end{DoxySince}
+
+
+Definition at line 168 of file Knapsack\-Fitness\-Function.\-java.
+
+
+
+Referenced by examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-get\-Total\-Number\-Of\-Items(), and examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-get\-Total\-Volume().
+
+\hypertarget{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a036f9f8d3684828777849e73ff3c650f}{\index{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}!get\-Total\-Number\-Of\-Items@{get\-Total\-Number\-Of\-Items}}
+\index{get\-Total\-Number\-Of\-Items@{get\-Total\-Number\-Of\-Items}!examples::knapsack::KnapsackFitnessFunction@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}}
+\subsubsection[{get\-Total\-Number\-Of\-Items}]{\setlength{\rightskip}{0pt plus 5cm}static int examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-get\-Total\-Number\-Of\-Items (
+\begin{DoxyParamCaption}
+\item[{I\-Chromosome}]{a\-\_\-potential\-Solution}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a036f9f8d3684828777849e73ff3c650f}
+Returns the total number of items represented by all of the genes in the given potential solution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-potential\-Solution} & the potential solution to evaluate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the total number of items represented by the given Chromosome
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-3 
+\end{DoxySince}
+
+
+Definition at line 185 of file Knapsack\-Fitness\-Function.\-java.
+
+
+
+References examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-get\-Number\-Of\-Items\-At\-Gene().
+
+
+
+Referenced by examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-evaluate().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a036f9f8d3684828777849e73ff3c650f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a161d2eb9b204b94ad6f764055905c559}{\index{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}!get\-Total\-Volume@{get\-Total\-Volume}}
+\index{get\-Total\-Volume@{get\-Total\-Volume}!examples::knapsack::KnapsackFitnessFunction@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}}
+\subsubsection[{get\-Total\-Volume}]{\setlength{\rightskip}{0pt plus 5cm}static double examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-get\-Total\-Volume (
+\begin{DoxyParamCaption}
+\item[{I\-Chromosome}]{a\-\_\-potential\-Solution}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a161d2eb9b204b94ad6f764055905c559}
+Calculates the total amount of change (in cents) represented by the given potential solution and returns that amount.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-potential\-Solution} & the potential solution to evaluate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the total amount of change (in cents) represented by the given solution
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-3 
+\end{DoxySince}
+
+
+Definition at line 147 of file Knapsack\-Fitness\-Function.\-java.
+
+
+
+References examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-get\-Number\-Of\-Items\-At\-Gene().
+
+
+
+Referenced by examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-evaluate().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a161d2eb9b204b94ad6f764055905c559_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a083c94f14dba01fc8162b7df78aa0409}{\index{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}!volume\-Difference\-Bonus@{volume\-Difference\-Bonus}}
+\index{volume\-Difference\-Bonus@{volume\-Difference\-Bonus}!examples::knapsack::KnapsackFitnessFunction@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}}
+\subsubsection[{volume\-Difference\-Bonus}]{\setlength{\rightskip}{0pt plus 5cm}double examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-volume\-Difference\-Bonus (
+\begin{DoxyParamCaption}
+\item[{double}]{a\-\_\-max\-Fitness, }
+\item[{double}]{a\-\_\-volume\-Difference}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a083c94f14dba01fc8162b7df78aa0409}
+Bonus calculation of fitness value. 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-max\-Fitness} & maximum fitness value appliable \\
+\hline
+{\em a\-\_\-volume\-Difference} & volume difference in ccm for the items problem \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bonus for given volume difference
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-3 
+\end{DoxySince}
+
+
+Definition at line 98 of file Knapsack\-Fitness\-Function.\-java.
+
+
+
+Referenced by examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-evaluate().
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a5c29ecffcf941f87258d2a20311fe914}{\index{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!examples::knapsack::KnapsackFitnessFunction@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-5 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a5c29ecffcf941f87258d2a20311fe914}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 23 of file Knapsack\-Fitness\-Function.\-java.
+
+\hypertarget{classexamples_1_1knapsack_1_1_knapsack_fitness_function_aadc99ed7dd059c4858f1288d60a6f46f}{\index{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}!m\-\_\-knapsack\-Volume@{m\-\_\-knapsack\-Volume}}
+\index{m\-\_\-knapsack\-Volume@{m\-\_\-knapsack\-Volume}!examples::knapsack::KnapsackFitnessFunction@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}}
+\subsubsection[{m\-\_\-knapsack\-Volume}]{\setlength{\rightskip}{0pt plus 5cm}final double examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-m\-\_\-knapsack\-Volume\hspace{0.3cm}{\ttfamily [private]}}}\label{classexamples_1_1knapsack_1_1_knapsack_fitness_function_aadc99ed7dd059c4858f1288d60a6f46f}
+
+
+Definition at line 25 of file Knapsack\-Fitness\-Function.\-java.
+
+
+
+Referenced by examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-evaluate(), and examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-Knapsack\-Fitness\-Function().
+
+\hypertarget{classexamples_1_1knapsack_1_1_knapsack_fitness_function_ac8acc4adf78a41b5209d5cd185179c4a}{\index{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}!M\-A\-X\-\_\-\-B\-O\-U\-N\-D@{M\-A\-X\-\_\-\-B\-O\-U\-N\-D}}
+\index{M\-A\-X\-\_\-\-B\-O\-U\-N\-D@{M\-A\-X\-\_\-\-B\-O\-U\-N\-D}!examples::knapsack::KnapsackFitnessFunction@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}}
+\subsubsection[{M\-A\-X\-\_\-\-B\-O\-U\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}final double examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-M\-A\-X\-\_\-\-B\-O\-U\-N\-D = 1000000000.\-0d\hspace{0.3cm}{\ttfamily [static]}}}\label{classexamples_1_1knapsack_1_1_knapsack_fitness_function_ac8acc4adf78a41b5209d5cd185179c4a}
+
+
+Definition at line 27 of file Knapsack\-Fitness\-Function.\-java.
+
+
+
+Referenced by examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-evaluate(), examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-Knapsack\-Fitness\-Function(), and examples.\-knapsack.\-Knapsack\-Main.\-main().
+
+\hypertarget{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a72ab901a09447f44aa3e1660af2a5b0f}{\index{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}!Z\-E\-R\-O\-\_\-\-D\-I\-F\-F\-E\-R\-E\-N\-C\-E\-\_\-\-F\-I\-T\-N\-E\-S\-S@{Z\-E\-R\-O\-\_\-\-D\-I\-F\-F\-E\-R\-E\-N\-C\-E\-\_\-\-F\-I\-T\-N\-E\-S\-S}}
+\index{Z\-E\-R\-O\-\_\-\-D\-I\-F\-F\-E\-R\-E\-N\-C\-E\-\_\-\-F\-I\-T\-N\-E\-S\-S@{Z\-E\-R\-O\-\_\-\-D\-I\-F\-F\-E\-R\-E\-N\-C\-E\-\_\-\-F\-I\-T\-N\-E\-S\-S}!examples::knapsack::KnapsackFitnessFunction@{examples\-::knapsack\-::\-Knapsack\-Fitness\-Function}}
+\subsubsection[{Z\-E\-R\-O\-\_\-\-D\-I\-F\-F\-E\-R\-E\-N\-C\-E\-\_\-\-F\-I\-T\-N\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}final double examples.\-knapsack.\-Knapsack\-Fitness\-Function.\-Z\-E\-R\-O\-\_\-\-D\-I\-F\-F\-E\-R\-E\-N\-C\-E\-\_\-\-F\-I\-T\-N\-E\-S\-S = Math.\-sqrt({\bf M\-A\-X\-\_\-\-B\-O\-U\-N\-D})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classexamples_1_1knapsack_1_1_knapsack_fitness_function_a72ab901a09447f44aa3e1660af2a5b0f}
+
+
+Definition at line 29 of file Knapsack\-Fitness\-Function.\-java.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/examples/src/examples/knapsack/\hyperlink{knapsack_2_knapsack_fitness_function_8java}{Knapsack\-Fitness\-Function.\-java}\end{DoxyCompactItemize}

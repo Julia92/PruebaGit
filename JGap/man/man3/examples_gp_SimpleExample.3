@@ -1,0 +1,124 @@
+.TH "examples.gp.SimpleExample" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.SimpleExample \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.GPProblem\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBSimpleFitnessFunction\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGPGenotype\fP \fBcreate\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBstart\fP ()  throws Exception "
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)  throws Exception "
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBVariable\fP \fBvx\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Simple example of Genetic Programming to discover the formula (X > 0) OR (X == -8) OR (X == - 5) given a set of inputs from -10 to 10 and expected outputs (true or false)\&.
+.PP
+The fitness function used in this example cares about deviation from the expected result as well as the complexity of the solution (the easier the solution, the better it is, mutatis mutandis)\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 32 of file SimpleExample\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBGPGenotype\fP examples\&.gp\&.SimpleExample\&.create () throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+newly created GPGenotype 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIInvalidConfigurationException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.GPProblem\fP\&.
+.PP
+Definition at line 37 of file SimpleExample\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.BooleanClass, org\&.jgap\&.gp\&.GPProblem\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.IntegerClass, and examples\&.gp\&.SimpleExample\&.vx\&.
+.PP
+Referenced by examples\&.gp\&.SimpleExample\&.start()\&.
+.SS "static void examples\&.gp\&.SimpleExample\&.main (String[]args) throws Exception\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 133 of file SimpleExample\&.java\&.
+.SS "void examples\&.gp\&.SimpleExample\&.start () throws Exception\fC [inline]\fP"
+New best solution found\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_firedEvent\fP GeneticEvent
+.RE
+.PP
+
+.PP
+Definition at line 78 of file SimpleExample\&.java\&.
+.PP
+References examples\&.gp\&.SimpleExample\&.create()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBVariable\fP examples\&.gp\&.SimpleExample\&.vx\fC [static]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 35 of file SimpleExample\&.java\&.
+.PP
+Referenced by examples\&.gp\&.SimpleExample\&.create()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

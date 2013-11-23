@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="_step_8java" kind="file">
+    <compoundname>Step.java</compoundname>
+    <innerclass refid="classexamples_1_1gp_1_1symbolic_regression_1_1_step" prot="public">examples::gp::symbolicRegression::Step</innerclass>
+    <innerclass refid="interfaceexamples_1_1gp_1_1symbolic_regression_1_1_step_1_1_compatible" prot="protected">examples::gp::symbolicRegression::Step::Compatible</innerclass>
+    <innernamespace refid="namespaceexamples_1_1gp_1_1symbolic_regression">examples::gp::symbolicRegression</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>JGAP.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>JGAP<sp/>offers<sp/>a<sp/>dual<sp/>license<sp/>model<sp/>containing<sp/>the<sp/>LGPL<sp/>as<sp/>well<sp/>as<sp/>the<sp/>MPL.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>For<sp/>licensing<sp/>information<sp/>please<sp/>see<sp/>the<sp/>file<sp/>license.txt<sp/>included<sp/>with<sp/>JGAP</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>or<sp/>have<sp/>a<sp/>look<sp/>at<sp/>the<sp/>top<sp/>of<sp/>class<sp/>org.jgap.Chromosome<sp/>which<sp/>representatively</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>includes<sp/>the<sp/>JGAP<sp/>license<sp/>policy<sp/>applicable<sp/>for<sp/>any<sp/>file<sp/>delivered<sp/>with<sp/>JGAP.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">examples.gp.symbolicRegression;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>hakank:<sp/>This<sp/>is<sp/>my<sp/>take<sp/>of<sp/>the<sp/>Step<sp/>function.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>I<sp/>just<sp/>copied<sp/>the<sp/>org.jgap.gp.function.Log<sp/>and<sp/>changed</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/>accordingly...</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"></highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.*;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.gp.*;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.gp.impl.*;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.util.*;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classexamples_1_1gp_1_1symbolic_regression_1_1_step" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classexamples_1_1gp_1_1symbolic_regression_1_1_step" kindref="compound">Step</ref></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>MathCommand<sp/>implements<sp/>ICloneable<sp/>{</highlight></codeline>
+<codeline lineno="34" refid="classexamples_1_1gp_1_1symbolic_regression_1_1_step_1ad7ba20d56408811914c460566b21ed76" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classexamples_1_1gp_1_1symbolic_regression_1_1_step_1ad7ba20d56408811914c460566b21ed76" kindref="member">CVS_REVISION</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$Revision:<sp/>1.1<sp/>$&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classexamples_1_1gp_1_1symbolic_regression_1_1_step_1a30f9d4632901b7a5aa952dad7a94150f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classexamples_1_1gp_1_1symbolic_regression_1_1_step_1a30f9d4632901b7a5aa952dad7a94150f" kindref="member">Step</ref>(</highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_configuration" kindref="compound">GPConfiguration</ref><sp/>a_conf,<sp/>Class<sp/>a_returnType)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>super(a_conf,<sp/>1,<sp/>a_returnType);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classexamples_1_1gp_1_1symbolic_regression_1_1_step_1a364eb64b3f23fb1984883d8ed02395c8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classexamples_1_1gp_1_1symbolic_regression_1_1_step_1a364eb64b3f23fb1984883d8ed02395c8" kindref="member">toString</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;step<sp/>&amp;1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="classexamples_1_1gp_1_1symbolic_regression_1_1_step_1a05beb929058339dee7021386bae7dd47" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classexamples_1_1gp_1_1symbolic_regression_1_1_step_1a05beb929058339dee7021386bae7dd47" kindref="member">getName</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Step&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="classexamples_1_1gp_1_1symbolic_regression_1_1_step_1a9d9ef71f5f3c8b2708065a15e95eb7af" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classexamples_1_1gp_1_1symbolic_regression_1_1_step_1a9d9ef71f5f3c8b2708065a15e95eb7af" kindref="member">execute_float</ref>(ProgramChromosome<sp/>c,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/>Object[]<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>f<sp/>=<sp/>c.execute_float(n,<sp/>0,<sp/>args);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(f<sp/>&gt;<sp/>0.0)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/>1.0;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/>0.0;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classexamples_1_1gp_1_1symbolic_regression_1_1_step_1a3c0dcb147d1581787421e999cd2cc08d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classexamples_1_1gp_1_1symbolic_regression_1_1_step_1a3c0dcb147d1581787421e999cd2cc08d" kindref="member">execute_double</ref>(ProgramChromosome<sp/>c,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/>Object[]<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d<sp/>=<sp/>c.execute_double(n,<sp/>0,<sp/>args);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(d<sp/>&gt;<sp/>0.0)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1.0;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classexamples_1_1gp_1_1symbolic_regression_1_1_step_1a5769d51754b777c7eacce09e5ab2b9d4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Object<sp/><ref refid="classexamples_1_1gp_1_1symbolic_regression_1_1_step_1a5769d51754b777c7eacce09e5ab2b9d4" kindref="member">execute_object</ref>(ProgramChromosome<sp/>c,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/>Object[]<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>(<ref refid="interfaceexamples_1_1gp_1_1symbolic_regression_1_1_step_1_1_compatible" kindref="compound">Compatible</ref>)<sp/>c.execute_object(n,<sp/>0,<sp/>args)).execute_step();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="interfaceexamples_1_1gp_1_1symbolic_regression_1_1_step_1_1_compatible" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interfaceexamples_1_1gp_1_1symbolic_regression_1_1_step_1_1_compatible" kindref="compound">Compatible</ref><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Object<sp/><ref refid="interfaceexamples_1_1gp_1_1symbolic_regression_1_1_step_1_1_compatible_1acc6fb889b30cd448199e4e6e9a55d630" kindref="member">execute_step</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88" refid="classexamples_1_1gp_1_1symbolic_regression_1_1_step_1a850ca6bdda82a08d712fb21f288009e7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Object<sp/><ref refid="classexamples_1_1gp_1_1symbolic_regression_1_1_step_1a850ca6bdda82a08d712fb21f288009e7" kindref="member">clone</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classexamples_1_1gp_1_1symbolic_regression_1_1_step" kindref="compound">Step</ref><sp/>result<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classexamples_1_1gp_1_1symbolic_regression_1_1_step_1a30f9d4632901b7a5aa952dad7a94150f" kindref="member">Step</ref>(getGPConfiguration(),<sp/>getReturnType());</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(Exception<sp/>ex)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CloneException(ex);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/examples/src/examples/gp/symbolicRegression/Step.java"/>
+  </compounddef>
+</doxygen>

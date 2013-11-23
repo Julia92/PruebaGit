@@ -1,0 +1,267 @@
+.TH "org.jgap.event.GeneticEvent" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.event.GeneticEvent \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits EventObject\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGeneticEvent\fP (final String a_eventName, final Object a_source)"
+.br
+.ti -1c
+.RI "\fBGeneticEvent\fP (final String a_eventName, final Object a_source, final Object a_value)"
+.br
+.ti -1c
+.RI "String \fBgetEventName\fP ()"
+.br
+.ti -1c
+.RI "Object \fBgetValue\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBGENOTYPE_EVOLVED_EVENT\fP"
+.br
+.ti -1c
+.RI "static final String \fBGPGENOTYPE_EVOLVED_EVENT\fP"
+.br
+.ti -1c
+.RI "static final String \fBGPGENOTYPE_NEW_BEST_SOLUTION\fP"
+.br
+.ti -1c
+.RI "static final String \fBBEFORE_GENETIC_OPERATOR\fP"
+.br
+.ti -1c
+.RI "static final String \fBAFTER_GENETIC_OPERATOR\fP"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Object \fBm_value\fP"
+.br
+.ti -1c
+.RI "final String \fBm_eventName\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.10 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Represents events that are fired via the \fBEventManager\fP when various genetic events occur\&. The specific kind of event is conveyed through the event name\&. Standard event names are provided as constants in this class\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file GeneticEvent\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.event\&.GeneticEvent\&.GeneticEvent (final Stringa_eventName, final Objecta_source)\fC [inline]\fP"
+Constructs a new \fBGeneticEvent\fP of the given name\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_eventName\fP the name of the event 
+.br
+\fIa_source\fP the genetic object that acted as the source of the event\&. The type of this object will be dependent on the kind of event (which can be identified by the event name)\&. It may not be null
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIllegalArgumentException\fP if the given source object is null
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 78 of file GeneticEvent\&.java\&.
+.PP
+References org\&.jgap\&.event\&.GeneticEvent\&.m_eventName\&.
+.SS "org\&.jgap\&.event\&.GeneticEvent\&.GeneticEvent (final Stringa_eventName, final Objecta_source, final Objecta_value)\fC [inline]\fP"
+Constructs a new \fBGeneticEvent\fP of the given name\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_eventName\fP the name of the event 
+.br
+\fIa_source\fP the genetic object that acted as the source of the event\&. The type of this object will be dependent on the kind of event (which can be identified by the event name)\&. It may not be null 
+.br
+\fIa_value\fP informative value of the event
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIllegalArgumentException\fP if the given source object is null
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 97 of file GeneticEvent\&.java\&.
+.PP
+References org\&.jgap\&.event\&.GeneticEvent\&.m_value\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "String org\&.jgap\&.event\&.GeneticEvent\&.getEventName ()\fC [inline]\fP"
+Retrieves the name of this event, which can be used to identify the type of event\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the name of this \fBGeneticEvent\fP instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 112 of file GeneticEvent\&.java\&.
+.PP
+References org\&.jgap\&.event\&.GeneticEvent\&.m_eventName\&.
+.PP
+Referenced by org\&.jgap\&.event\&.EventManager\&.fireGeneticEvent()\&.
+.SS "Object org\&.jgap\&.event\&.GeneticEvent\&.getValue ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+multi-purpose value of the event
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 122 of file GeneticEvent\&.java\&.
+.PP
+References org\&.jgap\&.event\&.GeneticEvent\&.m_value\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.event\&.GeneticEvent\&.AFTER_GENETIC_OPERATOR\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+      "after_genetic_operator"
+.fi
+Fired after a genetic operator, liek mutation or crossing over, is executed\&. 
+.PP
+Definition at line 57 of file GeneticEvent\&.java\&.
+.SS "final String org\&.jgap\&.event\&.GeneticEvent\&.BEFORE_GENETIC_OPERATOR\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+      "before_genetic_operator"
+.fi
+Fired before a genetic operator, liek mutation or crossing over, is executed\&. 
+.PP
+Definition at line 50 of file GeneticEvent\&.java\&.
+.SS "final String org\&.jgap\&.event\&.GeneticEvent\&.CVS_REVISION = '$Revision: 1\&.10 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file GeneticEvent\&.java\&.
+.SS "final String org\&.jgap\&.event\&.GeneticEvent\&.GENOTYPE_EVOLVED_EVENT\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+      "genotype_evolved_event"
+.fi
+Public constant representing the name of the event that is fired each time a \fBGenotype\fP is finished with a single evolution cycle\&. 
+.PP
+Definition at line 37 of file GeneticEvent\&.java\&.
+.PP
+Referenced by org\&.jgap\&.event\&.GeneticEventTest\&.testGENOTYPE_EVOLVED_EVENT_0()\&.
+.SS "final String org\&.jgap\&.event\&.GeneticEvent\&.GPGENOTYPE_EVOLVED_EVENT\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+      "gpgenotype_evolved_event"
+.fi
+.PP
+Definition at line 40 of file GeneticEvent\&.java\&.
+.SS "final String org\&.jgap\&.event\&.GeneticEvent\&.GPGENOTYPE_NEW_BEST_SOLUTION\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+      "gpgenotype_best_solution"
+.fi
+.PP
+Definition at line 43 of file GeneticEvent\&.java\&.
+.SS "final String org\&.jgap\&.event\&.GeneticEvent\&.m_eventName\fC [private]\fP"
+References the name of this event instance\&. 
+.PP
+Definition at line 63 of file GeneticEvent\&.java\&.
+.PP
+Referenced by org\&.jgap\&.event\&.GeneticEvent\&.GeneticEvent(), and org\&.jgap\&.event\&.GeneticEvent\&.getEventName()\&.
+.SS "Object org\&.jgap\&.event\&.GeneticEvent\&.m_value\fC [private]\fP"
+Multi-purpose value object 
+.PP
+Definition at line 31 of file GeneticEvent\&.java\&.
+.PP
+Referenced by org\&.jgap\&.event\&.GeneticEvent\&.GeneticEvent(), and org\&.jgap\&.event\&.GeneticEvent\&.getValue()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

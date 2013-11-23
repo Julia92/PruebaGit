@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1event_1_1_event_manager" kind="class" prot="public">
+    <compoundname>org::jgap::event::EventManager</compoundname>
+    <basecompoundref refid="interfaceorg_1_1jgap_1_1event_1_1_i_event_manager" prot="public" virt="non-virtual">org.jgap.event.IEventManager</basecompoundref>
+    <basecompoundref refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable" prot="public" virt="non-virtual">org.jgap.util.ICloneable</basecompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1_test_event_manager" prot="public" virt="non-virtual">org.jgap.TestEventManager</derivedcompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1event_1_1_event_manager_1a91fab79011659f81ef5badb04845dda8" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.event.EventManager.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.9 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/event/EventManager.java" line="29" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/event/EventManager.java" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1event_1_1_event_manager_1a82f36c08bb38ac378babc9b6256f40ce" prot="private" static="no" mutable="no">
+        <type>HashMap</type>
+        <definition>HashMap org.jgap.event.EventManager.m_listeners</definition>
+        <argsstring></argsstring>
+        <name>m_listeners</name>
+        <initializer>= new HashMap()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>References a Map of subscribed event listeners. Each key is an event name, and each value is a List of listeners subscribed to that event. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/event/EventManager.java" line="35" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/event/EventManager.java" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1event_1_1_event_manager_1a11a0d23a492c62449f3b55273f31d0d6" compoundref="_event_manager_8java" startline="50" endline="58">org.jgap.event.EventManager.addEventListener</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1event_1_1_event_manager_1a0802fd91d0f11805c4740494befa517b" compoundref="_event_manager_8java" startline="121" endline="127">org.jgap.event.EventManager.clone</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1event_1_1_event_manager_1a2b42bc9630de207f83d086f1284fbb69" compoundref="_event_manager_8java" startline="90" endline="102">org.jgap.event.EventManager.fireGeneticEvent</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1event_1_1_event_manager_1a0582aa398963b9ad6d6db869ccd7d76e" compoundref="_event_manager_8java" startline="73" endline="79">org.jgap.event.EventManager.removeEventListener</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1event_1_1_event_manager_1a11a0d23a492c62449f3b55273f31d0d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized void</type>
+        <definition>synchronized void org.jgap.event.EventManager.addEventListener</definition>
+        <argsstring>(final String a_eventName, final GeneticEventListener a_eventListenerToAdd)</argsstring>
+        <name>addEventListener</name>
+        <param>
+          <type>final String</type>
+          <declname>a_eventName</declname>
+        </param>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1event_1_1_genetic_event_listener" kindref="compound">GeneticEventListener</ref></type>
+          <declname>a_eventListenerToAdd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a new listener that will be notified when the event represented by the given name is fired.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_eventName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the event to which the given listener should be subscribed. Standard events are represented by constants in the <ref refid="classorg_1_1jgap_1_1event_1_1_genetic_event" kindref="compound">GeneticEvent</ref> class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_eventListenerToAdd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the genetic listener to subscribe to notifications of the given event</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/event/EventManager.java" line="50" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/event/EventManager.java" bodystart="50" bodyend="58"/>
+        <references refid="classorg_1_1jgap_1_1event_1_1_event_manager_1a82f36c08bb38ac378babc9b6256f40ce" compoundref="_event_manager_8java" startline="35">org.jgap.event.EventManager.m_listeners</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1event_1_1_event_manager_1a0582aa398963b9ad6d6db869ccd7d76e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized void</type>
+        <definition>synchronized void org.jgap.event.EventManager.removeEventListener</definition>
+        <argsstring>(final String a_eventName, final GeneticEventListener a_eventListenerToRemove)</argsstring>
+        <name>removeEventListener</name>
+        <param>
+          <type>final String</type>
+          <declname>a_eventName</declname>
+        </param>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1event_1_1_genetic_event_listener" kindref="compound">GeneticEventListener</ref></type>
+          <declname>a_eventListenerToRemove</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes the given listener from subscription of the indicated event. The listener will no longer be notified when the given event occurs.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_eventName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the event to which the given listener should be removed. Standard events are represented by constants in the <ref refid="classorg_1_1jgap_1_1event_1_1_genetic_event" kindref="compound">GeneticEvent</ref> class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_eventListenerToRemove</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the genetic listener to unsubscribe from notifications of the given event</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/event/EventManager.java" line="73" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/event/EventManager.java" bodystart="73" bodyend="79"/>
+        <references refid="classorg_1_1jgap_1_1event_1_1_event_manager_1a82f36c08bb38ac378babc9b6256f40ce" compoundref="_event_manager_8java" startline="35">org.jgap.event.EventManager.m_listeners</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1event_1_1_event_manager_1a2b42bc9630de207f83d086f1284fbb69" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized void</type>
+        <definition>synchronized void org.jgap.event.EventManager.fireGeneticEvent</definition>
+        <argsstring>(final GeneticEvent a_eventToFire)</argsstring>
+        <name>fireGeneticEvent</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1event_1_1_genetic_event" kindref="compound">GeneticEvent</ref></type>
+          <declname>a_eventToFire</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fires a genetic event. All subscribers of that particular event type (as determined by the name of the event) will be notified.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_eventToFire</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the representation of the genetic event to fire</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/event/EventManager.java" line="90" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/event/EventManager.java" bodystart="90" bodyend="102"/>
+        <references refid="classorg_1_1jgap_1_1event_1_1_genetic_event_1ae227d1170aa60f5fd11e40f96e178c57" compoundref="_genetic_event_8java" startline="112" endline="114">org.jgap.event.GeneticEvent.getEventName</references>
+        <references refid="classorg_1_1jgap_1_1event_1_1_event_manager_1a82f36c08bb38ac378babc9b6256f40ce" compoundref="_event_manager_8java" startline="35">org.jgap.event.EventManager.m_listeners</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1event_1_1_event_manager_1a6ceb461bba8c3d6de72aba69e5e56e5d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.event.EventManager.hashCode</definition>
+        <argsstring>()</argsstring>
+        <name>hashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>hashcode</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/event/EventManager.java" line="110" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/event/EventManager.java" bodystart="110" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1event_1_1_event_manager_1a0802fd91d0f11805c4740494befa517b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.event.EventManager.clone</definition>
+        <argsstring>()</argsstring>
+        <name>clone</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable_1aa7e7d62077e6428ad7904932b1b4f7d5">clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>cloned instance</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/event/EventManager.java" line="121" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/event/EventManager.java" bodystart="121" bodyend="127"/>
+        <references refid="classorg_1_1jgap_1_1event_1_1_event_manager_1a82f36c08bb38ac378babc9b6256f40ce" compoundref="_event_manager_8java" startline="35">org.jgap.event.EventManager.m_listeners</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Manages event notification in the system. Observers that desire to be notified of genetic events should subscribe to this class via the <ref refid="classorg_1_1jgap_1_1event_1_1_event_manager_1a11a0d23a492c62449f3b55273f31d0d6" kindref="member">addEventListener()</ref> method. To unsubscribe, use the <ref refid="classorg_1_1jgap_1_1event_1_1_event_manager_1a0582aa398963b9ad6d6db869ccd7d76e" kindref="member">removeEventListener()</ref> method. To generate a genetic event, use the <ref refid="classorg_1_1jgap_1_1event_1_1_event_manager_1a2b42bc9630de207f83d086f1284fbb69" kindref="member">fireGeneticEvent()</ref> method, which will take care of notifying the appropriate subscribers.</para><para><simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="12393">
+        <label>org.jgap.TestEventManager</label>
+        <childnode refid="12388" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12390">
+        <label>Serializable</label>
+      </node>
+      <node id="12389">
+        <label>org.jgap.event.IEventManager</label>
+        <link refid="interfaceorg_1_1jgap_1_1event_1_1_i_event_manager"/>
+        <childnode refid="12390" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12391">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="12392" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12388">
+        <label>org.jgap.event.EventManager</label>
+        <link refid="classorg_1_1jgap_1_1event_1_1_event_manager"/>
+        <childnode refid="12389" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12391" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12392">
+        <label>Cloneable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12396">
+        <label>Serializable</label>
+      </node>
+      <node id="12395">
+        <label>org.jgap.event.IEventManager</label>
+        <link refid="interfaceorg_1_1jgap_1_1event_1_1_i_event_manager"/>
+        <childnode refid="12396" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12397">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="12398" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12394">
+        <label>org.jgap.event.EventManager</label>
+        <link refid="classorg_1_1jgap_1_1event_1_1_event_manager"/>
+        <childnode refid="12395" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12397" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12398">
+        <label>Cloneable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/event/EventManager.java" line="27" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/event/EventManager.java" bodystart="26" bodyend="128"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1event_1_1_event_manager_1a11a0d23a492c62449f3b55273f31d0d6" prot="public" virt="non-virtual"><scope>org::jgap::event::EventManager</scope><name>addEventListener</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1event_1_1_i_event_manager_1accdd33f5b80727b26a0d1c75df73904c" prot="public" virt="non-virtual" ambiguityscope="org::jgap::event::IEventManager."><scope>org::jgap::event::EventManager</scope><name>addEventListener</name></member>
+      <member refid="classorg_1_1jgap_1_1event_1_1_event_manager_1a0802fd91d0f11805c4740494befa517b" prot="public" virt="non-virtual"><scope>org::jgap::event::EventManager</scope><name>clone</name></member>
+      <member refid="classorg_1_1jgap_1_1event_1_1_event_manager_1a91fab79011659f81ef5badb04845dda8" prot="private" virt="non-virtual"><scope>org::jgap::event::EventManager</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1event_1_1_event_manager_1a2b42bc9630de207f83d086f1284fbb69" prot="public" virt="non-virtual"><scope>org::jgap::event::EventManager</scope><name>fireGeneticEvent</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1event_1_1_i_event_manager_1addb26702fd3c1285e43d0774a023b017" prot="public" virt="non-virtual" ambiguityscope="org::jgap::event::IEventManager."><scope>org::jgap::event::EventManager</scope><name>fireGeneticEvent</name></member>
+      <member refid="classorg_1_1jgap_1_1event_1_1_event_manager_1a6ceb461bba8c3d6de72aba69e5e56e5d" prot="public" virt="non-virtual"><scope>org::jgap::event::EventManager</scope><name>hashCode</name></member>
+      <member refid="classorg_1_1jgap_1_1event_1_1_event_manager_1a82f36c08bb38ac378babc9b6256f40ce" prot="private" virt="non-virtual"><scope>org::jgap::event::EventManager</scope><name>m_listeners</name></member>
+      <member refid="classorg_1_1jgap_1_1event_1_1_event_manager_1a0582aa398963b9ad6d6db869ccd7d76e" prot="public" virt="non-virtual"><scope>org::jgap::event::EventManager</scope><name>removeEventListener</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1event_1_1_i_event_manager_1a851c20e5ad81c1a000fe4ac8087077f1" prot="public" virt="non-virtual" ambiguityscope="org::jgap::event::IEventManager."><scope>org::jgap::event::EventManager</scope><name>removeEventListener</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

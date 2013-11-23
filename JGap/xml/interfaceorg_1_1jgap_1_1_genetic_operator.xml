@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="interfaceorg_1_1jgap_1_1_genetic_operator" kind="interface" prot="public">
+    <compoundname>org::jgap::GeneticOperator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1_base_genetic_operator" prot="public" virt="non-virtual">org.jgap.BaseGeneticOperator</derivedcompoundref>
+    <derivedcompoundref refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_genetic_operator" prot="public" virt="non-virtual">org.jgap.gp.IGPGeneticOperator</derivedcompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="interfaceorg_1_1jgap_1_1_genetic_operator_1ad0ddbf3fa1dfd7bd8639eba1d9e35267" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.GeneticOperator.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.16 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/GeneticOperator.java" line="31" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/GeneticOperator.java" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1_genetic_operator_1a0f9dfe925c4c21e07522be67d6c5d084" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.GeneticOperator.operate</definition>
+        <argsstring>(final Population a_population, final List a_candidateChromosomes)</argsstring>
+        <name>operate</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_inversion_operator_1a7947681b60c19a585b1e0ee4595f625b">operate</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_1aa33da8cc4da351383f79ddaae90e988a">operate</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a57adb8d442035ecae43e194f29dff43c">operate</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a53ac73cd4e6b197e6756d4efe02bd01e">operate</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a4a1c852770559bba4ffa3e9718f4a0d8">operate</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_averaging_crossover_operator_1a6acef66720d9c62e2be2f570bd0755f9">operate</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a271b82e98b398a42b576c956350d905e">operate</reimplementedby>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_population</declname>
+        </param>
+        <param>
+          <type>final List</type>
+          <declname>a_candidateChromosomes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The operate method will be invoked on each of the genetic operators referenced by the current <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> object during the evolution phase. Operators are given an opportunity to run in the order that they are added to the <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref>. Implementations of this method may reference the population of Chromosomes as it was at the beginning of the evolutionary phase and/or they may instead reference the candidate Chromosomes, which are the results of prior genetic operators. In either case, only Chromosomes added to the list of candidate chromosomes will be considered for natural selection.</para><para>The parameters a_population and a_candidateChromosomes may refer to the same list of chromosomes for performance issues. Thus would mean an in-place modification. In ealier JGAP versions it was suggested never modifying the input population. Please refer to implementations delivered with JGAP to get a picture of the way non-susceptible in-place modifications are possible. If wrongly done, ConcurrentModificationException could be risen when accessing the population by an iterator in a <ref refid="interfaceorg_1_1jgap_1_1_genetic_operator" kindref="compound">GeneticOperator</ref>. Or, if population.getChromosomes().size() was used inside a loop where chromosomes were added to the input population this could lead to an infinite loop in worst case.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_population</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the population of chromosomes from the current evolution prior to exposure to any genetic operators. Chromosomes in this array should not be modified. Please, notice, that the call in <ref refid="classorg_1_1jgap_1_1_genotype_1a54a6791fbb6e13920e79f4e2dd719eb4" kindref="member">Genotype.evolve()</ref> to the implementations of <ref refid="interfaceorg_1_1jgap_1_1_genetic_operator" kindref="compound">GeneticOperator</ref> overgoes this due to performance issues </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_candidateChromosomes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the pool of chromosomes that have been selected for the next evolved population</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 (earlier versions referenced the <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> object) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/GeneticOperator.java" line="67" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A <ref refid="interfaceorg_1_1jgap_1_1_genetic_operator" kindref="compound">GeneticOperator</ref> represents an operation that takes place on a population of Chromosomes during the evolution process. Examples of genetic operators include reproduction, crossover, and mutation. This interface contains only one method - <ref refid="interfaceorg_1_1jgap_1_1_genetic_operator_1a0f9dfe925c4c21e07522be67d6c5d084" kindref="member">operate()</ref> - which is responsible for performing the genetic operation on the current population of Chromosomes.</para><para><simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="13253">
+        <label>org.jgap.impl.InversionOperator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_inversion_operator"/>
+        <childnode refid="13248" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13251">
+        <label>org.jgap.impl.GaussianMutationOperator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator"/>
+        <childnode refid="13248" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13256">
+        <label>org.jgap.impl.SwappingMutationOperator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator"/>
+        <childnode refid="13254" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13246">
+        <label>org.jgap.GeneticOperator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_genetic_operator"/>
+        <childnode refid="13247" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13247">
+        <label>Serializable</label>
+      </node>
+      <node id="13258">
+        <label>org.jgap.gp.IGPGeneticOperator</label>
+        <link refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_genetic_operator"/>
+        <childnode refid="13246" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13255">
+        <label>org.jgap.impl.RangedSwappingMutationOperator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_ranged_swapping_mutation_operator"/>
+        <childnode refid="13254" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13250">
+        <label>org.jgap.impl.CrossoverOperator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator"/>
+        <childnode refid="13248" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13252">
+        <label>org.jgap.impl.GreedyCrossover</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover"/>
+        <childnode refid="13248" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13248">
+        <label>org.jgap.BaseGeneticOperator</label>
+        <link refid="classorg_1_1jgap_1_1_base_genetic_operator"/>
+        <childnode refid="13246" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13249">
+        <label>org.jgap.impl.AveragingCrossoverOperator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_averaging_crossover_operator"/>
+        <childnode refid="13248" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13257">
+        <label>org.jgap.impl.TwoWayMutationOperator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator"/>
+        <childnode refid="13248" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13254">
+        <label>org.jgap.impl.MutationOperator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator"/>
+        <childnode refid="13248" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="13259">
+        <label>org.jgap.GeneticOperator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_genetic_operator"/>
+        <childnode refid="13260" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13260">
+        <label>Serializable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/GeneticOperator.java" line="28" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/GeneticOperator.java" bodystart="27" bodyend="69"/>
+    <listofallmembers>
+      <member refid="interfaceorg_1_1jgap_1_1_genetic_operator_1ad0ddbf3fa1dfd7bd8639eba1d9e35267" prot="public" virt="non-virtual"><scope>org::jgap::GeneticOperator</scope><name>CVS_REVISION</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_genetic_operator_1a0f9dfe925c4c21e07522be67d6c5d084" prot="public" virt="non-virtual"><scope>org::jgap::GeneticOperator</scope><name>operate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

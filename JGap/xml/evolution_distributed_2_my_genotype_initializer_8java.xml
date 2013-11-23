@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="evolution_distributed_2_my_genotype_initializer_8java" kind="file">
+    <compoundname>MyGenotypeInitializer.java</compoundname>
+    <innerclass refid="classexamples_1_1grid_1_1evolution_distributed_1_1_my_genotype_initializer" prot="public">examples::grid::evolutionDistributed::MyGenotypeInitializer</innerclass>
+    <innernamespace refid="namespaceexamples_1_1grid_1_1evolution_distributed">examples::grid::evolutionDistributed</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>JGAP.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>JGAP<sp/>offers<sp/>a<sp/>dual<sp/>license<sp/>model<sp/>containing<sp/>the<sp/>LGPL<sp/>as<sp/>well<sp/>as<sp/>the<sp/>MPL.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>For<sp/>licensing<sp/>information<sp/>please<sp/>see<sp/>the<sp/>file<sp/>license.txt<sp/>included<sp/>with<sp/>JGAP</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>or<sp/>have<sp/>a<sp/>look<sp/>at<sp/>the<sp/>top<sp/>of<sp/>class<sp/>org.jgap.Chromosome<sp/>which<sp/>representatively</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>includes<sp/>the<sp/>JGAP<sp/>license<sp/>policy<sp/>applicable<sp/>for<sp/>any<sp/>file<sp/>delivered<sp/>with<sp/>JGAP.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">examples.grid.evolutionDistributed;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.distr.grid.*;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.*;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classexamples_1_1grid_1_1evolution_distributed_1_1_my_genotype_initializer" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_my_genotype_initializer" kindref="compound">MyGenotypeInitializer</ref></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">implements</highlight><highlight class="normal"><sp/>IGenotypeInitializer<sp/>{</highlight></codeline>
+<codeline lineno="24" refid="classexamples_1_1grid_1_1evolution_distributed_1_1_my_genotype_initializer_1a1c970dfabebb5656e3ee772ede756966" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_my_genotype_initializer_1a1c970dfabebb5656e3ee772ede756966" kindref="member">CVS_REVISION</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$Revision:<sp/>1.3<sp/>$&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classexamples_1_1grid_1_1evolution_distributed_1_1_my_genotype_initializer_1a7b97f03cbd6248efec126b6579a993a0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Genotype<sp/><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_my_genotype_initializer_1a7b97f03cbd6248efec126b6579a993a0" kindref="member">setupGenotype</ref>(JGAPRequest<sp/>a_req,<sp/>Population<sp/>a_initialPop)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>Configuration<sp/>conf<sp/>=<sp/>a_req.getConfiguration();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>Population<sp/>pop;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a_initialPop<sp/>==<sp/>null)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>pop<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Population(conf);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>pop<sp/>=<sp/>a_initialPop;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size<sp/>=<sp/>conf.getPopulationSize()<sp/>-<sp/>pop.size();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>Genotype<sp/>result<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Genotype(conf,<sp/>pop);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>result.fillPopulation(size);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/examples/src/examples/grid/evolutionDistributed/MyGenotypeInitializer.java"/>
+  </compounddef>
+</doxygen>

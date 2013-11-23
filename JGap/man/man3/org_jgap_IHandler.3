@@ -1,0 +1,125 @@
+.TH "org.jgap.IHandler" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.IHandler \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBorg\&.jgap\&.ICloneHandler\fP, \fBorg\&.jgap\&.ICompareToHandler\fP, and \fBorg\&.jgap\&.IInitializer\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "boolean \fBisHandlerFor\fP (Object a_obj, Class a_class)"
+.br
+.ti -1c
+.RI "Object \fBperform\fP (Object a_obj, Class a_class, Object a_params)  throws Exception"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.3 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Interface for handlers capable of doing somethign specific\&.
+.PP
+Such a handler acknowledges via isHandlerFor(Class) that the method perform(Object, Object) could be executed for the given class\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file IHandler\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "boolean org\&.jgap\&.IHandler\&.isHandlerFor (Objecta_obj, Classa_class)"
+Determines whether the handler is suitable for the given object instance or class\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_obj\fP the object instance to check 
+.br
+\fIa_class\fP the class to check, alternatively if no object instance is available (some handlers could need to get an object and would always return false if only a class is provided) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: handler suitable for given object or class
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.Chromosome\fP, and \fBorg\&.jgap\&.ChromosomeForTesting\fP\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactory\&.findHandlerFor(), org\&.jgap\&.impl\&.DefaultInitializerTest\&.testIsHandlerFor_0(), org\&.jgap\&.impl\&.DefaultCompareToHandlerTest\&.testIsHandlerFor_0(), org\&.jgap\&.impl\&.DefaultCloneHandlerTest\&.testIsHandlerFor_0(), org\&.jgap\&.impl\&.DefaultCompareToHandlerTest\&.testIsHandlerFor_1(), org\&.jgap\&.impl\&.DefaultCloneHandlerTest\&.testIsHandlerFor_1(), org\&.jgap\&.impl\&.DefaultCloneHandlerTest\&.testIsHandlerFor_2(), org\&.jgap\&.impl\&.DefaultCompareToHandlerTest\&.testIsHandlerFor_2(), org\&.jgap\&.impl\&.DefaultCompareToHandlerTest\&.testIsHandlerFor_3(), and org\&.jgap\&.impl\&.DefaultCloneHandlerTest\&.testIsHandlerFor_3()\&.
+.SS "Object org\&.jgap\&.IHandler\&.perform (Objecta_obj, Classa_class, Objecta_params) throws Exception"
+Performs a task for the given object or class\&. For some handlers, additional parameters are necessary, which could be provided\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_obj\fP the object instance to perform the handler task for 
+.br
+\fIa_class\fP the class to perform the handler task for, in case no object instance is available (some handlers could need to get an object and would always throw an exception if only a class is provided) 
+.br
+\fIa_params\fP optional parameters needed for the handler to perform its task 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP in case of any error 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.GenotypeTest\&.ChromosomeForTest2\fP, \fBorg\&.jgap\&.Chromosome\fP, and \fBorg\&.jgap\&.ChromosomeForTesting\fP\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BestChromosomesSelector\&.add(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.calcFitness(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.cloneProgram(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.create(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.determineFittestProgram(), org\&.jgap\&.NaturalSelectorExt\&.selectChromosome(), org\&.jgap\&.impl\&.WeightedRouletteSelector\&.selectChromosomes(), org\&.jgap\&.impl\&.DefaultInitializerTest\&.testPerform_1(), org\&.jgap\&.impl\&.DefaultCompareToHandlerTest\&.testPerform_1(), org\&.jgap\&.impl\&.DefaultCloneHandlerTest\&.testPerform_1(), org\&.jgap\&.impl\&.DefaultCompareToHandlerTest\&.testPerform_2(), org\&.jgap\&.impl\&.DefaultCloneHandlerTest\&.testPerform_2(), org\&.jgap\&.impl\&.DefaultCloneHandlerTest\&.testPerform_3(), org\&.jgap\&.impl\&.DefaultCloneHandlerTest\&.testPerform_4(), org\&.jgap\&.impl\&.DefaultCloneHandlerTest\&.testPerform_5(), and org\&.jgap\&.impl\&.DefaultCloneHandlerTest\&.testPerform_6()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.IHandler\&.CVS_REVISION = '$Revision: 1\&.3 $'\fC [static]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 22 of file IHandler\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

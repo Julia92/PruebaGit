@@ -1,0 +1,193 @@
+\hypertarget{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server}{\section{org.\-jgap.\-distr.\-grid.\-J\-G\-A\-P\-Server Class Reference}
+\label{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server}\index{org.\-jgap.\-distr.\-grid.\-J\-G\-A\-P\-Server@{org.\-jgap.\-distr.\-grid.\-J\-G\-A\-P\-Server}}
+}
+
+
+Collaboration diagram for org.\-jgap.\-distr.\-grid.\-J\-G\-A\-P\-Server\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_adfc0911c30d76263a09d0296ebbf6428}{J\-G\-A\-P\-Server} (String\mbox{[}$\,$\mbox{]} args)  throws Exception 
+\item 
+void \hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_a68b6afc68a06c87a4a70d8b6db47bcca}{add\-File} (String a\-\_\-filename)  throws Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_a49f7fe42fd3b16f50a2bd8b21c2d5092}{copy\-File} (String source, String dest)  throws Exception 
+\item 
+static void \hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_aa4ef7b07a1fa424c267813eda3c6fbe3}{main} (String\mbox{[}$\,$\mbox{]} args)  throws Exception 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Grid\-Server \hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_a5fe0547d2bcf14f6e7505c1fead8dfea}{m\-\_\-gs}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_a1934a35759460fe9f868474cc40792b7}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-7 \$\char`\"{}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_afb0611e9695ab187b2ec2b96f44000df}{class\-Name} = J\-G\-A\-P\-Server.\-class.\-get\-Name()
+\item 
+static Logger \hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_a8e3b3649d3f722e5458907aa0801d91b}{log} = Logger.\-get\-Logger(\hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_afb0611e9695ab187b2ec2b96f44000df}{class\-Name})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A grid server is able to\-:
+
+a) receive work requests from J\-G\-A\-P\-Clients b) send work units to \hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_workers}{J\-G\-A\-P\-Workers} c) receive solutions from \hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_workers}{J\-G\-A\-P\-Workers}, and d) send back these solutions to the requesting \hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_client}{J\-G\-A\-P\-Client}.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-01 
+\end{DoxySince}
+
+
+Definition at line 29 of file J\-G\-A\-P\-Server.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_adfc0911c30d76263a09d0296ebbf6428}{\index{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server@{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server}!J\-G\-A\-P\-Server@{J\-G\-A\-P\-Server}}
+\index{J\-G\-A\-P\-Server@{J\-G\-A\-P\-Server}!org::jgap::distr::grid::JGAPServer@{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server}}
+\subsubsection[{J\-G\-A\-P\-Server}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-distr.\-grid.\-J\-G\-A\-P\-Server.\-J\-G\-A\-P\-Server (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_adfc0911c30d76263a09d0296ebbf6428}
+
+
+Definition at line 39 of file J\-G\-A\-P\-Server.\-java.
+
+
+
+References org.\-jgap.\-distr.\-grid.\-J\-G\-A\-P\-Server.\-m\-\_\-gs.
+
+
+
+Referenced by org.\-jgap.\-distr.\-grid.\-J\-G\-A\-P\-Server.\-main().
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_a68b6afc68a06c87a4a70d8b6db47bcca}{\index{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server@{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server}!add\-File@{add\-File}}
+\index{add\-File@{add\-File}!org::jgap::distr::grid::JGAPServer@{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server}}
+\subsubsection[{add\-File}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-distr.\-grid.\-J\-G\-A\-P\-Server.\-add\-File (
+\begin{DoxyParamCaption}
+\item[{String}]{a\-\_\-filename}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_a68b6afc68a06c87a4a70d8b6db47bcca}
+
+
+Definition at line 52 of file J\-G\-A\-P\-Server.\-java.
+
+
+
+References org.\-jgap.\-distr.\-grid.\-J\-G\-A\-P\-Server.\-copy\-File().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_a68b6afc68a06c87a4a70d8b6db47bcca_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_a49f7fe42fd3b16f50a2bd8b21c2d5092}{\index{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server@{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server}!copy\-File@{copy\-File}}
+\index{copy\-File@{copy\-File}!org::jgap::distr::grid::JGAPServer@{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server}}
+\subsubsection[{copy\-File}]{\setlength{\rightskip}{0pt plus 5cm}static void org.\-jgap.\-distr.\-grid.\-J\-G\-A\-P\-Server.\-copy\-File (
+\begin{DoxyParamCaption}
+\item[{String}]{source, }
+\item[{String}]{dest}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_a49f7fe42fd3b16f50a2bd8b21c2d5092}
+
+
+Definition at line 64 of file J\-G\-A\-P\-Server.\-java.
+
+
+
+Referenced by org.\-jgap.\-distr.\-grid.\-J\-G\-A\-P\-Server.\-add\-File().
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_aa4ef7b07a1fa424c267813eda3c6fbe3}{\index{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server@{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server}!main@{main}}
+\index{main@{main}!org::jgap::distr::grid::JGAPServer@{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void org.\-jgap.\-distr.\-grid.\-J\-G\-A\-P\-Server.\-main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_aa4ef7b07a1fa424c267813eda3c6fbe3}
+
+
+Definition at line 88 of file J\-G\-A\-P\-Server.\-java.
+
+
+
+References org.\-jgap.\-distr.\-grid.\-J\-G\-A\-P\-Server.\-J\-G\-A\-P\-Server().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_aa4ef7b07a1fa424c267813eda3c6fbe3_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_afb0611e9695ab187b2ec2b96f44000df}{\index{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server@{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server}!class\-Name@{class\-Name}}
+\index{class\-Name@{class\-Name}!org::jgap::distr::grid::JGAPServer@{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server}}
+\subsubsection[{class\-Name}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-distr.\-grid.\-J\-G\-A\-P\-Server.\-class\-Name = J\-G\-A\-P\-Server.\-class.\-get\-Name()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_afb0611e9695ab187b2ec2b96f44000df}
+
+
+Definition at line 33 of file J\-G\-A\-P\-Server.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_a1934a35759460fe9f868474cc40792b7}{\index{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server@{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::distr::grid::JGAPServer@{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-distr.\-grid.\-J\-G\-A\-P\-Server.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-7 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_a1934a35759460fe9f868474cc40792b7}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 31 of file J\-G\-A\-P\-Server.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_a8e3b3649d3f722e5458907aa0801d91b}{\index{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server@{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server}!log@{log}}
+\index{log@{log}!org::jgap::distr::grid::JGAPServer@{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server}}
+\subsubsection[{log}]{\setlength{\rightskip}{0pt plus 5cm}Logger org.\-jgap.\-distr.\-grid.\-J\-G\-A\-P\-Server.\-log = Logger.\-get\-Logger({\bf class\-Name})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_a8e3b3649d3f722e5458907aa0801d91b}
+
+
+Definition at line 35 of file J\-G\-A\-P\-Server.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_a5fe0547d2bcf14f6e7505c1fead8dfea}{\index{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server@{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server}!m\-\_\-gs@{m\-\_\-gs}}
+\index{m\-\_\-gs@{m\-\_\-gs}!org::jgap::distr::grid::JGAPServer@{org\-::jgap\-::distr\-::grid\-::\-J\-G\-A\-P\-Server}}
+\subsubsection[{m\-\_\-gs}]{\setlength{\rightskip}{0pt plus 5cm}Grid\-Server org.\-jgap.\-distr.\-grid.\-J\-G\-A\-P\-Server.\-m\-\_\-gs\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server_a5fe0547d2bcf14f6e7505c1fead8dfea}
+
+
+Definition at line 37 of file J\-G\-A\-P\-Server.\-java.
+
+
+
+Referenced by org.\-jgap.\-distr.\-grid.\-J\-G\-A\-P\-Server.\-J\-G\-A\-P\-Server().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/distr/grid/\hyperlink{_j_g_a_p_server_8java}{J\-G\-A\-P\-Server.\-java}\end{DoxyCompactItemize}

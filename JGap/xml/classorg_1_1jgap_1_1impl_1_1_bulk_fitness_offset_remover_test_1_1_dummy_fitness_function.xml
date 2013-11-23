@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_test_1_1_dummy_fitness_function" kind="class" prot="private">
+    <compoundname>org::jgap::impl::BulkFitnessOffsetRemoverTest::DummyFitnessFunction</compoundname>
+    <basecompoundref refid="classorg_1_1jgap_1_1_fitness_function" prot="public" virt="non-virtual">org.jgap.FitnessFunction</basecompoundref>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_test_1_1_dummy_fitness_function_1a2747fc89c0b198c7ed5123d9f7257163" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double org.jgap.impl.BulkFitnessOffsetRemoverTest.DummyFitnessFunction.evaluate</definition>
+        <argsstring>(IChromosome a_subject)</argsstring>
+        <name>evaluate</name>
+        <reimplements refid="classorg_1_1jgap_1_1_fitness_function_1a0078e42480eac93729f906ac4dc185d9">evaluate</reimplements>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+          <declname>a_subject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Casts every <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> to the subtype of <ref refid="classorg_1_1jgap_1_1impl_1_1_number_gene" kindref="compound">NumberGene</ref> and calculates the sum of the numerical values obtained.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_subject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> to be evaluated </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the sum of all numerical values of the Genes within the given <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> that only consists of <ref refid="classorg_1_1jgap_1_1impl_1_1_number_gene" kindref="compound">NumberGene</ref> instances </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ClassCastException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if a <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> within the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> is not derived from <ref refid="classorg_1_1jgap_1_1impl_1_1_number_gene" kindref="compound">NumberGene</ref></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classorg_1_1jgap_1_1_fitness_function_1a0078e42480eac93729f906ac4dc185d9" kindref="member">org.jgap.FitnessFunction::evaluate</ref>(<ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">org.jgap.Chromosome</ref>) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/tests/org/jgap/impl/BulkFitnessOffsetRemoverTest.java" line="341" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/tests/org/jgap/impl/BulkFitnessOffsetRemoverTest.java" bodystart="341" bodyend="361"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is a helper to allow testing class <ref refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover" kindref="compound">BulkFitnessOffsetRemover</ref>in a plainforward way: It only works with <ref refid="classorg_1_1jgap_1_1impl_1_1_number_gene" kindref="compound">NumberGene</ref>instances and returns the addition of their primitive values as the fitness value. This way we can configure a <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> with numerical value genes knowing their fitness and see what fitness values should be installed by the method <ref refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover" kindref="compound">BulkFitnessOffsetRemover</ref>. </para><para>Do not copy or use this implementation it is for this test only. It is tested itself by the outer class (<ref refid="" kindref="compound">testDummyFitnessFunction()</ref>) to ensure valid test results. </para><para><simplesect kind="author"><para>Achim Westermann </para></simplesect>
+<simplesect kind="since"><para>2.2 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="12250">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="12251" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12252" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12251">
+        <label>Serializable</label>
+      </node>
+      <node id="12249">
+        <label>org.jgap.impl.BulkFitnessOffsetRemoverTest.DummyFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_test_1_1_dummy_fitness_function"/>
+        <childnode refid="12250" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12252">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="12253" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12253">
+        <label>Cloneable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12255">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="12256" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12257" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12256">
+        <label>Serializable</label>
+      </node>
+      <node id="12254">
+        <label>org.jgap.impl.BulkFitnessOffsetRemoverTest.DummyFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_test_1_1_dummy_fitness_function"/>
+        <childnode refid="12255" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12257">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="12258" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12258">
+        <label>Cloneable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/tests/org/jgap/impl/BulkFitnessOffsetRemoverTest.java" line="328" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/tests/org/jgap/impl/BulkFitnessOffsetRemoverTest.java" bodystart="327" bodyend="362"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1aa47c6f886479efc5ed5fe84eb7f9b5ca" prot="public" virt="non-virtual"><scope>org::jgap::impl::BulkFitnessOffsetRemoverTest::DummyFitnessFunction</scope><name>clone</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1a89cbf1ef4c08655f209ce69fde6731e7" prot="public" virt="non-virtual"><scope>org::jgap::impl::BulkFitnessOffsetRemoverTest::DummyFitnessFunction</scope><name>DELTA</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_test_1_1_dummy_fitness_function_1a2747fc89c0b198c7ed5123d9f7257163" prot="protected" virt="virtual"><scope>org::jgap::impl::BulkFitnessOffsetRemoverTest::DummyFitnessFunction</scope><name>evaluate</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1a05fff0534d3cfdccd1d4d96d8ba6dda2" prot="public" virt="non-virtual"><scope>org::jgap::impl::BulkFitnessOffsetRemoverTest::DummyFitnessFunction</scope><name>getFitnessValue</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1adc5e20816cb3fd6f3486adb53b1e563d" prot="public" virt="non-virtual"><scope>org::jgap::impl::BulkFitnessOffsetRemoverTest::DummyFitnessFunction</scope><name>getLastComputedFitnessValue</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1a5f1f23e6f8a0f9606aee5d52fac6a06b" prot="public" virt="non-virtual"><scope>org::jgap::impl::BulkFitnessOffsetRemoverTest::DummyFitnessFunction</scope><name>NO_FITNESS_VALUE</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

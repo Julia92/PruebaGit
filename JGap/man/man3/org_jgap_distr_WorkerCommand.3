@@ -1,0 +1,128 @@
+.TH "org.jgap.distr.WorkerCommand" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.WorkerCommand \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits ICommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWorkerCommand\fP (final String a_name)"
+.br
+.ti -1c
+.RI "CommandResult \fBexecute\fP (final Object a_parameters)  throws Exception "
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "long \fBgetAgeMillis\fP ()"
+.br
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static long \fBgetCurrentMilliseconds\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "String \fBm_name\fP"
+.br
+.ti -1c
+.RI "long \fBm_timeCreated\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.5 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Command sent by an IMaster instance to an \fBIWorker\fP instance\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file WorkerCommand\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.distr\&.WorkerCommand\&.WorkerCommand (final Stringa_name)\fC [inline]\fP"
+
+.PP
+Definition at line 38 of file WorkerCommand\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.WorkerCommand\&.getCurrentMilliseconds(), org\&.jgap\&.distr\&.WorkerCommand\&.m_name, and org\&.jgap\&.distr\&.WorkerCommand\&.m_timeCreated\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "CommandResult org\&.jgap\&.distr\&.WorkerCommand\&.execute (final Objecta_parameters) throws Exception\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+implement 
+.RE
+.PP
+
+.PP
+Definition at line 44 of file WorkerCommand\&.java\&.
+.SS "long org\&.jgap\&.distr\&.WorkerCommand\&.getAgeMillis ()\fC [inline]\fP"
+
+.PP
+Definition at line 59 of file WorkerCommand\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.WorkerCommand\&.getCurrentMilliseconds(), and org\&.jgap\&.distr\&.WorkerCommand\&.m_timeCreated\&.
+.SS "static long org\&.jgap\&.distr\&.WorkerCommand\&.getCurrentMilliseconds ()\fC [inline]\fP, \fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 50 of file WorkerCommand\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.WorkerCommand\&.getAgeMillis(), and org\&.jgap\&.distr\&.WorkerCommand\&.WorkerCommand()\&.
+.SS "String org\&.jgap\&.distr\&.WorkerCommand\&.getName ()\fC [inline]\fP"
+
+.PP
+Definition at line 55 of file WorkerCommand\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.WorkerCommand\&.m_name\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.WorkerCommand\&.CVS_REVISION = '$Revision: 1\&.5 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 24 of file WorkerCommand\&.java\&.
+.SS "String org\&.jgap\&.distr\&.WorkerCommand\&.m_name\fC [private]\fP"
+Informative name 
+.PP
+Definition at line 29 of file WorkerCommand\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.WorkerCommand\&.getName(), and org\&.jgap\&.distr\&.WorkerCommand\&.WorkerCommand()\&.
+.SS "long org\&.jgap\&.distr\&.WorkerCommand\&.m_timeCreated\fC [private]\fP"
+Time the command was created (i\&.e\&. the constructor was called) in milliseconds\&. For statistical and purposes and for allowing to set a timeout 
+.PP
+Definition at line 36 of file WorkerCommand\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.WorkerCommand\&.getAgeMillis(), and org\&.jgap\&.distr\&.WorkerCommand\&.WorkerCommand()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

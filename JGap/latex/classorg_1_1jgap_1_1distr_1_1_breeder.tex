@@ -1,0 +1,397 @@
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_breeder}{\section{org.\-jgap.\-distr.\-Breeder Class Reference}
+\label{classorg_1_1jgap_1_1distr_1_1_breeder}\index{org.\-jgap.\-distr.\-Breeder@{org.\-jgap.\-distr.\-Breeder}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-distr.\-Breeder\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classorg_1_1jgap_1_1distr_1_1_breeder__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-distr.\-Breeder\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1distr_1_1_breeder__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder_a2477a923e516c1586d97ff7076ade32d}{Breeder} (final \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1_i_population_merger}{I\-Population\-Merger} a\-\_\-population\-Merger)
+\item 
+void \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder_af9b202a7dc7e8b3c2ce849ffb04e2fec}{run} ()
+\item 
+void \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder_a499de68ac24779970fbd14b64743fc5a}{start} ()
+\item 
+void \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder_ad371c6cce93099457783ac1fe6da74ca}{stop} ()
+\item 
+boolean \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder_ac5f4800b3c2fc9c5028d2d551319bfa6}{is\-Running} ()
+\item 
+boolean \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder_aa6cefdca311d1d7de887b4e2e15a6880}{can\-Be\-Started} ()
+\item 
+boolean \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder_ae47f796c30a1fee9d4b34c11616dc52d}{can\-Be\-Stopped} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder_ab3ff454f082f23bb5885ea8e0aa2ed89}{inform\-Parent} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder_a0b61a2b972f6c6b42c9f777dc0d67abb}{eval\-One\-Generation} ()  throws Exception 
+\item 
+synchronized void \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder_adf23e815a3ef895842d4681b0a07595e}{pause} (final int a\-\_\-milli\-Sec)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder}{Breeder} \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder_a75f60c6d46054aa34fed05f6a6d6d058}{m\-\_\-master}
+\item 
+\hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder}{Breeder}\mbox{[}$\,$\mbox{]} \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder_a336a3b9df78c37790c4742f7c4eeb456}{m\-\_\-workers}
+\item 
+\hyperlink{classorg_1_1jgap_1_1_genotype}{Genotype} \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder_a86129a6e573ed2ca9961931713250483}{m\-\_\-genotype}
+\item 
+\hyperlink{interfaceorg_1_1jgap_1_1distr_1_1_i_population_merger}{I\-Population\-Merger} \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder_a7ed056f076614c9e220460f107259c5a}{m\-\_\-population\-Merger}
+\item 
+transient boolean \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder_a91831c9376bf49003f0f162f1a75f8f2}{m\-\_\-running}
+\item 
+transient boolean \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder_a4ff067764f6ccbe3eb6c3db7ea542e63}{m\-\_\-stopped} = true
+\item 
+transient Mean\-Buffer \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder_afdbe7d0bf0133cb06ec341749d04eccf}{m\-\_\-mean\-Buffer} = new Mean\-Buffer(40)
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder_a33945fdaddc67a98814f59c61ce919bf}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-13 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Breeds populations using a G\-A that will be executed either on a single server or on multiple servers, whose results will be merged/synchronized later on. 
+
+A breeder is part of a fractal structure (fractal because each \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder}{Breeder} can be parent and/or child of other \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder}{Breeder}'s).
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 25 of file Breeder.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_breeder_a2477a923e516c1586d97ff7076ade32d}{\index{org\-::jgap\-::distr\-::\-Breeder@{org\-::jgap\-::distr\-::\-Breeder}!Breeder@{Breeder}}
+\index{Breeder@{Breeder}!org::jgap::distr::Breeder@{org\-::jgap\-::distr\-::\-Breeder}}
+\subsubsection[{Breeder}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-distr.\-Breeder.\-Breeder (
+\begin{DoxyParamCaption}
+\item[{final {\bf I\-Population\-Merger}}]{a\-\_\-population\-Merger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1distr_1_1_breeder_a2477a923e516c1586d97ff7076ade32d}
+
+
+Definition at line 56 of file Breeder.\-java.
+
+
+
+References org.\-jgap.\-distr.\-Breeder.\-m\-\_\-population\-Merger.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_breeder_aa6cefdca311d1d7de887b4e2e15a6880}{\index{org\-::jgap\-::distr\-::\-Breeder@{org\-::jgap\-::distr\-::\-Breeder}!can\-Be\-Started@{can\-Be\-Started}}
+\index{can\-Be\-Started@{can\-Be\-Started}!org::jgap::distr::Breeder@{org\-::jgap\-::distr\-::\-Breeder}}
+\subsubsection[{can\-Be\-Started}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-distr.\-Breeder.\-can\-Be\-Started (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1distr_1_1_breeder_aa6cefdca311d1d7de887b4e2e15a6880}
+
+
+Definition at line 155 of file Breeder.\-java.
+
+
+
+References org.\-jgap.\-distr.\-Breeder.\-m\-\_\-running.
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_breeder_ae47f796c30a1fee9d4b34c11616dc52d}{\index{org\-::jgap\-::distr\-::\-Breeder@{org\-::jgap\-::distr\-::\-Breeder}!can\-Be\-Stopped@{can\-Be\-Stopped}}
+\index{can\-Be\-Stopped@{can\-Be\-Stopped}!org::jgap::distr::Breeder@{org\-::jgap\-::distr\-::\-Breeder}}
+\subsubsection[{can\-Be\-Stopped}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-distr.\-Breeder.\-can\-Be\-Stopped (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1distr_1_1_breeder_ae47f796c30a1fee9d4b34c11616dc52d}
+
+
+Definition at line 159 of file Breeder.\-java.
+
+
+
+References org.\-jgap.\-distr.\-Breeder.\-m\-\_\-running.
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_breeder_a0b61a2b972f6c6b42c9f777dc0d67abb}{\index{org\-::jgap\-::distr\-::\-Breeder@{org\-::jgap\-::distr\-::\-Breeder}!eval\-One\-Generation@{eval\-One\-Generation}}
+\index{eval\-One\-Generation@{eval\-One\-Generation}!org::jgap::distr::Breeder@{org\-::jgap\-::distr\-::\-Breeder}}
+\subsubsection[{eval\-One\-Generation}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-distr.\-Breeder.\-eval\-One\-Generation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1distr_1_1_breeder_a0b61a2b972f6c6b42c9f777dc0d67abb}
+Evaluate one generation and memorize the time needed. This is important for load balancing and calculating the performance of a system 
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 99 of file Breeder.\-java.
+
+
+
+References org.\-jgap.\-distr.\-Breeder.\-inform\-Parent().
+
+
+
+Referenced by org.\-jgap.\-distr.\-Breeder.\-run().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1distr_1_1_breeder_a0b61a2b972f6c6b42c9f777dc0d67abb_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_breeder_ab3ff454f082f23bb5885ea8e0aa2ed89}{\index{org\-::jgap\-::distr\-::\-Breeder@{org\-::jgap\-::distr\-::\-Breeder}!inform\-Parent@{inform\-Parent}}
+\index{inform\-Parent@{inform\-Parent}!org::jgap::distr::Breeder@{org\-::jgap\-::distr\-::\-Breeder}}
+\subsubsection[{inform\-Parent}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-distr.\-Breeder.\-inform\-Parent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classorg_1_1jgap_1_1distr_1_1_breeder_ab3ff454f082f23bb5885ea8e0aa2ed89}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000060}{Todo}]implement \end{DoxyRefDesc}
+
+
+Definition at line 107 of file Breeder.\-java.
+
+
+
+Referenced by org.\-jgap.\-distr.\-Breeder.\-eval\-One\-Generation().
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_breeder_ac5f4800b3c2fc9c5028d2d551319bfa6}{\index{org\-::jgap\-::distr\-::\-Breeder@{org\-::jgap\-::distr\-::\-Breeder}!is\-Running@{is\-Running}}
+\index{is\-Running@{is\-Running}!org::jgap::distr::Breeder@{org\-::jgap\-::distr\-::\-Breeder}}
+\subsubsection[{is\-Running}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-distr.\-Breeder.\-is\-Running (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1distr_1_1_breeder_ac5f4800b3c2fc9c5028d2d551319bfa6}
+
+
+Definition at line 151 of file Breeder.\-java.
+
+
+
+References org.\-jgap.\-distr.\-Breeder.\-m\-\_\-running.
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_breeder_adf23e815a3ef895842d4681b0a07595e}{\index{org\-::jgap\-::distr\-::\-Breeder@{org\-::jgap\-::distr\-::\-Breeder}!pause@{pause}}
+\index{pause@{pause}!org::jgap::distr::Breeder@{org\-::jgap\-::distr\-::\-Breeder}}
+\subsubsection[{pause}]{\setlength{\rightskip}{0pt plus 5cm}synchronized void org.\-jgap.\-distr.\-Breeder.\-pause (
+\begin{DoxyParamCaption}
+\item[{final int}]{a\-\_\-milli\-Sec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1distr_1_1_breeder_adf23e815a3ef895842d4681b0a07595e}
+Pauses the \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder}{Breeder}. This is important if a user providing a system for running the G\-A does not want to make available 100\% of his C\-P\-U resources. 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-milli\-Sec} & number of milliseconds to wait\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 119 of file Breeder.\-java.
+
+
+
+Referenced by org.\-jgap.\-distr.\-Breeder.\-run().
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_breeder_af9b202a7dc7e8b3c2ce849ffb04e2fec}{\index{org\-::jgap\-::distr\-::\-Breeder@{org\-::jgap\-::distr\-::\-Breeder}!run@{run}}
+\index{run@{run}!org::jgap::distr::Breeder@{org\-::jgap\-::distr\-::\-Breeder}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-distr.\-Breeder.\-run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1distr_1_1_breeder_af9b202a7dc7e8b3c2ce849ffb04e2fec}
+Runs the evolution.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 67 of file Breeder.\-java.
+
+
+
+References org.\-jgap.\-distr.\-Breeder.\-eval\-One\-Generation(), org.\-jgap.\-distr.\-Breeder.\-m\-\_\-running, org.\-jgap.\-distr.\-Breeder.\-m\-\_\-stopped, and org.\-jgap.\-distr.\-Breeder.\-pause().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1distr_1_1_breeder_af9b202a7dc7e8b3c2ce849ffb04e2fec_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_breeder_a499de68ac24779970fbd14b64743fc5a}{\index{org\-::jgap\-::distr\-::\-Breeder@{org\-::jgap\-::distr\-::\-Breeder}!start@{start}}
+\index{start@{start}!org::jgap::distr::Breeder@{org\-::jgap\-::distr\-::\-Breeder}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-distr.\-Breeder.\-start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1distr_1_1_breeder_a499de68ac24779970fbd14b64743fc5a}
+
+
+Definition at line 128 of file Breeder.\-java.
+
+
+
+References org.\-jgap.\-distr.\-Breeder.\-m\-\_\-running.
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_breeder_ad371c6cce93099457783ac1fe6da74ca}{\index{org\-::jgap\-::distr\-::\-Breeder@{org\-::jgap\-::distr\-::\-Breeder}!stop@{stop}}
+\index{stop@{stop}!org::jgap::distr::Breeder@{org\-::jgap\-::distr\-::\-Breeder}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-distr.\-Breeder.\-stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1distr_1_1_breeder_ad371c6cce93099457783ac1fe6da74ca}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000061}{Todo}]implement \end{DoxyRefDesc}
+
+
+Definition at line 136 of file Breeder.\-java.
+
+
+
+References org.\-jgap.\-distr.\-Breeder.\-m\-\_\-genotype, and org.\-jgap.\-distr.\-Breeder.\-m\-\_\-running.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_breeder_a33945fdaddc67a98814f59c61ce919bf}{\index{org\-::jgap\-::distr\-::\-Breeder@{org\-::jgap\-::distr\-::\-Breeder}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::distr::Breeder@{org\-::jgap\-::distr\-::\-Breeder}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-distr.\-Breeder.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-13 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1distr_1_1_breeder_a33945fdaddc67a98814f59c61ce919bf}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 28 of file Breeder.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_breeder_a86129a6e573ed2ca9961931713250483}{\index{org\-::jgap\-::distr\-::\-Breeder@{org\-::jgap\-::distr\-::\-Breeder}!m\-\_\-genotype@{m\-\_\-genotype}}
+\index{m\-\_\-genotype@{m\-\_\-genotype}!org::jgap::distr::Breeder@{org\-::jgap\-::distr\-::\-Breeder}}
+\subsubsection[{m\-\_\-genotype}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Genotype} org.\-jgap.\-distr.\-Breeder.\-m\-\_\-genotype\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1distr_1_1_breeder_a86129a6e573ed2ca9961931713250483}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000057}{Todo}]use \end{DoxyRefDesc}
+The \hyperlink{classorg_1_1jgap_1_1_genotype}{Genotype} this \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder}{Breeder} is responsible for 
+
+Definition at line 43 of file Breeder.\-java.
+
+
+
+Referenced by org.\-jgap.\-distr.\-Breeder.\-stop().
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_breeder_a75f60c6d46054aa34fed05f6a6d6d058}{\index{org\-::jgap\-::distr\-::\-Breeder@{org\-::jgap\-::distr\-::\-Breeder}!m\-\_\-master@{m\-\_\-master}}
+\index{m\-\_\-master@{m\-\_\-master}!org::jgap::distr::Breeder@{org\-::jgap\-::distr\-::\-Breeder}}
+\subsubsection[{m\-\_\-master}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Breeder} org.\-jgap.\-distr.\-Breeder.\-m\-\_\-master\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1distr_1_1_breeder_a75f60c6d46054aa34fed05f6a6d6d058}
+The parent \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder}{Breeder} to report to 
+
+Definition at line 33 of file Breeder.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_breeder_afdbe7d0bf0133cb06ec341749d04eccf}{\index{org\-::jgap\-::distr\-::\-Breeder@{org\-::jgap\-::distr\-::\-Breeder}!m\-\_\-mean\-Buffer@{m\-\_\-mean\-Buffer}}
+\index{m\-\_\-mean\-Buffer@{m\-\_\-mean\-Buffer}!org::jgap::distr::Breeder@{org\-::jgap\-::distr\-::\-Breeder}}
+\subsubsection[{m\-\_\-mean\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}transient Mean\-Buffer org.\-jgap.\-distr.\-Breeder.\-m\-\_\-mean\-Buffer = new Mean\-Buffer(40)\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1distr_1_1_breeder_afdbe7d0bf0133cb06ec341749d04eccf}
+
+
+Definition at line 54 of file Breeder.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_breeder_a7ed056f076614c9e220460f107259c5a}{\index{org\-::jgap\-::distr\-::\-Breeder@{org\-::jgap\-::distr\-::\-Breeder}!m\-\_\-population\-Merger@{m\-\_\-population\-Merger}}
+\index{m\-\_\-population\-Merger@{m\-\_\-population\-Merger}!org::jgap::distr::Breeder@{org\-::jgap\-::distr\-::\-Breeder}}
+\subsubsection[{m\-\_\-population\-Merger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\-Population\-Merger} org.\-jgap.\-distr.\-Breeder.\-m\-\_\-population\-Merger\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1distr_1_1_breeder_a7ed056f076614c9e220460f107259c5a}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000058}{Todo}]construct somewhere \end{DoxyRefDesc}
+Helper class for merging together two Populations into one. 
+
+Definition at line 48 of file Breeder.\-java.
+
+
+
+Referenced by org.\-jgap.\-distr.\-Breeder.\-Breeder().
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_breeder_a91831c9376bf49003f0f162f1a75f8f2}{\index{org\-::jgap\-::distr\-::\-Breeder@{org\-::jgap\-::distr\-::\-Breeder}!m\-\_\-running@{m\-\_\-running}}
+\index{m\-\_\-running@{m\-\_\-running}!org::jgap::distr::Breeder@{org\-::jgap\-::distr\-::\-Breeder}}
+\subsubsection[{m\-\_\-running}]{\setlength{\rightskip}{0pt plus 5cm}transient boolean org.\-jgap.\-distr.\-Breeder.\-m\-\_\-running\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1distr_1_1_breeder_a91831c9376bf49003f0f162f1a75f8f2}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000059}{Todo}]use \end{DoxyRefDesc}
+
+
+Definition at line 50 of file Breeder.\-java.
+
+
+
+Referenced by org.\-jgap.\-distr.\-Breeder.\-can\-Be\-Started(), org.\-jgap.\-distr.\-Breeder.\-can\-Be\-Stopped(), org.\-jgap.\-distr.\-Breeder.\-is\-Running(), org.\-jgap.\-distr.\-Breeder.\-run(), org.\-jgap.\-distr.\-Breeder.\-start(), and org.\-jgap.\-distr.\-Breeder.\-stop().
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_breeder_a4ff067764f6ccbe3eb6c3db7ea542e63}{\index{org\-::jgap\-::distr\-::\-Breeder@{org\-::jgap\-::distr\-::\-Breeder}!m\-\_\-stopped@{m\-\_\-stopped}}
+\index{m\-\_\-stopped@{m\-\_\-stopped}!org::jgap::distr::Breeder@{org\-::jgap\-::distr\-::\-Breeder}}
+\subsubsection[{m\-\_\-stopped}]{\setlength{\rightskip}{0pt plus 5cm}transient boolean org.\-jgap.\-distr.\-Breeder.\-m\-\_\-stopped = true\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1distr_1_1_breeder_a4ff067764f6ccbe3eb6c3db7ea542e63}
+
+
+Definition at line 52 of file Breeder.\-java.
+
+
+
+Referenced by org.\-jgap.\-distr.\-Breeder.\-run().
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_breeder_a336a3b9df78c37790c4742f7c4eeb456}{\index{org\-::jgap\-::distr\-::\-Breeder@{org\-::jgap\-::distr\-::\-Breeder}!m\-\_\-workers@{m\-\_\-workers}}
+\index{m\-\_\-workers@{m\-\_\-workers}!org::jgap::distr::Breeder@{org\-::jgap\-::distr\-::\-Breeder}}
+\subsubsection[{m\-\_\-workers}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Breeder} \mbox{[}$\,$\mbox{]} org.\-jgap.\-distr.\-Breeder.\-m\-\_\-workers\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1distr_1_1_breeder_a336a3b9df78c37790c4742f7c4eeb456}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000056}{Todo}]use \end{DoxyRefDesc}
+The child \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder}{Breeder}'s doing work for us and reporting to this \hyperlink{classorg_1_1jgap_1_1distr_1_1_breeder}{Breeder}. 
+
+Definition at line 38 of file Breeder.\-java.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/distr/\hyperlink{_breeder_8java}{Breeder.\-java}\end{DoxyCompactItemize}

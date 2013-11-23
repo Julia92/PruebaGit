@@ -1,0 +1,933 @@
+.TH "org.jgap.Genotype" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.Genotype \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable, and Runnable\&.
+.PP
+Inherited by \fBorg\&.jgap\&.distr\&.DistributedGenotype\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGenotype\fP (\fBConfiguration\fP a_configuration, \fBIChromosome\fP[] a_initialChromosomes)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGenotype\fP (\fBConfiguration\fP a_configuration, \fBPopulation\fP a_population)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGenotype\fP (\fBConfiguration\fP a_configuration)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "synchronized \fBIChromosome\fP[] \fBgetChromosomes\fP ()"
+.br
+.ti -1c
+.RI "\fBPopulation\fP \fBgetPopulation\fP ()"
+.br
+.ti -1c
+.RI "synchronized \fBIChromosome\fP \fBgetFittestChromosome\fP ()"
+.br
+.ti -1c
+.RI "synchronized \fBIChromosome\fP \fBgetFittestChromosome\fP (int a_startIndex, int a_endIndex)"
+.br
+.ti -1c
+.RI "synchronized List \fBgetFittestChromosomes\fP (int a_numberOfChromosomes)"
+.br
+.ti -1c
+.RI "synchronized void \fBevolve\fP ()"
+.br
+.ti -1c
+.RI "void \fBevolve\fP (int a_numberOfEvolutions)"
+.br
+.ti -1c
+.RI "List< String > \fBevolve\fP (IEvolutionMonitor a_monitor)"
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillPopulation\fP (final int a_num)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.ti -1c
+.RI "void \fBapplyGeneticOperators\fP ()"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBgetConfiguration\fP ()"
+.br
+.ti -1c
+.RI "int \fBhashCode\fP ()"
+.br
+.ti -1c
+.RI "void \fBrun\fP ()"
+.br
+.ti -1c
+.RI "List< IEvolveJob > \fBgetEvolves\fP (IPopulationSplitter a_splitter)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBmergeResults\fP (IPopulationMerger a_merger, EvolveResult[] a_results)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBsetUseMonitor\fP (boolean a_useMonitor)"
+.br
+.ti -1c
+.RI "void \fBsetMonitor\fP (IEvolutionMonitor a_monitor)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBGenotype\fP \fBrandomInitialGenotype\fP (\fBConfiguration\fP a_configuration)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "static \fBConfiguration\fP \fBgetStaticConfiguration\fP ()"
+.br
+.ti -1c
+.RI "static void \fBsetStaticConfiguration\fP (\fBConfiguration\fP a_configuration)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBapplyNaturalSelectors\fP (boolean a_processBeforeGeneticOperators)"
+.br
+.ti -1c
+.RI "void \fBsetPopulation\fP (\fBPopulation\fP a_pop)"
+.br
+.ti -1c
+.RI "void \fBapplyGeneticOperator\fP (\fBGeneticOperator\fP a_operator, \fBPopulation\fP a_population, List a_chromosomes)"
+.br
+.ti -1c
+.RI "void \fBkeepPopSizeConstant\fP (\fBPopulation\fP a_pop, int a_maxSize)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBConfiguration\fP \fBm_activeConfiguration\fP"
+.br
+.ti -1c
+.RI "\fBPopulation\fP \fBm_population\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_useMonitor\fP"
+.br
+.ti -1c
+.RI "IEvolutionMonitor \fBm_monitor\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.109 $'"
+.br
+.ti -1c
+.RI "static transient \fBConfiguration\fP \fBm_staticConfiguration\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Genotypes are fixed-length populations of chromosomes\&. As an instance of a \fBGenotype\fP is evolved, all of its Chromosomes are also evolved\&. A \fBGenotype\fP may be constructed normally via constructor, or the static \fBrandomInitialGenotype()\fP method can be used to generate a \fBGenotype\fP with a randomized \fBChromosome\fP population\&. 
+.PP
+Please note that among all created \fBGenotype\fP instances there may only be one configuration, used by all \fBGenotype\fP instances\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 33 of file Genotype\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.Genotype\&.Genotype (\fBConfiguration\fPa_configuration, \fBIChromosome\fP[]a_initialChromosomes) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new \fBGenotype\fP instance with the given array of Chromosomes and the given active \fBConfiguration\fP instance\&. Note that the \fBConfiguration\fP object must be in a valid state when this method is invoked, or a \fBInvalidConfigurationException\fP will be thrown\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the \fBConfiguration\fP object to use 
+.br
+\fIa_initialChromosomes\fP the \fBChromosome\fP population to be managed by this \fBGenotype\fP instance 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP if the given \fBConfiguration\fP object is in an invalid state
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBDeprecated\fP
+.RS 4
+use \fBGenotype(Configuration, Population)\fP instead 
+.RE
+.PP
+
+.PP
+Definition at line 76 of file Genotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Genotype\&.equals(), and org\&.jgap\&.Genotype\&.randomInitialGenotype()\&.
+.SS "org\&.jgap\&.Genotype\&.Genotype (\fBConfiguration\fPa_configuration, \fBPopulation\fPa_population) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new \fBGenotype\fP instance with the given array of Chromosomes and the given active \fBConfiguration\fP instance\&. Note that the \fBConfiguration\fP object must be in a valid state when this method is invoked, or a InvalidconfigurationException will be thrown\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the \fBConfiguration\fP object to use 
+.br
+\fIa_population\fP the \fBChromosome\fP population to be managed by this \fBGenotype\fP instance 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 98 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.m_activeConfiguration, and org\&.jgap\&.Genotype\&.m_population\&.
+.SS "org\&.jgap\&.Genotype\&.Genotype (\fBConfiguration\fPa_configuration) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Don't use this constructor, it's only for internal use\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP not used here! 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 136 of file Genotype\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.Genotype\&.applyGeneticOperator (\fBGeneticOperator\fPa_operator, \fBPopulation\fPa_population, Lista_chromosomes)\fC [inline]\fP, \fC [protected]\fP"
+Overwritable method that calls a \fBGeneticOperator\fP to operate on a given population and asks him to store the result in the list of chromosomes\&. Override this method if you want to ensure that a_chromosomes is not part of a_population resp\&. if you want to use a different list\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_operator\fP the \fBGeneticOperator\fP to call 
+.br
+\fIa_population\fP the population to use 
+.br
+\fIa_chromosomes\fP the list of \fBChromosome\fP objects to return
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 587 of file Genotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Genotype\&.applyGeneticOperators()\&.
+.SS "void org\&.jgap\&.Genotype\&.applyGeneticOperators ()\fC [inline]\fP"
+Applies all GeneticOperators registered with the \fBConfiguration\fP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 501 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.applyGeneticOperator(), org\&.jgap\&.Genotype\&.getChromosomes(), and org\&.jgap\&.Genotype\&.getPopulation()\&.
+.SS "void org\&.jgap\&.Genotype\&.applyNaturalSelectors (booleana_processBeforeGeneticOperators)\fC [inline]\fP, \fC [protected]\fP"
+Applies all NaturalSelectors registered with the \fBConfiguration\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_processBeforeGeneticOperators\fP true apply NaturalSelectors applicable before GeneticOperators, false: apply the ones applicable after GeneticOperators
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+optionally use working pool 
+.RE
+.PP
+
+.PP
+Definition at line 442 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.getConfiguration(), org\&.jgap\&.Genotype\&.getPopulation(), org\&.jgap\&.Genotype\&.m_activeConfiguration, and org\&.jgap\&.Genotype\&.setPopulation()\&.
+.SS "boolean org\&.jgap\&.Genotype\&.equals (Objecta_other)\fC [inline]\fP"
+Compares this \fBGenotype\fP against the specified object\&. The result is true if the argument is an instance of the \fBGenotype\fP class, has exactly the same number of chromosomes as the given \fBGenotype\fP, and, for each \fBChromosome\fP in this \fBGenotype\fP, there is an equal chromosome in the given \fBGenotype\fP\&. The chromosomes do not need to appear in the same order within the population\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the object to compare against 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the objects are the same, false otherwise
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 397 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.Genotype(), org\&.jgap\&.Genotype\&.getChromosomes(), and org\&.jgap\&.Genotype\&.getPopulation()\&.
+.PP
+Referenced by org\&.jgap\&.xml\&.XMLManagerTest\&.testGetGenotypeFromDocument_1()\&.
+.SS "synchronized void org\&.jgap\&.Genotype\&.evolve ()\fC [inline]\fP"
+Evolves the population of Chromosomes within this \fBGenotype\fP\&. This will execute all of the genetic operators added to the present active configuration and then invoke the natural selector to choose which chromosomes will be included in the next generation population\&. Note that the population size not always remains constant (dependent on the NaturalSelectors used!)\&. To consecutively call this method, use \fBevolve(int)\fP!!!
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 231 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.getConfiguration(), org\&.jgap\&.Genotype\&.getPopulation(), and org\&.jgap\&.Genotype\&.setPopulation()\&.
+.PP
+Referenced by org\&.jgap\&.Genotype\&.evolve(), and org\&.jgap\&.Genotype\&.run()\&.
+.SS "void org\&.jgap\&.Genotype\&.evolve (inta_numberOfEvolutions)\fC [inline]\fP"
+Evolves this \fBGenotype\fP the specified number of times\&. This is equivalent to invoking the standard \fBevolve()\fP method the given number of times in a row\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_numberOfEvolutions\fP the number of times to evolve this \fBGenotype\fP before returning
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 248 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.evolve(), org\&.jgap\&.Genotype\&.getPopulation(), org\&.jgap\&.Configuration\&.getPopulationSize(), org\&.jgap\&.Configuration\&.isKeepPopulationSizeConstant(), org\&.jgap\&.Genotype\&.keepPopSizeConstant(), and org\&.jgap\&.Genotype\&.m_activeConfiguration\&.
+.SS "List<String> org\&.jgap\&.Genotype\&.evolve (IEvolutionMonitora_monitor)\fC [inline]\fP"
+Evolves this genotype until the given monitor asks to quit the evolution cycle\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_monitor\fP the monitor used to decide when to stop evolution
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+messages of the registered evolution monitor\&. May indicate why the evolution was asked to be stopped\&. May be empty, depending on the implementation of the used monitor
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 271 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.evolve(), org\&.jgap\&.Genotype\&.getConfiguration(), and org\&.jgap\&.Genotype\&.getPopulation()\&.
+.SS "void org\&.jgap\&.Genotype\&.fillPopulation (final inta_num) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Fills up the population with random chromosomes if necessary\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_num\fP the number of chromosomes to add 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 354 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.getConfiguration(), and org\&.jgap\&.Genotype\&.getPopulation()\&.
+.SS "synchronized \fBIChromosome\fP [] org\&.jgap\&.Genotype\&.getChromosomes ()\fC [inline]\fP"
+Retrieves the array of Chromosomes that make up the population of this \fBGenotype\fP instance\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the \fBPopulation\fP of Chromosomes
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBDeprecated\fP
+.RS 4
+uses \fBgetPopulation()\fP instead 
+.RE
+.PP
+
+.PP
+Definition at line 151 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.getPopulation()\&.
+.PP
+Referenced by org\&.jgap\&.Genotype\&.applyGeneticOperators(), and org\&.jgap\&.Genotype\&.equals()\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.Genotype\&.getConfiguration ()\fC [inline]\fP"
+
+.PP
+Definition at line 535 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.m_activeConfiguration\&.
+.PP
+Referenced by org\&.jgap\&.Genotype\&.applyNaturalSelectors(), org\&.jgap\&.Genotype\&.evolve(), org\&.jgap\&.Genotype\&.fillPopulation(), org\&.jgap\&.Genotype\&.getEvolves(), and org\&.jgap\&.Genotype\&.mergeResults()\&.
+.SS "List<IEvolveJob> org\&.jgap\&.Genotype\&.getEvolves (IPopulationSplittera_splitter) throws Exception\fC [inline]\fP"
+Splits a population into pieces that can be evolved independently\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_splitter\fP splits the population 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+list of IEvolveJob objects 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Definition at line 644 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.getConfiguration(), and org\&.jgap\&.Genotype\&.getPopulation()\&.
+.SS "synchronized \fBIChromosome\fP org\&.jgap\&.Genotype\&.getFittestChromosome ()\fC [inline]\fP"
+Retrieves the \fBChromosome\fP in the \fBPopulation\fP with the highest fitness value\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the \fBChromosome\fP with the highest fitness value, or null if there are no chromosomes in this \fBGenotype\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 182 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.getPopulation()\&.
+.SS "synchronized \fBIChromosome\fP org\&.jgap\&.Genotype\&.getFittestChromosome (inta_startIndex, inta_endIndex)\fC [inline]\fP"
+Retrieves the \fBChromosome\fP in the \fBPopulation\fP with the highest fitness value within the given indices\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_startIndex\fP the index to start the determination with 
+.br
+\fIa_endIndex\fP the index to end the determination with 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the \fBChromosome\fP with the highest fitness value within the given indices, or null if there are no chromosomes in this \fBGenotype\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 198 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.getPopulation()\&.
+.SS "synchronized List org\&.jgap\&.Genotype\&.getFittestChromosomes (inta_numberOfChromosomes)\fC [inline]\fP"
+Retrieves the top n Chromsomes in the population (the ones with the best fitness values)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_numberOfChromosomes\fP the number of chromosomes desired 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the list of Chromosomes with the highest fitness values, or null if there are no chromosomes in this \fBGenotype\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Charles Kevin Hill 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 214 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.getPopulation()\&.
+.SS "\fBPopulation\fP org\&.jgap\&.Genotype\&.getPopulation ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the current population of chromosomes
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 167 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.m_population\&.
+.PP
+Referenced by org\&.jgap\&.Genotype\&.applyGeneticOperators(), org\&.jgap\&.Genotype\&.applyNaturalSelectors(), org\&.jgap\&.GenotypeTest\&.doTestEvolve_5(), org\&.jgap\&.Genotype\&.equals(), org\&.jgap\&.Genotype\&.evolve(), org\&.jgap\&.Genotype\&.fillPopulation(), org\&.jgap\&.Genotype\&.getChromosomes(), org\&.jgap\&.Genotype\&.getEvolves(), org\&.jgap\&.Genotype\&.getFittestChromosome(), org\&.jgap\&.Genotype\&.getFittestChromosomes(), org\&.jgap\&.Genotype\&.hashCode(), org\&.jgap\&.audit\&.Evaluator\&.storeGenotype(), org\&.jgap\&.GenotypeTest\&.testEvolve_1(), and org\&.jgap\&.Genotype\&.toString()\&.
+.SS "static \fBConfiguration\fP org\&.jgap\&.Genotype\&.getStaticConfiguration ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the configuration to use with the Genetic Algorithm
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 520 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.m_staticConfiguration\&.
+.PP
+Referenced by org\&.jgap\&.ChromosomeForTesting\&.ChromosomeForTesting(), org\&.jgap\&.ChromosomeForTesting2\&.ChromosomeForTesting2(), org\&.jgap\&.impl\&.CrossoverOperator\&.CrossoverOperator(), org\&.jgap\&.impl\&.GreedyCrossover\&.GreedyCrossover(), org\&.jgap\&.NaturalSelectorExt\&.NaturalSelectorExt(), org\&.jgap\&.impl\&.TournamentSelector\&.TournamentSelector(), and org\&.jgap\&.impl\&.TwoWayMutationOperator\&.TwoWayMutationOperator()\&.
+.SS "int org\&.jgap\&.Genotype\&.hashCode ()\fC [inline]\fP"
+
+.PP
+Definition at line 555 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.getPopulation()\&.
+.SS "void org\&.jgap\&.Genotype\&.keepPopSizeConstant (\fBPopulation\fPa_pop, inta_maxSize)\fC [inline]\fP, \fC [protected]\fP"
+Cares that the population size does not exceed the given maximum size\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pop\fP the population to keep constant in size 
+.br
+\fIa_maxSize\fP the maximum size allowed for the population
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.5 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+use StandardPostSelector instead? 
+.RE
+.PP
+
+.PP
+Definition at line 602 of file Genotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Genotype\&.evolve()\&.
+.SS "void org\&.jgap\&.Genotype\&.mergeResults (IPopulationMergera_merger, EvolveResult[]a_results) throws Exception\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+use/enhance IPopulationMerger 
+.RE
+.PP
+
+.PP
+Definition at line 673 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.getConfiguration(), and org\&.jgap\&.Genotype\&.setPopulation()\&.
+.SS "static \fBGenotype\fP org\&.jgap\&.Genotype\&.randomInitialGenotype (\fBConfiguration\fPa_configuration) throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [static]\fP"
+Convenience method that returns a newly constructed \fBGenotype\fP instance configured according to the given \fBConfiguration\fP instance\&. The population of Chromosomes will be created according to the setup of the sample \fBChromosome\fP in the \fBConfiguration\fP object, but the gene values (alleles) will be set to random legal values\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the current active \fBConfiguration\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a newly constructed \fBGenotype\fP instance
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIllegalArgumentException\fP if the given \fBConfiguration\fP object is null 
+.br
+\fI\fBInvalidConfigurationException\fP\fP if the given \fBConfiguration\fP instance is not in a valid state
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 321 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.Genotype()\&.
+.SS "void org\&.jgap\&.Genotype\&.run ()\fC [inline]\fP"
+If used in a Thread: runs the evolution forever\&. You have to implement a listener to stop computation sometime\&. See \fBexamples\&.simpleBooleanThreaded\fP for a possible implementation of such a listener\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 624 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.evolve(), org\&.jgap\&.Genotype\&.m_monitor, and org\&.jgap\&.Genotype\&.m_useMonitor\&.
+.SS "void org\&.jgap\&.Genotype\&.setMonitor (IEvolutionMonitora_monitor)\fC [inline]\fP"
+Sets the evolution monitor to use, activate it via setUseMonitor(true)\&. Only to be used when running \fBGenotype\fP as a thread\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_monitor\fP the IEvolutionMonitor to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 716 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.m_monitor\&.
+.SS "void org\&.jgap\&.Genotype\&.setPopulation (\fBPopulation\fPa_pop)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 570 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.m_population\&.
+.PP
+Referenced by org\&.jgap\&.Genotype\&.applyNaturalSelectors(), org\&.jgap\&.Genotype\&.evolve(), and org\&.jgap\&.Genotype\&.mergeResults()\&.
+.SS "static void org\&.jgap\&.Genotype\&.setStaticConfiguration (\fBConfiguration\fPa_configuration)\fC [inline]\fP, \fC [static]\fP"
+Sets the configuration to use with the Genetic Algorithm\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 531 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.m_staticConfiguration\&.
+.SS "void org\&.jgap\&.Genotype\&.setUseMonitor (booleana_useMonitor)\fC [inline]\fP"
+Use an evolution monitor, only to be used when running \fBGenotype\fP as a thread\&. Otherwise use method \fBevolve(IEvolutionMonitor)\fP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_useMonitor\fP true: use evolution monitor, set it via setMonitor
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 703 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.m_useMonitor\&.
+.SS "String org\&.jgap\&.Genotype\&.toString ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+string representation of this \fBGenotype\fP instance, useful for display or debug purposes
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 292 of file Genotype\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.getPopulation()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.Genotype\&.CVS_REVISION = '$Revision: 1\&.109 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 36 of file Genotype\&.java\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.Genotype\&.m_activeConfiguration\fC [private]\fP"
+The current \fBConfiguration\fP instance\&. 
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 42 of file Genotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Genotype\&.applyNaturalSelectors(), org\&.jgap\&.Genotype\&.evolve(), org\&.jgap\&.Genotype\&.Genotype(), and org\&.jgap\&.Genotype\&.getConfiguration()\&.
+.SS "IEvolutionMonitor org\&.jgap\&.Genotype\&.m_monitor\fC [private]\fP"
+
+.PP
+Definition at line 57 of file Genotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Genotype\&.run(), and org\&.jgap\&.Genotype\&.setMonitor()\&.
+.SS "\fBPopulation\fP org\&.jgap\&.Genotype\&.m_population\fC [private]\fP"
+The array of Chromosomes that make-up the \fBGenotype\fP's population\&. 
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 50 of file Genotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Genotype\&.Genotype(), org\&.jgap\&.Genotype\&.getPopulation(), and org\&.jgap\&.Genotype\&.setPopulation()\&.
+.SS "transient \fBConfiguration\fP org\&.jgap\&.Genotype\&.m_staticConfiguration\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 44 of file Genotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Genotype\&.getStaticConfiguration(), and org\&.jgap\&.Genotype\&.setStaticConfiguration()\&.
+.SS "boolean org\&.jgap\&.Genotype\&.m_useMonitor\fC [private]\fP"
+Use an enolution monitor 
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 55 of file Genotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Genotype\&.run(), and org\&.jgap\&.Genotype\&.setUseMonitor()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

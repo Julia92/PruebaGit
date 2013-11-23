@@ -1,0 +1,1299 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene" kind="class" prot="public">
+    <compoundname>org::jgap::supergenes::AbstractSupergene</compoundname>
+    <basecompoundref refid="classorg_1_1jgap_1_1_base_gene" prot="public" virt="non-virtual">org.jgap.BaseGene</basecompoundref>
+    <basecompoundref refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene" prot="public" virt="non-virtual">org.jgap.supergenes.Supergene</basecompoundref>
+    <basecompoundref refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator" prot="public" virt="non-virtual">org.jgap.supergenes.SupergeneValidator</basecompoundref>
+    <basecompoundref refid="interfaceorg_1_1jgap_1_1_i_persistent_representation" prot="public" virt="non-virtual">org.jgap.IPersistentRepresentation</basecompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1supergenes_1_1_instantiable_supergene_for_testing" prot="public" virt="non-virtual">org.jgap.supergenes.InstantiableSupergeneForTesting</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1supergenes_1_1_supergene_internal_parser_test_1_1_test_class" prot="public" virt="non-virtual">org.jgap.supergenes.SupergeneInternalParserTest.TestClass</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1supergenes_1_1_supergene_persistent_representation_test_1_1_test_class" prot="public" virt="non-virtual">org.jgap.supergenes.SupergenePersistentRepresentationTest.TestClass</derivedcompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a9084146c063a12faff254011968f40b8" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.supergenes.AbstractSupergene.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.24 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="33" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a92632c12f27c0aaef1984c8550afe9a1" prot="private" static="yes" mutable="no">
+        <type>Set[]</type>
+        <definition>Set [] org.jgap.supergenes.AbstractSupergene.m_immutable</definition>
+        <argsstring></argsstring>
+        <name>m_immutable</name>
+        <initializer>= new Set[1]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set of supergene allele values that cannot mutate. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="70" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="70" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a008b2ecc6f66090965919b537fb327b3" compoundref="_abstract_supergene_8java" startline="222" endline="262">org.jgap.supergenes.AbstractSupergene.applyMutation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a80be2241977a41672bdbaa85acb7eabc" compoundref="_abstract_supergene_8java" startline="558" endline="568">org.jgap.supergenes.AbstractSupergene.equals</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a9f06a4d966c9e615b2ea5bff4583a183" compoundref="_abstract_supergene_8java" startline="267" endline="284">org.jgap.supergenes.AbstractSupergene.markImmutable</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1afdcc065673680fb080e17ff2596a0eb0" compoundref="_abstract_supergene_8java" startline="293" endline="295">org.jgap.supergenes.AbstractSupergene.reset</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1ae7be27a291a2aa7e594384dd7a5936a8" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.supergenes.AbstractSupergene.GENE_DELIMITER</definition>
+        <argsstring></argsstring>
+        <name>GENE_DELIMITER</name>
+        <initializer>= &quot;#&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This field separates gene class name from the gene persistent representation string. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="39" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a497a53be8d8d711ed48c62b062984a94" compoundref="_abstract_supergene_8java" startline="453" endline="485">org.jgap.supergenes.AbstractSupergene.createValidator</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a41a4e0b1cf2366722b5f3b97a1711487" compoundref="_abstract_supergene_8java" startline="363" endline="393">org.jgap.supergenes.AbstractSupergene.getPersistentRepresentation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1af8156c2a8b41bc9fe3e397595c513a6d" compoundref="_abstract_supergene_8java" startline="411" endline="450">org.jgap.supergenes.AbstractSupergene.setValueFromPersistentRepresentation</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1aebbbd0fdd22a6d94c951471c8ae86b84" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.supergenes.AbstractSupergene.GENE_DELIMITER_HEADING</definition>
+        <argsstring></argsstring>
+        <name>GENE_DELIMITER_HEADING</name>
+        <initializer>= &quot;&lt;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Represents the heading delimiter that is used to separate genes in the persistent representation of CompositeGene instances. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="45" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="45" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a41a4e0b1cf2366722b5f3b97a1711487" compoundref="_abstract_supergene_8java" startline="363" endline="393">org.jgap.supergenes.AbstractSupergene.getPersistentRepresentation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a3ff87dbb7c5c6a4167198184b7171934" compoundref="_abstract_supergene_8java" startline="587" endline="608">org.jgap.supergenes.AbstractSupergene.split</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a96059d4ef9cca18130330f3ab782c28b" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.supergenes.AbstractSupergene.GENE_DELIMITER_CLOSING</definition>
+        <argsstring></argsstring>
+        <name>GENE_DELIMITER_CLOSING</name>
+        <initializer>= &quot;&gt;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Represents the closing delimiter that is used to separate genes in the persistent representation of CompositeGene instances. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="51" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="51" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a41a4e0b1cf2366722b5f3b97a1711487" compoundref="_abstract_supergene_8java" startline="363" endline="393">org.jgap.supergenes.AbstractSupergene.getPersistentRepresentation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a3ff87dbb7c5c6a4167198184b7171934" compoundref="_abstract_supergene_8java" startline="587" endline="608">org.jgap.supergenes.AbstractSupergene.split</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a6839c4b04a89a58c967219eda28a5dbb" prot="public" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int org.jgap.supergenes.AbstractSupergene.MAX_RETRIES</definition>
+        <argsstring></argsstring>
+        <name>MAX_RETRIES</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximal number of retries for applyMutation and setToRandomValue. If the valid supergen cannot be created after this number of iterations, the error message is printed and the unchanged instance is returned. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="58" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="58" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a008b2ecc6f66090965919b537fb327b3" compoundref="_abstract_supergene_8java" startline="222" endline="262">org.jgap.supergenes.AbstractSupergene.applyMutation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a92df9df781b9ae3bc7811bf76bb7ea87" compoundref="_abstract_supergene_8java" startline="304" endline="322">org.jgap.supergenes.AbstractSupergene.setToRandomValue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a40054ab751c7676fcd9f974c029a6a9d" prot="public" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int org.jgap.supergenes.AbstractSupergene.MAX_IMMUTABLE_GENES</definition>
+        <argsstring></argsstring>
+        <name>MAX_IMMUTABLE_GENES</name>
+        <initializer>= 100000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximal number of notes about immutable genes per single gene position </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="64" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="64" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a9f06a4d966c9e615b2ea5bff4583a183" compoundref="_abstract_supergene_8java" startline="267" endline="284">org.jgap.supergenes.AbstractSupergene.markImmutable</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7e237a04c314d9fbb0ab064ad88a5cb3" prot="private" static="no" mutable="no">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>[]</type>
+        <definition>Gene [] org.jgap.supergenes.AbstractSupergene.m_genes</definition>
+        <argsstring></argsstring>
+        <name>m_genes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Holds the genes of this supergene. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="67" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="67" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a1cbbfd45d7cad277949c8571fa067013" compoundref="_abstract_supergene_8java" startline="130" endline="137">org.jgap.supergenes.AbstractSupergene.AbstractSupergene</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a8b9835e9be1cc5edc8507c957b1f1f2d" compoundref="_abstract_supergene_8java" startline="611" endline="616">org.jgap.supergenes.AbstractSupergene.addGene</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a008b2ecc6f66090965919b537fb327b3" compoundref="_abstract_supergene_8java" startline="222" endline="262">org.jgap.supergenes.AbstractSupergene.applyMutation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1aec3dc6646255f4187aa9a6b4238a9a2c" compoundref="_abstract_supergene_8java" startline="499" endline="503">org.jgap.supergenes.AbstractSupergene.cleanup</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1ac17432577a59856d6ef81abaf0a66bf9" compoundref="_abstract_supergene_8java" startline="534" endline="550">org.jgap.supergenes.AbstractSupergene.compareTo</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a80be2241977a41672bdbaa85acb7eabc" compoundref="_abstract_supergene_8java" startline="558" endline="568">org.jgap.supergenes.AbstractSupergene.equals</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a099bf664561a1f88b9826e25d870ad7f" compoundref="_abstract_supergene_8java" startline="92" endline="94">org.jgap.supergenes.AbstractSupergene.geneAt</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a45f21f887ad34c02fbc88d41e5d0372d" compoundref="_abstract_supergene_8java" startline="349" endline="355">org.jgap.supergenes.AbstractSupergene.getAllele</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a5b03d0c4d103975b296d280371b901bd" compoundref="_abstract_supergene_8java" startline="76" endline="78">org.jgap.supergenes.AbstractSupergene.getGenes</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a41a4e0b1cf2366722b5f3b97a1711487" compoundref="_abstract_supergene_8java" startline="363" endline="393">org.jgap.supergenes.AbstractSupergene.getPersistentRepresentation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a73c5c7702d66268b71e9ed92f0c5d41d" compoundref="_abstract_supergene_8java" startline="571" endline="577">org.jgap.supergenes.AbstractSupergene.hashCode</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1adfa0b1f704e28e3a90d187df2cf4b8b5" compoundref="_abstract_supergene_8java" startline="145" endline="152">org.jgap.supergenes.AbstractSupergene.isValid</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a1e30b794dee0e8da4d5a4d213e9fb2c1" compoundref="_abstract_supergene_8java" startline="192" endline="213">org.jgap.supergenes.AbstractSupergene.newGeneInternal</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7b3ce455ac6d30ba31b198ce6824cd19" compoundref="_abstract_supergene_8java" startline="329" endline="343">org.jgap.supergenes.AbstractSupergene.setAllele</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a92df9df781b9ae3bc7811bf76bb7ea87" compoundref="_abstract_supergene_8java" startline="304" endline="322">org.jgap.supergenes.AbstractSupergene.setToRandomValue</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1af8156c2a8b41bc9fe3e397595c513a6d" compoundref="_abstract_supergene_8java" startline="411" endline="450">org.jgap.supergenes.AbstractSupergene.setValueFromPersistentRepresentation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a67a9b1dfccb63d4b2909abdd3e8c1abe" compoundref="_abstract_supergene_8java" startline="509" endline="525">org.jgap.supergenes.AbstractSupergene.toString</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a8792c7c19ad0cdb48ade652a110a9016" prot="protected" static="no" mutable="no">
+        <type><ref refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator" kindref="compound">SupergeneValidator</ref></type>
+        <definition>SupergeneValidator org.jgap.supergenes.AbstractSupergene.m_validator</definition>
+        <argsstring></argsstring>
+        <name>m_validator</name>
+        <initializer>= this</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A validator (initially set to <emphasis>this</emphasis> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="638" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="638" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a80be2241977a41672bdbaa85acb7eabc" compoundref="_abstract_supergene_8java" startline="558" endline="568">org.jgap.supergenes.AbstractSupergene.equals</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a9ebb4d5fbce8752cba54188ad5958fcf" compoundref="_abstract_supergene_8java" startline="633" endline="635">org.jgap.supergenes.AbstractSupergene.getValidator</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1adfa0b1f704e28e3a90d187df2cf4b8b5" compoundref="_abstract_supergene_8java" startline="145" endline="152">org.jgap.supergenes.AbstractSupergene.isValid</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a1e30b794dee0e8da4d5a4d213e9fb2c1" compoundref="_abstract_supergene_8java" startline="192" endline="213">org.jgap.supergenes.AbstractSupergene.newGeneInternal</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1afae838561a1237ab6b39456ab0e3b8c8" compoundref="_abstract_supergene_8java" startline="624" endline="626">org.jgap.supergenes.AbstractSupergene.setValidator</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a67a9b1dfccb63d4b2909abdd3e8c1abe" compoundref="_abstract_supergene_8java" startline="509" endline="525">org.jgap.supergenes.AbstractSupergene.toString</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a5b03d0c4d103975b296d280371b901bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>[]</type>
+        <definition>Gene [] org.jgap.supergenes.AbstractSupergene.getGenes</definition>
+        <argsstring>()</argsstring>
+        <name>getGenes</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_1a34ec660dc0d241a9eabc993ddef2ca87">getGenes</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the array of genes - components of this supergene. The supergene components may be supergenes itself </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="76" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="76" bodyend="78"/>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7e237a04c314d9fbb0ab064ad88a5cb3" compoundref="_abstract_supergene_8java" startline="67">org.jgap.supergenes.AbstractSupergene.m_genes</references>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_supergene_persistent_representation_test_1ab5a6a8dcd4ad1fa441d84df6f1cefdb8" compoundref="_supergene_persistent_representation_test_8java" startline="88" endline="96">org.jgap.supergenes.SupergenePersistentRepresentationTest.testGetGenes_0</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a099bf664561a1f88b9826e25d870ad7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>final <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+        <definition>final Gene org.jgap.supergenes.AbstractSupergene.geneAt</definition>
+        <argsstring>(final int a_index)</argsstring>
+        <name>geneAt</name>
+        <param>
+          <type>final int</type>
+          <declname>a_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> at the given index (locus) within the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>. The first gene is at index zero and the last gene is at the index equal to the size of this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> - 1.</para><para>This seems to be one of the bottlenecks, so it is declared final. I cannot imagine the reason for overriding this trivial single line method.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the index of the gene value to be returned </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> at the given index </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="92" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="92" bodyend="94"/>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7e237a04c314d9fbb0ab064ad88a5cb3" compoundref="_abstract_supergene_8java" startline="67">org.jgap.supergenes.AbstractSupergene.m_genes</references>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_supergene_persistent_representation_test_1ab5a6a8dcd4ad1fa441d84df6f1cefdb8" compoundref="_supergene_persistent_representation_test_8java" startline="88" endline="96">org.jgap.supergenes.SupergenePersistentRepresentationTest.testGetGenes_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_supergene_persistent_representation_test_1a23d11dc04d5e114d41f8bf276fdce2c4" compoundref="_supergene_persistent_representation_test_8java" startline="286" endline="299">org.jgap.supergenes.SupergenePersistentRepresentationTest.testSetAllele_2</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1aa67d2e35432f0534c38260e0b3e4d014" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.supergenes.AbstractSupergene.AbstractSupergene</definition>
+        <argsstring>()</argsstring>
+        <name>AbstractSupergene</name>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor for dynamic instantiation.</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="104" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="104" bodyend="107"/>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1ac17432577a59856d6ef81abaf0a66bf9" compoundref="_abstract_supergene_8java" startline="534" endline="550">org.jgap.supergenes.AbstractSupergene.compareTo</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a80be2241977a41672bdbaa85acb7eabc" compoundref="_abstract_supergene_8java" startline="558" endline="568">org.jgap.supergenes.AbstractSupergene.equals</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a1e30b794dee0e8da4d5a4d213e9fb2c1" compoundref="_abstract_supergene_8java" startline="192" endline="213">org.jgap.supergenes.AbstractSupergene.newGeneInternal</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a8ede7cc1a661a1fb8a7d7000ec7ea11f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.supergenes.AbstractSupergene.AbstractSupergene</definition>
+        <argsstring>(final Configuration a_config)</argsstring>
+        <name>AbstractSupergene</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_config</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor for dynamic instantiation.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="118" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="118" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a1cbbfd45d7cad277949c8571fa067013" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.supergenes.AbstractSupergene.AbstractSupergene</definition>
+        <argsstring>(final Configuration a_conf, final Gene[] a_genes)</argsstring>
+        <name>AbstractSupergene</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_conf</declname>
+        </param>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>[]</type>
+          <declname>a_genes</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs abstract supergene with the given gene list.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_genes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of genes for this <ref refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene" kindref="compound">Supergene</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="130" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="130" bodyend="137"/>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7e237a04c314d9fbb0ab064ad88a5cb3" compoundref="_abstract_supergene_8java" startline="67">org.jgap.supergenes.AbstractSupergene.m_genes</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1adfa0b1f704e28e3a90d187df2cf4b8b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.supergenes.AbstractSupergene.isValid</definition>
+        <argsstring>()</argsstring>
+        <name>isValid</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_1a9a664a40144dca4dd6fd3b4170ce7570">isValid</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test the allele combination of this supergene for validity. This method calls isValid for the current gene list. <simplesect kind="return"><para>true only if the supergene allele combination is valid or the setValidator (<emphasis>null</emphasis>) has been previously called </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="145" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="145" bodyend="152"/>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7e237a04c314d9fbb0ab064ad88a5cb3" compoundref="_abstract_supergene_8java" startline="67">org.jgap.supergenes.AbstractSupergene.m_genes</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a8792c7c19ad0cdb48ade652a110a9016" compoundref="_abstract_supergene_8java" startline="638">org.jgap.supergenes.AbstractSupergene.m_validator</references>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a008b2ecc6f66090965919b537fb327b3" compoundref="_abstract_supergene_8java" startline="222" endline="262">org.jgap.supergenes.AbstractSupergene.applyMutation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a92df9df781b9ae3bc7811bf76bb7ea87" compoundref="_abstract_supergene_8java" startline="304" endline="322">org.jgap.supergenes.AbstractSupergene.setToRandomValue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a4d07a7aa9a0af1e4e1a96b1a7663afee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.supergenes.AbstractSupergene.isValid</definition>
+        <argsstring>(final Gene[] a_case, final Supergene a_forSupergene)</argsstring>
+        <name>isValid</name>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>[]</type>
+          <declname>a_case</declname>
+        </param>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene" kindref="compound">Supergene</ref></type>
+          <declname>a_forSupergene</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test the given gene list for validity. The genes must exactly the same as inside this supergene. At <emphasis>least about 5 % of the randomly generated <ref refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene" kindref="compound">Supergene</ref> suparallele values should be valid.</emphasis> If the valid combinations represents too small part of all possible combinations, it can take too long to find the suitable mutation that does not brake a supergene. If you face this problem, try to split the supergene into several sub-supergenes.</para><para>This method is only called if you have not set any alternative validator (including <emphasis>null</emphasis>).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_case</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ignored here </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_forSupergene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ignored here</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true only if the supergene allele combination is valid </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>by default. If you do not set external validator, you should always override this method </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="174" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="174" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a008b2ecc6f66090965919b537fb327b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.supergenes.AbstractSupergene.applyMutation</definition>
+        <argsstring>(final int a_index, final double a_percentage)</argsstring>
+        <name>applyMutation</name>
+        <param>
+          <type>final int</type>
+          <declname>a_index</declname>
+        </param>
+        <param>
+          <type>final double</type>
+          <declname>a_percentage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Applies a mutation of a given intensity (percentage) onto the gene at the given index. Retries while <ref refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1adfa0b1f704e28e3a90d187df2cf4b8b5" kindref="member">isValid()</ref> returns true for the supergene. The method is delegated to the first element of the gene, indexed by a_index. See <ref refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1adfa0b1f704e28e3a90d187df2cf4b8b5" kindref="member">org.jgap.supergenes.AbstractSupergene.isValid()</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="222" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="222" bodyend="262"/>
+        <references refid="classorg_1_1jgap_1_1_base_gene_1a32a316c9cc9e273bd75182cbdf188fb6" compoundref="_base_gene_8java" startline="409" endline="411">org.jgap.BaseGene.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1adfa0b1f704e28e3a90d187df2cf4b8b5" compoundref="_abstract_supergene_8java" startline="145" endline="152">org.jgap.supergenes.AbstractSupergene.isValid</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7e237a04c314d9fbb0ab064ad88a5cb3" compoundref="_abstract_supergene_8java" startline="67">org.jgap.supergenes.AbstractSupergene.m_genes</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a92632c12f27c0aaef1984c8550afe9a1" compoundref="_abstract_supergene_8java" startline="70">org.jgap.supergenes.AbstractSupergene.m_immutable</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a9f06a4d966c9e615b2ea5bff4583a183" compoundref="_abstract_supergene_8java" startline="267" endline="284">org.jgap.supergenes.AbstractSupergene.markImmutable</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a6839c4b04a89a58c967219eda28a5dbb" compoundref="_abstract_supergene_8java" startline="58">org.jgap.supergenes.AbstractSupergene.MAX_RETRIES</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a8d2326c3d5ce80c73dff063f26994233" compoundref="_abstract_supergene_8java" startline="528" endline="530">org.jgap.supergenes.AbstractSupergene.size</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a92df9df781b9ae3bc7811bf76bb7ea87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.supergenes.AbstractSupergene.setToRandomValue</definition>
+        <argsstring>(final RandomGenerator a_numberGenerator)</argsstring>
+        <name>setToRandomValue</name>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_random_generator" kindref="compound">RandomGenerator</ref></type>
+          <declname>a_numberGenerator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the value of this <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> to a random legal value for the implementation. It calls setToRandomValue for all subgenes and then validates. With a large number of subgenes and low percent of valid combinations this may take too long to complete. We think, at lease several % of the all possible combintations must be valid. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="304" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="304" bodyend="322"/>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1adfa0b1f704e28e3a90d187df2cf4b8b5" compoundref="_abstract_supergene_8java" startline="145" endline="152">org.jgap.supergenes.AbstractSupergene.isValid</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7e237a04c314d9fbb0ab064ad88a5cb3" compoundref="_abstract_supergene_8java" startline="67">org.jgap.supergenes.AbstractSupergene.m_genes</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a6839c4b04a89a58c967219eda28a5dbb" compoundref="_abstract_supergene_8java" startline="58">org.jgap.supergenes.AbstractSupergene.MAX_RETRIES</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7b3ce455ac6d30ba31b198ce6824cd19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.supergenes.AbstractSupergene.setAllele</definition>
+        <argsstring>(final Object a_superAllele)</argsstring>
+        <name>setAllele</name>
+        <param>
+          <type>final Object</type>
+          <declname>a_superAllele</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the allele. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_superAllele</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be an array of objects, size matching the number of genes </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="329" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="329" bodyend="343"/>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7e237a04c314d9fbb0ab064ad88a5cb3" compoundref="_abstract_supergene_8java" startline="67">org.jgap.supergenes.AbstractSupergene.m_genes</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a45f21f887ad34c02fbc88d41e5d0372d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.supergenes.AbstractSupergene.getAllele</definition>
+        <argsstring>()</argsstring>
+        <name>getAllele</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_gene_1aa06c80639659ddbcfa1cfe7b7bb109f9">getAllele</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the allele value represented by this <ref refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene" kindref="compound">Supergene</ref>. <simplesect kind="return"><para>array of objects, each matching the subgene in this <ref refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene" kindref="compound">Supergene</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="349" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="349" bodyend="355"/>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7e237a04c314d9fbb0ab064ad88a5cb3" compoundref="_abstract_supergene_8java" startline="67">org.jgap.supergenes.AbstractSupergene.m_genes</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a41a4e0b1cf2366722b5f3b97a1711487" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String org.jgap.supergenes.AbstractSupergene.getPersistentRepresentation</definition>
+        <argsstring>()</argsstring>
+        <name>getPersistentRepresentation</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_persistent_representation_1a07bf7dbaa8de08e268c9357a46e79dac">getPersistentRepresentation</reimplements>
+        <exceptions> throws UnsupportedOperationException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a string representation of the value of this <ref refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene" kindref="compound">Supergene</ref> instance, using calls to the <ref refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene" kindref="compound">Supergene</ref> components. Supports other (nested) supergenes in this supergene </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>UnsupportedOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="363" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="363" bodyend="393"/>
+        <references refid="classorg_1_1jgap_1_1_base_gene_1a5e8fc72c1fccdb665113c0c34e3fa4b5" compoundref="_base_gene_8java" startline="422" endline="424">org.jgap.BaseGene.encode</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1ae7be27a291a2aa7e594384dd7a5936a8" compoundref="_abstract_supergene_8java" startline="39">org.jgap.supergenes.AbstractSupergene.GENE_DELIMITER</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a96059d4ef9cca18130330f3ab782c28b" compoundref="_abstract_supergene_8java" startline="51">org.jgap.supergenes.AbstractSupergene.GENE_DELIMITER_CLOSING</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1aebbbd0fdd22a6d94c951471c8ae86b84" compoundref="_abstract_supergene_8java" startline="45">org.jgap.supergenes.AbstractSupergene.GENE_DELIMITER_HEADING</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a9ebb4d5fbce8752cba54188ad5958fcf" compoundref="_abstract_supergene_8java" startline="633" endline="635">org.jgap.supergenes.AbstractSupergene.getValidator</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7e237a04c314d9fbb0ab064ad88a5cb3" compoundref="_abstract_supergene_8java" startline="67">org.jgap.supergenes.AbstractSupergene.m_genes</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1af8156c2a8b41bc9fe3e397595c513a6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.supergenes.AbstractSupergene.setValueFromPersistentRepresentation</definition>
+        <argsstring>(String a_representation)</argsstring>
+        <name>setValueFromPersistentRepresentation</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_persistent_representation_1a94a345f1919c4840dd0b9eecf7afc6a3">setValueFromPersistentRepresentation</reimplements>
+        <param>
+          <type>String</type>
+          <declname>a_representation</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_unsupported_representation_exception" kindref="compound">UnsupportedRepresentationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the value and internal state of this <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> from the string representation returned by a previous invocation of the <ref refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a41a4e0b1cf2366722b5f3b97a1711487" kindref="member">getPersistentRepresentation()</ref> method.</para><para>If the validator is not THIS and not null, a new validator is created using Class.forName(..).newInstance.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_representation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the string representation retrieved from a prior call to the <ref refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a41a4e0b1cf2366722b5f3b97a1711487" kindref="member">getPersistentRepresentation()</ref> method</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_unsupported_representation_exception" kindref="compound">UnsupportedRepresentationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Audrius Meskauskas </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>Remove the old content. </para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="411" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="411" bodyend="450"/>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a32c5375e3de833953678146fb3dcb5b3" compoundref="_abstract_supergene_8java" startline="488" endline="496">org.jgap.supergenes.AbstractSupergene.createGene</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a497a53be8d8d711ed48c62b062984a94" compoundref="_abstract_supergene_8java" startline="453" endline="485">org.jgap.supergenes.AbstractSupergene.createValidator</references>
+        <references refid="classorg_1_1jgap_1_1_base_gene_1ae9277d0b77c1e8ca244687a8ab8cf42f" compoundref="_base_gene_8java" startline="426" endline="428">org.jgap.BaseGene.decode</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1ae7be27a291a2aa7e594384dd7a5936a8" compoundref="_abstract_supergene_8java" startline="39">org.jgap.supergenes.AbstractSupergene.GENE_DELIMITER</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7e237a04c314d9fbb0ab064ad88a5cb3" compoundref="_abstract_supergene_8java" startline="67">org.jgap.supergenes.AbstractSupergene.m_genes</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1afae838561a1237ab6b39456ab0e3b8c8" compoundref="_abstract_supergene_8java" startline="624" endline="626">org.jgap.supergenes.AbstractSupergene.setValidator</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a3ff87dbb7c5c6a4167198184b7171934" compoundref="_abstract_supergene_8java" startline="587" endline="608">org.jgap.supergenes.AbstractSupergene.split</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1aec3dc6646255f4187aa9a6b4238a9a2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.supergenes.AbstractSupergene.cleanup</definition>
+        <argsstring>()</argsstring>
+        <name>cleanup</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_gene_1a5e353bbf6a9576b702bf466a5f952b82">cleanup</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calls <ref refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1aec3dc6646255f4187aa9a6b4238a9a2c" kindref="member">cleanup()</ref> for each subgene. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="499" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="499" bodyend="503"/>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7e237a04c314d9fbb0ab064ad88a5cb3" compoundref="_abstract_supergene_8java" startline="67">org.jgap.supergenes.AbstractSupergene.m_genes</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a67a9b1dfccb63d4b2909abdd3e8c1abe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String org.jgap.supergenes.AbstractSupergene.toString</definition>
+        <argsstring>()</argsstring>
+        <name>toString</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_gene_1ac62239b4b7bf81179fd491a4c4bd1901">toString</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a string representation of the supergene, providing class name and calling <ref refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a67a9b1dfccb63d4b2909abdd3e8c1abe" kindref="member">toString()</ref> for all subgenes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="509" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="509" bodyend="525"/>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7e237a04c314d9fbb0ab064ad88a5cb3" compoundref="_abstract_supergene_8java" startline="67">org.jgap.supergenes.AbstractSupergene.m_genes</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a8792c7c19ad0cdb48ade652a110a9016" compoundref="_abstract_supergene_8java" startline="638">org.jgap.supergenes.AbstractSupergene.m_validator</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a8d2326c3d5ce80c73dff063f26994233" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.supergenes.AbstractSupergene.size</definition>
+        <argsstring>()</argsstring>
+        <name>size</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_gene_1a7a975e180dd0ac0fd33cdc182f64bea8">size</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of the genes-components of this supergene. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="528" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="528" bodyend="530"/>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a008b2ecc6f66090965919b537fb327b3" compoundref="_abstract_supergene_8java" startline="222" endline="262">org.jgap.supergenes.AbstractSupergene.applyMutation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a9f06a4d966c9e615b2ea5bff4583a183" compoundref="_abstract_supergene_8java" startline="267" endline="284">org.jgap.supergenes.AbstractSupergene.markImmutable</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_supergene_persistent_representation_test_1ae606a51bc6eb9ce9c767f0430b16648e" compoundref="_supergene_persistent_representation_test_8java" startline="263" endline="268">org.jgap.supergenes.SupergenePersistentRepresentationTest.testSetAllele_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_supergene_persistent_representation_test_1acf01ec20fdcef689dbf996a949cc01af" compoundref="_supergene_persistent_representation_test_8java" startline="98" endline="105">org.jgap.supergenes.SupergenePersistentRepresentationTest.testSize_0</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1ac17432577a59856d6ef81abaf0a66bf9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.supergenes.AbstractSupergene.compareTo</definition>
+        <argsstring>(Object o)</argsstring>
+        <name>compareTo</name>
+        <param>
+          <type>Object</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calls <ref refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1ac17432577a59856d6ef81abaf0a66bf9" kindref="member">compareTo()</ref> for all subgenes. The passed parameter must be an instance of <ref refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene" kindref="compound">AbstractSupergene</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="534" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="534" bodyend="550"/>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1aa67d2e35432f0534c38260e0b3e4d014" compoundref="_abstract_supergene_8java" startline="104" endline="107">org.jgap.supergenes.AbstractSupergene.AbstractSupergene</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7e237a04c314d9fbb0ab064ad88a5cb3" compoundref="_abstract_supergene_8java" startline="67">org.jgap.supergenes.AbstractSupergene.m_genes</references>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_supergene_persistent_representation_test_1a45cc6edcb01c37cd75e293c91999f850" compoundref="_supergene_persistent_representation_test_8java" startline="183" endline="189">org.jgap.supergenes.SupergenePersistentRepresentationTest.testCompareTo_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_supergene_persistent_representation_test_1a267e24da2d59b4b81eb41611a53badc2" compoundref="_supergene_persistent_representation_test_8java" startline="203" endline="210">org.jgap.supergenes.SupergenePersistentRepresentationTest.testCompareTo_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_supergene_persistent_representation_test_1a3a05a229c6bb9c0d35319af3e2ecd590" compoundref="_supergene_persistent_representation_test_8java" startline="212" endline="221">org.jgap.supergenes.SupergenePersistentRepresentationTest.testCompareTo_3</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_supergene_persistent_representation_test_1ae98d314f71f1b020419a94b648629aad" compoundref="_supergene_persistent_representation_test_8java" startline="223" endline="231">org.jgap.supergenes.SupergenePersistentRepresentationTest.testEquals_0</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a80be2241977a41672bdbaa85acb7eabc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.supergenes.AbstractSupergene.equals</definition>
+        <argsstring>(Object a_gene)</argsstring>
+        <name>equals</name>
+        <param>
+          <type>Object</type>
+          <declname>a_gene</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calls <ref refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a80be2241977a41672bdbaa85acb7eabc" kindref="member">equals()</ref> for each pair of genes. If the supplied object is an instance of the different class, returns false. Also, the genes are assumed to be different if they have different validator classes (or only one of the validators is set to null). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="558" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="558" bodyend="568"/>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1aa67d2e35432f0534c38260e0b3e4d014" compoundref="_abstract_supergene_8java" startline="104" endline="107">org.jgap.supergenes.AbstractSupergene.AbstractSupergene</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7e237a04c314d9fbb0ab064ad88a5cb3" compoundref="_abstract_supergene_8java" startline="67">org.jgap.supergenes.AbstractSupergene.m_genes</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a92632c12f27c0aaef1984c8550afe9a1" compoundref="_abstract_supergene_8java" startline="70">org.jgap.supergenes.AbstractSupergene.m_immutable</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a8792c7c19ad0cdb48ade652a110a9016" compoundref="_abstract_supergene_8java" startline="638">org.jgap.supergenes.AbstractSupergene.m_validator</references>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_supergene_persistent_representation_test_1ae98d314f71f1b020419a94b648629aad" compoundref="_supergene_persistent_representation_test_8java" startline="223" endline="231">org.jgap.supergenes.SupergenePersistentRepresentationTest.testEquals_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_supergene_persistent_representation_test_1a4f7b4d7f397cf15125beb755f7b8e30c" compoundref="_supergene_persistent_representation_test_8java" startline="39" endline="78">org.jgap.supergenes.SupergenePersistentRepresentationTest.testRepresentation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a73c5c7702d66268b71e9ed92f0c5d41d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.supergenes.AbstractSupergene.hashCode</definition>
+        <argsstring>()</argsstring>
+        <name>hashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns sum of <ref refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a73c5c7702d66268b71e9ed92f0c5d41d" kindref="member">hashCode()</ref> of the genes-components. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="571" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="571" bodyend="577"/>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7e237a04c314d9fbb0ab064ad88a5cb3" compoundref="_abstract_supergene_8java" startline="67">org.jgap.supergenes.AbstractSupergene.m_genes</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a8b9835e9be1cc5edc8507c957b1f1f2d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.supergenes.AbstractSupergene.addGene</definition>
+        <argsstring>(Gene a_gene)</argsstring>
+        <name>addGene</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_composite_gene_1a28fc3a076dc6983c39108dc10751596d">addGene</reimplements>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+          <declname>a_gene</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Append a new gene to the gene array. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="611" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="611" bodyend="616"/>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7e237a04c314d9fbb0ab064ad88a5cb3" compoundref="_abstract_supergene_8java" startline="67">org.jgap.supergenes.AbstractSupergene.m_genes</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1afae838561a1237ab6b39456ab0e3b8c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.supergenes.AbstractSupergene.setValidator</definition>
+        <argsstring>(SupergeneValidator a_validator)</argsstring>
+        <name>setValidator</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_1a56ef316d0073f74cfd2704ac407ad83f">setValidator</reimplements>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator" kindref="compound">SupergeneValidator</ref></type>
+          <declname>a_validator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets an object, responsible for deciding if the <ref refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene" kindref="compound">Supergene</ref> allele combination is valid. If it is set to null, no validation is performed (all combinations are assumed to be valid). If no validator is set, the method <computeroutput>isValid (<ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> [] ) </computeroutput>is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="624" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="624" bodyend="626"/>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a8792c7c19ad0cdb48ade652a110a9016" compoundref="_abstract_supergene_8java" startline="638">org.jgap.supergenes.AbstractSupergene.m_validator</references>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1af8156c2a8b41bc9fe3e397595c513a6d" compoundref="_abstract_supergene_8java" startline="411" endline="450">org.jgap.supergenes.AbstractSupergene.setValueFromPersistentRepresentation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a9ebb4d5fbce8752cba54188ad5958fcf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator" kindref="compound">SupergeneValidator</ref></type>
+        <definition>SupergeneValidator org.jgap.supergenes.AbstractSupergene.getValidator</definition>
+        <argsstring>()</argsstring>
+        <name>getValidator</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_1a97719a430d58fba89ba26ed8f4a2a490">getValidator</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets an object, responsible for deciding if the <ref refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene" kindref="compound">Supergene</ref> allele combination is valid. If no external validator was set and the class uses its own internal validation method, it returns <emphasis>this</emphasis> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="633" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="633" bodyend="635"/>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a8792c7c19ad0cdb48ade652a110a9016" compoundref="_abstract_supergene_8java" startline="638">org.jgap.supergenes.AbstractSupergene.m_validator</references>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a41a4e0b1cf2366722b5f3b97a1711487" compoundref="_abstract_supergene_8java" startline="363" endline="393">org.jgap.supergenes.AbstractSupergene.getPersistentRepresentation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1aa7990463e784192581d7d7918cd0f1b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String org.jgap.supergenes.AbstractSupergene.getPersistent</definition>
+        <argsstring>()</argsstring>
+        <name>getPersistent</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator_1a9ef86d28cc29f90d7c451460a4a818fe">getPersistent</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><para><simplesect kind="return"><para>persistent string representation (if needed) of this validator. The method name is different allowing the same class to implement both <ref refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene" kindref="compound">Supergene</ref> and supergeneValidator.</para></simplesect>
+</para> The default implementation returns an empty string. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="642" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="642" bodyend="644"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a70a5435dbf92b886ab7d5bbcd2d79d09" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.supergenes.AbstractSupergene.setFromPersistent</definition>
+        <argsstring>(String a_from)</argsstring>
+        <name>setFromPersistent</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator_1a8718b55ab8474e3b5df097ef152a93f0">setFromPersistent</reimplements>
+        <param>
+          <type>String</type>
+          <declname>a_from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><para>Set a persistend string representation (if needed) for this validator. The method name is different allowing the same class to implement both <ref refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene" kindref="compound">Supergene</ref> and supergeneValidator.</para> The default implementation does nothing. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="648" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="648" bodyend="649"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1af4b0e1f740b6aa78679ab71c51568cea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.supergenes.AbstractSupergene.getInternalValue</definition>
+        <argsstring>()</argsstring>
+        <name>getInternalValue</name>
+        <reimplements refid="classorg_1_1jgap_1_1_base_gene_1ad20da6b23ba524a95caa28f727c26dcd">getInternalValue</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>not needed for abstract supergene </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="654" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="654" bodyend="659"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a1e30b794dee0e8da4d5a4d213e9fb2c1" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+        <definition>Gene org.jgap.supergenes.AbstractSupergene.newGeneInternal</definition>
+        <argsstring>()</argsstring>
+        <name>newGeneInternal</name>
+        <reimplements refid="classorg_1_1jgap_1_1_base_gene_1aa423e96ffac5a9589fb3a4fbda791b3c">newGeneInternal</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a new instance of this <ref refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene" kindref="compound">Supergene</ref> class with the same number of genes, calling <ref refid="classorg_1_1jgap_1_1_base_gene_1a40f8f3d249145ad028892cd706ba9dae" kindref="member">newGene()</ref> for each subgene. The class, derived from this abstract supergene will be instantiated (not the instance of abstractSupergene itself). If the external validator is set, the same validator will be set for the new gene.</para><para><simplesect kind="return"><para>the new <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the instance of <emphasis>this</emphasis> cannot be instantiated (for example, if it is not public or the parameterless constructor is not provided). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="192" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="192" bodyend="213"/>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1aa67d2e35432f0534c38260e0b3e4d014" compoundref="_abstract_supergene_8java" startline="104" endline="107">org.jgap.supergenes.AbstractSupergene.AbstractSupergene</references>
+        <references refid="classorg_1_1jgap_1_1_base_gene_1a32a316c9cc9e273bd75182cbdf188fb6" compoundref="_base_gene_8java" startline="409" endline="411">org.jgap.BaseGene.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7e237a04c314d9fbb0ab064ad88a5cb3" compoundref="_abstract_supergene_8java" startline="67">org.jgap.supergenes.AbstractSupergene.m_genes</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a8792c7c19ad0cdb48ade652a110a9016" compoundref="_abstract_supergene_8java" startline="638">org.jgap.supergenes.AbstractSupergene.m_validator</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a497a53be8d8d711ed48c62b062984a94" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator" kindref="compound">SupergeneValidator</ref></type>
+        <definition>SupergeneValidator org.jgap.supergenes.AbstractSupergene.createValidator</definition>
+        <argsstring>(String a_rep)</argsstring>
+        <name>createValidator</name>
+        <param>
+          <type>String</type>
+          <declname>a_rep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create validator from the string representation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="453" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="453" bodyend="485"/>
+        <references refid="classorg_1_1jgap_1_1_base_gene_1ae9277d0b77c1e8ca244687a8ab8cf42f" compoundref="_base_gene_8java" startline="426" endline="428">org.jgap.BaseGene.decode</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1ae7be27a291a2aa7e594384dd7a5936a8" compoundref="_abstract_supergene_8java" startline="39">org.jgap.supergenes.AbstractSupergene.GENE_DELIMITER</references>
+        <references refid="classorg_1_1jgap_1_1_base_gene_1a32a316c9cc9e273bd75182cbdf188fb6" compoundref="_base_gene_8java" startline="409" endline="411">org.jgap.BaseGene.getConfiguration</references>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1af8156c2a8b41bc9fe3e397595c513a6d" compoundref="_abstract_supergene_8java" startline="411" endline="450">org.jgap.supergenes.AbstractSupergene.setValueFromPersistentRepresentation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a32c5375e3de833953678146fb3dcb5b3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+        <definition>Gene org.jgap.supergenes.AbstractSupergene.createGene</definition>
+        <argsstring>(String a_geneClassName, String a_persistentRepresentation)</argsstring>
+        <name>createGene</name>
+        <param>
+          <type>String</type>
+          <declname>a_geneClassName</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>a_persistentRepresentation</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a new instance of gene. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="488" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="488" bodyend="496"/>
+        <references refid="classorg_1_1jgap_1_1_base_gene_1a32a316c9cc9e273bd75182cbdf188fb6" compoundref="_base_gene_8java" startline="409" endline="411">org.jgap.BaseGene.getConfiguration</references>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1af8156c2a8b41bc9fe3e397595c513a6d" compoundref="_abstract_supergene_8java" startline="411" endline="450">org.jgap.supergenes.AbstractSupergene.setValueFromPersistentRepresentation</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a9f06a4d966c9e615b2ea5bff4583a183" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.supergenes.AbstractSupergene.markImmutable</definition>
+        <argsstring>(final int a_index)</argsstring>
+        <name>markImmutable</name>
+        <param>
+          <type>final int</type>
+          <declname>a_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000178"><xreftitle>Todo</xreftitle><xrefdescription><para>: Implement protection against overgrowing of this data block. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="267" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="267" bodyend="284"/>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a92632c12f27c0aaef1984c8550afe9a1" compoundref="_abstract_supergene_8java" startline="70">org.jgap.supergenes.AbstractSupergene.m_immutable</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a40054ab751c7676fcd9f974c029a6a9d" compoundref="_abstract_supergene_8java" startline="64">org.jgap.supergenes.AbstractSupergene.MAX_IMMUTABLE_GENES</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a8d2326c3d5ce80c73dff063f26994233" compoundref="_abstract_supergene_8java" startline="528" endline="530">org.jgap.supergenes.AbstractSupergene.size</references>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a008b2ecc6f66090965919b537fb327b3" compoundref="_abstract_supergene_8java" startline="222" endline="262">org.jgap.supergenes.AbstractSupergene.applyMutation</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1afdcc065673680fb080e17ff2596a0eb0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void org.jgap.supergenes.AbstractSupergene.reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Discards all internal caches, ensuring correct repetetive tests of performance. Differently from <ref refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1aec3dc6646255f4187aa9a6b4238a9a2c" kindref="member">cleanup()</ref>, discards also static references, that are assumed to be useful for the multiple instances of the <ref refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene" kindref="compound">Supergene</ref>. Clears the set of the alleles that are known to be immutable. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="293" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="293" bodyend="295"/>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a92632c12f27c0aaef1984c8550afe9a1" compoundref="_abstract_supergene_8java" startline="70">org.jgap.supergenes.AbstractSupergene.m_immutable</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a3ff87dbb7c5c6a4167198184b7171934" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>final List</type>
+        <definition>static final List org.jgap.supergenes.AbstractSupergene.split</definition>
+        <argsstring>(String a_string)</argsstring>
+        <name>split</name>
+        <param>
+          <type>String</type>
+          <declname>a_string</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_unsupported_representation_exception" kindref="compound">UnsupportedRepresentationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Splits the string a_x into individual gene representations <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the string to split </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the elements of the returned array are the persistent representation strings of the genes - components</para></simplesect>
+<simplesect kind="author"><para>Audrius Meskauskas </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="587" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="587" bodyend="608"/>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a96059d4ef9cca18130330f3ab782c28b" compoundref="_abstract_supergene_8java" startline="51">org.jgap.supergenes.AbstractSupergene.GENE_DELIMITER_CLOSING</references>
+        <references refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1aebbbd0fdd22a6d94c951471c8ae86b84" compoundref="_abstract_supergene_8java" startline="45">org.jgap.supergenes.AbstractSupergene.GENE_DELIMITER_HEADING</references>
+        <referencedby refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1af8156c2a8b41bc9fe3e397595c513a6d" compoundref="_abstract_supergene_8java" startline="411" endline="450">org.jgap.supergenes.AbstractSupergene.setValueFromPersistentRepresentation</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Combined implementation of both <ref refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene" kindref="compound">Supergene</ref> and <ref refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator" kindref="compound">SupergeneValidator</ref>. A working supergene can be easily created from this class just by adding genes and overriding <ref refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1adfa0b1f704e28e3a90d187df2cf4b8b5" kindref="member">[] a_case, Supergene a_forSupergene) isValid (Gene [], Supergene)</ref> method. For more complex cases, you may need to set your own <ref refid="classorg_1_1jgap_1_1supergenes_1_1_validator" kindref="compound">Validator</ref>.</para><para><simplesect kind="author"><para>Audrius Meskauskas </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="9292">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="9299">
+        <label>org.jgap.supergenes.SupergeneInternalParserTest.TestClass</label>
+        <childnode refid="9287" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9295">
+        <label>org.jgap.ICompositeGene</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_composite_gene"/>
+        <childnode refid="9289" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9298">
+        <label>org.jgap.supergenes.InstantiableSupergeneForTesting</label>
+        <link refid="classorg_1_1jgap_1_1supergenes_1_1_instantiable_supergene_for_testing"/>
+        <childnode refid="9287" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9291">
+        <label>Serializable</label>
+      </node>
+      <node id="9290">
+        <label>Comparable</label>
+      </node>
+      <node id="9293">
+        <label>org.jgap.IBusinessKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_business_key"/>
+      </node>
+      <node id="9296">
+        <label>org.jgap.supergenes.SupergeneValidator</label>
+        <link refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator"/>
+      </node>
+      <node id="9288">
+        <label>org.jgap.BaseGene</label>
+        <link refid="classorg_1_1jgap_1_1_base_gene"/>
+        <childnode refid="9289" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9293" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9300">
+        <label>org.jgap.supergenes.SupergenePersistentRepresentationTest.TestClass</label>
+        <childnode refid="9287" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9294">
+        <label>org.jgap.supergenes.Supergene</label>
+        <link refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene"/>
+        <childnode refid="9289" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9295" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9289">
+        <label>org.jgap.Gene</label>
+        <link refid="interfaceorg_1_1jgap_1_1_gene"/>
+        <childnode refid="9290" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9291" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9292" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9297">
+        <label>org.jgap.IPersistentRepresentation</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_persistent_representation"/>
+      </node>
+      <node id="9287">
+        <label>org.jgap.supergenes.AbstractSupergene</label>
+        <link refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene"/>
+        <childnode refid="9288" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9294" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9296" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9297" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9306">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="9321">
+        <label>List</label>
+      </node>
+      <node id="9320">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="9305" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9310" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9324">
+        <label>org.jgap.ICompositeGene</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_composite_gene"/>
+        <childnode refid="9303" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9317">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="9305" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9305">
+        <label>Serializable</label>
+      </node>
+      <node id="9304">
+        <label>Comparable</label>
+      </node>
+      <node id="9307">
+        <label>org.jgap.IBusinessKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_business_key"/>
+      </node>
+      <node id="9325">
+        <label>org.jgap.supergenes.SupergeneValidator</label>
+        <link refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator"/>
+      </node>
+      <node id="9302">
+        <label>org.jgap.BaseGene</label>
+        <link refid="classorg_1_1jgap_1_1_base_gene"/>
+        <childnode refid="9303" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9307" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9308" relation="usage">
+          <edgelabel>m_configuration</edgelabel>
+        </childnode>
+        <childnode refid="9322" relation="usage">
+          <edgelabel>m_geneAlleleChecker</edgelabel>
+        </childnode>
+      </node>
+      <node id="9310">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="9311" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9323">
+        <label>org.jgap.supergenes.Supergene</label>
+        <link refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene"/>
+        <childnode refid="9303" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9324" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9315">
+        <label>org.jgap.FitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_fitness_evaluator"/>
+        <childnode refid="9305" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9322">
+        <label>org.jgap.IGeneConstraintChecker</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_gene_constraint_checker"/>
+        <childnode refid="9305" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9318">
+        <label>org.jgap.BulkFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_bulk_fitness_function"/>
+        <childnode refid="9305" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9310" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9311">
+        <label>Cloneable</label>
+      </node>
+      <node id="9303">
+        <label>org.jgap.Gene</label>
+        <link refid="interfaceorg_1_1jgap_1_1_gene"/>
+        <childnode refid="9304" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9305" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9306" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9326">
+        <label>org.jgap.IPersistentRepresentation</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_persistent_representation"/>
+      </node>
+      <node id="9313">
+        <label>org.jgap.IJGAPFactory</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_j_g_a_p_factory"/>
+        <childnode refid="9305" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9319">
+        <label>org.jgap.Configuration.ConfigurationConfigurable</label>
+        <link refid="classorg_1_1jgap_1_1_configuration_1_1_configuration_configurable"/>
+        <childnode refid="9305" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9301">
+        <label>org.jgap.supergenes.AbstractSupergene</label>
+        <link refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene"/>
+        <childnode refid="9302" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9323" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9325" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9326" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9325" relation="usage">
+          <edgelabel>m_validator</edgelabel>
+        </childnode>
+        <childnode refid="9303" relation="usage">
+          <edgelabel>m_genes</edgelabel>
+        </childnode>
+      </node>
+      <node id="9312">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="9310" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9305" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9304" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9316">
+        <label>org.jgap.IChromosome</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome"/>
+        <childnode refid="9304" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9310" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9305" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9306" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9308">
+        <label>org.jgap.Configuration</label>
+        <link refid="classorg_1_1jgap_1_1_configuration"/>
+        <childnode refid="9309" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9305" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9310" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9304" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9312" relation="usage">
+          <edgelabel>m_breeder</edgelabel>
+        </childnode>
+        <childnode refid="9313" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="9314" relation="usage">
+          <edgelabel>m_chromosomePool</edgelabel>
+        </childnode>
+        <childnode refid="9315" relation="usage">
+          <edgelabel>m_fitnessEvaluator</edgelabel>
+        </childnode>
+        <childnode refid="9316" relation="usage">
+          <edgelabel>m_sampleChromosome</edgelabel>
+        </childnode>
+        <childnode refid="9317" relation="usage">
+          <edgelabel>m_randomGenerator</edgelabel>
+        </childnode>
+        <childnode refid="9318" relation="usage">
+          <edgelabel>m_bulkObjectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="9319" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="9320" relation="usage">
+          <edgelabel>m_objectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="9321" relation="usage">
+          <edgelabel>m_geneticOperators</edgelabel>
+        </childnode>
+      </node>
+      <node id="9314">
+        <label>org.jgap.IChromosomePool</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool"/>
+      </node>
+      <node id="9309">
+        <label>Configurable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" line="31" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/supergenes/AbstractSupergene.java" bodystart="29" bodyend="660"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1aa67d2e35432f0534c38260e0b3e4d014" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>AbstractSupergene</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a8ede7cc1a661a1fb8a7d7000ec7ea11f" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>AbstractSupergene</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a1cbbfd45d7cad277949c8571fa067013" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>AbstractSupergene</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a8b9835e9be1cc5edc8507c957b1f1f2d" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>addGene</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a008b2ecc6f66090965919b537fb327b3" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>applyMutation</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_gene_1af506b6e1d6ceb3e88e522da4c79adba4" prot="public" virt="non-virtual" ambiguityscope="org::jgap::BaseGene."><scope>org::jgap::supergenes::AbstractSupergene</scope><name>applyMutation</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1acea53de5bb68978322967e8019607f24" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>BaseGene</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1aec3dc6646255f4187aa9a6b4238a9a2c" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>cleanup</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1a72fa365cdcc9f2eb399fb8346a0a511b" prot="protected" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>compareApplicationData</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1ac17432577a59856d6ef81abaf0a66bf9" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>compareTo</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a32c5375e3de833953678146fb3dcb5b3" prot="protected" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>createGene</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a497a53be8d8d711ed48c62b062984a94" prot="protected" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>createValidator</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a9084146c063a12faff254011968f40b8" prot="private" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1ae9277d0b77c1e8ca244687a8ab8cf42f" prot="protected" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>decode</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1a86edb3d2c29e5064305fabc2dd59a3b9" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>DELTA</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1a5e8fc72c1fccdb665113c0c34e3fa4b5" prot="protected" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>encode</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a80be2241977a41672bdbaa85acb7eabc" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>equals</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1a9fb0e302ae57ee3f2f5d1ee08a75bf43" prot="public" virt="non-virtual" ambiguityscope="org::jgap::BaseGene."><scope>org::jgap::supergenes::AbstractSupergene</scope><name>equals</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1ae7be27a291a2aa7e594384dd7a5936a8" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>GENE_DELIMITER</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a96059d4ef9cca18130330f3ab782c28b" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>GENE_DELIMITER_CLOSING</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1aebbbd0fdd22a6d94c951471c8ae86b84" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>GENE_DELIMITER_HEADING</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a099bf664561a1f88b9826e25d870ad7f" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>geneAt</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_1a62e038f5ed00578a997a044f49136bbd" prot="public" virt="non-virtual" ambiguityscope="org::jgap::supergenes::Supergene."><scope>org::jgap::supergenes::AbstractSupergene</scope><name>geneAt</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a45f21f887ad34c02fbc88d41e5d0372d" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>getAllele</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1a0520139dc694dc6034aeb631ae7d70bd" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>getApplicationData</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1ac4e7c0fad73465365953b375cfa802a8" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>getBusinessKey</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1a32a316c9cc9e273bd75182cbdf188fb6" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>getConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1ae9823bef7c550fc1533afb8ab2b34d93" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>getConstraintChecker</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1a48f71c4c1282de2ca2cf8f4009c4615a" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>getEnergy</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a5b03d0c4d103975b296d280371b901bd" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>getGenes</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1af4b0e1f740b6aa78679ab71c51568cea" prot="public" virt="virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>getInternalValue</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1aa7990463e784192581d7d7918cd0f1b1" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>getPersistent</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a41a4e0b1cf2366722b5f3b97a1711487" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>getPersistentRepresentation</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1ab53d562a62f5c72fc88c7e5315a23ed7" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>getUniqueID</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1ad3c210e440f2b542391db5a909fda3b7" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>getUniqueIDTemplate</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a9ebb4d5fbce8752cba54188ad5958fcf" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>getValidator</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a73c5c7702d66268b71e9ed92f0c5d41d" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>hashCode</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1acd6431c06c81bc03b4abbe32e4d9d8ef" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>isCompareApplicationData</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1adfa0b1f704e28e3a90d187df2cf4b8b5" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>isValid</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a4d07a7aa9a0af1e4e1a96b1a7663afee" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>isValid</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator_1ac05f4997c7b03d61a3c5365baeccef91" prot="public" virt="non-virtual" ambiguityscope="org::jgap::supergenes::SupergeneValidator."><scope>org::jgap::supergenes::AbstractSupergene</scope><name>isValid</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7e237a04c314d9fbb0ab064ad88a5cb3" prot="private" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>m_genes</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a92632c12f27c0aaef1984c8550afe9a1" prot="private" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>m_immutable</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a8792c7c19ad0cdb48ade652a110a9016" prot="protected" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>m_validator</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a9f06a4d966c9e615b2ea5bff4583a183" prot="private" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>markImmutable</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a40054ab751c7676fcd9f974c029a6a9d" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>MAX_IMMUTABLE_GENES</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a6839c4b04a89a58c967219eda28a5dbb" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>MAX_RETRIES</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1a40f8f3d249145ad028892cd706ba9dae" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>newGene</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a1e30b794dee0e8da4d5a4d213e9fb2c1" prot="protected" virt="virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>newGeneInternal</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_gene_1ae49de1c9f46601f1b60d393a9ce3901a" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>PERSISTENT_FIELD_DELIMITER</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1afdcc065673680fb080e17ff2596a0eb0" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>reset</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1acc4b1c46f3508b835bf95b9058eae3a0" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>S_APPLICATION_DATA</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a7b3ce455ac6d30ba31b198ce6824cd19" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>setAllele</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_gene_1af46a0c31e0fecea483497e87ca278127" prot="public" virt="non-virtual" ambiguityscope="org::jgap::BaseGene."><scope>org::jgap::supergenes::AbstractSupergene</scope><name>setAllele</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1afeb9a5f42018c057c8197fb0e7d57354" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>setApplicationData</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_gene_1ae8405395f244a18424794e8f2e36c608" prot="public" virt="non-virtual" ambiguityscope="org::jgap::Gene."><scope>org::jgap::supergenes::AbstractSupergene</scope><name>setApplicationData</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1adad4ccd46efd7b2a3dc81bd0ba0c410c" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>setCompareApplicationData</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_gene_1a404ee1527c7dab2f8115f18507d0544b" prot="public" virt="non-virtual" ambiguityscope="org::jgap::Gene."><scope>org::jgap::supergenes::AbstractSupergene</scope><name>setCompareApplicationData</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1a334db8a543f3008719d78ee219826b65" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>setConstraintChecker</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1afb39fbd8997971a140a9a4380ceecc4a" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>setEnergy</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_gene_1af5c429a29c338d2ad5d5514d5beea6e7" prot="public" virt="non-virtual" ambiguityscope="org::jgap::Gene."><scope>org::jgap::supergenes::AbstractSupergene</scope><name>setEnergy</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a70a5435dbf92b886ab7d5bbcd2d79d09" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>setFromPersistent</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a92df9df781b9ae3bc7811bf76bb7ea87" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>setToRandomValue</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_gene_1a4ef135da7549ee98139928e21adb841a" prot="public" virt="non-virtual" ambiguityscope="org::jgap::BaseGene."><scope>org::jgap::supergenes::AbstractSupergene</scope><name>setToRandomValue</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1aa7d9f1c3c2e727d496d66a85818c17d0" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>setUniqueIDTemplate</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1afae838561a1237ab6b39456ab0e3b8c8" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>setValidator</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1af8156c2a8b41bc9fe3e397595c513a6d" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>setValueFromPersistentRepresentation</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a8d2326c3d5ce80c73dff063f26994233" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>size</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a3ff87dbb7c5c6a4167198184b7171934" prot="protected" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>split</name></member>
+      <member refid="classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_1a67a9b1dfccb63d4b2909abdd3e8c1abe" prot="public" virt="non-virtual"><scope>org::jgap::supergenes::AbstractSupergene</scope><name>toString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

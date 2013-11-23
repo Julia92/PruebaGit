@@ -1,0 +1,310 @@
+.TH "org.jgap.impl.TournamentSelector" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.TournamentSelector \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.NaturalSelectorExt\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBFitnessValueComparator\fP"
+.br
+.ti -1c
+.RI "class \fBTournamentSelectorConfigurable\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTournamentSelector\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBTournamentSelector\fP (final \fBConfiguration\fP a_config, final int a_tournament_size, final double a_probability)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBsetTournamentSize\fP (final int a_tournament_size)"
+.br
+.ti -1c
+.RI "int \fBgetTournamentSize\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetProbability\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetProbability\fP (final double a_probability)"
+.br
+.ti -1c
+.RI "void \fBselectChromosomes\fP (final int a_howManyToSelect, \fBPopulation\fP a_to_pop)"
+.br
+.ti -1c
+.RI "boolean \fBreturnsUniqueChromosomes\fP ()"
+.br
+.ti -1c
+.RI "void \fBempty\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBadd\fP (final \fBIChromosome\fP a_chromosomeToAdd)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "TournamentSelectorConfigurable \fBm_config\fP = new TournamentSelectorConfigurable()"
+.br
+.ti -1c
+.RI "List \fBm_chromosomes\fP"
+.br
+.ti -1c
+.RI "\fBFitnessValueComparator\fP \fBm_fitnessValueComparator\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.24 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Implementation of a \fBNaturalSelector\fP that plays tournaments to determine the chromosomes to be taken to the next generation\&. 
+.PP
+The tournament size can be adjusted as well as the probability for selecting an individual\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file TournamentSelector\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.TournamentSelector\&.TournamentSelector () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Default constructor\&.
+.PP
+Attention: The configuration used is the one set with the static method Genotype\&.setConfiguration\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.PP
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file TournamentSelector\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.getStaticConfiguration(), and org\&.jgap\&.impl\&.TournamentSelector\&.init()\&.
+.SS "org\&.jgap\&.impl\&.TournamentSelector\&.TournamentSelector (final \fBConfiguration\fPa_config, final inta_tournament_size, final doublea_probability) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.br
+\fIa_tournament_size\fP the size of each tournament to play 
+.br
+\fIa_probability\fP probability for selecting the best individuals
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 72 of file TournamentSelector\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.TournamentSelector\&.init()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.impl\&.TournamentSelector\&.add (final \fBIChromosome\fPa_chromosomeToAdd)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomeToAdd\fP the chromosome to add
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.NaturalSelectorExt\fP\&.
+.PP
+Definition at line 182 of file TournamentSelector\&.java\&.
+.SS "void org\&.jgap\&.impl\&.TournamentSelector\&.empty ()\fC [inline]\fP"
+Empty out the working pool of Chromosomes\&. This will be invoked after each evolution cycle so that the natural selector can be reused for the next one\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.INaturalSelector\fP\&.
+.PP
+Definition at line 171 of file TournamentSelector\&.java\&.
+.SS "double org\&.jgap\&.impl\&.TournamentSelector\&.getProbability ()\fC [inline]\fP"
+
+.PP
+Definition at line 100 of file TournamentSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.TournamentSelectorTest\&.testSetProbability_0()\&.
+.SS "int org\&.jgap\&.impl\&.TournamentSelector\&.getTournamentSize ()\fC [inline]\fP"
+
+.PP
+Definition at line 96 of file TournamentSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.TournamentSelectorTest\&.testSetTournametSize_0()\&.
+.SS "void org\&.jgap\&.impl\&.TournamentSelector\&.init ()\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 57 of file TournamentSelector\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.TournamentSelector\&.m_chromosomes, and org\&.jgap\&.impl\&.TournamentSelector\&.m_fitnessValueComparator\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.TournamentSelector\&.TournamentSelector()\&.
+.SS "boolean org\&.jgap\&.impl\&.TournamentSelector\&.returnsUniqueChromosomes ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+false as we allow to return the same chromosome multiple times
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.INaturalSelector\fP\&.
+.PP
+Definition at line 167 of file TournamentSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.TournamentSelectorTest\&.testReturnsUniqueChromosomes_0()\&.
+.SS "void org\&.jgap\&.impl\&.TournamentSelector\&.selectChromosomes (final inta_howManyToSelect, \fBPopulation\fPa_to_pop)\fC [inline]\fP"
+Select a given number of Chromosomes from the pool that will move on to the next generation population\&. This selection will be guided by the fitness values\&. The chromosomes with the best fitness value win\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_howManyToSelect\fP int 
+.br
+\fIa_to_pop\fP the population the Chromosomes will be added to
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 123 of file TournamentSelector\&.java\&.
+.PP
+References org\&.jgap\&.NaturalSelector\&.getConfiguration(), org\&.jgap\&.impl\&.TournamentSelector\&.m_config, and org\&.jgap\&.impl\&.TournamentSelector\&.m_fitnessValueComparator\&.
+.SS "void org\&.jgap\&.impl\&.TournamentSelector\&.setProbability (final doublea_probability)\fC [inline]\fP"
+
+.PP
+Definition at line 104 of file TournamentSelector\&.java\&.
+.SS "void org\&.jgap\&.impl\&.TournamentSelector\&.setTournamentSize (final inta_tournament_size)\fC [inline]\fP"
+
+.PP
+Definition at line 89 of file TournamentSelector\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.TournamentSelector\&.CVS_REVISION = '$Revision: 1\&.24 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 29 of file TournamentSelector\&.java\&.
+.SS "List org\&.jgap\&.impl\&.TournamentSelector\&.m_chromosomes\fC [private]\fP"
+
+.PP
+Definition at line 34 of file TournamentSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.TournamentSelector\&.init()\&.
+.SS "TournamentSelectorConfigurable org\&.jgap\&.impl\&.TournamentSelector\&.m_config = new TournamentSelectorConfigurable()\fC [private]\fP"
+
+.PP
+Definition at line 32 of file TournamentSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.TournamentSelector\&.selectChromosomes()\&.
+.SS "\fBFitnessValueComparator\fP org\&.jgap\&.impl\&.TournamentSelector\&.m_fitnessValueComparator\fC [private]\fP"
+Comparator that is only concerned about fitness values 
+.PP
+Definition at line 39 of file TournamentSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.TournamentSelector\&.init(), and org\&.jgap\&.impl\&.TournamentSelector\&.selectChromosomes()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1impl_1_1_default_clone_handler" kind="class" prot="public">
+    <compoundname>org::jgap::impl::DefaultCloneHandler</compoundname>
+    <basecompoundref refid="interfaceorg_1_1jgap_1_1_i_clone_handler" prot="public" virt="non-virtual">org.jgap.ICloneHandler</basecompoundref>
+    <basecompoundref refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable" prot="public" virt="non-virtual">org.jgap.util.ICloneable</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Comparable</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_1ad2c84d3ba1cdd65ab5f18391a676745f" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.impl.DefaultCloneHandler.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.14 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCloneHandler.java" line="29" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCloneHandler.java" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_1a10509512ab17167465284441863c6d18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.DefaultCloneHandler.isHandlerFor</definition>
+        <argsstring>(final Object a_obj, final Class a_clazz)</argsstring>
+        <name>isHandlerFor</name>
+        <param>
+          <type>final Object</type>
+          <declname>a_obj</declname>
+        </param>
+        <param>
+          <type>final Class</type>
+          <declname>a_clazz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles all implementations of <ref refid="interfaceorg_1_1jgap_1_1_i_application_data" kindref="compound">IApplicationData</ref> as well as all of java.lang.Cloneable (for which the clone-method is accessible via reflection. This is not the case for package protected classes, e.g.).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the object to check for (maybe null) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_clazz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the class to check for whether it is handled (maybe null) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true in case class is clonable via this handler</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCloneHandler.java" line="43" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCloneHandler.java" bodystart="43" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_1a7e81a10fa8f33762e62f9484fb1da285" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.impl.DefaultCloneHandler.perform</definition>
+        <argsstring>(final Object a_objToClone, final Class a_class, final Object a_params)</argsstring>
+        <name>perform</name>
+        <param>
+          <type>final Object</type>
+          <declname>a_objToClone</declname>
+        </param>
+        <param>
+          <type>final Class</type>
+          <declname>a_class</declname>
+        </param>
+        <param>
+          <type>final Object</type>
+          <declname>a_params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Performs the clone operation.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_objToClone</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the object to clone </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_class</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>not considered here </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>not considered here</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Object</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCloneHandler.java" line="100" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCloneHandler.java" bodystart="100" bodyend="143"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_1a4e707a3046b850327060b0fa6cf0efb4" compoundref="_default_clone_handler_8java" startline="151" endline="153">org.jgap.impl.DefaultCloneHandler.clone</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_1a4e707a3046b850327060b0fa6cf0efb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.impl.DefaultCloneHandler.clone</definition>
+        <argsstring>()</argsstring>
+        <name>clone</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable_1aa7e7d62077e6428ad7904932b1b4f7d5">clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>deep clone of this instance</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCloneHandler.java" line="151" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCloneHandler.java" bodystart="151" bodyend="153"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_1a7e81a10fa8f33762e62f9484fb1da285" compoundref="_default_clone_handler_8java" startline="100" endline="143">org.jgap.impl.DefaultCloneHandler.perform</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_1a85eeb61727c942218505d48e696ad983" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.impl.DefaultCloneHandler.compareTo</definition>
+        <argsstring>(Object a_other)</argsstring>
+        <name>compareTo</name>
+        <param>
+          <type>Object</type>
+          <declname>a_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sic </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>as always</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCloneHandler.java" line="162" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCloneHandler.java" bodystart="162" bodyend="169"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Default clone handler supporting <ref refid="interfaceorg_1_1jgap_1_1_i_application_data" kindref="compound">IApplicationData</ref> as well as implementations of Cloneable (for the latter: in case the clone-method is accessible via reflection).</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="11553">
+        <label>Serializable</label>
+      </node>
+      <node id="11554">
+        <label>Comparable</label>
+      </node>
+      <node id="11550">
+        <label>org.jgap.IHandler</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_handler"/>
+      </node>
+      <node id="11551">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="11552" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11548">
+        <label>org.jgap.impl.DefaultCloneHandler</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_default_clone_handler"/>
+        <childnode refid="11549" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11551" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11553" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11554" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11552">
+        <label>Cloneable</label>
+      </node>
+      <node id="11549">
+        <label>org.jgap.ICloneHandler</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_clone_handler"/>
+        <childnode refid="11550" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11560">
+        <label>Serializable</label>
+      </node>
+      <node id="11561">
+        <label>Comparable</label>
+      </node>
+      <node id="11557">
+        <label>org.jgap.IHandler</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_handler"/>
+      </node>
+      <node id="11558">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="11559" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11555">
+        <label>org.jgap.impl.DefaultCloneHandler</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_default_clone_handler"/>
+        <childnode refid="11556" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11558" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11560" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11561" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11559">
+        <label>Cloneable</label>
+      </node>
+      <node id="11556">
+        <label>org.jgap.ICloneHandler</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_clone_handler"/>
+        <childnode refid="11557" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCloneHandler.java" line="26" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCloneHandler.java" bodystart="25" bodyend="170"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_1a4e707a3046b850327060b0fa6cf0efb4" prot="public" virt="non-virtual"><scope>org::jgap::impl::DefaultCloneHandler</scope><name>clone</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_1a85eeb61727c942218505d48e696ad983" prot="public" virt="non-virtual"><scope>org::jgap::impl::DefaultCloneHandler</scope><name>compareTo</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_1ad2c84d3ba1cdd65ab5f18391a676745f" prot="private" virt="non-virtual"><scope>org::jgap::impl::DefaultCloneHandler</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_1a10509512ab17167465284441863c6d18" prot="public" virt="non-virtual"><scope>org::jgap::impl::DefaultCloneHandler</scope><name>isHandlerFor</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_handler_1a026d7a41944049a4f812ee0d1151d40e" prot="public" virt="non-virtual" ambiguityscope="org::jgap::ICloneHandler."><scope>org::jgap::impl::DefaultCloneHandler</scope><name>isHandlerFor</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_1a7e81a10fa8f33762e62f9484fb1da285" prot="public" virt="non-virtual"><scope>org::jgap::impl::DefaultCloneHandler</scope><name>perform</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_handler_1a60199862000df04a4b2491d6d08f2f2c" prot="public" virt="non-virtual" ambiguityscope="org::jgap::ICloneHandler."><scope>org::jgap::impl::DefaultCloneHandler</scope><name>perform</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

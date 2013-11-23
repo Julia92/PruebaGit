@@ -1,0 +1,155 @@
+.TH "org.jgap.data.config.ConfigWriter" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.data.config.ConfigWriter \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBwrite\fP (final \fBIConfigInfo\fP a_cInfo)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBConfigWriter\fP \fBgetInstance\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConfigWriter\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Properties \fBm_config\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.8 $'"
+.br
+.ti -1c
+.RI "static \fBConfigWriter\fP \fBm_cWriter\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is a Singleton that generates a properties file from classes implementing \fBIConfigInfo\fP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file ConfigWriter\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.data\&.config\&.ConfigWriter\&.ConfigWriter ()\fC [inline]\fP, \fC [private]\fP"
+Constructor for the \fBConfigWriter\fP Singleton
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 55 of file ConfigWriter\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigWriter\&.m_config\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.ConfigWriter\&.getInstance()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBConfigWriter\fP org\&.jgap\&.data\&.config\&.ConfigWriter\&.getInstance ()\fC [inline]\fP, \fC [static]\fP"
+Method to create and access the Singleton \fBConfigWriter\fP instance\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+a \fBConfigWriter\fP Singleton instance\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 42 of file ConfigWriter\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigWriter\&.ConfigWriter(), and org\&.jgap\&.data\&.config\&.ConfigWriter\&.m_cWriter\&.
+.SS "void org\&.jgap\&.data\&.config\&.ConfigWriter\&.write (final \fBIConfigInfo\fPa_cInfo)\fC [inline]\fP"
+Persist the configuration information as selected by the user\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_cInfo\fP configuration Information to persist
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 66 of file ConfigWriter\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.IConfigInfo\&.getFileName()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.data\&.config\&.ConfigWriter\&.CVS_REVISION = '$Revision: 1\&.8 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file ConfigWriter\&.java\&.
+.SS "Properties org\&.jgap\&.data\&.config\&.ConfigWriter\&.m_config\fC [private]\fP"
+
+.PP
+Definition at line 33 of file ConfigWriter\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.ConfigWriter\&.ConfigWriter()\&.
+.SS "\fBConfigWriter\fP org\&.jgap\&.data\&.config\&.ConfigWriter\&.m_cWriter\fC [static]\fP, \fC [private]\fP"
+Singleton instance of \fBConfigWriter\fP 
+.PP
+Definition at line 30 of file ConfigWriter\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.ConfigWriter\&.getInstance()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

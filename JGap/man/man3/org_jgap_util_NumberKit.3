@@ -1,0 +1,228 @@
+.TH "org.jgap.util.NumberKit" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.util.NumberKit \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fBhexValue\fP (char a_c)"
+.br
+.ti -1c
+.RI "static char[] \fBasChars\fP (byte a_in)"
+.br
+.ti -1c
+.RI "static char[] \fBasChars\fP (byte a_in, int a_length)"
+.br
+.ti -1c
+.RI "static short \fBparseShort\fP (String s)  throws NullPointerException "
+.br
+.ti -1c
+.RI "static String \fBniceNumber\fP (int a_number, int a_places, char a_filler)"
+.br
+.ti -1c
+.RI "static String \fBniceDecimalNumber\fP (double a_number, int a_decimals)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.5 $'"
+.br
+.ti -1c
+.RI "static final char[] \fBDIGITS\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Utility routines related to numbers\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 18 of file NumberKit\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static char [] org\&.jgap\&.util\&.NumberKit\&.asChars (bytea_in)\fC [inline]\fP, \fC [static]\fP"
+Transforms a byte to a character array of hex octets\&. Taken from UUID\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_in\fP the byte 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the hex byte array 
+.RE
+.PP
+
+.PP
+Definition at line 54 of file NumberKit\&.java\&.
+.SS "static char [] org\&.jgap\&.util\&.NumberKit\&.asChars (bytea_in, inta_length)\fC [inline]\fP, \fC [static]\fP"
+Transforms a byte to a character array of hex octets\&. Taken from UUID\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_in\fP the byte 
+.br
+\fIa_length\fP the number of octets to produce 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the hex byte array 
+.RE
+.PP
+
+.PP
+Definition at line 66 of file NumberKit\&.java\&.
+.PP
+References org\&.jgap\&.util\&.NumberKit\&.DIGITS\&.
+.SS "static int org\&.jgap\&.util\&.NumberKit\&.hexValue (chara_c)\fC [inline]\fP, \fC [static]\fP"
+Returns the hex value of 'c' or -1 if there is no corresponding hex value\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_c\fP hex character to convert 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+integer value of the character
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+unknown 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 31 of file NumberKit\&.java\&.
+.SS "static String org\&.jgap\&.util\&.NumberKit\&.niceDecimalNumber (doublea_number, inta_decimals)\fC [inline]\fP, \fC [static]\fP"
+Removes decimal places if there are more than a_decimals\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_number\fP the number to convert to a string 
+.br
+\fIa_decimals\fP maximum number of decimal places allowed
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+nicified string
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 138 of file NumberKit\&.java\&.
+.SS "static String org\&.jgap\&.util\&.NumberKit\&.niceNumber (inta_number, inta_places, chara_filler)\fC [inline]\fP, \fC [static]\fP"
+Formats a number as a string having the total length of a_places, filling up needed characters with a_filler\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_number\fP the number to format 
+.br
+\fIa_places\fP total length of output string 
+.br
+\fIa_filler\fP fill character 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+formatted number
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 119 of file NumberKit\&.java\&.
+.SS "static short org\&.jgap\&.util\&.NumberKit\&.parseShort (Strings) throws NullPointerException\fC [inline]\fP, \fC [static]\fP"
+Parses a short from a hex encoded number\&. This method will skip all characters that are not 0-9 and a-f (the String is lower cased first)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP the String to extract a short from, may not be null 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 if the String does not contain any interesting characters 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fINullPointerException\fP if the String is null
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 85 of file NumberKit\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.NetworkKit\&.getMACAddress()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.util\&.NumberKit\&.CVS_REVISION = '$Revision: 1\&.5 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 20 of file NumberKit\&.java\&.
+.SS "final char [] org\&.jgap\&.util\&.NumberKit\&.DIGITS\fC [static]\fP, \fC [private]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {'0', '1', '2', '3', '4', '5', '6',
+      '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'}
+.fi
+.PP
+Definition at line 44 of file NumberKit\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.NumberKit\&.asChars()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

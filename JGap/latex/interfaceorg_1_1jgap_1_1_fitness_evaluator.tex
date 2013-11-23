@@ -1,0 +1,108 @@
+\hypertarget{interfaceorg_1_1jgap_1_1_fitness_evaluator}{\section{org.\-jgap.\-Fitness\-Evaluator Interface Reference}
+\label{interfaceorg_1_1jgap_1_1_fitness_evaluator}\index{org.\-jgap.\-Fitness\-Evaluator@{org.\-jgap.\-Fitness\-Evaluator}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-Fitness\-Evaluator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceorg_1_1jgap_1_1_fitness_evaluator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-Fitness\-Evaluator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{interfaceorg_1_1jgap_1_1_fitness_evaluator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+boolean \hyperlink{interfaceorg_1_1jgap_1_1_fitness_evaluator_aad9309b75a437b32641480be173550eb}{is\-Fitter} (double a\-\_\-fitness\-\_\-value1, double a\-\_\-fitness\-\_\-value2)
+\item 
+boolean \hyperlink{interfaceorg_1_1jgap_1_1_fitness_evaluator_ad22e8b020f3975345f3f94f96de35a89}{is\-Fitter} (\hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} a\-\_\-chrom1, \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} a\-\_\-chrom2)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{interfaceorg_1_1jgap_1_1_fitness_evaluator_a32a4b647d27c9df5261b4efb0e7a8452}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-9 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for a fitness evaluator used in a \hyperlink{classorg_1_1jgap_1_1_genotype}{Genotype} to determine how to interpret the fitness value. The fitness value can either be interpreted straight forward as a fitness indicator (the higher the better). Or it could be seen as a defect rate (the lower the better).
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Definition at line 23 of file Fitness\-Evaluator.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1_fitness_evaluator_aad9309b75a437b32641480be173550eb}{\index{org\-::jgap\-::\-Fitness\-Evaluator@{org\-::jgap\-::\-Fitness\-Evaluator}!is\-Fitter@{is\-Fitter}}
+\index{is\-Fitter@{is\-Fitter}!org::jgap::FitnessEvaluator@{org\-::jgap\-::\-Fitness\-Evaluator}}
+\subsubsection[{is\-Fitter}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-Fitness\-Evaluator.\-is\-Fitter (
+\begin{DoxyParamCaption}
+\item[{double}]{a\-\_\-fitness\-\_\-value1, }
+\item[{double}]{a\-\_\-fitness\-\_\-value2}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_fitness_evaluator_aad9309b75a437b32641480be173550eb}
+Compares the first given fitness value with the second and returns true if the first one is greater than the second one. Otherwise returns false 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-fitness\-\_\-value1} & first fitness value \\
+\hline
+{\em a\-\_\-fitness\-\_\-value2} & second fitness value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true\-: first fitness value greater than second
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 (until 1.\-1\-: input types int) 
+\end{DoxySince}
+
+
+Referenced by org.\-jgap.\-util.\-Chromosome\-Fitness\-Comparator.\-compare(), org.\-jgap.\-impl.\-Fittest\-Population\-Merger.\-Fitness\-Chromosome\-Comparator.\-compare(), org.\-jgap.\-Chromosome.\-compare\-To(), org.\-jgap.\-Population.\-determine\-Fittest\-Chromosome(), org.\-jgap.\-Delta\-Fitness\-Evaluator\-Test.\-test\-Is\-Fitter\-\_\-0(), org.\-jgap.\-Default\-Fitness\-Evaluator\-Test.\-test\-Is\-Fitter\-\_\-0(), org.\-jgap.\-Delta\-Fitness\-Evaluator\-Test.\-test\-Is\-Fitter\-\_\-1(), org.\-jgap.\-Default\-Fitness\-Evaluator\-Test.\-test\-Is\-Fitter\-\_\-1(), org.\-jgap.\-Delta\-Fitness\-Evaluator\-Test.\-test\-Is\-Fitter\-\_\-2(), org.\-jgap.\-Default\-Fitness\-Evaluator\-Test.\-test\-Is\-Fitter\-\_\-2(), org.\-jgap.\-Delta\-Fitness\-Evaluator\-Test.\-test\-Is\-Fitter\-\_\-3(), org.\-jgap.\-Default\-Fitness\-Evaluator\-Test.\-test\-Is\-Fitter\-\_\-3(), org.\-jgap.\-Delta\-Fitness\-Evaluator\-Test.\-test\-Is\-Fitter\-\_\-4(), org.\-jgap.\-Default\-Fitness\-Evaluator\-Test.\-test\-Is\-Fitter\-\_\-4(), org.\-jgap.\-Delta\-Fitness\-Evaluator\-Test.\-test\-Is\-Fitter\-\_\-5(), org.\-jgap.\-Default\-Fitness\-Evaluator\-Test.\-test\-Is\-Fitter\-\_\-5(), and org.\-jgap.\-Delta\-Fitness\-Evaluator\-Test.\-test\-Is\-Fitter\-\_\-6().
+
+\hypertarget{interfaceorg_1_1jgap_1_1_fitness_evaluator_ad22e8b020f3975345f3f94f96de35a89}{\index{org\-::jgap\-::\-Fitness\-Evaluator@{org\-::jgap\-::\-Fitness\-Evaluator}!is\-Fitter@{is\-Fitter}}
+\index{is\-Fitter@{is\-Fitter}!org::jgap::FitnessEvaluator@{org\-::jgap\-::\-Fitness\-Evaluator}}
+\subsubsection[{is\-Fitter}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-Fitness\-Evaluator.\-is\-Fitter (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Chromosome}}]{a\-\_\-chrom1, }
+\item[{{\bf I\-Chromosome}}]{a\-\_\-chrom2}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_fitness_evaluator_ad22e8b020f3975345f3f94f96de35a89}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1_delta_fitness_evaluator_ab0b04bde3d5a8e994618e770996d0a6e}{org.\-jgap.\-Delta\-Fitness\-Evaluator}, and \hyperlink{classorg_1_1jgap_1_1_default_fitness_evaluator_a6a1e94d08736c1eca97c91a19bfbeb64}{org.\-jgap.\-Default\-Fitness\-Evaluator}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1_fitness_evaluator_a32a4b647d27c9df5261b4efb0e7a8452}{\index{org\-::jgap\-::\-Fitness\-Evaluator@{org\-::jgap\-::\-Fitness\-Evaluator}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::FitnessEvaluator@{org\-::jgap\-::\-Fitness\-Evaluator}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-Fitness\-Evaluator.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-9 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{interfaceorg_1_1jgap_1_1_fitness_evaluator_a32a4b647d27c9df5261b4efb0e7a8452}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 26 of file Fitness\-Evaluator.\-java.
+
+
+
+The documentation for this interface was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/\hyperlink{_fitness_evaluator_8java}{Fitness\-Evaluator.\-java}\end{DoxyCompactItemize}

@@ -1,0 +1,2213 @@
+.TH "org.jgap.gp.impl.GPConfiguration" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.impl.GPConfiguration \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.Configuration\fP\&.
+.PP
+Inherited by \fBexamples\&.gp\&.monalisa\&.core\&.DrawingGPConfiguration\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGPConfiguration\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGPConfiguration\fP (String a_id, String a_name)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGPConfiguration\fP (final String a_name)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBsetGPFitnessEvaluator\fP (\fBIGPFitnessEvaluator\fP a_evaluator)"
+.br
+.ti -1c
+.RI "\fBGPConfiguration\fP (\fBINaturalGPSelector\fP a_selectionMethod)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBsetSelectionMethod\fP (\fBINaturalGPSelector\fP a_method)"
+.br
+.ti -1c
+.RI "void \fBsetCrossoverMethod\fP (\fBCrossMethod\fP a_method)"
+.br
+.ti -1c
+.RI "synchronized void \fBverifyStateIsValid\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "synchronized void \fBaddGeneticOperator\fP (\fBGeneticOperator\fP a_operatorToAdd)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "double \fBgetCrossoverProb\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetCrossoverProb\fP (float a_crossoverProb)"
+.br
+.ti -1c
+.RI "double \fBgetReproductionProb\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetReproductionProb\fP (float a_reproductionProb)"
+.br
+.ti -1c
+.RI "double \fBgetMutationProb\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMutationProb\fP (float a_mutationProb)"
+.br
+.ti -1c
+.RI "double \fBgetDynamizeArityProb\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDynamizeArityProb\fP (float a_dynArityProb)"
+.br
+.ti -1c
+.RI "void \fBsetFunctionProb\fP (double a_functionProb)"
+.br
+.ti -1c
+.RI "double \fBgetFunctionProb\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetNewChromsPercent\fP (double a_newChromsPercent)"
+.br
+.ti -1c
+.RI "double \fBgetNewChromsPercent\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetMaxCrossoverDepth\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMaxCrossoverDepth\fP (int a_maxCrossoverDepth)"
+.br
+.ti -1c
+.RI "\fBINaturalGPSelector\fP \fBgetSelectionMethod\fP ()"
+.br
+.ti -1c
+.RI "\fBCrossMethod\fP \fBgetCrossMethod\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetMaxInitDepth\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMaxInitDepth\fP (int a_maxDepth)"
+.br
+.ti -1c
+.RI "int \fBgetMinInitDepth\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMinInitDepth\fP (int a_minDepth)"
+.br
+.ti -1c
+.RI "void \fBpushToStack\fP (Object a_value)"
+.br
+.ti -1c
+.RI "Object \fBpopFromStack\fP ()"
+.br
+.ti -1c
+.RI "Object \fBpeekStack\fP ()"
+.br
+.ti -1c
+.RI "int \fBstackSize\fP ()"
+.br
+.ti -1c
+.RI "void \fBclearStack\fP ()"
+.br
+.ti -1c
+.RI "void \fBstoreInMemory\fP (String a_name, Object a_value)"
+.br
+.ti -1c
+.RI "void \fBcreateMatrix\fP (String a_name, int a_cols, int a_rows)"
+.br
+.ti -1c
+.RI "void \fBsetMatrix\fP (String a_name, int a_col, int a_row, char a_value)"
+.br
+.ti -1c
+.RI "void \fBsetMatrix\fP (String a_name, int a_col, int a_row, int a_value)"
+.br
+.ti -1c
+.RI "void \fBresetMatrix\fP (String a_name, char a_filler)"
+.br
+.ti -1c
+.RI "char \fBreadMatrix\fP (String a_name, int a_col, int a_row)"
+.br
+.ti -1c
+.RI "char[][] \fBgetMatrix\fP (String a_name)"
+.br
+.ti -1c
+.RI "CultureMemoryCell \fBstoreMatrixMemory\fP (int a_x, int a_y, Object a_value)"
+.br
+.ti -1c
+.RI "Object \fBreadMatrixMemory\fP (int a_x, int a_y)"
+.br
+.ti -1c
+.RI "Object \fBreadFromMemory\fP (String a_name)"
+.br
+.ti -1c
+.RI "Object \fBreadFromMemoryIfExists\fP (String a_name)"
+.br
+.ti -1c
+.RI "CultureMemoryCell \fBstoreIndexedMemory\fP (int a_index, Object a_value)"
+.br
+.ti -1c
+.RI "Object \fBreadIndexedMemory\fP (int a_index)"
+.br
+.ti -1c
+.RI "void \fBclearMemory\fP ()"
+.br
+.ti -1c
+.RI "\fBGPFitnessFunction\fP \fBgetGPFitnessFunction\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetFitnessEvaluator\fP (\fBIGPFitnessEvaluator\fP a_fitnessEvaluator)"
+.br
+.ti -1c
+.RI "synchronized void \fBsetFitnessFunction\fP (\fBGPFitnessFunction\fP a_functionToSet)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "boolean \fBisStrictProgramCreation\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetStrictProgramCreation\fP (boolean a_strict)"
+.br
+.ti -1c
+.RI "int \fBgetProgramCreationMaxtries\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetProgramCreationMaxTries\fP (int a_maxtries)"
+.br
+.ti -1c
+.RI "\fBIGPFitnessEvaluator\fP \fBgetGPFitnessEvaluator\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBvalidateNode\fP (\fBProgramChromosome\fP a_chrom, \fBCommandGene\fP a_node, \fBCommandGene\fP a_rootNode, int a_tries, int a_num, int a_recurseLevel, Class a_type, \fBCommandGene\fP[] a_functionSet, int a_depth, boolean a_grow, int a_childIndex, boolean a_fullProgram)"
+.br
+.ti -1c
+.RI "void \fBsetNodeValidator\fP (\fBINodeValidator\fP a_nodeValidator)"
+.br
+.ti -1c
+.RI "\fBINodeValidator\fP \fBgetNodeValidator\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetSingleNodeValidator\fP (\fBISingleNodeValidator\fP a_singleNodeValidator)"
+.br
+.ti -1c
+.RI "\fBISingleNodeValidator\fP \fBgetSingleNodeValidator\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "boolean \fBisMaxNodeWarningPrinted\fP ()"
+.br
+.ti -1c
+.RI "void \fBflagMaxNodeWarningPrinted\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPrototypeProgram\fP (\fBIGPProgram\fP a_program)"
+.br
+.ti -1c
+.RI "\fBIGPProgram\fP \fBgetPrototypeProgram\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetMemorySize\fP ()"
+.br
+.ti -1c
+.RI "\fBGPProgramInfo\fP \fBreadProgramCache\fP (\fBGPProgram\fP a_prog)"
+.br
+.ti -1c
+.RI "\fBGPProgramInfo\fP \fBputToProgramCache\fP (\fBGPProgram\fP a_prog)"
+.br
+.ti -1c
+.RI "boolean \fBisUseProgramCache\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetUseProgramCache\fP (boolean a_useCache)"
+.br
+.ti -1c
+.RI "void \fBputVariable\fP (Variable a_var)"
+.br
+.ti -1c
+.RI "Variable \fBgetVariable\fP (String a_varName)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "\fBGPConfiguration\fP \fBnewInstanceGP\fP (String a_id, String a_name)"
+.br
+.ti -1c
+.RI "\fBIJGAPFactory\fP \fBgetJGAPFactory\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetInitStrategy\fP (\fBIGPInitStrategy\fP a_strategy)"
+.br
+.ti -1c
+.RI "\fBIGPInitStrategy\fP \fBgetInitStrategy\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetVerifyPrograms\fP (boolean a_verify)"
+.br
+.ti -1c
+.RI "boolean \fBisVerifyPrograms\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetNoCommandGeneCloning\fP (boolean a_noCommandGeneCloning)"
+.br
+.ti -1c
+.RI "boolean \fBisNoCommandGeneCloning\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP (boolean a_fullInit)  throws InvalidConfigurationException "
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBreadObject\fP (ObjectInputStream a_inputStream)  throws IOException, ClassNotFoundException "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBGPFitnessFunction\fP \fBm_objectiveFunction\fP"
+.br
+.ti -1c
+.RI "Stack \fBm_stack\fP = new Stack()"
+.br
+.ti -1c
+.RI "transient Culture \fBm_memory\fP = new Culture(50)"
+.br
+.ti -1c
+.RI "transient Hashtable< String, 
+.br
+char[][]> \fBm_matrices\fP"
+.br
+.ti -1c
+.RI "double \fBm_crossoverProb\fP = 0\&.9d"
+.br
+.ti -1c
+.RI "double \fBm_reproductionProb\fP = 0\&.1d"
+.br
+.ti -1c
+.RI "double \fBm_mutationProb\fP = 0\&.1d"
+.br
+.ti -1c
+.RI "double \fBm_dynArityProb\fP = 0\&.08d"
+.br
+.ti -1c
+.RI "double \fBm_newChromsPercent\fP = 0\&.3d"
+.br
+.ti -1c
+.RI "double \fBm_functionProb\fP = 0\&.9d"
+.br
+.ti -1c
+.RI "int \fBm_maxCrossoverDepth\fP = 17"
+.br
+.ti -1c
+.RI "int \fBm_maxInitDepth\fP = 7"
+.br
+.ti -1c
+.RI "int \fBm_minInitDepth\fP = 2"
+.br
+.ti -1c
+.RI "\fBINaturalGPSelector\fP \fBm_selectionMethod\fP"
+.br
+.ti -1c
+.RI "\fBCrossMethod\fP \fBm_crossMethod\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_strictProgramCreation\fP"
+.br
+.ti -1c
+.RI "int \fBm_programCreationMaxTries\fP = 5"
+.br
+.ti -1c
+.RI "\fBIGPFitnessEvaluator\fP \fBm_fitnessEvaluator\fP"
+.br
+.ti -1c
+.RI "\fBINodeValidator\fP \fBm_nodeValidator\fP"
+.br
+.ti -1c
+.RI "\fBISingleNodeValidator\fP \fBm_singleNodeValidator\fP"
+.br
+.ti -1c
+.RI "transient boolean \fBm_warningPrinted\fP"
+.br
+.ti -1c
+.RI "\fBIGPProgram\fP \fBm_prototypeProgram\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_useProgramCache\fP = false"
+.br
+.ti -1c
+.RI "Map \fBm_variables\fP"
+.br
+.ti -1c
+.RI "transient Map \fBm_programCache\fP"
+.br
+.ti -1c
+.RI "transient \fBIJGAPFactory\fP \fBm_factory\fP"
+.br
+.ti -1c
+.RI "\fBIGPInitStrategy\fP \fBm_initStrategy\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_verify\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_noCommandGeneCloning\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.52 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+\fBConfiguration\fP for a GP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 30 of file GPConfiguration\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.GPConfiguration () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructor utilizing the \fBFitnessProportionateSelection\fP\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 197 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.compareTo(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP()\&.
+.SS "org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.GPConfiguration (Stringa_id, Stringa_name) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 202 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.init(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_selectionMethod\&.
+.SS "org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.GPConfiguration (final Stringa_name) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a configuration with an informative name but without a unique ID\&. This practically prevents more than one configurations to be instantiated within the same thread\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP informative name of the configuration, may be null 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Definition at line 219 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.setName()\&.
+.SS "org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.GPConfiguration (\fBINaturalGPSelector\fPa_selectionMethod) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructor utilizing the \fBFitnessProportionateSelection\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_selectionMethod\fP the selection method to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 290 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.init(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_selectionMethod\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "synchronized void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.addGeneticOperator (\fBGeneticOperator\fPa_operatorToAdd) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 331 of file GPConfiguration\&.java\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.clearMemory ()\fC [inline]\fP"
+Clears the memory\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 720 of file GPConfiguration\&.java\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.clearStack ()\fC [inline]\fP"
+
+.PP
+Definition at line 482 of file GPConfiguration\&.java\&.
+.SS "Object org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+deep clone of this instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 1039 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.getId(), org\&.jgap\&.Configuration\&.getName(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP(), org\&.jgap\&.gp\&.impl\&.GPConfigurationTest\&.testClone_0(), and org\&.jgap\&.gp\&.impl\&.GPConfigurationTest\&.testClone_1()\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.compareTo (Objecta_other)\fC [inline]\fP"
+
+.PP
+Definition at line 918 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.GPConfiguration(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_crossMethod, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_crossoverProb, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_fitnessEvaluator, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_maxCrossoverDepth, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_maxInitDepth, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_newChromsPercent, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_objectiveFunction, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_programCreationMaxTries, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_reproductionProb, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_selectionMethod, and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_strictProgramCreation\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.equals()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.createMatrix (Stringa_name, inta_cols, inta_rows)\fC [inline]\fP"
+Creates an instance of a matrix with a unique name\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP the name of the matrix 
+.br
+\fIa_cols\fP number of columns the matrix should have 
+.br
+\fIa_rows\fP number of rows the matrix should have
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 509 of file GPConfiguration\&.java\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.equals (Objecta_other)\fC [inline]\fP"
+Compares this entity against the specified object\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the object to compare against 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: if the objects are the same, false otherwise
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 910 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.compareTo()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.flagMaxNodeWarningPrinted ()\fC [inline]\fP"
+See \fBProgramChromosome\&.growOrFull\fP(\&.\&.\&.) and \fBGPGenotype\&.evolve()\fP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 956 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_warningPrinted\&.
+.SS "\fBCrossMethod\fP org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getCrossMethod ()\fC [inline]\fP"
+
+.PP
+Definition at line 446 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_crossMethod\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getCrossoverProb ()\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+implement something like that 
+.RE
+.PP
+
+.PP
+Definition at line 341 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_crossoverProb\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getDynamizeArityProb ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+probability for dynamizing the arity of a node during growing a program
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 385 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_dynArityProb\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFullNode()\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getFunctionProb ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+probability that a function instead of a terminal is chosen in crossing over
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 418 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_functionProb\&.
+.SS "\fBIGPFitnessEvaluator\fP org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getGPFitnessEvaluator ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the fitness evaluator set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 811 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_fitnessEvaluator\&.
+.SS "\fBGPFitnessFunction\fP org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getGPFitnessFunction ()\fC [inline]\fP"
+
+.PP
+Definition at line 724 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_objectiveFunction\&.
+.SS "\fBIGPInitStrategy\fP org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getInitStrategy ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+\fBIGPInitStrategy\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 1160 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_initStrategy\&.
+.SS "\fBIJGAPFactory\fP org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getJGAPFactory ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the JGAP factory registered
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 1115 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_factory\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPWorkerGP\&.doWork()\&.
+.SS "char [][] org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getMatrix (Stringa_name)\fC [inline]\fP"
+Retrieves a named matrix\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP the name of the matrix 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the matrix itself
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 612 of file GPConfiguration\&.java\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getMaxCrossoverDepth ()\fC [inline]\fP"
+
+.PP
+Definition at line 434 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_maxCrossoverDepth\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getMaxInitDepth ()\fC [inline]\fP"
+
+.PP
+Definition at line 450 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_maxInitDepth\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getMemorySize ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+capacity of the memory in cells
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 987 of file GPConfiguration\&.java\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getMinInitDepth ()\fC [inline]\fP"
+
+.PP
+Definition at line 458 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_minInitDepth\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getMutationProb ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+probability for mutation of a node during growing a program
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 363 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_mutationProb\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getNewChromsPercent ()\fC [inline]\fP"
+
+.PP
+Definition at line 430 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_newChromsPercent\&.
+.SS "\fBINodeValidator\fP org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getNodeValidator ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the node validator set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 875 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_nodeValidator\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.validateNode()\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getProgramCreationMaxtries ()\fC [inline]\fP"
+
+.PP
+Definition at line 797 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_programCreationMaxTries\&.
+.SS "\fBIGPProgram\fP org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getPrototypeProgram ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+prototype program set (maybe null if not setted previously)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 977 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_prototypeProgram\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getReproductionProb ()\fC [inline]\fP"
+
+.PP
+Definition at line 349 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_reproductionProb\&.
+.SS "\fBINaturalGPSelector\fP org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getSelectionMethod ()\fC [inline]\fP"
+
+.PP
+Definition at line 442 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_selectionMethod\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfigurationTest\&.testConstructor_1()\&.
+.SS "\fBISingleNodeValidator\fP org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getSingleNodeValidator ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the validator set for single node checking
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 897 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_singleNodeValidator\&.
+.SS "Variable org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getVariable (Stringa_varName)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_varName\fP name of variable to retrieve 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Variable instance or null, if not found
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 1029 of file GPConfiguration\&.java\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.init (booleana_fullInit) throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [protected]\fP"
+Helper for construction\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_fullInit\fP true set event manager, random generator and fitness evaluator to defauklt 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.1 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+make reusable in class \fBConfiguration\fP and reuse here from \fBConfiguration\fP 
+.RE
+.PP
+
+.PP
+Definition at line 248 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_crossMethod, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_factory, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_matrices, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_programCache, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_variables, org\&.jgap\&.Configuration\&.PROPERTY_JGAPFACTORY_CLASS, org\&.jgap\&.Configuration\&.setEventManager(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setGPFitnessEvaluator(), and org\&.jgap\&.Configuration\&.setRandomGenerator()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.GPConfiguration(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.readObject()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.isMaxNodeWarningPrinted ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+see \fBProgramChromosome\&.growOrFull\fP(\&.\&.\&.) and \fBGPGenotype\&.evolve()\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 946 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_warningPrinted\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.isNoCommandGeneCloning ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+true: do not clone command genes when creating a new GP program in \fBProgramChromosome\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 1206 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_noCommandGeneCloning\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFullNode()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.isStrictProgramCreation ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+true: throw an error during evolution in case a situation is detected where no function or terminal of a required type is declared in the \fBGPConfiguration\fP; false: don't throw an error but try a completely different combination of functions and terminals
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Definition at line 781 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_strictProgramCreation\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.isUseProgramCache ()\fC [inline]\fP"
+
+.PP
+Definition at line 1002 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_useProgramCache\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.isVerifyPrograms ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+true: verify GP programs for correctness (i\&.e\&. is fitness computation possible without exception?)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 1182 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_verify\&.
+.SS "\fBGPConfiguration\fP org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP (Stringa_id, Stringa_name)\fC [inline]\fP"
+Creates a new \fBGPConfiguration\fP instance by cloning\&. Allows to preset the ID and the name\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_id\fP new ID for clone 
+.br
+\fIa_name\fP new name for clone 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+deep clone of this instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 1054 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.clone(), org\&.jgap\&.Configuration\&.doClone(), org\&.jgap\&.Configuration\&.getName(), org\&.jgap\&.Configuration\&.getPopulationSize(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.GPConfiguration(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_crossMethod, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_crossoverProb, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_factory, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_fitnessEvaluator, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_functionProb, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_maxCrossoverDepth, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_maxInitDepth, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_minInitDepth, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_newChromsPercent, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_nodeValidator, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_objectiveFunction, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_programCreationMaxTries, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_reproductionProb, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_selectionMethod, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_strictProgramCreation, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_useProgramCache, org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_variables, and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_verify\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.clone(), and examples\&.gp\&.island\&.IslandGPThread\&.createConfiguration()\&.
+.SS "Object org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.peekStack ()\fC [inline]\fP"
+
+.PP
+Definition at line 474 of file GPConfiguration\&.java\&.
+.SS "Object org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.popFromStack ()\fC [inline]\fP"
+
+.PP
+Definition at line 470 of file GPConfiguration\&.java\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.pushToStack (Objecta_value)\fC [inline]\fP"
+
+.PP
+Definition at line 466 of file GPConfiguration\&.java\&.
+.SS "\fBGPProgramInfo\fP org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.putToProgramCache (\fBGPProgram\fPa_prog)\fC [inline]\fP"
+
+.PP
+Definition at line 997 of file GPConfiguration\&.java\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.putVariable (Variablea_var)\fC [inline]\fP"
+Stores a Variable\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_var\fP the Variable to store
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 1018 of file GPConfiguration\&.java\&.
+.SS "Object org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.readFromMemory (Stringa_name)\fC [inline]\fP"
+Reads a value from the internal memory\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP named index of the memory cell to read out 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+read value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 655 of file GPConfiguration\&.java\&.
+.SS "Object org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.readFromMemoryIfExists (Stringa_name)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP the name of the cell to evaluate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the value of a memory cell, if it exsists\&. Otherwise returns null\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 666 of file GPConfiguration\&.java\&.
+.SS "Object org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.readIndexedMemory (inta_index)\fC [inline]\fP"
+Reads a value from the internal indexed memory\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP index of the cell 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+read value (maybe null )
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 704 of file GPConfiguration\&.java\&.
+.SS "char org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.readMatrix (Stringa_name, inta_col, inta_row)\fC [inline]\fP"
+Reads a matrix cell and returns the value\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP the name of the matrix 
+.br
+\fIa_col\fP the column to read 
+.br
+\fIa_row\fP the row to read 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the value in the matrix
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 594 of file GPConfiguration\&.java\&.
+.SS "Object org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.readMatrixMemory (inta_x, inta_y)\fC [inline]\fP"
+Reads a value from the internal matrix memory\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_x\fP the first coordinate of the matrix (width) 
+.br
+\fIa_y\fP the second coordinate of the matrix (height) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+read value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 642 of file GPConfiguration\&.java\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.readObject (ObjectInputStreama_inputStream) throws IOException, ClassNotFoundException\fC [inline]\fP, \fC [private]\fP"
+When deserializing, do specific initializations\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_inputStream\fP the ObjectInputStream provided for deserialzation
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIOException\fP 
+.br
+\fIClassNotFoundException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 1130 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.init()\&.
+.SS "\fBGPProgramInfo\fP org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.readProgramCache (\fBGPProgram\fPa_prog)\fC [inline]\fP"
+
+.PP
+Definition at line 991 of file GPConfiguration\&.java\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.resetMatrix (Stringa_name, chara_filler)\fC [inline]\fP"
+Resets the matrix by filling it with a given character\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP the name of the matrix 
+.br
+\fIa_filler\fP the character to fill the whole matrix with
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 570 of file GPConfiguration\&.java\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setCrossoverMethod (\fBCrossMethod\fPa_method)\fC [inline]\fP"
+Sets the crossover method to use\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_method\fP the crossover method to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 318 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_crossMethod\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setCrossoverProb (floata_crossoverProb)\fC [inline]\fP"
+
+.PP
+Definition at line 345 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_crossoverProb\&.
+.PP
+Referenced by examples\&.gp\&.monalisa\&.core\&.DrawingGPConfiguration\&.DrawingGPConfiguration()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setDynamizeArityProb (floata_dynArityProb)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_dynArityProb\fP probability for dynamizing the arity of a node during growing a program
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 396 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_dynArityProb\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setFitnessEvaluator (\fBIGPFitnessEvaluator\fPa_fitnessEvaluator)\fC [inline]\fP"
+Set the fitness evaluator (deciding if a given fitness value is better when it's higher or better when it's lower)\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_fitnessEvaluator\fP the \fBFitnessEvaluator\fP to be used
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 736 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setGPFitnessEvaluator()\&.
+.SS "synchronized void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setFitnessFunction (\fBGPFitnessFunction\fPa_functionToSet) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Sets the fitness function to be used for this genetic algorithm\&. The fitness function is responsible for evaluating a given \fBChromosome\fP and returning a positive integer that represents its worth as a candidate solution\&. These values are used as a guide by the natural to determine which \fBChromosome\fP instances will be allowed to move on to the next round of evolution, and which will instead be eliminated\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_functionToSet\fP fitness function to be used
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP if the fitness function is null, or if this \fBConfiguration\fP object is locked\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 756 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.checkProperty(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_objectiveFunction, org\&.jgap\&.Configuration\&.PROPERTY_FITFUNC_INST, and org\&.jgap\&.Configuration\&.verifyChangesAllowed()\&.
+.PP
+Referenced by examples\&.gp\&.monalisa\&.core\&.DrawingGPConfiguration\&.DrawingGPConfiguration()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setFunctionProb (doublea_functionProb)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_functionProb\fP probability that a function instead of a terminal is chosen in crossing over (between 0 and 1)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 407 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_functionProb\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setGPFitnessEvaluator (\fBIGPFitnessEvaluator\fPa_evaluator)\fC [inline]\fP"
+Sets a GP fitness evaluator, such as \fBorg\&.jgap\&.gp\&.impl\&.DefaultGPFitnessEvaluator\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_evaluator\fP the fitness evaluator to set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 234 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_fitnessEvaluator\&.
+.PP
+Referenced by examples\&.gp\&.monalisa\&.core\&.DrawingGPConfiguration\&.DrawingGPConfiguration(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.init(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setFitnessEvaluator()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setInitStrategy (\fBIGPInitStrategy\fPa_strategy)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_strategy\fP \fBIGPInitStrategy\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 1149 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_initStrategy\&.
+.PP
+Referenced by examples\&.gp\&.monalisa\&.core\&.DrawingGPConfiguration\&.DrawingGPConfiguration()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setMatrix (Stringa_name, inta_col, inta_row, chara_value)\fC [inline]\fP"
+Sets a matrix field with a value\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP the name of the matrix 
+.br
+\fIa_col\fP column in the matrix 
+.br
+\fIa_row\fP row in the matrix 
+.br
+\fIa_value\fP the value to set in the matrix at given column and row
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 532 of file GPConfiguration\&.java\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setMatrix (Stringa_name, inta_col, inta_row, inta_value)\fC [inline]\fP"
+Sets a matrix field with a value\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP the name of the matrix 
+.br
+\fIa_col\fP column in the matrix 
+.br
+\fIa_row\fP row in the matrix 
+.br
+\fIa_value\fP the value to set in the matrix at given column and row
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 552 of file GPConfiguration\&.java\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setMaxCrossoverDepth (inta_maxCrossoverDepth)\fC [inline]\fP"
+
+.PP
+Definition at line 438 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_maxCrossoverDepth\&.
+.PP
+Referenced by examples\&.gp\&.monalisa\&.core\&.DrawingGPConfiguration\&.DrawingGPConfiguration()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setMaxInitDepth (inta_maxDepth)\fC [inline]\fP"
+
+.PP
+Definition at line 454 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_maxInitDepth\&.
+.PP
+Referenced by examples\&.gp\&.monalisa\&.core\&.DrawingGPConfiguration\&.DrawingGPConfiguration()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setMinInitDepth (inta_minDepth)\fC [inline]\fP"
+
+.PP
+Definition at line 462 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_minInitDepth\&.
+.PP
+Referenced by examples\&.gp\&.monalisa\&.core\&.DrawingGPConfiguration\&.DrawingGPConfiguration()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setMutationProb (floata_mutationProb)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_mutationProb\fP probability for mutation of a node during growing a program
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 374 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_mutationProb\&.
+.PP
+Referenced by examples\&.gp\&.monalisa\&.core\&.DrawingGPConfiguration\&.DrawingGPConfiguration()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setNewChromsPercent (doublea_newChromsPercent)\fC [inline]\fP"
+
+.PP
+Definition at line 422 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_newChromsPercent\&.
+.PP
+Referenced by examples\&.gp\&.monalisa\&.core\&.DrawingGPConfiguration\&.DrawingGPConfiguration()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setNoCommandGeneCloning (booleana_noCommandGeneCloning)\fC [inline]\fP"
+Decide whether to clone command genes when creating a new GP program in \fBProgramChromosome\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_noCommandGeneCloning\fP boolean
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 1195 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_noCommandGeneCloning\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setNodeValidator (\fBINodeValidator\fPa_nodeValidator)\fC [inline]\fP"
+Sets the node validator\&. Also see method validateNode\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_nodeValidator\fP sic
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 865 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_nodeValidator\&.
+.PP
+Referenced by examples\&.gp\&.monalisa\&.core\&.DrawingGPConfiguration\&.DrawingGPConfiguration()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setProgramCreationMaxTries (inta_maxtries)\fC [inline]\fP"
+
+.PP
+Definition at line 801 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_programCreationMaxTries\&.
+.PP
+Referenced by examples\&.gp\&.monalisa\&.core\&.DrawingGPConfiguration\&.DrawingGPConfiguration()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setPrototypeProgram (\fBIGPProgram\fPa_program)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_program\fP \fBIGPProgram\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 967 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_prototypeProgram\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setReproductionProb (floata_reproductionProb)\fC [inline]\fP"
+
+.PP
+Definition at line 353 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_reproductionProb\&.
+.PP
+Referenced by examples\&.gp\&.monalisa\&.core\&.DrawingGPConfiguration\&.DrawingGPConfiguration()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setSelectionMethod (\fBINaturalGPSelector\fPa_method)\fC [inline]\fP"
+Sets the selection method to use\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_method\fP the selection method to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 304 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_selectionMethod\&.
+.PP
+Referenced by examples\&.gp\&.monalisa\&.core\&.DrawingGPConfiguration\&.DrawingGPConfiguration()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setSingleNodeValidator (\fBISingleNodeValidator\fPa_singleNodeValidator)\fC [inline]\fP"
+Sets the validator for checking single nodes\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_singleNodeValidator\fP sic
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 887 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_singleNodeValidator\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setStrictProgramCreation (booleana_strict)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_strict\fP true: throw an error during evolution in case a situation is detected where no function or terminal of a required type is declared in the \fBGPConfiguration\fP; false: don't throw an error but try a completely different combination of functions and terminals
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Definition at line 793 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_strictProgramCreation\&.
+.PP
+Referenced by examples\&.gp\&.monalisa\&.core\&.DrawingGPConfiguration\&.DrawingGPConfiguration()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setUseProgramCache (booleana_useCache)\fC [inline]\fP"
+
+.PP
+Definition at line 1006 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_useProgramCache\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setVerifyPrograms (booleana_verify)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_verify\fP true: verify GP programs for correctness (i\&.e\&. is fitness computation possible without exception?)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 1171 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_verify\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.stackSize ()\fC [inline]\fP"
+
+.PP
+Definition at line 478 of file GPConfiguration\&.java\&.
+.SS "CultureMemoryCell org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.storeIndexedMemory (inta_index, Objecta_value)\fC [inline]\fP"
+Stores a value in the internal indexed memory\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP index of the cell 
+.br
+\fIa_value\fP the value to store 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+created or used memory cell
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 691 of file GPConfiguration\&.java\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.storeInMemory (Stringa_name, Objecta_value)\fC [inline]\fP"
+Stores a value in the internal memory\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP named index of the memory cell 
+.br
+\fIa_value\fP the value to store
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 495 of file GPConfiguration\&.java\&.
+.SS "CultureMemoryCell org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.storeMatrixMemory (inta_x, inta_y, Objecta_value)\fC [inline]\fP"
+Stores a value in the internal matrix memory\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_x\fP the first coordinate of the matrix (width) 
+.br
+\fIa_y\fP the second coordinate of the matrix (height) 
+.br
+\fIa_value\fP the value to store 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+created or used memory cell
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 628 of file GPConfiguration\&.java\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.validateNode (\fBProgramChromosome\fPa_chrom, \fBCommandGene\fPa_node, \fBCommandGene\fPa_rootNode, inta_tries, inta_num, inta_recurseLevel, Classa_type, \fBCommandGene\fP[]a_functionSet, inta_depth, booleana_grow, inta_childIndex, booleana_fullProgram)\fC [inline]\fP"
+Validates a_node in the context of a_chrom\&. Considers the recursion level (a_recursLevel), the type needed (a_type) for the node, the functions available (a_functionSet) and the depth of the whole chromosome needed (a_depth), and whether grow mode is used (a_grow is true) or not\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chrom\fP the chromosome that will contain the node, if valid 
+.br
+\fIa_node\fP the node selected and to be validated 
+.br
+\fIa_rootNode\fP root node of the node to be validated (may be null) 
+.br
+\fIa_tries\fP number of times the validator has been called, useful for stopping by returning true if the number exceeds a limit 
+.br
+\fIa_num\fP the chromosome's index in the individual of this chromosome 
+.br
+\fIa_recurseLevel\fP level of recursion 
+.br
+\fIa_type\fP the return type of the node needed 
+.br
+\fIa_functionSet\fP the array of available functions 
+.br
+\fIa_depth\fP the needed depth of the program chromosome 
+.br
+\fIa_grow\fP true: use grow mode, false: use full mode 
+.br
+\fIa_childIndex\fP index of the child in the parent node to which it belongs (-1 if node is root node) 
+.br
+\fIa_fullProgram\fP true: whole program is available in a_chrom
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: node is valid; false: node is invalid
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 841 of file GPConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getNodeValidator()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFullNode()\&.
+.SS "synchronized void org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.verifyStateIsValid () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 325 of file GPConfiguration\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.CVS_REVISION = '$Revision: 1\&.52 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 33 of file GPConfiguration\&.java\&.
+.SS "\fBCrossMethod\fP org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_crossMethod\fC [private]\fP"
+The method of crossing over two individuals during evolution\&. 
+.PP
+Definition at line 113 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.compareTo(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getCrossMethod(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.init(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setCrossoverMethod()\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_crossoverProb = 0\&.9d\fC [private]\fP"
+The probability that a crossover operation is chosen during evolution\&. Must be between 0\&.0d and 1\&.0d, inclusive\&. 
+.PP
+Definition at line 58 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.compareTo(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getCrossoverProb(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setCrossoverProb()\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_dynArityProb = 0\&.08d\fC [private]\fP"
+The probability that the arity of a node is changed during growing a program\&. 
+.PP
+Definition at line 76 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getDynamizeArityProb(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setDynamizeArityProb()\&.
+.SS "transient \fBIJGAPFactory\fP org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_factory\fC [private]\fP"
+Holds the central configurable factory for creating default objects\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 164 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getJGAPFactory(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.init(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP()\&.
+.SS "\fBIGPFitnessEvaluator\fP org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_fitnessEvaluator\fC [private]\fP"
+The fitness evaluator\&. See interface \fBIGPFitnessEvaluator\fP for details\&. 
+.PP
+Definition at line 131 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.compareTo(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getGPFitnessEvaluator(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setGPFitnessEvaluator()\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_functionProb = 0\&.9d\fC [private]\fP"
+In crossover: If random number (0\&.\&.1) < this value, then choose a function otherwise a terminal\&. 
+.PP
+Definition at line 88 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getFunctionProb(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setFunctionProb()\&.
+.SS "\fBIGPInitStrategy\fP org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_initStrategy\fC [private]\fP"
+For initializing GP programs before random creation\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 172 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getInitStrategy(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setInitStrategy()\&.
+.SS "transient Hashtable<String, char[][]> org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_matrices\fC [private]\fP"
+
+.PP
+Definition at line 52 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.init()\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_maxCrossoverDepth = 17\fC [private]\fP"
+The maximum depth of an individual resulting from crossover\&. 
+.PP
+Definition at line 93 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.compareTo(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getMaxCrossoverDepth(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setMaxCrossoverDepth()\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_maxInitDepth = 7\fC [private]\fP"
+The maximum depth of an individual when the world is created\&. 
+.PP
+Definition at line 98 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.compareTo(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getMaxInitDepth(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setMaxInitDepth()\&.
+.SS "transient Culture org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_memory = new Culture(50)\fC [private]\fP"
+Internal memory, see StoreTerminalCommand for example\&. 
+.PP
+Definition at line 50 of file GPConfiguration\&.java\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_minInitDepth = 2\fC [private]\fP"
+The minimum depth of an individual when the world is created\&. 
+.PP
+Definition at line 103 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getMinInitDepth(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setMinInitDepth()\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_mutationProb = 0\&.1d\fC [private]\fP"
+The probability that a node is mutated during growing a program\&. 
+.PP
+Definition at line 70 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getMutationProb(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setMutationProb()\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_newChromsPercent = 0\&.3d\fC [private]\fP"
+Percentage of the population that will be filled with new individuals during evolution\&. Must be between 0\&.0d and 1\&.0d\&. 
+.PP
+Definition at line 82 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.compareTo(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getNewChromsPercent(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setNewChromsPercent()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_noCommandGeneCloning\fC [private]\fP"
+TRUE: Do not clone command genes when creating a new GP program in \fBProgramChromosome\fP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 187 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.isNoCommandGeneCloning(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setNoCommandGeneCloning()\&.
+.SS "\fBINodeValidator\fP org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_nodeValidator\fC [private]\fP"
+
+.PP
+Definition at line 133 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getNodeValidator(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setNodeValidator()\&.
+.SS "\fBGPFitnessFunction\fP org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_objectiveFunction\fC [private]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+introduce lock for configuration 
+.RE
+.PP
+References the current fitness function that will be used to evaluate chromosomes during the natural selection process\&. 
+.PP
+Definition at line 40 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.compareTo(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getGPFitnessFunction(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setFitnessFunction()\&.
+.SS "transient Map org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_programCache\fC [private]\fP"
+
+.PP
+Definition at line 156 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.init()\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_programCreationMaxTries = 5\fC [private]\fP"
+If m_strictProgramCreation is false: Maximum number of tries to construct a valid program\&. 
+.PP
+Definition at line 126 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.compareTo(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getProgramCreationMaxtries(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setProgramCreationMaxTries()\&.
+.SS "\fBIGPProgram\fP org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_prototypeProgram\fC [private]\fP"
+Prototype of a valid program\&. May be cloned if needed (do not reference it!)\&.
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 150 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getPrototypeProgram(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setPrototypeProgram()\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_reproductionProb = 0\&.1d\fC [private]\fP"
+The probability that a reproduction operation is chosen during evolution\&. Must be between 0\&.0d and 1\&.0d\&. crossoverProb + reproductionProb must equal 1\&.0d\&. 
+.PP
+Definition at line 65 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.compareTo(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getReproductionProb(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setReproductionProb()\&.
+.SS "\fBINaturalGPSelector\fP org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_selectionMethod\fC [private]\fP"
+The method of choosing an individual to perform an evolution operation on\&. 
+.PP
+Definition at line 108 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.compareTo(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getSelectionMethod(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.GPConfiguration(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setSelectionMethod()\&.
+.SS "\fBISingleNodeValidator\fP org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_singleNodeValidator\fC [private]\fP"
+
+.PP
+Definition at line 134 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getSingleNodeValidator(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setSingleNodeValidator()\&.
+.SS "Stack org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_stack = new Stack()\fC [private]\fP"
+Internal stack, see PushCommand for example\&. 
+.PP
+Definition at line 45 of file GPConfiguration\&.java\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_strictProgramCreation\fC [private]\fP"
+True: Set of available functions must contain any 'type of function' that may be needed during construction of a new program\&. A 'type of function' is, for instance, a terminal with return type \fBCommandGene\&.IntegerClass\fP\&. 
+.PP
+Definition at line 120 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.compareTo(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.isStrictProgramCreation(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setStrictProgramCreation()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_useProgramCache = false\fC [private]\fP"
+
+.PP
+Definition at line 152 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.isUseProgramCache(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setUseProgramCache()\&.
+.SS "Map org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_variables\fC [private]\fP"
+
+.PP
+Definition at line 154 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.init(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_verify\fC [private]\fP"
+TRUE: Activate methods checkErroneousPop and checkErroneousProg in class \fBGPGenotype\fP\&. 
+.PP
+Definition at line 178 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.isVerifyPrograms(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setVerifyPrograms()\&.
+.SS "transient boolean org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_warningPrinted\fC [private]\fP"
+Internal flag to display a warning only once, in case a program could not be evolved with the allowed maximum number of nodes\&.
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 142 of file GPConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.flagMaxNodeWarningPrinted(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.isMaxNodeWarningPrinted()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

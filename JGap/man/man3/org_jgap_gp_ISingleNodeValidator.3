@@ -1,0 +1,91 @@
+.TH "org.jgap.gp.ISingleNodeValidator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.ISingleNodeValidator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBexamples\&.gp\&.tictactoe\&.SingleNodeValidator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "boolean \fBisAllowed\fP (int a_chromIndex, ProgramChromosome a_pc, \fBCommandGene\fP[] a_functionSet, \fBCommandGene\fP a_function, Class a_returnType, int a_subReturnTyp, int a_index)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.1 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Checks whether a single node is valid during GP program creation\&. This helps to avoid useless tries in program creation\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file ISingleNodeValidator\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "boolean org\&.jgap\&.gp\&.ISingleNodeValidator\&.isAllowed (inta_chromIndex, ProgramChromosomea_pc, \fBCommandGene\fP[]a_functionSet, \fBCommandGene\fPa_function, Classa_returnType, inta_subReturnTyp, inta_index)"
+Checks if the given a_function is allowed in the current context\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromIndex\fP index of the chromosome within the GP program 
+.br
+\fIa_pc\fP the instance of the ProgramChromosome 
+.br
+\fIa_functionSet\fP the current function set within the program chromosome (given as input parameter for convenience, could also be determined via a_pc\&.m_genes) 
+.br
+\fIa_function\fP the function that should be added, if allowed 
+.br
+\fIa_returnType\fP the class the return type is required to have 
+.br
+\fIa_subReturnTyp\fP the sub return type the return type is required to have 
+.br
+\fIa_index\fP the index of the up-to-date last command gene in the program chromosome 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if a_function's class exists within a_functionSet
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.selectNode()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.ISingleNodeValidator\&.CVS_REVISION = '$Revision: 1\&.1 $'\fC [static]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 23 of file ISingleNodeValidator\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,319 @@
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_worker}{\section{org.\-jgap.\-distr.\-Worker Class Reference}
+\label{classorg_1_1jgap_1_1distr_1_1_worker}\index{org.\-jgap.\-distr.\-Worker@{org.\-jgap.\-distr.\-Worker}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-distr.\-Worker\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1distr_1_1_worker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-distr.\-Worker\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1distr_1_1_worker__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1distr_1_1_worker_a0862f61abbb980c3c6252922e356e697}{Worker} (final String a\-\_\-display\-Name, final \hyperlink{classorg_1_1jgap_1_1distr_1_1_master_info}{Master\-Info} a\-\_\-master, final \hyperlink{classorg_1_1jgap_1_1distr_1_1_master_listener}{Master\-Listener} a\-\_\-master\-Listener)
+\item 
+String \hyperlink{classorg_1_1jgap_1_1distr_1_1_worker_a7e68f897ba168b0508674203daf586ae}{get\-Display\-Name} ()
+\item 
+Object \hyperlink{classorg_1_1jgap_1_1distr_1_1_worker_aee8f7803e2655bdfb3aceff9a3f92eb7}{send\-Command} (final \hyperlink{classorg_1_1jgap_1_1distr_1_1_worker_command}{Worker\-Command} a\-\_\-command)
+\item 
+Object \hyperlink{classorg_1_1jgap_1_1distr_1_1_worker_a405f281453fcdd0046a370a001af92ef}{get\-Status} ()
+\item 
+Object \hyperlink{classorg_1_1jgap_1_1distr_1_1_worker_aea81d8531d56e4035cd94c5278e5c604}{pause} ()
+\item 
+Object \hyperlink{classorg_1_1jgap_1_1distr_1_1_worker_a7ecb6526e7b056129e7f4f8a584865de}{stop} ()
+\item 
+Object \hyperlink{classorg_1_1jgap_1_1distr_1_1_worker_afc27690dd01d55455271aba6dc32b434}{resume} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classorg_1_1jgap_1_1distr_1_1_worker_a4f95b57112e0f70df3c4dea695104cee}{m\-\_\-display\-Name}
+\item 
+\hyperlink{classorg_1_1jgap_1_1distr_1_1_master_listener}{Master\-Listener} \hyperlink{classorg_1_1jgap_1_1distr_1_1_worker_aea3bcf9d90ca3b75efd3b342df8861e7}{m\-\_\-master\-Listener}
+\item 
+\hyperlink{classorg_1_1jgap_1_1distr_1_1_master_info}{Master\-Info} \hyperlink{classorg_1_1jgap_1_1distr_1_1_worker_a70aaa7dde62236412db41eaf80187c57}{m\-\_\-master}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1distr_1_1_worker_a32010b95d3aeeab1b9135157d47f35f4}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-8 \$\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classorg_1_1jgap_1_1distr_1_1_worker}{Worker} implementation. A worker receives commands from an I\-Master instance and returns results to the master. A worker can receive commands even when it is working but it can only work on one task at a time.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-4 
+\end{DoxySince}
+
+
+Definition at line 20 of file Worker.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_worker_a0862f61abbb980c3c6252922e356e697}{\index{org\-::jgap\-::distr\-::\-Worker@{org\-::jgap\-::distr\-::\-Worker}!Worker@{Worker}}
+\index{Worker@{Worker}!org::jgap::distr::Worker@{org\-::jgap\-::distr\-::\-Worker}}
+\subsubsection[{Worker}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-distr.\-Worker.\-Worker (
+\begin{DoxyParamCaption}
+\item[{final String}]{a\-\_\-display\-Name, }
+\item[{final {\bf Master\-Info}}]{a\-\_\-master, }
+\item[{final {\bf Master\-Listener}}]{a\-\_\-master\-Listener}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1distr_1_1_worker_a0862f61abbb980c3c6252922e356e697}
+Construct the worker and tell him who his master is. 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-display\-Name} & name for imformative purpose \\
+\hline
+{\em a\-\_\-master} & the master of this worker \\
+\hline
+{\em a\-\_\-master\-Listener} & listener for requests from master\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-4 
+\end{DoxySince}
+
+
+Definition at line 51 of file Worker.\-java.
+
+
+
+References org.\-jgap.\-distr.\-Worker.\-m\-\_\-display\-Name, org.\-jgap.\-distr.\-Worker.\-m\-\_\-master, and org.\-jgap.\-distr.\-Worker.\-m\-\_\-master\-Listener.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_worker_a7e68f897ba168b0508674203daf586ae}{\index{org\-::jgap\-::distr\-::\-Worker@{org\-::jgap\-::distr\-::\-Worker}!get\-Display\-Name@{get\-Display\-Name}}
+\index{get\-Display\-Name@{get\-Display\-Name}!org::jgap::distr::Worker@{org\-::jgap\-::distr\-::\-Worker}}
+\subsubsection[{get\-Display\-Name}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-jgap.\-distr.\-Worker.\-get\-Display\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1distr_1_1_worker_a7e68f897ba168b0508674203daf586ae}
+\begin{DoxyReturn}{Returns}
+display name of the worker
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-4 
+\end{DoxySince}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1_i_worker_ae1ed7812a9285de55f5091f5be7a8da2}{org.\-jgap.\-distr.\-I\-Worker}.
+
+
+
+Definition at line 64 of file Worker.\-java.
+
+
+
+References org.\-jgap.\-distr.\-Worker.\-m\-\_\-display\-Name.
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_worker_a405f281453fcdd0046a370a001af92ef}{\index{org\-::jgap\-::distr\-::\-Worker@{org\-::jgap\-::distr\-::\-Worker}!get\-Status@{get\-Status}}
+\index{get\-Status@{get\-Status}!org::jgap::distr::Worker@{org\-::jgap\-::distr\-::\-Worker}}
+\subsubsection[{get\-Status}]{\setlength{\rightskip}{0pt plus 5cm}Object org.\-jgap.\-distr.\-Worker.\-get\-Status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1distr_1_1_worker_a405f281453fcdd0046a370a001af92ef}
+\begin{DoxyReturn}{Returns}
+current status of the entity
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-4 
+\end{DoxySince}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000113}{Todo}]implement\-: idle starting receiving task working sending result stopping stopped \end{DoxyRefDesc}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1_i_worker_aaf06b7ac385ade8ddab09a0428ac5f9a}{org.\-jgap.\-distr.\-I\-Worker}.
+
+
+
+Definition at line 90 of file Worker.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_worker_aea81d8531d56e4035cd94c5278e5c604}{\index{org\-::jgap\-::distr\-::\-Worker@{org\-::jgap\-::distr\-::\-Worker}!pause@{pause}}
+\index{pause@{pause}!org::jgap::distr::Worker@{org\-::jgap\-::distr\-::\-Worker}}
+\subsubsection[{pause}]{\setlength{\rightskip}{0pt plus 5cm}Object org.\-jgap.\-distr.\-Worker.\-pause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1distr_1_1_worker_aea81d8531d56e4035cd94c5278e5c604}
+Forces the worker to pause its work (can be resumed) \begin{DoxyReturn}{Returns}
+status message
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-4 
+\end{DoxySince}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000114}{Todo}]implement\-: able to pause resp. in work? \end{DoxyRefDesc}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1_i_worker_acb611f7ef823cb7a128330965d008f31}{org.\-jgap.\-distr.\-I\-Worker}.
+
+
+
+Definition at line 109 of file Worker.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_worker_afc27690dd01d55455271aba6dc32b434}{\index{org\-::jgap\-::distr\-::\-Worker@{org\-::jgap\-::distr\-::\-Worker}!resume@{resume}}
+\index{resume@{resume}!org::jgap::distr::Worker@{org\-::jgap\-::distr\-::\-Worker}}
+\subsubsection[{resume}]{\setlength{\rightskip}{0pt plus 5cm}Object org.\-jgap.\-distr.\-Worker.\-resume (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1distr_1_1_worker_afc27690dd01d55455271aba6dc32b434}
+Forces the worker to resume a paused work \begin{DoxyReturn}{Returns}
+status message
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-4 
+\end{DoxySince}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000116}{Todo}]implement\-: able to resum resp. paused? \end{DoxyRefDesc}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1_i_worker_ab279e28dc98ac6769f68f31ed437b876}{org.\-jgap.\-distr.\-I\-Worker}.
+
+
+
+Definition at line 135 of file Worker.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_worker_aee8f7803e2655bdfb3aceff9a3f92eb7}{\index{org\-::jgap\-::distr\-::\-Worker@{org\-::jgap\-::distr\-::\-Worker}!send\-Command@{send\-Command}}
+\index{send\-Command@{send\-Command}!org::jgap::distr::Worker@{org\-::jgap\-::distr\-::\-Worker}}
+\subsubsection[{send\-Command}]{\setlength{\rightskip}{0pt plus 5cm}Object org.\-jgap.\-distr.\-Worker.\-send\-Command (
+\begin{DoxyParamCaption}
+\item[{final {\bf Worker\-Command}}]{a\-\_\-command}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1distr_1_1_worker_aee8f7803e2655bdfb3aceff9a3f92eb7}
+Lets a server send a command to process to the worker 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-command} & the command to process \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status message
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-4 
+\end{DoxySince}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000111}{Todo}]this should be moved to a thread \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000112}{Todo}]implement\-: currently working? if yes, add to queue (if queue not full) if no\-: start work \end{DoxyRefDesc}
+
+
+Definition at line 76 of file Worker.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_worker_a7ecb6526e7b056129e7f4f8a584865de}{\index{org\-::jgap\-::distr\-::\-Worker@{org\-::jgap\-::distr\-::\-Worker}!stop@{stop}}
+\index{stop@{stop}!org::jgap::distr::Worker@{org\-::jgap\-::distr\-::\-Worker}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}Object org.\-jgap.\-distr.\-Worker.\-stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1distr_1_1_worker_a7ecb6526e7b056129e7f4f8a584865de}
+Forces the worker to stop its work (cannot be resumed) \begin{DoxyReturn}{Returns}
+status message
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-4 
+\end{DoxySince}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000115}{Todo}]implement\-: able to stop resp. in work? \end{DoxyRefDesc}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1_i_worker_a6d1dcb48750d1fb0acd7ab9e3033a3e5}{org.\-jgap.\-distr.\-I\-Worker}.
+
+
+
+Definition at line 122 of file Worker.\-java.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_worker_a32010b95d3aeeab1b9135157d47f35f4}{\index{org\-::jgap\-::distr\-::\-Worker@{org\-::jgap\-::distr\-::\-Worker}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::distr::Worker@{org\-::jgap\-::distr\-::\-Worker}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-distr.\-Worker.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-8 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1distr_1_1_worker_a32010b95d3aeeab1b9135157d47f35f4}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 23 of file Worker.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_worker_a4f95b57112e0f70df3c4dea695104cee}{\index{org\-::jgap\-::distr\-::\-Worker@{org\-::jgap\-::distr\-::\-Worker}!m\-\_\-display\-Name@{m\-\_\-display\-Name}}
+\index{m\-\_\-display\-Name@{m\-\_\-display\-Name}!org::jgap::distr::Worker@{org\-::jgap\-::distr\-::\-Worker}}
+\subsubsection[{m\-\_\-display\-Name}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-jgap.\-distr.\-Worker.\-m\-\_\-display\-Name\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1distr_1_1_worker_a4f95b57112e0f70df3c4dea695104cee}
+Display name, only textual information. 
+
+Definition at line 28 of file Worker.\-java.
+
+
+
+Referenced by org.\-jgap.\-distr.\-Worker.\-get\-Display\-Name(), and org.\-jgap.\-distr.\-Worker.\-Worker().
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_worker_a70aaa7dde62236412db41eaf80187c57}{\index{org\-::jgap\-::distr\-::\-Worker@{org\-::jgap\-::distr\-::\-Worker}!m\-\_\-master@{m\-\_\-master}}
+\index{m\-\_\-master@{m\-\_\-master}!org::jgap::distr::Worker@{org\-::jgap\-::distr\-::\-Worker}}
+\subsubsection[{m\-\_\-master}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Master\-Info} org.\-jgap.\-distr.\-Worker.\-m\-\_\-master\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1distr_1_1_worker_a70aaa7dde62236412db41eaf80187c57}
+Reference to master for calling him back. 
+
+Definition at line 40 of file Worker.\-java.
+
+
+
+Referenced by org.\-jgap.\-distr.\-Worker.\-Worker().
+
+\hypertarget{classorg_1_1jgap_1_1distr_1_1_worker_aea3bcf9d90ca3b75efd3b342df8861e7}{\index{org\-::jgap\-::distr\-::\-Worker@{org\-::jgap\-::distr\-::\-Worker}!m\-\_\-master\-Listener@{m\-\_\-master\-Listener}}
+\index{m\-\_\-master\-Listener@{m\-\_\-master\-Listener}!org::jgap::distr::Worker@{org\-::jgap\-::distr\-::\-Worker}}
+\subsubsection[{m\-\_\-master\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Master\-Listener} org.\-jgap.\-distr.\-Worker.\-m\-\_\-master\-Listener\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1distr_1_1_worker_aea3bcf9d90ca3b75efd3b342df8861e7}
+Listener to requests from the (one and only) master of this worker (=K\-K\-Multi\-Server\-Thread resp. K\-K\-Multi\-Server (to make it more sophisticated and allow multiple requests from the master at once)) 
+
+Definition at line 35 of file Worker.\-java.
+
+
+
+Referenced by org.\-jgap.\-distr.\-Worker.\-Worker().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/distr/\hyperlink{_worker_8java}{Worker.\-java}\end{DoxyCompactItemize}

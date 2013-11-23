@@ -1,0 +1,144 @@
+.TH "org.jgap.util.randomJava" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.util.randomJava \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.util\&.randomX\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBrandomJava\fP ()"
+.br
+.ti -1c
+.RI "\fBrandomJava\fP (long seed)"
+.br
+.ti -1c
+.RI "void \fBsetSeed\fP (long seed)"
+.br
+.ti -1c
+.RI "byte \fBnextByte\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Random \fBr\fP"
+.br
+.ti -1c
+.RI "int \fBibytes\fP = 0"
+.br
+.ti -1c
+.RI "int \fBidat\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implementation of a \fB\fBrandomX\fP\fP-compliant class based upon the built-in \fCJava\&.util\&.Random\fP generator\&. Note that since the higher level result composition methods are different from those in the (undocumented) standard library, \fB\fBrandomJava\fP\fP results will differ from those of the standard library for a given seed\&.
+.PP
+Designed and implemented in July 1996 by \fCJohn Walker\fP, \fCkelvin@fourmilab\&.ch\fP\&. 
+.PP
+Definition at line 20 of file randomJava\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.util\&.randomJava\&.randomJava ()\fC [inline]\fP"
+Creates a new pseudorandom number generator, seeded from the current time\&. 
+.PP
+Definition at line 30 of file randomJava\&.java\&.
+.PP
+References org\&.jgap\&.util\&.randomJava\&.r\&.
+.SS "org\&.jgap\&.util\&.randomJava\&.randomJava (longseed)\fC [inline]\fP"
+
+.PP
+.nf
+    Creates a new pseudorandom number generator with a
+    specified seed.
+
+.fi
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIseed\fP initial seed for the generator 
+.RE
+.PP
+
+.PP
+Definition at line 43 of file randomJava\&.java\&.
+.PP
+References org\&.jgap\&.util\&.randomJava\&.r\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "byte org\&.jgap\&.util\&.randomJava\&.nextByte ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+.nf
+    Get next byte from generator.  To minimise calls on the
+    underlying Java generator, integers are generated and
+    individual bytes returned on subsequent calls.  A call
+    on <tt>setSeed()</tt> discards any bytes in the buffer.
+
+.fi
+.PP
+.PP
+\fBReturns:\fP
+.RS 4
+the next byte from the generator\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.randomX\fP\&.
+.PP
+Definition at line 69 of file randomJava\&.java\&.
+.PP
+References org\&.jgap\&.util\&.randomJava\&.ibytes, and org\&.jgap\&.util\&.randomJava\&.idat\&.
+.SS "void org\&.jgap\&.util\&.randomJava\&.setSeed (longseed)\fC [inline]\fP"
+
+.PP
+.nf
+    Set seed for generator.  Subsequent values will be based
+    on the given seed.
+
+.fi
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIseed\fP seed for the generator 
+.RE
+.PP
+
+.PP
+Definition at line 53 of file randomJava\&.java\&.
+.PP
+References org\&.jgap\&.util\&.randomJava\&.ibytes\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int org\&.jgap\&.util\&.randomJava\&.ibytes = 0\fC [private]\fP"
+
+.PP
+Definition at line 23 of file randomJava\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.randomJava\&.nextByte(), and org\&.jgap\&.util\&.randomJava\&.setSeed()\&.
+.SS "int org\&.jgap\&.util\&.randomJava\&.idat\fC [private]\fP"
+
+.PP
+Definition at line 59 of file randomJava\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.randomJava\&.nextByte()\&.
+.SS "Random org\&.jgap\&.util\&.randomJava\&.r\fC [private]\fP"
+
+.PP
+Definition at line 22 of file randomJava\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.randomJava\&.randomJava()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

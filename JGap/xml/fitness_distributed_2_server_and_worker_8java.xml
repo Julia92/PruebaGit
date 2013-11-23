@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="fitness_distributed_2_server_and_worker_8java" kind="file">
+    <compoundname>ServerAndWorker.java</compoundname>
+    <innerclass refid="classexamples_1_1grid_1_1fitness_distributed_1_1_server_and_worker" prot="public">examples::grid::fitnessDistributed::ServerAndWorker</innerclass>
+    <innernamespace refid="namespaceexamples_1_1grid_1_1fitness_distributed">examples::grid::fitnessDistributed</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>JGAP.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>JGAP<sp/>offers<sp/>a<sp/>dual<sp/>license<sp/>model<sp/>containing<sp/>the<sp/>LGPL<sp/>as<sp/>well<sp/>as<sp/>the<sp/>MPL.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>For<sp/>licensing<sp/>information<sp/>please<sp/>see<sp/>the<sp/>file<sp/>license.txt<sp/>included<sp/>with<sp/>JGAP</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>or<sp/>have<sp/>a<sp/>look<sp/>at<sp/>the<sp/>top<sp/>of<sp/>class<sp/>org.jgap.Chromosome<sp/>which<sp/>representatively</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>includes<sp/>the<sp/>JGAP<sp/>license<sp/>policy<sp/>applicable<sp/>for<sp/>any<sp/>file<sp/>delivered<sp/>with<sp/>JGAP.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">examples.grid.fitnessDistributed;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.apache.commons.cli.*;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.homedns.dade.jcgrid.cmd.*;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.homedns.dade.jcgrid.worker.*;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.distr.grid.*;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classexamples_1_1grid_1_1fitness_distributed_1_1_server_and_worker" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classexamples_1_1grid_1_1fitness_distributed_1_1_server_and_worker" kindref="compound">ServerAndWorker</ref><sp/>{</highlight></codeline>
+<codeline lineno="30" refid="classexamples_1_1grid_1_1fitness_distributed_1_1_server_and_worker_1a6499f85f982863449037552f2eb3b1a5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classexamples_1_1grid_1_1fitness_distributed_1_1_server_and_worker_1a6499f85f982863449037552f2eb3b1a5" kindref="member">CVS_REVISION</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$Revision:<sp/>1.4<sp/>$&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classexamples_1_1grid_1_1fitness_distributed_1_1_server_and_worker_1a74859e824133b1f020bc22cae56006ba" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classexamples_1_1grid_1_1fitness_distributed_1_1_server_and_worker_1a74859e824133b1f020bc22cae56006ba" kindref="member">main</ref>(String[]<sp/>args)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>server.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>JGAPServer(args);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setup<sp/>worker<sp/>configuration.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>Options<sp/>options<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Options();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>GridNodeWorkerConfig<sp/>config<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>GridNodeWorkerConfig();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>CommandLine<sp/>cmd<sp/>=<sp/>MainCmd.parseCommonOptions(options,<sp/>config,<sp/>args);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>worker.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>JGAPWorkers(config);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/examples/src/examples/grid/fitnessDistributed/ServerAndWorker.java"/>
+  </compounddef>
+</doxygen>

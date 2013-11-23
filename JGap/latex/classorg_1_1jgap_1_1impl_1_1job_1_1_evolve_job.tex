@@ -1,0 +1,229 @@
+\hypertarget{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job}{\section{org.\-jgap.\-impl.\-job.\-Evolve\-Job Class Reference}
+\label{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job}\index{org.\-jgap.\-impl.\-job.\-Evolve\-Job@{org.\-jgap.\-impl.\-job.\-Evolve\-Job}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-impl.\-job.\-Evolve\-Job\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-impl.\-job.\-Evolve\-Job\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job_aef7592d445a4c8b599c992579f9c80a1}{Evolve\-Job} (\hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_job_data}{Job\-Data} a\-\_\-data)
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_job_result}{Job\-Result} \hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job_a15941e3a369e59b86a5688181875204d}{execute} (\hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_job_data}{Job\-Data} a\-\_\-data)  throws Exception 
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_result}{Evolve\-Result} \hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job_aa6cd2a75875f3fef128ff9cc29bcb4f2}{evolve} (\hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_data}{Evolve\-Data} a\-\_\-evolve\-Data)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1_population}{Population} \hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job_a128b696a7adc919ae743ad7980b59927}{apply\-Natural\-Selectors} (\hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} a\-\_\-config, \hyperlink{classorg_1_1jgap_1_1_population}{Population} a\-\_\-pop, boolean a\-\_\-process\-Before\-Genetic\-Operators)
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job_a39f8a447fa201c74de218cd06ca0c5bb}{apply\-Genetic\-Operators} (\hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} a\-\_\-config, \hyperlink{classorg_1_1jgap_1_1_population}{Population} a\-\_\-pop)
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job_a9aff9f20b1ed224f7f5513d6acc8495a}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-12 \$\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A job that evolves a population. The evolution takes place as given by the configuration. It operates on a population also provided. This class utilizes sub jobs to perform its sub-\/tasks. Each sub job may either be a local implementation satisfying the \hyperlink{interfaceorg_1_1jgap_1_1impl_1_1job_1_1_i_job}{I\-Job} interface. Or it may be a job that eventually is put onto the grid and returns with a result!
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-2 
+\end{DoxySince}
+
+
+Definition at line 26 of file Evolve\-Job.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job_aef7592d445a4c8b599c992579f9c80a1}{\index{org\-::jgap\-::impl\-::job\-::\-Evolve\-Job@{org\-::jgap\-::impl\-::job\-::\-Evolve\-Job}!Evolve\-Job@{Evolve\-Job}}
+\index{Evolve\-Job@{Evolve\-Job}!org::jgap::impl::job::EvolveJob@{org\-::jgap\-::impl\-::job\-::\-Evolve\-Job}}
+\subsubsection[{Evolve\-Job}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-job.\-Evolve\-Job.\-Evolve\-Job (
+\begin{DoxyParamCaption}
+\item[{{\bf Job\-Data}}]{a\-\_\-data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job_aef7592d445a4c8b599c992579f9c80a1}
+
+
+Definition at line 31 of file Evolve\-Job.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job_a39f8a447fa201c74de218cd06ca0c5bb}{\index{org\-::jgap\-::impl\-::job\-::\-Evolve\-Job@{org\-::jgap\-::impl\-::job\-::\-Evolve\-Job}!apply\-Genetic\-Operators@{apply\-Genetic\-Operators}}
+\index{apply\-Genetic\-Operators@{apply\-Genetic\-Operators}!org::jgap::impl::job::EvolveJob@{org\-::jgap\-::impl\-::job\-::\-Evolve\-Job}}
+\subsubsection[{apply\-Genetic\-Operators}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-job.\-Evolve\-Job.\-apply\-Genetic\-Operators (
+\begin{DoxyParamCaption}
+\item[{{\bf Configuration}}]{a\-\_\-config, }
+\item[{{\bf Population}}]{a\-\_\-pop}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job_a39f8a447fa201c74de218cd06ca0c5bb}
+Applies all Genetic\-Operators registered with the \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration}.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-2 
+\end{DoxySince}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000171}{Todo}]utilize jobs\-: integrate job into \hyperlink{interfaceorg_1_1jgap_1_1_genetic_operator}{Genetic\-Operator} \end{DoxyRefDesc}
+
+
+Definition at line 141 of file Evolve\-Job.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job_a128b696a7adc919ae743ad7980b59927}{\index{org\-::jgap\-::impl\-::job\-::\-Evolve\-Job@{org\-::jgap\-::impl\-::job\-::\-Evolve\-Job}!apply\-Natural\-Selectors@{apply\-Natural\-Selectors}}
+\index{apply\-Natural\-Selectors@{apply\-Natural\-Selectors}!org::jgap::impl::job::EvolveJob@{org\-::jgap\-::impl\-::job\-::\-Evolve\-Job}}
+\subsubsection[{apply\-Natural\-Selectors}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Population} org.\-jgap.\-impl.\-job.\-Evolve\-Job.\-apply\-Natural\-Selectors (
+\begin{DoxyParamCaption}
+\item[{{\bf Configuration}}]{a\-\_\-config, }
+\item[{{\bf Population}}]{a\-\_\-pop, }
+\item[{boolean}]{a\-\_\-process\-Before\-Genetic\-Operators}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job_a128b696a7adc919ae743ad7980b59927}
+Applies all Natural\-Selectors registered with the \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-process\-Before\-Genetic\-Operators} & true apply Natural\-Selectors applicable before Genetic\-Operators, false\-: apply the ones applicable after Genetic\-Operators\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-2 
+\end{DoxySince}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000169}{Todo}]optionally use working pool \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000170}{Todo}]utilize jobs\-: integrate job into Natural\-Selector! \end{DoxyRefDesc}
+
+
+Definition at line 85 of file Evolve\-Job.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job_aa6cd2a75875f3fef128ff9cc29bcb4f2}{\index{org\-::jgap\-::impl\-::job\-::\-Evolve\-Job@{org\-::jgap\-::impl\-::job\-::\-Evolve\-Job}!evolve@{evolve}}
+\index{evolve@{evolve}!org::jgap::impl::job::EvolveJob@{org\-::jgap\-::impl\-::job\-::\-Evolve\-Job}}
+\subsubsection[{evolve}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Evolve\-Result} org.\-jgap.\-impl.\-job.\-Evolve\-Job.\-evolve (
+\begin{DoxyParamCaption}
+\item[{{\bf Evolve\-Data}}]{a\-\_\-evolve\-Data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job_aa6cd2a75875f3fef128ff9cc29bcb4f2}
+Does the genetic evolution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-evolve\-Data} & parameters for the evolution \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result of the evolution
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-2 
+\end{DoxySince}
+
+
+Definition at line 61 of file Evolve\-Job.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-job.\-Evolve\-Job.\-execute().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job_a15941e3a369e59b86a5688181875204d}{\index{org\-::jgap\-::impl\-::job\-::\-Evolve\-Job@{org\-::jgap\-::impl\-::job\-::\-Evolve\-Job}!execute@{execute}}
+\index{execute@{execute}!org::jgap::impl::job::EvolveJob@{org\-::jgap\-::impl\-::job\-::\-Evolve\-Job}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Job\-Result} org.\-jgap.\-impl.\-job.\-Evolve\-Job.\-execute (
+\begin{DoxyParamCaption}
+\item[{{\bf Job\-Data}}]{a\-\_\-data}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job_a15941e3a369e59b86a5688181875204d}
+Execute the evolution via J\-G\-A\-P.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-data} & input parameter of type \hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_data}{Evolve\-Data} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result of the evolution
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & in case of any error\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-2 
+\end{DoxySince}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1impl_1_1job_1_1_i_job_a5318a1ce0e973553131c3cb268c8b3f2}{org.\-jgap.\-impl.\-job.\-I\-Job}.
+
+
+
+Definition at line 46 of file Evolve\-Job.\-java.
+
+
+
+References org.\-jgap.\-impl.\-job.\-Evolve\-Job.\-evolve().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job_a15941e3a369e59b86a5688181875204d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job_a9aff9f20b1ed224f7f5513d6acc8495a}{\index{org\-::jgap\-::impl\-::job\-::\-Evolve\-Job@{org\-::jgap\-::impl\-::job\-::\-Evolve\-Job}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::impl::job::EvolveJob@{org\-::jgap\-::impl\-::job\-::\-Evolve\-Job}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-impl.\-job.\-Evolve\-Job.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-12 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job_a9aff9f20b1ed224f7f5513d6acc8495a}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 29 of file Evolve\-Job.\-java.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/impl/job/\hyperlink{_evolve_job_8java}{Evolve\-Job.\-java}\end{DoxyCompactItemize}

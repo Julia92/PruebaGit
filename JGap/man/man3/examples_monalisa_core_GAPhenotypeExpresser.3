@@ -1,0 +1,147 @@
+.TH "examples.monalisa.core.GAPhenotypeExpresser" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.monalisa.core.GAPhenotypeExpresser \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGAPhenotypeExpresser\fP (\fBGAConfiguration\fP a_conf)"
+.br
+.ti -1c
+.RI "BufferedImage \fBexpress\fP (IChromosome a_chromosome)"
+.br
+.ti -1c
+.RI "Color \fBexpressColor\fP (IChromosome a_chromosome, int a_n)"
+.br
+.ti -1c
+.RI "Polygon \fBexpressPolygon\fP (IChromosome a_chromosome, int a_n)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBGAConfiguration\fP \fBm_conf\fP"
+.br
+.ti -1c
+.RI "BufferedImage \fBm_generated\fP"
+.br
+.ti -1c
+.RI "Graphics \fBm_graphics\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.2 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Yann N\&. Dauphin 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file GAPhenotypeExpresser\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.GAPhenotypeExpresser (\fBGAConfiguration\fPa_conf)\fC [inline]\fP"
+
+.PP
+Definition at line 32 of file GAPhenotypeExpresser\&.java\&.
+.PP
+References examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.m_conf, examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.m_generated, and examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.m_graphics\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "BufferedImage examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.express (IChromosomea_chromosome)\fC [inline]\fP"
+
+.PP
+Definition at line 40 of file GAPhenotypeExpresser\&.java\&.
+.PP
+References examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.expressColor(), examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.expressPolygon(), and examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.m_generated\&.
+.SS "Color examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.expressColor (IChromosomea_chromosome, inta_n)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosome\fP the chromosome that holds the color information 
+.br
+\fIa_n\fP the index of the polygon
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+an object representing the nth color encoded in the chromosome 
+.RE
+.PP
+
+.PP
+Definition at line 56 of file GAPhenotypeExpresser\&.java\&.
+.PP
+Referenced by examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.express()\&.
+.SS "Polygon examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.expressPolygon (IChromosomea_chromosome, inta_n)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosome\fP the chromosome that holds the polygon information 
+.br
+\fIa_n\fP the index of the polygon
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+an object representing the nth polygon encoded in the chromosome 
+.RE
+.PP
+
+.PP
+Definition at line 73 of file GAPhenotypeExpresser\&.java\&.
+.PP
+References examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getNumberOfColorGenesPerPolygon(), and examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.POINTS\&.
+.PP
+Referenced by examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.express()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.CVS_REVISION = '$Revision: 1\&.2 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 24 of file GAPhenotypeExpresser\&.java\&.
+.SS "\fBGAConfiguration\fP examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.m_conf\fC [private]\fP"
+
+.PP
+Definition at line 26 of file GAPhenotypeExpresser\&.java\&.
+.PP
+Referenced by examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.GAPhenotypeExpresser()\&.
+.SS "BufferedImage examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.m_generated\fC [private]\fP"
+
+.PP
+Definition at line 28 of file GAPhenotypeExpresser\&.java\&.
+.PP
+Referenced by examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.express(), and examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.GAPhenotypeExpresser()\&.
+.SS "Graphics examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.m_graphics\fC [private]\fP"
+
+.PP
+Definition at line 30 of file GAPhenotypeExpresser\&.java\&.
+.PP
+Referenced by examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.GAPhenotypeExpresser()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

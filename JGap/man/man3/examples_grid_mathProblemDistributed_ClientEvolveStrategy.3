@@ -1,0 +1,268 @@
+.TH "examples.grid.mathProblemDistributed.ClientEvolveStrategy" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.grid.mathProblemDistributed.ClientEvolveStrategy \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits GPProblem, and IClientEvolveStrategyGP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBClientEvolveStrategy\fP (\fBGridConfiguration\fP a_gridConfig)"
+.br
+.ti -1c
+.RI "void \fBinitialize\fP (IGridClientMediator a_gc, \fBGPConfiguration\fP a_config, IClientFeedbackGP a_clientFeedback)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBafterWorkRequestsSent\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "boolean \fBisEvolutionFinished\fP (int a_evolutionsDone)"
+.br
+.ti -1c
+.RI "void \fBonFinished\fP ()"
+.br
+.ti -1c
+.RI "void \fBevolve\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "JGAPRequestGP[] \fBgenerateWorkRequests\fP (JGAPRequestGP m_workReq, IRequestSplitStrategyGP m_splitStrategy, Object data)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBresultReceived\fP (JGAPResultGP a_result)  throws Exception "
+.br
+.ti -1c
+.RI "\fBVariable\fP \fBcreateVariable\fP (\fBGPConfiguration\fP a_conf)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCommandGene\fP[][] \fBgetNodeSets\fP (\fBGPConfiguration\fP conf)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGPGenotype\fP \fBcreate\fP ()  throws InvalidConfigurationException "
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.14 $'"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "IClientFeedbackGP \fBm_clientFeedback\fP"
+.br
+.ti -1c
+.RI "final int \fBm_maxEvolutions\fP = 3"
+.br
+.ti -1c
+.RI "GPPopulation \fBm_pop\fP"
+.br
+.ti -1c
+.RI "\fBGridConfiguration\fP \fBm_gridConfig\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static Logger \fBlog\fP = Logger\&.getLogger(ClientEvolveStrategy\&.class)"
+.br
+.ti -1c
+.RI "static Float[] \fBx\fP = new Float[20]"
+.br
+.ti -1c
+.RI "static float[] \fBy\fP = new float[20]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Sample implementation of a strategy for evolving a generation on the client\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file ClientEvolveStrategy\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.ClientEvolveStrategy (\fBGridConfiguration\fPa_gridConfig)\fC [inline]\fP"
+Default constructor is necessary here as it will be called dynamically! Don't declare any other constructor as it will not be called!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_gridConfig\fP the grid configuration to use 
+.RE
+.PP
+
+.PP
+Definition at line 54 of file ClientEvolveStrategy\&.java\&.
+.PP
+References examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.m_gridConfig\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.afterWorkRequestsSent () throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 83 of file ClientEvolveStrategy\&.java\&.
+.PP
+References examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.m_pop\&.
+.SS "\fBGPGenotype\fP examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.create () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 204 of file ClientEvolveStrategy\&.java\&.
+.PP
+References examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.getNodeSets(), and examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.m_gridConfig\&.
+.PP
+Referenced by examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.initialize()\&.
+.SS "\fBVariable\fP examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.createVariable (\fBGPConfiguration\fPa_conf) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 177 of file ClientEvolveStrategy\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.FloatClass\&.
+.PP
+Referenced by examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.getNodeSets()\&.
+.SS "void examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.evolve () throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 125 of file ClientEvolveStrategy\&.java\&.
+.SS "JGAPRequestGP [] examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.generateWorkRequests (JGAPRequestGPm_workReq, IRequestSplitStrategyGPm_splitStrategy, Objectdata) throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 132 of file ClientEvolveStrategy\&.java\&.
+.PP
+References examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.m_pop\&.
+.SS "\fBCommandGene\fP [][] examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.getNodeSets (\fBGPConfiguration\fPconf) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 182 of file ClientEvolveStrategy\&.java\&.
+.PP
+References examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.createVariable(), org\&.jgap\&.gp\&.CommandGene\&.FloatClass, examples\&.grid\&.mathProblemDistributed\&.GridConfiguration\&.getVariable(), and examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.m_gridConfig\&.
+.PP
+Referenced by examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.create()\&.
+.SS "void examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.initialize (IGridClientMediatora_gc, \fBGPConfiguration\fPa_config, IClientFeedbackGPa_clientFeedback) throws Exception\fC [inline]\fP"
+Called at the very beginning and only once before distributed evolution starts\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_gc\fP GridClient mediator 
+.br
+\fIa_config\fP Configuration 
+.br
+\fIa_clientFeedback\fP IClientFeedback 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 71 of file ClientEvolveStrategy\&.java\&.
+.PP
+References examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.create(), examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.m_clientFeedback, and examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.m_pop\&.
+.SS "boolean examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.isEvolutionFinished (inta_evolutionsDone)\fC [inline]\fP"
+
+.PP
+Definition at line 97 of file ClientEvolveStrategy\&.java\&.
+.PP
+References examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.m_maxEvolutions, and examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.m_pop\&.
+.SS "void examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.onFinished ()\fC [inline]\fP"
+Called after evolution has finished\&. 
+.PP
+Definition at line 119 of file ClientEvolveStrategy\&.java\&.
+.SS "void examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.resultReceived (JGAPResultGPa_result) throws Exception\fC [inline]\fP"
+Merge the received results as a basis for the next evolution\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_result\fP JGAPResult 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 155 of file ClientEvolveStrategy\&.java\&.
+.PP
+References examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.m_pop\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.CVS_REVISION = '$Revision: 1\&.14 $'\fC [static]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 30 of file ClientEvolveStrategy\&.java\&.
+.SS "Logger examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.log = Logger\&.getLogger(ClientEvolveStrategy\&.class)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 32 of file ClientEvolveStrategy\&.java\&.
+.SS "IClientFeedbackGP examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.m_clientFeedback\fC [private]\fP"
+
+.PP
+Definition at line 36 of file ClientEvolveStrategy\&.java\&.
+.PP
+Referenced by examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.initialize()\&.
+.SS "\fBGridConfiguration\fP examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.m_gridConfig\fC [private]\fP"
+
+.PP
+Definition at line 42 of file ClientEvolveStrategy\&.java\&.
+.PP
+Referenced by examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.ClientEvolveStrategy(), examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.create(), and examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.getNodeSets()\&.
+.SS "final int examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.m_maxEvolutions = 3\fC [private]\fP"
+
+.PP
+Definition at line 38 of file ClientEvolveStrategy\&.java\&.
+.PP
+Referenced by examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.isEvolutionFinished()\&.
+.SS "GPPopulation examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.m_pop\fC [private]\fP"
+
+.PP
+Definition at line 40 of file ClientEvolveStrategy\&.java\&.
+.PP
+Referenced by examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.afterWorkRequestsSent(), examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.generateWorkRequests(), examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.initialize(), examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.isEvolutionFinished(), and examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.resultReceived()\&.
+.SS "Float [] examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.x = new Float[20]\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 44 of file ClientEvolveStrategy\&.java\&.
+.SS "float [] examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.y = new float[20]\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 46 of file ClientEvolveStrategy\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

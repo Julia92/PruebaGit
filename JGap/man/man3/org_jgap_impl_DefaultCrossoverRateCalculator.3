@@ -1,0 +1,133 @@
+.TH "org.jgap.impl.DefaultCrossoverRateCalculator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.DefaultCrossoverRateCalculator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.BaseRateCalculator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDefaultCrossoverRateCalculator\fP (\fBConfiguration\fP a_config)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "int \fBcalculateCurrentRate\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBtoBePermutated\fP (\fBIChromosome\fP a_chrom, int a_geneIndex)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.9 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Default implementation of a dynamic CrossoverRateCalculator\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Knowles 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file DefaultCrossoverRateCalculator\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.DefaultCrossoverRateCalculator\&.DefaultCrossoverRateCalculator (\fBConfiguration\fPa_config) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+
+.PP
+Definition at line 30 of file DefaultCrossoverRateCalculator\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int org\&.jgap\&.impl\&.DefaultCrossoverRateCalculator\&.calculateCurrentRate ()\fC [inline]\fP"
+Calculates the dynamic crossover rate\&. This is chosen to be the chromosome size\&. As the chromosome gets larger we assume that it is less likely to reproduce\&.
+.PP
+\fBReturns:\fP
+.RS 4
+calculated divisor of crossover rate
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Knowles 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IUniversalRateCalculator\fP\&.
+.PP
+Definition at line 45 of file DefaultCrossoverRateCalculator\&.java\&.
+.PP
+References org\&.jgap\&.BaseRateCalculator\&.getConfiguration()\&.
+.SS "boolean org\&.jgap\&.impl\&.DefaultCrossoverRateCalculator\&.toBePermutated (\fBIChromosome\fPa_chrom, inta_geneIndex)\fC [inline]\fP"
+Determines whether crossover is to be carried out for a given population\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chrom\fP ignored 
+.br
+\fIa_geneIndex\fP ignored
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: the \fBDefaultCrossoverRateCalculator\fP always returns a finite rate
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Knowles 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IUniversalRateCalculator\fP\&.
+.PP
+Definition at line 65 of file DefaultCrossoverRateCalculator\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.DefaultCrossoverRateCalculator\&.CVS_REVISION = '$Revision: 1\&.9 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 23 of file DefaultCrossoverRateCalculator\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

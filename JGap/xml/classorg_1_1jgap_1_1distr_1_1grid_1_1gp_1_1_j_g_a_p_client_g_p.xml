@@ -1,0 +1,2016 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p" kind="class" prot="public">
+    <compoundname>org::jgap::distr::grid::gp::JGAPClientGP</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Thread</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1aeaec2e84d46f7ddc2285335acb069a31" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.distr.grid.gp.JGAPClientGP.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.21 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000066"><xreftitle>Todo</xreftitle><xrefdescription><para>in dateiname requester/worker kodieren </para></xrefdescription></xrefsect><xrefsect id="todo_1_todo000067"><xreftitle>Todo</xreftitle><xrefdescription><para>auch schlechtere ergebnisse einmixen: die direkt empfangenen gleich wieder in einen request reinstecken <ndash/>&gt; aber mischen verschiedener results in einen request! </para></xrefdescription></xrefsect><xrefsect id="todo_1_todo000068"><xreftitle>Todo</xreftitle><xrefdescription><para>small, medium, large work requests </para></xrefdescription></xrefsect><xrefsect id="todo_1_todo000069"><xreftitle>Todo</xreftitle><xrefdescription><para>re-evaluate each result on behalf of another worker: keep separate lookup-table for all requests <ndash/>&gt; m_resultsVerified, m_resultsPersister </para></xrefdescription></xrefsect><xrefsect id="todo_1_todo000070"><xreftitle>Todo</xreftitle><xrefdescription><para>remove old requests from online store automatically </para></xrefdescription></xrefsect><xrefsect id="todo_1_todo000071"><xreftitle>Todo</xreftitle><xrefdescription><para>info when work request has been taken </para></xrefdescription></xrefsect><xrefsect id="todo_1_todo000072"><xreftitle>Todo</xreftitle><xrefdescription><para>info when worker logs on <ndash/>&gt; evaluate logon files </para></xrefdescription></xrefsect><xrefsect id="todo_1_todo000073"><xreftitle>Todo</xreftitle><xrefdescription><para>top results in eigener datei speichern, komprimierung durch weglassen überfl. infos, siehe xml <ndash/>&gt; injection after reload </para></xrefdescription></xrefsect><xrefsect id="todo_1_todo000074"><xreftitle>Todo</xreftitle><xrefdescription><para>copy good results to online folder </para></xrefdescription></xrefsect>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="57" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1adc09803a39e837738b6f13643472cef9" prot="private" static="yes" mutable="no">
+        <type>transient org.apache.log4j.Logger</type>
+        <definition>transient org.apache.log4j.Logger org.jgap.distr.grid.gp.JGAPClientGP.log</definition>
+        <argsstring></argsstring>
+        <name>log</name>
+        <initializer>= org.apache.log4j.Logger.getLogger(JGAPClientGP.class)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="100" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a94ab813ccc50c7662a963d834d90232c" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.distr.grid.gp.JGAPClientGP.APP_VERSION</definition>
+        <argsstring></argsstring>
+        <name>APP_VERSION</name>
+        <initializer>= &quot;1.02a&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="59" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="59" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1acfb2127d50b79830207941705b3f268a" compoundref="_j_g_a_p_client_g_p_8java" startline="164" endline="233">org.jgap.distr.grid.gp.JGAPClientGP.JGAPClientGP</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a0535356c14866325a1f7df6faa19db92" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.distr.grid.gp.JGAPClientGP.MODULE_CS</definition>
+        <argsstring></argsstring>
+        <name>MODULE_CS</name>
+        <initializer>= &quot;CS&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000075"><xreftitle>Todo</xreftitle><xrefdescription><para>store version in external file </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="63" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a66cc5e6c427904f25af61c4c3e368633" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.distr.grid.gp.JGAPClientGP.CLIENT_DATABASE</definition>
+        <argsstring></argsstring>
+        <name>CLIENT_DATABASE</name>
+        <initializer>= &quot;clientdbGP.jgap&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="65" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1aa83ed2c18cc7f9e39ffada89615ce33e" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.distr.grid.gp.JGAPClientGP.RESULTS_DATABASE</definition>
+        <argsstring></argsstring>
+        <name>RESULTS_DATABASE</name>
+        <initializer>= &quot;results.jgap&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="67" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a6424bb7eb2e4963a50cba03b8e28d241" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.distr.grid.gp.JGAPClientGP.MODULE_SC</definition>
+        <argsstring></argsstring>
+        <name>MODULE_SC</name>
+        <initializer>= &quot;SC&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000076"><xreftitle>Todo</xreftitle><xrefdescription><para>das ist nicht module, sondern sender-receiver </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="71" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ae2e5e539a1b529d365cff25c4734091e" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.distr.grid.gp.JGAPClientGP.MODULE_SW</definition>
+        <argsstring></argsstring>
+        <name>MODULE_SW</name>
+        <initializer>= &quot;SW&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="73" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a0adf1844f7583cbcb2fde67c295852ca" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.distr.grid.gp.JGAPClientGP.MODULE_WS</definition>
+        <argsstring></argsstring>
+        <name>MODULE_WS</name>
+        <initializer>= &quot;WS&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="75" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a5e9d61326d00071c6bf25d0635f200f9" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.distr.grid.gp.JGAPClientGP.MODULE_ANY</definition>
+        <argsstring></argsstring>
+        <name>MODULE_ANY</name>
+        <initializer>= &quot;*&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="77" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a66645fb45a49f0fa6df5dc07dd7800ce" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.distr.grid.gp.JGAPClientGP.CONTEXT_WORK_REQUEST</definition>
+        <argsstring></argsstring>
+        <name>CONTEXT_WORK_REQUEST</name>
+        <initializer>= &quot;WREQ&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="79" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a56c6457e87d5cc87d71b864cc0144d2e" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.distr.grid.gp.JGAPClientGP.CONTEXT_WORK_RESULT</definition>
+        <argsstring></argsstring>
+        <name>CONTEXT_WORK_RESULT</name>
+        <initializer>= &quot;WRES&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="81" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a3d0af832ccb5260f0f894e405513be11" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.distr.grid.gp.JGAPClientGP.CONTEXT_ANY</definition>
+        <argsstring></argsstring>
+        <name>CONTEXT_ANY</name>
+        <initializer>= &quot;W*&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="83" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1afd15d21b246af43300f8192dfd5cc208" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.distr.grid.gp.JGAPClientGP.CONTEXT_ID_EMPTY</definition>
+        <argsstring></argsstring>
+        <name>CONTEXT_ID_EMPTY</name>
+        <initializer>= &quot;0&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="85" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a99e156a42ccc79429c73ba69a4cc72f2" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.distr.grid.gp.JGAPClientGP.CONTEXT_ID_ANY</definition>
+        <argsstring></argsstring>
+        <name>CONTEXT_ID_ANY</name>
+        <initializer>= &quot;*&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="87" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1abb23fa37c035d8e43b4d72ff72c1fff0" prot="public" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int org.jgap.distr.grid.gp.JGAPClientGP.TIMEOUT_SECONDS</definition>
+        <argsstring></argsstring>
+        <name>TIMEOUT_SECONDS</name>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="89" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1af726b60b086f1ef593b7c81b77c98697" prot="public" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int org.jgap.distr.grid.gp.JGAPClientGP.WAITTIME_SECONDS</definition>
+        <argsstring></argsstring>
+        <name>WAITTIME_SECONDS</name>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="91" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a64cf29dcac1dd6737b24dfc38bf548df" prot="public" static="yes" mutable="no">
+        <type>final Object[][]</type>
+        <definition>final Object [][] org.jgap.distr.grid.gp.JGAPClientGP.FIELDSTOSKIP</definition>
+        <argsstring></argsstring>
+        <name>FIELDSTOSKIP</name>
+        <initializer>= new Object[][] { {GPPopulation.class,
+      &quot;m_fitnessRank&quot;}, {GPPopulation.class, &quot;m_fittestProgram&quot;}, {GPPopulation.class,
+      &quot;m_changed&quot;}, {GPPopulation.class, &quot;m_sorted&quot;}, {GPPopulation.class,
+      &quot;m_fittestToAdd&quot;}, {BaseGPChromosome.class,
+      &quot;m_ind&quot;},
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="93" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ad32916c94b715380a51b7baad505d947" prot="protected" static="no" mutable="no">
+        <type>GridNodeClientConfig</type>
+        <definition>GridNodeClientConfig org.jgap.distr.grid.gp.JGAPClientGP.m_gridconfig</definition>
+        <argsstring></argsstring>
+        <name>m_gridconfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="103" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="103" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a0843e78799ba00832ac006cb006e61d1" compoundref="_j_g_a_p_client_g_p_8java" startline="152" endline="162">org.jgap.distr.grid.gp.JGAPClientGP.JGAPClientGP</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a33e6bac8e314337633b28d70fb5a4a8b" prot="protected" static="no" mutable="no">
+        <type><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_request_g_p" kindref="compound">JGAPRequestGP</ref></type>
+        <definition>JGAPRequestGP org.jgap.distr.grid.gp.JGAPClientGP.m_workReq</definition>
+        <argsstring></argsstring>
+        <name>m_workReq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="105" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a02bc38c67af598cdad2bde180071c76b" prot="private" static="no" mutable="no">
+        <type><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator" kindref="compound">IGridClientMediator</ref></type>
+        <definition>IGridClientMediator org.jgap.distr.grid.gp.JGAPClientGP.m_gcmed</definition>
+        <argsstring></argsstring>
+        <name>m_gcmed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="107" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="107" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a0843e78799ba00832ac006cb006e61d1" compoundref="_j_g_a_p_client_g_p_8java" startline="152" endline="162">org.jgap.distr.grid.gp.JGAPClientGP.JGAPClientGP</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a3fa6c2f7307671bc12715e57a83d3293" prot="private" static="no" mutable="no">
+        <type><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_i_grid_configuration_g_p" kindref="compound">IGridConfigurationGP</ref></type>
+        <definition>IGridConfigurationGP org.jgap.distr.grid.gp.JGAPClientGP.m_gridConfig</definition>
+        <argsstring></argsstring>
+        <name>m_gridConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="109" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="109" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1acfb2127d50b79830207941705b3f268a" compoundref="_j_g_a_p_client_g_p_8java" startline="164" endline="233">org.jgap.distr.grid.gp.JGAPClientGP.JGAPClientGP</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a7c0f0eedc5f3a422de9d7e5cc16a72f4" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean org.jgap.distr.grid.gp.JGAPClientGP.m_WANMode</definition>
+        <argsstring></argsstring>
+        <name>m_WANMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Is the client operating in a WAN or in a LAN? TRUE: WAN <ndash/>&gt; Do not use JCGrid architecture FALSE: LAN <ndash/>&gt; Do use JCGrid architecture </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="116" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="116" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1acfb2127d50b79830207941705b3f268a" compoundref="_j_g_a_p_client_g_p_8java" startline="164" endline="233">org.jgap.distr.grid.gp.JGAPClientGP.JGAPClientGP</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a5efebed651ebe0a694cc967699868293" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean org.jgap.distr.grid.gp.JGAPClientGP.m_receiveOnly</definition>
+        <argsstring></argsstring>
+        <name>m_receiveOnly</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Only received results or send requests beforehand? </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="121" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="121" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1acfb2127d50b79830207941705b3f268a" compoundref="_j_g_a_p_client_g_p_8java" startline="164" endline="233">org.jgap.distr.grid.gp.JGAPClientGP.JGAPClientGP</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1aaba6467dde13acf025e911f06d6d5d34" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean org.jgap.distr.grid.gp.JGAPClientGP.m_list</definition>
+        <argsstring></argsstring>
+        <name>m_list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="123" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="123" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1acfb2127d50b79830207941705b3f268a" compoundref="_j_g_a_p_client_g_p_8java" startline="164" endline="233">org.jgap.distr.grid.gp.JGAPClientGP.JGAPClientGP</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ac4e538222a10009700a706bde943c37d" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String org.jgap.distr.grid.gp.JGAPClientGP.m_workDir</definition>
+        <argsstring></argsstring>
+        <name>m_workDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="125" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a013801f8a396f993d1895632ab339bad" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String org.jgap.distr.grid.gp.JGAPClientGP.m_ntbResultsDir</definition>
+        <argsstring></argsstring>
+        <name>m_ntbResultsDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Dir for not too bad results </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="130" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a1b9915ef29e75dec0c6068bd9d3dcecc" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String org.jgap.distr.grid.gp.JGAPClientGP.m_runID</definition>
+        <argsstring></argsstring>
+        <name>m_runID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="132" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="132" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1acfb2127d50b79830207941705b3f268a" compoundref="_j_g_a_p_client_g_p_8java" startline="164" endline="233">org.jgap.distr.grid.gp.JGAPClientGP.JGAPClientGP</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a724d465efee959bf5b4cdfafadd7453e" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean org.jgap.distr.grid.gp.JGAPClientGP.m_endless</definition>
+        <argsstring></argsstring>
+        <name>m_endless</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="134" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="134" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1acfb2127d50b79830207941705b3f268a" compoundref="_j_g_a_p_client_g_p_8java" startline="164" endline="233">org.jgap.distr.grid.gp.JGAPClientGP.JGAPClientGP</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a5c4bb5dc34ad8912010ff45f32a4863a" prot="private" static="no" mutable="no">
+        <type>ClientStatus</type>
+        <definition>ClientStatus org.jgap.distr.grid.gp.JGAPClientGP.m_objects</definition>
+        <argsstring></argsstring>
+        <name>m_objects</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="136" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a0d232c093f62fd18fcfa2fd43ed866f3" prot="private" static="no" mutable="no">
+        <type>PersistableObject</type>
+        <definition>PersistableObject org.jgap.distr.grid.gp.JGAPClientGP.m_persister</definition>
+        <argsstring></argsstring>
+        <name>m_persister</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="138" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a2ed986bb9e48ce56788952ef2ea2b391" prot="private" static="no" mutable="no">
+        <type>ResultVerification</type>
+        <definition>ResultVerification org.jgap.distr.grid.gp.JGAPClientGP.m_resultsVerified</definition>
+        <argsstring></argsstring>
+        <name>m_resultsVerified</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="140" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1aa319848ced51590b002a5c3141e9a3e4" prot="private" static="no" mutable="no">
+        <type>PersistableObject</type>
+        <definition>PersistableObject org.jgap.distr.grid.gp.JGAPClientGP.m_resultsPersister</definition>
+        <argsstring></argsstring>
+        <name>m_resultsPersister</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="142" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1aa3aee2fa669572de8b28ef2d45cca962" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int org.jgap.distr.grid.gp.JGAPClientGP.m_requestIdx</definition>
+        <argsstring></argsstring>
+        <name>m_requestIdx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="144" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a96c0211db97dea30118ede39c1be0884" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean org.jgap.distr.grid.gp.JGAPClientGP.m_no_comm</definition>
+        <argsstring></argsstring>
+        <name>m_no_comm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="146" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="146" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1acfb2127d50b79830207941705b3f268a" compoundref="_j_g_a_p_client_g_p_8java" startline="164" endline="233">org.jgap.distr.grid.gp.JGAPClientGP.JGAPClientGP</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1acd6a825880a57391d068a1d112363d92" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean org.jgap.distr.grid.gp.JGAPClientGP.m_no_evolution</definition>
+        <argsstring></argsstring>
+        <name>m_no_evolution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="148" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="148" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1acfb2127d50b79830207941705b3f268a" compoundref="_j_g_a_p_client_g_p_8java" startline="164" endline="233">org.jgap.distr.grid.gp.JGAPClientGP.JGAPClientGP</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1abc8179c8ac5d10060140947bf94864d3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int org.jgap.distr.grid.gp.JGAPClientGP.m_max_fetch_results</definition>
+        <argsstring></argsstring>
+        <name>m_max_fetch_results</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="150" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="150" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1acfb2127d50b79830207941705b3f268a" compoundref="_j_g_a_p_client_g_p_8java" startline="164" endline="233">org.jgap.distr.grid.gp.JGAPClientGP.JGAPClientGP</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a0843e78799ba00832ac006cb006e61d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.distr.grid.gp.JGAPClientGP.JGAPClientGP</definition>
+        <argsstring>(GridNodeClientConfig a_gridconfig, String a_clientClassName, boolean a_WANMode, boolean a_receiveOnly, boolean a_list, boolean a_no_comm, boolean a_no_evolution, boolean a_endless, int a_max_fetch_results)</argsstring>
+        <name>JGAPClientGP</name>
+        <param>
+          <type>GridNodeClientConfig</type>
+          <declname>a_gridconfig</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>a_clientClassName</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_WANMode</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_receiveOnly</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_list</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_no_comm</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_no_evolution</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_endless</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_max_fetch_results</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="152" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="152" bodyend="162"/>
+        <references refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a02bc38c67af598cdad2bde180071c76b" compoundref="_j_g_a_p_client_g_p_8java" startline="107">org.jgap.distr.grid.gp.JGAPClientGP.m_gcmed</references>
+        <references refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ad32916c94b715380a51b7baad505d947" compoundref="_j_g_a_p_client_g_p_8java" startline="103">org.jgap.distr.grid.gp.JGAPClientGP.m_gridconfig</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1acfb2127d50b79830207941705b3f268a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.distr.grid.gp.JGAPClientGP.JGAPClientGP</definition>
+        <argsstring>(IGridClientMediator a_gcmed, GridNodeClientConfig a_gridconfig, String a_clientClassName, boolean a_WANMode, boolean a_receiveOnly, boolean a_list, boolean a_no_comm, boolean a_no_evolution, boolean a_endless, int a_max_fetch_results)</argsstring>
+        <name>JGAPClientGP</name>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator" kindref="compound">IGridClientMediator</ref></type>
+          <declname>a_gcmed</declname>
+        </param>
+        <param>
+          <type>GridNodeClientConfig</type>
+          <declname>a_gridconfig</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>a_clientClassName</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_WANMode</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_receiveOnly</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_list</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_no_comm</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_no_evolution</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_endless</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_max_fetch_results</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000077"><xreftitle>Todo</xreftitle><xrefdescription><para>ab 2. zyklus ist pop.grösse nur 1 ! </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="164" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="164" bodyend="233"/>
+        <references refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a94ab813ccc50c7662a963d834d90232c" compoundref="_j_g_a_p_client_g_p_8java" startline="59">org.jgap.distr.grid.gp.JGAPClientGP.APP_VERSION</references>
+        <references refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1acbb26b59f5e5abb1a64b88685c3ea37b" compoundref="_j_g_a_p_client_g_p_8java" startline="273" endline="280">org.jgap.distr.grid.gp.JGAPClientGP.getRunID</references>
+        <references refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a724d465efee959bf5b4cdfafadd7453e" compoundref="_j_g_a_p_client_g_p_8java" startline="134">org.jgap.distr.grid.gp.JGAPClientGP.m_endless</references>
+        <references refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ad32916c94b715380a51b7baad505d947" compoundref="_j_g_a_p_client_g_p_8java" startline="103">org.jgap.distr.grid.gp.JGAPClientGP.m_gridconfig</references>
+        <references refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a3fa6c2f7307671bc12715e57a83d3293" compoundref="_j_g_a_p_client_g_p_8java" startline="109">org.jgap.distr.grid.gp.JGAPClientGP.m_gridConfig</references>
+        <references refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1aaba6467dde13acf025e911f06d6d5d34" compoundref="_j_g_a_p_client_g_p_8java" startline="123">org.jgap.distr.grid.gp.JGAPClientGP.m_list</references>
+        <references refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1abc8179c8ac5d10060140947bf94864d3" compoundref="_j_g_a_p_client_g_p_8java" startline="150">org.jgap.distr.grid.gp.JGAPClientGP.m_max_fetch_results</references>
+        <references refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a96c0211db97dea30118ede39c1be0884" compoundref="_j_g_a_p_client_g_p_8java" startline="146">org.jgap.distr.grid.gp.JGAPClientGP.m_no_comm</references>
+        <references refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1acd6a825880a57391d068a1d112363d92" compoundref="_j_g_a_p_client_g_p_8java" startline="148">org.jgap.distr.grid.gp.JGAPClientGP.m_no_evolution</references>
+        <references refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a5efebed651ebe0a694cc967699868293" compoundref="_j_g_a_p_client_g_p_8java" startline="121">org.jgap.distr.grid.gp.JGAPClientGP.m_receiveOnly</references>
+        <references refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a1b9915ef29e75dec0c6068bd9d3dcecc" compoundref="_j_g_a_p_client_g_p_8java" startline="132">org.jgap.distr.grid.gp.JGAPClientGP.m_runID</references>
+        <references refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a7c0f0eedc5f3a422de9d7e5cc16a72f4" compoundref="_j_g_a_p_client_g_p_8java" startline="116">org.jgap.distr.grid.gp.JGAPClientGP.m_WANMode</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a2f8181cd3c240b21661992191ac87ff6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.setWorkRequest</definition>
+        <argsstring>(JGAPRequestGP a_request)</argsstring>
+        <name>setWorkRequest</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_request_g_p" kindref="compound">JGAPRequestGP</ref></type>
+          <declname>a_request</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="282" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="282" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a155aea8dd8e4524f05d740c79ae99cf2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Threaded: Splits work, sends it to workers and receives computed solutions.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.01 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="462" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="462" bodyend="608"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a5ef93144f28cf6ad009e203b4f8b61b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1014" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1014" bodyend="1021"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1af42914af788ec899908a8a5626ea09f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_configuration" kindref="compound">GPConfiguration</ref></type>
+        <definition>GPConfiguration org.jgap.distr.grid.gp.JGAPClientGP.getConfiguration</definition>
+        <argsstring>()</argsstring>
+        <name>getConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1023" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1023" bodyend="1025"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ab69d94b4acb91c9dafa7b58e52233f31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator" kindref="compound">IGridClientMediator</ref></type>
+        <definition>IGridClientMediator org.jgap.distr.grid.gp.JGAPClientGP.getGridClientMediator</definition>
+        <argsstring>()</argsstring>
+        <name>getGridClientMediator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1027" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1027" bodyend="1029"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a846fc282dfb46473b3d8328f629120a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.writeToFile</definition>
+        <argsstring>(Object a_obj, String a_dir, String a_filename)</argsstring>
+        <name>writeToFile</name>
+        <param>
+          <type>Object</type>
+          <declname>a_obj</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>a_dir</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>a_filename</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes an object to a local file.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the object to persist </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>directory to write the file to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the file to create </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1046" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1046" bodyend="1055"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a7b73f24d55e461057e4e729aa1abb8d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.setWorkDirectory</definition>
+        <argsstring>(String a_workDir)</argsstring>
+        <name>setWorkDirectory</name>
+        <param>
+          <type>String</type>
+          <declname>a_workDir</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1057" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1057" bodyend="1062"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a2094867a7e5545b377161642fa793e1e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String org.jgap.distr.grid.gp.JGAPClientGP.getWorkDirectory</definition>
+        <argsstring>()</argsstring>
+        <name>getWorkDirectory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1064" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1064" bodyend="1066"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1afbe5e808316c9e8360c27892bd7cd57b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.distr.grid.gp.JGAPClientGP.isNoCommunication</definition>
+        <argsstring>()</argsstring>
+        <name>isNoCommunication</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>false: normal mode, true: do not communicate with the server</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1095" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1095" bodyend="1097"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1abfd326f08743e0810c3ad0704a088548" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String[]</type>
+        <definition>String [] org.jgap.distr.grid.gp.JGAPClientGP.getFilenames</definition>
+        <argsstring>(String a_dir)</argsstring>
+        <name>getFilenames</name>
+        <param>
+          <type>String</type>
+          <declname>a_dir</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1388" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1388" bodyend="1392"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ae46670dae328addf1c94cd521e175020" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.distr.grid.gp.JGAPClientGP.getMaxFetchResults</definition>
+        <argsstring>()</argsstring>
+        <name>getMaxFetchResults</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1520" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1520" bodyend="1522"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a937ee11fca121a53df6eee85ff0b5cd1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="235" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="235" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a67409d14f440abb96b91e1aeb99bd860" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_result_g_p" kindref="compound">JGAPResultGP</ref></type>
+        <definition>JGAPResultGP org.jgap.distr.grid.gp.JGAPClientGP.receiveWorkResult</definition>
+        <argsstring>(Object a_result, IClientFeedbackGP feedback, boolean a_remove)</argsstring>
+        <name>receiveWorkResult</name>
+        <param>
+          <type>Object</type>
+          <declname>a_result</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_i_client_feedback_g_p" kindref="compound">IClientFeedbackGP</ref></type>
+          <declname>feedback</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_remove</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000085"><xreftitle>Todo</xreftitle><xrefdescription><para>later: SC </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="827" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="827" bodyend="853"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a497f3e3cad175f2d5991ad1b5da02663" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_result_g_p" kindref="compound">JGAPResultGP</ref></type>
+        <definition>JGAPResultGP org.jgap.distr.grid.gp.JGAPClientGP.receiveWorkResult</definition>
+        <argsstring>(JGAPRequestGP[] workList, IClientFeedbackGP feedback)</argsstring>
+        <name>receiveWorkResult</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_request_g_p" kindref="compound">JGAPRequestGP</ref>[]</type>
+          <declname>workList</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_i_client_feedback_g_p" kindref="compound">IClientFeedbackGP</ref></type>
+          <declname>feedback</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000086"><xreftitle>Todo</xreftitle><xrefdescription><para>make this asynchronous with fall-back and reconnect! </para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000087"><xreftitle>Todo</xreftitle><xrefdescription><para>later: SC </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="855" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="855" bodyend="888"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a2b11b6a1d1722210ee5f8df760a4e2fc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.distr.grid.gp.JGAPClientGP.startsWith</definition>
+        <argsstring>(String s, String a_prefix)</argsstring>
+        <name>startsWith</name>
+        <param>
+          <type>String</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>a_prefix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1524" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1524" bodyend="1529"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1acbb26b59f5e5abb1a64b88685c3ea37b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String org.jgap.distr.grid.gp.JGAPClientGP.getRunID</definition>
+        <argsstring>()</argsstring>
+        <name>getRunID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the most possibly unique ID of a single program execution</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="273" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="273" bodyend="280"/>
+        <referencedby refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1acfb2127d50b79830207941705b3f268a" compoundref="_j_g_a_p_client_g_p_8java" startline="164" endline="233">org.jgap.distr.grid.gp.JGAPClientGP.JGAPClientGP</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ae37c8041763b0ab57c327b945888eaa7" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.onBeginOfRunning</definition>
+        <argsstring>()</argsstring>
+        <name>onBeginOfRunning</name>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called at start of <ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a155aea8dd8e4524f05d740c79ae99cf2" kindref="member">run()</ref>. Override in sub classes if needed.</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="295" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="295" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ab8171db35431bc4695b73c4ee89bcbf5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.distr.grid.gp.JGAPClientGP.beforeSendWorkRequests</definition>
+        <argsstring>(JGAPRequestGP[] a_workRequests)</argsstring>
+        <name>beforeSendWorkRequests</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_request_g_p" kindref="compound">JGAPRequestGP</ref>[]</type>
+          <declname>a_workRequests</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called in <ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a155aea8dd8e4524f05d740c79ae99cf2" kindref="member">run()</ref> before sending work requests. Override in sub classes if needed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_workRequests</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>work requests pending to be sent</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true: do send work requests, false: don&apos;t send any work request</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="312" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="312" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1acb45f446c28f2e8a5ec114ae7e519c3a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.distr.grid.gp.JGAPClientGP.beforeGenerateWorkRequests</definition>
+        <argsstring>()</argsstring>
+        <name>beforeGenerateWorkRequests</name>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called in <ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a155aea8dd8e4524f05d740c79ae99cf2" kindref="member">run()</ref> before generating work requests for sending. Override in sub classes if needed.</para><para><simplesect kind="return"><para>true: do generate work requests, false: don&apos;t generate any work request</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="329" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="329" bodyend="332"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a1ea9a2ac3e5d514ff36ee71df2adf0e4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.distr.grid.gp.JGAPClientGP.afterSendWorkRequests</definition>
+        <argsstring>(JGAPRequestGP[] a_workRequests)</argsstring>
+        <name>afterSendWorkRequests</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_request_g_p" kindref="compound">JGAPRequestGP</ref>[]</type>
+          <declname>a_workRequests</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called in <ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a155aea8dd8e4524f05d740c79ae99cf2" kindref="member">run()</ref> after sending work requests successfully. Override in sub classes if needed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_workRequests</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sent requests </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true: process further, false: stop processing the rest </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="345" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="345" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a60706a6d7ca0d8fa177664c49006aaa7" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.errorOnSendWorkRequests</definition>
+        <argsstring>(Throwable uex, JGAPRequestGP[] a_workRequests)</argsstring>
+        <name>errorOnSendWorkRequests</name>
+        <param>
+          <type>Throwable</type>
+          <declname>uex</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_request_g_p" kindref="compound">JGAPRequestGP</ref>[]</type>
+          <declname>a_workRequests</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="350" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="350" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a72fc27954bf4e83ec6e59c0e0580b274" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.beforeEvolve</definition>
+        <argsstring>(IGridClientMediator a_gcmed)</argsstring>
+        <name>beforeEvolve</name>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator" kindref="compound">IGridClientMediator</ref></type>
+          <declname>a_gcmed</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called in <ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a155aea8dd8e4524f05d740c79ae99cf2" kindref="member">run()</ref> before one evolution step is executed. Override in sub classes if needed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_gcmed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the GridClient mediator</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="366" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="366" bodyend="368"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ac963def5c1e76d75be65c73d12e4fc0e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.afterEvolve</definition>
+        <argsstring>(IGridClientMediator a_gcmed)</argsstring>
+        <name>afterEvolve</name>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator" kindref="compound">IGridClientMediator</ref></type>
+          <declname>a_gcmed</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called in <ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a155aea8dd8e4524f05d740c79ae99cf2" kindref="member">run()</ref> after one evolution step is executed. Override in sub classes if needed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_gcmed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the GridClient mediator</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="381" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="381" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1af149cceecfd48b59db4834e6e2ab3399" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.afterStopped</definition>
+        <argsstring>(Throwable a_t)</argsstring>
+        <name>afterStopped</name>
+        <param>
+          <type>Throwable</type>
+          <declname>a_t</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called after stopping the client in <ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a155aea8dd8e4524f05d740c79ae99cf2" kindref="member">run()</ref>. Override in sub classes if needed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>null if no error occured on stopping, otherwise exception object</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="396" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="396" bodyend="398"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a4489f4d2d3dfe1dc21fe43786b661f73" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.onError</definition>
+        <argsstring>(Exception a_ex)</argsstring>
+        <name>onError</name>
+        <param>
+          <type>Exception</type>
+          <declname>a_ex</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called in <ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a155aea8dd8e4524f05d740c79ae99cf2" kindref="member">run()</ref> in case of any unhandled error. Override in sub classes if needed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_ex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>exception object expressing the error</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="411" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="411" bodyend="416"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1adc0950ed9197bb10ba771816052249d5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.onDeleteError</definition>
+        <argsstring>(Exception a_ex)</argsstring>
+        <name>onDeleteError</name>
+        <param>
+          <type>Exception</type>
+          <declname>a_ex</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called in case of any unhandled error when trying to delete a request or result. Override in sub classes if needed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_ex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>exception object expressing the error</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="430" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="430" bodyend="435"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a3f8a36d0080bdd0fe4c050d376442ab3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.onErrorReceiveWorkResults</definition>
+        <argsstring>(JGAPRequestGP[] a_workRequests, Exception a_ex)</argsstring>
+        <name>onErrorReceiveWorkResults</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_request_g_p" kindref="compound">JGAPRequestGP</ref>[]</type>
+          <declname>a_workRequests</declname>
+        </param>
+        <param>
+          <type>Exception</type>
+          <declname>a_ex</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called in <ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a155aea8dd8e4524f05d740c79ae99cf2" kindref="member">run()</ref> on error when receiving work results. Override in sub classes if needed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_workRequests</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>for which to receive results </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_ex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Exception occured </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>rethrow an unhandled exception!</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="448" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="448" bodyend="454"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a256acdc898522793fa73e386b9cbf4e9" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_request_g_p" kindref="compound">JGAPRequestGP</ref>[]</type>
+        <definition>JGAPRequestGP [] org.jgap.distr.grid.gp.JGAPClientGP.sendWorkRequests</definition>
+        <argsstring>(int a_evolutionIndex, IClientEvolveStrategyGP evolver, IRequestSplitStrategyGP splitter, IClientFeedbackGP feedback)</argsstring>
+        <name>sendWorkRequests</name>
+        <param>
+          <type>int</type>
+          <declname>a_evolutionIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_i_client_evolve_strategy_g_p" kindref="compound">IClientEvolveStrategyGP</ref></type>
+          <declname>evolver</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_i_request_split_strategy_g_p" kindref="compound">IRequestSplitStrategyGP</ref></type>
+          <declname>splitter</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_i_client_feedback_g_p" kindref="compound">IClientFeedbackGP</ref></type>
+          <declname>feedback</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000078"><xreftitle>Todo</xreftitle><xrefdescription><para>merge previous results in req.getPopulation() </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="610" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="610" bodyend="651"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ada87d248b0be00887061959c808b5ff7" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.sendWorkRequests</definition>
+        <argsstring>(JGAPRequestGP[] a_workList)</argsstring>
+        <name>sendWorkRequests</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_request_g_p" kindref="compound">JGAPRequestGP</ref>[]</type>
+          <declname>a_workList</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000079"><xreftitle>Todo</xreftitle><xrefdescription><para>hier ist fehler aufgetreten! </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="653" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="653" bodyend="677"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a7a6ca719b3c2154e9f85d3d09228e523" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.receiveWorkResults</definition>
+        <argsstring>(JGAPRequestGP[] workList)</argsstring>
+        <name>receiveWorkResults</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_request_g_p" kindref="compound">JGAPRequestGP</ref>[]</type>
+          <declname>workList</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000080"><xreftitle>Todo</xreftitle><xrefdescription><para>later: SC </para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000081"><xreftitle>Todo</xreftitle><xrefdescription><para>sort results according to post date, the oldest first </para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000082"><xreftitle>Todo</xreftitle><xrefdescription><para>config.params wie popsite, evol.anz dazu </para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000083"><xreftitle>Todo</xreftitle><xrefdescription><para>allow fitness 0.0 </para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000084"><xreftitle>Todo</xreftitle><xrefdescription><para>do this here explicitely and not in receiveWorkResult </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="679" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="679" bodyend="803"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a0a2e08be2be1824aa32f76441e6b10fd" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String org.jgap.distr.grid.gp.JGAPClientGP.getResultFilename</definition>
+        <argsstring>(JGAPResultGP a_result)</argsstring>
+        <name>getResultFilename</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_result_g_p" kindref="compound">JGAPResultGP</ref></type>
+          <declname>a_result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="805" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="805" bodyend="825"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a957ef72c964f38cccfcc81da5350a8e2" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.evolve</definition>
+        <argsstring>(IGridClientMediator a_gcmed, boolean a_receiveOnly)</argsstring>
+        <name>evolve</name>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator" kindref="compound">IGridClientMediator</ref></type>
+          <declname>a_gcmed</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_receiveOnly</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If necessary: override to implement your evolution cycle individually.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_gcmed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the GridClient mediator </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_receiveOnly</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>false: Don&apos;t send any work requests, just receive results from former evolutions</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="899" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="899" bodyend="1012"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1abb1fb951724f26e99c4104fd246a5ce3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_i_grid_configuration_g_p" kindref="compound">IGridConfigurationGP</ref></type>
+        <definition>IGridConfigurationGP org.jgap.distr.grid.gp.JGAPClientGP.getGridConfigurationGP</definition>
+        <argsstring>()</argsstring>
+        <name>getGridConfigurationGP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1031" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1031" bodyend="1033"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a91ef474618b3f035bea31120dd4870e7" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.checkForUpdates</definition>
+        <argsstring>(String a_URL, String a_libDir, String a_workDir)</argsstring>
+        <name>checkForUpdates</name>
+        <param>
+          <type>String</type>
+          <declname>a_URL</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>a_libDir</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>a_workDir</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1068" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1068" bodyend="1072"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a9ca95e920204b34b6b3d79fb96e75921" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.listRequests</definition>
+        <argsstring>()</argsstring>
+        <name>listRequests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override in sub classes: list available requests </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1077" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1077" bodyend="1078"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a1171c569409d1111cd400069002a048e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.listResults</definition>
+        <argsstring>()</argsstring>
+        <name>listResults</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override in sub classes: list available results</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1086" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1086" bodyend="1087"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a99902138053fd0dd3a06ddd19e9a8d46" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.removeEntries</definition>
+        <argsstring>(Map a_cachedKeys, Map a_foundKeys)</argsstring>
+        <name>removeEntries</name>
+        <param>
+          <type>Map</type>
+          <declname>a_cachedKeys</declname>
+        </param>
+        <param>
+          <type>Map</type>
+          <declname>a_foundKeys</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1181" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1181" bodyend="1189"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ad5d33b335dc978452c6d4b9c9eca3341" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String org.jgap.distr.grid.gp.JGAPClientGP.getKeyFromObject</definition>
+        <argsstring>(Object a_obj)</argsstring>
+        <name>getKeyFromObject</name>
+        <param>
+          <type>Object</type>
+          <declname>a_obj</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override in sub classes.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the object to get the key from </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the key of the object</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1199" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1199" bodyend="1202"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a29d360212d17f3d90f13556021325c5c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.distr.grid.gp.JGAPClientGP.resultReceived</definition>
+        <argsstring>(GPPopulation a_pop)</argsstring>
+        <name>resultReceived</name>
+        <param>
+          <type>GPPopulation</type>
+          <declname>a_pop</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>New results has been received. Care that the best of them are stored in case it is a top 3 result.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the fittest results received for a work request </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true: new top result</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1216" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1216" bodyend="1227"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a4151e753398914b0d1d945464fa62e2d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.distr.grid.gp.JGAPClientGP.resultReceived</definition>
+        <argsstring>(IGPProgram a_fittest)</argsstring>
+        <name>resultReceived</name>
+        <param>
+          <type>IGPProgram</type>
+          <declname>a_fittest</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A new result has been received. Care that it is stored to top list on disk in case it is a top 3 result. Also store it in other cases and if the result is not too bad to be able to mix it in when generating new work requests.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_fittest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the fittest result received for a work request</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true: new top result</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000088"><xreftitle>Todo</xreftitle><xrefdescription><para>jeden <ref refid="classorg_1_1jgap_1_1distr_1_1_worker" kindref="compound">Worker</ref> einer von n (rein logischen) Gruppen zuteilen. Pro logischer Gruppe top n Ergebnisse halten </para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000089"><xreftitle>Todo</xreftitle><xrefdescription><para>make configurable </para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000090"><xreftitle>Todo</xreftitle><xrefdescription><para>compare with toStringNorm(0), use remove(int) instead of remove(Object) </para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000091"><xreftitle>Todo</xreftitle><xrefdescription><para>ist nur test! </para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000092"><xreftitle>Todo</xreftitle><xrefdescription><para>skip unnecessary data, inject it after reload </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1244" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1244" bodyend="1365"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1adbc21bc22c11e4e55ad9659043c080cb" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.saveResult</definition>
+        <argsstring>(String a_dir, String a_filename, IGPProgram a_obj)</argsstring>
+        <name>saveResult</name>
+        <param>
+          <type>String</type>
+          <declname>a_dir</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>a_filename</declname>
+        </param>
+        <param>
+          <type>IGPProgram</type>
+          <declname>a_obj</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Saves a result to disk.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the directory to put the result into </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the file to write </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the result object to write</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1379" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1379" bodyend="1386"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1adf5018d320d27b924e0f16a2ac48fea9" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.presetPopulation</definition>
+        <argsstring>(JGAPRequestGP a_workRequest)</argsstring>
+        <name>presetPopulation</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_request_g_p" kindref="compound">JGAPRequestGP</ref></type>
+          <declname>a_workRequest</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Presets initial population to be included for input to workers.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_workRequest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the work request that is about to be sent.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000093"><xreftitle>Todo</xreftitle><xrefdescription><para>remove results[index] </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1404" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1404" bodyend="1477"/>
+        <references refid="interfaceorg_1_1jgap_1_1_random_generator_1a708f273cc71846c2ae973172f20f2c01">org.jgap.RandomGenerator.nextDouble</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ae606eac3ff4267944ec6c6a946a90ef2" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.distr.grid.gp.JGAPClientGP.showCurrentResults</definition>
+        <argsstring>()</argsstring>
+        <name>showCurrentResults</name>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1479" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1479" bodyend="1518"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a85396fe00f1ac52f4abcbf2ba3e6f6b8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void org.jgap.distr.grid.gp.JGAPClientGP.main</definition>
+        <argsstring>(String[] args)</argsstring>
+        <name>main</name>
+        <param>
+          <type>String[]</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts a client (first parameter: name of specific setup class).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String[]</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.01 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1107" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1107" bodyend="1159"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a0ae35d0a4f8c68a0855d316c93c439eb" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Options</type>
+        <definition>static Options org.jgap.distr.grid.gp.JGAPClientGP.makeOptions</definition>
+        <argsstring>()</argsstring>
+        <name>makeOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="1161" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="1161" bodyend="1179"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A client defines work for the grid and sends it to the <ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_server" kindref="compound">JGAPServer</ref>. Use this class as base class for your grid client implementations.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="15004">
+        <label>org.jgap.distr.grid.gp.JGAPClientGP</label>
+        <link refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p"/>
+        <childnode refid="15005" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15005">
+        <label>Thread</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15019">
+        <label>org.jgap.distr.grid.gp.IGridConfigurationGP</label>
+        <link refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_i_grid_configuration_g_p"/>
+        <childnode refid="15010" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15018">
+        <label>org.jgap.distr.MasterInfo</label>
+        <link refid="classorg_1_1jgap_1_1distr_1_1_master_info"/>
+        <childnode refid="15010" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15017">
+        <label>org.jgap.distr.grid.gp.IWorkerReturnStrategyGP</label>
+        <link refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_i_worker_return_strategy_g_p"/>
+        <childnode refid="15010" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15010">
+        <label>Serializable</label>
+      </node>
+      <node id="15016">
+        <label>org.jgap.distr.grid.gp.IWorkerEvolveStrategyGP</label>
+        <link refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_i_worker_evolve_strategy_g_p"/>
+        <childnode refid="15010" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15006">
+        <label>org.jgap.distr.grid.gp.JGAPClientGP</label>
+        <link refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p"/>
+        <childnode refid="15007" relation="public-inheritance">
+        </childnode>
+        <childnode refid="15008" relation="usage">
+          <edgelabel>log</edgelabel>
+        </childnode>
+        <childnode refid="15009" relation="usage">
+          <edgelabel>m_gcmed</edgelabel>
+        </childnode>
+        <childnode refid="15011" relation="usage">
+          <edgelabel>m_workReq</edgelabel>
+        </childnode>
+        <childnode refid="15019" relation="usage">
+          <edgelabel>m_gridConfig</edgelabel>
+        </childnode>
+      </node>
+      <node id="15012">
+        <label>WorkRequest</label>
+      </node>
+      <node id="15008">
+        <label>Logger</label>
+      </node>
+      <node id="15013">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="15014" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15009">
+        <label>org.jgap.distr.grid.IGridClientMediator</label>
+        <link refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator"/>
+        <childnode refid="15010" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15011">
+        <label>org.jgap.distr.grid.gp.JGAPRequestGP</label>
+        <link refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_request_g_p"/>
+        <childnode refid="15012" relation="public-inheritance">
+        </childnode>
+        <childnode refid="15013" relation="public-inheritance">
+        </childnode>
+        <childnode refid="15015" relation="usage">
+          <edgelabel>m_genotypeInitializer</edgelabel>
+        </childnode>
+        <childnode refid="15016" relation="usage">
+          <edgelabel>m_evolveStrategy</edgelabel>
+        </childnode>
+        <childnode refid="15017" relation="usage">
+          <edgelabel>m_returnStrategy</edgelabel>
+        </childnode>
+        <childnode refid="15018" relation="usage">
+          <edgelabel>m_requesterInfo</edgelabel>
+        </childnode>
+        <childnode refid="15019" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+      </node>
+      <node id="15007">
+        <label>Thread</label>
+      </node>
+      <node id="15014">
+        <label>Cloneable</label>
+      </node>
+      <node id="15015">
+        <label>org.jgap.distr.grid.gp.IGenotypeInitializerGP</label>
+        <link refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_i_genotype_initializer_g_p"/>
+        <childnode refid="15010" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" line="40" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/gp/JGAPClientGP.java" bodystart="39" bodyend="1531"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ac963def5c1e76d75be65c73d12e4fc0e" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>afterEvolve</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a1ea9a2ac3e5d514ff36ee71df2adf0e4" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>afterSendWorkRequests</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1af149cceecfd48b59db4834e6e2ab3399" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>afterStopped</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a94ab813ccc50c7662a963d834d90232c" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>APP_VERSION</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a72fc27954bf4e83ec6e59c0e0580b274" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>beforeEvolve</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1acb45f446c28f2e8a5ec114ae7e519c3a" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>beforeGenerateWorkRequests</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ab8171db35431bc4695b73c4ee89bcbf5" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>beforeSendWorkRequests</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a91ef474618b3f035bea31120dd4870e7" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>checkForUpdates</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a66cc5e6c427904f25af61c4c3e368633" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>CLIENT_DATABASE</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a3d0af832ccb5260f0f894e405513be11" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>CONTEXT_ANY</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a99e156a42ccc79429c73ba69a4cc72f2" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>CONTEXT_ID_ANY</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1afd15d21b246af43300f8192dfd5cc208" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>CONTEXT_ID_EMPTY</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a66645fb45a49f0fa6df5dc07dd7800ce" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>CONTEXT_WORK_REQUEST</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a56c6457e87d5cc87d71b864cc0144d2e" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>CONTEXT_WORK_RESULT</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1aeaec2e84d46f7ddc2285335acb069a31" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a60706a6d7ca0d8fa177664c49006aaa7" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>errorOnSendWorkRequests</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a957ef72c964f38cccfcc81da5350a8e2" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>evolve</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a64cf29dcac1dd6737b24dfc38bf548df" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>FIELDSTOSKIP</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1af42914af788ec899908a8a5626ea09f7" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>getConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1abfd326f08743e0810c3ad0704a088548" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>getFilenames</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ab69d94b4acb91c9dafa7b58e52233f31" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>getGridClientMediator</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1abb1fb951724f26e99c4104fd246a5ce3" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>getGridConfigurationGP</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ad5d33b335dc978452c6d4b9c9eca3341" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>getKeyFromObject</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ae46670dae328addf1c94cd521e175020" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>getMaxFetchResults</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a0a2e08be2be1824aa32f76441e6b10fd" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>getResultFilename</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1acbb26b59f5e5abb1a64b88685c3ea37b" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>getRunID</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a2094867a7e5545b377161642fa793e1e" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>getWorkDirectory</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a937ee11fca121a53df6eee85ff0b5cd1" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>init</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1afbe5e808316c9e8360c27892bd7cd57b" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>isNoCommunication</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a0843e78799ba00832ac006cb006e61d1" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>JGAPClientGP</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1acfb2127d50b79830207941705b3f268a" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>JGAPClientGP</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a9ca95e920204b34b6b3d79fb96e75921" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>listRequests</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a1171c569409d1111cd400069002a048e" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>listResults</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1adc09803a39e837738b6f13643472cef9" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>log</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a724d465efee959bf5b4cdfafadd7453e" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>m_endless</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a02bc38c67af598cdad2bde180071c76b" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>m_gcmed</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ad32916c94b715380a51b7baad505d947" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>m_gridconfig</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a3fa6c2f7307671bc12715e57a83d3293" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>m_gridConfig</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1aaba6467dde13acf025e911f06d6d5d34" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>m_list</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1abc8179c8ac5d10060140947bf94864d3" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>m_max_fetch_results</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a96c0211db97dea30118ede39c1be0884" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>m_no_comm</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1acd6a825880a57391d068a1d112363d92" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>m_no_evolution</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a013801f8a396f993d1895632ab339bad" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>m_ntbResultsDir</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a5c4bb5dc34ad8912010ff45f32a4863a" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>m_objects</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a0d232c093f62fd18fcfa2fd43ed866f3" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>m_persister</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a5efebed651ebe0a694cc967699868293" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>m_receiveOnly</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1aa3aee2fa669572de8b28ef2d45cca962" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>m_requestIdx</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1aa319848ced51590b002a5c3141e9a3e4" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>m_resultsPersister</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a2ed986bb9e48ce56788952ef2ea2b391" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>m_resultsVerified</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a1b9915ef29e75dec0c6068bd9d3dcecc" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>m_runID</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a7c0f0eedc5f3a422de9d7e5cc16a72f4" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>m_WANMode</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ac4e538222a10009700a706bde943c37d" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>m_workDir</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a33e6bac8e314337633b28d70fb5a4a8b" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>m_workReq</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a85396fe00f1ac52f4abcbf2ba3e6f6b8" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>main</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a0ae35d0a4f8c68a0855d316c93c439eb" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>makeOptions</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a5e9d61326d00071c6bf25d0635f200f9" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>MODULE_ANY</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a0535356c14866325a1f7df6faa19db92" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>MODULE_CS</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a6424bb7eb2e4963a50cba03b8e28d241" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>MODULE_SC</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ae2e5e539a1b529d365cff25c4734091e" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>MODULE_SW</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a0adf1844f7583cbcb2fde67c295852ca" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>MODULE_WS</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ae37c8041763b0ab57c327b945888eaa7" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>onBeginOfRunning</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1adc0950ed9197bb10ba771816052249d5" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>onDeleteError</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a4489f4d2d3dfe1dc21fe43786b661f73" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>onError</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a3f8a36d0080bdd0fe4c050d376442ab3" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>onErrorReceiveWorkResults</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1adf5018d320d27b924e0f16a2ac48fea9" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>presetPopulation</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a67409d14f440abb96b91e1aeb99bd860" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>receiveWorkResult</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a497f3e3cad175f2d5991ad1b5da02663" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>receiveWorkResult</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a7a6ca719b3c2154e9f85d3d09228e523" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>receiveWorkResults</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a99902138053fd0dd3a06ddd19e9a8d46" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>removeEntries</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a29d360212d17f3d90f13556021325c5c" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>resultReceived</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a4151e753398914b0d1d945464fa62e2d" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>resultReceived</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1aa83ed2c18cc7f9e39ffada89615ce33e" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>RESULTS_DATABASE</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a155aea8dd8e4524f05d740c79ae99cf2" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>run</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1adbc21bc22c11e4e55ad9659043c080cb" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>saveResult</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a256acdc898522793fa73e386b9cbf4e9" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>sendWorkRequests</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ada87d248b0be00887061959c808b5ff7" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>sendWorkRequests</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a7b73f24d55e461057e4e729aa1abb8d8" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>setWorkDirectory</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a2f8181cd3c240b21661992191ac87ff6" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>setWorkRequest</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1ae606eac3ff4267944ec6c6a946a90ef2" prot="protected" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>showCurrentResults</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a5ef93144f28cf6ad009e203b4f8b61b8" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>start</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a2b11b6a1d1722210ee5f8df760a4e2fc" prot="private" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>startsWith</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1abb23fa37c035d8e43b4d72ff72c1fff0" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>TIMEOUT_SECONDS</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1af726b60b086f1ef593b7c81b77c98697" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>WAITTIME_SECONDS</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1a846fc282dfb46473b3d8328f629120a5" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::gp::JGAPClientGP</scope><name>writeToFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

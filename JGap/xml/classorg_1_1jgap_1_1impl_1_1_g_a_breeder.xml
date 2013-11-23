@@ -1,0 +1,638 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1impl_1_1_g_a_breeder" kind="class" prot="public">
+    <compoundname>org::jgap::impl::GABreeder</compoundname>
+    <basecompoundref refid="classorg_1_1jgap_1_1_breeder_base" prot="public" virt="non-virtual">org.jgap.BreederBase</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a456d8e9b7844c837732400b8e8845665" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.impl.GABreeder.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.21 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" line="27" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a4c1a6917df25082bb61c7d9408cdde6a" prot="private" static="no" mutable="no">
+        <type>transient <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+        <definition>transient Configuration org.jgap.impl.GABreeder.m_lastConf</definition>
+        <argsstring></argsstring>
+        <name>m_lastConf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" line="29" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a2714ceb0e7ce43593588c15dd0c7463e" compoundref="_g_a_breeder_8java" startline="56" endline="215">org.jgap.impl.GABreeder.evolve</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a31f4144b00e3f5f5f8e9fbc4546e9ed1" compoundref="_g_a_breeder_8java" startline="258" endline="260">org.jgap.impl.GABreeder.getLastConfiguration</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a73929f7c19c7225866a94822e51e2417" prot="private" static="no" mutable="no">
+        <type>transient <ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+        <definition>transient Population org.jgap.impl.GABreeder.m_lastPop</definition>
+        <argsstring></argsstring>
+        <name>m_lastPop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" line="31" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a2714ceb0e7ce43593588c15dd0c7463e" compoundref="_g_a_breeder_8java" startline="56" endline="215">org.jgap.impl.GABreeder.evolve</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a66262968a84ce4b0eb8ec5bf1bb11b77" compoundref="_g_a_breeder_8java" startline="262" endline="264">org.jgap.impl.GABreeder.getLastPopulation</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a9741a4309331b7515649c0e8023f5048" prot="package" static="no" mutable="no">
+        <type>List&lt; <ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref> &gt;</type>
+        <definition>List&lt;IChromosome&gt; org.jgap.impl.GABreeder.m_allChromosomesSoFar</definition>
+        <argsstring></argsstring>
+        <name>m_allChromosomesSoFar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" line="35" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a03f1314e5b0fd71fc947da7710828b5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.GABreeder.GABreeder</definition>
+        <argsstring>()</argsstring>
+        <name>GABreeder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" line="37" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" bodystart="37" bodyend="40"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1ae1a85544ed35077e1ef35eee71769b84" compoundref="_g_a_breeder_8java" startline="272" endline="274">org.jgap.impl.GABreeder.clone</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a2714ceb0e7ce43593588c15dd0c7463e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+        <definition>Population org.jgap.impl.GABreeder.evolve</definition>
+        <argsstring>(Population a_pop, Configuration a_conf)</argsstring>
+        <name>evolve</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_breeder_1a3acfba66e149a2de2d9496fe11530fe7">evolve</reimplements>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_pop</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_conf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Evolves the population of chromosomes within a genotype. This will execute all of the genetic operators added to the present active configuration and then invoke the natural selector to choose which chromosomes will be included in the next generation population.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the population to evolve </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use for evolution</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>evolved population</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000165"><xreftitle>Todo</xreftitle><xrefdescription><para>utilize jobs. In pop do also utilize jobs, especially for fitness computation </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" line="56" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" bodystart="56" bodyend="215"/>
+        <references refid="classorg_1_1jgap_1_1_breeder_base_1ac2baa98b33eb5a909ffddc874598c1d2" compoundref="_breeder_base_8java" startline="126" endline="161">org.jgap.BreederBase.applyGeneticOperators</references>
+        <references refid="classorg_1_1jgap_1_1_breeder_base_1a3d2ad9ec1c90d78a5598a4dec1400960" compoundref="_breeder_base_8java" startline="49" endline="115">org.jgap.BreederBase.applyNaturalSelectors</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1ae2fbd377bce110b40fd5f1190f172b7e" compoundref="_g_a_breeder_8java" startline="349" endline="405">org.jgap.impl.GABreeder.bulkFunctionEvaluation</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a636378341fa111d7301b473f973b5fe0" compoundref="_g_a_breeder_8java" startline="217" endline="256">org.jgap.impl.GABreeder.fillPopulationRandomlyToOriginalSize</references>
+        <references refid="classorg_1_1jgap_1_1_configuration_1aa7a80ab3107d1a6a479429409a89fbcc" compoundref="_configuration_8java" startline="1306" endline="1308">org.jgap.Configuration.getGenerationNr</references>
+        <references refid="classorg_1_1jgap_1_1_configuration_1ac97b1abe884c43ca1f1557035d001830" compoundref="_configuration_8java" startline="1286" endline="1288">org.jgap.Configuration.isPreserveFittestIndividual</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a471a98d00f64bc7928685bae5c7b2ea5" compoundref="_g_a_breeder_8java" startline="283" endline="291">org.jgap.impl.GABreeder.keepPopSizeConstant</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a4c1a6917df25082bb61c7d9408cdde6a" compoundref="_g_a_breeder_8java" startline="29">org.jgap.impl.GABreeder.m_lastConf</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a73929f7c19c7225866a94822e51e2417" compoundref="_g_a_breeder_8java" startline="31">org.jgap.impl.GABreeder.m_lastPop</references>
+        <references refid="classorg_1_1jgap_1_1_fitness_function_1a5f1f23e6f8a0f9606aee5d52fac6a06b" compoundref="_fitness_function_8java" startline="40">org.jgap.FitnessFunction.NO_FITNESS_VALUE</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1ae5a6f2395851cc67332e2965989d87df" compoundref="_g_a_breeder_8java" startline="293" endline="303">org.jgap.impl.GABreeder.reAddFittest</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1aee884911196f1d59ed0fcb43e718f551" compoundref="_g_a_breeder_8java" startline="305" endline="317">org.jgap.impl.GABreeder.updateChromosomes</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a31f4144b00e3f5f5f8e9fbc4546e9ed1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+        <definition>Configuration org.jgap.impl.GABreeder.getLastConfiguration</definition>
+        <argsstring>()</argsstring>
+        <name>getLastConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" line="258" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" bodystart="258" bodyend="260"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a4c1a6917df25082bb61c7d9408cdde6a" compoundref="_g_a_breeder_8java" startline="29">org.jgap.impl.GABreeder.m_lastConf</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a66262968a84ce4b0eb8ec5bf1bb11b77" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+        <definition>Population org.jgap.impl.GABreeder.getLastPopulation</definition>
+        <argsstring>()</argsstring>
+        <name>getLastPopulation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" line="262" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" bodystart="262" bodyend="264"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a73929f7c19c7225866a94822e51e2417" compoundref="_g_a_breeder_8java" startline="31">org.jgap.impl.GABreeder.m_lastPop</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1ae1a85544ed35077e1ef35eee71769b84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.impl.GABreeder.clone</definition>
+        <argsstring>()</argsstring>
+        <name>clone</name>
+        <reimplements refid="classorg_1_1jgap_1_1_breeder_base_1aea55323a43089102e706f52ca5839611">clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>deep clone of this instance</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" line="272" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" bodystart="272" bodyend="274"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a03f1314e5b0fd71fc947da7710828b5a" compoundref="_g_a_breeder_8java" startline="37" endline="40">org.jgap.impl.GABreeder.GABreeder</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1ae2fbd377bce110b40fd5f1190f172b7e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+        <definition>Population org.jgap.impl.GABreeder.bulkFunctionEvaluation</definition>
+        <argsstring>(Configuration a_conf, BulkFitnessFunction a_bulkFunction, Population a_pop, boolean a_monitorActive)</argsstring>
+        <name>bulkFunctionEvaluation</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_conf</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_bulk_fitness_function" kindref="compound">BulkFitnessFunction</ref></type>
+          <declname>a_bulkFunction</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_pop</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_monitorActive</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000167"><xreftitle>Todo</xreftitle><xrefdescription><para>utilize jobs: bulk fitness function is not so important for a prototype! </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" line="349" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" bodystart="349" bodyend="405"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a9f590d55a34d8b99c2a9a1b4aedd568b" compoundref="_chromosome_8java" startline="334" endline="465">org.jgap.Chromosome.clone</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a636378341fa111d7301b473f973b5fe0" compoundref="_g_a_breeder_8java" startline="217" endline="256">org.jgap.impl.GABreeder.fillPopulationRandomlyToOriginalSize</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a471a98d00f64bc7928685bae5c7b2ea5" compoundref="_g_a_breeder_8java" startline="283" endline="291">org.jgap.impl.GABreeder.keepPopSizeConstant</references>
+        <references refid="classorg_1_1jgap_1_1_fitness_function_1a5f1f23e6f8a0f9606aee5d52fac6a06b" compoundref="_fitness_function_8java" startline="40">org.jgap.FitnessFunction.NO_FITNESS_VALUE</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1ad6ea380ddcc4139ac11c3c792dbb7f1a" compoundref="_g_a_breeder_8java" startline="334" endline="347">org.jgap.impl.GABreeder.removeChromosomesWithoutFitnessValue</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1ac03dec72ccf28ed1e768c23e2938abeb" compoundref="_g_a_breeder_8java" startline="319" endline="332">org.jgap.impl.GABreeder.removeEvaluatedChromosomes</references>
+        <references refid="classorg_1_1jgap_1_1_population_1a2d09529f8e93d57a0546625362ca5bee" compoundref="_population_8java" startline="267" endline="269">org.jgap.Population.size</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a2714ceb0e7ce43593588c15dd0c7463e" compoundref="_g_a_breeder_8java" startline="56" endline="215">org.jgap.impl.GABreeder.evolve</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a636378341fa111d7301b473f973b5fe0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.GABreeder.fillPopulationRandomlyToOriginalSize</definition>
+        <argsstring>(Configuration a_conf, Population pop)</argsstring>
+        <name>fillPopulationRandomlyToOriginalSize</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_conf</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>pop</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000166"><xreftitle>Todo</xreftitle><xrefdescription><para>utilize jobs as initialization may be time-consuming as invalid combinations may have to be filtered out </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" line="217" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" bodystart="217" bodyend="256"/>
+        <references refid="classorg_1_1jgap_1_1_configuration_1aa7a80ab3107d1a6a479429409a89fbcc" compoundref="_configuration_8java" startline="1306" endline="1308">org.jgap.Configuration.getGenerationNr</references>
+        <references refid="classorg_1_1jgap_1_1_configuration_1a7fc5edca890f568ced59ad5faebf3402" compoundref="_configuration_8java" startline="1244" endline="1246">org.jgap.Configuration.getMinimumPopSizePercent</references>
+        <references refid="classorg_1_1jgap_1_1_population_1a2d09529f8e93d57a0546625362ca5bee" compoundref="_population_8java" startline="267" endline="269">org.jgap.Population.size</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1ae2fbd377bce110b40fd5f1190f172b7e" compoundref="_g_a_breeder_8java" startline="349" endline="405">org.jgap.impl.GABreeder.bulkFunctionEvaluation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a2714ceb0e7ce43593588c15dd0c7463e" compoundref="_g_a_breeder_8java" startline="56" endline="215">org.jgap.impl.GABreeder.evolve</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1ac03dec72ccf28ed1e768c23e2938abeb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+        <definition>Population org.jgap.impl.GABreeder.removeEvaluatedChromosomes</definition>
+        <argsstring>(Population a_from_pop, Configuration a_config)</argsstring>
+        <name>removeEvaluatedChromosomes</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_from_pop</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_config</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" line="319" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" bodystart="319" bodyend="332"/>
+        <references refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a743303c75d2a001f88af579051862964">org.jgap.IChromosome.getFitnessValueDirectly</references>
+        <references refid="classorg_1_1jgap_1_1_fitness_function_1a5f1f23e6f8a0f9606aee5d52fac6a06b" compoundref="_fitness_function_8java" startline="40">org.jgap.FitnessFunction.NO_FITNESS_VALUE</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1ae2fbd377bce110b40fd5f1190f172b7e" compoundref="_g_a_breeder_8java" startline="349" endline="405">org.jgap.impl.GABreeder.bulkFunctionEvaluation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1ad6ea380ddcc4139ac11c3c792dbb7f1a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+        <definition>Population org.jgap.impl.GABreeder.removeChromosomesWithoutFitnessValue</definition>
+        <argsstring>(Population a_from_pop, Configuration a_config)</argsstring>
+        <name>removeChromosomesWithoutFitnessValue</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_from_pop</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_config</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" line="334" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" bodystart="334" bodyend="347"/>
+        <references refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a743303c75d2a001f88af579051862964">org.jgap.IChromosome.getFitnessValueDirectly</references>
+        <references refid="classorg_1_1jgap_1_1_fitness_function_1a5f1f23e6f8a0f9606aee5d52fac6a06b" compoundref="_fitness_function_8java" startline="40">org.jgap.FitnessFunction.NO_FITNESS_VALUE</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1ae2fbd377bce110b40fd5f1190f172b7e" compoundref="_g_a_breeder_8java" startline="349" endline="405">org.jgap.impl.GABreeder.bulkFunctionEvaluation</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a471a98d00f64bc7928685bae5c7b2ea5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.GABreeder.keepPopSizeConstant</definition>
+        <argsstring>(Population a_pop, Configuration a_conf)</argsstring>
+        <name>keepPopSizeConstant</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_pop</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_conf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cares that population size is kept constant and does not exceed the desired size.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" line="283" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" bodystart="283" bodyend="291"/>
+        <references refid="classorg_1_1jgap_1_1_configuration_1ad41cca8a908a60f0e4575f02f59b780e" compoundref="_configuration_8java" startline="1462" endline="1464">org.jgap.Configuration.isKeepPopulationSizeConstant</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1ae2fbd377bce110b40fd5f1190f172b7e" compoundref="_g_a_breeder_8java" startline="349" endline="405">org.jgap.impl.GABreeder.bulkFunctionEvaluation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a2714ceb0e7ce43593588c15dd0c7463e" compoundref="_g_a_breeder_8java" startline="56" endline="215">org.jgap.impl.GABreeder.evolve</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1ae5a6f2395851cc67332e2965989d87df" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+        <definition>IChromosome org.jgap.impl.GABreeder.reAddFittest</definition>
+        <argsstring>(Population a_pop, IChromosome a_fittest)</argsstring>
+        <name>reAddFittest</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_pop</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+          <declname>a_fittest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" line="293" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" bodystart="293" bodyend="303"/>
+        <references refid="classorg_1_1jgap_1_1_population_1a1c07a36de9973bee29421a44f99b8319" compoundref="_population_8java" startline="406" endline="408">org.jgap.Population.contains</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a2714ceb0e7ce43593588c15dd0c7463e" compoundref="_g_a_breeder_8java" startline="56" endline="215">org.jgap.impl.GABreeder.evolve</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1aee884911196f1d59ed0fcb43e718f551" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.GABreeder.updateChromosomes</definition>
+        <argsstring>(Population a_pop, Configuration a_conf)</argsstring>
+        <name>updateChromosomes</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_pop</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_conf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" line="305" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" bodystart="305" bodyend="317"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a2714ceb0e7ce43593588c15dd0c7463e" compoundref="_g_a_breeder_8java" startline="56" endline="215">org.jgap.impl.GABreeder.evolve</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Breeder for genetic algorithms. Runs the evolution process.</para><para><simplesect kind="author"><para>Klaus Meffert </para><simplesectsep/><para>Vasilis </para></simplesect>
+<simplesect kind="since"><para>3.5 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="12951">
+        <label>Serializable</label>
+      </node>
+      <node id="12952">
+        <label>Comparable</label>
+      </node>
+      <node id="12947">
+        <label>org.jgap.BreederBase</label>
+        <link refid="classorg_1_1jgap_1_1_breeder_base"/>
+        <childnode refid="12948" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12949">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="12950" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12950">
+        <label>Cloneable</label>
+      </node>
+      <node id="12946">
+        <label>org.jgap.impl.GABreeder</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder"/>
+        <childnode refid="12947" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12948">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="12949" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12951" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12952" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12967">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="12960">
+        <label>List&lt; org.jgap.IChromosome &gt;</label>
+      </node>
+      <node id="12972">
+        <label>List</label>
+      </node>
+      <node id="12971">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="12958" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12956" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12968">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="12958" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12958">
+        <label>Serializable</label>
+      </node>
+      <node id="12959">
+        <label>Comparable</label>
+      </node>
+      <node id="12954">
+        <label>org.jgap.BreederBase</label>
+        <link refid="classorg_1_1jgap_1_1_breeder_base"/>
+        <childnode refid="12955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12956">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="12957" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12965">
+        <label>org.jgap.FitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_fitness_evaluator"/>
+        <childnode refid="12958" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12969">
+        <label>org.jgap.BulkFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_bulk_fitness_function"/>
+        <childnode refid="12958" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12956" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12957">
+        <label>Cloneable</label>
+      </node>
+      <node id="12953">
+        <label>org.jgap.impl.GABreeder</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder"/>
+        <childnode refid="12954" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12960" relation="usage">
+          <edgelabel>m_allChromosomesSoFar</edgelabel>
+        </childnode>
+        <childnode refid="12961" relation="usage">
+          <edgelabel>m_lastConf</edgelabel>
+        </childnode>
+        <childnode refid="12973" relation="usage">
+          <edgelabel>m_lastPop</edgelabel>
+        </childnode>
+      </node>
+      <node id="12974">
+        <label>org.jgap.IPersistentRepresentation</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_persistent_representation"/>
+      </node>
+      <node id="12963">
+        <label>org.jgap.IJGAPFactory</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_j_g_a_p_factory"/>
+        <childnode refid="12958" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12970">
+        <label>org.jgap.Configuration.ConfigurationConfigurable</label>
+        <link refid="classorg_1_1jgap_1_1_configuration_1_1_configuration_configurable"/>
+        <childnode refid="12958" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12973">
+        <label>org.jgap.Population</label>
+        <link refid="classorg_1_1jgap_1_1_population"/>
+        <childnode refid="12958" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12956" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12974" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12960" relation="usage">
+          <edgelabel>m_chromosomes</edgelabel>
+        </childnode>
+        <childnode refid="12961" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="12966" relation="usage">
+          <edgelabel>m_fittestChromosome</edgelabel>
+        </childnode>
+      </node>
+      <node id="12955">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="12956" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12958" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12959" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12966">
+        <label>org.jgap.IChromosome</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome"/>
+        <childnode refid="12959" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12956" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12958" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12967" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12961">
+        <label>org.jgap.Configuration</label>
+        <link refid="classorg_1_1jgap_1_1_configuration"/>
+        <childnode refid="12962" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12958" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12956" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12959" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12955" relation="usage">
+          <edgelabel>m_breeder</edgelabel>
+        </childnode>
+        <childnode refid="12963" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="12964" relation="usage">
+          <edgelabel>m_chromosomePool</edgelabel>
+        </childnode>
+        <childnode refid="12965" relation="usage">
+          <edgelabel>m_fitnessEvaluator</edgelabel>
+        </childnode>
+        <childnode refid="12966" relation="usage">
+          <edgelabel>m_sampleChromosome</edgelabel>
+        </childnode>
+        <childnode refid="12968" relation="usage">
+          <edgelabel>m_randomGenerator</edgelabel>
+        </childnode>
+        <childnode refid="12969" relation="usage">
+          <edgelabel>m_bulkObjectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="12970" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="12971" relation="usage">
+          <edgelabel>m_objectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="12972" relation="usage">
+          <edgelabel>m_geneticOperators</edgelabel>
+        </childnode>
+      </node>
+      <node id="12964">
+        <label>org.jgap.IChromosomePool</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool"/>
+      </node>
+      <node id="12962">
+        <label>Configurable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" line="25" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GABreeder.java" bodystart="24" bodyend="406"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1_breeder_base_1ac2baa98b33eb5a909ffddc874598c1d2" prot="protected" virt="non-virtual"><scope>org::jgap::impl::GABreeder</scope><name>applyGeneticOperators</name></member>
+      <member refid="classorg_1_1jgap_1_1_breeder_base_1a3d2ad9ec1c90d78a5598a4dec1400960" prot="protected" virt="non-virtual"><scope>org::jgap::impl::GABreeder</scope><name>applyNaturalSelectors</name></member>
+      <member refid="classorg_1_1jgap_1_1_breeder_base_1a1ce28560875364adb5ac369ad26aa0f1" prot="public" virt="non-virtual"><scope>org::jgap::impl::GABreeder</scope><name>BreederBase</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1ae2fbd377bce110b40fd5f1190f172b7e" prot="public" virt="non-virtual"><scope>org::jgap::impl::GABreeder</scope><name>bulkFunctionEvaluation</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1ae1a85544ed35077e1ef35eee71769b84" prot="public" virt="virtual"><scope>org::jgap::impl::GABreeder</scope><name>clone</name></member>
+      <member refid="classorg_1_1jgap_1_1_breeder_base_1ae3b27c2dffe2f0d3e189e5af354612e1" prot="public" virt="non-virtual"><scope>org::jgap::impl::GABreeder</scope><name>compareTo</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a456d8e9b7844c837732400b8e8845665" prot="private" virt="non-virtual"><scope>org::jgap::impl::GABreeder</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a2714ceb0e7ce43593588c15dd0c7463e" prot="public" virt="non-virtual"><scope>org::jgap::impl::GABreeder</scope><name>evolve</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a636378341fa111d7301b473f973b5fe0" prot="private" virt="non-virtual"><scope>org::jgap::impl::GABreeder</scope><name>fillPopulationRandomlyToOriginalSize</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a03f1314e5b0fd71fc947da7710828b5a" prot="public" virt="non-virtual"><scope>org::jgap::impl::GABreeder</scope><name>GABreeder</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a31f4144b00e3f5f5f8e9fbc4546e9ed1" prot="public" virt="non-virtual"><scope>org::jgap::impl::GABreeder</scope><name>getLastConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a66262968a84ce4b0eb8ec5bf1bb11b77" prot="public" virt="non-virtual"><scope>org::jgap::impl::GABreeder</scope><name>getLastPopulation</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a471a98d00f64bc7928685bae5c7b2ea5" prot="protected" virt="non-virtual"><scope>org::jgap::impl::GABreeder</scope><name>keepPopSizeConstant</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a9741a4309331b7515649c0e8023f5048" prot="package" virt="non-virtual"><scope>org::jgap::impl::GABreeder</scope><name>m_allChromosomesSoFar</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a4c1a6917df25082bb61c7d9408cdde6a" prot="private" virt="non-virtual"><scope>org::jgap::impl::GABreeder</scope><name>m_lastConf</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a73929f7c19c7225866a94822e51e2417" prot="private" virt="non-virtual"><scope>org::jgap::impl::GABreeder</scope><name>m_lastPop</name></member>
+      <member refid="classorg_1_1jgap_1_1_breeder_base_1a4facd977a198d2377912156a74d87515" prot="public" virt="non-virtual"><scope>org::jgap::impl::GABreeder</scope><name>merge</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1ae5a6f2395851cc67332e2965989d87df" prot="protected" virt="non-virtual"><scope>org::jgap::impl::GABreeder</scope><name>reAddFittest</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1ad6ea380ddcc4139ac11c3c792dbb7f1a" prot="private" virt="non-virtual"><scope>org::jgap::impl::GABreeder</scope><name>removeChromosomesWithoutFitnessValue</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1ac03dec72ccf28ed1e768c23e2938abeb" prot="private" virt="non-virtual"><scope>org::jgap::impl::GABreeder</scope><name>removeEvaluatedChromosomes</name></member>
+      <member refid="classorg_1_1jgap_1_1_breeder_base_1aabb0562c937ba7fee15a5760e83eafa5" prot="public" virt="non-virtual"><scope>org::jgap::impl::GABreeder</scope><name>select</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1aee884911196f1d59ed0fcb43e718f551" prot="protected" virt="non-virtual"><scope>org::jgap::impl::GABreeder</scope><name>updateChromosomes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

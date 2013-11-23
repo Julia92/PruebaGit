@@ -1,0 +1,198 @@
+.TH "org.jgap.distr.grid.JGAPResult" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.grid.JGAPResult \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits WorkResult\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBJGAPResult\fP (String name, int id, \fBIChromosome\fP a_fittestChrom, long a_unitdone)"
+.br
+.ti -1c
+.RI "\fBJGAPResult\fP (String name, int id, \fBPopulation\fP a_chromosomes, long a_unitdone)"
+.br
+.ti -1c
+.RI "\fBIChromosome\fP \fBgetFittest\fP ()"
+.br
+.ti -1c
+.RI "\fBPopulation\fP \fBgetPopulation\fP ()"
+.br
+.ti -1c
+.RI "long \fBgetUnitDone\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBIChromosome\fP \fBm_fittest\fP"
+.br
+.ti -1c
+.RI "\fBPopulation\fP \fBm_pop\fP"
+.br
+.ti -1c
+.RI "long \fBm_unitDone\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.3 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Holds the result of a worker\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file JGAPResult\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.distr\&.grid\&.JGAPResult\&.JGAPResult (Stringname, intid, \fBIChromosome\fPa_fittestChrom, longa_unitdone)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP String 
+.br
+\fIid\fP int 
+.br
+\fIa_fittestChrom\fP \fBIChromosome\fP 
+.br
+\fIa_unitdone\fP long 
+.RE
+.PP
+\fBDeprecated\fP
+.RS 4
+use other constructor with \fBPopulation\fP parameter instead 
+.RE
+.PP
+
+.PP
+Definition at line 39 of file JGAPResult\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.JGAPResult\&.m_fittest, and org\&.jgap\&.distr\&.grid\&.JGAPResult\&.m_unitDone\&.
+.SS "org\&.jgap\&.distr\&.grid\&.JGAPResult\&.JGAPResult (Stringname, intid, \fBPopulation\fPa_chromosomes, longa_unitdone)\fC [inline]\fP"
+Constructor: Takes a \fBPopulation\fP as result of a worker's computation\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP arbritrary session name to distinct from other results 
+.br
+\fIid\fP ID of the result, should be unique must need not 
+.br
+\fIa_chromosomes\fP the result of a worker's computation 
+.br
+\fIa_unitdone\fP number of units done
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 57 of file JGAPResult\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.JGAPResult\&.m_fittest, org\&.jgap\&.distr\&.grid\&.JGAPResult\&.m_pop, and org\&.jgap\&.distr\&.grid\&.JGAPResult\&.m_unitDone\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBIChromosome\fP org\&.jgap\&.distr\&.grid\&.JGAPResult\&.getFittest ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+\fBIChromosome\fP 
+.RE
+.PP
+\fBDeprecated\fP
+.RS 4
+use getPopulation instead 
+.RE
+.PP
+
+.PP
+Definition at line 69 of file JGAPResult\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.JGAPResult\&.m_fittest\&.
+.SS "\fBPopulation\fP org\&.jgap\&.distr\&.grid\&.JGAPResult\&.getPopulation ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the \fBPopulation\fP as a result from a worker's computation
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 79 of file JGAPResult\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.JGAPResult\&.m_pop\&.
+.SS "long org\&.jgap\&.distr\&.grid\&.JGAPResult\&.getUnitDone ()\fC [inline]\fP"
+
+.PP
+Definition at line 83 of file JGAPResult\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.JGAPResult\&.m_unitDone\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.grid\&.JGAPResult\&.CVS_REVISION = '$Revision: 1\&.3 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 24 of file JGAPResult\&.java\&.
+.SS "\fBIChromosome\fP org\&.jgap\&.distr\&.grid\&.JGAPResult\&.m_fittest\fC [private]\fP"
+
+.PP
+Definition at line 26 of file JGAPResult\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.JGAPResult\&.getFittest(), and org\&.jgap\&.distr\&.grid\&.JGAPResult\&.JGAPResult()\&.
+.SS "\fBPopulation\fP org\&.jgap\&.distr\&.grid\&.JGAPResult\&.m_pop\fC [private]\fP"
+
+.PP
+Definition at line 27 of file JGAPResult\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.JGAPResult\&.getPopulation(), and org\&.jgap\&.distr\&.grid\&.JGAPResult\&.JGAPResult()\&.
+.SS "long org\&.jgap\&.distr\&.grid\&.JGAPResult\&.m_unitDone\fC [private]\fP"
+
+.PP
+Definition at line 29 of file JGAPResult\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.JGAPResult\&.getUnitDone(), and org\&.jgap\&.distr\&.grid\&.JGAPResult\&.JGAPResult()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

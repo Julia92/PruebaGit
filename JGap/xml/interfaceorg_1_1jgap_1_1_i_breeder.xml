@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="interfaceorg_1_1jgap_1_1_i_breeder" kind="interface" prot="public">
+    <compoundname>org::jgap::IBreeder</compoundname>
+    <basecompoundref refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable" prot="public" virt="non-virtual">org.jgap.util.ICloneable</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Comparable</basecompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1_breeder_base" prot="public" virt="non-virtual">org.jgap.BreederBase</derivedcompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="interfaceorg_1_1jgap_1_1_i_breeder_1acb61f1377521b2c3934f96c80b1ca70f" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.IBreeder.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.5 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IBreeder.java" line="25" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IBreeder.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1_i_breeder_1a3acfba66e149a2de2d9496fe11530fe7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+        <definition>Population org.jgap.IBreeder.evolve</definition>
+        <argsstring>(Population a_pop, Configuration a_conf)</argsstring>
+        <name>evolve</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1a2714ceb0e7ce43593588c15dd0c7463e">evolve</reimplementedby>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_pop</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_conf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Evolves the population of Chromosomes within a <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref>. This will execute all of the genetic operators added to the present active configuration and then invoke the natural selector to choose which chromosomes will be included in the next generation population.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the population to evolve </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use for evolution</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IBreeder.java" line="39" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Interface for GA breeders. A breeder evolves a population by performing genetic operations.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="13945">
+        <label>Serializable</label>
+      </node>
+      <node id="13946">
+        <label>Comparable</label>
+      </node>
+      <node id="13947">
+        <label>org.jgap.BreederBase</label>
+        <link refid="classorg_1_1jgap_1_1_breeder_base"/>
+        <childnode refid="13942" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13943">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="13944" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13944">
+        <label>Cloneable</label>
+      </node>
+      <node id="13948">
+        <label>org.jgap.impl.GABreeder</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder"/>
+        <childnode refid="13947" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13942">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="13943" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13945" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13946" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="13952">
+        <label>Serializable</label>
+      </node>
+      <node id="13953">
+        <label>Comparable</label>
+      </node>
+      <node id="13950">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="13951" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13951">
+        <label>Cloneable</label>
+      </node>
+      <node id="13949">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="13950" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13952" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13953" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IBreeder.java" line="23" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IBreeder.java" bodystart="22" bodyend="40"/>
+    <listofallmembers>
+      <member refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable_1aa7e7d62077e6428ad7904932b1b4f7d5" prot="public" virt="non-virtual"><scope>org::jgap::IBreeder</scope><name>clone</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_breeder_1acb61f1377521b2c3934f96c80b1ca70f" prot="public" virt="non-virtual"><scope>org::jgap::IBreeder</scope><name>CVS_REVISION</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_breeder_1a3acfba66e149a2de2d9496fe11530fe7" prot="public" virt="non-virtual"><scope>org::jgap::IBreeder</scope><name>evolve</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

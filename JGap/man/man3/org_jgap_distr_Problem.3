@@ -1,0 +1,270 @@
+.TH "org.jgap.distr.Problem" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.Problem \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProblem\fP ()"
+.br
+.ti -1c
+.RI "\fBProblem\fP (\fBFitnessFunction\fP a_fitFunc, int a_popSize, \fBChromosome\fP[] a_initialChroms)  throws IllegalArgumentException "
+.br
+.ti -1c
+.RI "void \fBsetID\fP (Object a_ID)"
+.br
+.ti -1c
+.RI "Object \fBgetID\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetPopulationSize\fP ()"
+.br
+.ti -1c
+.RI "\fBFitnessFunction\fP \fBgetFitnessFunction\fP ()"
+.br
+.ti -1c
+.RI "\fBChromosome\fP[] \fBgetChromosomes\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBFitnessFunction\fP \fBm_fitFunc\fP"
+.br
+.ti -1c
+.RI "int \fBm_populationSize\fP"
+.br
+.ti -1c
+.RI "Object \fBm_ID\fP"
+.br
+.ti -1c
+.RI "\fBChromosome\fP[] \fBm_initialChroms\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.3 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A problem to be solved by a worker\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file Problem\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.distr\&.Problem\&.Problem ()\fC [inline]\fP"
+
+.PP
+Definition at line 32 of file Problem\&.java\&.
+.SS "org\&.jgap\&.distr\&.Problem\&.Problem (\fBFitnessFunction\fPa_fitFunc, inta_popSize, \fBChromosome\fP[]a_initialChroms) throws IllegalArgumentException\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_fitFunc\fP the fitness function to use 
+.br
+\fIa_popSize\fP the population size to use by/suggest to the worker 
+.br
+\fIa_initialChroms\fP initial chromosomes to use (e\&.g\&. from previous evolutions), or empty 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIllegalArgumentException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 45 of file Problem\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Problem\&.m_fitFunc, org\&.jgap\&.distr\&.Problem\&.m_initialChroms, and org\&.jgap\&.distr\&.Problem\&.m_populationSize\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBChromosome\fP [] org\&.jgap\&.distr\&.Problem\&.getChromosomes ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+\fBChromosome\fP[] initial chromosomes to use, may be empty
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 104 of file Problem\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Problem\&.m_initialChroms\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.ProblemTest\&.testConstruct_3()\&.
+.SS "\fBFitnessFunction\fP org\&.jgap\&.distr\&.Problem\&.getFitnessFunction ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+\fBFitnessFunction\fP to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 94 of file Problem\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Problem\&.m_fitFunc\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.ProblemTest\&.testConstruct_3()\&.
+.SS "Object org\&.jgap\&.distr\&.Problem\&.getID ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+internal ID of the problem, should be unique
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 74 of file Problem\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Problem\&.m_ID\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.ProblemTest\&.testGetID_0()\&.
+.SS "int org\&.jgap\&.distr\&.Problem\&.getPopulationSize ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+population size to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 84 of file Problem\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Problem\&.m_populationSize\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.ProblemTest\&.testConstruct_3()\&.
+.SS "void org\&.jgap\&.distr\&.Problem\&.setID (Objecta_ID)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ID\fP internal ID of the problem, should be unique
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 64 of file Problem\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Problem\&.m_ID\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.Problem\&.CVS_REVISION = '$Revision: 1\&.3 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 22 of file Problem\&.java\&.
+.SS "\fBFitnessFunction\fP org\&.jgap\&.distr\&.Problem\&.m_fitFunc\fC [private]\fP"
+
+.PP
+Definition at line 24 of file Problem\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Problem\&.getFitnessFunction(), and org\&.jgap\&.distr\&.Problem\&.Problem()\&.
+.SS "Object org\&.jgap\&.distr\&.Problem\&.m_ID\fC [private]\fP"
+
+.PP
+Definition at line 28 of file Problem\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Problem\&.getID(), and org\&.jgap\&.distr\&.Problem\&.setID()\&.
+.SS "\fBChromosome\fP [] org\&.jgap\&.distr\&.Problem\&.m_initialChroms\fC [private]\fP"
+
+.PP
+Definition at line 30 of file Problem\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Problem\&.getChromosomes(), and org\&.jgap\&.distr\&.Problem\&.Problem()\&.
+.SS "int org\&.jgap\&.distr\&.Problem\&.m_populationSize\fC [private]\fP"
+
+.PP
+Definition at line 26 of file Problem\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Problem\&.getPopulationSize(), and org\&.jgap\&.distr\&.Problem\&.Problem()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

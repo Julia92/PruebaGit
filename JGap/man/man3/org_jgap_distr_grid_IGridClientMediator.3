@@ -1,0 +1,141 @@
+.TH "org.jgap.distr.grid.IGridClientMediator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.grid.IGridClientMediator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable\&.
+.PP
+Inherited by \fBorg\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBconnect\fP ()  throws Exception"
+.br
+.ti -1c
+.RI "void \fBdisconnect\fP ()  throws Exception"
+.br
+.ti -1c
+.RI "void \fBsend\fP (GridMessage a_msg, \fBMessageContext\fP a_context, Map< String, String > a_headerData)  throws Exception"
+.br
+.ti -1c
+.RI "List \fBlistRequests\fP (\fBMessageContext\fP a_context, String a_datetime, String a_pattern)  throws Exception"
+.br
+.ti -1c
+.RI "List \fBlistResults\fP (\fBMessageContext\fP a_context, String a_datetime, String a_pattern)  throws Exception"
+.br
+.ti -1c
+.RI "GridMessage \fBgetGridMessage\fP (\fBMessageContext\fP a_context, String a_datetime, int a_timeoutSeconds, int a_waitTimeSeconds, boolean a_removeRequest)  throws Exception"
+.br
+.ti -1c
+.RI "void \fBremoveMessage\fP (Object a_entry)  throws Exception"
+.br
+.ti -1c
+.RI "void \fBstop\fP ()  throws Exception"
+.br
+.ti -1c
+.RI "void \fBbackupResult\fP (Object a_result, String a_subDir, String a_title)  throws Exception"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.8 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Interface for grid client mediators\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file IGridClientMediator\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.distr\&.grid\&.IGridClientMediator\&.backupResult (Objecta_result, Stringa_subDir, Stringa_title) throws Exception"
+Backs up a result in the given sub directory\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_result\fP the result to backup 
+.br
+\fIa_subDir\fP sub directory to store the copy of the result in 
+.br
+\fIa_title\fP the title of the entry to create
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.4 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\fP\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.IGridClientMediator\&.connect () throws Exception"
+
+.PP
+Implemented in \fBorg\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\fP\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.IGridClientMediator\&.disconnect () throws Exception"
+
+.PP
+Implemented in \fBorg\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\fP\&.
+.SS "GridMessage org\&.jgap\&.distr\&.grid\&.IGridClientMediator\&.getGridMessage (\fBMessageContext\fPa_context, Stringa_datetime, inta_timeoutSeconds, inta_waitTimeSeconds, booleana_removeRequest) throws Exception"
+
+.PP
+Implemented in \fBorg\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\fP\&.
+.SS "List org\&.jgap\&.distr\&.grid\&.IGridClientMediator\&.listRequests (\fBMessageContext\fPa_context, Stringa_datetime, Stringa_pattern) throws Exception"
+
+.PP
+Implemented in \fBorg\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\fP\&.
+.SS "List org\&.jgap\&.distr\&.grid\&.IGridClientMediator\&.listResults (\fBMessageContext\fPa_context, Stringa_datetime, Stringa_pattern) throws Exception"
+
+.PP
+Implemented in \fBorg\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\fP\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.IGridClientMediator\&.removeMessage (Objecta_entry) throws Exception"
+
+.PP
+Implemented in \fBorg\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\fP\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.IGridClientMediator\&.send (GridMessagea_msg, \fBMessageContext\fPa_context, Map< String, String >a_headerData) throws Exception"
+
+.PP
+Implemented in \fBorg\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\fP\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.IGridClientMediator\&.stop () throws Exception"
+
+.PP
+Implemented in \fBorg\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.grid\&.IGridClientMediator\&.CVS_REVISION = '$Revision: 1\&.8 $'\fC [static]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file IGridClientMediator\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

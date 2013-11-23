@@ -1,0 +1,149 @@
+.TH "examples.energy.CoinsEnergy" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.energy.CoinsEnergy \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBEnergyGeneConstraintChecker\fP"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmakeChangeForAmount\fP (int a_targetChangeAmount, double a_maxWeight)  throws Exception "
+.br
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)  throws Exception "
+.br
+.in -1c
+.SS "Static Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fBgetValue\fP (String[] args, int index)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.10 $'"
+.br
+.ti -1c
+.RI "static final int \fBMAX_ALLOWED_EVOLUTIONS\fP = 200"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+THIS EXAMPLE IS NOT IMPLEMENTED FULLY! For general description, see \fBexamples\&.MinimizingMakeChange\fP\&.
+.PP
+Additionally, each to coin an energy value is assigned (new feature since JGAP version 2\&.4)\&. Energy is interpreted here as weight of a coin\&. You could think of a coins holder that wants a low total weight as possible and that is capable of only holding a given maximum weight\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file CoinsEnergy\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static int examples\&.energy\&.CoinsEnergy\&.getValue (String[]args, intindex)\fC [inline]\fP, \fC [static]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 161 of file CoinsEnergy\&.java\&.
+.PP
+Referenced by examples\&.energy\&.CoinsEnergy\&.main()\&.
+.SS "static void examples\&.energy\&.CoinsEnergy\&.main (String[]args) throws Exception\fC [inline]\fP, \fC [static]\fP"
+Main method\&. A single command-line argument is expected, which is the amount of change to create (in other words, 75 would be equal to 75 cents)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP amount of change in cents to create 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 149 of file CoinsEnergy\&.java\&.
+.PP
+References examples\&.energy\&.CoinsEnergy\&.getValue(), and examples\&.energy\&.CoinsEnergy\&.makeChangeForAmount()\&.
+.SS "static void examples\&.energy\&.CoinsEnergy\&.makeChangeForAmount (inta_targetChangeAmount, doublea_maxWeight) throws Exception\fC [inline]\fP, \fC [static]\fP"
+Executes the genetic algorithm to determine the minimum number of coins necessary to make up the given target amount of change\&. The solution will then be written to System\&.out\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_targetChangeAmount\fP the target amount of change for which this method is attempting to produce the minimum number of coins 
+.br
+\fIa_maxWeight\fP the maximum weight allowed in sum over all coins 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 49 of file CoinsEnergy\&.java\&.
+.PP
+References examples\&.energy\&.CoinsEnergyFitnessFunction\&.getTotalNumberOfCoins(), and examples\&.energy\&.CoinsEnergy\&.MAX_ALLOWED_EVOLUTIONS\&.
+.PP
+Referenced by examples\&.energy\&.CoinsEnergy\&.main()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.energy\&.CoinsEnergy\&.CVS_REVISION = '$Revision: 1\&.10 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 28 of file CoinsEnergy\&.java\&.
+.SS "final int examples\&.energy\&.CoinsEnergy\&.MAX_ALLOWED_EVOLUTIONS = 200\fC [static]\fP, \fC [private]\fP"
+The total number of times we'll let the population evolve\&. 
+.PP
+Definition at line 33 of file CoinsEnergy\&.java\&.
+.PP
+Referenced by examples\&.energy\&.CoinsEnergy\&.makeChangeForAmount()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

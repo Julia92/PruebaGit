@@ -1,0 +1,515 @@
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors}{\section{org.\-jgap.\-impl.\-Chain\-Of\-Selectors Class Reference}
+\label{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors}\index{org.\-jgap.\-impl.\-Chain\-Of\-Selectors@{org.\-jgap.\-impl.\-Chain\-Of\-Selectors}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-impl.\-Chain\-Of\-Selectors\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-impl.\-Chain\-Of\-Selectors\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a3dd0a6898224c13e3981faf074d6a63a}{Chain\-Of\-Selectors} ()
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a102d3ad23459e420d134ff241062d68e}{Chain\-Of\-Selectors} (\hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} a\-\_\-conf)
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a7704efbd90e6e1749e85e9f53736806c}{add\-Natural\-Selector} (\hyperlink{classorg_1_1jgap_1_1_natural_selector}{Natural\-Selector} a\-\_\-selector)  throws Invalid\-Configuration\-Exception 
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_adc6c7eaa7c3daa0c13a81555642334a1}{add\-All} (Collection a\-\_\-c)  throws Invalid\-Configuration\-Exception 
+\item 
+int \hyperlink{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a4588a14b0db4d503999c327ff7977a8b}{size} ()
+\item 
+boolean \hyperlink{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a7a2654999e560f0c3977742b9d2a7809}{is\-Empty} ()
+\item 
+int \hyperlink{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_aed2b355ad6b2a322c554918ec6ef77ad}{hash\-Code} ()
+\item 
+boolean \hyperlink{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_ab75576d0847bf1e877f50c9c9149f3a8}{equals} (final Object a\-\_\-obj)
+\item 
+\hyperlink{classorg_1_1jgap_1_1_natural_selector}{Natural\-Selector} \hyperlink{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_ae558a4530b64654da843bcd72fb7d24a}{get} (final int a\-\_\-index)
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a0a2a71015c12325c6027a5c049987a8b}{clear} ()
+\item 
+Iterator \hyperlink{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a340450dda72db3319b3896cdcaebb7d6}{iterator} ()
+\item 
+Object \hyperlink{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a81b45967844c2ac4484f9c06113037dc}{clone} ()
+\item 
+int \hyperlink{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a63d1fc9e64182d363504c191bd7f9d83}{compare\-To} (Object a\-\_\-other)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List \hyperlink{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a246b1875379b6215222b201c838ddd1c}{m\-\_\-selectors}
+\item 
+\hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} \hyperlink{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_ae4fad23cc6cc7f47f8445baadab152c8}{m\-\_\-conf}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a506aea491defe82826e504d504be910b}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-19 \$\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Ordered chain of Natural\-Selectors. With this container you can plugin \hyperlink{classorg_1_1jgap_1_1_natural_selector}{Natural\-Selector} implementations which will be performed either before (pre-\/) or after (post-\/selectors) registered genetic operations have been applied.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} 
+
+\hyperlink{classorg_1_1jgap_1_1_genotype}{Genotype}
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Definition at line 28 of file Chain\-Of\-Selectors.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a3dd0a6898224c13e3981faf074d6a63a}{\index{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}!Chain\-Of\-Selectors@{Chain\-Of\-Selectors}}
+\index{Chain\-Of\-Selectors@{Chain\-Of\-Selectors}!org::jgap::impl::ChainOfSelectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}}
+\subsubsection[{Chain\-Of\-Selectors}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-Chain\-Of\-Selectors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a3dd0a6898224c13e3981faf074d6a63a}
+Only for dynamic instantiation.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-2 
+\end{DoxySince}
+
+
+Definition at line 47 of file Chain\-Of\-Selectors.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-clone(), org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-compare\-To(), and org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-equals().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a102d3ad23459e420d134ff241062d68e}{\index{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}!Chain\-Of\-Selectors@{Chain\-Of\-Selectors}}
+\index{Chain\-Of\-Selectors@{Chain\-Of\-Selectors}!org::jgap::impl::ChainOfSelectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}}
+\subsubsection[{Chain\-Of\-Selectors}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-Chain\-Of\-Selectors (
+\begin{DoxyParamCaption}
+\item[{{\bf Configuration}}]{a\-\_\-conf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a102d3ad23459e420d134ff241062d68e}
+
+
+Definition at line 51 of file Chain\-Of\-Selectors.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-m\-\_\-conf, and org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-m\-\_\-selectors.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_adc6c7eaa7c3daa0c13a81555642334a1}{\index{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}!add\-All@{add\-All}}
+\index{add\-All@{add\-All}!org::jgap::impl::ChainOfSelectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}}
+\subsubsection[{add\-All}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-add\-All (
+\begin{DoxyParamCaption}
+\item[{Collection}]{a\-\_\-c}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\-Configuration\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_adc6c7eaa7c3daa0c13a81555642334a1}
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-c} & Collection to add all elements from \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classorg_1_1jgap_1_1_invalid_configuration_exception}{Invalid\-Configuration\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Definition at line 83 of file Chain\-Of\-Selectors.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-add\-Natural\-Selector().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_adc6c7eaa7c3daa0c13a81555642334a1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a7704efbd90e6e1749e85e9f53736806c}{\index{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}!add\-Natural\-Selector@{add\-Natural\-Selector}}
+\index{add\-Natural\-Selector@{add\-Natural\-Selector}!org::jgap::impl::ChainOfSelectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}}
+\subsubsection[{add\-Natural\-Selector}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-add\-Natural\-Selector (
+\begin{DoxyParamCaption}
+\item[{{\bf Natural\-Selector}}]{a\-\_\-selector}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\-Configuration\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a7704efbd90e6e1749e85e9f53736806c}
+Adds a natural selector to the chain.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-selector} & the selector to be added \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classorg_1_1jgap_1_1_invalid_configuration_exception}{Invalid\-Configuration\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 (previously part of class \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration}) 
+\end{DoxySince}
+
+
+Definition at line 65 of file Chain\-Of\-Selectors.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-add\-All().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a0a2a71015c12325c6027a5c049987a8b}{\index{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}!clear@{clear}}
+\index{clear@{clear}!org::jgap::impl::ChainOfSelectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a0a2a71015c12325c6027a5c049987a8b}
+Clears all registered selectors.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Definition at line 156 of file Chain\-Of\-Selectors.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a81b45967844c2ac4484f9c06113037dc}{\index{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}!clone@{clone}}
+\index{clone@{clone}!org::jgap::impl::ChainOfSelectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}Object org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a81b45967844c2ac4484f9c06113037dc}
+\begin{DoxyReturn}{Returns}
+deep clone of this instance
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-2 
+\end{DoxySince}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1util_1_1_i_cloneable_aa7e7d62077e6428ad7904932b1b4f7d5}{org.\-jgap.\-util.\-I\-Cloneable}.
+
+
+
+Definition at line 176 of file Chain\-Of\-Selectors.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-Chain\-Of\-Selectors(), org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-m\-\_\-conf, and org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-m\-\_\-selectors.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a81b45967844c2ac4484f9c06113037dc_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a63d1fc9e64182d363504c191bd7f9d83}{\index{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}!compare\-To@{compare\-To}}
+\index{compare\-To@{compare\-To}!org::jgap::impl::ChainOfSelectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}}
+\subsubsection[{compare\-To}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-compare\-To (
+\begin{DoxyParamCaption}
+\item[{Object}]{a\-\_\-other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a63d1fc9e64182d363504c191bd7f9d83}
+The compare\-To-\/method. Here we simply compare the class names of the contained selectors as \hyperlink{interfaceorg_1_1jgap_1_1_i_natural_selector}{I\-Natural\-Selector} does not contain interface Comparable.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-other} & the other object to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1, 0, 1
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-2 
+\end{DoxySince}
+
+
+Definition at line 212 of file Chain\-Of\-Selectors.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-Chain\-Of\-Selectors(), org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-m\-\_\-selectors, and org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-size().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a63d1fc9e64182d363504c191bd7f9d83_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_ab75576d0847bf1e877f50c9c9149f3a8}{\index{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}!equals@{equals}}
+\index{equals@{equals}!org::jgap::impl::ChainOfSelectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}}
+\subsubsection[{equals}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-equals (
+\begin{DoxyParamCaption}
+\item[{final Object}]{a\-\_\-obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_ab75576d0847bf1e877f50c9c9149f3a8}
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-obj} & Object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Definition at line 124 of file Chain\-Of\-Selectors.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-Chain\-Of\-Selectors().
+
+
+
+Referenced by org.\-jgap.\-impl.\-Chain\-Of\-Selectors\-Test.\-test\-Equals\-\_\-0(), and org.\-jgap.\-impl.\-Chain\-Of\-Selectors\-Test.\-test\-Equals\-\_\-1().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_ab75576d0847bf1e877f50c9c9149f3a8_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_ae558a4530b64654da843bcd72fb7d24a}{\index{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}!get@{get}}
+\index{get@{get}!org::jgap::impl::ChainOfSelectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Natural\-Selector} org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-get (
+\begin{DoxyParamCaption}
+\item[{final int}]{a\-\_\-index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_ae558a4530b64654da843bcd72fb7d24a}
+Returns a Selector with specific index in the list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-index} & the index of the Selector to read from the list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classorg_1_1jgap_1_1_natural_selector}{Natural\-Selector}
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Definition at line 145 of file Chain\-Of\-Selectors.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_aed2b355ad6b2a322c554918ec6ef77ad}{\index{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}!hash\-Code@{hash\-Code}}
+\index{hash\-Code@{hash\-Code}!org::jgap::impl::ChainOfSelectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}}
+\subsubsection[{hash\-Code}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-hash\-Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_aed2b355ad6b2a322c554918ec6ef77ad}
+
+
+Definition at line 112 of file Chain\-Of\-Selectors.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Chain\-Of\-Selectors\-Test.\-test\-Hash\-Code\-\_\-0().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a7a2654999e560f0c3977742b9d2a7809}{\index{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!org::jgap::impl::ChainOfSelectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-is\-Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a7a2654999e560f0c3977742b9d2a7809}
+\begin{DoxyReturn}{Returns}
+true if number of selectors is zero
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Definition at line 108 of file Chain\-Of\-Selectors.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-size().
+
+
+
+Referenced by org.\-jgap.\-impl.\-Chain\-Of\-Selectors\-Test.\-test\-Clear\-\_\-0(), org.\-jgap.\-impl.\-Chain\-Of\-Selectors\-Test.\-test\-Clear\-\_\-1(), and org.\-jgap.\-impl.\-Chain\-Of\-Selectors\-Test.\-test\-Clear\-\_\-2().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a7a2654999e560f0c3977742b9d2a7809_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a340450dda72db3319b3896cdcaebb7d6}{\index{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}!iterator@{iterator}}
+\index{iterator@{iterator}!org::jgap::impl::ChainOfSelectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}Iterator org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a340450dda72db3319b3896cdcaebb7d6}
+\begin{DoxyReturn}{Returns}
+Iterator for iterating over list of selectors
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Definition at line 166 of file Chain\-Of\-Selectors.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a4588a14b0db4d503999c327ff7977a8b}{\index{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}!size@{size}}
+\index{size@{size}!org::jgap::impl::ChainOfSelectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a4588a14b0db4d503999c327ff7977a8b}
+\begin{DoxyReturn}{Returns}
+number of selectors in list
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 (previously part of class \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration}) 
+\end{DoxySince}
+
+
+Definition at line 98 of file Chain\-Of\-Selectors.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-compare\-To(), org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-is\-Empty(), org.\-jgap.\-impl.\-Chain\-Of\-Selectors\-Test.\-test\-Clear\-\_\-1(), and org.\-jgap.\-impl.\-Chain\-Of\-Selectors\-Test.\-test\-Clear\-\_\-2().
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a506aea491defe82826e504d504be910b}{\index{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::impl::ChainOfSelectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-19 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a506aea491defe82826e504d504be910b}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 31 of file Chain\-Of\-Selectors.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_ae4fad23cc6cc7f47f8445baadab152c8}{\index{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}!m\-\_\-conf@{m\-\_\-conf}}
+\index{m\-\_\-conf@{m\-\_\-conf}!org::jgap::impl::ChainOfSelectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}}
+\subsubsection[{m\-\_\-conf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Configuration} org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-m\-\_\-conf\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_ae4fad23cc6cc7f47f8445baadab152c8}
+
+
+Definition at line 39 of file Chain\-Of\-Selectors.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-Chain\-Of\-Selectors(), and org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-clone().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a246b1875379b6215222b201c838ddd1c}{\index{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}!m\-\_\-selectors@{m\-\_\-selectors}}
+\index{m\-\_\-selectors@{m\-\_\-selectors}!org::jgap::impl::ChainOfSelectors@{org\-::jgap\-::impl\-::\-Chain\-Of\-Selectors}}
+\subsubsection[{m\-\_\-selectors}]{\setlength{\rightskip}{0pt plus 5cm}List org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-m\-\_\-selectors\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_chain_of_selectors_a246b1875379b6215222b201c838ddd1c}
+Ordered list holding the \hyperlink{classorg_1_1jgap_1_1_natural_selector}{Natural\-Selector}'s. Intentionally used as a decorator and not via inheritance! 
+
+Definition at line 37 of file Chain\-Of\-Selectors.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-Chain\-Of\-Selectors(), org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-clone(), and org.\-jgap.\-impl.\-Chain\-Of\-Selectors.\-compare\-To().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/impl/\hyperlink{_chain_of_selectors_8java}{Chain\-Of\-Selectors.\-java}\end{DoxyCompactItemize}

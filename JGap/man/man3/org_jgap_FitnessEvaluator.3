@@ -1,0 +1,90 @@
+.TH "org.jgap.FitnessEvaluator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.FitnessEvaluator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable\&.
+.PP
+Inherited by \fBorg\&.jgap\&.DefaultFitnessEvaluator\fP, \fBorg\&.jgap\&.DeltaFitnessEvaluator\fP, and org\&.jgap\&.PopulationTest\&.MyFitnessEvaluator\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "boolean \fBisFitter\fP (double a_fitness_value1, double a_fitness_value2)"
+.br
+.ti -1c
+.RI "boolean \fBisFitter\fP (\fBIChromosome\fP a_chrom1, \fBIChromosome\fP a_chrom2)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.9 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Interface for a fitness evaluator used in a \fBGenotype\fP to determine how to interpret the fitness value\&. The fitness value can either be interpreted straight forward as a fitness indicator (the higher the better)\&. Or it could be seen as a defect rate (the lower the better)\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file FitnessEvaluator\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "boolean org\&.jgap\&.FitnessEvaluator\&.isFitter (doublea_fitness_value1, doublea_fitness_value2)"
+Compares the first given fitness value with the second and returns true if the first one is greater than the second one\&. Otherwise returns false 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_fitness_value1\fP first fitness value 
+.br
+\fIa_fitness_value2\fP second fitness value 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: first fitness value greater than second
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 (until 1\&.1: input types int) 
+.RE
+.PP
+
+.PP
+Referenced by org\&.jgap\&.util\&.ChromosomeFitnessComparator\&.compare(), org\&.jgap\&.impl\&.FittestPopulationMerger\&.FitnessChromosomeComparator\&.compare(), org\&.jgap\&.Chromosome\&.compareTo(), org\&.jgap\&.Population\&.determineFittestChromosome(), org\&.jgap\&.DeltaFitnessEvaluatorTest\&.testIsFitter_0(), org\&.jgap\&.DefaultFitnessEvaluatorTest\&.testIsFitter_0(), org\&.jgap\&.DeltaFitnessEvaluatorTest\&.testIsFitter_1(), org\&.jgap\&.DefaultFitnessEvaluatorTest\&.testIsFitter_1(), org\&.jgap\&.DeltaFitnessEvaluatorTest\&.testIsFitter_2(), org\&.jgap\&.DefaultFitnessEvaluatorTest\&.testIsFitter_2(), org\&.jgap\&.DeltaFitnessEvaluatorTest\&.testIsFitter_3(), org\&.jgap\&.DefaultFitnessEvaluatorTest\&.testIsFitter_3(), org\&.jgap\&.DeltaFitnessEvaluatorTest\&.testIsFitter_4(), org\&.jgap\&.DefaultFitnessEvaluatorTest\&.testIsFitter_4(), org\&.jgap\&.DeltaFitnessEvaluatorTest\&.testIsFitter_5(), org\&.jgap\&.DefaultFitnessEvaluatorTest\&.testIsFitter_5(), and org\&.jgap\&.DeltaFitnessEvaluatorTest\&.testIsFitter_6()\&.
+.SS "boolean org\&.jgap\&.FitnessEvaluator\&.isFitter (\fBIChromosome\fPa_chrom1, \fBIChromosome\fPa_chrom2)"
+
+.PP
+Implemented in \fBorg\&.jgap\&.DeltaFitnessEvaluator\fP, and \fBorg\&.jgap\&.DefaultFitnessEvaluator\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.FitnessEvaluator\&.CVS_REVISION = '$Revision: 1\&.9 $'\fC [static]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file FitnessEvaluator\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

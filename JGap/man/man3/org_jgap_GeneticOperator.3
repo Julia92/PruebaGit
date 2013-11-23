@@ -1,0 +1,84 @@
+.TH "org.jgap.GeneticOperator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.GeneticOperator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable\&.
+.PP
+Inherited by \fBorg\&.jgap\&.BaseGeneticOperator\fP, and \fBorg\&.jgap\&.gp\&.IGPGeneticOperator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBoperate\fP (final \fBPopulation\fP a_population, final List a_candidateChromosomes)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.16 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A \fBGeneticOperator\fP represents an operation that takes place on a population of Chromosomes during the evolution process\&. Examples of genetic operators include reproduction, crossover, and mutation\&. This interface contains only one method - \fBoperate()\fP - which is responsible for performing the genetic operation on the current population of Chromosomes\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file GeneticOperator\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.GeneticOperator\&.operate (final \fBPopulation\fPa_population, final Lista_candidateChromosomes)"
+The operate method will be invoked on each of the genetic operators referenced by the current \fBConfiguration\fP object during the evolution phase\&. Operators are given an opportunity to run in the order that they are added to the \fBConfiguration\fP\&. Implementations of this method may reference the population of Chromosomes as it was at the beginning of the evolutionary phase and/or they may instead reference the candidate Chromosomes, which are the results of prior genetic operators\&. In either case, only Chromosomes added to the list of candidate chromosomes will be considered for natural selection\&.
+.PP
+The parameters a_population and a_candidateChromosomes may refer to the same list of chromosomes for performance issues\&. Thus would mean an in-place modification\&. In ealier JGAP versions it was suggested never modifying the input population\&. Please refer to implementations delivered with JGAP to get a picture of the way non-susceptible in-place modifications are possible\&. If wrongly done, ConcurrentModificationException could be risen when accessing the population by an iterator in a \fBGeneticOperator\fP\&. Or, if population\&.getChromosomes()\&.size() was used inside a loop where chromosomes were added to the input population this could lead to an infinite loop in worst case\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_population\fP the population of chromosomes from the current evolution prior to exposure to any genetic operators\&. Chromosomes in this array should not be modified\&. Please, notice, that the call in \fBGenotype\&.evolve()\fP to the implementations of \fBGeneticOperator\fP overgoes this due to performance issues 
+.br
+\fIa_candidateChromosomes\fP the pool of chromosomes that have been selected for the next evolved population
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 (earlier versions referenced the \fBConfiguration\fP object) 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.CrossoverOperator\fP, \fBorg\&.jgap\&.impl\&.AveragingCrossoverOperator\fP, \fBorg\&.jgap\&.impl\&.MutationOperator\fP, \fBorg\&.jgap\&.impl\&.TwoWayMutationOperator\fP, \fBorg\&.jgap\&.impl\&.GreedyCrossover\fP, \fBorg\&.jgap\&.impl\&.GaussianMutationOperator\fP, and \fBorg\&.jgap\&.impl\&.InversionOperator\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.GeneticOperator\&.CVS_REVISION = '$Revision: 1\&.16 $'\fC [static]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 31 of file GeneticOperator\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

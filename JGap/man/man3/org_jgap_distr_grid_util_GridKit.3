@@ -1,0 +1,181 @@
+.TH "org.jgap.distr.grid.util.GridKit" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.grid.util.GridKit \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static String \fBensureDirectory\fP (String a_currentDir, String a_subDir, String a_descr)  throws IOException "
+.br
+.ti -1c
+.RI "static URLConnection \fBgetConnection\fP (String a_url)  throws Exception "
+.br
+.ti -1c
+.RI "static VersionInfo \fBisUpdateAvailable\fP (String BASE_URL, String a_moduleName, String currentVersion)  throws Exception "
+.br
+.ti -1c
+.RI "static String \fBaddURLParameter\fP (String a_requestURL, String a_key, long a_value)"
+.br
+.ti -1c
+.RI "static String \fBaddURLParameter\fP (String a_requestURL, String a_key, String a_value)"
+.br
+.ti -1c
+.RI "static String \fBretrieveModule\fP (String BASE_URL, VersionInfo a_versionInfo, String a_destDir)  throws Exception "
+.br
+.ti -1c
+.RI "static void \fBupdateModule\fP (String a_filename, String a_workDir, String a_libDir)  throws Exception "
+.br
+.ti -1c
+.RI "static boolean \fBgetFile\fP (String BASE_URL, String a_sourceFilename, String a_targetDir)  throws Exception "
+.br
+.ti -1c
+.RI "static void \fBupdateModuleLibrary\fP (String BASE_URL, String a_moduleName, String a_libDir, String a_workDir)  throws Exception "
+.br
+.ti -1c
+.RI "static void \fBupdateJGAPLibrary\fP (String BASE_URL, String a_libDir, String a_workDir)  throws Exception "
+.br
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)  throws Exception "
+.br
+.ti -1c
+.RI "static void \fBwriteTextFile\fP (Vector zeilen, String dateiname)  throws Exception "
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.5 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Utility functions related to distributed/grid computing\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file GridKit\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static String org\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.addURLParameter (Stringa_requestURL, Stringa_key, longa_value)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 79 of file GridKit\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.isUpdateAvailable()\&.
+.SS "static String org\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.addURLParameter (Stringa_requestURL, Stringa_key, Stringa_value)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 85 of file GridKit\&.java\&.
+.SS "static String org\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.ensureDirectory (Stringa_currentDir, Stringa_subDir, Stringa_descr) throws IOException\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 31 of file GridKit\&.java\&.
+.SS "static URLConnection org\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.getConnection (Stringa_url) throws Exception\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 55 of file GridKit\&.java\&.
+.SS "static boolean org\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.getFile (StringBASE_URL, Stringa_sourceFilename, Stringa_targetDir) throws Exception\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 117 of file GridKit\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.retrieveModule()\&.
+.SS "static VersionInfo org\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.isUpdateAvailable (StringBASE_URL, Stringa_moduleName, StringcurrentVersion) throws Exception\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+download a versions\&.txt file and obtain version per project 
+.RE
+.PP
+
+.PP
+Definition at line 66 of file GridKit\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.addURLParameter()\&.
+.SS "static void org\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.main (String[]args) throws Exception\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 269 of file GridKit\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.writeTextFile()\&.
+.SS "static String org\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.retrieveModule (StringBASE_URL, VersionInfoa_versionInfo, Stringa_destDir) throws Exception\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 91 of file GridKit\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.getFile()\&.
+.SS "static void org\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.updateJGAPLibrary (StringBASE_URL, Stringa_libDir, Stringa_workDir) throws Exception\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 263 of file GridKit\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.updateModuleLibrary()\&.
+.SS "static void org\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.updateModule (Stringa_filename, Stringa_workDir, Stringa_libDir) throws Exception\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+write log: delete manually 
+.RE
+.PP
+
+.PP
+Definition at line 102 of file GridKit\&.java\&.
+.SS "static void org\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.updateModuleLibrary (StringBASE_URL, Stringa_moduleName, Stringa_libDir, Stringa_workDir) throws Exception\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+zuordnung irgendwo abspeichern 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+zuordnung irgendwo abspeichern 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+zuordnung irgendwo abspeichern 
+.RE
+.PP
+
+.PP
+Definition at line 194 of file GridKit\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.updateJGAPLibrary()\&.
+.SS "static void org\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.writeTextFile (Vectorzeilen, Stringdateiname) throws Exception\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 284 of file GridKit\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.main()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.CVS_REVISION = '$Revision: 1\&.5 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 29 of file GridKit\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

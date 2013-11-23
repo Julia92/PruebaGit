@@ -1,0 +1,1506 @@
+.TH "org.jgap.gp.impl.GPGenotype" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.impl.GPGenotype \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Runnable, Serializable, and Comparable\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBGPFitnessComparator\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGPGenotype\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGPGenotype\fP (\fBGPConfiguration\fP a_configuration, \fBGPPopulation\fP a_population, Class[] a_types, Class[][] a_argTypes, \fBCommandGene\fP[][] a_nodeSets, int[] a_minDepths, int[] a_maxDepths, int a_maxNodes)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGPGenotype\fP (\fBGPConfiguration\fP a_configuration, \fBGPPopulation\fP a_population, Class[] a_types, Class[][] a_argTypes, \fBCommandGene\fP[][] a_nodeSets, int[] a_minDepths, int[] a_maxDepths, int a_maxNodes, IGPPopulationInitializer a_popCreator)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGPConfiguration\fP \fBgetGPConfiguration\fP ()"
+.br
+.ti -1c
+.RI "void \fBevolve\fP (int a_evolutions)"
+.br
+.ti -1c
+.RI "void \fBcalcFitness\fP ()"
+.br
+.ti -1c
+.RI "\fBIGPProgram\fP \fBgetAllTimeBest\fP ()"
+.br
+.ti -1c
+.RI "void \fBoutputSolution\fP (\fBIGPProgram\fP a_best)"
+.br
+.ti -1c
+.RI "void \fBevolve\fP ()"
+.br
+.ti -1c
+.RI "\fBGPPopulation\fP \fBgetGPPopulation\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetTotalFitness\fP ()"
+.br
+.ti -1c
+.RI "void \fBrun\fP ()"
+.br
+.ti -1c
+.RI "synchronized \fBIGPProgram\fP \fBgetFittestProgram\fP ()"
+.br
+.ti -1c
+.RI "synchronized \fBIGPProgram\fP \fBgetFittestProgramComputed\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetGPConfiguration\fP (\fBGPConfiguration\fP a_configuration)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "int \fBhashCode\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetVerboseOutput\fP (boolean a_verbose)"
+.br
+.ti -1c
+.RI "void \fBputVariable\fP (Variable a_var)"
+.br
+.ti -1c
+.RI "Variable \fBgetVariable\fP (String a_varName)"
+.br
+.ti -1c
+.RI "void \fBaddFittestProgram\fP (final \fBIGPProgram\fP a_toAdd)"
+.br
+.ti -1c
+.RI "void \fBfillPopulation\fP (final int a_num)  throws InvalidConfigurationException "
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBGPGenotype\fP \fBrandomInitialGenotype\fP (final \fBGPConfiguration\fP a_conf, Class[] a_types, Class[][] a_argTypes, \fBCommandGene\fP[][] a_nodeSets, int a_maxNodes, boolean a_verboseOutput)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "static \fBGPGenotype\fP \fBrandomInitialGenotype\fP (final \fBGPConfiguration\fP a_conf, Class[] a_types, Class[][] a_argTypes, \fBCommandGene\fP[][] a_nodeSets, int[] a_minDepths, int[] a_maxDepths, int a_maxNodes, boolean a_verboseOutput)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "static \fBGPGenotype\fP \fBrandomInitialGenotype\fP (final \fBGPConfiguration\fP a_conf, Class[] a_types, Class[][] a_argTypes, \fBCommandGene\fP[][] a_nodeSets, int[] a_minDepths, int[] a_maxDepths, int a_maxNodes, boolean[] a_fullModeAllowed, boolean a_verboseOutput)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "static \fBGPGenotype\fP \fBrandomInitialGenotype\fP (final \fBGPConfiguration\fP a_conf, Class[] a_types, Class[][] a_argTypes, \fBCommandGene\fP[][] a_nodeSets, int[] a_minDepths, int[] a_maxDepths, int a_maxNodes, boolean[] a_fullModeAllowed, boolean a_verboseOutput, \fBIPopulationCreator\fP a_popCreator)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "static \fBGPConfiguration\fP \fBgetStaticGPConfiguration\fP ()"
+.br
+.ti -1c
+.RI "static void \fBsetStaticGPConfiguration\fP (\fBGPConfiguration\fP a_configuration)"
+.br
+.ti -1c
+.RI "static void \fBcheckErroneousPop\fP (\fBGPPopulation\fP pop, String s)"
+.br
+.ti -1c
+.RI "static void \fBcheckErroneousPop\fP (\fBGPPopulation\fP a_pop, String a_s, boolean a_clearFitness)"
+.br
+.ti -1c
+.RI "static void \fBcheckErroneousPop\fP (\fBGPPopulation\fP a_pop, String a_s, boolean a_clearFitness, boolean a_active)"
+.br
+.ti -1c
+.RI "static void \fBcheckErroneousProg\fP (\fBIGPProgram\fP prog, String s)"
+.br
+.ti -1c
+.RI "static void \fBcheckErroneousProg\fP (\fBIGPProgram\fP a_prog, String a_s, boolean a_clearFitness)"
+.br
+.ti -1c
+.RI "static void \fBcheckErroneousProg\fP (\fBIGPProgram\fP a_prog, String s, boolean a_clearFitness, boolean a_active)"
+.br
+.ti -1c
+.RI "static Map< String, \fBCommandGene\fP > \fBverifyChildNodes\fP (\fBGPConfiguration\fP a_conf, Class[] a_types, \fBCommandGene\fP[][] a_nodeSets)"
+.br
+.ti -1c
+.RI "static Map< \fBCommandGene\fP, int[]> \fBverifyDepthsForNodes\fP (\fBGPPopulation\fP a_pop, \fBGPConfiguration\fP a_conf, Class[] a_types, int[] a_minDepths, int[] a_maxDepths, int a_maxNodes, \fBCommandGene\fP[][] a_nodeSets)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetGPPopulation\fP (\fBGPPopulation\fP a_pop)"
+.br
+.in -1c
+.SS "Static Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static boolean \fBnodeExists\fP (\fBCommandGene\fP[] a_functionSet, Class a_returnType, int a_subReturnType)"
+.br
+.ti -1c
+.RI "static void \fBoutputWarning\fP (Map< String, \fBCommandGene\fP > invalidNodes)"
+.br
+.ti -1c
+.RI "static void \fBoutputDepthInfo\fP (Map< \fBCommandGene\fP, int[]> a_invalidDepths)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIGPProgram\fP \fBcloneProgram\fP (\fBIGPProgram\fP a_original)"
+.br
+.ti -1c
+.RI "void \fBwriteToFile\fP (\fBIGPProgram\fP i1, \fBIGPProgram\fP i2, \fBIGPProgram\fP inew, String header)"
+.br
+.ti -1c
+.RI "StringBuffer \fBgetProgramString\fP (\fBIGPProgram\fP i1)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBGPPopulation\fP \fBm_population\fP"
+.br
+.ti -1c
+.RI "\fBGPConfiguration\fP \fBm_configuration\fP"
+.br
+.ti -1c
+.RI "double \fBm_bestFitness\fP"
+.br
+.ti -1c
+.RI "double \fBm_totalFitness\fP"
+.br
+.ti -1c
+.RI "\fBIGPProgram\fP \fBm_allTimeBest\fP"
+.br
+.ti -1c
+.RI "double \fBm_allTimeBestFitness\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_fullModeAllowed\fP []"
+.br
+.ti -1c
+.RI "Class[] \fBm_types\fP"
+.br
+.ti -1c
+.RI "Class[][] \fBm_argTypes\fP"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP[][] \fBm_nodeSets\fP"
+.br
+.ti -1c
+.RI "int[] \fBm_minDepths\fP"
+.br
+.ti -1c
+.RI "int[] \fBm_maxDepths\fP"
+.br
+.ti -1c
+.RI "int \fBm_maxNodes\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_verbose\fP"
+.br
+.ti -1c
+.RI "Map \fBm_variables\fP"
+.br
+.ti -1c
+.RI "\fBIGPProgram\fP \fBm_fittestToAdd\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_cloneWarningGPProgramShown\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.60 $'"
+.br
+.ti -1c
+.RI "static transient Logger \fBLOGGER\fP = Logger\&.getLogger(GPGenotype\&.class)"
+.br
+.ti -1c
+.RI "static transient \fBGPConfiguration\fP \fBm_staticConfiguration\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBGenotype\fP for GP Programs\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 29 of file GPGenotype\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.impl\&.GPGenotype\&.GPGenotype () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Default constructor\&. Ony use with dynamic instantiation\&. 
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 121 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.init()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.compareTo(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.randomInitialGenotype()\&.
+.SS "org\&.jgap\&.gp\&.impl\&.GPGenotype\&.GPGenotype (\fBGPConfiguration\fPa_configuration, \fBGPPopulation\fPa_population, Class[]a_types, Classa_argTypes[][], \fBCommandGene\fPa_nodeSets[][], int[]a_minDepths, int[]a_maxDepths, inta_maxNodes) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Preferred constructor to use, if not using the static method randomInitialGenotype\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.br
+\fIa_population\fP the initialized population to use 
+.br
+\fIa_types\fP the type for each chromosome, the length of the array represents the number of chromosomes 
+.br
+\fIa_argTypes\fP the types of the arguments to each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of arguments to the chromosome 
+.br
+\fIa_nodeSets\fP the nodes which are allowed to be used by each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of nodes 
+.br
+\fIa_minDepths\fP contains the minimum depth allowed for each chromosome 
+.br
+\fIa_maxDepths\fP contains the maximum depth allowed for each chromosome 
+.br
+\fIa_maxNodes\fP reserve space for a_maxNodes number of nodes
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 150 of file GPGenotype\&.java\&.
+.SS "org\&.jgap\&.gp\&.impl\&.GPGenotype\&.GPGenotype (\fBGPConfiguration\fPa_configuration, \fBGPPopulation\fPa_population, Class[]a_types, Classa_argTypes[][], \fBCommandGene\fPa_nodeSets[][], int[]a_minDepths, int[]a_maxDepths, inta_maxNodes, IGPPopulationInitializera_popCreator) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+See above constructor\&. Parameter a_popCreator is used in grid context only\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP \fBGPConfiguration\fP 
+.br
+\fIa_population\fP \fBGPPopulation\fP 
+.br
+\fIa_types\fP Class[] 
+.br
+\fIa_argTypes\fP Class[][] 
+.br
+\fIa_nodeSets\fP \fBCommandGene\fP[][] 
+.br
+\fIa_minDepths\fP int[] 
+.br
+\fIa_maxDepths\fP int[] 
+.br
+\fIa_maxNodes\fP int 
+.br
+\fIa_popCreator\fP \fBIPopulationCreator\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 176 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getGPConfiguration(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.init(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_allTimeBestFitness, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_argTypes, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_maxDepths, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_maxNodes, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_minDepths, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_nodeSets, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_types, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_variables, org\&.jgap\&.FitnessFunction\&.NO_FITNESS_VALUE, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.setGPConfiguration(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.setGPPopulation()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.addFittestProgram (final \fBIGPProgram\fPa_toAdd)\fC [inline]\fP"
+Adds a GP program to this \fBGenotype\fP\&. Does nothing when given null\&. The injection is actually executed in method create(\&.\&.) of \fBGPPopulation\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_toAdd\fP the program to add
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 1180 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_fittestToAdd\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.calcFitness()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.calcFitness ()\fC [inline]\fP"
+Calculates the fitness value of all programs, of the best solution as well as the total fitness (sum of all fitness values)\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+get information from fitness function how calculation happened\&. In case of Robocode: return the robot competed against, in case the -enemies option was used without -battleAll 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+do something similar here as with Genotype\&.preserveFittestChromosome 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+introduce global value object to be passed to the listener 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+should not happen but does with ensureUniqueness(\&.\&.) 
+.RE
+.PP
+
+.PP
+Definition at line 557 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.addFittestProgram(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getGPConfiguration(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getGPPopulation(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getGPProgram(), org\&.jgap\&.gp\&.IGPFitnessEvaluator\&.isFitter(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_allTimeBest, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_allTimeBestFitness, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_bestFitness, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_cloneWarningGPProgramShown, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_totalFitness, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_verbose, org\&.jgap\&.FitnessFunction\&.NO_FITNESS_VALUE, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.outputSolution(), org\&.jgap\&.IHandler\&.perform(), and org\&.jgap\&.gp\&.IGPProgram\&.toStringNorm()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.run()\&.
+.SS "static void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.checkErroneousPop (\fBGPPopulation\fPpop, Strings)\fC [inline]\fP, \fC [static]\fP"
+Disabling a chromosome is equivalent to not declaring it\&. However, if you skip a declaration, indices will shift\&. With this method it is easier skipping a chromosome\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP index of the chromosome to disable\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.2
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP index of the chromosome to check\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if chromosome disabled
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 1251 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.checkErroneousPop(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.randomInitialGenotype()\&.
+.SS "static void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.checkErroneousPop (\fBGPPopulation\fPa_pop, Stringa_s, booleana_clearFitness)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 1255 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.checkErroneousPop(), and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getGPConfiguration()\&.
+.SS "static void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.checkErroneousPop (\fBGPPopulation\fPa_pop, Stringa_s, booleana_clearFitness, booleana_active)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 1264 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.checkErroneousProg()\&.
+.SS "static void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.checkErroneousProg (\fBIGPProgram\fPprog, Strings)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 1282 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.checkErroneousPop(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.checkErroneousProg(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve()\&.
+.SS "static void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.checkErroneousProg (\fBIGPProgram\fPa_prog, Stringa_s, booleana_clearFitness)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 1286 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.checkErroneousProg(), and org\&.jgap\&.gp\&.IGPProgram\&.getGPConfiguration()\&.
+.SS "static void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.checkErroneousProg (\fBIGPProgram\fPa_prog, Strings, booleana_clearFitness, booleana_active)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+impl\&. cache 
+.RE
+.PP
+
+.PP
+Definition at line 1295 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPFitnessFunction\&.NO_FITNESS_VALUE\&.
+.SS "\fBIGPProgram\fP org\&.jgap\&.gp\&.impl\&.GPGenotype\&.cloneProgram (\fBIGPProgram\fPa_original)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 1131 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getGPConfiguration(), and org\&.jgap\&.IHandler\&.perform()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve()\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPGenotype\&.compareTo (Objecta_other)\fC [inline]\fP"
+Compares this \fBGenotype\fP against the specified object\&. The result is true if the argument is an instance of the \fBGenotype\fP class, has exactly the same number of programs as the given \fBGenotype\fP, and, for each \fBGPProgram\fP in this \fBGenotype\fP, there is an equal program in the given \fBGenotype\fP\&. The programs do not need to appear in the same order within the populations\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the object to compare against 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a negative number if this genotype is 'less than' the given genotype, zero if they are equal to each other, and a positive number if this genotype is 'greater than' the given genotype
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1045 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getGPPopulation(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.GPGenotype()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.equals()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPGenotype\&.equals (Objecta_other)\fC [inline]\fP"
+Compares this entity against the specified object\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the object to compare against 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: if the objects are the same, false otherwise
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1021 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.compareTo()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve (inta_evolutions)\fC [inline]\fP"
+Evolves the population n times\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_evolutions\fP number of evolution
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 524 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.calcFitness(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getGPConfiguration(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_verbose\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve ()\fC [inline]\fP"
+Evolve the population by one generation\&. Probabilistically reproduces and crosses individuals into a new population which then overwrites the original population\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+use program creator in case such is registered and returns a non-null program 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+instead of re-using prototype, create a program anyway (ignoring the validator) in case it is the last try\&. Or even better: Make the validator return a defect rate! 
+.RE
+.PP
+
+.PP
+Definition at line 696 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.checkErroneousPop(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.checkErroneousProg(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.cloneProgram(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getGPConfiguration(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getGPPopulation(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_argTypes, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_fittestToAdd, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_fullModeAllowed, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_maxDepths, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_maxNodes, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_minDepths, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_nodeSets, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_types, org\&.jgap\&.RandomGenerator\&.nextInt(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.setGPPopulation(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.writeToFile()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.run()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.fillPopulation (final inta_num) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Fills up the population with random programs if necessary\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_num\fP the number of programs to add 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+care about 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+implement filling up population 
+.RE
+.PP
+
+.PP
+Definition at line 1195 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getGPConfiguration()\&.
+.SS "\fBIGPProgram\fP org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getAllTimeBest ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the all-time best solution found
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 647 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_allTimeBest\&.
+.PP
+Referenced by examples\&.gp\&.Fibonacci\&.main()\&.
+.SS "synchronized \fBIGPProgram\fP org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getFittestProgram ()\fC [inline]\fP"
+Retrieves the \fBGPProgram\fP in the population with the best fitness value\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the \fBGPProgram\fP with the highest fitness value, or null if there are no programs in this \fBGenotype\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 959 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.IGPProgram\&.getFitnessValue(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getGPConfiguration(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getGPPopulation(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_allTimeBest, and org\&.jgap\&.FitnessFunction\&.NO_FITNESS_VALUE\&.
+.SS "synchronized \fBIGPProgram\fP org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getFittestProgramComputed ()\fC [inline]\fP"
+Retrieves the \fBGPProgram\fP in the population with the highest fitness value\&. Only considers programs for which the fitness value has already been computed\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the \fBGPProgram\fP with the best fitness value, or null if there are no programs with known fitness value in this \fBGenotype\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 993 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getGPPopulation()\&.
+.SS "\fBGPConfiguration\fP org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getGPConfiguration ()\fC [inline]\fP"
+
+.PP
+Definition at line 470 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_configuration\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.calcFitness(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.cloneProgram(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.fillPopulation(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getFittestProgram(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.GPGenotype(), and examples\&.gp\&.monalisa\&.gui\&.EvolutionRunnable\&.run()\&.
+.SS "\fBGPPopulation\fP org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getGPPopulation ()\fC [inline]\fP"
+
+.PP
+Definition at line 914 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_population\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.calcFitness(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.compareTo(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getFittestProgram(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getFittestProgramComputed(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.hashCode()\&.
+.SS "StringBuffer org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getProgramString (\fBIGPProgram\fPi1)\fC [inline]\fP, \fC [private]\fP"
+Utility function\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIi1\fP program to get textual representation for 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+textual representation of the given program
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Definition at line 1365 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.toString()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.writeToFile()\&.
+.SS "static \fBGPConfiguration\fP org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getStaticGPConfiguration ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the static configuration to use with Genetic Programming
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 480 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_staticConfiguration\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getTotalFitness ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the total fitness, that is the fitness over all chromosomes
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 924 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_totalFitness\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.FitnessProportionateSelection\&.select()\&.
+.SS "Variable org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getVariable (Stringa_varName)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_varName\fP name of variable to retriebe 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Variable instance or null, if not found
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 1167 of file GPGenotype\&.java\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPGenotype\&.hashCode ()\fC [inline]\fP"
+
+.PP
+Definition at line 1106 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getGPPopulation()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.init ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 230 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.GPGenotype()\&.
+.SS "static boolean org\&.jgap\&.gp\&.impl\&.GPGenotype\&.nodeExists (\fBCommandGene\fP[]a_functionSet, Classa_returnType, inta_subReturnType)\fC [inline]\fP, \fC [static]\fP, \fC [protected]\fP"
+Is there a node with the needed return type and sub return type within the given function set?
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_functionSet\fP collection of available nodes 
+.br
+\fIa_returnType\fP needed return type 
+.br
+\fIa_subReturnType\fP needed sub return type 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: node found
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 1465 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.verifyChildNodes()\&.
+.SS "static void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.outputDepthInfo (Map< \fBCommandGene\fP, int[]>a_invalidDepths)\fC [inline]\fP, \fC [static]\fP, \fC [protected]\fP"
+Outputs the nodes that are never used because they would result in creating GP programs which would not satisfy the depth constraints given in configuration\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_invalidDepths\fP impossible depths for nodes
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 1511 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.randomInitialGenotype()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.outputSolution (\fBIGPProgram\fPa_best)\fC [inline]\fP"
+Outputs the best solution until now\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_best\fP the fittest \fBProgramChromosome\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 659 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.calcFitness()\&.
+.SS "static void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.outputWarning (Map< String, \fBCommandGene\fP >invalidNodes)\fC [inline]\fP, \fC [static]\fP, \fC [protected]\fP"
+Outputs the nodes that are never used\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinvalidNodes\fP never used nodes
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 1486 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.randomInitialGenotype()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.putVariable (Variablea_var)\fC [inline]\fP"
+Stores a Variable\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_var\fP the Variable to store
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 1156 of file GPGenotype\&.java\&.
+.SS "static \fBGPGenotype\fP org\&.jgap\&.gp\&.impl\&.GPGenotype\&.randomInitialGenotype (final \fBGPConfiguration\fPa_conf, Class[]a_types, Classa_argTypes[][], \fBCommandGene\fPa_nodeSets[][], inta_maxNodes, booleana_verboseOutput) throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [static]\fP"
+Creates a genotype with initial population for the world set\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_types\fP the type of each chromosome, the length is the number of chromosomes 
+.br
+\fIa_argTypes\fP the types of the arguments to each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of arguments to the chromosome 
+.br
+\fIa_nodeSets\fP the nodes which are allowed to be used by each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of nodes\&. Note that it is not necessary to include the arguments of a chromosome as terminals in the chromosome's node set\&. This is done automatically 
+.br
+\fIa_maxNodes\fP reserve space for a_maxNodes number of nodes 
+.br
+\fIa_verboseOutput\fP true: output status information to console
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+created genotype with initialized population
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 260 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.randomInitialGenotype()\&.
+.SS "static \fBGPGenotype\fP org\&.jgap\&.gp\&.impl\&.GPGenotype\&.randomInitialGenotype (final \fBGPConfiguration\fPa_conf, Class[]a_types, Classa_argTypes[][], \fBCommandGene\fPa_nodeSets[][], int[]a_minDepths, int[]a_maxDepths, inta_maxNodes, booleana_verboseOutput) throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [static]\fP"
+Creates a genotype with initial population for the world set\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_types\fP the type of each chromosome, the length is the number of chromosomes 
+.br
+\fIa_argTypes\fP the types of the arguments to each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of arguments to the chromosome 
+.br
+\fIa_nodeSets\fP the nodes which are allowed to be used by each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of nodes\&. Note that it is not necessary to include the arguments of a chromosome as terminals in the chromosome's node set\&. This is done automatically 
+.br
+\fIa_minDepths\fP array of minimum depths to use: for each chromosome one entry 
+.br
+\fIa_maxDepths\fP array of maximum depths to use: for each chromosome one entry 
+.br
+\fIa_maxNodes\fP reserve space for a_maxNodes number of nodes 
+.br
+\fIa_verboseOutput\fP true: output status information to console
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+created genotype with initialized population
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 301 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.randomInitialGenotype()\&.
+.SS "static \fBGPGenotype\fP org\&.jgap\&.gp\&.impl\&.GPGenotype\&.randomInitialGenotype (final \fBGPConfiguration\fPa_conf, Class[]a_types, Classa_argTypes[][], \fBCommandGene\fPa_nodeSets[][], int[]a_minDepths, int[]a_maxDepths, inta_maxNodes, boolean[]a_fullModeAllowed, booleana_verboseOutput) throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [static]\fP"
+Creates a genotype with a randomly created initial population\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_types\fP the type of each chromosome, the length is the number of chromosomes 
+.br
+\fIa_argTypes\fP the types of the arguments to each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of arguments to the chromosome 
+.br
+\fIa_nodeSets\fP the nodes which are allowed to be used by each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of nodes\&. Note that it is not necessary to include the arguments of a chromosome as terminals in the chromosome's node set\&. This is done automatically 
+.br
+\fIa_minDepths\fP array of minimum depths to use: for each chromosome one entry 
+.br
+\fIa_maxDepths\fP array of maximum depths to use: for each chromosome one entry 
+.br
+\fIa_maxNodes\fP reserve space for a_maxNodes number of nodes 
+.br
+\fIa_fullModeAllowed\fP array of boolean values\&. For each chromosome there is one value indicating whether the full mode for creating chromosome generations during evolution is allowed (true) or not (false) 
+.br
+\fIa_verboseOutput\fP true: output status information to console
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+created genotype with initialized population
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 352 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.randomInitialGenotype()\&.
+.SS "static \fBGPGenotype\fP org\&.jgap\&.gp\&.impl\&.GPGenotype\&.randomInitialGenotype (final \fBGPConfiguration\fPa_conf, Class[]a_types, Classa_argTypes[][], \fBCommandGene\fPa_nodeSets[][], int[]a_minDepths, int[]a_maxDepths, inta_maxNodes, boolean[]a_fullModeAllowed, booleana_verboseOutput, \fBIPopulationCreator\fPa_popCreator) throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [static]\fP"
+Allows to use a custom mechanism for population creation\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_types\fP the type of each chromosome, the length is the number of chromosomes 
+.br
+\fIa_argTypes\fP the types of the arguments to each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of arguments to the chromosome 
+.br
+\fIa_nodeSets\fP the nodes which are allowed to be used by each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of nodes\&. Note that it is not necessary to include the arguments of a chromosome as terminals in the chromosome's node set\&. This is done automatically 
+.br
+\fIa_minDepths\fP array of minimum depths to use: for each chromosome one entry 
+.br
+\fIa_maxDepths\fP array of maximum depths to use: for each chromosome one entry 
+.br
+\fIa_maxNodes\fP reserve space for a_maxNodes number of nodes 
+.br
+\fIa_fullModeAllowed\fP array of boolean values\&. For each chromosome there is one value indicating whether the full mode for creating chromosome generations during evolution is allowed (true) or not (false) 
+.br
+\fIa_verboseOutput\fP true: output status information to console 
+.br
+\fIa_popCreator\fP mechanism fior creating the population
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBGPGenotype\fP
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.2 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+remove unused nodes from configuration 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+optimize access to map 
+.RE
+.PP
+
+.PP
+Definition at line 397 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.checkErroneousPop(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.GPGenotype(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_variables, org\&.jgap\&.gp\&.impl\&.GPGenotype\&.outputDepthInfo(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.outputWarning(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.verifyChildNodes(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.verifyDepthsForNodes()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.run ()\fC [inline]\fP"
+Default implementation of method to run \fBGPGenotype\fP as a thread\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 934 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.calcFitness(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.setGPConfiguration (\fBGPConfiguration\fPa_configuration)\fC [inline]\fP"
+Sets the configuration to use with the Genetic Algorithm\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1008 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_configuration\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.GPGenotype()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.setGPPopulation (\fBGPPopulation\fPa_pop)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 997 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_population\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.GPGenotype()\&.
+.SS "static void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.setStaticGPConfiguration (\fBGPConfiguration\fPa_configuration)\fC [inline]\fP, \fC [static]\fP"
+Sets the static configuration to use with the Genetic Programming\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the static configuration to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 492 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_staticConfiguration\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.setVerboseOutput (booleana_verbose)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_verbose\fP true: output status information to console
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1127 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_verbose\&.
+.SS "static Map<String, \fBCommandGene\fP> org\&.jgap\&.gp\&.impl\&.GPGenotype\&.verifyChildNodes (\fBGPConfiguration\fPa_conf, Class[]a_types, \fBCommandGene\fPa_nodeSets[][])\fC [inline]\fP, \fC [static]\fP"
+Determine impossible functions and terminals to obtimize creation of GP programs\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP GP configuration 
+.br
+\fIa_types\fP Class[] 
+.br
+\fIa_nodeSets\fP \fBCommandGene\fP[][] 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Map
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 1396 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getSubChildTypes(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.nodeExists()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.randomInitialGenotype()\&.
+.SS "static Map<\fBCommandGene\fP, int[]> org\&.jgap\&.gp\&.impl\&.GPGenotype\&.verifyDepthsForNodes (\fBGPPopulation\fPa_pop, \fBGPConfiguration\fPa_conf, Class[]a_types, int[]a_minDepths, int[]a_maxDepths, inta_maxNodes, \fBCommandGene\fPa_nodeSets[][])\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+impl 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+impl 
+.RE
+.PP
+
+.PP
+Definition at line 1532 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getReturnType(), org\&.jgap\&.gp\&.CommandGene\&.getSubChildType(), and org\&.jgap\&.gp\&.CommandGene\&.getSubReturnType()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.randomInitialGenotype()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPGenotype\&.writeToFile (\fBIGPProgram\fPi1, \fBIGPProgram\fPi2, \fBIGPProgram\fPinew, Stringheader)\fC [inline]\fP, \fC [private]\fP"
+Write three GP programs being involved in crossover as a string to a file for debug purposes\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIi1\fP first program 
+.br
+\fIi2\fP second program 
+.br
+\fIinew\fP resulting program 
+.br
+\fIheader\fP text for header text
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Definition at line 1335 of file GPGenotype\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getProgramString()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.impl\&.GPGenotype\&.CVS_REVISION = '$Revision: 1\&.60 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 32 of file GPGenotype\&.java\&.
+.SS "transient Logger org\&.jgap\&.gp\&.impl\&.GPGenotype\&.LOGGER = Logger\&.getLogger(GPGenotype\&.class)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 34 of file GPGenotype\&.java\&.
+.SS "\fBIGPProgram\fP org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_allTimeBest\fC [private]\fP"
+Best solution found 
+.PP
+Definition at line 61 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.calcFitness(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getAllTimeBest(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getFittestProgram()\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_allTimeBestFitness\fC [private]\fP"
+
+.PP
+Definition at line 63 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.calcFitness(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.GPGenotype()\&.
+.SS "Class [][] org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_argTypes\fC [private]\fP"
+Argument types for ADF's 
+.PP
+Definition at line 78 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.GPGenotype()\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_bestFitness\fC [private]\fP"
+Fitness value of the best solution 
+.PP
+Definition at line 51 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.calcFitness()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_cloneWarningGPProgramShown\fC [private]\fP"
+
+.PP
+Definition at line 110 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.calcFitness()\&.
+.SS "\fBGPConfiguration\fP org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_configuration\fC [private]\fP"
+The current configuration instance 
+.PP
+Definition at line 44 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getGPConfiguration(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.setGPConfiguration()\&.
+.SS "\fBIGPProgram\fP org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_fittestToAdd\fC [private]\fP"
+
+.PP
+Definition at line 108 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.addFittestProgram(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_fullModeAllowed[]\fC [private]\fP"
+Is full mode with program construction allowed? 
+.PP
+Definition at line 68 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve()\&.
+.SS "int [] org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_maxDepths\fC [private]\fP"
+Maximum depth per each chromosome 
+.PP
+Definition at line 93 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.GPGenotype()\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_maxNodes\fC [private]\fP"
+Maximum number of nodes allowed per chromosome (when exceeded program aborts) 
+.PP
+Definition at line 99 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.GPGenotype()\&.
+.SS "int [] org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_minDepths\fC [private]\fP"
+Minimum depth per each chromosome 
+.PP
+Definition at line 88 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.GPGenotype()\&.
+.SS "\fBCommandGene\fP [][] org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_nodeSets\fC [private]\fP"
+Available GP-functions\&. 
+.PP
+Definition at line 83 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.GPGenotype()\&.
+.SS "\fBGPPopulation\fP org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_population\fC [private]\fP"
+The array of \fBGPProgram\fP's that make-up this \fBGPGenotype\fP's population 
+.PP
+Definition at line 39 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getGPPopulation(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.setGPPopulation()\&.
+.SS "transient \fBGPConfiguration\fP org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_staticConfiguration\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 46 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getStaticGPConfiguration(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.setStaticGPConfiguration()\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_totalFitness\fC [private]\fP"
+Sum of fitness values over all chromosomes 
+.PP
+Definition at line 56 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.calcFitness(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getTotalFitness()\&.
+.SS "Class [] org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_types\fC [private]\fP"
+Return type per chromosome 
+.PP
+Definition at line 73 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.GPGenotype()\&.
+.SS "Map org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_variables\fC [private]\fP"
+
+.PP
+Definition at line 106 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.GPGenotype(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.randomInitialGenotype()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPGenotype\&.m_verbose\fC [private]\fP"
+True: Output status information to console 
+.PP
+Definition at line 104 of file GPGenotype\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.calcFitness(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.setVerboseOutput()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

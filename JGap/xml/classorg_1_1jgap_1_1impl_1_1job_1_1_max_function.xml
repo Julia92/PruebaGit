@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1impl_1_1job_1_1_max_function" kind="class" prot="public">
+    <compoundname>org::jgap::impl::job::MaxFunction</compoundname>
+    <basecompoundref refid="classorg_1_1jgap_1_1_fitness_function" prot="public" virt="non-virtual">org.jgap.FitnessFunction</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1job_1_1_max_function_1ae8a3e1c36accdbd1489ced756ca26690" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.impl.job.MaxFunction.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.2 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/job/MaxFunction.java" line="24" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/job/MaxFunction.java" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1job_1_1_max_function_1a6b0344c8642af9170743d9be9a6509b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double org.jgap.impl.job.MaxFunction.evaluate</definition>
+        <argsstring>(IChromosome a_subject)</argsstring>
+        <name>evaluate</name>
+        <reimplements refid="classorg_1_1jgap_1_1_fitness_function_1a0078e42480eac93729f906ac4dc185d9">evaluate</reimplements>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+          <declname>a_subject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine the fitness of the given <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> instance. The higher the return value, the more fit the instance. This method should always return the same fitness value for two equivalent <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> instances.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_subject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> instance to evaluate</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>positive double reflecting the fitness rating of the given <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>. Note that if a non-positive double is returned, a RuntimeException should be generated</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 (until 1.1: return type int) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/job/MaxFunction.java" line="33" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/job/MaxFunction.java" bodystart="33" bodyend="45"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_boolean_gene_1aca61d17f9e53c1840bd7d08f4a6ac101" compoundref="_boolean_gene_8java" startline="219" endline="221">org.jgap.impl.BooleanGene.booleanValue</references>
+        <references refid="interfaceorg_1_1jgap_1_1_i_chromosome_1ac84a3ec514b365e25f023d9e78bfa382">org.jgap.IChromosome.getGene</references>
+        <references refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a9b460ad665ea1ab4e789061233fc6fa3">org.jgap.IChromosome.size</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Fitness function for <ref refid="classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer" kindref="compound">SimpleJobConsumer</ref>.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="15861">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="15862" relation="public-inheritance">
+        </childnode>
+        <childnode refid="15863" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15862">
+        <label>Serializable</label>
+      </node>
+      <node id="15863">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="15864" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15860">
+        <label>org.jgap.impl.job.MaxFunction</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1job_1_1_max_function"/>
+        <childnode refid="15861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15864">
+        <label>Cloneable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15866">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="15867" relation="public-inheritance">
+        </childnode>
+        <childnode refid="15868" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15867">
+        <label>Serializable</label>
+      </node>
+      <node id="15868">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="15869" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15865">
+        <label>org.jgap.impl.job.MaxFunction</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1job_1_1_max_function"/>
+        <childnode refid="15866" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15869">
+        <label>Cloneable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/job/MaxFunction.java" line="22" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/job/MaxFunction.java" bodystart="21" bodyend="46"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1aa47c6f886479efc5ed5fe84eb7f9b5ca" prot="public" virt="non-virtual"><scope>org::jgap::impl::job::MaxFunction</scope><name>clone</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1job_1_1_max_function_1ae8a3e1c36accdbd1489ced756ca26690" prot="private" virt="non-virtual"><scope>org::jgap::impl::job::MaxFunction</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1a89cbf1ef4c08655f209ce69fde6731e7" prot="public" virt="non-virtual"><scope>org::jgap::impl::job::MaxFunction</scope><name>DELTA</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1job_1_1_max_function_1a6b0344c8642af9170743d9be9a6509b8" prot="public" virt="virtual"><scope>org::jgap::impl::job::MaxFunction</scope><name>evaluate</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1a05fff0534d3cfdccd1d4d96d8ba6dda2" prot="public" virt="non-virtual"><scope>org::jgap::impl::job::MaxFunction</scope><name>getFitnessValue</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1adc5e20816cb3fd6f3486adb53b1e563d" prot="public" virt="non-virtual"><scope>org::jgap::impl::job::MaxFunction</scope><name>getLastComputedFitnessValue</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1a5f1f23e6f8a0f9606aee5d52fac6a06b" prot="public" virt="non-virtual"><scope>org::jgap::impl::job::MaxFunction</scope><name>NO_FITNESS_VALUE</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

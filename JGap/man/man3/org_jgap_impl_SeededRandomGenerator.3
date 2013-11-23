@@ -1,0 +1,189 @@
+.TH "org.jgap.impl.SeededRandomGenerator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.SeededRandomGenerator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Random, \fBorg\&.jgap\&.RandomGenerator\fP, \fBorg\&.jgap\&.util\&.ICloneable\fP, and Comparable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSeededRandomGenerator\fP (long seedNumber)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBreadObject\fP (ObjectInputStream a_inputStream)  throws IOException, ClassNotFoundException "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "final long \fBseed\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.1 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The seeded random generator uses the java\&.util\&.Random class to provide a simple implementation of the \fBRandomGenerator\fP interface with a custom seed number for repeatable results\&. It shouldn't be used for a deserializing object because it could cauld duplicate results\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Machairas Vasileios 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.7 
+.RE
+.PP
+
+.PP
+Definition at line 29 of file SeededRandomGenerator\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.SeededRandomGenerator\&.SeededRandomGenerator (longseedNumber)\fC [inline]\fP"
+Constructor with the seed number\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIseedNumber\fP the seed to initialize randomization with
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.7 
+.RE
+.PP
+
+.PP
+Definition at line 44 of file SeededRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.SeededRandomGenerator\&.seed\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.SeededRandomGenerator\&.clone()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.impl\&.SeededRandomGenerator\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+deep clone of this instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Machairas Vasileios 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 78 of file SeededRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.SeededRandomGenerator\&.seed, and org\&.jgap\&.impl\&.SeededRandomGenerator\&.SeededRandomGenerator()\&.
+.SS "int org\&.jgap\&.impl\&.SeededRandomGenerator\&.compareTo (Objecta_other)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP sic 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+as always
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 90 of file SeededRandomGenerator\&.java\&.
+.SS "void org\&.jgap\&.impl\&.SeededRandomGenerator\&.readObject (ObjectInputStreama_inputStream) throws IOException, ClassNotFoundException\fC [inline]\fP, \fC [private]\fP"
+When deserializing, initialize the seed\&. This could get duplicate evolution results when doing distributed computing! Please use \fBStockRandomGenerator\fP for that purposes\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_inputStream\fP the ObjectInputStream provided for deserialzation
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIOException\fP 
+.br
+\fIClassNotFoundException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Machairas Vasileios 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.7 
+.RE
+.PP
+
+.PP
+Definition at line 64 of file SeededRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.SeededRandomGenerator\&.seed\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.SeededRandomGenerator\&.CVS_REVISION = '$Revision: 1\&.1 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 33 of file SeededRandomGenerator\&.java\&.
+.SS "final long org\&.jgap\&.impl\&.SeededRandomGenerator\&.seed\fC [private]\fP"
+
+.PP
+Definition at line 35 of file SeededRandomGenerator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.SeededRandomGenerator\&.clone(), org\&.jgap\&.impl\&.SeededRandomGenerator\&.readObject(), and org\&.jgap\&.impl\&.SeededRandomGenerator\&.SeededRandomGenerator()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

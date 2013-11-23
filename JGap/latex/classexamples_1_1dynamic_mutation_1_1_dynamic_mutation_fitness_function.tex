@@ -1,0 +1,371 @@
+\hypertarget{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function}{\section{examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function Class Reference}
+\label{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function}\index{examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function@{examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function}}
+}
+
+
+Inheritance diagram for examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a09d7a07316b309c3ad0572c23b8fb6ed}{Dynamic\-Mutation\-Fitness\-Function} (int a\-\_\-target\-Amount)
+\item 
+double \hyperlink{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a57e8a49d67717a2be1b0a33bd2376d6c}{evaluate} (I\-Chromosome a\-\_\-subject)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a528146448f6bb801e422c493e189e6aa}{amount\-Of\-Change} (I\-Chromosome a\-\_\-potential\-Solution)
+\item 
+static int \hyperlink{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_ad580e29bc08c24dcb8cd1f93bba75192}{get\-Number\-Of\-Coins\-At\-Gene} (I\-Chromosome a\-\_\-potential\-Solution, int a\-\_\-position)
+\item 
+static int \hyperlink{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a7f9f9883b5852d180835d2bab53f3f65}{get\-Total\-Number\-Of\-Coins} (I\-Chromosome a\-\_\-potentialsolution)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a72501ebb1ccd6fcd85c2b480c6c41907}{M\-A\-X\-\_\-\-B\-O\-U\-N\-D} = 4000
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a17ad15c1c38b1c902098d9e13be667c9}{change\-Difference\-Bonus} (double a\-\_\-max\-Fitness, int a\-\_\-change\-Difference)
+\item 
+double \hyperlink{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_ae8d660839994fa367d3786015459e863}{compute\-Coin\-Number\-Penalty} (double a\-\_\-max\-Fitness, int a\-\_\-coins)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final int \hyperlink{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a05ef132b9ca65992cf44b3ccb9eb5076}{m\-\_\-target\-Amount}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_abc4a30325576d54405f21c77ab116255}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-4 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sample fitness function for the Dynamic\-Mutation example.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-6 
+\end{DoxySince}
+
+
+Definition at line 20 of file Dynamic\-Mutation\-Fitness\-Function.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a09d7a07316b309c3ad0572c23b8fb6ed}{\index{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function@{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function}!Dynamic\-Mutation\-Fitness\-Function@{Dynamic\-Mutation\-Fitness\-Function}}
+\index{Dynamic\-Mutation\-Fitness\-Function@{Dynamic\-Mutation\-Fitness\-Function}!examples::dynamicMutation::DynamicMutationFitnessFunction@{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function}}
+\subsubsection[{Dynamic\-Mutation\-Fitness\-Function}]{\setlength{\rightskip}{0pt plus 5cm}examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-Dynamic\-Mutation\-Fitness\-Function (
+\begin{DoxyParamCaption}
+\item[{int}]{a\-\_\-target\-Amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a09d7a07316b309c3ad0572c23b8fb6ed}
+
+
+Definition at line 29 of file Dynamic\-Mutation\-Fitness\-Function.\-java.
+
+
+
+References examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-m\-\_\-target\-Amount, and examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-M\-A\-X\-\_\-\-B\-O\-U\-N\-D.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a528146448f6bb801e422c493e189e6aa}{\index{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function@{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function}!amount\-Of\-Change@{amount\-Of\-Change}}
+\index{amount\-Of\-Change@{amount\-Of\-Change}!examples::dynamicMutation::DynamicMutationFitnessFunction@{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function}}
+\subsubsection[{amount\-Of\-Change}]{\setlength{\rightskip}{0pt plus 5cm}static int examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-amount\-Of\-Change (
+\begin{DoxyParamCaption}
+\item[{I\-Chromosome}]{a\-\_\-potential\-Solution}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a528146448f6bb801e422c493e189e6aa}
+Calculates the total amount of change (in cents) represented by the given potential solution and returns that amount.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-potential\-Solution} & the potential solution to evaluate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The total amount of change (in cents) represented by the given solution
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 171 of file Dynamic\-Mutation\-Fitness\-Function.\-java.
+
+
+
+References examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-get\-Number\-Of\-Coins\-At\-Gene().
+
+
+
+Referenced by examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-evaluate().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a528146448f6bb801e422c493e189e6aa_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a17ad15c1c38b1c902098d9e13be667c9}{\index{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function@{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function}!change\-Difference\-Bonus@{change\-Difference\-Bonus}}
+\index{change\-Difference\-Bonus@{change\-Difference\-Bonus}!examples::dynamicMutation::DynamicMutationFitnessFunction@{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function}}
+\subsubsection[{change\-Difference\-Bonus}]{\setlength{\rightskip}{0pt plus 5cm}double examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-change\-Difference\-Bonus (
+\begin{DoxyParamCaption}
+\item[{double}]{a\-\_\-max\-Fitness, }
+\item[{int}]{a\-\_\-change\-Difference}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a17ad15c1c38b1c902098d9e13be667c9}
+Bonus calculation of fitness value. 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-max\-Fitness} & maximum fitness value appliable \\
+\hline
+{\em a\-\_\-change\-Difference} & change difference in coins for the coins problem \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bonus for given change difference
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-3 
+\end{DoxySince}
+
+
+Definition at line 119 of file Dynamic\-Mutation\-Fitness\-Function.\-java.
+
+
+
+Referenced by examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-evaluate().
+
+\hypertarget{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_ae8d660839994fa367d3786015459e863}{\index{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function@{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function}!compute\-Coin\-Number\-Penalty@{compute\-Coin\-Number\-Penalty}}
+\index{compute\-Coin\-Number\-Penalty@{compute\-Coin\-Number\-Penalty}!examples::dynamicMutation::DynamicMutationFitnessFunction@{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function}}
+\subsubsection[{compute\-Coin\-Number\-Penalty}]{\setlength{\rightskip}{0pt plus 5cm}double examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-compute\-Coin\-Number\-Penalty (
+\begin{DoxyParamCaption}
+\item[{double}]{a\-\_\-max\-Fitness, }
+\item[{int}]{a\-\_\-coins}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_ae8d660839994fa367d3786015459e863}
+Calculates the penalty to apply to the fitness value based on the ammount of coins in the solution
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-max\-Fitness} & maximum fitness value allowed \\
+\hline
+{\em a\-\_\-coins} & number of coins in the solution \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+penalty for the fitness value base on the number of coins
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+John Serri 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-2 
+\end{DoxySince}
+
+
+Definition at line 147 of file Dynamic\-Mutation\-Fitness\-Function.\-java.
+
+
+
+Referenced by examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-evaluate().
+
+\hypertarget{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a57e8a49d67717a2be1b0a33bd2376d6c}{\index{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function@{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!examples::dynamicMutation::DynamicMutationFitnessFunction@{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function}}
+\subsubsection[{evaluate}]{\setlength{\rightskip}{0pt plus 5cm}double examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-evaluate (
+\begin{DoxyParamCaption}
+\item[{I\-Chromosome}]{a\-\_\-subject}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a57e8a49d67717a2be1b0a33bd2376d6c}
+Determine the fitness of the given Chromosome instance. The higher the return value, the more fit the instance. This method should always return the same fitness value for two equivalent Chromosome instances.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-subject} & the Chromosome instance to evaluate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+positive double reflecting the fitness rating of the given Chromosome 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+2.\-0 (until 1.\-1\-: return type int) 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan, Klaus Meffert, John Serri 
+\end{DoxyAuthor}
+
+
+Definition at line 49 of file Dynamic\-Mutation\-Fitness\-Function.\-java.
+
+
+
+References examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-amount\-Of\-Change(), examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-change\-Difference\-Bonus(), examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-compute\-Coin\-Number\-Penalty(), examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-get\-Total\-Number\-Of\-Coins(), examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-m\-\_\-target\-Amount, and examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-M\-A\-X\-\_\-\-B\-O\-U\-N\-D.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a57e8a49d67717a2be1b0a33bd2376d6c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_ad580e29bc08c24dcb8cd1f93bba75192}{\index{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function@{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function}!get\-Number\-Of\-Coins\-At\-Gene@{get\-Number\-Of\-Coins\-At\-Gene}}
+\index{get\-Number\-Of\-Coins\-At\-Gene@{get\-Number\-Of\-Coins\-At\-Gene}!examples::dynamicMutation::DynamicMutationFitnessFunction@{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function}}
+\subsubsection[{get\-Number\-Of\-Coins\-At\-Gene}]{\setlength{\rightskip}{0pt plus 5cm}static int examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-get\-Number\-Of\-Coins\-At\-Gene (
+\begin{DoxyParamCaption}
+\item[{I\-Chromosome}]{a\-\_\-potential\-Solution, }
+\item[{int}]{a\-\_\-position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_ad580e29bc08c24dcb8cd1f93bba75192}
+Retrieves the number of coins represented by the given potential solution at the given gene position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-potential\-Solution} & the potential solution to evaluate \\
+\hline
+{\em a\-\_\-position} & the gene position to evaluate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of coins represented by the potential solution at the given gene position
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 192 of file Dynamic\-Mutation\-Fitness\-Function.\-java.
+
+
+
+Referenced by examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-amount\-Of\-Change(), and examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-get\-Total\-Number\-Of\-Coins().
+
+\hypertarget{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a7f9f9883b5852d180835d2bab53f3f65}{\index{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function@{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function}!get\-Total\-Number\-Of\-Coins@{get\-Total\-Number\-Of\-Coins}}
+\index{get\-Total\-Number\-Of\-Coins@{get\-Total\-Number\-Of\-Coins}!examples::dynamicMutation::DynamicMutationFitnessFunction@{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function}}
+\subsubsection[{get\-Total\-Number\-Of\-Coins}]{\setlength{\rightskip}{0pt plus 5cm}static int examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-get\-Total\-Number\-Of\-Coins (
+\begin{DoxyParamCaption}
+\item[{I\-Chromosome}]{a\-\_\-potentialsolution}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a7f9f9883b5852d180835d2bab53f3f65}
+Returns the total number of coins represented by all of the genes in the given potential solution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-potentialsolution} & the potential solution to evaluate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+total number of coins represented by the given Chromosome
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 209 of file Dynamic\-Mutation\-Fitness\-Function.\-java.
+
+
+
+References examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-get\-Number\-Of\-Coins\-At\-Gene().
+
+
+
+Referenced by examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-evaluate().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a7f9f9883b5852d180835d2bab53f3f65_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_abc4a30325576d54405f21c77ab116255}{\index{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function@{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!examples::dynamicMutation::DynamicMutationFitnessFunction@{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-4 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_abc4a30325576d54405f21c77ab116255}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 23 of file Dynamic\-Mutation\-Fitness\-Function.\-java.
+
+\hypertarget{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a05ef132b9ca65992cf44b3ccb9eb5076}{\index{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function@{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function}!m\-\_\-target\-Amount@{m\-\_\-target\-Amount}}
+\index{m\-\_\-target\-Amount@{m\-\_\-target\-Amount}!examples::dynamicMutation::DynamicMutationFitnessFunction@{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function}}
+\subsubsection[{m\-\_\-target\-Amount}]{\setlength{\rightskip}{0pt plus 5cm}final int examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-m\-\_\-target\-Amount\hspace{0.3cm}{\ttfamily [private]}}}\label{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a05ef132b9ca65992cf44b3ccb9eb5076}
+
+
+Definition at line 25 of file Dynamic\-Mutation\-Fitness\-Function.\-java.
+
+
+
+Referenced by examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-Dynamic\-Mutation\-Fitness\-Function(), and examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-evaluate().
+
+\hypertarget{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a72501ebb1ccd6fcd85c2b480c6c41907}{\index{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function@{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function}!M\-A\-X\-\_\-\-B\-O\-U\-N\-D@{M\-A\-X\-\_\-\-B\-O\-U\-N\-D}}
+\index{M\-A\-X\-\_\-\-B\-O\-U\-N\-D@{M\-A\-X\-\_\-\-B\-O\-U\-N\-D}!examples::dynamicMutation::DynamicMutationFitnessFunction@{examples\-::dynamic\-Mutation\-::\-Dynamic\-Mutation\-Fitness\-Function}}
+\subsubsection[{M\-A\-X\-\_\-\-B\-O\-U\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}final int examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-M\-A\-X\-\_\-\-B\-O\-U\-N\-D = 4000\hspace{0.3cm}{\ttfamily [static]}}}\label{classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_fitness_function_a72501ebb1ccd6fcd85c2b480c6c41907}
+
+
+Definition at line 27 of file Dynamic\-Mutation\-Fitness\-Function.\-java.
+
+
+
+Referenced by examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-Dynamic\-Mutation\-Fitness\-Function(), examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Fitness\-Function.\-evaluate(), and examples.\-dynamic\-Mutation.\-Dynamic\-Mutation\-Example.\-main().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/examples/src/examples/dynamic\-Mutation/\hyperlink{_dynamic_mutation_fitness_function_8java}{Dynamic\-Mutation\-Fitness\-Function.\-java}\end{DoxyCompactItemize}

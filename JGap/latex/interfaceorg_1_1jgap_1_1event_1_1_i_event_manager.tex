@@ -1,0 +1,123 @@
+\hypertarget{interfaceorg_1_1jgap_1_1event_1_1_i_event_manager}{\section{org.\-jgap.\-event.\-I\-Event\-Manager Interface Reference}
+\label{interfaceorg_1_1jgap_1_1event_1_1_i_event_manager}\index{org.\-jgap.\-event.\-I\-Event\-Manager@{org.\-jgap.\-event.\-I\-Event\-Manager}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-event.\-I\-Event\-Manager\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{interfaceorg_1_1jgap_1_1event_1_1_i_event_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-event.\-I\-Event\-Manager\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{interfaceorg_1_1jgap_1_1event_1_1_i_event_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1event_1_1_i_event_manager_accdd33f5b80727b26a0d1c75df73904c}{add\-Event\-Listener} (String a\-\_\-event\-Name, \hyperlink{interfaceorg_1_1jgap_1_1event_1_1_genetic_event_listener}{Genetic\-Event\-Listener} a\-\_\-event\-Listener\-To\-Add)
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1event_1_1_i_event_manager_a851c20e5ad81c1a000fe4ac8087077f1}{remove\-Event\-Listener} (String a\-\_\-event\-Name, \hyperlink{interfaceorg_1_1jgap_1_1event_1_1_genetic_event_listener}{Genetic\-Event\-Listener} a\-\_\-event\-Listener\-To\-Remove)
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1event_1_1_i_event_manager_addb26702fd3c1285e43d0774a023b017}{fire\-Genetic\-Event} (\hyperlink{classorg_1_1jgap_1_1event_1_1_genetic_event}{Genetic\-Event} a\-\_\-event\-To\-Fire)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for event managers (e.\-g., see class \hyperlink{classorg_1_1jgap_1_1event_1_1_event_manager}{Event\-Manager}).
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+
+Neil Rotstan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-6 
+\end{DoxySince}
+
+
+Definition at line 21 of file I\-Event\-Manager.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1event_1_1_i_event_manager_accdd33f5b80727b26a0d1c75df73904c}{\index{org\-::jgap\-::event\-::\-I\-Event\-Manager@{org\-::jgap\-::event\-::\-I\-Event\-Manager}!add\-Event\-Listener@{add\-Event\-Listener}}
+\index{add\-Event\-Listener@{add\-Event\-Listener}!org::jgap::event::IEventManager@{org\-::jgap\-::event\-::\-I\-Event\-Manager}}
+\subsubsection[{add\-Event\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-event.\-I\-Event\-Manager.\-add\-Event\-Listener (
+\begin{DoxyParamCaption}
+\item[{String}]{a\-\_\-event\-Name, }
+\item[{{\bf Genetic\-Event\-Listener}}]{a\-\_\-event\-Listener\-To\-Add}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1event_1_1_i_event_manager_accdd33f5b80727b26a0d1c75df73904c}
+Adds a new listener that will be notified when the event represented by the given name is fired.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-event\-Name} & the name of the event to which the given listener should be subscribed. Standard events are represented by constants in the \hyperlink{classorg_1_1jgap_1_1event_1_1_genetic_event}{Genetic\-Event} class \\
+\hline
+{\em a\-\_\-event\-Listener\-To\-Add} & the genetic listener to subscribe to notifications of the given event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-6 (since 1.\-0 in \hyperlink{classorg_1_1jgap_1_1event_1_1_event_manager}{Event\-Manager}) 
+\end{DoxySince}
+\hypertarget{interfaceorg_1_1jgap_1_1event_1_1_i_event_manager_addb26702fd3c1285e43d0774a023b017}{\index{org\-::jgap\-::event\-::\-I\-Event\-Manager@{org\-::jgap\-::event\-::\-I\-Event\-Manager}!fire\-Genetic\-Event@{fire\-Genetic\-Event}}
+\index{fire\-Genetic\-Event@{fire\-Genetic\-Event}!org::jgap::event::IEventManager@{org\-::jgap\-::event\-::\-I\-Event\-Manager}}
+\subsubsection[{fire\-Genetic\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-event.\-I\-Event\-Manager.\-fire\-Genetic\-Event (
+\begin{DoxyParamCaption}
+\item[{{\bf Genetic\-Event}}]{a\-\_\-event\-To\-Fire}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1event_1_1_i_event_manager_addb26702fd3c1285e43d0774a023b017}
+Fires a genetic event. All subscribers of that particular event type (as determined by the name of the event) will be notified of it having been fired.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-event\-To\-Fire} & the representation of the genetic event to fire\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-6 (since 1.\-0 in \hyperlink{classorg_1_1jgap_1_1event_1_1_event_manager}{Event\-Manager}) 
+\end{DoxySince}
+\hypertarget{interfaceorg_1_1jgap_1_1event_1_1_i_event_manager_a851c20e5ad81c1a000fe4ac8087077f1}{\index{org\-::jgap\-::event\-::\-I\-Event\-Manager@{org\-::jgap\-::event\-::\-I\-Event\-Manager}!remove\-Event\-Listener@{remove\-Event\-Listener}}
+\index{remove\-Event\-Listener@{remove\-Event\-Listener}!org::jgap::event::IEventManager@{org\-::jgap\-::event\-::\-I\-Event\-Manager}}
+\subsubsection[{remove\-Event\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-event.\-I\-Event\-Manager.\-remove\-Event\-Listener (
+\begin{DoxyParamCaption}
+\item[{String}]{a\-\_\-event\-Name, }
+\item[{{\bf Genetic\-Event\-Listener}}]{a\-\_\-event\-Listener\-To\-Remove}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1event_1_1_i_event_manager_a851c20e5ad81c1a000fe4ac8087077f1}
+Removes the given listener from subscription of the indicated event. The listener will no longer be notified when the given event occurs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-event\-Name} & the name of the event to which the given listener should be removed. Standard events are represented by constants in the \hyperlink{classorg_1_1jgap_1_1event_1_1_genetic_event}{Genetic\-Event} class \\
+\hline
+{\em a\-\_\-event\-Listener\-To\-Remove} & the genetic listener to unsubscribe from notifications of the given event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-6 (since 1.\-0 in \hyperlink{classorg_1_1jgap_1_1event_1_1_event_manager}{Event\-Manager}) 
+\end{DoxySince}
+
+
+The documentation for this interface was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/event/\hyperlink{_i_event_manager_8java}{I\-Event\-Manager.\-java}\end{DoxyCompactItemize}

@@ -1,0 +1,158 @@
+\hypertarget{classorg_1_1jgap_1_1impl_1_1salesman_1_1_travelling_salesman_test_1_1_travelling_salesman_for_testing}{\section{org.\-jgap.\-impl.\-salesman.\-Travelling\-Salesman\-Test.\-Travelling\-Salesman\-For\-Testing Class Reference}
+\label{classorg_1_1jgap_1_1impl_1_1salesman_1_1_travelling_salesman_test_1_1_travelling_salesman_for_testing}\index{org.\-jgap.\-impl.\-salesman.\-Travelling\-Salesman\-Test.\-Travelling\-Salesman\-For\-Testing@{org.\-jgap.\-impl.\-salesman.\-Travelling\-Salesman\-Test.\-Travelling\-Salesman\-For\-Testing}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-impl.\-salesman.\-Travelling\-Salesman\-Test.\-Travelling\-Salesman\-For\-Testing\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{classorg_1_1jgap_1_1impl_1_1salesman_1_1_travelling_salesman_test_1_1_travelling_salesman_for_testing__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-impl.\-salesman.\-Travelling\-Salesman\-Test.\-Travelling\-Salesman\-For\-Testing\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1salesman_1_1_travelling_salesman_test_1_1_travelling_salesman_for_testing__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} \hyperlink{classorg_1_1jgap_1_1impl_1_1salesman_1_1_travelling_salesman_test_1_1_travelling_salesman_for_testing_a3587ad164718c422dba17cc9c1a2507f}{create\-Sample\-Chromosome} (Object a\-\_\-initial\-\_\-data)
+\item 
+double \hyperlink{classorg_1_1jgap_1_1impl_1_1salesman_1_1_travelling_salesman_test_1_1_travelling_salesman_for_testing_ad85b8e3b7f696be1895a8f4942786a2d}{distance} (\hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} a\-\_\-from, \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} a\-\_\-to)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{classorg_1_1jgap_1_1impl_1_1salesman_1_1_travelling_salesman_test_1_1_travelling_salesman_for_testing_af3a7d892c006e39524622ed2ee779c16}{C\-I\-T\-I\-E\-S} = 7
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Explains how to use J\-Gap extensions, needed to solve the task group, known as the {\itshape Problem of the travelling salesman}. The extensions are defined in \hyperlink{namespaceorg_1_1jgap_1_1impl_1_1salesman}{org.\-jgap.\-impl.\-salesman}
+
+$<$font size=\char`\"{}-\/1\char`\"{}$>$
+
+The traveling salesman problem is the following\-: given a finite number of 'cities' along with the cost of travel between each pair of them, find the cheapest way of visiting all the cities and returning to your starting point. 
+
+$<$/font$>$
+
+See 
+\begin{DoxyItemize}
+\item J. Grefenstette, R. Gopal, R. Rosmaita, and D. Gucht. {\itshape Genetic algorithms for the traveling salesman problem}. In Proceedings of the Second International Conference on Genetic Algorithms. Lawrence Eribaum Associates, Mahwah, N\-J, 1985.  
+\item \href{http://ecsl.cs.unr.edu/docs/techreports/gong/node3.html}{\tt Sushil J. Louis \& Gong Li} (very clear explanatory material)  
+\item \href{http://www.tsp.gatech.edu www.tsp.gatech.edu}{\tt {\itshape Travelling salesman} web site}  
+\end{DoxyItemize}
+
+This simple test and example shows how to use the \hyperlink{classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman}{Salesman} class. The distance between the cities is assumed to be equal to the difference of the assigned numbers. So, the optimal solution is obviously 1 2 3 4 ... n or reverse, but the system does not know this. To get the useful application, you need to override at least the distance function. Also, it is recommended to define a new type of gene, corresponding the data about your \char`\"{}city\char`\"{}. For example, it can contain the city X and Y co-\/ordinates, used by the distance function.
+
+\begin{DoxyAuthor}{Author}
+Audrius Meskauskas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+
+Definition at line 123 of file Travelling\-Salesman\-Test.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1salesman_1_1_travelling_salesman_test_1_1_travelling_salesman_for_testing_a3587ad164718c422dba17cc9c1a2507f}{\index{org\-::jgap\-::impl\-::salesman\-::\-Travelling\-Salesman\-Test\-::\-Travelling\-Salesman\-For\-Testing@{org\-::jgap\-::impl\-::salesman\-::\-Travelling\-Salesman\-Test\-::\-Travelling\-Salesman\-For\-Testing}!create\-Sample\-Chromosome@{create\-Sample\-Chromosome}}
+\index{create\-Sample\-Chromosome@{create\-Sample\-Chromosome}!org::jgap::impl::salesman::TravellingSalesmanTest::TravellingSalesmanForTesting@{org\-::jgap\-::impl\-::salesman\-::\-Travelling\-Salesman\-Test\-::\-Travelling\-Salesman\-For\-Testing}}
+\subsubsection[{create\-Sample\-Chromosome}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\-Chromosome} org.\-jgap.\-impl.\-salesman.\-Travelling\-Salesman\-Test.\-Travelling\-Salesman\-For\-Testing.\-create\-Sample\-Chromosome (
+\begin{DoxyParamCaption}
+\item[{Object}]{a\-\_\-initial\-\_\-data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classorg_1_1jgap_1_1impl_1_1salesman_1_1_travelling_salesman_test_1_1_travelling_salesman_for_testing_a3587ad164718c422dba17cc9c1a2507f}
+Create an array of the given number of integer genes. The first gene is always 0, this is a city where the salesman starts the journey.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-initial\-\_\-data} & not needed here \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new chromosome 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_a862317900d8463de5375560a20b2df34}{org.\-jgap.\-impl.\-salesman.\-Salesman}.
+
+
+
+Definition at line 135 of file Travelling\-Salesman\-Test.\-java.
+
+
+
+References org.\-jgap.\-impl.\-salesman.\-Travelling\-Salesman\-Test.\-Travelling\-Salesman\-For\-Testing.\-C\-I\-T\-I\-E\-S, and org.\-jgap.\-impl.\-salesman.\-Salesman.\-get\-Configuration().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1salesman_1_1_travelling_salesman_test_1_1_travelling_salesman_for_testing_a3587ad164718c422dba17cc9c1a2507f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1salesman_1_1_travelling_salesman_test_1_1_travelling_salesman_for_testing_ad85b8e3b7f696be1895a8f4942786a2d}{\index{org\-::jgap\-::impl\-::salesman\-::\-Travelling\-Salesman\-Test\-::\-Travelling\-Salesman\-For\-Testing@{org\-::jgap\-::impl\-::salesman\-::\-Travelling\-Salesman\-Test\-::\-Travelling\-Salesman\-For\-Testing}!distance@{distance}}
+\index{distance@{distance}!org::jgap::impl::salesman::TravellingSalesmanTest::TravellingSalesmanForTesting@{org\-::jgap\-::impl\-::salesman\-::\-Travelling\-Salesman\-Test\-::\-Travelling\-Salesman\-For\-Testing}}
+\subsubsection[{distance}]{\setlength{\rightskip}{0pt plus 5cm}double org.\-jgap.\-impl.\-salesman.\-Travelling\-Salesman\-Test.\-Travelling\-Salesman\-For\-Testing.\-distance (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene}}]{a\-\_\-from, }
+\item[{{\bf Gene}}]{a\-\_\-to}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classorg_1_1jgap_1_1impl_1_1salesman_1_1_travelling_salesman_test_1_1_travelling_salesman_for_testing_ad85b8e3b7f696be1895a8f4942786a2d}
+Distance is equal to the difference between city numbers, except the distance between the last and first cities that is equal to 1. In this way, we ensure that the optimal soultion is 0 1 2 3 .. n -\/ easy to check. 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-from} & \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} \\
+\hline
+{\em a\-\_\-to} & \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+distance betwen cities 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_a423725e8d0b857402a4db166061137aa}{org.\-jgap.\-impl.\-salesman.\-Salesman}.
+
+
+
+Definition at line 158 of file Travelling\-Salesman\-Test.\-java.
+
+
+
+References org.\-jgap.\-impl.\-salesman.\-Travelling\-Salesman\-Test.\-Travelling\-Salesman\-For\-Testing.\-C\-I\-T\-I\-E\-S.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1salesman_1_1_travelling_salesman_test_1_1_travelling_salesman_for_testing_af3a7d892c006e39524622ed2ee779c16}{\index{org\-::jgap\-::impl\-::salesman\-::\-Travelling\-Salesman\-Test\-::\-Travelling\-Salesman\-For\-Testing@{org\-::jgap\-::impl\-::salesman\-::\-Travelling\-Salesman\-Test\-::\-Travelling\-Salesman\-For\-Testing}!C\-I\-T\-I\-E\-S@{C\-I\-T\-I\-E\-S}}
+\index{C\-I\-T\-I\-E\-S@{C\-I\-T\-I\-E\-S}!org::jgap::impl::salesman::TravellingSalesmanTest::TravellingSalesmanForTesting@{org\-::jgap\-::impl\-::salesman\-::\-Travelling\-Salesman\-Test\-::\-Travelling\-Salesman\-For\-Testing}}
+\subsubsection[{C\-I\-T\-I\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}final int org.\-jgap.\-impl.\-salesman.\-Travelling\-Salesman\-Test.\-Travelling\-Salesman\-For\-Testing.\-C\-I\-T\-I\-E\-S = 7\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1jgap_1_1impl_1_1salesman_1_1_travelling_salesman_test_1_1_travelling_salesman_for_testing_af3a7d892c006e39524622ed2ee779c16}
+The number of cities to visit, 7 by default. 
+
+Definition at line 126 of file Travelling\-Salesman\-Test.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-salesman.\-Travelling\-Salesman\-Test.\-Travelling\-Salesman\-For\-Testing.\-create\-Sample\-Chromosome(), and org.\-jgap.\-impl.\-salesman.\-Travelling\-Salesman\-Test.\-Travelling\-Salesman\-For\-Testing.\-distance().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/tests/org/jgap/impl/salesman/\hyperlink{_travelling_salesman_test_8java}{Travelling\-Salesman\-Test.\-java}\end{DoxyCompactItemize}

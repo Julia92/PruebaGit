@@ -1,0 +1,230 @@
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator}{\section{org.\-jgap.\-impl.\-Seeded\-Random\-Generator Class Reference}
+\label{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator}\index{org.\-jgap.\-impl.\-Seeded\-Random\-Generator@{org.\-jgap.\-impl.\-Seeded\-Random\-Generator}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-impl.\-Seeded\-Random\-Generator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-impl.\-Seeded\-Random\-Generator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator_a2fc156657e1851259bbf2c9a9e3cd78b}{Seeded\-Random\-Generator} (long seed\-Number)
+\item 
+Object \hyperlink{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator_ad0073ba484a430980d3dc638389dba10}{clone} ()
+\item 
+int \hyperlink{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator_ac6b25a8c5bbc8a9707f76ac3189aa485}{compare\-To} (Object a\-\_\-other)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator_ac015e5a0539bf33e04dc37c96a684430}{read\-Object} (Object\-Input\-Stream a\-\_\-input\-Stream)  throws I\-O\-Exception, Class\-Not\-Found\-Exception 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final long \hyperlink{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator_ae7446837a948e934a4f9a284d485e698}{seed}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator_a7af667512d1d22347bada77695a5ee55}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-1 \$\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The seeded random generator uses the java.\-util.\-Random class to provide a simple implementation of the \hyperlink{interfaceorg_1_1jgap_1_1_random_generator}{Random\-Generator} interface with a custom seed number for repeatable results. It shouldn't be used for a deserializing object because it could cauld duplicate results.
+
+\begin{DoxyAuthor}{Author}
+Machairas Vasileios 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-7 
+\end{DoxySince}
+
+
+Definition at line 29 of file Seeded\-Random\-Generator.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator_a2fc156657e1851259bbf2c9a9e3cd78b}{\index{org\-::jgap\-::impl\-::\-Seeded\-Random\-Generator@{org\-::jgap\-::impl\-::\-Seeded\-Random\-Generator}!Seeded\-Random\-Generator@{Seeded\-Random\-Generator}}
+\index{Seeded\-Random\-Generator@{Seeded\-Random\-Generator}!org::jgap::impl::SeededRandomGenerator@{org\-::jgap\-::impl\-::\-Seeded\-Random\-Generator}}
+\subsubsection[{Seeded\-Random\-Generator}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Seeded\-Random\-Generator.\-Seeded\-Random\-Generator (
+\begin{DoxyParamCaption}
+\item[{long}]{seed\-Number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator_a2fc156657e1851259bbf2c9a9e3cd78b}
+Constructor with the seed number.
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed\-Number} & the seed to initialize randomization with\\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+3.\-7 
+\end{DoxySince}
+
+
+Definition at line 44 of file Seeded\-Random\-Generator.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Seeded\-Random\-Generator.\-seed.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Seeded\-Random\-Generator.\-clone().
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator_ad0073ba484a430980d3dc638389dba10}{\index{org\-::jgap\-::impl\-::\-Seeded\-Random\-Generator@{org\-::jgap\-::impl\-::\-Seeded\-Random\-Generator}!clone@{clone}}
+\index{clone@{clone}!org::jgap::impl::SeededRandomGenerator@{org\-::jgap\-::impl\-::\-Seeded\-Random\-Generator}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}Object org.\-jgap.\-impl.\-Seeded\-Random\-Generator.\-clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator_ad0073ba484a430980d3dc638389dba10}
+\begin{DoxyReturn}{Returns}
+deep clone of this instance
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Machairas Vasileios 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-6 
+\end{DoxySince}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1util_1_1_i_cloneable_aa7e7d62077e6428ad7904932b1b4f7d5}{org.\-jgap.\-util.\-I\-Cloneable}.
+
+
+
+Definition at line 78 of file Seeded\-Random\-Generator.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Seeded\-Random\-Generator.\-seed, and org.\-jgap.\-impl.\-Seeded\-Random\-Generator.\-Seeded\-Random\-Generator().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator_ad0073ba484a430980d3dc638389dba10_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator_ac6b25a8c5bbc8a9707f76ac3189aa485}{\index{org\-::jgap\-::impl\-::\-Seeded\-Random\-Generator@{org\-::jgap\-::impl\-::\-Seeded\-Random\-Generator}!compare\-To@{compare\-To}}
+\index{compare\-To@{compare\-To}!org::jgap::impl::SeededRandomGenerator@{org\-::jgap\-::impl\-::\-Seeded\-Random\-Generator}}
+\subsubsection[{compare\-To}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-jgap.\-impl.\-Seeded\-Random\-Generator.\-compare\-To (
+\begin{DoxyParamCaption}
+\item[{Object}]{a\-\_\-other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator_ac6b25a8c5bbc8a9707f76ac3189aa485}
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-other} & sic \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+as always
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-2 
+\end{DoxySince}
+
+
+Definition at line 90 of file Seeded\-Random\-Generator.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator_ac015e5a0539bf33e04dc37c96a684430}{\index{org\-::jgap\-::impl\-::\-Seeded\-Random\-Generator@{org\-::jgap\-::impl\-::\-Seeded\-Random\-Generator}!read\-Object@{read\-Object}}
+\index{read\-Object@{read\-Object}!org::jgap::impl::SeededRandomGenerator@{org\-::jgap\-::impl\-::\-Seeded\-Random\-Generator}}
+\subsubsection[{read\-Object}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Seeded\-Random\-Generator.\-read\-Object (
+\begin{DoxyParamCaption}
+\item[{Object\-Input\-Stream}]{a\-\_\-input\-Stream}
+\end{DoxyParamCaption}
+) throws I\-O\-Exception, Class\-Not\-Found\-Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator_ac015e5a0539bf33e04dc37c96a684430}
+When deserializing, initialize the seed. This could get duplicate evolution results when doing distributed computing! Please use \hyperlink{classorg_1_1jgap_1_1impl_1_1_stock_random_generator}{Stock\-Random\-Generator} for that purposes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-input\-Stream} & the Object\-Input\-Stream provided for deserialzation\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\-O\-Exception} & \\
+\hline
+{\em Class\-Not\-Found\-Exception} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Machairas Vasileios 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-7 
+\end{DoxySince}
+
+
+Definition at line 64 of file Seeded\-Random\-Generator.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Seeded\-Random\-Generator.\-seed.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator_a7af667512d1d22347bada77695a5ee55}{\index{org\-::jgap\-::impl\-::\-Seeded\-Random\-Generator@{org\-::jgap\-::impl\-::\-Seeded\-Random\-Generator}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::impl::SeededRandomGenerator@{org\-::jgap\-::impl\-::\-Seeded\-Random\-Generator}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-impl.\-Seeded\-Random\-Generator.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-1 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator_a7af667512d1d22347bada77695a5ee55}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 33 of file Seeded\-Random\-Generator.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator_ae7446837a948e934a4f9a284d485e698}{\index{org\-::jgap\-::impl\-::\-Seeded\-Random\-Generator@{org\-::jgap\-::impl\-::\-Seeded\-Random\-Generator}!seed@{seed}}
+\index{seed@{seed}!org::jgap::impl::SeededRandomGenerator@{org\-::jgap\-::impl\-::\-Seeded\-Random\-Generator}}
+\subsubsection[{seed}]{\setlength{\rightskip}{0pt plus 5cm}final long org.\-jgap.\-impl.\-Seeded\-Random\-Generator.\-seed\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_seeded_random_generator_ae7446837a948e934a4f9a284d485e698}
+
+
+Definition at line 35 of file Seeded\-Random\-Generator.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Seeded\-Random\-Generator.\-clone(), org.\-jgap.\-impl.\-Seeded\-Random\-Generator.\-read\-Object(), and org.\-jgap.\-impl.\-Seeded\-Random\-Generator.\-Seeded\-Random\-Generator().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/impl/\hyperlink{_seeded_random_generator_8java}{Seeded\-Random\-Generator.\-java}\end{DoxyCompactItemize}

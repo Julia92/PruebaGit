@@ -1,0 +1,498 @@
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector}{\section{org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector Class Reference}
+\label{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector}\index{org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector@{org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Best\-Chromosomes\-Selector\-Config}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a3ea96e0ab01abd0a12f324fd484e82b4}{Best\-Chromosomes\-Selector} ()  throws Invalid\-Configuration\-Exception 
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a7f758fb893bf4d7270cdd587251063a2}{Best\-Chromosomes\-Selector} (final \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} a\-\_\-config)  throws Invalid\-Configuration\-Exception 
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_ae2ea64513693e0beb2cc713daf56ffc5}{Best\-Chromosomes\-Selector} (final \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} a\-\_\-config, final double a\-\_\-original\-Rate)  throws Invalid\-Configuration\-Exception 
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_afa8c26dbb642fa1809cd89cb9b7e0d43}{select\-Chromosomes} (final int a\-\_\-how\-Many\-To\-Select, \hyperlink{classorg_1_1jgap_1_1_population}{Population} a\-\_\-to\-\_\-pop)
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a807b0148412ef68d5a5d4b660a515f80}{empty} ()
+\item 
+boolean \hyperlink{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_ac1b16641fb070ed5039193e4f081d809}{returns\-Unique\-Chromosomes} ()
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_aba1bf0b64c8a0515a958ee6eced6f78d}{set\-Original\-Rate} (final double a\-\_\-original\-Rate)
+\item 
+double \hyperlink{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_ac06f03890f0fa7e11109ae8bce3a25fe}{get\-Original\-Rate} ()
+\item 
+boolean \hyperlink{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_ac75ef274bef9371aa93d5b370061f8d8}{equals} (Object a\-\_\-o)
+\item 
+Object \hyperlink{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a5853ec606d4404adc52c906857fee0c5}{clone} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a0bc7fd36123954647b0c8a7e6ca8e5ae}{add} (final \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} a\-\_\-chromosome\-To\-Add)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1_population}{Population} \hyperlink{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_ad57ed87538c6396da97b9da75e7b9fcc}{m\-\_\-chromosomes}
+\item 
+boolean \hyperlink{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a81d9b14ee7e7e116fbd1c71ec41ba059}{m\-\_\-needs\-Sorting}
+\item 
+Comparator \hyperlink{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a22d07dd607627312855df65e2e4ea770}{m\-\_\-fitness\-Value\-Comparator}
+\item 
+Best\-Chromosomes\-Selector\-Config \hyperlink{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a9b16ee07ecb31c2bd6b0af709cdd2248}{m\-\_\-config}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a15ff008a0835eb0a54af6df185c864f9}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-54 \$\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementation of a \hyperlink{classorg_1_1jgap_1_1_natural_selector}{Natural\-Selector} that takes the top n chromosomes into the next generation. n can be specified. Which chromosomes are the best is decided by evaluating their fitness value.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Definition at line 24 of file Best\-Chromosomes\-Selector.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a3ea96e0ab01abd0a12f324fd484e82b4}{\index{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}!Best\-Chromosomes\-Selector@{Best\-Chromosomes\-Selector}}
+\index{Best\-Chromosomes\-Selector@{Best\-Chromosomes\-Selector}!org::jgap::impl::BestChromosomesSelector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}}
+\subsubsection[{Best\-Chromosomes\-Selector}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-Best\-Chromosomes\-Selector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\-Configuration\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a3ea96e0ab01abd0a12f324fd484e82b4}
+Default constructor. Attention\-: The configuration used is the one set with the static method Genotype.\-set\-Configuration.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classorg_1_1jgap_1_1_invalid_configuration_exception}{Invalid\-Configuration\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Definition at line 57 of file Best\-Chromosomes\-Selector.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-clone(), and org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-equals().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a7f758fb893bf4d7270cdd587251063a2}{\index{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}!Best\-Chromosomes\-Selector@{Best\-Chromosomes\-Selector}}
+\index{Best\-Chromosomes\-Selector@{Best\-Chromosomes\-Selector}!org::jgap::impl::BestChromosomesSelector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}}
+\subsubsection[{Best\-Chromosomes\-Selector}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-Best\-Chromosomes\-Selector (
+\begin{DoxyParamCaption}
+\item[{final {\bf Configuration}}]{a\-\_\-config}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\-Configuration\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a7f758fb893bf4d7270cdd587251063a2}
+Using original rate of 1.\-0
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-config} & the configuration to use \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classorg_1_1jgap_1_1_invalid_configuration_exception}{Invalid\-Configuration\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-0 
+\end{DoxySince}
+
+
+Definition at line 71 of file Best\-Chromosomes\-Selector.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_ae2ea64513693e0beb2cc713daf56ffc5}{\index{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}!Best\-Chromosomes\-Selector@{Best\-Chromosomes\-Selector}}
+\index{Best\-Chromosomes\-Selector@{Best\-Chromosomes\-Selector}!org::jgap::impl::BestChromosomesSelector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}}
+\subsubsection[{Best\-Chromosomes\-Selector}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-Best\-Chromosomes\-Selector (
+\begin{DoxyParamCaption}
+\item[{final {\bf Configuration}}]{a\-\_\-config, }
+\item[{final double}]{a\-\_\-original\-Rate}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\-Configuration\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_ae2ea64513693e0beb2cc713daf56ffc5}
+
+
+Definition at line 76 of file Best\-Chromosomes\-Selector.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-m\-\_\-chromosomes, org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-m\-\_\-fitness\-Value\-Comparator, org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-m\-\_\-needs\-Sorting, org.\-jgap.\-Natural\-Selector\-Ext.\-set\-Doublette\-Chromosomes\-Allowed(), and org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-set\-Original\-Rate().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_ae2ea64513693e0beb2cc713daf56ffc5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a0bc7fd36123954647b0c8a7e6ca8e5ae}{\index{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}!add@{add}}
+\index{add@{add}!org::jgap::impl::BestChromosomesSelector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-add (
+\begin{DoxyParamCaption}
+\item[{final {\bf I\-Chromosome}}]{a\-\_\-chromosome\-To\-Add}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a0bc7fd36123954647b0c8a7e6ca8e5ae}
+Add a \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} instance to this selector's working pool of Chromosomes. 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-chromosome\-To\-Add} & the specimen to add to the pool\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Implements \hyperlink{classorg_1_1jgap_1_1_natural_selector_ext_ab42019c92f31cc0c859202b0ae3b4e96}{org.\-jgap.\-Natural\-Selector\-Ext}.
+
+
+
+Definition at line 94 of file Best\-Chromosomes\-Selector.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-clone(), org.\-jgap.\-Population.\-get\-Chromosomes(), org.\-jgap.\-Natural\-Selector.\-get\-Configuration(), org.\-jgap.\-Natural\-Selector\-Ext.\-get\-Doublette\-Chromosomes\-Allowed(), org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-m\-\_\-chromosomes, org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-m\-\_\-needs\-Sorting, and org.\-jgap.\-I\-Handler.\-perform().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a0bc7fd36123954647b0c8a7e6ca8e5ae_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a5853ec606d4404adc52c906857fee0c5}{\index{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}!clone@{clone}}
+\index{clone@{clone}!org::jgap::impl::BestChromosomesSelector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}Object org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a5853ec606d4404adc52c906857fee0c5}
+\begin{DoxyReturn}{Returns}
+clone of the current object instance 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1util_1_1_i_cloneable_aa7e7d62077e6428ad7904932b1b4f7d5}{org.\-jgap.\-util.\-I\-Cloneable}.
+
+
+
+Definition at line 298 of file Best\-Chromosomes\-Selector.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-Best\-Chromosomes\-Selector(), org.\-jgap.\-Natural\-Selector.\-get\-Configuration(), org.\-jgap.\-Natural\-Selector\-Ext.\-get\-Doublette\-Chromosomes\-Allowed(), org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-m\-\_\-config, and org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-m\-\_\-needs\-Sorting.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-add().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a5853ec606d4404adc52c906857fee0c5_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a807b0148412ef68d5a5d4b660a515f80}{\index{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}!empty@{empty}}
+\index{empty@{empty}!org::jgap::impl::BestChromosomesSelector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a807b0148412ef68d5a5d4b660a515f80}
+Empties out the working pool of Chromosomes.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1_i_natural_selector_a824307b8be94282a3dfd03aaa6531139}{org.\-jgap.\-I\-Natural\-Selector}.
+
+
+
+Definition at line 216 of file Best\-Chromosomes\-Selector.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-m\-\_\-needs\-Sorting.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_ac75ef274bef9371aa93d5b370061f8d8}{\index{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}!equals@{equals}}
+\index{equals@{equals}!org::jgap::impl::BestChromosomesSelector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}}
+\subsubsection[{equals}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-equals (
+\begin{DoxyParamCaption}
+\item[{Object}]{a\-\_\-o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_ac75ef274bef9371aa93d5b370061f8d8}
+
+
+Definition at line 275 of file Best\-Chromosomes\-Selector.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-Best\-Chromosomes\-Selector(), org.\-jgap.\-Population.\-equals(), org.\-jgap.\-Natural\-Selector\-Ext.\-get\-Doublette\-Chromosomes\-Allowed(), org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-m\-\_\-chromosomes, org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-m\-\_\-config, and org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-m\-\_\-fitness\-Value\-Comparator.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_ac75ef274bef9371aa93d5b370061f8d8_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_ac06f03890f0fa7e11109ae8bce3a25fe}{\index{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}!get\-Original\-Rate@{get\-Original\-Rate}}
+\index{get\-Original\-Rate@{get\-Original\-Rate}!org::jgap::impl::BestChromosomesSelector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}}
+\subsubsection[{get\-Original\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}double org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-get\-Original\-Rate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_ac06f03890f0fa7e11109ae8bce3a25fe}
+\begin{DoxyReturn}{Returns}
+see set\-Original\-Rate
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 262 of file Best\-Chromosomes\-Selector.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector\-Test.\-test\-Set\-Original\-Rate\-\_\-1().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_ac1b16641fb070ed5039193e4f081d809}{\index{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}!returns\-Unique\-Chromosomes@{returns\-Unique\-Chromosomes}}
+\index{returns\-Unique\-Chromosomes@{returns\-Unique\-Chromosomes}!org::jgap::impl::BestChromosomesSelector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}}
+\subsubsection[{returns\-Unique\-Chromosomes}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-returns\-Unique\-Chromosomes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_ac1b16641fb070ed5039193e4f081d809}
+\begin{DoxyReturn}{Returns}
+always true as no \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} can be returnd multiple times
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1_i_natural_selector_a7a6e97dab3548d73a829c9b998df377a}{org.\-jgap.\-I\-Natural\-Selector}.
+
+
+
+Definition at line 229 of file Best\-Chromosomes\-Selector.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector\-Test.\-test\-Construct\-\_\-0(), and org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector\-Test.\-test\-Returns\-Unique\-\_\-0().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_afa8c26dbb642fa1809cd89cb9b7e0d43}{\index{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}!select\-Chromosomes@{select\-Chromosomes}}
+\index{select\-Chromosomes@{select\-Chromosomes}!org::jgap::impl::BestChromosomesSelector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}}
+\subsubsection[{select\-Chromosomes}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-select\-Chromosomes (
+\begin{DoxyParamCaption}
+\item[{final int}]{a\-\_\-how\-Many\-To\-Select, }
+\item[{{\bf Population}}]{a\-\_\-to\-\_\-pop}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_afa8c26dbb642fa1809cd89cb9b7e0d43}
+Selects a given number of chromosomes from the pool that will move on to the next generation population. This selection will be guided by the fitness values. The chromosomes with the best fitness value win.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-to\-\_\-pop} & the population the chromosomes will be added to \\
+\hline
+{\em a\-\_\-how\-Many\-To\-Select} & the number of chromosomes to select\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Definition at line 141 of file Best\-Chromosomes\-Selector.\-java.
+
+
+
+References org.\-jgap.\-Natural\-Selector.\-get\-Configuration(), org.\-jgap.\-Natural\-Selector\-Ext.\-get\-Doublette\-Chromosomes\-Allowed(), org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-m\-\_\-fitness\-Value\-Comparator, org.\-jgap.\-Natural\-Selector.\-m\-\_\-monitor\-Active, and org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-m\-\_\-needs\-Sorting.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_afa8c26dbb642fa1809cd89cb9b7e0d43_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_aba1bf0b64c8a0515a958ee6eced6f78d}{\index{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}!set\-Original\-Rate@{set\-Original\-Rate}}
+\index{set\-Original\-Rate@{set\-Original\-Rate}!org::jgap::impl::BestChromosomesSelector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}}
+\subsubsection[{set\-Original\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-set\-Original\-Rate (
+\begin{DoxyParamCaption}
+\item[{final double}]{a\-\_\-original\-Rate}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_aba1bf0b64c8a0515a958ee6eced6f78d}
+Setting this parameter controls how many chromosomes of the original population will be considered for selection to the next population. If the value is 1 then the whole original population is considered, if it is 0.\-5 only half of the chromosomes are considered. If doublettes are allowed, then a number of chromosomes missing (number of to be selected minus number selected) will be added. 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-original\-Rate} & the rate of how many of the original chromosomes will be selected according to Best\-Chromosome\-Selector's strategy. The rest (non-\/original) of the chromosomes is added as duplicates\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 247 of file Best\-Chromosomes\-Selector.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-Best\-Chromosomes\-Selector().
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a15ff008a0835eb0a54af6df185c864f9}{\index{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::impl::BestChromosomesSelector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-54 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a15ff008a0835eb0a54af6df185c864f9}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 27 of file Best\-Chromosomes\-Selector.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_ad57ed87538c6396da97b9da75e7b9fcc}{\index{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}!m\-\_\-chromosomes@{m\-\_\-chromosomes}}
+\index{m\-\_\-chromosomes@{m\-\_\-chromosomes}!org::jgap::impl::BestChromosomesSelector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}}
+\subsubsection[{m\-\_\-chromosomes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Population} org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-m\-\_\-chromosomes\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_ad57ed87538c6396da97b9da75e7b9fcc}
+Stores the chromosomes to be taken into account for selection 
+
+Definition at line 32 of file Best\-Chromosomes\-Selector.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-add(), org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-Best\-Chromosomes\-Selector(), and org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-equals().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a9b16ee07ecb31c2bd6b0af709cdd2248}{\index{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}!m\-\_\-config@{m\-\_\-config}}
+\index{m\-\_\-config@{m\-\_\-config}!org::jgap::impl::BestChromosomesSelector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}}
+\subsubsection[{m\-\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}Best\-Chromosomes\-Selector\-Config org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-m\-\_\-config\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a9b16ee07ecb31c2bd6b0af709cdd2248}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= \textcolor{keyword}{new}
+      BestChromosomesSelectorConfig()
+\end{DoxyCode}
+
+
+Definition at line 44 of file Best\-Chromosomes\-Selector.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-clone(), and org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-equals().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a22d07dd607627312855df65e2e4ea770}{\index{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}!m\-\_\-fitness\-Value\-Comparator@{m\-\_\-fitness\-Value\-Comparator}}
+\index{m\-\_\-fitness\-Value\-Comparator@{m\-\_\-fitness\-Value\-Comparator}!org::jgap::impl::BestChromosomesSelector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}}
+\subsubsection[{m\-\_\-fitness\-Value\-Comparator}]{\setlength{\rightskip}{0pt plus 5cm}Comparator org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-m\-\_\-fitness\-Value\-Comparator\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a22d07dd607627312855df65e2e4ea770}
+Comparator that is concerned about both age and fitness values 
+
+Definition at line 42 of file Best\-Chromosomes\-Selector.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-Best\-Chromosomes\-Selector(), org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-equals(), and org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-select\-Chromosomes().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a81d9b14ee7e7e116fbd1c71ec41ba059}{\index{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}!m\-\_\-needs\-Sorting@{m\-\_\-needs\-Sorting}}
+\index{m\-\_\-needs\-Sorting@{m\-\_\-needs\-Sorting}!org::jgap::impl::BestChromosomesSelector@{org\-::jgap\-::impl\-::\-Best\-Chromosomes\-Selector}}
+\subsubsection[{m\-\_\-needs\-Sorting}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-m\-\_\-needs\-Sorting\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a81d9b14ee7e7e116fbd1c71ec41ba059}
+Indicated whether the list of added chromosomes needs sorting 
+
+Definition at line 37 of file Best\-Chromosomes\-Selector.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-add(), org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-Best\-Chromosomes\-Selector(), org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-clone(), org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-empty(), and org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-select\-Chromosomes().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/impl/\hyperlink{_best_chromosomes_selector_8java}{Best\-Chromosomes\-Selector.\-java}\end{DoxyCompactItemize}

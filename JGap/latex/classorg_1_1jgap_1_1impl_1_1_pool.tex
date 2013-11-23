@@ -1,0 +1,233 @@
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_pool}{\section{org.\-jgap.\-impl.\-Pool Class Reference}
+\label{classorg_1_1jgap_1_1impl_1_1_pool}\index{org.\-jgap.\-impl.\-Pool@{org.\-jgap.\-impl.\-Pool}}
+}
+
+
+Collaboration diagram for org.\-jgap.\-impl.\-Pool\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{classorg_1_1jgap_1_1impl_1_1_pool__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_pool_a6a98590fd1c845e1b4c41941f6febf8c}{Pool} ()
+\item 
+synchronized Object \hyperlink{classorg_1_1jgap_1_1impl_1_1_pool_a84ab7ce249536f638b0ec873f47cd72a}{acquire\-Pooled\-Object} ()
+\item 
+synchronized void \hyperlink{classorg_1_1jgap_1_1impl_1_1_pool_a7b979b8c659166d5e01b985698074cb0}{release\-Object} (final Object a\-\_\-object\-To\-Pool)
+\item 
+synchronized void \hyperlink{classorg_1_1jgap_1_1impl_1_1_pool_a1006cf50190e8be37fe21e3030b46060}{release\-All\-Objects} (final Collection a\-\_\-objects\-To\-Pool)
+\item 
+synchronized int \hyperlink{classorg_1_1jgap_1_1impl_1_1_pool_a22f44a20fa8f6867604a9c2d39fbc16a}{size} ()
+\item 
+synchronized void \hyperlink{classorg_1_1jgap_1_1impl_1_1_pool_abdd9e34abe2f0f485bc2b364b0fab9b6}{clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List \hyperlink{classorg_1_1jgap_1_1impl_1_1_pool_ab6b1b9c3817ac388078aabcd0cf2206f}{m\-\_\-pooled\-Objects}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1impl_1_1_pool_ab7440c6f3b541e84d9c1ea60dd2c4bd6}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-9 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A simple, generic pool class that can be used to pool any kind of object. Objects can be released to this pool, either individually or as a Collection, and then later acquired again. It is not necessary for an object to have been originally acquired from the pool in order for it to be released to the pool. If there are no objects present in the pool, an attempt to acquire one will return null. The number of objects available in the pool can be determined with the \hyperlink{classorg_1_1jgap_1_1impl_1_1_pool_a22f44a20fa8f6867604a9c2d39fbc16a}{size()} method. Finally, it should be noted that the pool does not attempt to perform any kind of cleanup or re-\/initialization on the objects to restore them to some clean state when they are released to the pool; it's up to the user to reset any necessary state in the object prior to the release call (or just after the acquire call).
+
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 32 of file Pool.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_pool_a6a98590fd1c845e1b4c41941f6febf8c}{\index{org\-::jgap\-::impl\-::\-Pool@{org\-::jgap\-::impl\-::\-Pool}!Pool@{Pool}}
+\index{Pool@{Pool}!org::jgap::impl::Pool@{org\-::jgap\-::impl\-::\-Pool}}
+\subsubsection[{Pool}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Pool.\-Pool (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_pool_a6a98590fd1c845e1b4c41941f6febf8c}
+Constructor.
+
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 48 of file Pool.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Pool.\-m\-\_\-pooled\-Objects.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_pool_a84ab7ce249536f638b0ec873f47cd72a}{\index{org\-::jgap\-::impl\-::\-Pool@{org\-::jgap\-::impl\-::\-Pool}!acquire\-Pooled\-Object@{acquire\-Pooled\-Object}}
+\index{acquire\-Pooled\-Object@{acquire\-Pooled\-Object}!org::jgap::impl::Pool@{org\-::jgap\-::impl\-::\-Pool}}
+\subsubsection[{acquire\-Pooled\-Object}]{\setlength{\rightskip}{0pt plus 5cm}synchronized Object org.\-jgap.\-impl.\-Pool.\-acquire\-Pooled\-Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_pool_a84ab7ce249536f638b0ec873f47cd72a}
+Attempts to acquire an Object instance from the pool. It should be noted that no cleanup or re-\/initialization occurs on these objects, so it's up to the caller to reset the state of the returned Object if that's desirable.
+
+\begin{DoxyReturn}{Returns}
+an Object instance from the pool or null if no Object instances are available in the pool
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 64 of file Pool.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Pool.\-m\-\_\-pooled\-Objects.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-add(), and org.\-jgap.\-impl.\-Pool\-Test.\-test\-Acquire\-Pooled\-Object\-\_\-0().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_pool_abdd9e34abe2f0f485bc2b364b0fab9b6}{\index{org\-::jgap\-::impl\-::\-Pool@{org\-::jgap\-::impl\-::\-Pool}!clear@{clear}}
+\index{clear@{clear}!org::jgap::impl::Pool@{org\-::jgap\-::impl\-::\-Pool}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}synchronized void org.\-jgap.\-impl.\-Pool.\-clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_pool_abdd9e34abe2f0f485bc2b364b0fab9b6}
+Empties out this pool of all objects.
+
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 125 of file Pool.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_pool_a1006cf50190e8be37fe21e3030b46060}{\index{org\-::jgap\-::impl\-::\-Pool@{org\-::jgap\-::impl\-::\-Pool}!release\-All\-Objects@{release\-All\-Objects}}
+\index{release\-All\-Objects@{release\-All\-Objects}!org::jgap::impl::Pool@{org\-::jgap\-::impl\-::\-Pool}}
+\subsubsection[{release\-All\-Objects}]{\setlength{\rightskip}{0pt plus 5cm}synchronized void org.\-jgap.\-impl.\-Pool.\-release\-All\-Objects (
+\begin{DoxyParamCaption}
+\item[{final Collection}]{a\-\_\-objects\-To\-Pool}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_pool_a1006cf50190e8be37fe21e3030b46060}
+Releases a Collection of objects to the pool. It's not required that the objects in the Collection originated from the pool -\/ any objects can be released to it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-objects\-To\-Pool} & the Collection of objects to release into the pool\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 101 of file Pool.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_pool_a7b979b8c659166d5e01b985698074cb0}{\index{org\-::jgap\-::impl\-::\-Pool@{org\-::jgap\-::impl\-::\-Pool}!release\-Object@{release\-Object}}
+\index{release\-Object@{release\-Object}!org::jgap::impl::Pool@{org\-::jgap\-::impl\-::\-Pool}}
+\subsubsection[{release\-Object}]{\setlength{\rightskip}{0pt plus 5cm}synchronized void org.\-jgap.\-impl.\-Pool.\-release\-Object (
+\begin{DoxyParamCaption}
+\item[{final Object}]{a\-\_\-object\-To\-Pool}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_pool_a7b979b8c659166d5e01b985698074cb0}
+Releases an object to the pool. It's not required that the Object originated from the pool -\/ any Object can be released to it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-object\-To\-Pool} & the Object instance to be released into the pool\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 87 of file Pool.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_pool_a22f44a20fa8f6867604a9c2d39fbc16a}{\index{org\-::jgap\-::impl\-::\-Pool@{org\-::jgap\-::impl\-::\-Pool}!size@{size}}
+\index{size@{size}!org::jgap::impl::Pool@{org\-::jgap\-::impl\-::\-Pool}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}synchronized int org.\-jgap.\-impl.\-Pool.\-size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_pool_a22f44a20fa8f6867604a9c2d39fbc16a}
+Retrieves the number of objects currently available in this pool.
+
+\begin{DoxyReturn}{Returns}
+the number of objects in this pool
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 115 of file Pool.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Pool\-Test.\-test\-Acquire\-Pooled\-Object\-\_\-0(), org.\-jgap.\-impl.\-Pool\-Test.\-test\-Clear\-\_\-0(), org.\-jgap.\-impl.\-Pool\-Test.\-test\-Release\-All\-Objects\-\_\-0(), org.\-jgap.\-impl.\-Pool\-Test.\-test\-Release\-All\-Objects\-\_\-1(), and org.\-jgap.\-impl.\-Pool\-Test.\-test\-Size\-\_\-0().
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_pool_ab7440c6f3b541e84d9c1ea60dd2c4bd6}{\index{org\-::jgap\-::impl\-::\-Pool@{org\-::jgap\-::impl\-::\-Pool}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::impl::Pool@{org\-::jgap\-::impl\-::\-Pool}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-impl.\-Pool.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-9 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_pool_ab7440c6f3b541e84d9c1ea60dd2c4bd6}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 35 of file Pool.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_pool_ab6b1b9c3817ac388078aabcd0cf2206f}{\index{org\-::jgap\-::impl\-::\-Pool@{org\-::jgap\-::impl\-::\-Pool}!m\-\_\-pooled\-Objects@{m\-\_\-pooled\-Objects}}
+\index{m\-\_\-pooled\-Objects@{m\-\_\-pooled\-Objects}!org::jgap::impl::Pool@{org\-::jgap\-::impl\-::\-Pool}}
+\subsubsection[{m\-\_\-pooled\-Objects}]{\setlength{\rightskip}{0pt plus 5cm}List org.\-jgap.\-impl.\-Pool.\-m\-\_\-pooled\-Objects\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_pool_ab6b1b9c3817ac388078aabcd0cf2206f}
+The objects currently in the pool. 
+
+Definition at line 40 of file Pool.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Pool.\-acquire\-Pooled\-Object(), and org.\-jgap.\-impl.\-Pool.\-Pool().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/impl/\hyperlink{_pool_8java}{Pool.\-java}\end{DoxyCompactItemize}

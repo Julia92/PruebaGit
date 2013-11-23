@@ -1,0 +1,115 @@
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_single_node_validator}{\section{examples.\-gp.\-tictactoe.\-Single\-Node\-Validator Class Reference}
+\label{classexamples_1_1gp_1_1tictactoe_1_1_single_node_validator}\index{examples.\-gp.\-tictactoe.\-Single\-Node\-Validator@{examples.\-gp.\-tictactoe.\-Single\-Node\-Validator}}
+}
+
+
+Inheritance diagram for examples.\-gp.\-tictactoe.\-Single\-Node\-Validator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classexamples_1_1gp_1_1tictactoe_1_1_single_node_validator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for examples.\-gp.\-tictactoe.\-Single\-Node\-Validator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classexamples_1_1gp_1_1tictactoe_1_1_single_node_validator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+boolean \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_single_node_validator_a32e7b83ad42a193123dbe4dbf9aefc25}{is\-Allowed} (int a\-\_\-chrom\-Index, \hyperlink{classorg_1_1jgap_1_1gp_1_1impl_1_1_program_chromosome}{Program\-Chromosome} a\-\_\-pc, \hyperlink{classorg_1_1jgap_1_1gp_1_1_command_gene}{Command\-Gene}\mbox{[}$\,$\mbox{]} a\-\_\-function\-Set, \hyperlink{classorg_1_1jgap_1_1gp_1_1_command_gene}{Command\-Gene} a\-\_\-function, Class a\-\_\-return\-Type, int a\-\_\-sub\-Return\-Typ, int m\-\_\-index)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Valides single nodes during G\-P program creation to make this process more efficient.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-6 
+\end{DoxySince}
+
+
+Definition at line 14 of file Single\-Node\-Validator.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_single_node_validator_a32e7b83ad42a193123dbe4dbf9aefc25}{\index{examples\-::gp\-::tictactoe\-::\-Single\-Node\-Validator@{examples\-::gp\-::tictactoe\-::\-Single\-Node\-Validator}!is\-Allowed@{is\-Allowed}}
+\index{is\-Allowed@{is\-Allowed}!examples::gp::tictactoe::SingleNodeValidator@{examples\-::gp\-::tictactoe\-::\-Single\-Node\-Validator}}
+\subsubsection[{is\-Allowed}]{\setlength{\rightskip}{0pt plus 5cm}boolean examples.\-gp.\-tictactoe.\-Single\-Node\-Validator.\-is\-Allowed (
+\begin{DoxyParamCaption}
+\item[{int}]{a\-\_\-chrom\-Index, }
+\item[{{\bf Program\-Chromosome}}]{a\-\_\-pc, }
+\item[{{\bf Command\-Gene}\mbox{[}$\,$\mbox{]}}]{a\-\_\-function\-Set, }
+\item[{{\bf Command\-Gene}}]{a\-\_\-function, }
+\item[{Class}]{a\-\_\-return\-Type, }
+\item[{int}]{a\-\_\-sub\-Return\-Typ, }
+\item[{int}]{m\-\_\-index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_single_node_validator_a32e7b83ad42a193123dbe4dbf9aefc25}
+Checks if the given a\-\_\-function is allowed in the current context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-chrom\-Index} & index of the chromosome within the G\-P program \\
+\hline
+{\em a\-\_\-pc} & the instance of the Program\-Chromosome \\
+\hline
+{\em a\-\_\-function\-Set} & the current function set within the program chromosome (given as input parameter for convenience, could also be determined via a\-\_\-pc.\-m\-\_\-genes) \\
+\hline
+{\em a\-\_\-function} & the function that should be added, if allowed \\
+\hline
+{\em a\-\_\-return\-Type} & the class the return type is required to have \\
+\hline
+{\em a\-\_\-sub\-Return\-Typ} & the sub return type the return type is required to have \\
+\hline
+{\em m\-\_\-index} & the index of the up-\/to-\/date last command gene in the program chromosome \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if a\-\_\-function's class exists within a\-\_\-function\-Set
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-6 
+\end{DoxySince}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000011}{Todo}]provide convenient method set\-Non\-Consecutive(boolean) in Command\-Gene \end{DoxyRefDesc}
+
+
+Definition at line 35 of file Single\-Node\-Validator.\-java.
+
+
+
+References org.\-jgap.\-gp.\-impl.\-Program\-Chromosome.\-contains().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1gp_1_1tictactoe_1_1_single_node_validator_a32e7b83ad42a193123dbe4dbf9aefc25_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/examples/src/examples/gp/tictactoe/\hyperlink{_single_node_validator_8java}{Single\-Node\-Validator.\-java}\end{DoxyCompactItemize}

@@ -1,0 +1,250 @@
+.TH "examples.equalDistribution.MainClass" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.equalDistribution.MainClass \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMainClass\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "void \fBdoEvolution\fP (Genotype a_genotype)"
+.br
+.ti -1c
+.RI "void \fBprintSolution\fP (IChromosome a_solution)"
+.br
+.ti -1c
+.RI "void \fBmakeVents\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Genotype \fBconfigureJGAP\fP ()  throws Exception "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBVent\fP[] \fBm_vents\fP"
+.br
+.ti -1c
+.RI "int \fBm_numEvolutions\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.2 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Given 64 vents with different weights\&. Try to make 8 group with each groups having (nearly) the same weight as the other groups\&.
+.PP
+Here, each vent has a similar weight with a small deviation\&. But the deviation could also be significant (then, good solutions are harder to find)\&.
+.PP
+The proposed way of solving this problem is quite easy in its structure\&. There is potential for optimzations!
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 28 of file MainClass\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.equalDistribution\&.MainClass\&.MainClass () throws Exception\fC [inline]\fP"
+Constructor\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 47 of file MainClass\&.java\&.
+.PP
+References examples\&.equalDistribution\&.MainClass\&.configureJGAP(), examples\&.equalDistribution\&.MainClass\&.doEvolution(), and examples\&.equalDistribution\&.MainClass\&.makeVents()\&.
+.PP
+Referenced by examples\&.equalDistribution\&.MainClass\&.main()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Genotype examples\&.equalDistribution\&.MainClass\&.configureJGAP () throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Sets up the configuration for the problem\&.
+.PP
+\fBReturns:\fP
+.RS 4
+configured genotype
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 64 of file MainClass\&.java\&.
+.PP
+References examples\&.equalDistribution\&.MainClass\&.m_numEvolutions, and examples\&.equalDistribution\&.MainClass\&.m_vents\&.
+.PP
+Referenced by examples\&.equalDistribution\&.MainClass\&.MainClass()\&.
+.SS "void examples\&.equalDistribution\&.MainClass\&.doEvolution (Genotypea_genotype)\fC [inline]\fP"
+Does the evolution until finished\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_genotype\fP the genotype to evolve
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 124 of file MainClass\&.java\&.
+.PP
+References examples\&.equalDistribution\&.MainClass\&.m_numEvolutions, and examples\&.equalDistribution\&.MainClass\&.printSolution()\&.
+.PP
+Referenced by examples\&.equalDistribution\&.MainClass\&.MainClass()\&.
+.SS "static void examples\&.equalDistribution\&.MainClass\&.main (String[]args)\fC [inline]\fP, \fC [static]\fP"
+Start the example 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP ignored
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 199 of file MainClass\&.java\&.
+.PP
+References examples\&.equalDistribution\&.MainClass\&.MainClass()\&.
+.SS "void examples\&.equalDistribution\&.MainClass\&.makeVents ()\fC [inline]\fP"
+Create vents with different weights\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 182 of file MainClass\&.java\&.
+.PP
+References examples\&.equalDistribution\&.MainClass\&.m_vents\&.
+.PP
+Referenced by examples\&.equalDistribution\&.MainClass\&.MainClass()\&.
+.SS "void examples\&.equalDistribution\&.MainClass\&.printSolution (IChromosomea_solution)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_solution\fP a solution to print to the console
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 154 of file MainClass\&.java\&.
+.PP
+References examples\&.equalDistribution\&.MainClass\&.m_vents\&.
+.PP
+Referenced by examples\&.equalDistribution\&.MainClass\&.doEvolution()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.equalDistribution\&.MainClass\&.CVS_REVISION = '$Revision: 1\&.2 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 30 of file MainClass\&.java\&.
+.SS "int examples\&.equalDistribution\&.MainClass\&.m_numEvolutions\fC [private]\fP"
+
+.PP
+Definition at line 37 of file MainClass\&.java\&.
+.PP
+Referenced by examples\&.equalDistribution\&.MainClass\&.configureJGAP(), and examples\&.equalDistribution\&.MainClass\&.doEvolution()\&.
+.SS "\fBVent\fP [] examples\&.equalDistribution\&.MainClass\&.m_vents\fC [private]\fP"
+Holds the available vents, each with a specific weight 
+.PP
+Definition at line 35 of file MainClass\&.java\&.
+.PP
+Referenced by examples\&.equalDistribution\&.MainClass\&.configureJGAP(), examples\&.equalDistribution\&.MainClass\&.makeVents(), and examples\&.equalDistribution\&.MainClass\&.printSolution()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

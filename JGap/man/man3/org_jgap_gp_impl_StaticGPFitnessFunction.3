@@ -1,0 +1,230 @@
+.TH "org.jgap.gp.impl.StaticGPFitnessFunction" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.impl.StaticGPFitnessFunction \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.GPFitnessFunction\fP, and Comparable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStaticGPFitnessFunction\fP (double a_staticFitnessValue)"
+.br
+.ti -1c
+.RI "double \fBgetStaticFitnessValue\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetStaticFitnessValue\fP (double a_staticFitnessValue)"
+.br
+.ti -1c
+.RI "int \fBhashCode\fP ()"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "double \fBevaluate\fP (\fBIGPProgram\fP a_subject)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBm_staticFitnessValue\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.2 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+GP Fitness function always returning the same value\&. Only for testing purpose!
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file StaticGPFitnessFunction\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.StaticGPFitnessFunction (doublea_staticFitnessValue)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_staticFitnessValue\fP double
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 (until 1\&.1: input type int) 
+.RE
+.PP
+
+.PP
+Definition at line 38 of file StaticGPFitnessFunction\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.m_staticFitnessValue\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.compareTo()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.compareTo (Objecta_other)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP sic 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+as always
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 87 of file StaticGPFitnessFunction\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.m_staticFitnessValue, and org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.StaticGPFitnessFunction()\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.evaluate (\fBIGPProgram\fPa_subject)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_subject\fP ignored: the GP program to evaluate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+static fitness value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.GPFitnessFunction\fP\&.
+.PP
+Definition at line 49 of file StaticGPFitnessFunction\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.m_staticFitnessValue\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.getStaticFitnessValue ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+double typed fitness value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 60 of file StaticGPFitnessFunction\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.m_staticFitnessValue\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.hashCode ()\fC [inline]\fP"
+
+.PP
+Definition at line 75 of file StaticGPFitnessFunction\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.m_staticFitnessValue\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.setStaticFitnessValue (doublea_staticFitnessValue)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_staticFitnessValue\fP the value to return as fitness value when calling \fBevaluate()\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 (until 1\&.1: type int) 
+.RE
+.PP
+
+.PP
+Definition at line 71 of file StaticGPFitnessFunction\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.m_staticFitnessValue\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.CVS_REVISION = '$Revision: 1\&.2 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file StaticGPFitnessFunction\&.java\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.m_staticFitnessValue\fC [private]\fP"
+
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 30 of file StaticGPFitnessFunction\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.compareTo(), org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.evaluate(), org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.getStaticFitnessValue(), org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.hashCode(), org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.setStaticFitnessValue(), and org\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\&.StaticGPFitnessFunction()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

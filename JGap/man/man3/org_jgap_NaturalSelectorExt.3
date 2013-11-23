@@ -1,0 +1,299 @@
+.TH "org.jgap.NaturalSelectorExt" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.NaturalSelectorExt \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.NaturalSelector\fP\&.
+.PP
+Inherited by \fBorg\&.jgap\&.impl\&.BestChromosomesSelector\fP, \fBorg\&.jgap\&.impl\&.ThresholdSelector\fP, \fBorg\&.jgap\&.impl\&.TournamentSelector\fP, and \fBorg\&.jgap\&.impl\&.WeightedRouletteSelector\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNaturalSelectorExt\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBNaturalSelectorExt\fP (\fBConfiguration\fP a_config)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBsetDoubletteChromosomesAllowed\fP (final boolean a_doublettesAllowed)"
+.br
+.ti -1c
+.RI "boolean \fBgetDoubletteChromosomesAllowed\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_o)"
+.br
+.ti -1c
+.RI "final synchronized void \fBselect\fP (final int a_howManyToSelect, final \fBPopulation\fP a_from_pop, \fBPopulation\fP a_to_pop)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP (\fBConfiguration\fP a_config)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "abstract void \fBadd\fP (final \fBIChromosome\fP a_chromosomeToAdd)"
+.br
+.ti -1c
+.RI "abstract void \fBselectChromosomes\fP (final int a_howManyToSelect, final \fBPopulation\fP a_from_pop)"
+.br
+.ti -1c
+.RI "final void \fBselectChromosome\fP (\fBIChromosome\fP a_chrom, final boolean a_clone)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPopulation\fP \fBm_to_pop\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_doublettesAllowed\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+An extended implementation of \fBNaturalSelector\fP that acts as a base class for the built-in JGAP selectors BestChromosomesSelector and WeightedRouletteSelector\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file NaturalSelectorExt\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.NaturalSelectorExt\&.NaturalSelectorExt () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Default constructor, only needed for dynamic instantiation!
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 37 of file NaturalSelectorExt\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.getStaticConfiguration(), and org\&.jgap\&.NaturalSelectorExt\&.init()\&.
+.PP
+Referenced by org\&.jgap\&.NaturalSelectorExt\&.equals()\&.
+.SS "org\&.jgap\&.NaturalSelectorExt\&.NaturalSelectorExt (\fBConfiguration\fPa_config) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 52 of file NaturalSelectorExt\&.java\&.
+.PP
+References org\&.jgap\&.NaturalSelectorExt\&.init()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "abstract void org\&.jgap\&.NaturalSelectorExt\&.add (final \fBIChromosome\fPa_chromosomeToAdd)\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.TournamentSelector\fP, \fBorg\&.jgap\&.impl\&.ThresholdSelector\fP, \fBorg\&.jgap\&.impl\&.WeightedRouletteSelector\fP, and \fBorg\&.jgap\&.impl\&.BestChromosomesSelector\fP\&.
+.PP
+Referenced by org\&.jgap\&.NaturalSelectorExt\&.select()\&.
+.SS "boolean org\&.jgap\&.NaturalSelectorExt\&.equals (Objecta_o)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_o\fP the object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: compared object is seen as equal to current instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 94 of file NaturalSelectorExt\&.java\&.
+.PP
+References org\&.jgap\&.NaturalSelectorExt\&.m_doublettesAllowed, and org\&.jgap\&.NaturalSelectorExt\&.NaturalSelectorExt()\&.
+.SS "boolean org\&.jgap\&.NaturalSelectorExt\&.getDoubletteChromosomesAllowed ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+true: doublette chromosomes allowed to be added to the selector false: this is sort of risky and might lead to unexpected population sizes during evolution!
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 83 of file NaturalSelectorExt\&.java\&.
+.PP
+References org\&.jgap\&.NaturalSelectorExt\&.m_doublettesAllowed\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BestChromosomesSelector\&.add(), org\&.jgap\&.impl\&.BestChromosomesSelector\&.clone(), org\&.jgap\&.impl\&.BestChromosomesSelector\&.equals(), org\&.jgap\&.impl\&.BestChromosomesSelector\&.selectChromosomes(), org\&.jgap\&.impl\&.BestChromosomesSelectorTest\&.testConstruct_0(), and org\&.jgap\&.impl\&.BestChromosomesSelectorTest\&.testDoubletteChromosomesAllowed_0()\&.
+.SS "void org\&.jgap\&.NaturalSelectorExt\&.init (\fBConfiguration\fPa_config) throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 58 of file NaturalSelectorExt\&.java\&.
+.PP
+Referenced by org\&.jgap\&.NaturalSelectorExt\&.NaturalSelectorExt()\&.
+.SS "final synchronized void org\&.jgap\&.NaturalSelectorExt\&.select (final inta_howManyToSelect, final \fBPopulation\fPa_from_pop, \fBPopulation\fPa_to_pop)\fC [inline]\fP"
+Selects a given number of Chromosomes that will move on to the next generation population\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_from_pop\fP the population the Chromosomes will be selected from 
+.br
+\fIa_to_pop\fP the population the Chromosomes will be added to 
+.br
+\fIa_howManyToSelect\fP the number of Chromosomes to select
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 127 of file NaturalSelectorExt\&.java\&.
+.PP
+References org\&.jgap\&.NaturalSelectorExt\&.add(), org\&.jgap\&.Population\&.getChromosome(), and org\&.jgap\&.NaturalSelectorExt\&.selectChromosomes()\&.
+.SS "final void org\&.jgap\&.NaturalSelectorExt\&.selectChromosome (\fBIChromosome\fPa_chrom, final booleana_clone)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 156 of file NaturalSelectorExt\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.contains(), org\&.jgap\&.NaturalSelector\&.getConfiguration(), org\&.jgap\&.NaturalSelector\&.m_monitorActive, org\&.jgap\&.NaturalSelectorExt\&.m_to_pop, and org\&.jgap\&.IHandler\&.perform()\&.
+.SS "abstract void org\&.jgap\&.NaturalSelectorExt\&.selectChromosomes (final inta_howManyToSelect, final \fBPopulation\fPa_from_pop)\fC [protected]\fP, \fC [pure virtual]\fP"
+Selects a given number of chromosomes that will move on to the next generation population\&. For selecting a chromosome for the next generation, the method selectChromosome(IChromosome, boolean) has to be used!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_from_pop\fP the population the Chromosomes will be selected from 
+.br
+\fIa_howManyToSelect\fP the number of Chromosomes to select
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Referenced by org\&.jgap\&.NaturalSelectorExt\&.select()\&.
+.SS "void org\&.jgap\&.NaturalSelectorExt\&.setDoubletteChromosomesAllowed (final booleana_doublettesAllowed)\fC [inline]\fP"
+Determines whether doublette chromosomes may be added to the selector or will be ignored\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_doublettesAllowed\fP true: doublette chromosomes allowed to be added to the selector\&. false: doublettes will be ignored and not added
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 71 of file NaturalSelectorExt\&.java\&.
+.PP
+References org\&.jgap\&.NaturalSelectorExt\&.m_doublettesAllowed\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BestChromosomesSelector\&.BestChromosomesSelector()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "boolean org\&.jgap\&.NaturalSelectorExt\&.m_doublettesAllowed\fC [private]\fP"
+Allows or disallows doublette chromosomes to be added to the selector 
+.PP
+Definition at line 27 of file NaturalSelectorExt\&.java\&.
+.PP
+Referenced by org\&.jgap\&.NaturalSelectorExt\&.equals(), org\&.jgap\&.NaturalSelectorExt\&.getDoubletteChromosomesAllowed(), and org\&.jgap\&.NaturalSelectorExt\&.setDoubletteChromosomesAllowed()\&.
+.SS "\fBPopulation\fP org\&.jgap\&.NaturalSelectorExt\&.m_to_pop\fC [private]\fP"
+
+.PP
+Definition at line 22 of file NaturalSelectorExt\&.java\&.
+.PP
+Referenced by org\&.jgap\&.NaturalSelectorExt\&.selectChromosome()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

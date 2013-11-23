@@ -1,0 +1,155 @@
+.TH "examples.math.cmd.MathOperator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.math.cmd.MathOperator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBexamples\&.math\&.cmd\&.Operator\fP\&.
+.PP
+Inherited by \fBexamples\&.math\&.cmd\&.AddOperator\fP, \fBexamples\&.math\&.cmd\&.DivideOperator\fP, \fBexamples\&.math\&.cmd\&.MinusOperator\fP, and \fBexamples\&.math\&.cmd\&.MultiplyOperator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMathOperator\fP ()"
+.br
+.ti -1c
+.RI "\fBMathOperator\fP (\fBOperand\fP theLeft, \fBOperand\fP theRight)"
+.br
+.ti -1c
+.RI "void \fBsetLeftOperand\fP (\fBOperand\fP theOp)"
+.br
+.ti -1c
+.RI "void \fBsetRightOperand\fP (\fBOperand\fP theOp)"
+.br
+.ti -1c
+.RI "\fBOperand\fP \fBgetLeftOperand\fP ()"
+.br
+.ti -1c
+.RI "\fBOperand\fP \fBgetRightOperand\fP ()"
+.br
+.ti -1c
+.RI "double \fBvalue\fP ()"
+.br
+.ti -1c
+.RI "abstract Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBOperand\fP \fBmLeftOperand\fP"
+.br
+.ti -1c
+.RI "\fBOperand\fP \fBmRightOperand\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.1 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Base class for mathematical operators\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Michael Grove 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 18 of file MathOperator\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.math\&.cmd\&.MathOperator\&.MathOperator ()\fC [inline]\fP"
+
+.PP
+Definition at line 27 of file MathOperator\&.java\&.
+.SS "examples\&.math\&.cmd\&.MathOperator\&.MathOperator (\fBOperand\fPtheLeft, \fBOperand\fPtheRight)\fC [inline]\fP"
+
+.PP
+Definition at line 30 of file MathOperator\&.java\&.
+.PP
+References examples\&.math\&.cmd\&.MathOperator\&.mLeftOperand, and examples\&.math\&.cmd\&.MathOperator\&.mRightOperand\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "abstract Object examples\&.math\&.cmd\&.MathOperator\&.clone ()\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBexamples\&.math\&.cmd\&.AddOperator\fP, \fBexamples\&.math\&.cmd\&.DivideOperator\fP, \fBexamples\&.math\&.cmd\&.MinusOperator\fP, and \fBexamples\&.math\&.cmd\&.MultiplyOperator\fP\&.
+.SS "\fBOperand\fP examples\&.math\&.cmd\&.MathOperator\&.getLeftOperand ()\fC [inline]\fP"
+
+.PP
+Implements \fBexamples\&.math\&.cmd\&.Operator\fP\&.
+.PP
+Definition at line 43 of file MathOperator\&.java\&.
+.PP
+References examples\&.math\&.cmd\&.MathOperator\&.mLeftOperand\&.
+.PP
+Referenced by examples\&.math\&.cmd\&.DivideOperator\&.calcuate(), examples\&.math\&.cmd\&.MultiplyOperator\&.calcuate(), examples\&.math\&.cmd\&.MinusOperator\&.calcuate(), and examples\&.math\&.cmd\&.AddOperator\&.calcuate()\&.
+.SS "\fBOperand\fP examples\&.math\&.cmd\&.MathOperator\&.getRightOperand ()\fC [inline]\fP"
+
+.PP
+Implements \fBexamples\&.math\&.cmd\&.Operator\fP\&.
+.PP
+Definition at line 47 of file MathOperator\&.java\&.
+.PP
+References examples\&.math\&.cmd\&.MathOperator\&.mRightOperand\&.
+.PP
+Referenced by examples\&.math\&.cmd\&.DivideOperator\&.calcuate(), examples\&.math\&.cmd\&.MultiplyOperator\&.calcuate(), examples\&.math\&.cmd\&.MinusOperator\&.calcuate(), and examples\&.math\&.cmd\&.AddOperator\&.calcuate()\&.
+.SS "void examples\&.math\&.cmd\&.MathOperator\&.setLeftOperand (\fBOperand\fPtheOp)\fC [inline]\fP"
+
+.PP
+Definition at line 35 of file MathOperator\&.java\&.
+.PP
+References examples\&.math\&.cmd\&.MathOperator\&.mLeftOperand\&.
+.SS "void examples\&.math\&.cmd\&.MathOperator\&.setRightOperand (\fBOperand\fPtheOp)\fC [inline]\fP"
+
+.PP
+Definition at line 39 of file MathOperator\&.java\&.
+.PP
+References examples\&.math\&.cmd\&.MathOperator\&.mRightOperand\&.
+.SS "double examples\&.math\&.cmd\&.MathOperator\&.value ()\fC [inline]\fP"
+
+.PP
+Implements \fBexamples\&.math\&.cmd\&.Operand\fP\&.
+.PP
+Definition at line 51 of file MathOperator\&.java\&.
+.PP
+References examples\&.math\&.cmd\&.Operator\&.calcuate()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.math\&.cmd\&.MathOperator\&.CVS_REVISION = '$Revision: 1\&.1 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 21 of file MathOperator\&.java\&.
+.SS "\fBOperand\fP examples\&.math\&.cmd\&.MathOperator\&.mLeftOperand\fC [private]\fP"
+
+.PP
+Definition at line 23 of file MathOperator\&.java\&.
+.PP
+Referenced by examples\&.math\&.cmd\&.MathOperator\&.getLeftOperand(), examples\&.math\&.cmd\&.MathOperator\&.MathOperator(), and examples\&.math\&.cmd\&.MathOperator\&.setLeftOperand()\&.
+.SS "\fBOperand\fP examples\&.math\&.cmd\&.MathOperator\&.mRightOperand\fC [private]\fP"
+
+.PP
+Definition at line 25 of file MathOperator\&.java\&.
+.PP
+Referenced by examples\&.math\&.cmd\&.MathOperator\&.getRightOperand(), examples\&.math\&.cmd\&.MathOperator\&.MathOperator(), and examples\&.math\&.cmd\&.MathOperator\&.setRightOperand()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

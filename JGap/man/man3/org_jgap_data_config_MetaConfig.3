@@ -1,0 +1,471 @@
+.TH "org.jgap.data.config.MetaConfig" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.data.config.MetaConfig \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "List \fBgetConfigProperty\fP (String className)"
+.br
+.ti -1c
+.RI "Reader \fBgetReader\fP (String a_filename)  throws IOException "
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBMetaConfig\fP \fBgetInstance\fP ()  throws MetaConfigException, IOException "
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP ()  throws MetaConfigException, IOException "
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMetaConfig\fP ()  throws MetaConfigException, IOException "
+.br
+.ti -1c
+.RI "boolean \fBisComment\fP (String line)"
+.br
+.ti -1c
+.RI "void \fBparseLine\fP (String a_line)  throws MetaConfigException "
+.br
+.ti -1c
+.RI "void \fBhandleClass\fP (final String a_token)"
+.br
+.ti -1c
+.RI "void \fBhandleProperty\fP (final String a_token)  throws MetaConfigException "
+.br
+.ti -1c
+.RI "void \fBhandleValues\fP (final String a_token)  throws MetaConfigException "
+.br
+.ti -1c
+.RI "void \fBendState\fP ()  throws MetaConfigException "
+.br
+.ti -1c
+.RI "void \fBadd\fP (final String currName, \fBConfigProperty\fP a_cp)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Hashtable \fBm_metaMap\fP = new Hashtable()"
+.br
+.ti -1c
+.RI "int \fBm_state\fP"
+.br
+.ti -1c
+.RI "String \fBm_currName\fP"
+.br
+.ti -1c
+.RI "\fBConfigProperty\fP \fBm_currProperty\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBMETACON_FILENAME\fP = 'jgap-meta\&.con'"
+.br
+.ti -1c
+.RI "static final String \fBCN\fP = 'MetaConfig'"
+.br
+.ti -1c
+.RI "static \fBMetaConfig\fP \fBinstance\fP"
+.br
+.ti -1c
+.RI "static final int \fBINIT\fP = 0"
+.br
+.ti -1c
+.RI "static final int \fBCLASS\fP = 1"
+.br
+.ti -1c
+.RI "static final int \fBPROPERTY\fP = 2"
+.br
+.ti -1c
+.RI "static final int \fBVALUES\fP = 3"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class provides an interface to the configuration information to create a JGAP \fBConfiguration\fP GUI\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file MetaConfig\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.data\&.config\&.MetaConfig\&.MetaConfig () throws \fBMetaConfigException\fP, IOException\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 59 of file MetaConfig\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.MetaConfig\&.INIT, org\&.jgap\&.data\&.config\&.MetaConfig\&.init(), and org\&.jgap\&.data\&.config\&.MetaConfig\&.m_state\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfig\&.getInstance()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.data\&.config\&.MetaConfig\&.add (final StringcurrName, \fBConfigProperty\fPa_cp)\fC [inline]\fP, \fC [private]\fP"
+Add a new \fBConfigProperty\fP for a certain class to the hashtable of properties\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcurrName\fP name of the class to which the property belongs 
+.br
+\fIa_cp\fP the \fBConfigProperty\fP to be added to the class
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 275 of file MetaConfig\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.MetaConfig\&.m_metaMap\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfig\&.endState(), org\&.jgap\&.data\&.config\&.MetaConfig\&.handleClass(), and org\&.jgap\&.data\&.config\&.MetaConfig\&.handleProperty()\&.
+.SS "void org\&.jgap\&.data\&.config\&.MetaConfig\&.endState () throws \fBMetaConfigException\fP\fC [inline]\fP, \fC [private]\fP"
+Called once the EOF is encountered while parsing the file\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBMetaConfigException\fP\fP if parsing ends in an invalid state
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 253 of file MetaConfig\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.MetaConfig\&.add(), org\&.jgap\&.data\&.config\&.MetaConfig\&.m_currName, org\&.jgap\&.data\&.config\&.MetaConfig\&.m_currProperty, org\&.jgap\&.data\&.config\&.MetaConfig\&.m_state, org\&.jgap\&.data\&.config\&.MetaConfig\&.METACON_FILENAME, org\&.jgap\&.data\&.config\&.MetaConfig\&.PROPERTY, and org\&.jgap\&.data\&.config\&.MetaConfig\&.VALUES\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfig\&.init()\&.
+.SS "List org\&.jgap\&.data\&.config\&.MetaConfig\&.getConfigProperty (StringclassName)\fC [inline]\fP"
+Read the meta-config file and load it in memory\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIclassName\fP the name of the class of which the properties are required 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the list of properties for this class, if class is registered, otherwise null
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 77 of file MetaConfig\&.java\&.
+.SS "static \fBMetaConfig\fP org\&.jgap\&.data\&.config\&.MetaConfig\&.getInstance () throws \fBMetaConfigException\fP, IOException\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 51 of file MetaConfig\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.MetaConfig\&.instance, and org\&.jgap\&.data\&.config\&.MetaConfig\&.MetaConfig()\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfigTest\&.testSingleton_0()\&.
+.SS "Reader org\&.jgap\&.data\&.config\&.MetaConfig\&.getReader (Stringa_filename) throws IOException\fC [inline]\fP"
+Returns a reader to a file 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_filename\fP the file to retrieve a reader for 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIOException\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the Reader
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 116 of file MetaConfig\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfig\&.init()\&.
+.SS "void org\&.jgap\&.data\&.config\&.MetaConfig\&.handleClass (final Stringa_token)\fC [inline]\fP, \fC [private]\fP"
+Handle the state when a 'class' tag is found\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 185 of file MetaConfig\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.MetaConfig\&.add(), org\&.jgap\&.data\&.config\&.MetaConfig\&.CLASS, org\&.jgap\&.data\&.config\&.MetaConfig\&.m_currName, org\&.jgap\&.data\&.config\&.MetaConfig\&.m_currProperty, and org\&.jgap\&.data\&.config\&.MetaConfig\&.m_state\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfig\&.parseLine()\&.
+.SS "void org\&.jgap\&.data\&.config\&.MetaConfig\&.handleProperty (final Stringa_token) throws \fBMetaConfigException\fP\fC [inline]\fP, \fC [private]\fP"
+Handle the state when a 'property' tag is found\&. 
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBMetaConfigException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 201 of file MetaConfig\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.MetaConfig\&.add(), org\&.jgap\&.data\&.config\&.MetaConfig\&.m_currName, org\&.jgap\&.data\&.config\&.MetaConfig\&.m_currProperty, org\&.jgap\&.data\&.config\&.MetaConfig\&.m_state, org\&.jgap\&.data\&.config\&.MetaConfig\&.PROPERTY, and org\&.jgap\&.data\&.config\&.MetaConfig\&.VALUES\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfig\&.parseLine()\&.
+.SS "void org\&.jgap\&.data\&.config\&.MetaConfig\&.handleValues (final Stringa_token) throws \fBMetaConfigException\fP\fC [inline]\fP, \fC [private]\fP"
+Handle the state when a 'values' tag is found\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_token\fP the rhs of the values property 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBMetaConfigException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 232 of file MetaConfig\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.MetaConfig\&.m_state, and org\&.jgap\&.data\&.config\&.MetaConfig\&.VALUES\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfig\&.parseLine()\&.
+.SS "void org\&.jgap\&.data\&.config\&.MetaConfig\&.init () throws \fBMetaConfigException\fP, IOException\fC [inline]\fP, \fC [protected]\fP"
+Read the meta-config file and load it in memory\&. Having to read my own property file without using the Java Property class since I need to preserve the order of these properties, plus I have duplicate labels\&. 
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBMetaConfigException\fP\fP 
+.br
+\fIIOException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 92 of file MetaConfig\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.MetaConfig\&.endState(), org\&.jgap\&.data\&.config\&.MetaConfig\&.getReader(), org\&.jgap\&.data\&.config\&.MetaConfig\&.isComment(), org\&.jgap\&.data\&.config\&.MetaConfig\&.METACON_FILENAME, and org\&.jgap\&.data\&.config\&.MetaConfig\&.parseLine()\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfig\&.MetaConfig()\&.
+.SS "boolean org\&.jgap\&.data\&.config\&.MetaConfig\&.isComment (Stringline)\fC [inline]\fP, \fC [private]\fP"
+Check whether a line is a comment\&. Any line starting with a '#' is a comment\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true if a line is a comment, false if it is not
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 130 of file MetaConfig\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfig\&.init()\&.
+.SS "void org\&.jgap\&.data\&.config\&.MetaConfig\&.parseLine (Stringa_line) throws \fBMetaConfigException\fP\fC [inline]\fP, \fC [private]\fP"
+Parse a line\&. This method is dispatches lines to other methods, hence acting like a state machine\&. 
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBMetaConfigException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 147 of file MetaConfig\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.MetaConfig\&.CLASS, org\&.jgap\&.data\&.config\&.MetaConfig\&.CN, org\&.jgap\&.data\&.config\&.MetaConfig\&.handleClass(), org\&.jgap\&.data\&.config\&.MetaConfig\&.handleProperty(), org\&.jgap\&.data\&.config\&.MetaConfig\&.handleValues(), org\&.jgap\&.data\&.config\&.MetaConfig\&.INIT, org\&.jgap\&.data\&.config\&.MetaConfig\&.m_state, org\&.jgap\&.data\&.config\&.MetaConfig\&.METACON_FILENAME, org\&.jgap\&.data\&.config\&.MetaConfig\&.PROPERTY, and org\&.jgap\&.data\&.config\&.MetaConfig\&.VALUES\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfig\&.init()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final int org\&.jgap\&.data\&.config\&.MetaConfig\&.CLASS = 1\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 40 of file MetaConfig\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfig\&.handleClass(), and org\&.jgap\&.data\&.config\&.MetaConfig\&.parseLine()\&.
+.SS "final String org\&.jgap\&.data\&.config\&.MetaConfig\&.CN = 'MetaConfig'\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 27 of file MetaConfig\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfig\&.parseLine()\&.
+.SS "final int org\&.jgap\&.data\&.config\&.MetaConfig\&.INIT = 0\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 38 of file MetaConfig\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfig\&.MetaConfig(), and org\&.jgap\&.data\&.config\&.MetaConfig\&.parseLine()\&.
+.SS "\fBMetaConfig\fP org\&.jgap\&.data\&.config\&.MetaConfig\&.instance\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 30 of file MetaConfig\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfig\&.getInstance()\&.
+.SS "String org\&.jgap\&.data\&.config\&.MetaConfig\&.m_currName\fC [private]\fP"
+
+.PP
+Definition at line 47 of file MetaConfig\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfig\&.endState(), org\&.jgap\&.data\&.config\&.MetaConfig\&.handleClass(), and org\&.jgap\&.data\&.config\&.MetaConfig\&.handleProperty()\&.
+.SS "\fBConfigProperty\fP org\&.jgap\&.data\&.config\&.MetaConfig\&.m_currProperty\fC [private]\fP"
+
+.PP
+Definition at line 49 of file MetaConfig\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfig\&.endState(), org\&.jgap\&.data\&.config\&.MetaConfig\&.handleClass(), and org\&.jgap\&.data\&.config\&.MetaConfig\&.handleProperty()\&.
+.SS "Hashtable org\&.jgap\&.data\&.config\&.MetaConfig\&.m_metaMap = new Hashtable()\fC [private]\fP"
+
+.PP
+Definition at line 33 of file MetaConfig\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfig\&.add()\&.
+.SS "int org\&.jgap\&.data\&.config\&.MetaConfig\&.m_state\fC [private]\fP"
+
+.PP
+Definition at line 36 of file MetaConfig\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfig\&.endState(), org\&.jgap\&.data\&.config\&.MetaConfig\&.handleClass(), org\&.jgap\&.data\&.config\&.MetaConfig\&.handleProperty(), org\&.jgap\&.data\&.config\&.MetaConfig\&.handleValues(), org\&.jgap\&.data\&.config\&.MetaConfig\&.MetaConfig(), and org\&.jgap\&.data\&.config\&.MetaConfig\&.parseLine()\&.
+.SS "final String org\&.jgap\&.data\&.config\&.MetaConfig\&.METACON_FILENAME = 'jgap-meta\&.con'\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 25 of file MetaConfig\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfig\&.endState(), org\&.jgap\&.data\&.config\&.MetaConfig\&.init(), and org\&.jgap\&.data\&.config\&.MetaConfig\&.parseLine()\&.
+.SS "final int org\&.jgap\&.data\&.config\&.MetaConfig\&.PROPERTY = 2\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 42 of file MetaConfig\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfig\&.endState(), org\&.jgap\&.data\&.config\&.MetaConfig\&.handleProperty(), and org\&.jgap\&.data\&.config\&.MetaConfig\&.parseLine()\&.
+.SS "final int org\&.jgap\&.data\&.config\&.MetaConfig\&.VALUES = 3\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 44 of file MetaConfig\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.MetaConfig\&.endState(), org\&.jgap\&.data\&.config\&.MetaConfig\&.handleProperty(), org\&.jgap\&.data\&.config\&.MetaConfig\&.handleValues(), and org\&.jgap\&.data\&.config\&.MetaConfig\&.parseLine()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

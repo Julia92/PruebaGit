@@ -1,0 +1,285 @@
+\hypertarget{classexamples_1_1gp_1_1island_1_1_island_g_p_example}{\section{examples.\-gp.\-island.\-Island\-G\-P\-Example Class Reference}
+\label{classexamples_1_1gp_1_1island_1_1_island_g_p_example}\index{examples.\-gp.\-island.\-Island\-G\-P\-Example@{examples.\-gp.\-island.\-Island\-G\-P\-Example}}
+}
+
+
+Collaboration diagram for examples.\-gp.\-island.\-Island\-G\-P\-Example\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1gp_1_1island_1_1_island_g_p_example__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a830119e3f370d14fb0be6187f1d9aa28}{Island\-G\-P\-Example} ()
+\item 
+void \hyperlink{classexamples_1_1gp_1_1island_1_1_island_g_p_example_ac2b4f196650fb6237af36354def5ecf6}{start} ()  throws Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a89053ea6af31e8facdf19652b80e036e}{main} (String\mbox{[}$\,$\mbox{]} args)  throws Exception 
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classexamples_1_1gp_1_1island_1_1_island_g_p_example_afcd1ccf4d3dd7ea6027593c8d02c9f89}{merge\-Population} (G\-P\-Population original, G\-P\-Population to\-Merge, int offset, int count)
+\item 
+void \hyperlink{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a0f3a0c6a55b068bf9d246005fda9a5ea}{stop\-All\-Islands} (Thread\mbox{[}$\,$\mbox{]} island\-Threads)
+\item 
+Runnable \hyperlink{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a79b395eb7570f17375cc3bcff6e274cc}{get\-Island} (int a\-\_\-index, int a\-\_\-pop\-Size)  throws Exception 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classexamples_1_1gp_1_1island_1_1_island_g_p_example_ab48d3771b2dc5539aaf6181e88f45873}{next\-Number}
+\item 
+\hyperlink{classexamples_1_1gp_1_1island_1_1_island_g_p_thread}{Island\-G\-P\-Thread} \hyperlink{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a4d2c1a8403e70f6ea4de0a65ddb848c3}{m\-\_\-first\-Island} = null
+\item 
+int \hyperlink{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a1695c425e6dba81796555c09856080ad}{runs} = 0
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a50c9a516e0c54393ff50004685708692}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-6 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple example on how to build and run an G\-P island model with J\-G\-A\-P.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-6 
+\end{DoxySince}
+
+
+Definition at line 21 of file Island\-G\-P\-Example.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a830119e3f370d14fb0be6187f1d9aa28}{\index{examples\-::gp\-::island\-::\-Island\-G\-P\-Example@{examples\-::gp\-::island\-::\-Island\-G\-P\-Example}!Island\-G\-P\-Example@{Island\-G\-P\-Example}}
+\index{Island\-G\-P\-Example@{Island\-G\-P\-Example}!examples::gp::island::IslandGPExample@{examples\-::gp\-::island\-::\-Island\-G\-P\-Example}}
+\subsubsection[{Island\-G\-P\-Example}]{\setlength{\rightskip}{0pt plus 5cm}examples.\-gp.\-island.\-Island\-G\-P\-Example.\-Island\-G\-P\-Example (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a830119e3f370d14fb0be6187f1d9aa28}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000007}{Todo}]Island config. einbauen, so dass Island model automatisch ausgeführt wird \end{DoxyRefDesc}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000008}{Todo}]impl. Merge\-Event, e.\-g.\-: merge islands when one island stucks \end{DoxyRefDesc}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000009}{Todo}]jeweils beste lösung geht öfters verloren! Beeinflusst ein Island das andere oder ist die Lösung in einem Island nicht beständig? \end{DoxyRefDesc}
+
+
+Definition at line 38 of file Island\-G\-P\-Example.\-java.
+
+
+
+Referenced by examples.\-gp.\-island.\-Island\-G\-P\-Example.\-main().
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a79b395eb7570f17375cc3bcff6e274cc}{\index{examples\-::gp\-::island\-::\-Island\-G\-P\-Example@{examples\-::gp\-::island\-::\-Island\-G\-P\-Example}!get\-Island@{get\-Island}}
+\index{get\-Island@{get\-Island}!examples::gp::island::IslandGPExample@{examples\-::gp\-::island\-::\-Island\-G\-P\-Example}}
+\subsubsection[{get\-Island}]{\setlength{\rightskip}{0pt plus 5cm}Runnable examples.\-gp.\-island.\-Island\-G\-P\-Example.\-get\-Island (
+\begin{DoxyParamCaption}
+\item[{int}]{a\-\_\-index, }
+\item[{int}]{a\-\_\-pop\-Size}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a79b395eb7570f17375cc3bcff6e274cc}
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-index} & index of island to create \\
+\hline
+{\em a\-\_\-pop\-Size} & the population size the island should have\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new island instance 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-6 
+\end{DoxySince}
+
+
+Definition at line 212 of file Island\-G\-P\-Example.\-java.
+
+
+
+References examples.\-gp.\-island.\-Island\-G\-P\-Example.\-m\-\_\-first\-Island.
+
+
+
+Referenced by examples.\-gp.\-island.\-Island\-G\-P\-Example.\-start().
+
+\hypertarget{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a89053ea6af31e8facdf19652b80e036e}{\index{examples\-::gp\-::island\-::\-Island\-G\-P\-Example@{examples\-::gp\-::island\-::\-Island\-G\-P\-Example}!main@{main}}
+\index{main@{main}!examples::gp::island::IslandGPExample@{examples\-::gp\-::island\-::\-Island\-G\-P\-Example}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void examples.\-gp.\-island.\-Island\-G\-P\-Example.\-main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a89053ea6af31e8facdf19652b80e036e}
+
+
+Definition at line 220 of file Island\-G\-P\-Example.\-java.
+
+
+
+References examples.\-gp.\-island.\-Island\-G\-P\-Example.\-Island\-G\-P\-Example().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a89053ea6af31e8facdf19652b80e036e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classexamples_1_1gp_1_1island_1_1_island_g_p_example_afcd1ccf4d3dd7ea6027593c8d02c9f89}{\index{examples\-::gp\-::island\-::\-Island\-G\-P\-Example@{examples\-::gp\-::island\-::\-Island\-G\-P\-Example}!merge\-Population@{merge\-Population}}
+\index{merge\-Population@{merge\-Population}!examples::gp::island::IslandGPExample@{examples\-::gp\-::island\-::\-Island\-G\-P\-Example}}
+\subsubsection[{merge\-Population}]{\setlength{\rightskip}{0pt plus 5cm}void examples.\-gp.\-island.\-Island\-G\-P\-Example.\-merge\-Population (
+\begin{DoxyParamCaption}
+\item[{G\-P\-Population}]{original, }
+\item[{G\-P\-Population}]{to\-Merge, }
+\item[{int}]{offset, }
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classexamples_1_1gp_1_1island_1_1_island_g_p_example_afcd1ccf4d3dd7ea6027593c8d02c9f89}
+Merge two populations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em original} & G\-P\-Population \\
+\hline
+{\em to\-Merge} & G\-P\-Population \\
+\hline
+{\em offset} & offset in \char`\"{}original\char`\"{} for programs to be merged in to \\
+\hline
+{\em count} & number of programs to merge from \char`\"{}to\-Merge\char`\"{} to \char`\"{}original\char`\"{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-6 
+\end{DoxySince}
+
+
+Definition at line 187 of file Island\-G\-P\-Example.\-java.
+
+
+
+Referenced by examples.\-gp.\-island.\-Island\-G\-P\-Example.\-start().
+
+\hypertarget{classexamples_1_1gp_1_1island_1_1_island_g_p_example_ac2b4f196650fb6237af36354def5ecf6}{\index{examples\-::gp\-::island\-::\-Island\-G\-P\-Example@{examples\-::gp\-::island\-::\-Island\-G\-P\-Example}!start@{start}}
+\index{start@{start}!examples::gp::island::IslandGPExample@{examples\-::gp\-::island\-::\-Island\-G\-P\-Example}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void examples.\-gp.\-island.\-Island\-G\-P\-Example.\-start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classexamples_1_1gp_1_1island_1_1_island_g_p_example_ac2b4f196650fb6237af36354def5ecf6}
+
+
+Definition at line 41 of file Island\-G\-P\-Example.\-java.
+
+
+
+References org.\-jgap.\-gp.\-I\-G\-P\-Program.\-get\-Fitness\-Value(), examples.\-gp.\-island.\-Island\-G\-P\-Example.\-get\-Island(), examples.\-gp.\-island.\-Island\-G\-P\-Thread.\-is\-Finished(), examples.\-gp.\-island.\-Island\-G\-P\-Thread.\-is\-Locked(), examples.\-gp.\-island.\-Island\-G\-P\-Example.\-m\-\_\-first\-Island, examples.\-gp.\-island.\-Island\-G\-P\-Example.\-merge\-Population(), examples.\-gp.\-island.\-Island\-G\-P\-Example.\-next\-Number, examples.\-gp.\-island.\-Island\-G\-P\-Example.\-runs, examples.\-gp.\-island.\-Island\-G\-P\-Example.\-stop\-All\-Islands(), and org.\-jgap.\-gp.\-I\-G\-P\-Program.\-to\-String\-Norm().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1gp_1_1island_1_1_island_g_p_example_ac2b4f196650fb6237af36354def5ecf6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a0f3a0c6a55b068bf9d246005fda9a5ea}{\index{examples\-::gp\-::island\-::\-Island\-G\-P\-Example@{examples\-::gp\-::island\-::\-Island\-G\-P\-Example}!stop\-All\-Islands@{stop\-All\-Islands}}
+\index{stop\-All\-Islands@{stop\-All\-Islands}!examples::gp::island::IslandGPExample@{examples\-::gp\-::island\-::\-Island\-G\-P\-Example}}
+\subsubsection[{stop\-All\-Islands}]{\setlength{\rightskip}{0pt plus 5cm}void examples.\-gp.\-island.\-Island\-G\-P\-Example.\-stop\-All\-Islands (
+\begin{DoxyParamCaption}
+\item[{Thread\mbox{[}$\,$\mbox{]}}]{island\-Threads}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a0f3a0c6a55b068bf9d246005fda9a5ea}
+
+
+Definition at line 195 of file Island\-G\-P\-Example.\-java.
+
+
+
+Referenced by examples.\-gp.\-island.\-Island\-G\-P\-Example.\-start().
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a50c9a516e0c54393ff50004685708692}{\index{examples\-::gp\-::island\-::\-Island\-G\-P\-Example@{examples\-::gp\-::island\-::\-Island\-G\-P\-Example}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!examples::gp::island::IslandGPExample@{examples\-::gp\-::island\-::\-Island\-G\-P\-Example}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String examples.\-gp.\-island.\-Island\-G\-P\-Example.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-6 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a50c9a516e0c54393ff50004685708692}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 23 of file Island\-G\-P\-Example.\-java.
+
+\hypertarget{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a4d2c1a8403e70f6ea4de0a65ddb848c3}{\index{examples\-::gp\-::island\-::\-Island\-G\-P\-Example@{examples\-::gp\-::island\-::\-Island\-G\-P\-Example}!m\-\_\-first\-Island@{m\-\_\-first\-Island}}
+\index{m\-\_\-first\-Island@{m\-\_\-first\-Island}!examples::gp::island::IslandGPExample@{examples\-::gp\-::island\-::\-Island\-G\-P\-Example}}
+\subsubsection[{m\-\_\-first\-Island}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Island\-G\-P\-Thread} examples.\-gp.\-island.\-Island\-G\-P\-Example.\-m\-\_\-first\-Island = null\hspace{0.3cm}{\ttfamily [private]}}}\label{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a4d2c1a8403e70f6ea4de0a65ddb848c3}
+
+
+Definition at line 27 of file Island\-G\-P\-Example.\-java.
+
+
+
+Referenced by examples.\-gp.\-island.\-Island\-G\-P\-Example.\-get\-Island(), and examples.\-gp.\-island.\-Island\-G\-P\-Example.\-start().
+
+\hypertarget{classexamples_1_1gp_1_1island_1_1_island_g_p_example_ab48d3771b2dc5539aaf6181e88f45873}{\index{examples\-::gp\-::island\-::\-Island\-G\-P\-Example@{examples\-::gp\-::island\-::\-Island\-G\-P\-Example}!next\-Number@{next\-Number}}
+\index{next\-Number@{next\-Number}!examples::gp::island::IslandGPExample@{examples\-::gp\-::island\-::\-Island\-G\-P\-Example}}
+\subsubsection[{next\-Number}]{\setlength{\rightskip}{0pt plus 5cm}int examples.\-gp.\-island.\-Island\-G\-P\-Example.\-next\-Number\hspace{0.3cm}{\ttfamily [private]}}}\label{classexamples_1_1gp_1_1island_1_1_island_g_p_example_ab48d3771b2dc5539aaf6181e88f45873}
+
+
+Definition at line 25 of file Island\-G\-P\-Example.\-java.
+
+
+
+Referenced by examples.\-gp.\-island.\-Island\-G\-P\-Example.\-start().
+
+\hypertarget{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a1695c425e6dba81796555c09856080ad}{\index{examples\-::gp\-::island\-::\-Island\-G\-P\-Example@{examples\-::gp\-::island\-::\-Island\-G\-P\-Example}!runs@{runs}}
+\index{runs@{runs}!examples::gp::island::IslandGPExample@{examples\-::gp\-::island\-::\-Island\-G\-P\-Example}}
+\subsubsection[{runs}]{\setlength{\rightskip}{0pt plus 5cm}int examples.\-gp.\-island.\-Island\-G\-P\-Example.\-runs = 0\hspace{0.3cm}{\ttfamily [private]}}}\label{classexamples_1_1gp_1_1island_1_1_island_g_p_example_a1695c425e6dba81796555c09856080ad}
+
+
+Definition at line 29 of file Island\-G\-P\-Example.\-java.
+
+
+
+Referenced by examples.\-gp.\-island.\-Island\-G\-P\-Example.\-start().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/examples/src/examples/gp/island/\hyperlink{_island_g_p_example_8java}{Island\-G\-P\-Example.\-java}\end{DoxyCompactItemize}

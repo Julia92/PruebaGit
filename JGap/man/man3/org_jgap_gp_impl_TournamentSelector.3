@@ -1,0 +1,196 @@
+.TH "org.jgap.gp.impl.TournamentSelector" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.impl.TournamentSelector \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.INaturalGPSelector\fP, Serializable, and Cloneable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTournamentSelector\fP ()"
+.br
+.ti -1c
+.RI "\fBTournamentSelector\fP (int a_tournament_size)"
+.br
+.ti -1c
+.RI "void \fBsetTournamentSize\fP (int a_tournament_size)"
+.br
+.ti -1c
+.RI "\fBIGPProgram\fP \fBselect\fP (\fBGPGenotype\fP a_genotype)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBm_tournament_size\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.7 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A GP tournament selector\&. The winner is determined by letting fight a number of opponents against each other\&. The best of all wins\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Javier Meseguer 
+.PP
+Enrique D\&. Martí 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file TournamentSelector\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.impl\&.TournamentSelector\&.TournamentSelector ()\fC [inline]\fP"
+Constructor with default tournament size\&.
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 39 of file TournamentSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.TournamentSelector\&.clone()\&.
+.SS "org\&.jgap\&.gp\&.impl\&.TournamentSelector\&.TournamentSelector (inta_tournament_size)\fC [inline]\fP"
+Preferred Constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_tournament_size\fP the size of the tournament
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 50 of file TournamentSelector\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.TournamentSelector\&.setTournamentSize()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.gp\&.impl\&.TournamentSelector\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+deep clone of this instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 114 of file TournamentSelector\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.TournamentSelector\&.m_tournament_size, and org\&.jgap\&.gp\&.impl\&.TournamentSelector\&.TournamentSelector()\&.
+.SS "\fBIGPProgram\fP org\&.jgap\&.gp\&.impl\&.TournamentSelector\&.select (\fBGPGenotype\fPa_genotype)\fC [inline]\fP"
+Does the tournament selection\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_genotype\fP the genotype containing the competers 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+program that won the tournament
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Javier Meseguer 
+.PP
+Enrique D\&. Martí 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 75 of file TournamentSelector\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.IGPFitnessEvaluator\&.isFitter(), org\&.jgap\&.gp\&.impl\&.TournamentSelector\&.m_tournament_size, and org\&.jgap\&.RandomGenerator\&.nextDouble()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.TournamentSelector\&.setTournamentSize (inta_tournament_size)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_tournament_size\fP the size of the tournament
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 60 of file TournamentSelector\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.TournamentSelector\&.m_tournament_size\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.TournamentSelector\&.TournamentSelector()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.impl\&.TournamentSelector\&.CVS_REVISION = '$Revision: 1\&.7 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 30 of file TournamentSelector\&.java\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.TournamentSelector\&.m_tournament_size\fC [private]\fP"
+
+.PP
+Definition at line 32 of file TournamentSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.TournamentSelector\&.clone(), org\&.jgap\&.gp\&.impl\&.TournamentSelector\&.select(), and org\&.jgap\&.gp\&.impl\&.TournamentSelector\&.setTournamentSize()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

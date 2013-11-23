@@ -1,0 +1,203 @@
+.TH "examples.gp.tictactoe.IfIsOccupied" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.tictactoe.IfIsOccupied \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandGene\fP, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIfIsOccupied\fP (final \fBGPConfiguration\fP a_conf, \fBBoard\fP a_board, Class a_type)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBIfIsOccupied\fP (final \fBGPConfiguration\fP a_conf, \fBBoard\fP a_board, Class a_type, int a_subReturnType, int[] a_subChildTypes)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "void \fBexecute_void\fP (\fBProgramChromosome\fP c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "Class \fBgetChildType\fP (\fBIGPProgram\fP a_ind, int a_chromNum)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Class \fBm_type\fP"
+.br
+.ti -1c
+.RI "\fBBoard\fP \fBm_board\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.3 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The if-then construct\&. If-Condition is: if board free at position (X,Y), then execute Z else do nothing\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file IfIsOccupied\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.gp\&.tictactoe\&.IfIsOccupied\&.IfIsOccupied (final \fBGPConfiguration\fPa_conf, \fBBoard\fPa_board, Classa_type) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 33 of file IfIsOccupied\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.IfIsOccupied\&.clone()\&.
+.SS "examples\&.gp\&.tictactoe\&.IfIsOccupied\&.IfIsOccupied (final \fBGPConfiguration\fPa_conf, \fBBoard\fPa_board, Classa_type, inta_subReturnType, int[]a_subChildTypes) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 38 of file IfIsOccupied\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.IfIsOccupied\&.m_board, examples\&.gp\&.tictactoe\&.IfIsOccupied\&.m_type, and org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object examples\&.gp\&.tictactoe\&.IfIsOccupied\&.clone ()\fC [inline]\fP"
+Clones the object\&. Simple and straight forward implementation here\&.
+.PP
+\fBReturns:\fP
+.RS 4
+cloned instance of this object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 108 of file IfIsOccupied\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.getSubChildTypes(), org\&.jgap\&.gp\&.CommandGene\&.getSubReturnType(), examples\&.gp\&.tictactoe\&.IfIsOccupied\&.IfIsOccupied(), examples\&.gp\&.tictactoe\&.IfIsOccupied\&.m_board, and examples\&.gp\&.tictactoe\&.IfIsOccupied\&.m_type\&.
+.SS "void examples\&.gp\&.tictactoe\&.IfIsOccupied\&.execute_void (\fBProgramChromosome\fPc, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 60 of file IfIsOccupied\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), examples\&.gp\&.tictactoe\&.Board\&.HEIGHT, org\&.jgap\&.gp\&.CommandGene\&.IntegerClass, examples\&.gp\&.tictactoe\&.IfIsOccupied\&.m_type, and examples\&.gp\&.tictactoe\&.Board\&.WIDTH\&.
+.SS "Class examples\&.gp\&.tictactoe\&.IfIsOccupied\&.getChildType (\fBIGPProgram\fPa_ind, inta_chromNum)\fC [inline]\fP"
+Determines which type a specific child of this command has\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ind\fP ignored here 
+.br
+\fIa_chromNum\fP index of child 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+type of the a_chromNum'th child
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 93 of file IfIsOccupied\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.IfIsOccupied\&.m_type, and org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.SS "String examples\&.gp\&.tictactoe\&.IfIsOccupied\&.getName ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+textual name of this command
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 56 of file IfIsOccupied\&.java\&.
+.SS "String examples\&.gp\&.tictactoe\&.IfIsOccupied\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 46 of file IfIsOccupied\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.gp\&.tictactoe\&.IfIsOccupied\&.CVS_REVISION = '$Revision: 1\&.3 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 27 of file IfIsOccupied\&.java\&.
+.SS "\fBBoard\fP examples\&.gp\&.tictactoe\&.IfIsOccupied\&.m_board\fC [private]\fP"
+
+.PP
+Definition at line 31 of file IfIsOccupied\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.IfIsOccupied\&.clone(), and examples\&.gp\&.tictactoe\&.IfIsOccupied\&.IfIsOccupied()\&.
+.SS "Class examples\&.gp\&.tictactoe\&.IfIsOccupied\&.m_type\fC [private]\fP"
+
+.PP
+Definition at line 29 of file IfIsOccupied\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.IfIsOccupied\&.clone(), examples\&.gp\&.tictactoe\&.IfIsOccupied\&.execute_void(), examples\&.gp\&.tictactoe\&.IfIsOccupied\&.getChildType(), and examples\&.gp\&.tictactoe\&.IfIsOccupied\&.IfIsOccupied()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

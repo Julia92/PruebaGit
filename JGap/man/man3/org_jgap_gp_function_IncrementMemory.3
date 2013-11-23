@@ -1,0 +1,303 @@
+.TH "org.jgap.gp.function.IncrementMemory" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.function.IncrementMemory \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.MathCommand\fP, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIncrementMemory\fP (final GPConfiguration a_conf, Class a_returnType, String a_memoryName, int a_initialValue)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBIncrementMemory\fP (final GPConfiguration a_conf, Class a_returnType, String a_memoryName, int a_initialValue, int a_increment)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "int \fBexecute_int\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBm_increment\fP"
+.br
+.ti -1c
+.RI "String \fBm_memoryName\fP"
+.br
+.ti -1c
+.RI "int \fBm_initialValue\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.6 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Increments the value of a memory cell and returns the incremented value\&. Allows presetting a value in case the memory cell is not initialized\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file IncrementMemory\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.function\&.IncrementMemory\&.IncrementMemory (final GPConfigurationa_conf, Classa_returnType, Stringa_memoryName, inta_initialValue) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructor for using an increment of 1\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_returnType\fP the type of the terminal to increment (e\&.g\&. IntegerClass) 
+.br
+\fIa_memoryName\fP name of the memory cell 
+.br
+\fIa_initialValue\fP initial value of the memory cell
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 49 of file IncrementMemory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.IncrementMemory\&.clone(), org\&.jgap\&.gp\&.function\&.IncrementMemory\&.compareTo(), and org\&.jgap\&.gp\&.function\&.IncrementMemory\&.equals()\&.
+.SS "org\&.jgap\&.gp\&.function\&.IncrementMemory\&.IncrementMemory (final GPConfigurationa_conf, Classa_returnType, Stringa_memoryName, inta_initialValue, inta_increment) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructor to freely choose increment\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_returnType\fP the type of the terminal to increment (e\&.g\&. IntegerClass) 
+.br
+\fIa_memoryName\fP name of the memory cell 
+.br
+\fIa_initialValue\fP initial value of the memory cell 
+.br
+\fIa_increment\fP the increment to use, may also be negative 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 68 of file IncrementMemory\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.IncrementMemory\&.m_increment, org\&.jgap\&.gp\&.function\&.IncrementMemory\&.m_initialValue, and org\&.jgap\&.gp\&.function\&.IncrementMemory\&.m_memoryName\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.gp\&.function\&.IncrementMemory\&.clone ()\fC [inline]\fP"
+Clones the object\&. Simple and straight forward implementation here\&.
+.PP
+\fBReturns:\fP
+.RS 4
+cloned instance of this object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 167 of file IncrementMemory\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.getReturnType(), org\&.jgap\&.gp\&.function\&.IncrementMemory\&.IncrementMemory(), org\&.jgap\&.gp\&.function\&.IncrementMemory\&.m_increment, org\&.jgap\&.gp\&.function\&.IncrementMemory\&.m_initialValue, and org\&.jgap\&.gp\&.function\&.IncrementMemory\&.m_memoryName\&.
+.SS "int org\&.jgap\&.gp\&.function\&.IncrementMemory\&.compareTo (Objecta_other)\fC [inline]\fP"
+The compareTo-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+-1, 0, 1
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 120 of file IncrementMemory\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.IncrementMemory\&.IncrementMemory(), org\&.jgap\&.gp\&.function\&.IncrementMemory\&.m_increment, and org\&.jgap\&.gp\&.function\&.IncrementMemory\&.m_memoryName\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.IncrementMemory\&.equals (Objecta_other)\fC [inline]\fP"
+The equals-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the objects are seen as equal
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 142 of file IncrementMemory\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.IncrementMemory\&.IncrementMemory(), org\&.jgap\&.gp\&.function\&.IncrementMemory\&.m_increment, and org\&.jgap\&.gp\&.function\&.IncrementMemory\&.m_memoryName\&.
+.SS "int org\&.jgap\&.gp\&.function\&.IncrementMemory\&.execute_int (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 97 of file IncrementMemory\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.function\&.IncrementMemory\&.m_initialValue, and org\&.jgap\&.gp\&.function\&.IncrementMemory\&.m_memoryName\&.
+.SS "String org\&.jgap\&.gp\&.function\&.IncrementMemory\&.getName ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+textual name of this command
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 93 of file IncrementMemory\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.IncrementMemory\&.m_memoryName\&.
+.SS "String org\&.jgap\&.gp\&.function\&.IncrementMemory\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 78 of file IncrementMemory\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.IncrementMemory\&.m_increment, and org\&.jgap\&.gp\&.function\&.IncrementMemory\&.m_memoryName\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.function\&.IncrementMemory\&.CVS_REVISION = '$Revision: 1\&.6 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 28 of file IncrementMemory\&.java\&.
+.SS "int org\&.jgap\&.gp\&.function\&.IncrementMemory\&.m_increment\fC [private]\fP"
+
+.PP
+Definition at line 30 of file IncrementMemory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.IncrementMemory\&.clone(), org\&.jgap\&.gp\&.function\&.IncrementMemory\&.compareTo(), org\&.jgap\&.gp\&.function\&.IncrementMemory\&.equals(), org\&.jgap\&.gp\&.function\&.IncrementMemory\&.IncrementMemory(), and org\&.jgap\&.gp\&.function\&.IncrementMemory\&.toString()\&.
+.SS "int org\&.jgap\&.gp\&.function\&.IncrementMemory\&.m_initialValue\fC [private]\fP"
+
+.PP
+Definition at line 34 of file IncrementMemory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.IncrementMemory\&.clone(), org\&.jgap\&.gp\&.function\&.IncrementMemory\&.execute_int(), and org\&.jgap\&.gp\&.function\&.IncrementMemory\&.IncrementMemory()\&.
+.SS "String org\&.jgap\&.gp\&.function\&.IncrementMemory\&.m_memoryName\fC [private]\fP"
+
+.PP
+Definition at line 32 of file IncrementMemory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.IncrementMemory\&.clone(), org\&.jgap\&.gp\&.function\&.IncrementMemory\&.compareTo(), org\&.jgap\&.gp\&.function\&.IncrementMemory\&.equals(), org\&.jgap\&.gp\&.function\&.IncrementMemory\&.execute_int(), org\&.jgap\&.gp\&.function\&.IncrementMemory\&.getName(), org\&.jgap\&.gp\&.function\&.IncrementMemory\&.IncrementMemory(), and org\&.jgap\&.gp\&.function\&.IncrementMemory\&.toString()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

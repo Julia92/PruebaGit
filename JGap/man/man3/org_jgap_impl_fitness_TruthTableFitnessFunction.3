@@ -1,0 +1,295 @@
+.TH "org.jgap.impl.fitness.TruthTableFitnessFunction" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.fitness.TruthTableFitnessFunction \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.FitnessFunction\fP\&.
+.PP
+Inherited by \fBorg\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunctionTest\&.TruthTableFitnessFunctionImpl\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTruthTableFitnessFunction\fP ()"
+.br
+.ti -1c
+.RI "\fBTruthTableFitnessFunction\fP (\fBConfiguration\fP a_conf)"
+.br
+.ti -1c
+.RI "\fBTruthTableFitnessFunction\fP (\fBConfiguration\fP a_conf, final Map a_truthTable)"
+.br
+.ti -1c
+.RI "void \fBsetTruthTable\fP (final Map a_truthTable)"
+.br
+.ti -1c
+.RI "Map \fBgetTruthTable\fP ()"
+.br
+.ti -1c
+.RI "double \fBcalcFitness\fP (final Map a_actualInputOutput)"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBgetConfiguration\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final int \fBMAX_FITNESS\fP = 9999999"
+.br
+.ti -1c
+.RI "static final int \fBWORST\fP = \fBMAX_FITNESS\fP / \fBRELATION_FITNESS\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "abstract double \fBevaluate\fP (\fBIChromosome\fP a_chromosome)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Map \fBm_truthTable\fP"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBm_conf\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.6 $'"
+.br
+.ti -1c
+.RI "static final int \fBRELATION_FITNESS\fP = 100"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Fitness Function relying on a truth table\&. To use this class, just implement a subclass of it, register the current truth table and implement the evaluate method in a way that you can call calcFitness with the required (parameter (given values: encoded with the chromosome)\&. If the truth table is dynamic just register it in evaluate, otherwise do it after construction of this fitness function\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file TruthTableFitnessFunction\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.TruthTableFitnessFunction ()\fC [inline]\fP"
+Only use for dynamic instantiation as configuration retrieved from static setting\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file TruthTableFitnessFunction\&.java\&.
+.SS "org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.TruthTableFitnessFunction (\fBConfiguration\fPa_conf)\fC [inline]\fP"
+Constructor without registering a truth table\&. Use this constructor if the truth table is not fix over generations and needs to be set in method evaluate\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 65 of file TruthTableFitnessFunction\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.m_conf\&.
+.SS "org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.TruthTableFitnessFunction (\fBConfiguration\fPa_conf, final Mapa_truthTable)\fC [inline]\fP"
+Constructor for registering a truth table\&. Use this constructor if the truth table is fix over generations\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_truthTable\fP table of input/output pairs for feeding the formula and determining the fitness value thru delta computation
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 81 of file TruthTableFitnessFunction\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.setTruthTable()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "double org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.calcFitness (final Mapa_actualInputOutput)\fC [inline]\fP"
+Fitness value calculation for a given table of input/output tupels and a truth-table (also given as list of input/output tupels)
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_actualInputOutput\fP table of actual input/output pairs 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+delta between current values and given truth table
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+consider length of formula (i\&.e\&. number of terms, e\&.g\&.) for fitness calculation 
+.RE
+.PP
+
+.PP
+Definition at line 115 of file TruthTableFitnessFunction\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.getTruthTable()\&.
+.SS "abstract double org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.evaluate (\fBIChromosome\fPa_chromosome)\fC [protected]\fP, \fC [pure virtual]\fP"
+Implementation of the evaluate method from class \fBFitnessFunction\fP\&. Calculates the fitness of a given \fBChromosome\fP in a determined way\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosome\fP the \fBChromosome\fP to be evaluated 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+positive integer value representing the fitness of the \fBChromosome\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.FitnessFunction\fP\&.
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunctionTest\&.TruthTableFitnessFunctionImpl\fP\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.getConfiguration ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the \fBConfiguration\fP object set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 155 of file TruthTableFitnessFunction\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.m_conf\&.
+.SS "Map org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.getTruthTable ()\fC [inline]\fP"
+
+.PP
+Definition at line 90 of file TruthTableFitnessFunction\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.m_truthTable\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.calcFitness()\&.
+.SS "void org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.setTruthTable (final Mapa_truthTable)\fC [inline]\fP"
+
+.PP
+Definition at line 86 of file TruthTableFitnessFunction\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.m_truthTable\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.TruthTableFitnessFunction()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.CVS_REVISION = '$Revision: 1\&.6 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 30 of file TruthTableFitnessFunction\&.java\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.m_conf\fC [private]\fP"
+
+.PP
+Definition at line 42 of file TruthTableFitnessFunction\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.getConfiguration(), and org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.TruthTableFitnessFunction()\&.
+.SS "Map org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.m_truthTable\fC [private]\fP"
+
+.PP
+Definition at line 32 of file TruthTableFitnessFunction\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.getTruthTable(), and org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.setTruthTable()\&.
+.SS "final int org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.MAX_FITNESS = 9999999\fC [static]\fP"
+
+.PP
+Definition at line 36 of file TruthTableFitnessFunction\&.java\&.
+.SS "final int org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.RELATION_FITNESS = 100\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 38 of file TruthTableFitnessFunction\&.java\&.
+.SS "final int org\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.WORST = \fBMAX_FITNESS\fP / \fBRELATION_FITNESS\fP\fC [static]\fP"
+
+.PP
+Definition at line 40 of file TruthTableFitnessFunction\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

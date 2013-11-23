@@ -1,0 +1,490 @@
+\hypertarget{classorg_1_1jgap_1_1util_1_1_plugin_discoverer}{\section{org.\-jgap.\-util.\-Plugin\-Discoverer Class Reference}
+\label{classorg_1_1jgap_1_1util_1_1_plugin_discoverer}\index{org.\-jgap.\-util.\-Plugin\-Discoverer@{org.\-jgap.\-util.\-Plugin\-Discoverer}}
+}
+
+
+Collaboration diagram for org.\-jgap.\-util.\-Plugin\-Discoverer\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{classorg_1_1jgap_1_1util_1_1_plugin_discoverer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1_1_class_filter}{Class\-Filter}
+\item 
+class \hyperlink{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1_1_directory_filter}{Directory\-Filter}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_acd0356075ba9149924a9341101c0e6ed}{Plugin\-Discoverer} ()
+\item 
+\hyperlink{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_ac8235b0726b35f80e0bacddeed96b9a8}{Plugin\-Discoverer} (String a\-\_\-jar\-File)
+\item 
+List \hyperlink{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a2364ca4f685f61ab1bb3d9594280812b}{find\-Implementing\-Classes} (final String a\-\_\-full\-Interface\-Name)  throws Class\-Not\-Found\-Exception 
+\item 
+List \hyperlink{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_aa1acd7c75cf00693df86c53712ec5e6d}{find\-Implementing\-Classes} (final Class a\-\_\-intrface)
+\item 
+List \hyperlink{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a398c250ba353fb77f49596c7d2d7d578}{find\-Implementing\-Classes} (final Class a\-\_\-intrface, final String a\-\_\-base, final String a\-\_\-path)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a2c2dd0dca32f171eed6e8452362645a8}{main} (String\mbox{[}$\,$\mbox{]} args)  throws Exception 
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a057e96e50cce44c736b93c0f89b682a0}{init} ()
+\item 
+String \hyperlink{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a01eafe900cd1820c78039597272fcd86}{check\-If\-Class\-Matches} (String a\-\_\-jar\-Filename, final Class a\-\_\-interface\-Class, String a\-\_\-test\-Class)
+\item 
+void \hyperlink{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_aa9454f104245321f720e9592105b397a}{find\-Implementing\-Classes0} (final Class a\-\_\-intrface, final List a\-\_\-result, final String a\-\_\-base, final String a\-\_\-path)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List \hyperlink{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a323a9570d75ed8205d69d8f5c785bb73}{m\-\_\-classpath\-Folders}
+\item 
+List \hyperlink{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a8ec8f977e92750122b6a67780238e8e2}{m\-\_\-classpath\-Jars}
+\item 
+String \hyperlink{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a5b6575c6f464171001c919aa23944fec}{m\-\_\-jar\-File}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a6b0e92ff50135d1e259f7e44cf692058}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-9 \$\char`\"{}
+\item 
+static final boolean \hyperlink{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_adc9a10b57d7574fb5cc677f93ad79398}{D\-E\-B\-U\-G} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class will (slightly inefficiently) look for all classes that implement a particular interface. It is useful for plugins. This is done by looking through the contents of all jar files in the classpath, as well as performing a recursive search for $\ast$.class files in the classpath directories
+
+This particular class may not work in restrictive Class\-Loader environments such as Applets or Web\-Start. (It may...but unlikely and untested.)
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-3 
+\end{DoxySince}
+
+
+Definition at line 28 of file Plugin\-Discoverer.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_acd0356075ba9149924a9341101c0e6ed}{\index{org\-::jgap\-::util\-::\-Plugin\-Discoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}!Plugin\-Discoverer@{Plugin\-Discoverer}}
+\index{Plugin\-Discoverer@{Plugin\-Discoverer}!org::jgap::util::PluginDiscoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}}
+\subsubsection[{Plugin\-Discoverer}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-util.\-Plugin\-Discoverer.\-Plugin\-Discoverer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_acd0356075ba9149924a9341101c0e6ed}
+Reads the list of jars and classpath folders into instance variables for later (cached) access.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-3 
+\end{DoxySince}
+
+
+Definition at line 49 of file Plugin\-Discoverer.\-java.
+
+
+
+References org.\-jgap.\-util.\-Plugin\-Discoverer.\-init().
+
+
+
+Referenced by org.\-jgap.\-util.\-Plugin\-Discoverer.\-main().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_acd0356075ba9149924a9341101c0e6ed_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_ac8235b0726b35f80e0bacddeed96b9a8}{\index{org\-::jgap\-::util\-::\-Plugin\-Discoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}!Plugin\-Discoverer@{Plugin\-Discoverer}}
+\index{Plugin\-Discoverer@{Plugin\-Discoverer}!org::jgap::util::PluginDiscoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}}
+\subsubsection[{Plugin\-Discoverer}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-util.\-Plugin\-Discoverer.\-Plugin\-Discoverer (
+\begin{DoxyParamCaption}
+\item[{String}]{a\-\_\-jar\-File}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_ac8235b0726b35f80e0bacddeed96b9a8}
+Prepares the discoverer for a single jar file 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-jar\-File} & String\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-2 
+\end{DoxySince}
+
+
+Definition at line 72 of file Plugin\-Discoverer.\-java.
+
+
+
+References org.\-jgap.\-util.\-Plugin\-Discoverer.\-init(), and org.\-jgap.\-util.\-Plugin\-Discoverer.\-m\-\_\-jar\-File.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_ac8235b0726b35f80e0bacddeed96b9a8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a01eafe900cd1820c78039597272fcd86}{\index{org\-::jgap\-::util\-::\-Plugin\-Discoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}!check\-If\-Class\-Matches@{check\-If\-Class\-Matches}}
+\index{check\-If\-Class\-Matches@{check\-If\-Class\-Matches}!org::jgap::util::PluginDiscoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}}
+\subsubsection[{check\-If\-Class\-Matches}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-jgap.\-util.\-Plugin\-Discoverer.\-check\-If\-Class\-Matches (
+\begin{DoxyParamCaption}
+\item[{String}]{a\-\_\-jar\-Filename, }
+\item[{final Class}]{a\-\_\-interface\-Class, }
+\item[{String}]{a\-\_\-test\-Class}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a01eafe900cd1820c78039597272fcd86}
+Checks if a given class matches a given interface 
+\begin{DoxyParams}{Parameters}
+{\em interface\-Class} & The interface we are looking for \\
+\hline
+{\em test\-Class} & class under test against the interface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+corrected name of matched class, or null if not matching
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-3 
+\end{DoxySince}
+
+
+Definition at line 92 of file Plugin\-Discoverer.\-java.
+
+
+
+References org.\-jgap.\-util.\-Plugin\-Discoverer.\-D\-E\-B\-U\-G.
+
+
+
+Referenced by org.\-jgap.\-util.\-Plugin\-Discoverer.\-find\-Implementing\-Classes().
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a2364ca4f685f61ab1bb3d9594280812b}{\index{org\-::jgap\-::util\-::\-Plugin\-Discoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}!find\-Implementing\-Classes@{find\-Implementing\-Classes}}
+\index{find\-Implementing\-Classes@{find\-Implementing\-Classes}!org::jgap::util::PluginDiscoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}}
+\subsubsection[{find\-Implementing\-Classes}]{\setlength{\rightskip}{0pt plus 5cm}List org.\-jgap.\-util.\-Plugin\-Discoverer.\-find\-Implementing\-Classes (
+\begin{DoxyParamCaption}
+\item[{final String}]{a\-\_\-full\-Interface\-Name}
+\end{DoxyParamCaption}
+) throws Class\-Not\-Found\-Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a2364ca4f685f61ab1bb3d9594280812b}
+Finds all classes implementing the given interface 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-full\-Interface\-Name} & name of the interface (inclusive package name) to find implementing classes (not abstract) for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list of class names that implement the given interface
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Class\-Not\-Found\-Exception} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-4 
+\end{DoxySince}
+
+
+Definition at line 161 of file Plugin\-Discoverer.\-java.
+
+
+
+Referenced by org.\-jgap.\-util.\-Plugin\-Discoverer.\-find\-Implementing\-Classes0().
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_aa1acd7c75cf00693df86c53712ec5e6d}{\index{org\-::jgap\-::util\-::\-Plugin\-Discoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}!find\-Implementing\-Classes@{find\-Implementing\-Classes}}
+\index{find\-Implementing\-Classes@{find\-Implementing\-Classes}!org::jgap::util::PluginDiscoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}}
+\subsubsection[{find\-Implementing\-Classes}]{\setlength{\rightskip}{0pt plus 5cm}List org.\-jgap.\-util.\-Plugin\-Discoverer.\-find\-Implementing\-Classes (
+\begin{DoxyParamCaption}
+\item[{final Class}]{a\-\_\-intrface}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_aa1acd7c75cf00693df86c53712ec5e6d}
+Finds all classes implementing the given interface 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-intrface} & the interface to check against \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list of class names that implement the given interface
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-3 
+\end{DoxySince}
+
+
+Definition at line 175 of file Plugin\-Discoverer.\-java.
+
+
+
+References org.\-jgap.\-util.\-Plugin\-Discoverer.\-check\-If\-Class\-Matches(), and org.\-jgap.\-util.\-Plugin\-Discoverer.\-find\-Implementing\-Classes0().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_aa1acd7c75cf00693df86c53712ec5e6d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a398c250ba353fb77f49596c7d2d7d578}{\index{org\-::jgap\-::util\-::\-Plugin\-Discoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}!find\-Implementing\-Classes@{find\-Implementing\-Classes}}
+\index{find\-Implementing\-Classes@{find\-Implementing\-Classes}!org::jgap::util::PluginDiscoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}}
+\subsubsection[{find\-Implementing\-Classes}]{\setlength{\rightskip}{0pt plus 5cm}List org.\-jgap.\-util.\-Plugin\-Discoverer.\-find\-Implementing\-Classes (
+\begin{DoxyParamCaption}
+\item[{final Class}]{a\-\_\-intrface, }
+\item[{final String}]{a\-\_\-base, }
+\item[{final String}]{a\-\_\-path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a398c250ba353fb77f49596c7d2d7d578}
+Finds all classes implementing the given interface within a given directory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-intrface} & Class \\
+\hline
+{\em a\-\_\-base} & String \\
+\hline
+{\em a\-\_\-path} & String \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List 
+\end{DoxyReturn}
+
+
+Definition at line 267 of file Plugin\-Discoverer.\-java.
+
+
+
+References org.\-jgap.\-util.\-Plugin\-Discoverer.\-check\-If\-Class\-Matches().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a398c250ba353fb77f49596c7d2d7d578_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_aa9454f104245321f720e9592105b397a}{\index{org\-::jgap\-::util\-::\-Plugin\-Discoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}!find\-Implementing\-Classes0@{find\-Implementing\-Classes0}}
+\index{find\-Implementing\-Classes0@{find\-Implementing\-Classes0}!org::jgap::util::PluginDiscoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}}
+\subsubsection[{find\-Implementing\-Classes0}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-util.\-Plugin\-Discoverer.\-find\-Implementing\-Classes0 (
+\begin{DoxyParamCaption}
+\item[{final Class}]{a\-\_\-intrface, }
+\item[{final List}]{a\-\_\-result, }
+\item[{final String}]{a\-\_\-base, }
+\item[{final String}]{a\-\_\-path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_aa9454f104245321f720e9592105b397a}
+Recursive helper method, searching a path recursively for class files conforming to a given interface 
+\begin{DoxyParams}{Parameters}
+{\em intrface} & the interface we are looking for \\
+\hline
+{\em result} & container for storing the results \\
+\hline
+{\em base} & base directory \\
+\hline
+{\em path} & current location in the traversal\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-3 
+\end{DoxySince}
+
+
+Definition at line 234 of file Plugin\-Discoverer.\-java.
+
+
+
+References org.\-jgap.\-util.\-Plugin\-Discoverer.\-find\-Implementing\-Classes().
+
+
+
+Referenced by org.\-jgap.\-util.\-Plugin\-Discoverer.\-find\-Implementing\-Classes().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_aa9454f104245321f720e9592105b397a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a057e96e50cce44c736b93c0f89b682a0}{\index{org\-::jgap\-::util\-::\-Plugin\-Discoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}!init@{init}}
+\index{init@{init}!org::jgap::util::PluginDiscoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-util.\-Plugin\-Discoverer.\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a057e96e50cce44c736b93c0f89b682a0}
+
+
+Definition at line 78 of file Plugin\-Discoverer.\-java.
+
+
+
+References org.\-jgap.\-util.\-Plugin\-Discoverer.\-m\-\_\-classpath\-Folders, and org.\-jgap.\-util.\-Plugin\-Discoverer.\-m\-\_\-classpath\-Jars.
+
+
+
+Referenced by org.\-jgap.\-util.\-Plugin\-Discoverer.\-Plugin\-Discoverer().
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a2c2dd0dca32f171eed6e8452362645a8}{\index{org\-::jgap\-::util\-::\-Plugin\-Discoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}!main@{main}}
+\index{main@{main}!org::jgap::util::PluginDiscoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void org.\-jgap.\-util.\-Plugin\-Discoverer.\-main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a2c2dd0dca32f171eed6e8452362645a8}
+For testing purpose 
+\begin{DoxyParams}{Parameters}
+{\em args} & not used \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & in case of any problem\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-3 
+\end{DoxySince}
+
+
+Definition at line 314 of file Plugin\-Discoverer.\-java.
+
+
+
+References org.\-jgap.\-util.\-Plugin\-Discoverer.\-Plugin\-Discoverer().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a2c2dd0dca32f171eed6e8452362645a8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a6b0e92ff50135d1e259f7e44cf692058}{\index{org\-::jgap\-::util\-::\-Plugin\-Discoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::util::PluginDiscoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-util.\-Plugin\-Discoverer.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-9 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a6b0e92ff50135d1e259f7e44cf692058}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 30 of file Plugin\-Discoverer.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_adc9a10b57d7574fb5cc677f93ad79398}{\index{org\-::jgap\-::util\-::\-Plugin\-Discoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}!D\-E\-B\-U\-G@{D\-E\-B\-U\-G}}
+\index{D\-E\-B\-U\-G@{D\-E\-B\-U\-G}!org::jgap::util::PluginDiscoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}}
+\subsubsection[{D\-E\-B\-U\-G}]{\setlength{\rightskip}{0pt plus 5cm}final boolean org.\-jgap.\-util.\-Plugin\-Discoverer.\-D\-E\-B\-U\-G = false\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_adc9a10b57d7574fb5cc677f93ad79398}
+
+
+Definition at line 32 of file Plugin\-Discoverer.\-java.
+
+
+
+Referenced by org.\-jgap.\-util.\-Plugin\-Discoverer.\-check\-If\-Class\-Matches().
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a323a9570d75ed8205d69d8f5c785bb73}{\index{org\-::jgap\-::util\-::\-Plugin\-Discoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}!m\-\_\-classpath\-Folders@{m\-\_\-classpath\-Folders}}
+\index{m\-\_\-classpath\-Folders@{m\-\_\-classpath\-Folders}!org::jgap::util::PluginDiscoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}}
+\subsubsection[{m\-\_\-classpath\-Folders}]{\setlength{\rightskip}{0pt plus 5cm}List org.\-jgap.\-util.\-Plugin\-Discoverer.\-m\-\_\-classpath\-Folders\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a323a9570d75ed8205d69d8f5c785bb73}
+
+
+Definition at line 35 of file Plugin\-Discoverer.\-java.
+
+
+
+Referenced by org.\-jgap.\-util.\-Plugin\-Discoverer.\-init().
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a8ec8f977e92750122b6a67780238e8e2}{\index{org\-::jgap\-::util\-::\-Plugin\-Discoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}!m\-\_\-classpath\-Jars@{m\-\_\-classpath\-Jars}}
+\index{m\-\_\-classpath\-Jars@{m\-\_\-classpath\-Jars}!org::jgap::util::PluginDiscoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}}
+\subsubsection[{m\-\_\-classpath\-Jars}]{\setlength{\rightskip}{0pt plus 5cm}List org.\-jgap.\-util.\-Plugin\-Discoverer.\-m\-\_\-classpath\-Jars\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a8ec8f977e92750122b6a67780238e8e2}
+
+
+Definition at line 38 of file Plugin\-Discoverer.\-java.
+
+
+
+Referenced by org.\-jgap.\-util.\-Plugin\-Discoverer.\-init().
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a5b6575c6f464171001c919aa23944fec}{\index{org\-::jgap\-::util\-::\-Plugin\-Discoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}!m\-\_\-jar\-File@{m\-\_\-jar\-File}}
+\index{m\-\_\-jar\-File@{m\-\_\-jar\-File}!org::jgap::util::PluginDiscoverer@{org\-::jgap\-::util\-::\-Plugin\-Discoverer}}
+\subsubsection[{m\-\_\-jar\-File}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-jgap.\-util.\-Plugin\-Discoverer.\-m\-\_\-jar\-File\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1util_1_1_plugin_discoverer_a5b6575c6f464171001c919aa23944fec}
+
+
+Definition at line 40 of file Plugin\-Discoverer.\-java.
+
+
+
+Referenced by org.\-jgap.\-util.\-Plugin\-Discoverer.\-Plugin\-Discoverer().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/util/\hyperlink{_plugin_discoverer_8java}{Plugin\-Discoverer.\-java}\end{DoxyCompactItemize}

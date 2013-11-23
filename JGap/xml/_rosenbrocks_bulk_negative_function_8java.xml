@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="_rosenbrocks_bulk_negative_function_8java" kind="file">
+    <compoundname>RosenbrocksBulkNegativeFunction.java</compoundname>
+    <innerclass refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_rosenbrocks_bulk_negative_function" prot="public">org::jgap::impl::fitness::RosenbrocksBulkNegativeFunction</innerclass>
+    <innernamespace refid="namespaceorg_1_1jgap_1_1impl_1_1fitness">org::jgap::impl::fitness</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespaceorg_1_1jgap_1_1impl_1_1fitness" refkind="compound"><highlight class="keyword">package<sp/></highlight><highlight class="normal">org.jgap.impl.fitness;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.*;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.*;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_rosenbrocks_bulk_negative_function" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_rosenbrocks_bulk_negative_function" kindref="compound">RosenbrocksBulkNegativeFunction</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1_bulk_fitness_function" kindref="compound">BulkFitnessFunction</ref><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref><sp/>config1;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>List&lt;IChromosome&gt;<sp/>allChromosomesSoFar;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numOfDublicates;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numOfUniques;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_rosenbrocks_bulk_negative_function" kindref="compound">RosenbrocksBulkNegativeFunction</ref>(<ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref><sp/>config)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>config1<sp/>=<sp/>config;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>allChromosomesSoFar<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>ArrayList&lt;IChromosome&gt;<sp/>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>numOfDublicates<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>numOfUniques<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_rosenbrocks_bulk_negative_function_1a56b2967b6915e293846020e23e2db001" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_rosenbrocks_bulk_negative_function_1a56b2967b6915e293846020e23e2db001" kindref="member">evaluate</ref>(<ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref><sp/>ic)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>X<sp/>=<sp/>(Double)<sp/>ic.<ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1ac84a3ec514b365e25f023d9e78bfa382" kindref="member">getGene</ref>(0).getAllele();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Y<sp/>=<sp/>(Double)<sp/>ic.<ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1ac84a3ec514b365e25f023d9e78bfa382" kindref="member">getGene</ref>(1).getAllele();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>=<sp/><ref refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_rosenbrocks_bulk_negative_function_1a6519c769a5ce4f4f28d06ddc6534185e" kindref="member">getFunctionValue</ref>(X,<sp/>Y);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_rosenbrocks_bulk_negative_function_1a6519c769a5ce4f4f28d06ddc6534185e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_rosenbrocks_bulk_negative_function_1a6519c769a5ce4f4f28d06ddc6534185e" kindref="member">getFunctionValue</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>X,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Y)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>100<sp/>*<sp/>(<sp/>(Y<sp/>-<sp/>X<sp/>*<sp/>X)<sp/>*<sp/>(Y<sp/>-<sp/>X<sp/>*<sp/>X))<sp/>+<sp/>(1<sp/>-<sp/>X)<sp/>*<sp/>(1<sp/>-<sp/>X);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="46" refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_rosenbrocks_bulk_negative_function_1ad5b5b0c55e81266cf47abbed3069f470" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_rosenbrocks_bulk_negative_function_1ad5b5b0c55e81266cf47abbed3069f470" kindref="member">evaluate</ref>(<ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref><sp/>a_subject)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>Iterator<sp/>it<sp/>=<sp/>a_subject.getChromosomes().iterator();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(it.hasNext())<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref><sp/>a_chrom1<sp/>=<sp/>(<ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref>)<sp/>it.next();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>res<sp/>=<sp/><ref refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_rosenbrocks_bulk_negative_function_1a56b2967b6915e293846020e23e2db001" kindref="member">evaluate</ref>(a_chrom1);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>(<ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>)<sp/>a_chrom1).setFitnessValueDirectly(res);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(allChromosomesSoFar.contains(<sp/>(<ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>)<sp/>a_chrom1))<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numOfDublicates++;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allChromosomesSoFar.add(a_chrom1);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numOfUniques++;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/RosenbrocksBulkNegativeFunction.java"/>
+  </compounddef>
+</doxygen>

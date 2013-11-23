@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="interfaceorg_1_1jgap_1_1_random_generator" kind="interface" prot="public">
+    <compoundname>org::jgap::RandomGenerator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1impl_1_1_cauchy_random_generator" prot="public" virt="non-virtual">org.jgap.impl.CauchyRandomGenerator</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator" prot="public" virt="non-virtual">org.jgap.impl.GaussianRandomGenerator</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator" prot="public" virt="non-virtual">org.jgap.impl.HotBitsRandomGenerator</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1impl_1_1_random_generator_for_testing" prot="public" virt="non-virtual">org.jgap.impl.RandomGeneratorForTesting</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1impl_1_1_seeded_random_generator" prot="public" virt="non-virtual">org.jgap.impl.SeededRandomGenerator</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1impl_1_1_stock_random_generator" prot="public" virt="non-virtual">org.jgap.impl.StockRandomGenerator</derivedcompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="interfaceorg_1_1jgap_1_1_random_generator_1a160f82fe77aae0cfc802a2db56b4ee44" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.RandomGenerator.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.8 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/RandomGenerator.java" line="29" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/RandomGenerator.java" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1_random_generator_1a993f3b23cfbc3f8001405544580eda2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.RandomGenerator.nextInt</definition>
+        <argsstring>()</argsstring>
+        <name>nextInt</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1a212886b62617d156a8dfaa8753ab1ae9">nextInt</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_cauchy_random_generator_1acf3fabb321753b72320c58eec7df3bdb">nextInt</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_random_generator_for_testing_1a09291b8911a0e5a40ef220996bef2548">nextInt</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a2e174018c76eddb6c09c05eceeb83e11">nextInt</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the next pseudorandom, uniformly distributed int value from this random number generator&apos;s sequence. The general contract of nextInt is that one int value is pseudorandomly generated and returned. All 2^32 possible int values are produced with (approximately) equal probability.</para><para><simplesect kind="return"><para>a pseudorandom integer value</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/RandomGenerator.java" line="43" column="1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad495c700786596290a63e3d88a902766" compoundref="_g_p_genotype_8java" startline="696" endline="912">org.jgap.gp.impl.GPGenotype.evolve</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_averaging_crossover_operator_1ae6166be762fcee1c05d90279bf8c47d2" compoundref="_averaging_crossover_operator_8java" startline="256" endline="264">org.jgap.impl.AveragingCrossoverOperator.getLocus</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_1a43cda60692e8d1a1fcecb6a0e4e00073" compoundref="_swapping_mutation_operator_8java" startline="165" endline="195">org.jgap.impl.SwappingMutationOperator.operate</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_ranged_swapping_mutation_operator_1a935198d79a1378f4ec22900907a7dba8" compoundref="_ranged_swapping_mutation_operator_8java" startline="183" endline="215">org.jgap.impl.RangedSwappingMutationOperator.operate</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_set_gene_1a878678824034193a549e71c820f1bc7e" compoundref="_set_gene_8java" startline="106" endline="109">org.jgap.impl.SetGene.setToRandomValue</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_map_gene_1a537cd33d9eedd9ad384219ef0379bc62" compoundref="_map_gene_8java" startline="196" endline="204">org.jgap.impl.MapGene.setToRandomValue</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_default_mutation_rate_calculator_1a795b836f85740742f5a88860915a3ff4" compoundref="_default_mutation_rate_calculator_8java" startline="65" endline="68">org.jgap.impl.DefaultMutationRateCalculator.toBePermutated</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1_random_generator_1a29411be7a476ab217372b7f046536be6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.RandomGenerator.nextInt</definition>
+        <argsstring>(int a_ceiling)</argsstring>
+        <name>nextInt</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1ad532bb61610054a88c7a46633937f62f">nextInt</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_random_generator_for_testing_1af4432e24f059c196da9857b504fc57f3">nextInt</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>a_ceiling</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a pseudorandom, uniformly distributed int value between 0 (inclusive) and the specified value (exclusive), drawn from this random number generator&apos;s sequence. The general contract of nextInt is that one int value in the specified range is pseudorandomly generated and returned. All n possible int values are produced with (approximately) equal probability. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_ceiling</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the upper boundary excluded</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a pseudorandom integer value between 0 and the given ceiling - 1, inclusive</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/RandomGenerator.java" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1_random_generator_1a09b1ace0d1020d186b726bb725557ad2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long org.jgap.RandomGenerator.nextLong</definition>
+        <argsstring>()</argsstring>
+        <name>nextLong</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1a084ac095168363d42c9b581475b314b4">nextLong</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_cauchy_random_generator_1a560e1ee63aec73631c1df0fdd01b7141">nextLong</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_random_generator_for_testing_1a38d256f5c65520b6fe18da0c6b4bb015">nextLong</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a88b311f4d24b41b670187515bd6795b7">nextLong</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the next pseudorandom, uniformly distributed long value from this random number generator&apos;s sequence. The general contract of <ref refid="interfaceorg_1_1jgap_1_1_random_generator_1a09b1ace0d1020d186b726bb725557ad2" kindref="member">nextLong()</ref> is that one long value is pseudorandomly generated and returned. All 2^64 possible long values are produced with (approximately) equal probability.</para><para><simplesect kind="return"><para>a psuedorandom long value</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/RandomGenerator.java" line="74" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1_random_generator_1a708f273cc71846c2ae973172f20f2c01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double org.jgap.RandomGenerator.nextDouble</definition>
+        <argsstring>()</argsstring>
+        <name>nextDouble</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1a21342093908fb90520d7506d0bec49f0">nextDouble</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_cauchy_random_generator_1a187d4166f1b8a187a61c0f2058973de3">nextDouble</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_random_generator_for_testing_1a529f3202c9e0d37f47775a215944e86a">nextDouble</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1ae84caa388b60147fac8fbba721275cca">nextDouble</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the next pseudorandom, uniformly distributed double value between 0.0 and 1.0 from this random number generator&apos;s sequence.</para><para><simplesect kind="return"><para>a psuedorandom double value GREATER/EQUAL 0 AND LESS THAN 1</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/RandomGenerator.java" line="85" column="1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_branch_typing_cross_1af4ff7487c5e532031d260dce1b66d74b" compoundref="_branch_typing_cross_8java" startline="158" endline="298">org.jgap.gp.impl.BranchTypingCross.doCross</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_mutiple_integer_gene_1a8574d37804fc08ca00f64e16c2714ee6" compoundref="_mutiple_integer_gene_8java" startline="263" endline="267">org.jgap.impl.MutipleIntegerGene.getRandomValue</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_program_chromosome_1a1ca14815335297629dc3bd4812445405" compoundref="_program_chromosome_8java" startline="591" endline="721">org.jgap.gp.impl.ProgramChromosome.growOrFullNode</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_double_gene_1a7487946984538fd71a24e0f8280a8e24" compoundref="_double_gene_8java" startline="288" endline="317">org.jgap.impl.DoubleGene.mapValueToWithinBounds</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_client_g_p_1adf5018d320d27b924e0f16a2ac48fea9" compoundref="_j_g_a_p_client_g_p_8java" startline="1404" endline="1477">org.jgap.distr.grid.gp.JGAPClientGP.presetPopulation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_tournament_selector_1a08597c23b02dc77cd993d2d3291b7ba1" compoundref="gp_2impl_2_tournament_selector_8java" startline="75" endline="106">org.jgap.gp.impl.TournamentSelector.select</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1terminal_1_1_terminal_1a7a6569bd6115c6bf3ecda835f7582ebf" compoundref="_terminal_8java" startline="125" endline="130">org.jgap.gp.terminal.Terminal.setRandomValue</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_double_gene_1aa60b29de6b26966ef4038bc02ccc2fd7" compoundref="_double_gene_8java" startline="252" endline="257">org.jgap.impl.DoubleGene.setToRandomValue</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_integer_gene_1a7bb0f704f675017aee7fec0ab7e88310" compoundref="_integer_gene_8java" startline="257" endline="262">org.jgap.impl.IntegerGene.setToRandomValue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1_random_generator_1a0c5ff6cb7faf2d5385405f56f463a070" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float org.jgap.RandomGenerator.nextFloat</definition>
+        <argsstring>()</argsstring>
+        <name>nextFloat</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1a4d60bfea27c1cf66d355c2608091cc30">nextFloat</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_cauchy_random_generator_1a2ebaf9c01d0525ed47ffc6b4fada8abb">nextFloat</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_random_generator_for_testing_1ace93d32fbe3985cbdcc364ee53ca3a1c">nextFloat</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a20b553e1eaf81d7fdb405dbb8201aa19">nextFloat</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the next pseudorandom, uniformly distributed float value between 0.0 and 1.0 from this random number generator&apos;s sequence.</para><para><simplesect kind="return"><para>a psuedorandom float value</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/RandomGenerator.java" line="96" column="1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_branch_typing_cross_1af4ff7487c5e532031d260dce1b66d74b" compoundref="_branch_typing_cross_8java" startline="158" endline="298">org.jgap.gp.impl.BranchTypingCross.doCross</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1terminal_1_1_terminal_1aae08a7b218d592bade89080094505862" compoundref="_terminal_8java" startline="148" endline="156">org.jgap.gp.terminal.Terminal.setRandomValue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1_random_generator_1ae1e8373d795fa8269c2f51f2e5525150" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.RandomGenerator.nextBoolean</definition>
+        <argsstring>()</argsstring>
+        <name>nextBoolean</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1aa660e3a60dca1802dbc28c564f2a9428">nextBoolean</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_cauchy_random_generator_1ac264a286fef31aeda9a789366353d679">nextBoolean</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_random_generator_for_testing_1aa7d270ed55a004398e0a21f7a1188564">nextBoolean</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a26567fd1a8a095c2dbf12c552d2da0be">nextBoolean</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the next pseudorandom, uniformly distributed boolean value from this random number generator&apos;s sequence. The general contract of nextBoolean is that one boolean value is pseudorandomly generated and returned. The values true and false are produced with (approximately) equal probability.</para><para><simplesect kind="return"><para>a pseudorandom boolean value</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/RandomGenerator.java" line="110" column="1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_boolean_gene_1a21dd7e5973db3e3a32745d3e2e3dcbb0" compoundref="_boolean_gene_8java" startline="239" endline="246">org.jgap.impl.BooleanGene.setToRandomValue</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_fixed_binary_gene_1aa827e651eccd75a92b29e72563ebb29d" compoundref="_fixed_binary_gene_8java" startline="322" endline="330">org.jgap.impl.FixedBinaryGene.setToRandomValue</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="interfaceorg_1_1jgap_1_1_random_generator" kindref="compound">RandomGenerator</ref> interface provides an abstraction for the random number implementation so that more rigorous or alternative implementations can be provided as desired. </para><para>ATTENTION: nextDouble should only return values betwen 0 (inclusive) and 1 (exclusive!). The same holds for nextFloat.</para><para><simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="17180">
+        <label>org.jgap.impl.GaussianRandomGenerator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator"/>
+        <childnode refid="17177" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17177">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="17178" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17178">
+        <label>Serializable</label>
+      </node>
+      <node id="17179">
+        <label>org.jgap.impl.CauchyRandomGenerator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_cauchy_random_generator"/>
+        <childnode refid="17177" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17183">
+        <label>org.jgap.impl.SeededRandomGenerator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_seeded_random_generator"/>
+        <childnode refid="17177" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17184">
+        <label>org.jgap.impl.StockRandomGenerator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_stock_random_generator"/>
+        <childnode refid="17177" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17182">
+        <label>org.jgap.impl.RandomGeneratorForTesting</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_random_generator_for_testing"/>
+        <childnode refid="17177" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17181">
+        <label>org.jgap.impl.HotBitsRandomGenerator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator"/>
+        <childnode refid="17177" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="17185">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="17186" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17186">
+        <label>Serializable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/RandomGenerator.java" line="27" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/RandomGenerator.java" bodystart="26" bodyend="111"/>
+    <listofallmembers>
+      <member refid="interfaceorg_1_1jgap_1_1_random_generator_1a160f82fe77aae0cfc802a2db56b4ee44" prot="public" virt="non-virtual"><scope>org::jgap::RandomGenerator</scope><name>CVS_REVISION</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_random_generator_1ae1e8373d795fa8269c2f51f2e5525150" prot="public" virt="non-virtual"><scope>org::jgap::RandomGenerator</scope><name>nextBoolean</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_random_generator_1a708f273cc71846c2ae973172f20f2c01" prot="public" virt="non-virtual"><scope>org::jgap::RandomGenerator</scope><name>nextDouble</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_random_generator_1a0c5ff6cb7faf2d5385405f56f463a070" prot="public" virt="non-virtual"><scope>org::jgap::RandomGenerator</scope><name>nextFloat</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_random_generator_1a993f3b23cfbc3f8001405544580eda2e" prot="public" virt="non-virtual"><scope>org::jgap::RandomGenerator</scope><name>nextInt</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_random_generator_1a29411be7a476ab217372b7f046536be6" prot="public" virt="non-virtual"><scope>org::jgap::RandomGenerator</scope><name>nextInt</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_random_generator_1a09b1ace0d1020d186b726bb725557ad2" prot="public" virt="non-virtual"><scope>org::jgap::RandomGenerator</scope><name>nextLong</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1100 @@
+.TH "org.jgap.Population" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.Population \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable, \fBorg\&.jgap\&.util\&.ICloneable\fP, and \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPopulation\fP (final \fBConfiguration\fP a_config)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBPopulation\fP (final \fBConfiguration\fP a_config, final \fBIChromosome\fP[] a_chromosomes)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBPopulation\fP (final \fBConfiguration\fP a_config, final \fBIChromosome\fP a_chromosome)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBPopulation\fP (final \fBConfiguration\fP a_config, final int a_size)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBPopulation\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBgetConfiguration\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddChromosome\fP (final \fBIChromosome\fP a_toAdd)"
+.br
+.ti -1c
+.RI "void \fBaddChromosomes\fP (final \fBPopulation\fP a_population)"
+.br
+.ti -1c
+.RI "void \fBsetChromosomes\fP (final List a_chromosomes)"
+.br
+.ti -1c
+.RI "void \fBsetChromosome\fP (final int a_index, final \fBIChromosome\fP a_chromosome)"
+.br
+.ti -1c
+.RI "List< \fBIChromosome\fP > \fBgetChromosomes\fP ()"
+.br
+.ti -1c
+.RI "\fBIChromosome\fP \fBgetChromosome\fP (final int a_index)"
+.br
+.ti -1c
+.RI "int \fBsize\fP ()"
+.br
+.ti -1c
+.RI "Iterator \fBiterator\fP ()"
+.br
+.ti -1c
+.RI "\fBIChromosome\fP[] \fBtoChromosomes\fP ()"
+.br
+.ti -1c
+.RI "\fBIChromosome\fP \fBdetermineFittestChromosome\fP ()"
+.br
+.ti -1c
+.RI "\fBIChromosome\fP \fBdetermineFittestChromosome\fP (int a_startIndex, int a_endIndex)"
+.br
+.ti -1c
+.RI "boolean \fBisChanged\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBcontains\fP (final \fBIChromosome\fP a_chromosome)"
+.br
+.ti -1c
+.RI "void \fBkeepPopSizeConstant\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "List \fBdetermineFittestChromosomes\fP (final int a_numberOfChromosomes)"
+.br
+.ti -1c
+.RI "void \fBsortByFitness\fP ()"
+.br
+.ti -1c
+.RI "List \fBgetGenome\fP (final boolean a_resolveCompositeGenes)"
+.br
+.ti -1c
+.RI "boolean \fBisSorted\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_pop)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_pop)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetPersistentRepresentation\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetValueFromPersistentRepresentation\fP (String a_representation)  throws UnsupportedRepresentationException "
+.br
+.ti -1c
+.RI "int \fBhashCode\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCHROM_DELIMITER\fP = '~'"
+.br
+.ti -1c
+.RI "static final String \fBCHROM_DELIMITER_HEADING\fP = '['"
+.br
+.ti -1c
+.RI "static final String \fBCHROM_DELIMITER_CLOSING\fP = ']'"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetChanged\fP (final boolean a_changed)"
+.br
+.ti -1c
+.RI "void \fBsetSorted\fP (final boolean a_sorted)"
+.br
+.ti -1c
+.RI "void \fBsort\fP (Comparator a_comparator)"
+.br
+.ti -1c
+.RI "\fBIChromosome\fP \fBcreateChromosome\fP (String a_chromClassName, String a_persistentRepresentation)  throws Exception "
+.br
+.in -1c
+.SS "Static Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static final List \fBsplit\fP (String a_string)  throws UnsupportedRepresentationException "
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBaddCompositeGene\fP (final List a_result, final \fBGene\fP a_gene)"
+.br
+.ti -1c
+.RI "void \fBaddAtomicGene\fP (final List a_result, final \fBGene\fP a_gene)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "List< \fBIChromosome\fP > \fBm_chromosomes\fP"
+.br
+.ti -1c
+.RI "\fBIChromosome\fP \fBm_fittestChromosome\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_changed\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_sorted\fP"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBm_config\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.66 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Makes up the population of a generation during evolution\&. Represented by a list of chromosomes held in the \fBGenotype\fP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file Population\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.Population\&.Population (final \fBConfiguration\fPa_config) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 73 of file Population\&.java\&.
+.SS "org\&.jgap\&.Population\&.Population (final \fBConfiguration\fPa_config, final \fBIChromosome\fP[]a_chromosomes) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 87 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.m_chromosomes, and org\&.jgap\&.Population\&.setChanged()\&.
+.SS "org\&.jgap\&.Population\&.Population (final \fBConfiguration\fPa_config, final \fBIChromosome\fPa_chromosome) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 109 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.m_chromosomes, and org\&.jgap\&.Population\&.setChanged()\&.
+.SS "org\&.jgap\&.Population\&.Population (final \fBConfiguration\fPa_config, final inta_size) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 131 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.m_chromosomes, org\&.jgap\&.Population\&.m_config, and org\&.jgap\&.Population\&.setChanged()\&.
+.SS "org\&.jgap\&.Population\&.Population () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 148 of file Population\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Population\&.clone(), and org\&.jgap\&.Population\&.compareTo()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.Population\&.addAtomicGene (final Lista_result, final \fBGene\fPa_gene)\fC [inline]\fP, \fC [private]\fP"
+Helper method for addCompositeGene\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_result\fP List 
+.br
+\fIa_gene\fP \fBGene\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 588 of file Population\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Population\&.addCompositeGene(), and org\&.jgap\&.Population\&.getGenome()\&.
+.SS "void org\&.jgap\&.Population\&.addChromosome (final \fBIChromosome\fPa_toAdd)\fC [inline]\fP"
+Adds a \fBChromosome\fP to this \fBPopulation\fP\&. Does nothing when given null\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_toAdd\fP the \fBChromosome\fP to add
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 165 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.m_chromosomes, and org\&.jgap\&.Population\&.setChanged()\&.
+.PP
+Referenced by org\&.jgap\&.Population\&.setChromosome()\&.
+.SS "void org\&.jgap\&.Population\&.addChromosomes (final \fBPopulation\fPa_population)\fC [inline]\fP"
+Adds all the Chromosomes in the given \fBPopulation\fP\&. Does nothing on null or an empty \fBPopulation\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_population\fP the \fBPopulation\fP to add
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 183 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.m_chromosomes, and org\&.jgap\&.Population\&.setChanged()\&.
+.SS "void org\&.jgap\&.Population\&.addCompositeGene (final Lista_result, final \fBGene\fPa_gene)\fC [inline]\fP, \fC [private]\fP"
+Adds all the genes of a CompositeGene to a result list\&.
+.PP
+Note: Method calls itself recursively\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_result\fP the list to add to 
+.br
+\fIa_gene\fP the gene to start with
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 567 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.addAtomicGene()\&.
+.PP
+Referenced by org\&.jgap\&.Population\&.getGenome()\&.
+.SS "void org\&.jgap\&.Population\&.clear ()\fC [inline]\fP"
+Clears the list of chromosomes\&. Normally, this should not be necessary\&. But especially in distributed computing, a fresh population has to be provided sometimes\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 686 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.m_changed, org\&.jgap\&.Population\&.m_fittestChromosome, and org\&.jgap\&.Population\&.m_sorted\&.
+.SS "Object org\&.jgap\&.Population\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+deeply cloned population instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 659 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.util\&.ICloneable\&.clone(), org\&.jgap\&.Population\&.m_chromosomes, org\&.jgap\&.Population\&.m_config, org\&.jgap\&.Population\&.m_fittestChromosome, org\&.jgap\&.Population\&.Population(), and org\&.jgap\&.Population\&.size()\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvolutionMonitor\&.nextCycle()\&.
+.SS "int org\&.jgap\&.Population\&.compareTo (Objecta_pop)\fC [inline]\fP"
+This method is not producing symmetric results as -1 is more often returned than 1 (see description of return value)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pop\fP the other population to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+1: a_pop is null or having fewer chromosomes or equal number of chromosomes but at least one not contained\&. 0: both populations containing exactly the same chromosomes\&. -1: this population contains fewer chromosomes than a_pop
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 629 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.m_chromosomes, org\&.jgap\&.Population\&.Population(), and org\&.jgap\&.Population\&.size()\&.
+.PP
+Referenced by org\&.jgap\&.Population\&.equals(), and org\&.jgap\&.PopulationTest\&.testCompareTo_0()\&.
+.SS "boolean org\&.jgap\&.Population\&.contains (final \fBIChromosome\fPa_chromosome)\fC [inline]\fP"
+Determines whether the given chromosome is contained within the population\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosome\fP the chromosome to check 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: chromosome contained within population
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 406 of file Population\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GABreeder\&.reAddFittest(), org\&.jgap\&.NaturalSelectorExt\&.selectChromosome(), and org\&.jgap\&.impl\&.WeightedRouletteSelector\&.selectChromosomes()\&.
+.SS "\fBIChromosome\fP org\&.jgap\&.Population\&.createChromosome (Stringa_chromClassName, Stringa_persistentRepresentation) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Creates a new \fBChromosome\fP instance\&.
+.PP
+Taken and adapted from CompositeGene\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromClassName\fP name of the \fBChromosome\fP class 
+.br
+\fIa_persistentRepresentation\fP persistent representation of the \fBChromosome\fP to create (could be obtained via getPersistentRepresentation)
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+newly created \fBChromosome\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 785 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.getConfiguration()\&.
+.PP
+Referenced by org\&.jgap\&.Population\&.setValueFromPersistentRepresentation()\&.
+.SS "\fBIChromosome\fP org\&.jgap\&.Population\&.determineFittestChromosome ()\fC [inline]\fP"
+Determines the fittest \fBChromosome\fP in the \fBPopulation\fP (the one with the highest fitness value) and memorizes it\&. This is an optimized version compared to calling determineFittesChromosomes(1)\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the fittest \fBChromosome\fP of the \fBPopulation\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 303 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.getConfiguration(), org\&.jgap\&.Population\&.m_changed, org\&.jgap\&.Population\&.m_fittestChromosome, and org\&.jgap\&.Population\&.setChanged()\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvaluatorTest\&.testCalcPerformance_0(), org\&.jgap\&.audit\&.EvaluatorTest\&.testCalcPerformance_2(), org\&.jgap\&.PopulationTest\&.testDetermineFittestChromosome_0(), org\&.jgap\&.PopulationTest\&.testDetermineFittestChromosome_1(), org\&.jgap\&.PopulationTest\&.testDetermineFittestChromosome_2(), org\&.jgap\&.PopulationTest\&.testDetermineFittestChromosome_2_0(), org\&.jgap\&.PopulationTest\&.testDetermineFittestChromosome_3(), org\&.jgap\&.PopulationTest\&.testDetermineFittestChromosome_5(), org\&.jgap\&.PopulationTest\&.testDetermineFittestChromosomes_2(), and org\&.jgap\&.PopulationTest\&.testDetermineFittestChromosomes_3()\&.
+.SS "\fBIChromosome\fP org\&.jgap\&.Population\&.determineFittestChromosome (inta_startIndex, inta_endIndex)\fC [inline]\fP"
+Determines the fittest \fBChromosome\fP in the population (the one with the highest fitness value) within the given indices and memorizes it\&. This is an optimized version compared to calling determineFittesChromosomes(1)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_startIndex\fP index to begin the evaluation with 
+.br
+\fIa_endIndex\fP index to end the evaluation with 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the fittest \fBChromosome\fP of the population within the given indices
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 342 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.getConfiguration(), org\&.jgap\&.FitnessEvaluator\&.isFitter(), org\&.jgap\&.Population\&.m_chromosomes, and org\&.jgap\&.Population\&.m_fittestChromosome\&.
+.SS "List org\&.jgap\&.Population\&.determineFittestChromosomes (final inta_numberOfChromosomes)\fC [inline]\fP"
+Sorts the \fBChromosome\fP list and returns the fittest n Chromosomes in the population\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_numberOfChromosomes\fP number of top performer chromosomes to be returned 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+list of the fittest n Chromosomes of the population, or the fittest x Chromosomes with x = number of chromosomes in case n > x\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Charles Kevin Hill 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 479 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.getChromosomes(), org\&.jgap\&.Population\&.m_changed, org\&.jgap\&.Population\&.m_sorted, and org\&.jgap\&.Population\&.sortByFitness()\&.
+.PP
+Referenced by org\&.jgap\&.PopulationTest\&.testDetermineFittestChromosome_4(), and org\&.jgap\&.PopulationTest\&.testDetermineFittestChromosomes_1()\&.
+.SS "boolean org\&.jgap\&.Population\&.equals (Objecta_pop)\fC [inline]\fP"
+The equals-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pop\fP the population instance to compare with 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: given object equal to comparing one
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 605 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.compareTo()\&.
+.PP
+Referenced by org\&.jgap\&.eval\&.PopulationHistory\&.equals(), org\&.jgap\&.impl\&.StandardPostSelector\&.equals(), org\&.jgap\&.impl\&.BestChromosomesSelector\&.equals(), and org\&.jgap\&.eval\&.PopulationHistoryTest\&.testGetPopulation_1()\&.
+.SS "\fBIChromosome\fP org\&.jgap\&.Population\&.getChromosome (final inta_index)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the index of the \fBChromosome\fP to be returned 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBChromosome\fP at given index in the \fBPopulation\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 257 of file Population\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Population\&.hashCode(), org\&.jgap\&.data\&.DataTreeBuilder\&.representGenotypeAsElement(), org\&.jgap\&.xml\&.XMLManager\&.representGenotypeAsElement(), org\&.jgap\&.impl\&.StandardPostSelector\&.select(), org\&.jgap\&.NaturalSelectorExt\&.select(), org\&.jgap\&.PopulationTest\&.testGetChromosome_0(), org\&.jgap\&.impl\&.FittestPopulationMergerTest\&.testMergePopulations_0(), and org\&.jgap\&.PopulationTest\&.testSetChromosome_1()\&.
+.SS "List<\fBIChromosome\fP> org\&.jgap\&.Population\&.getChromosomes ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the list of \fBChromosome\fP's in the \fBPopulation\fP\&. Don't modify the retrieved list by using \fBclear()\fP, remove(int) etc\&. If you do so, you need to call setChanged(true)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 246 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.m_chromosomes\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BestChromosomesSelector\&.add(), org\&.jgap\&.Population\&.determineFittestChromosomes(), org\&.jgap\&.Population\&.getGenome(), org\&.jgap\&.Population\&.sort(), and org\&.jgap\&.PopulationTest\&.testGetChromosomes_0()\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.Population\&.getConfiguration ()\fC [inline]\fP"
+
+.PP
+Definition at line 153 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.m_config\&.
+.PP
+Referenced by org\&.jgap\&.Population\&.createChromosome(), org\&.jgap\&.Population\&.determineFittestChromosome(), org\&.jgap\&.Population\&.keepPopSizeConstant(), org\&.jgap\&.impl\&.FittestPopulationMerger\&.mergePopulations(), and org\&.jgap\&.Population\&.sortByFitness()\&.
+.SS "List org\&.jgap\&.Population\&.getGenome (final booleana_resolveCompositeGenes)\fC [inline]\fP"
+Returns the genotype of the population, i\&.e\&. the list of genes in the \fBPopulation\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_resolveCompositeGenes\fP true: split encountered CompositeGenes into their single (atomic) genes 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+genotype of the population
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 536 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.addAtomicGene(), org\&.jgap\&.Population\&.addCompositeGene(), and org\&.jgap\&.Population\&.getChromosomes()\&.
+.SS "String org\&.jgap\&.Population\&.getPersistentRepresentation ()\fC [inline]\fP"
+Returns a persistent representation of this chromosome, see interface \fBGene\fP for description\&. Similar to CompositeGene's routine\&. But does not include all information of the chromosome (yet)\&.
+.PP
+\fBReturns:\fP
+.RS 4
+string representation of this \fBChromosome\fP's relevant parts of its current state 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.PP
+Definition at line 705 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.CHROM_DELIMITER, org\&.jgap\&.Population\&.CHROM_DELIMITER_CLOSING, org\&.jgap\&.Population\&.CHROM_DELIMITER_HEADING, and org\&.jgap\&.Population\&.m_chromosomes\&.
+.PP
+Referenced by org\&.jgap\&.PopulationTest\&.testPersistentRepresentation_1()\&.
+.SS "int org\&.jgap\&.Population\&.hashCode ()\fC [inline]\fP"
+
+.PP
+Definition at line 854 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.getChromosome(), and org\&.jgap\&.Population\&.size()\&.
+.SS "boolean org\&.jgap\&.Population\&.isChanged ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+true: population's chromosomes (maybe) were changed, false: not changed for sure
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 382 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.m_changed\&.
+.PP
+Referenced by org\&.jgap\&.PopulationTest\&.testDetermineFittestChromosomes_3(), org\&.jgap\&.PopulationTest\&.testGetGenome_1(), org\&.jgap\&.PopulationTest\&.testGetGenome_2(), and org\&.jgap\&.PopulationTest\&.testSortByFitness_1()\&.
+.SS "boolean org\&.jgap\&.Population\&.isSorted ()\fC [inline]\fP"
+
+.PP
+Definition at line 592 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.m_sorted\&.
+.PP
+Referenced by org\&.jgap\&.PopulationTest\&.testSortByFitness_1()\&.
+.SS "Iterator org\&.jgap\&.Population\&.iterator ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+Iterator for the \fBChromosome\fP list in the \fBPopulation\fP\&. Please be aware that using remove() forces you to call setChanged(true)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 278 of file Population\&.java\&.
+.SS "void org\&.jgap\&.Population\&.keepPopSizeConstant () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Cares that the population size does not exceed the maximum size given in the configuration\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+use dedicated selector for that 
+.RE
+.PP
+
+.PP
+Definition at line 438 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.getConfiguration(), and org\&.jgap\&.Population\&.size()\&.
+.SS "void org\&.jgap\&.Population\&.setChanged (final booleana_changed)\fC [inline]\fP, \fC [protected]\fP"
+Mark that for the population the fittest chromosome may have changed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_changed\fP true: population's fittest chromosome may have changed, false: fittest chromosome evaluated earlier is still valid
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 371 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.m_changed, and org\&.jgap\&.Population\&.setSorted()\&.
+.PP
+Referenced by org\&.jgap\&.Population\&.addChromosome(), org\&.jgap\&.Population\&.addChromosomes(), org\&.jgap\&.Population\&.determineFittestChromosome(), org\&.jgap\&.Population\&.Population(), org\&.jgap\&.Population\&.setChromosome(), org\&.jgap\&.Population\&.setChromosomes(), org\&.jgap\&.Population\&.setValueFromPersistentRepresentation(), and org\&.jgap\&.Population\&.sortByFitness()\&.
+.SS "void org\&.jgap\&.Population\&.setChromosome (final inta_index, final \fBIChromosome\fPa_chromosome)\fC [inline]\fP"
+Sets in the given \fBChromosome\fP on the given index in the list of chromosomes\&. If the given index is exceeding the list by one, the chromosome is appended\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the index to set the \fBChromosome\fP in 
+.br
+\fIa_chromosome\fP the \fBChromosome\fP to be set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 226 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.addChromosome(), org\&.jgap\&.Population\&.m_chromosomes, and org\&.jgap\&.Population\&.setChanged()\&.
+.SS "void org\&.jgap\&.Population\&.setChromosomes (final Lista_chromosomes)\fC [inline]\fP"
+Replaces all chromosomes in the population with the give list of chromosomes\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomes\fP the chromosomes to make the population up from
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Definition at line 208 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.m_chromosomes, and org\&.jgap\&.Population\&.setChanged()\&.
+.SS "void org\&.jgap\&.Population\&.setSorted (final booleana_sorted)\fC [inline]\fP, \fC [protected]\fP"
+Mark the population as sorted\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_sorted\fP true: mark population as sorted
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 394 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.m_sorted\&.
+.PP
+Referenced by org\&.jgap\&.Population\&.setChanged(), and org\&.jgap\&.Population\&.sortByFitness()\&.
+.SS "void org\&.jgap\&.Population\&.setValueFromPersistentRepresentation (Stringa_representation) throws \fBUnsupportedRepresentationException\fP\fC [inline]\fP"
+Counterpart of getPersistentRepresentation\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_representation\fP the string representation retrieved from a prior call to the \fBgetPersistentRepresentation()\fP method
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBUnsupportedRepresentationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.PP
+Definition at line 739 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.CHROM_DELIMITER, org\&.jgap\&.Population\&.createChromosome(), org\&.jgap\&.Population\&.m_chromosomes, org\&.jgap\&.Population\&.setChanged(), and org\&.jgap\&.Population\&.split()\&.
+.SS "int org\&.jgap\&.Population\&.size ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+number of \fBChromosome\fP's in the \fBPopulation\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 267 of file Population\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GABreeder\&.bulkFunctionEvaluation(), org\&.jgap\&.Population\&.clone(), org\&.jgap\&.Population\&.compareTo(), org\&.jgap\&.impl\&.GABreeder\&.fillPopulationRandomlyToOriginalSize(), org\&.jgap\&.Population\&.hashCode(), org\&.jgap\&.Population\&.keepPopSizeConstant(), org\&.jgap\&.impl\&.InversionOperator\&.operate(), org\&.jgap\&.impl\&.GaussianMutationOperator\&.operate(), org\&.jgap\&.impl\&.GreedyCrossover\&.operate(), org\&.jgap\&.impl\&.TwoWayMutationOperator\&.operate(), org\&.jgap\&.impl\&.MutationOperator\&.operate(), org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.operate(), org\&.jgap\&.impl\&.CrossoverOperator\&.operate(), org\&.jgap\&.PopulationTest\&.testAddChromosome_1(), org\&.jgap\&.PopulationTest\&.testAddChromosomes_1(), org\&.jgap\&.PopulationTest\&.testConstruct_3(), org\&.jgap\&.PopulationTest\&.testDetermineFittestChromosome_2_0(), org\&.jgap\&.PopulationTest\&.testIterator_0(), org\&.jgap\&.impl\&.FittestPopulationMergerTest\&.testMergePopulations_0(), org\&.jgap\&.PopulationTest\&.testPersistentRepresentation_2(), org\&.jgap\&.PopulationTest\&.testPersistentRepresentation_5(), org\&.jgap\&.PopulationTest\&.testSetChromosome_0(), org\&.jgap\&.PopulationTest\&.testSetChromosome_1(), org\&.jgap\&.PopulationTest\&.testSetChromosomes_0(), and org\&.jgap\&.PopulationTest\&.testSize_0()\&.
+.SS "void org\&.jgap\&.Population\&.sort (Comparatora_comparator)\fC [inline]\fP, \fC [protected]\fP"
+Sorts the chromosomes within the population utilzing the given comparator\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_comparator\fP the comparator to utilize for sorting
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 521 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.getChromosomes()\&.
+.PP
+Referenced by org\&.jgap\&.Population\&.sortByFitness()\&.
+.SS "void org\&.jgap\&.Population\&.sortByFitness ()\fC [inline]\fP"
+Sorts the chromosomes within the population according to their fitness value using ChromosomFitnessComparator\&. The fittest chromosome is then at index 0\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 502 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.getConfiguration(), org\&.jgap\&.Population\&.m_chromosomes, org\&.jgap\&.Population\&.m_fittestChromosome, org\&.jgap\&.Population\&.setChanged(), org\&.jgap\&.Population\&.setSorted(), and org\&.jgap\&.Population\&.sort()\&.
+.PP
+Referenced by org\&.jgap\&.Population\&.determineFittestChromosomes()\&.
+.SS "static final List org\&.jgap\&.Population\&.split (Stringa_string) throws \fBUnsupportedRepresentationException\fP\fC [inline]\fP, \fC [static]\fP, \fC [protected]\fP"
+Splits the input a_string into individual chromosome representations\&.
+.PP
+Taken and adapted from CompositeGene\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_string\fP the string to split 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the elements of the returned array are the persistent representation strings of the population's components 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBUnsupportedRepresentationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 809 of file Population\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.CHROM_DELIMITER_CLOSING, and org\&.jgap\&.Population\&.CHROM_DELIMITER_HEADING\&.
+.PP
+Referenced by org\&.jgap\&.Population\&.setValueFromPersistentRepresentation()\&.
+.SS "\fBIChromosome\fP [] org\&.jgap\&.Population\&.toChromosomes ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the \fBPopulation\fP converted into a list of \fBChromosome\fP's
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert, Dan Clark 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 288 of file Population\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.Population\&.CHROM_DELIMITER = '~'\fC [static]\fP"
+
+.PP
+Definition at line 54 of file Population\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Population\&.getPersistentRepresentation(), org\&.jgap\&.Population\&.setValueFromPersistentRepresentation(), org\&.jgap\&.PopulationTest\&.testPersistentRepresentation_4(), org\&.jgap\&.PopulationTest\&.testPersistentRepresentation_5(), and org\&.jgap\&.PopulationTest\&.testPersistentRepresentation_6()\&.
+.SS "final String org\&.jgap\&.Population\&.CHROM_DELIMITER_CLOSING = ']'\fC [static]\fP"
+Represents the closing delimiter that is used to separate chromosomes in the persistent representation\&. 
+.PP
+Definition at line 66 of file Population\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Population\&.getPersistentRepresentation(), org\&.jgap\&.Population\&.split(), and org\&.jgap\&.PopulationTest\&.testPersistentRepresentation_5()\&.
+.SS "final String org\&.jgap\&.Population\&.CHROM_DELIMITER_HEADING = '['\fC [static]\fP"
+Represents the heading delimiter that is used to separate chromosomes in the persistent representation\&. 
+.PP
+Definition at line 60 of file Population\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Population\&.getPersistentRepresentation(), and org\&.jgap\&.Population\&.split()\&.
+.SS "final String org\&.jgap\&.Population\&.CVS_REVISION = '$Revision: 1\&.66 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 29 of file Population\&.java\&.
+.SS "boolean org\&.jgap\&.Population\&.m_changed\fC [private]\fP"
+Indicates whether at least one of the chromosomes has been changed (deleted, added, modified)\&. 
+.PP
+Definition at line 45 of file Population\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Population\&.clear(), org\&.jgap\&.Population\&.determineFittestChromosome(), org\&.jgap\&.Population\&.determineFittestChromosomes(), org\&.jgap\&.Population\&.isChanged(), and org\&.jgap\&.Population\&.setChanged()\&.
+.SS "List<\fBIChromosome\fP> org\&.jgap\&.Population\&.m_chromosomes\fC [private]\fP"
+The array of Chromosomes that makeup the \fBGenotype\fP's population\&. 
+.PP
+Definition at line 34 of file Population\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Population\&.addChromosome(), org\&.jgap\&.Population\&.addChromosomes(), org\&.jgap\&.Population\&.clone(), org\&.jgap\&.Population\&.compareTo(), org\&.jgap\&.Population\&.determineFittestChromosome(), org\&.jgap\&.Population\&.getChromosomes(), org\&.jgap\&.Population\&.getPersistentRepresentation(), org\&.jgap\&.Population\&.Population(), org\&.jgap\&.Population\&.setChromosome(), org\&.jgap\&.Population\&.setChromosomes(), org\&.jgap\&.Population\&.setValueFromPersistentRepresentation(), and org\&.jgap\&.Population\&.sortByFitness()\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.Population\&.m_config\fC [private]\fP"
+
+.PP
+Definition at line 52 of file Population\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Population\&.clone(), org\&.jgap\&.Population\&.getConfiguration(), and org\&.jgap\&.Population\&.Population()\&.
+.SS "\fBIChromosome\fP org\&.jgap\&.Population\&.m_fittestChromosome\fC [private]\fP"
+The fittest \fBChromosome\fP of the population\&. 
+.PP
+Definition at line 39 of file Population\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Population\&.clear(), org\&.jgap\&.Population\&.clone(), org\&.jgap\&.Population\&.determineFittestChromosome(), and org\&.jgap\&.Population\&.sortByFitness()\&.
+.SS "boolean org\&.jgap\&.Population\&.m_sorted\fC [private]\fP"
+Indicates that the list of Chromosomes has been sorted\&. 
+.PP
+Definition at line 50 of file Population\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Population\&.clear(), org\&.jgap\&.Population\&.determineFittestChromosomes(), org\&.jgap\&.Population\&.isSorted(), and org\&.jgap\&.Population\&.setSorted()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

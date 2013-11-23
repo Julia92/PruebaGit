@@ -1,0 +1,134 @@
+.TH "org.jgap.gp.impl.DefaultPopulationCreator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.impl.DefaultPopulationCreator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.IPopulationCreator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDefaultPopulationCreator\fP ()"
+.br
+.ti -1c
+.RI "\fBDefaultPopulationCreator\fP (\fBIProgramCreator\fP a_programCreator)"
+.br
+.ti -1c
+.RI "void \fBinitialize\fP (\fBGPPopulation\fP a_pop, Class[] a_types, Class[][] a_argTypes, \fBCommandGene\fP[][] a_nodeSets, int[] a_minDepths, int[] a_maxDepths, int a_maxNodes, boolean[] a_fullModeAllowed)  throws InvalidConfigurationException "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBIProgramCreator\fP \fBm_programCreator\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.8 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Default implementation of interface \fBIPopulationCreator\fP\&. Creates a complete population with JGAP standard means\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file DefaultPopulationCreator\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.impl\&.DefaultPopulationCreator\&.DefaultPopulationCreator ()\fC [inline]\fP"
+
+.PP
+Definition at line 29 of file DefaultPopulationCreator\&.java\&.
+.SS "org\&.jgap\&.gp\&.impl\&.DefaultPopulationCreator\&.DefaultPopulationCreator (\fBIProgramCreator\fPa_programCreator)\fC [inline]\fP"
+
+.PP
+Definition at line 33 of file DefaultPopulationCreator\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.DefaultPopulationCreator\&.m_programCreator\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.gp\&.impl\&.DefaultPopulationCreator\&.initialize (\fBGPPopulation\fPa_pop, Class[]a_types, Classa_argTypes[][], \fBCommandGene\fPa_nodeSets[][], int[]a_minDepths, int[]a_maxDepths, inta_maxNodes, boolean[]a_fullModeAllowed) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Initializes the given population by creating individuals for it\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pop\fP the population to initialize 
+.br
+\fIa_types\fP the type for each chromosome, the length of the array represents the number of chromosomes 
+.br
+\fIa_argTypes\fP the types of the arguments to each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of arguments to the chromosome 
+.br
+\fIa_nodeSets\fP the nodes which are allowed to be used by each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of nodes 
+.br
+\fIa_minDepths\fP contains the minimum depth allowed for each chromosome 
+.br
+\fIa_maxDepths\fP contains the maximum depth allowed for each chromosome 
+.br
+\fIa_maxNodes\fP reserve space for a_maxNodes number of nodes 
+.br
+\fIa_fullModeAllowed\fP array of boolean values\&. For each chromosome there is one value indicating whether the full mode for creating chromosome generations during evolution is allowed (true) or not (false)
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP in case of any error
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.2 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+pass params (e\&.g\&. advanced yes/no for Robocode) 
+.RE
+.PP
+
+.PP
+Definition at line 62 of file DefaultPopulationCreator\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.DefaultPopulationCreator\&.m_programCreator\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.impl\&.DefaultPopulationCreator\&.CVS_REVISION = '$Revision: 1\&.8 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file DefaultPopulationCreator\&.java\&.
+.SS "\fBIProgramCreator\fP org\&.jgap\&.gp\&.impl\&.DefaultPopulationCreator\&.m_programCreator\fC [private]\fP"
+
+.PP
+Definition at line 27 of file DefaultPopulationCreator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.DefaultPopulationCreator\&.DefaultPopulationCreator(), and org\&.jgap\&.gp\&.impl\&.DefaultPopulationCreator\&.initialize()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,271 @@
+.TH "org.jgap.audit.FitnessImprovementMonitor" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.audit.FitnessImprovementMonitor \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.audit\&.IEvolutionMonitor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFitnessImprovementMonitor\fP (int a_initialWaitSeconds, int a_checkIntervalSeconds, double a_improvedFitnessExpected)"
+.br
+.ti -1c
+.RI "boolean \fBnextCycle\fP (\fBPopulation\fP a_pop, List< String > a_messages)"
+.br
+.ti -1c
+.RI "void \fBstart\fP (\fBConfiguration\fP a_config)"
+.br
+.ti -1c
+.RI "void \fBevent\fP (String a_monitorEvent, int a_evolutionNo, Object[] a_information)"
+.br
+.ti -1c
+.RI "\fBPopulationHistoryIndexed\fP \fBgetPopulations\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBm_initialWaitSeconds\fP"
+.br
+.ti -1c
+.RI "int \fBm_checkIntervalSeconds\fP"
+.br
+.ti -1c
+.RI "double \fBm_improvedFitnessExpected\fP"
+.br
+.ti -1c
+.RI "long \fBm_startMillis\fP"
+.br
+.ti -1c
+.RI "long \fBm_lastCheckMillis\fP"
+.br
+.ti -1c
+.RI "double \fBm_bestFitnessPreviously\fP"
+.br
+.ti -1c
+.RI "int \fBm_checks\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.4 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Monitors the evolution and stops it if evolution does not make a progress as desired\&. For usage of this monitor class, see class \fBexamples\&.audit\&.EvolutionMonitorExample\fP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file FitnessImprovementMonitor\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.FitnessImprovementMonitor (inta_initialWaitSeconds, inta_checkIntervalSeconds, doublea_improvedFitnessExpected)\fC [inline]\fP"
+Constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_initialWaitSeconds\fP number of seconds to wait until first check 
+.br
+\fIa_checkIntervalSeconds\fP number of seconds to wait after the previous check (except for the first check, where a_initialWaitSeconds is taken) 
+.br
+\fIa_improvedFitnessExpected\fP number of fitness units the current best solution evolved is better than the best solution from the previously check
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 56 of file FitnessImprovementMonitor\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.m_bestFitnessPreviously, org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.m_checkIntervalSeconds, org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.m_improvedFitnessExpected, org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.m_initialWaitSeconds, and org\&.jgap\&.FitnessFunction\&.NO_FITNESS_VALUE\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.event (Stringa_monitorEvent, inta_evolutionNo, Object[]a_information)\fC [inline]\fP"
+Called whenever it's worth monitoring\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_monitorEvent\fP see constants at top of class \fBIEvolutionMonitor\fP 
+.br
+\fIa_evolutionNo\fP the index of the evolution round (1, 2, \&.\&.\&.) 
+.br
+\fIa_information\fP event-specific information
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.audit\&.IEvolutionMonitor\fP\&.
+.PP
+Definition at line 156 of file FitnessImprovementMonitor\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_AFTER_BULK_EVAL, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_AFTER_OPERATE, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_AFTER_SELECT, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_AFTER_UPDATE_CHROMOSOMES1, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_AFTER_UPDATE_CHROMOSOMES2, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_BEFORE_ADD_CHROMOSOME, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_BEFORE_BULK_EVAL, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_BEFORE_OPERATE, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_BEFORE_SELECT, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_BEFORE_UPDATE_CHROMOSOMES1, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_BEFORE_UPDATE_CHROMOSOMES2, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_READD_FITTEST, and org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_REMOVE_CHROMOSOME\&.
+.SS "\fBPopulationHistoryIndexed\fP org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.getPopulations ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+null as no data is gathered by this monitor
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.audit\&.IEvolutionMonitor\fP\&.
+.PP
+Definition at line 253 of file FitnessImprovementMonitor\&.java\&.
+.SS "boolean org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.nextCycle (\fBPopulation\fPa_pop, List< String >a_messages)\fC [inline]\fP"
+Called after another evolution cycle has been executed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pop\fP the currently evolved population 
+.br
+\fIa_messages\fP the monitor can append messages to indicate why it asks evolution to stop 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: continue with the evolution; false: stop evolution
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.audit\&.IEvolutionMonitor\fP\&.
+.PP
+Definition at line 76 of file FitnessImprovementMonitor\&.java\&.
+.PP
+References org\&.jgap\&.FitnessFunction\&.DELTA, org\&.jgap\&.IChromosome\&.getFitnessValue(), org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.m_bestFitnessPreviously, org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.m_checkIntervalSeconds, org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.m_checks, org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.m_improvedFitnessExpected, org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.m_initialWaitSeconds, org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.m_lastCheckMillis, org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.m_startMillis, and org\&.jgap\&.FitnessFunction\&.NO_FITNESS_VALUE\&.
+.SS "void org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.start (\fBConfiguration\fPa_config)\fC [inline]\fP"
+Called just before the evolution starts\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration used
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.audit\&.IEvolutionMonitor\fP\&.
+.PP
+Definition at line 142 of file FitnessImprovementMonitor\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.m_startMillis\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.CVS_REVISION = '$Revision: 1\&.4 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 28 of file FitnessImprovementMonitor\&.java\&.
+.SS "double org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.m_bestFitnessPreviously\fC [private]\fP"
+
+.PP
+Definition at line 40 of file FitnessImprovementMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.FitnessImprovementMonitor(), and org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.nextCycle()\&.
+.SS "int org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.m_checkIntervalSeconds\fC [private]\fP"
+
+.PP
+Definition at line 32 of file FitnessImprovementMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.FitnessImprovementMonitor(), and org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.nextCycle()\&.
+.SS "int org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.m_checks\fC [private]\fP"
+
+.PP
+Definition at line 42 of file FitnessImprovementMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.nextCycle()\&.
+.SS "double org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.m_improvedFitnessExpected\fC [private]\fP"
+
+.PP
+Definition at line 34 of file FitnessImprovementMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.FitnessImprovementMonitor(), and org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.nextCycle()\&.
+.SS "int org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.m_initialWaitSeconds\fC [private]\fP"
+
+.PP
+Definition at line 30 of file FitnessImprovementMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.FitnessImprovementMonitor(), and org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.nextCycle()\&.
+.SS "long org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.m_lastCheckMillis\fC [private]\fP"
+
+.PP
+Definition at line 38 of file FitnessImprovementMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.nextCycle()\&.
+.SS "long org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.m_startMillis\fC [private]\fP"
+
+.PP
+Definition at line 36 of file FitnessImprovementMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.nextCycle(), and org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.start()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

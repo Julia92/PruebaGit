@@ -1,0 +1,298 @@
+.TH "examples.knapsack.KnapsackFitnessFunction" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.knapsack.KnapsackFitnessFunction \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits FitnessFunction\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBKnapsackFitnessFunction\fP (double a_knapsackVolume)"
+.br
+.ti -1c
+.RI "double \fBevaluate\fP (IChromosome a_subject)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static double \fBgetTotalVolume\fP (IChromosome a_potentialSolution)"
+.br
+.ti -1c
+.RI "static int \fBgetNumberOfItemsAtGene\fP (IChromosome a_potentialSolution, int a_position)"
+.br
+.ti -1c
+.RI "static int \fBgetTotalNumberOfItems\fP (IChromosome a_potentialSolution)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final double \fBMAX_BOUND\fP = 1000000000\&.0d"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "double \fBvolumeDifferenceBonus\fP (double a_maxFitness, double a_volumeDifference)"
+.br
+.ti -1c
+.RI "double \fBcomputeItemNumberPenalty\fP (double a_maxFitness, int a_items)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "final double \fBm_knapsackVolume\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.5 $'"
+.br
+.ti -1c
+.RI "static final double \fBZERO_DIFFERENCE_FITNESS\fP = Math\&.sqrt(\fBMAX_BOUND\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Fitness function for the knapsack example\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file KnapsackFitnessFunction\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.knapsack\&.KnapsackFitnessFunction\&.KnapsackFitnessFunction (doublea_knapsackVolume)\fC [inline]\fP"
+
+.PP
+Definition at line 31 of file KnapsackFitnessFunction\&.java\&.
+.PP
+References examples\&.knapsack\&.KnapsackFitnessFunction\&.m_knapsackVolume, and examples\&.knapsack\&.KnapsackFitnessFunction\&.MAX_BOUND\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "double examples\&.knapsack\&.KnapsackFitnessFunction\&.computeItemNumberPenalty (doublea_maxFitness, inta_items)\fC [inline]\fP, \fC [protected]\fP"
+Calculates the penalty to apply to the fitness value based on the amount of items in the solution\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_maxFitness\fP upper boundary for fitness value possible 
+.br
+\fIa_items\fP number of items in the solution 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a penalty for the fitness value based on the number of items
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 121 of file KnapsackFitnessFunction\&.java\&.
+.PP
+Referenced by examples\&.knapsack\&.KnapsackFitnessFunction\&.evaluate()\&.
+.SS "double examples\&.knapsack\&.KnapsackFitnessFunction\&.evaluate (IChromosomea_subject)\fC [inline]\fP"
+Determine the fitness of the given Chromosome instance\&. The higher the return value, the more fit the instance\&. This method should always return the same fitness value for two equivalent Chromosome instances\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_subject\fP the Chromosome instance to evaluate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a positive double reflecting the fitness rating of the given Chromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file KnapsackFitnessFunction\&.java\&.
+.PP
+References examples\&.knapsack\&.KnapsackFitnessFunction\&.computeItemNumberPenalty(), examples\&.knapsack\&.KnapsackFitnessFunction\&.getTotalNumberOfItems(), examples\&.knapsack\&.KnapsackFitnessFunction\&.getTotalVolume(), examples\&.knapsack\&.KnapsackFitnessFunction\&.m_knapsackVolume, examples\&.knapsack\&.KnapsackFitnessFunction\&.MAX_BOUND, and examples\&.knapsack\&.KnapsackFitnessFunction\&.volumeDifferenceBonus()\&.
+.SS "static int examples\&.knapsack\&.KnapsackFitnessFunction\&.getNumberOfItemsAtGene (IChromosomea_potentialSolution, inta_position)\fC [inline]\fP, \fC [static]\fP"
+Retrieves the number of items represented by the given potential solution at the given gene position\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_potentialSolution\fP the potential solution to evaluate 
+.br
+\fIa_position\fP the gene position to evaluate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of items represented by the potential solution at the given gene position
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 168 of file KnapsackFitnessFunction\&.java\&.
+.PP
+Referenced by examples\&.knapsack\&.KnapsackFitnessFunction\&.getTotalNumberOfItems(), and examples\&.knapsack\&.KnapsackFitnessFunction\&.getTotalVolume()\&.
+.SS "static int examples\&.knapsack\&.KnapsackFitnessFunction\&.getTotalNumberOfItems (IChromosomea_potentialSolution)\fC [inline]\fP, \fC [static]\fP"
+Returns the total number of items represented by all of the genes in the given potential solution\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_potentialSolution\fP the potential solution to evaluate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the total number of items represented by the given Chromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 185 of file KnapsackFitnessFunction\&.java\&.
+.PP
+References examples\&.knapsack\&.KnapsackFitnessFunction\&.getNumberOfItemsAtGene()\&.
+.PP
+Referenced by examples\&.knapsack\&.KnapsackFitnessFunction\&.evaluate()\&.
+.SS "static double examples\&.knapsack\&.KnapsackFitnessFunction\&.getTotalVolume (IChromosomea_potentialSolution)\fC [inline]\fP, \fC [static]\fP"
+Calculates the total amount of change (in cents) represented by the given potential solution and returns that amount\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_potentialSolution\fP the potential solution to evaluate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the total amount of change (in cents) represented by the given solution
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 147 of file KnapsackFitnessFunction\&.java\&.
+.PP
+References examples\&.knapsack\&.KnapsackFitnessFunction\&.getNumberOfItemsAtGene()\&.
+.PP
+Referenced by examples\&.knapsack\&.KnapsackFitnessFunction\&.evaluate()\&.
+.SS "double examples\&.knapsack\&.KnapsackFitnessFunction\&.volumeDifferenceBonus (doublea_maxFitness, doublea_volumeDifference)\fC [inline]\fP, \fC [protected]\fP"
+Bonus calculation of fitness value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_maxFitness\fP maximum fitness value appliable 
+.br
+\fIa_volumeDifference\fP volume difference in ccm for the items problem 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+bonus for given volume difference
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 98 of file KnapsackFitnessFunction\&.java\&.
+.PP
+Referenced by examples\&.knapsack\&.KnapsackFitnessFunction\&.evaluate()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.knapsack\&.KnapsackFitnessFunction\&.CVS_REVISION = '$Revision: 1\&.5 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 23 of file KnapsackFitnessFunction\&.java\&.
+.SS "final double examples\&.knapsack\&.KnapsackFitnessFunction\&.m_knapsackVolume\fC [private]\fP"
+
+.PP
+Definition at line 25 of file KnapsackFitnessFunction\&.java\&.
+.PP
+Referenced by examples\&.knapsack\&.KnapsackFitnessFunction\&.evaluate(), and examples\&.knapsack\&.KnapsackFitnessFunction\&.KnapsackFitnessFunction()\&.
+.SS "final double examples\&.knapsack\&.KnapsackFitnessFunction\&.MAX_BOUND = 1000000000\&.0d\fC [static]\fP"
+
+.PP
+Definition at line 27 of file KnapsackFitnessFunction\&.java\&.
+.PP
+Referenced by examples\&.knapsack\&.KnapsackFitnessFunction\&.evaluate(), examples\&.knapsack\&.KnapsackFitnessFunction\&.KnapsackFitnessFunction(), and examples\&.knapsack\&.KnapsackMain\&.main()\&.
+.SS "final double examples\&.knapsack\&.KnapsackFitnessFunction\&.ZERO_DIFFERENCE_FITNESS = Math\&.sqrt(\fBMAX_BOUND\fP)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 29 of file KnapsackFitnessFunction\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

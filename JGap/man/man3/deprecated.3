@@ -1,0 +1,38 @@
+.TH "deprecated" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+deprecated \- Deprecated List 
+
+.IP "\fBMember \fBorg\&.jgap\&.Configuration\&.getNaturalSelector\fP ()\fP" 1c
+use getNaturalSelectors(true) or getNaturalSelectors(false) to obtain the relevant chain of NaturalSelector's and then call the chain's get(index) method  
+.IP "\fBMember \fBorg\&.jgap\&.Configuration\&.setNaturalSelector\fP (final NaturalSelector a_selectorToSet)\fP" 1c
+use addNaturalSelector(false) instead  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getFittest\fP ()\fP" 1c
+use getPopulation instead  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.JGAPResultGP\fP (String a_sessionName, String a_id, int a_chunk, IGPProgram a_fittestProg, long a_unitdone)\fP" 1c
+use other constructor with GPPopulation parameter instead  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.JGAPResult\&.getFittest\fP ()\fP" 1c
+use getPopulation instead  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.JGAPResult\&.JGAPResult\fP (String name, int id, IChromosome a_fittestChrom, long a_unitdone)\fP" 1c
+use other constructor with Population parameter instead  
+.IP "\fBMember \fBorg\&.jgap\&.Genotype\&.Genotype\fP (Configuration a_configuration, IChromosome[] a_initialChromosomes)\fP" 1c
+use Genotype(Configuration, Population) instead  
+.IP "\fBMember \fBorg\&.jgap\&.Genotype\&.getChromosomes\fP ()\fP" 1c
+uses getPopulation() instead  
+.IP "\fBClass \fBorg\&.jgap\&.gp\&.impl\&.FitnessProportionateSelection\fP \fP" 1c
+use TournamentSelector instead  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.impl\&.FitnessProportionateSelection\&.select\fP (GPGenotype a_genotype)\fP" 1c
+use TournamentSelector or WeightedGPRouletteSelector instead  
+.IP "\fBMember \fBorg\&.jgap\&.xml\&.XMLManager\&.representChromosomeAsDocument\fP (final IChromosome a_subject)\fP" 1c
+use XMLDocumentBuilder instead  
+.IP "\fBMember \fBorg\&.jgap\&.xml\&.XMLManager\&.representChromosomeAsElement\fP (final IChromosome a_subject, final Document a_xmlDocument)\fP" 1c
+use XMLDocumentBuilder instead  
+.IP "\fBMember \fBorg\&.jgap\&.xml\&.XMLManager\&.representGenesAsElement\fP (final Gene[] a_geneValues, final Document a_xmlDocument)\fP" 1c
+use XMLDocumentBuilder instead  
+.IP "\fBMember \fBorg\&.jgap\&.xml\&.XMLManager\&.representGenotypeAsDocument\fP (final Genotype a_subject)\fP" 1c
+use XMLDocumentBuilder instead  
+.IP "\fBMember \fBorg\&.jgap\&.xml\&.XMLManager\&.representGenotypeAsElement\fP (final Genotype a_subject, final Document a_xmlDocument)\fP" 1c
+use XMLDocumentBuilder instead 
+.PP
+

@@ -1,0 +1,327 @@
+.TH "org.jgap.gp.function.Push" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.function.Push \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandGene\fP, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPush\fP (final GPConfiguration a_conf, Class a_type)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBPush\fP (final GPConfiguration a_conf, Class a_type, int a_subReturnType, int a_subChildType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "void \fBexecute_void\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "int \fBexecute_int\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "long \fBexecute_long\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "double \fBexecute_double\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "float \fBexecute_float\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "Object \fBexecute_object\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "boolean \fBisAffectGlobalState\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisValid\fP (ProgramChromosome a_program)"
+.br
+.ti -1c
+.RI "Class \fBgetChildType\fP (\fBIGPProgram\fP a_ind, int a_chromNum)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBpushIt\fP (Object a_value)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Class \fBm_type\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.13 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Pushes a value onto the stack\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file Push\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.function\&.Push\&.Push (final GPConfigurationa_conf, Classa_type) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 31 of file Push\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.Push\&.clone(), org\&.jgap\&.gp\&.function\&.Push\&.compareTo(), and org\&.jgap\&.gp\&.function\&.Push\&.equals()\&.
+.SS "org\&.jgap\&.gp\&.function\&.Push\&.Push (final GPConfigurationa_conf, Classa_type, inta_subReturnType, inta_subChildType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 36 of file Push\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.Push\&.m_type, and org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.gp\&.function\&.Push\&.clone ()\fC [inline]\fP"
+Clones the object\&. Simple and straight forward implementation here\&.
+.PP
+\fBReturns:\fP
+.RS 4
+cloned instance of this object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 173 of file Push\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.getSubChildType(), org\&.jgap\&.gp\&.CommandGene\&.getSubReturnType(), org\&.jgap\&.gp\&.function\&.Push\&.m_type, and org\&.jgap\&.gp\&.function\&.Push\&.Push()\&.
+.SS "int org\&.jgap\&.gp\&.function\&.Push\&.compareTo (Objecta_other)\fC [inline]\fP"
+The compareTo-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+-1, 0, 1
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 134 of file Push\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.Push\&.m_type, and org\&.jgap\&.gp\&.function\&.Push\&.Push()\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.Push\&.equals (Objecta_other)\fC [inline]\fP"
+The equals-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the objects are seen as equal
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 154 of file Push\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.Push\&.m_type, and org\&.jgap\&.gp\&.function\&.Push\&.Push()\&.
+.SS "double org\&.jgap\&.gp\&.function\&.Push\&.execute_double (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 83 of file Push\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), and org\&.jgap\&.gp\&.function\&.Push\&.pushIt()\&.
+.SS "float org\&.jgap\&.gp\&.function\&.Push\&.execute_float (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 90 of file Push\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), and org\&.jgap\&.gp\&.function\&.Push\&.pushIt()\&.
+.SS "int org\&.jgap\&.gp\&.function\&.Push\&.execute_int (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 65 of file Push\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), and org\&.jgap\&.gp\&.function\&.Push\&.pushIt()\&.
+.SS "long org\&.jgap\&.gp\&.function\&.Push\&.execute_long (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 74 of file Push\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), and org\&.jgap\&.gp\&.function\&.Push\&.pushIt()\&.
+.SS "Object org\&.jgap\&.gp\&.function\&.Push\&.execute_object (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 97 of file Push\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), and org\&.jgap\&.gp\&.function\&.Push\&.pushIt()\&.
+.SS "void org\&.jgap\&.gp\&.function\&.Push\&.execute_void (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 57 of file Push\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), and org\&.jgap\&.gp\&.function\&.Push\&.pushIt()\&.
+.SS "Class org\&.jgap\&.gp\&.function\&.Push\&.getChildType (\fBIGPProgram\fPa_ind, inta_chromNum)\fC [inline]\fP"
+
+.PP
+Definition at line 121 of file Push\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.Push\&.m_type\&.
+.SS "String org\&.jgap\&.gp\&.function\&.Push\&.getName ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+textual name of this command
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 53 of file Push\&.java\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.Push\&.isAffectGlobalState ()\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+use this information 
+.RE
+.PP
+
+.PP
+Definition at line 104 of file Push\&.java\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.Push\&.isValid (ProgramChromosomea_program)\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+consider n (execute_int\&.\&.\&.) 
+.RE
+.PP
+
+.PP
+Definition at line 108 of file Push\&.java\&.
+.SS "void org\&.jgap\&.gp\&.function\&.Push\&.pushIt (Objecta_value)\fC [inline]\fP, \fC [protected]\fP"
+Helper method\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_value\fP the value to push onto the stack 
+.RE
+.PP
+
+.PP
+Definition at line 117 of file Push\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.Push\&.execute_double(), org\&.jgap\&.gp\&.function\&.Push\&.execute_float(), org\&.jgap\&.gp\&.function\&.Push\&.execute_int(), org\&.jgap\&.gp\&.function\&.Push\&.execute_long(), org\&.jgap\&.gp\&.function\&.Push\&.execute_object(), and org\&.jgap\&.gp\&.function\&.Push\&.execute_void()\&.
+.SS "String org\&.jgap\&.gp\&.function\&.Push\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 43 of file Push\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.function\&.Push\&.CVS_REVISION = '$Revision: 1\&.13 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 27 of file Push\&.java\&.
+.SS "Class org\&.jgap\&.gp\&.function\&.Push\&.m_type\fC [private]\fP"
+
+.PP
+Definition at line 29 of file Push\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.Push\&.clone(), org\&.jgap\&.gp\&.function\&.Push\&.compareTo(), org\&.jgap\&.gp\&.function\&.Push\&.equals(), org\&.jgap\&.gp\&.function\&.Push\&.getChildType(), and org\&.jgap\&.gp\&.function\&.Push\&.Push()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

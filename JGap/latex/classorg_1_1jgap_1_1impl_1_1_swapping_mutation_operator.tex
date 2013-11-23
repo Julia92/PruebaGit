@@ -1,0 +1,416 @@
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator}{\section{org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator Class Reference}
+\label{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator}\index{org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator@{org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a99466fe42f99057ac58575f31c8ac0c9}{Swapping\-Mutation\-Operator} ()  throws Invalid\-Configuration\-Exception 
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a63832201f7929c857ac8c08a36e8774d}{Swapping\-Mutation\-Operator} (final \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} a\-\_\-config)  throws Invalid\-Configuration\-Exception 
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a5125bd9c3714d95f5c1097bf011d3c23}{Swapping\-Mutation\-Operator} (final \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} a\-\_\-config, final \hyperlink{interfaceorg_1_1jgap_1_1_i_universal_rate_calculator}{I\-Universal\-Rate\-Calculator} a\-\_\-mutation\-Rate\-Calculator)  throws Invalid\-Configuration\-Exception 
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a615f713435327476dc65db3f0200157e}{Swapping\-Mutation\-Operator} (final \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} a\-\_\-config, final int a\-\_\-desired\-Mutation\-Rate)  throws Invalid\-Configuration\-Exception 
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a810eb9c5bd759b5e4a61f6a91963b7df}{operate} (final \hyperlink{classorg_1_1jgap_1_1_population}{Population} a\-\_\-population, List a\-\_\-candidate\-Chromosomes)
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_aceccb3775429c8efd2b45ad6e7f979d0}{set\-Start\-Offset} (final int a\-\_\-offset)
+\item 
+int \hyperlink{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_ad580708adf59332d0519ec5cd71d1626}{get\-Start\-Offset} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} \hyperlink{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a43cda60692e8d1a1fcecb6a0e4e00073}{operate} (final \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} a\-\_\-chrom, final int a\-\_\-rate, final \hyperlink{interfaceorg_1_1jgap_1_1_random_generator}{Random\-Generator} a\-\_\-generator)
+\item 
+\hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}\mbox{[}$\,$\mbox{]} \hyperlink{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a4fdd309d7274d97a6a4ecfa68910a381}{operate} (final \hyperlink{interfaceorg_1_1jgap_1_1_random_generator}{Random\-Generator} a\-\_\-generator, final int a\-\_\-target\-\_\-gene, final \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}\mbox{[}$\,$\mbox{]} a\-\_\-genes)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a542b0fe73976a2e9f45cf45402127b39}{m\-\_\-start\-Offset} = 1
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a0ffd35f7d9b1437b5cb2c4bbcd3687de}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-21 \$\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Swaps the genes instead of mutating them. This kind of operator is required by Traveling Salesman Problem.
+
+See J. Grefenstette, R. Gopal, R. Rosmaita, and D. Gucht. {\itshape Genetic algorithms for the traveling salesman problem}. In Proceedings of the Second International Conference on Genetic Algorithms. Lawrence Eribaum Associates, Mahwah, N\-J, 1985. and also \href{http://ecsl.cs.unr.edu/docs/techreports/gong/node3.html}{\tt Sushil J. Louis \& Gong Li} \}
+
+\begin{DoxyAuthor}{Author}
+Audrius Meskauskas 
+
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 31 of file Swapping\-Mutation\-Operator.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a99466fe42f99057ac58575f31c8ac0c9}{\index{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}!Swapping\-Mutation\-Operator@{Swapping\-Mutation\-Operator}}
+\index{Swapping\-Mutation\-Operator@{Swapping\-Mutation\-Operator}!org::jgap::impl::SwappingMutationOperator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}}
+\subsubsection[{Swapping\-Mutation\-Operator}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator.\-Swapping\-Mutation\-Operator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\-Configuration\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a99466fe42f99057ac58575f31c8ac0c9}
+Constructs a new instance of this operator.
+
+Attention\-: The configuration used is the one set with the static method Genotype.\-set\-Configuration.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classorg_1_1jgap_1_1_invalid_configuration_exception}{Invalid\-Configuration\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+
+
+Definition at line 47 of file Swapping\-Mutation\-Operator.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a63832201f7929c857ac8c08a36e8774d}{\index{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}!Swapping\-Mutation\-Operator@{Swapping\-Mutation\-Operator}}
+\index{Swapping\-Mutation\-Operator@{Swapping\-Mutation\-Operator}!org::jgap::impl::SwappingMutationOperator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}}
+\subsubsection[{Swapping\-Mutation\-Operator}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator.\-Swapping\-Mutation\-Operator (
+\begin{DoxyParamCaption}
+\item[{final {\bf Configuration}}]{a\-\_\-config}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\-Configuration\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a63832201f7929c857ac8c08a36e8774d}
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-config} & the configuration to use \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classorg_1_1jgap_1_1_invalid_configuration_exception}{Invalid\-Configuration\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-0 
+\end{DoxySince}
+
+
+Definition at line 59 of file Swapping\-Mutation\-Operator.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a5125bd9c3714d95f5c1097bf011d3c23}{\index{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}!Swapping\-Mutation\-Operator@{Swapping\-Mutation\-Operator}}
+\index{Swapping\-Mutation\-Operator@{Swapping\-Mutation\-Operator}!org::jgap::impl::SwappingMutationOperator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}}
+\subsubsection[{Swapping\-Mutation\-Operator}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator.\-Swapping\-Mutation\-Operator (
+\begin{DoxyParamCaption}
+\item[{final {\bf Configuration}}]{a\-\_\-config, }
+\item[{final {\bf I\-Universal\-Rate\-Calculator}}]{a\-\_\-mutation\-Rate\-Calculator}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\-Configuration\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a5125bd9c3714d95f5c1097bf011d3c23}
+Constructs a new instance of this operator with a specified mutation rate calculator, which results in dynamic mutation being turned on.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-config} & the configuration to use \\
+\hline
+{\em a\-\_\-mutation\-Rate\-Calculator} & calculator for dynamic mutation rate computation \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classorg_1_1jgap_1_1_invalid_configuration_exception}{Invalid\-Configuration\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-0 (previously\-: without a\-\_\-config) 
+\end{DoxySince}
+
+
+Definition at line 77 of file Swapping\-Mutation\-Operator.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a615f713435327476dc65db3f0200157e}{\index{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}!Swapping\-Mutation\-Operator@{Swapping\-Mutation\-Operator}}
+\index{Swapping\-Mutation\-Operator@{Swapping\-Mutation\-Operator}!org::jgap::impl::SwappingMutationOperator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}}
+\subsubsection[{Swapping\-Mutation\-Operator}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator.\-Swapping\-Mutation\-Operator (
+\begin{DoxyParamCaption}
+\item[{final {\bf Configuration}}]{a\-\_\-config, }
+\item[{final int}]{a\-\_\-desired\-Mutation\-Rate}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\-Configuration\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a615f713435327476dc65db3f0200157e}
+Constructs a new instance of this \hyperlink{classorg_1_1jgap_1_1impl_1_1_mutation_operator}{Mutation\-Operator} with the given mutation rate.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-config} & the configuration to use \\
+\hline
+{\em a\-\_\-desired\-Mutation\-Rate} & desired rate of mutation, expressed as the denominator of the 1 / X fraction. For example, 1000 would result in 1/1000 genes being mutated on average. A mutation rate of zero disables mutation entirely \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classorg_1_1jgap_1_1_invalid_configuration_exception}{Invalid\-Configuration\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-0 (previously\-: without a\-\_\-config) 
+\end{DoxySince}
+
+
+Definition at line 98 of file Swapping\-Mutation\-Operator.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_ad580708adf59332d0519ec5cd71d1626}{\index{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}!get\-Start\-Offset@{get\-Start\-Offset}}
+\index{get\-Start\-Offset@{get\-Start\-Offset}!org::jgap::impl::SwappingMutationOperator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}}
+\subsubsection[{get\-Start\-Offset}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator.\-get\-Start\-Offset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_ad580708adf59332d0519ec5cd71d1626}
+Gets a number of genes at the start of chromosome, that are excluded from the swapping. In the Salesman task, the first city in the list should (where the salesman leaves from) probably should not change as it is part of the list. The default value is 1.
+
+\begin{DoxyReturn}{Returns}
+the start offset
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Audrius Meskauskas 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 254 of file Swapping\-Mutation\-Operator.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator.\-m\-\_\-start\-Offset.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator\-Test.\-test\-Startoffset\-\_\-0().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a810eb9c5bd759b5e4a61f6a91963b7df}{\index{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}!operate@{operate}}
+\index{operate@{operate}!org::jgap::impl::SwappingMutationOperator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}}
+\subsubsection[{operate}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator.\-operate (
+\begin{DoxyParamCaption}
+\item[{final {\bf Population}}]{a\-\_\-population, }
+\item[{List}]{a\-\_\-candidate\-Chromosomes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a810eb9c5bd759b5e4a61f6a91963b7df}
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-population} & the population of chromosomes from the current evolution prior to exposure to any genetic operators. Chromosomes in this array should not be modified. Please, notice, that the call in \hyperlink{classorg_1_1jgap_1_1_genotype_a54a6791fbb6e13920e79f4e2dd719eb4}{Genotype.\-evolve()} to the implementations of \hyperlink{interfaceorg_1_1jgap_1_1_genetic_operator}{Genetic\-Operator} overgoes this due to performance issues \\
+\hline
+{\em a\-\_\-candidate\-Chromosomes} & the pool of chromosomes that have been selected for the next evolved population\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Audrius Meskauskas 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 117 of file Swapping\-Mutation\-Operator.\-java.
+
+
+
+References org.\-jgap.\-Base\-Genetic\-Operator.\-get\-Configuration(), org.\-jgap.\-impl.\-Mutation\-Operator.\-get\-Mutation\-Rate(), org.\-jgap.\-impl.\-Mutation\-Operator.\-get\-Mutation\-Rate\-Calc(), and org.\-jgap.\-impl.\-Mutation\-Operator.\-m\-\_\-mutation\-Rate\-Calc.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator.\-operate().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a810eb9c5bd759b5e4a61f6a91963b7df_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a43cda60692e8d1a1fcecb6a0e4e00073}{\index{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}!operate@{operate}}
+\index{operate@{operate}!org::jgap::impl::SwappingMutationOperator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}}
+\subsubsection[{operate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\-Chromosome} org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator.\-operate (
+\begin{DoxyParamCaption}
+\item[{final {\bf I\-Chromosome}}]{a\-\_\-chrom, }
+\item[{final int}]{a\-\_\-rate, }
+\item[{final {\bf Random\-Generator}}]{a\-\_\-generator}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a43cda60692e8d1a1fcecb6a0e4e00073}
+Operate on the given chromosome with the given mutation rate.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-chrom} & chromosome to operate \\
+\hline
+{\em a\-\_\-rate} & mutation rate \\
+\hline
+{\em a\-\_\-generator} & random generator to use (must not be null) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mutated chromosome of null if no mutation has occured.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Audrius Meskauskas 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 165 of file Swapping\-Mutation\-Operator.\-java.
+
+
+
+References org.\-jgap.\-util.\-I\-Cloneable.\-clone(), org.\-jgap.\-Base\-Genetic\-Operator.\-m\-\_\-monitor\-Active, org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator.\-m\-\_\-start\-Offset, org.\-jgap.\-Random\-Generator.\-next\-Int(), and org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator.\-operate().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a43cda60692e8d1a1fcecb6a0e4e00073_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a4fdd309d7274d97a6a4ecfa68910a381}{\index{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}!operate@{operate}}
+\index{operate@{operate}!org::jgap::impl::SwappingMutationOperator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}}
+\subsubsection[{operate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gene} \mbox{[}$\,$\mbox{]} org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator.\-operate (
+\begin{DoxyParamCaption}
+\item[{final {\bf Random\-Generator}}]{a\-\_\-generator, }
+\item[{final int}]{a\-\_\-target\-\_\-gene, }
+\item[{final {\bf Gene}\mbox{[}$\,$\mbox{]}}]{a\-\_\-genes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a4fdd309d7274d97a6a4ecfa68910a381}
+Operate on the given array of genes. This method is only called when it is already clear that the mutation must occur under the given mutation rate.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-generator} & a random number generator that may be needed to perform a mutation \\
+\hline
+{\em a\-\_\-target\-\_\-gene} & an index of gene in the chromosome that will mutate \\
+\hline
+{\em a\-\_\-genes} & the array of all genes in the chromosome \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the mutated gene array
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Audrius Meskauskas 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 211 of file Swapping\-Mutation\-Operator.\-java.
+
+
+
+References org.\-jgap.\-Base\-Genetic\-Operator.\-m\-\_\-monitor\-Active, and org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator.\-m\-\_\-start\-Offset.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_aceccb3775429c8efd2b45ad6e7f979d0}{\index{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}!set\-Start\-Offset@{set\-Start\-Offset}}
+\index{set\-Start\-Offset@{set\-Start\-Offset}!org::jgap::impl::SwappingMutationOperator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}}
+\subsubsection[{set\-Start\-Offset}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator.\-set\-Start\-Offset (
+\begin{DoxyParamCaption}
+\item[{final int}]{a\-\_\-offset}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_aceccb3775429c8efd2b45ad6e7f979d0}
+Sets a number of genes at the start of chromosome, that are excluded from the swapping. In the Salesman task, the first city in the list should (where the salesman leaves from) probably should not change as it is part of the list. The default value is 1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-offset} & the offset to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Audrius Meskauskas 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 239 of file Swapping\-Mutation\-Operator.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator.\-m\-\_\-start\-Offset.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a0ffd35f7d9b1437b5cb2c4bbcd3687de}{\index{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::impl::SwappingMutationOperator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-21 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a0ffd35f7d9b1437b5cb2c4bbcd3687de}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 34 of file Swapping\-Mutation\-Operator.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a542b0fe73976a2e9f45cf45402127b39}{\index{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}!m\-\_\-start\-Offset@{m\-\_\-start\-Offset}}
+\index{m\-\_\-start\-Offset@{m\-\_\-start\-Offset}!org::jgap::impl::SwappingMutationOperator@{org\-::jgap\-::impl\-::\-Swapping\-Mutation\-Operator}}
+\subsubsection[{m\-\_\-start\-Offset}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator.\-m\-\_\-start\-Offset = 1\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_a542b0fe73976a2e9f45cf45402127b39}
+
+
+Definition at line 36 of file Swapping\-Mutation\-Operator.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator.\-get\-Start\-Offset(), org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator.\-operate(), and org.\-jgap.\-impl.\-Swapping\-Mutation\-Operator.\-set\-Start\-Offset().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/impl/\hyperlink{_swapping_mutation_operator_8java}{Swapping\-Mutation\-Operator.\-java}\end{DoxyCompactItemize}

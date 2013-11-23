@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="_x_m_l_document_builder_8java" kind="file">
+    <compoundname>XMLDocumentBuilder.java</compoundname>
+    <innerclass refid="classorg_1_1jgap_1_1xml_1_1_x_m_l_document_builder" prot="public">org::jgap::xml::XMLDocumentBuilder</innerclass>
+    <innernamespace refid="namespaceorg_1_1jgap_1_1xml">org::jgap::xml</innernamespace>
+    <innernamespace refid="namespacejavax_1_1xml_1_1parsers_1_1">javax::xml::parsers::</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>JGAP.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>JGAP<sp/>offers<sp/>a<sp/>dual<sp/>license<sp/>model<sp/>containing<sp/>the<sp/>LGPL<sp/>as<sp/>well<sp/>as<sp/>the<sp/>MPL.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>For<sp/>licensing<sp/>information<sp/>please<sp/>see<sp/>the<sp/>file<sp/>license.txt<sp/>included<sp/>with<sp/>JGAP</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>or<sp/>have<sp/>a<sp/>look<sp/>at<sp/>the<sp/>top<sp/>of<sp/>class<sp/>org.jgap.Chromosome<sp/>which<sp/>representatively</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>includes<sp/>the<sp/>JGAP<sp/>license<sp/>policy<sp/>applicable<sp/>for<sp/>any<sp/>file<sp/>delivered<sp/>with<sp/>JGAP.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">org.jgap.xml;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.data.*;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.w3c.dom.*;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>javax.xml.parsers.*;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classorg_1_1jgap_1_1xml_1_1_x_m_l_document_builder" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classorg_1_1jgap_1_1xml_1_1_x_m_l_document_builder" kindref="compound">XMLDocumentBuilder</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>DocumentBuilderBase<sp/>{</highlight></codeline>
+<codeline lineno="26" refid="classorg_1_1jgap_1_1xml_1_1_x_m_l_document_builder_1a1174960a805366ca3ccd7fe5e3fb92f7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classorg_1_1jgap_1_1xml_1_1_x_m_l_document_builder_1a1174960a805366ca3ccd7fe5e3fb92f7" kindref="member">CVS_REVISION</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$Revision:<sp/>1.10<sp/>$&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classorg_1_1jgap_1_1xml_1_1_x_m_l_document_builder_1a32d70e65f3e8effac178585888961b0c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1xml_1_1_x_m_l_document_builder_1a32d70e65f3e8effac178585888961b0c" kindref="member">setAttribute</ref>(</highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>Object<sp/>a_xmlElement,<sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>String<sp/>a_key,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>String<sp/>a_value)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>(<sp/>(Element)<sp/>a_xmlElement).setAttribute(a_key,<sp/>a_value);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classorg_1_1jgap_1_1xml_1_1_x_m_l_document_builder_1a3c9b61b1ce937d458eabe2cca2aed05a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/>Object<sp/><ref refid="classorg_1_1jgap_1_1xml_1_1_x_m_l_document_builder_1a3c9b61b1ce937d458eabe2cca2aed05a" kindref="member">documentAppendChild</ref>(</highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>Object<sp/>a_xmlDocument,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>Object<sp/>a_element)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>(Document)<sp/>a_xmlDocument).appendChild(<sp/>(Element)<sp/>a_element);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classorg_1_1jgap_1_1xml_1_1_x_m_l_document_builder_1a068f726b57ff7d5ff6439533d81536a0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/>Object<sp/><ref refid="classorg_1_1jgap_1_1xml_1_1_x_m_l_document_builder_1a068f726b57ff7d5ff6439533d81536a0" kindref="member">elementAppendChild</ref>(</highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>Object<sp/>a_xmlElement,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>Object<sp/>a_element)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>(Element)<sp/>a_xmlElement).appendChild(<sp/>(Element)<sp/>a_element);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classorg_1_1jgap_1_1xml_1_1_x_m_l_document_builder_1a55801ebeb86a7b4e2b37629823a46705" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/>Object<sp/><ref refid="classorg_1_1jgap_1_1xml_1_1_x_m_l_document_builder_1a55801ebeb86a7b4e2b37629823a46705" kindref="member">createElement</ref>(</highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>Object<sp/>a_doc,<sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>Object<sp/>a_xmlElement,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>String<sp/>a_tagName)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>(Document)<sp/>a_doc).createElement(a_tagName);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classorg_1_1jgap_1_1xml_1_1_x_m_l_document_builder_1aa4518664bef2a9bd592b1c37c8bb3ec0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Object<sp/><ref refid="classorg_1_1jgap_1_1xml_1_1_x_m_l_document_builder_1aa4518664bef2a9bd592b1c37c8bb3ec0" kindref="member">buildDocument</ref>(</highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>IDataCreators<sp/>a_document)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>DocumentBuilder<sp/>m_documentCreator<sp/>=<sp/>DocumentBuilderFactory.newInstance().</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newDocumentBuilder();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>Document<sp/>xmlDoc<sp/>=<sp/>m_documentCreator.newDocument();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>super.buildDocument(a_document,<sp/>xmlDoc);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/xml/XMLDocumentBuilder.java"/>
+  </compounddef>
+</doxygen>

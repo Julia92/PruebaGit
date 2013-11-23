@@ -1,0 +1,2550 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype" kind="class" prot="public">
+    <compoundname>org::jgap::gp::impl::GPGenotype</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Runnable</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Comparable</basecompoundref>
+    <innerclass refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1_1_g_p_fitness_comparator" prot="package">org::jgap::gp::impl::GPGenotype::GPFitnessComparator</innerclass>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ab88a16d04e096c2c2e1bfc4477ea7310" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.gp.impl.GPGenotype.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.60 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="32" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ada30eb741391730f266047d15cd40338" prot="private" static="yes" mutable="no">
+        <type>transient Logger</type>
+        <definition>transient Logger org.jgap.gp.impl.GPGenotype.LOGGER</definition>
+        <argsstring></argsstring>
+        <name>LOGGER</name>
+        <initializer>= Logger.getLogger(GPGenotype.class)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="34" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a9e2b1a8103181690f4bb6e584463214c" prot="private" static="yes" mutable="no">
+        <type>transient <ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_configuration" kindref="compound">GPConfiguration</ref></type>
+        <definition>transient GPConfiguration org.jgap.gp.impl.GPGenotype.m_staticConfiguration</definition>
+        <argsstring></argsstring>
+        <name>m_staticConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="46" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="46" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a07e4b22e1cd10bbc198278efd83d27ce" compoundref="_g_p_genotype_8java" startline="480" endline="482">org.jgap.gp.impl.GPGenotype.getStaticGPConfiguration</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a7750ff9b7bd73efcfff522365f4650d7" compoundref="_g_p_genotype_8java" startline="492" endline="494">org.jgap.gp.impl.GPGenotype.setStaticGPConfiguration</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a32bf2d50f238455154d3466fc1ef09a1" prot="private" static="no" mutable="no">
+        <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_population" kindref="compound">GPPopulation</ref></type>
+        <definition>GPPopulation org.jgap.gp.impl.GPGenotype.m_population</definition>
+        <argsstring></argsstring>
+        <name>m_population</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The array of <ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_program" kindref="compound">GPProgram</ref>&apos;s that make-up this <ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype" kindref="compound">GPGenotype</ref>&apos;s population </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="39" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a9a2316294bf28b413eb8b0e288cd150d" compoundref="_g_p_genotype_8java" startline="914" endline="916">org.jgap.gp.impl.GPGenotype.getGPPopulation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a11dce8ec844c102bc151e4ab81c52ac7" compoundref="_g_p_genotype_8java" startline="997" endline="999">org.jgap.gp.impl.GPGenotype.setGPPopulation</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a2156c601b24d1a7fdcad1c59ec05e147" prot="private" static="no" mutable="no">
+        <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_configuration" kindref="compound">GPConfiguration</ref></type>
+        <definition>GPConfiguration org.jgap.gp.impl.GPGenotype.m_configuration</definition>
+        <argsstring></argsstring>
+        <name>m_configuration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current configuration instance </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="44" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a318ae291daca64dc4ba0b1e5085b4b87" compoundref="_g_p_genotype_8java" startline="470" endline="472">org.jgap.gp.impl.GPGenotype.getGPConfiguration</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a2d46992095125ecad698dc9e1a72b513" compoundref="_g_p_genotype_8java" startline="1008" endline="1010">org.jgap.gp.impl.GPGenotype.setGPConfiguration</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a957b0de7013e1055b66e03223dc890f2" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double org.jgap.gp.impl.GPGenotype.m_bestFitness</definition>
+        <argsstring></argsstring>
+        <name>m_bestFitness</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fitness value of the best solution </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="51" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="51" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa465c7cbfb45d77644b3d195782a12c9" compoundref="_g_p_genotype_8java" startline="557" endline="639">org.jgap.gp.impl.GPGenotype.calcFitness</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a590812317593272cd66908ef7b712a63" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double org.jgap.gp.impl.GPGenotype.m_totalFitness</definition>
+        <argsstring></argsstring>
+        <name>m_totalFitness</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sum of fitness values over all chromosomes </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="56" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="56" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa465c7cbfb45d77644b3d195782a12c9" compoundref="_g_p_genotype_8java" startline="557" endline="639">org.jgap.gp.impl.GPGenotype.calcFitness</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a631996e8862da78bdb67b76687ad1873" compoundref="_g_p_genotype_8java" startline="924" endline="926">org.jgap.gp.impl.GPGenotype.getTotalFitness</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a6bd9f97a0bb39ec138f6d8ca8ebd25e5" prot="private" static="no" mutable="no">
+        <type><ref refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program" kindref="compound">IGPProgram</ref></type>
+        <definition>IGPProgram org.jgap.gp.impl.GPGenotype.m_allTimeBest</definition>
+        <argsstring></argsstring>
+        <name>m_allTimeBest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Best solution found </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="61" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="61" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa465c7cbfb45d77644b3d195782a12c9" compoundref="_g_p_genotype_8java" startline="557" endline="639">org.jgap.gp.impl.GPGenotype.calcFitness</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1afb8e0283f47eb7c0a0b6e09c8aeccc96" compoundref="_g_p_genotype_8java" startline="647" endline="649">org.jgap.gp.impl.GPGenotype.getAllTimeBest</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a2cff99f216e87c7e4b25c217c5bdc5af" compoundref="_g_p_genotype_8java" startline="959" endline="980">org.jgap.gp.impl.GPGenotype.getFittestProgram</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a869b5d4ab431717009978a9d870bf5d8" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double org.jgap.gp.impl.GPGenotype.m_allTimeBestFitness</definition>
+        <argsstring></argsstring>
+        <name>m_allTimeBestFitness</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="63" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="63" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa465c7cbfb45d77644b3d195782a12c9" compoundref="_g_p_genotype_8java" startline="557" endline="639">org.jgap.gp.impl.GPGenotype.calcFitness</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a71854e2aa9fc4e178a0c768efe9c80ad" compoundref="_g_p_genotype_8java" startline="176" endline="228">org.jgap.gp.impl.GPGenotype.GPGenotype</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a3bfbce17cabd5ef77caf8427f5511407" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean org.jgap.gp.impl.GPGenotype.m_fullModeAllowed[]</definition>
+        <argsstring>[]</argsstring>
+        <name>m_fullModeAllowed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Is full mode with program construction allowed? </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="68" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="68" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad495c700786596290a63e3d88a902766" compoundref="_g_p_genotype_8java" startline="696" endline="912">org.jgap.gp.impl.GPGenotype.evolve</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ae23e8520ee01ca7cb8f927a262db49c6" prot="private" static="no" mutable="no">
+        <type>Class[]</type>
+        <definition>Class [] org.jgap.gp.impl.GPGenotype.m_types</definition>
+        <argsstring></argsstring>
+        <name>m_types</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return type per chromosome </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="73" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="73" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad495c700786596290a63e3d88a902766" compoundref="_g_p_genotype_8java" startline="696" endline="912">org.jgap.gp.impl.GPGenotype.evolve</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a71854e2aa9fc4e178a0c768efe9c80ad" compoundref="_g_p_genotype_8java" startline="176" endline="228">org.jgap.gp.impl.GPGenotype.GPGenotype</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a8e26c3d41a0e1922310e9d966f80238f" prot="private" static="no" mutable="no">
+        <type>Class[][]</type>
+        <definition>Class [][] org.jgap.gp.impl.GPGenotype.m_argTypes</definition>
+        <argsstring></argsstring>
+        <name>m_argTypes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Argument types for ADF&apos;s </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="78" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="78" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad495c700786596290a63e3d88a902766" compoundref="_g_p_genotype_8java" startline="696" endline="912">org.jgap.gp.impl.GPGenotype.evolve</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a71854e2aa9fc4e178a0c768efe9c80ad" compoundref="_g_p_genotype_8java" startline="176" endline="228">org.jgap.gp.impl.GPGenotype.GPGenotype</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a045ec05f97be18ddbd121eb709d3e450" prot="private" static="no" mutable="no">
+        <type><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref>[][]</type>
+        <definition>CommandGene [][] org.jgap.gp.impl.GPGenotype.m_nodeSets</definition>
+        <argsstring></argsstring>
+        <name>m_nodeSets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Available GP-functions. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="83" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="83" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad495c700786596290a63e3d88a902766" compoundref="_g_p_genotype_8java" startline="696" endline="912">org.jgap.gp.impl.GPGenotype.evolve</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a71854e2aa9fc4e178a0c768efe9c80ad" compoundref="_g_p_genotype_8java" startline="176" endline="228">org.jgap.gp.impl.GPGenotype.GPGenotype</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af87aee9616f225ec99bf2f3db601e492" prot="private" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] org.jgap.gp.impl.GPGenotype.m_minDepths</definition>
+        <argsstring></argsstring>
+        <name>m_minDepths</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum depth per each chromosome </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="88" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="88" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad495c700786596290a63e3d88a902766" compoundref="_g_p_genotype_8java" startline="696" endline="912">org.jgap.gp.impl.GPGenotype.evolve</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a71854e2aa9fc4e178a0c768efe9c80ad" compoundref="_g_p_genotype_8java" startline="176" endline="228">org.jgap.gp.impl.GPGenotype.GPGenotype</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a7e95fd6aefeefa158ca044abccc0ffa9" prot="private" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] org.jgap.gp.impl.GPGenotype.m_maxDepths</definition>
+        <argsstring></argsstring>
+        <name>m_maxDepths</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum depth per each chromosome </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="93" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="93" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad495c700786596290a63e3d88a902766" compoundref="_g_p_genotype_8java" startline="696" endline="912">org.jgap.gp.impl.GPGenotype.evolve</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a71854e2aa9fc4e178a0c768efe9c80ad" compoundref="_g_p_genotype_8java" startline="176" endline="228">org.jgap.gp.impl.GPGenotype.GPGenotype</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ab15e0e8d3ee0ba8c1e56727f2a2f32ed" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int org.jgap.gp.impl.GPGenotype.m_maxNodes</definition>
+        <argsstring></argsstring>
+        <name>m_maxNodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum number of nodes allowed per chromosome (when exceeded program aborts) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="99" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="99" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad495c700786596290a63e3d88a902766" compoundref="_g_p_genotype_8java" startline="696" endline="912">org.jgap.gp.impl.GPGenotype.evolve</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a71854e2aa9fc4e178a0c768efe9c80ad" compoundref="_g_p_genotype_8java" startline="176" endline="228">org.jgap.gp.impl.GPGenotype.GPGenotype</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ac5e56e43bba8e3368cacb3111a5fd60a" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean org.jgap.gp.impl.GPGenotype.m_verbose</definition>
+        <argsstring></argsstring>
+        <name>m_verbose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>True: Output status information to console </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="104" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="104" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa465c7cbfb45d77644b3d195782a12c9" compoundref="_g_p_genotype_8java" startline="557" endline="639">org.jgap.gp.impl.GPGenotype.calcFitness</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a43707d524245f50c92094e9e97568089" compoundref="_g_p_genotype_8java" startline="524" endline="548">org.jgap.gp.impl.GPGenotype.evolve</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a2cda11ec40667a6cb061a4c87ace0b6c" compoundref="_g_p_genotype_8java" startline="1127" endline="1129">org.jgap.gp.impl.GPGenotype.setVerboseOutput</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a03d40b9502d5bbbe9855cef68c9c8123" prot="private" static="no" mutable="no">
+        <type>Map</type>
+        <definition>Map org.jgap.gp.impl.GPGenotype.m_variables</definition>
+        <argsstring></argsstring>
+        <name>m_variables</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="106" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="106" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a71854e2aa9fc4e178a0c768efe9c80ad" compoundref="_g_p_genotype_8java" startline="176" endline="228">org.jgap.gp.impl.GPGenotype.GPGenotype</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af3246cb6a802ae1cde833013c130f6e9" compoundref="_g_p_genotype_8java" startline="397" endline="468">org.jgap.gp.impl.GPGenotype.randomInitialGenotype</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af4a221f34692a5b47147dbbd31d26d23" prot="private" static="no" mutable="no">
+        <type><ref refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program" kindref="compound">IGPProgram</ref></type>
+        <definition>IGPProgram org.jgap.gp.impl.GPGenotype.m_fittestToAdd</definition>
+        <argsstring></argsstring>
+        <name>m_fittestToAdd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="108" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="108" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a8ada3482e8689629778fe77164afb271" compoundref="_g_p_genotype_8java" startline="1180" endline="1184">org.jgap.gp.impl.GPGenotype.addFittestProgram</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad495c700786596290a63e3d88a902766" compoundref="_g_p_genotype_8java" startline="696" endline="912">org.jgap.gp.impl.GPGenotype.evolve</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af0ec08e1f1fdf88d76bae2ba6d0fe986" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean org.jgap.gp.impl.GPGenotype.m_cloneWarningGPProgramShown</definition>
+        <argsstring></argsstring>
+        <name>m_cloneWarningGPProgramShown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="110" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="110" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa465c7cbfb45d77644b3d195782a12c9" compoundref="_g_p_genotype_8java" startline="557" endline="639">org.jgap.gp.impl.GPGenotype.calcFitness</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a66b8b63a2379f9b4f4e94ee3cc6974ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.gp.impl.GPGenotype.GPGenotype</definition>
+        <argsstring>()</argsstring>
+        <name>GPGenotype</name>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor. Ony use with dynamic instantiation. <parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="121" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="121" bodyend="124"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a6b017f0f0e028cc1a9164782c5ce5095" compoundref="_g_p_genotype_8java" startline="230" endline="232">org.jgap.gp.impl.GPGenotype.init</references>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aef87073769e83d93b52d8df73ebb35dc" compoundref="_g_p_genotype_8java" startline="1045" endline="1086">org.jgap.gp.impl.GPGenotype.compareTo</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af3246cb6a802ae1cde833013c130f6e9" compoundref="_g_p_genotype_8java" startline="397" endline="468">org.jgap.gp.impl.GPGenotype.randomInitialGenotype</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a470bc360f57da2d313df69c51f9e7c3e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.gp.impl.GPGenotype.GPGenotype</definition>
+        <argsstring>(GPConfiguration a_configuration, GPPopulation a_population, Class[] a_types, Class[][] a_argTypes, CommandGene[][] a_nodeSets, int[] a_minDepths, int[] a_maxDepths, int a_maxNodes)</argsstring>
+        <name>GPGenotype</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_configuration" kindref="compound">GPConfiguration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_population" kindref="compound">GPPopulation</ref></type>
+          <declname>a_population</declname>
+        </param>
+        <param>
+          <type>Class[]</type>
+          <declname>a_types</declname>
+        </param>
+        <param>
+          <type>Class</type>
+          <declname>a_argTypes</declname>
+          <array>[][]</array>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref></type>
+          <declname>a_nodeSets</declname>
+          <array>[][]</array>
+        </param>
+        <param>
+          <type>int[]</type>
+          <declname>a_minDepths</declname>
+        </param>
+        <param>
+          <type>int[]</type>
+          <declname>a_maxDepths</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_maxNodes</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Preferred constructor to use, if not using the static method randomInitialGenotype.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_population</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the initialized population to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_types</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type for each chromosome, the length of the array represents the number of chromosomes </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_argTypes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the types of the arguments to each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of arguments to the chromosome </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_nodeSets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the nodes which are allowed to be used by each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of nodes </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_minDepths</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>contains the minimum depth allowed for each chromosome </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_maxDepths</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>contains the maximum depth allowed for each chromosome </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_maxNodes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reserve space for a_maxNodes number of nodes</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="150" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="150" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a71854e2aa9fc4e178a0c768efe9c80ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.gp.impl.GPGenotype.GPGenotype</definition>
+        <argsstring>(GPConfiguration a_configuration, GPPopulation a_population, Class[] a_types, Class[][] a_argTypes, CommandGene[][] a_nodeSets, int[] a_minDepths, int[] a_maxDepths, int a_maxNodes, IGPPopulationInitializer a_popCreator)</argsstring>
+        <name>GPGenotype</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_configuration" kindref="compound">GPConfiguration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_population" kindref="compound">GPPopulation</ref></type>
+          <declname>a_population</declname>
+        </param>
+        <param>
+          <type>Class[]</type>
+          <declname>a_types</declname>
+        </param>
+        <param>
+          <type>Class</type>
+          <declname>a_argTypes</declname>
+          <array>[][]</array>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref></type>
+          <declname>a_nodeSets</declname>
+          <array>[][]</array>
+        </param>
+        <param>
+          <type>int[]</type>
+          <declname>a_minDepths</declname>
+        </param>
+        <param>
+          <type>int[]</type>
+          <declname>a_maxDepths</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_maxNodes</declname>
+        </param>
+        <param>
+          <type>IGPPopulationInitializer</type>
+          <declname>a_popCreator</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>See above constructor. Parameter a_popCreator is used in grid context only.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_configuration" kindref="compound">GPConfiguration</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_population</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_population" kindref="compound">GPPopulation</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_types</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Class[] </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_argTypes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Class[][] </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_nodeSets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref>[][] </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_minDepths</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int[] </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_maxDepths</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int[] </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_maxNodes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_popCreator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="interfaceorg_1_1jgap_1_1gp_1_1_i_population_creator" kindref="compound">IPopulationCreator</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.6 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="176" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="176" bodyend="228"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a318ae291daca64dc4ba0b1e5085b4b87" compoundref="_g_p_genotype_8java" startline="470" endline="472">org.jgap.gp.impl.GPGenotype.getGPConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a6b017f0f0e028cc1a9164782c5ce5095" compoundref="_g_p_genotype_8java" startline="230" endline="232">org.jgap.gp.impl.GPGenotype.init</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a869b5d4ab431717009978a9d870bf5d8" compoundref="_g_p_genotype_8java" startline="63">org.jgap.gp.impl.GPGenotype.m_allTimeBestFitness</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a8e26c3d41a0e1922310e9d966f80238f" compoundref="_g_p_genotype_8java" startline="78">org.jgap.gp.impl.GPGenotype.m_argTypes</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a7e95fd6aefeefa158ca044abccc0ffa9" compoundref="_g_p_genotype_8java" startline="93">org.jgap.gp.impl.GPGenotype.m_maxDepths</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ab15e0e8d3ee0ba8c1e56727f2a2f32ed" compoundref="_g_p_genotype_8java" startline="99">org.jgap.gp.impl.GPGenotype.m_maxNodes</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af87aee9616f225ec99bf2f3db601e492" compoundref="_g_p_genotype_8java" startline="88">org.jgap.gp.impl.GPGenotype.m_minDepths</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a045ec05f97be18ddbd121eb709d3e450" compoundref="_g_p_genotype_8java" startline="83">org.jgap.gp.impl.GPGenotype.m_nodeSets</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ae23e8520ee01ca7cb8f927a262db49c6" compoundref="_g_p_genotype_8java" startline="73">org.jgap.gp.impl.GPGenotype.m_types</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a03d40b9502d5bbbe9855cef68c9c8123" compoundref="_g_p_genotype_8java" startline="106">org.jgap.gp.impl.GPGenotype.m_variables</references>
+        <references refid="classorg_1_1jgap_1_1_fitness_function_1a5f1f23e6f8a0f9606aee5d52fac6a06b" compoundref="_fitness_function_8java" startline="40">org.jgap.FitnessFunction.NO_FITNESS_VALUE</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a2d46992095125ecad698dc9e1a72b513" compoundref="_g_p_genotype_8java" startline="1008" endline="1010">org.jgap.gp.impl.GPGenotype.setGPConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a11dce8ec844c102bc151e4ab81c52ac7" compoundref="_g_p_genotype_8java" startline="997" endline="999">org.jgap.gp.impl.GPGenotype.setGPPopulation</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a318ae291daca64dc4ba0b1e5085b4b87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_configuration" kindref="compound">GPConfiguration</ref></type>
+        <definition>GPConfiguration org.jgap.gp.impl.GPGenotype.getGPConfiguration</definition>
+        <argsstring>()</argsstring>
+        <name>getGPConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="470" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="470" bodyend="472"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a2156c601b24d1a7fdcad1c59ec05e147" compoundref="_g_p_genotype_8java" startline="44">org.jgap.gp.impl.GPGenotype.m_configuration</references>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa465c7cbfb45d77644b3d195782a12c9" compoundref="_g_p_genotype_8java" startline="557" endline="639">org.jgap.gp.impl.GPGenotype.calcFitness</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa21cc2dde0ca8cbc6048b37e62dd1593" compoundref="_g_p_genotype_8java" startline="1131" endline="1146">org.jgap.gp.impl.GPGenotype.cloneProgram</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a43707d524245f50c92094e9e97568089" compoundref="_g_p_genotype_8java" startline="524" endline="548">org.jgap.gp.impl.GPGenotype.evolve</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a4327e7a69fcbcfe051e00e46c933ea7a" compoundref="_g_p_genotype_8java" startline="1195" endline="1217">org.jgap.gp.impl.GPGenotype.fillPopulation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a2cff99f216e87c7e4b25c217c5bdc5af" compoundref="_g_p_genotype_8java" startline="959" endline="980">org.jgap.gp.impl.GPGenotype.getFittestProgram</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a71854e2aa9fc4e178a0c768efe9c80ad" compoundref="_g_p_genotype_8java" startline="176" endline="228">org.jgap.gp.impl.GPGenotype.GPGenotype</referencedby>
+        <referencedby refid="classexamples_1_1gp_1_1monalisa_1_1gui_1_1_evolution_runnable_1a9d3096aba73fd2550d5d723848d2eb74" compoundref="gp_2monalisa_2gui_2_evolution_runnable_8java" startline="46" endline="140">examples.gp.monalisa.gui.EvolutionRunnable.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a43707d524245f50c92094e9e97568089" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.gp.impl.GPGenotype.evolve</definition>
+        <argsstring>(int a_evolutions)</argsstring>
+        <name>evolve</name>
+        <param>
+          <type>int</type>
+          <declname>a_evolutions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Evolves the population n times.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_evolutions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of evolution</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="524" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="524" bodyend="548"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa465c7cbfb45d77644b3d195782a12c9" compoundref="_g_p_genotype_8java" startline="557" endline="639">org.jgap.gp.impl.GPGenotype.calcFitness</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad495c700786596290a63e3d88a902766" compoundref="_g_p_genotype_8java" startline="696" endline="912">org.jgap.gp.impl.GPGenotype.evolve</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a318ae291daca64dc4ba0b1e5085b4b87" compoundref="_g_p_genotype_8java" startline="470" endline="472">org.jgap.gp.impl.GPGenotype.getGPConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ac5e56e43bba8e3368cacb3111a5fd60a" compoundref="_g_p_genotype_8java" startline="104">org.jgap.gp.impl.GPGenotype.m_verbose</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa465c7cbfb45d77644b3d195782a12c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.gp.impl.GPGenotype.calcFitness</definition>
+        <argsstring>()</argsstring>
+        <name>calcFitness</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the fitness value of all programs, of the best solution as well as the total fitness (sum of all fitness values).</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000144"><xreftitle>Todo</xreftitle><xrefdescription><para>get information from fitness function how calculation happened. In case of Robocode: return the robot competed against, in case the -enemies option was used without -battleAll </para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000145"><xreftitle>Todo</xreftitle><xrefdescription><para>do something similar here as with Genotype.preserveFittestChromosome </para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000146"><xreftitle>Todo</xreftitle><xrefdescription><para>introduce global value object to be passed to the listener </para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000147"><xreftitle>Todo</xreftitle><xrefdescription><para>should not happen but does with ensureUniqueness(..) </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="557" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="557" bodyend="639"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a8ada3482e8689629778fe77164afb271" compoundref="_g_p_genotype_8java" startline="1180" endline="1184">org.jgap.gp.impl.GPGenotype.addFittestProgram</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a318ae291daca64dc4ba0b1e5085b4b87" compoundref="_g_p_genotype_8java" startline="470" endline="472">org.jgap.gp.impl.GPGenotype.getGPConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a9a2316294bf28b413eb8b0e288cd150d" compoundref="_g_p_genotype_8java" startline="914" endline="916">org.jgap.gp.impl.GPGenotype.getGPPopulation</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_population_1a85692cb78096a06ba3446f4847d0fd1e" compoundref="_g_p_population_8java" startline="566" endline="568">org.jgap.gp.impl.GPPopulation.getGPProgram</references>
+        <references refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_fitness_evaluator_1a662e6dc1e9722db5645479562c7aa9f8">org.jgap.gp.IGPFitnessEvaluator.isFitter</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a6bd9f97a0bb39ec138f6d8ca8ebd25e5" compoundref="_g_p_genotype_8java" startline="61">org.jgap.gp.impl.GPGenotype.m_allTimeBest</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a869b5d4ab431717009978a9d870bf5d8" compoundref="_g_p_genotype_8java" startline="63">org.jgap.gp.impl.GPGenotype.m_allTimeBestFitness</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a957b0de7013e1055b66e03223dc890f2" compoundref="_g_p_genotype_8java" startline="51">org.jgap.gp.impl.GPGenotype.m_bestFitness</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af0ec08e1f1fdf88d76bae2ba6d0fe986" compoundref="_g_p_genotype_8java" startline="110">org.jgap.gp.impl.GPGenotype.m_cloneWarningGPProgramShown</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a590812317593272cd66908ef7b712a63" compoundref="_g_p_genotype_8java" startline="56">org.jgap.gp.impl.GPGenotype.m_totalFitness</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ac5e56e43bba8e3368cacb3111a5fd60a" compoundref="_g_p_genotype_8java" startline="104">org.jgap.gp.impl.GPGenotype.m_verbose</references>
+        <references refid="classorg_1_1jgap_1_1_fitness_function_1a5f1f23e6f8a0f9606aee5d52fac6a06b" compoundref="_fitness_function_8java" startline="40">org.jgap.FitnessFunction.NO_FITNESS_VALUE</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1abeef3282114d1313c97045dea004afc4" compoundref="_g_p_genotype_8java" startline="659" endline="686">org.jgap.gp.impl.GPGenotype.outputSolution</references>
+        <references refid="interfaceorg_1_1jgap_1_1_i_handler_1a60199862000df04a4b2491d6d08f2f2c">org.jgap.IHandler.perform</references>
+        <references refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program_1a316ab62cde57da6ffa6ac78f0876fc03">org.jgap.gp.IGPProgram.toStringNorm</references>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a43707d524245f50c92094e9e97568089" compoundref="_g_p_genotype_8java" startline="524" endline="548">org.jgap.gp.impl.GPGenotype.evolve</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a184964a4fc96748de13cad57bee24ad0" compoundref="_g_p_genotype_8java" startline="934" endline="947">org.jgap.gp.impl.GPGenotype.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1afb8e0283f47eb7c0a0b6e09c8aeccc96" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program" kindref="compound">IGPProgram</ref></type>
+        <definition>IGPProgram org.jgap.gp.impl.GPGenotype.getAllTimeBest</definition>
+        <argsstring>()</argsstring>
+        <name>getAllTimeBest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the all-time best solution found</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="647" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="647" bodyend="649"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a6bd9f97a0bb39ec138f6d8ca8ebd25e5" compoundref="_g_p_genotype_8java" startline="61">org.jgap.gp.impl.GPGenotype.m_allTimeBest</references>
+        <referencedby refid="classexamples_1_1gp_1_1_fibonacci_1aa302a328b0c018867302cf9ee1e6b418" compoundref="_fibonacci_8java" startline="185" endline="300">examples.gp.Fibonacci.main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1abeef3282114d1313c97045dea004afc4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.gp.impl.GPGenotype.outputSolution</definition>
+        <argsstring>(IGPProgram a_best)</argsstring>
+        <name>outputSolution</name>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program" kindref="compound">IGPProgram</ref></type>
+          <declname>a_best</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Outputs the best solution until now.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_best</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the fittest <ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_program_chromosome" kindref="compound">ProgramChromosome</ref></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="659" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="659" bodyend="686"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa465c7cbfb45d77644b3d195782a12c9" compoundref="_g_p_genotype_8java" startline="557" endline="639">org.jgap.gp.impl.GPGenotype.calcFitness</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad495c700786596290a63e3d88a902766" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.gp.impl.GPGenotype.evolve</definition>
+        <argsstring>()</argsstring>
+        <name>evolve</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Evolve the population by one generation. Probabilistically reproduces and crosses individuals into a new population which then overwrites the original population.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000148"><xreftitle>Todo</xreftitle><xrefdescription><para>use program creator in case such is registered and returns a non-null program </para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000149"><xreftitle>Todo</xreftitle><xrefdescription><para>instead of re-using prototype, create a program anyway (ignoring the validator) in case it is the last try. Or even better: Make the validator return a defect rate! </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="696" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="696" bodyend="912"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a71cc6d10d81d132ee542767aca12f502" compoundref="_g_p_genotype_8java" startline="1251" endline="1253">org.jgap.gp.impl.GPGenotype.checkErroneousPop</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a4104bc4b934e717c15e3a7b5e50a0748" compoundref="_g_p_genotype_8java" startline="1282" endline="1284">org.jgap.gp.impl.GPGenotype.checkErroneousProg</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa21cc2dde0ca8cbc6048b37e62dd1593" compoundref="_g_p_genotype_8java" startline="1131" endline="1146">org.jgap.gp.impl.GPGenotype.cloneProgram</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a318ae291daca64dc4ba0b1e5085b4b87" compoundref="_g_p_genotype_8java" startline="470" endline="472">org.jgap.gp.impl.GPGenotype.getGPConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a9a2316294bf28b413eb8b0e288cd150d" compoundref="_g_p_genotype_8java" startline="914" endline="916">org.jgap.gp.impl.GPGenotype.getGPPopulation</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a8e26c3d41a0e1922310e9d966f80238f" compoundref="_g_p_genotype_8java" startline="78">org.jgap.gp.impl.GPGenotype.m_argTypes</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af4a221f34692a5b47147dbbd31d26d23" compoundref="_g_p_genotype_8java" startline="108">org.jgap.gp.impl.GPGenotype.m_fittestToAdd</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a3bfbce17cabd5ef77caf8427f5511407" compoundref="_g_p_genotype_8java" startline="68">org.jgap.gp.impl.GPGenotype.m_fullModeAllowed</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a7e95fd6aefeefa158ca044abccc0ffa9" compoundref="_g_p_genotype_8java" startline="93">org.jgap.gp.impl.GPGenotype.m_maxDepths</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ab15e0e8d3ee0ba8c1e56727f2a2f32ed" compoundref="_g_p_genotype_8java" startline="99">org.jgap.gp.impl.GPGenotype.m_maxNodes</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af87aee9616f225ec99bf2f3db601e492" compoundref="_g_p_genotype_8java" startline="88">org.jgap.gp.impl.GPGenotype.m_minDepths</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a045ec05f97be18ddbd121eb709d3e450" compoundref="_g_p_genotype_8java" startline="83">org.jgap.gp.impl.GPGenotype.m_nodeSets</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ae23e8520ee01ca7cb8f927a262db49c6" compoundref="_g_p_genotype_8java" startline="73">org.jgap.gp.impl.GPGenotype.m_types</references>
+        <references refid="interfaceorg_1_1jgap_1_1_random_generator_1a993f3b23cfbc3f8001405544580eda2e">org.jgap.RandomGenerator.nextInt</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a11dce8ec844c102bc151e4ab81c52ac7" compoundref="_g_p_genotype_8java" startline="997" endline="999">org.jgap.gp.impl.GPGenotype.setGPPopulation</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ac726d5312c002c60c239a9be1bc7cfba" compoundref="_g_p_genotype_8java" startline="1335" endline="1355">org.jgap.gp.impl.GPGenotype.writeToFile</references>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a43707d524245f50c92094e9e97568089" compoundref="_g_p_genotype_8java" startline="524" endline="548">org.jgap.gp.impl.GPGenotype.evolve</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a184964a4fc96748de13cad57bee24ad0" compoundref="_g_p_genotype_8java" startline="934" endline="947">org.jgap.gp.impl.GPGenotype.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a9a2316294bf28b413eb8b0e288cd150d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_population" kindref="compound">GPPopulation</ref></type>
+        <definition>GPPopulation org.jgap.gp.impl.GPGenotype.getGPPopulation</definition>
+        <argsstring>()</argsstring>
+        <name>getGPPopulation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="914" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="914" bodyend="916"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a32bf2d50f238455154d3466fc1ef09a1" compoundref="_g_p_genotype_8java" startline="39">org.jgap.gp.impl.GPGenotype.m_population</references>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa465c7cbfb45d77644b3d195782a12c9" compoundref="_g_p_genotype_8java" startline="557" endline="639">org.jgap.gp.impl.GPGenotype.calcFitness</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aef87073769e83d93b52d8df73ebb35dc" compoundref="_g_p_genotype_8java" startline="1045" endline="1086">org.jgap.gp.impl.GPGenotype.compareTo</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad495c700786596290a63e3d88a902766" compoundref="_g_p_genotype_8java" startline="696" endline="912">org.jgap.gp.impl.GPGenotype.evolve</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a2cff99f216e87c7e4b25c217c5bdc5af" compoundref="_g_p_genotype_8java" startline="959" endline="980">org.jgap.gp.impl.GPGenotype.getFittestProgram</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a3a1e955f3a6c035913e311570591c683" compoundref="_g_p_genotype_8java" startline="993" endline="995">org.jgap.gp.impl.GPGenotype.getFittestProgramComputed</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a9b8cb5e7395359743bbee7658be90a36" compoundref="_g_p_genotype_8java" startline="1106" endline="1119">org.jgap.gp.impl.GPGenotype.hashCode</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a631996e8862da78bdb67b76687ad1873" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double org.jgap.gp.impl.GPGenotype.getTotalFitness</definition>
+        <argsstring>()</argsstring>
+        <name>getTotalFitness</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the total fitness, that is the fitness over all chromosomes</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="924" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="924" bodyend="926"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a590812317593272cd66908ef7b712a63" compoundref="_g_p_genotype_8java" startline="56">org.jgap.gp.impl.GPGenotype.m_totalFitness</references>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_fitness_proportionate_selection_1a1bba66dc3595d954f39bd4121bc1fa7f" compoundref="_fitness_proportionate_selection_8java" startline="44" endline="85">org.jgap.gp.impl.FitnessProportionateSelection.select</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a184964a4fc96748de13cad57bee24ad0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.gp.impl.GPGenotype.run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default implementation of method to run <ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype" kindref="compound">GPGenotype</ref> as a thread.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="934" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="934" bodyend="947"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa465c7cbfb45d77644b3d195782a12c9" compoundref="_g_p_genotype_8java" startline="557" endline="639">org.jgap.gp.impl.GPGenotype.calcFitness</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad495c700786596290a63e3d88a902766" compoundref="_g_p_genotype_8java" startline="696" endline="912">org.jgap.gp.impl.GPGenotype.evolve</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a2cff99f216e87c7e4b25c217c5bdc5af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized <ref refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program" kindref="compound">IGPProgram</ref></type>
+        <definition>synchronized IGPProgram org.jgap.gp.impl.GPGenotype.getFittestProgram</definition>
+        <argsstring>()</argsstring>
+        <name>getFittestProgram</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the <ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_program" kindref="compound">GPProgram</ref> in the population with the best fitness value.</para><para><simplesect kind="return"><para>the <ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_program" kindref="compound">GPProgram</ref> with the highest fitness value, or null if there are no programs in this <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref></para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="959" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="959" bodyend="980"/>
+        <references refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program_1a0ea406704b2bd818623ced90be07304a">org.jgap.gp.IGPProgram.getFitnessValue</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a318ae291daca64dc4ba0b1e5085b4b87" compoundref="_g_p_genotype_8java" startline="470" endline="472">org.jgap.gp.impl.GPGenotype.getGPConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a9a2316294bf28b413eb8b0e288cd150d" compoundref="_g_p_genotype_8java" startline="914" endline="916">org.jgap.gp.impl.GPGenotype.getGPPopulation</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a6bd9f97a0bb39ec138f6d8ca8ebd25e5" compoundref="_g_p_genotype_8java" startline="61">org.jgap.gp.impl.GPGenotype.m_allTimeBest</references>
+        <references refid="classorg_1_1jgap_1_1_fitness_function_1a5f1f23e6f8a0f9606aee5d52fac6a06b" compoundref="_fitness_function_8java" startline="40">org.jgap.FitnessFunction.NO_FITNESS_VALUE</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a3a1e955f3a6c035913e311570591c683" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized <ref refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program" kindref="compound">IGPProgram</ref></type>
+        <definition>synchronized IGPProgram org.jgap.gp.impl.GPGenotype.getFittestProgramComputed</definition>
+        <argsstring>()</argsstring>
+        <name>getFittestProgramComputed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the <ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_program" kindref="compound">GPProgram</ref> in the population with the highest fitness value. Only considers programs for which the fitness value has already been computed.</para><para><simplesect kind="return"><para>the <ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_program" kindref="compound">GPProgram</ref> with the best fitness value, or null if there are no programs with known fitness value in this <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref></para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="993" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="993" bodyend="995"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a9a2316294bf28b413eb8b0e288cd150d" compoundref="_g_p_genotype_8java" startline="914" endline="916">org.jgap.gp.impl.GPGenotype.getGPPopulation</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a2d46992095125ecad698dc9e1a72b513" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.gp.impl.GPGenotype.setGPConfiguration</definition>
+        <argsstring>(GPConfiguration a_configuration)</argsstring>
+        <name>setGPConfiguration</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_configuration" kindref="compound">GPConfiguration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the configuration to use with the Genetic Algorithm. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1008" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1008" bodyend="1010"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a2156c601b24d1a7fdcad1c59ec05e147" compoundref="_g_p_genotype_8java" startline="44">org.jgap.gp.impl.GPGenotype.m_configuration</references>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a71854e2aa9fc4e178a0c768efe9c80ad" compoundref="_g_p_genotype_8java" startline="176" endline="228">org.jgap.gp.impl.GPGenotype.GPGenotype</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a847cbf8f0b5e3e223881ac1dfe5e36d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.gp.impl.GPGenotype.equals</definition>
+        <argsstring>(Object a_other)</argsstring>
+        <name>equals</name>
+        <param>
+          <type>Object</type>
+          <declname>a_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compares this entity against the specified object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the object to compare against </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true: if the objects are the same, false otherwise</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1021" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1021" bodyend="1027"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aef87073769e83d93b52d8df73ebb35dc" compoundref="_g_p_genotype_8java" startline="1045" endline="1086">org.jgap.gp.impl.GPGenotype.compareTo</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aef87073769e83d93b52d8df73ebb35dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.gp.impl.GPGenotype.compareTo</definition>
+        <argsstring>(Object a_other)</argsstring>
+        <name>compareTo</name>
+        <param>
+          <type>Object</type>
+          <declname>a_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compares this <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> against the specified object. The result is true if the argument is an instance of the <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> class, has exactly the same number of programs as the given <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref>, and, for each <ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_program" kindref="compound">GPProgram</ref> in this <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref>, there is an equal program in the given <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref>. The programs do not need to appear in the same order within the populations.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the object to compare against </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a negative number if this genotype is &quot;less than&quot; the given genotype, zero if they are equal to each other, and a positive number if this genotype is &quot;greater than&quot; the given genotype</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1045" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1045" bodyend="1086"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a9a2316294bf28b413eb8b0e288cd150d" compoundref="_g_p_genotype_8java" startline="914" endline="916">org.jgap.gp.impl.GPGenotype.getGPPopulation</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a66b8b63a2379f9b4f4e94ee3cc6974ad" compoundref="_g_p_genotype_8java" startline="121" endline="124">org.jgap.gp.impl.GPGenotype.GPGenotype</references>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a847cbf8f0b5e3e223881ac1dfe5e36d3" compoundref="_g_p_genotype_8java" startline="1021" endline="1027">org.jgap.gp.impl.GPGenotype.equals</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a9b8cb5e7395359743bbee7658be90a36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.gp.impl.GPGenotype.hashCode</definition>
+        <argsstring>()</argsstring>
+        <name>hashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1106" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1106" bodyend="1119"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a9a2316294bf28b413eb8b0e288cd150d" compoundref="_g_p_genotype_8java" startline="914" endline="916">org.jgap.gp.impl.GPGenotype.getGPPopulation</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a2cda11ec40667a6cb061a4c87ace0b6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.gp.impl.GPGenotype.setVerboseOutput</definition>
+        <argsstring>(boolean a_verbose)</argsstring>
+        <name>setVerboseOutput</name>
+        <param>
+          <type>boolean</type>
+          <declname>a_verbose</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_verbose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true: output status information to console</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1127" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1127" bodyend="1129"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ac5e56e43bba8e3368cacb3111a5fd60a" compoundref="_g_p_genotype_8java" startline="104">org.jgap.gp.impl.GPGenotype.m_verbose</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a0b615fba7524275eb09b3d7929d73329" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.gp.impl.GPGenotype.putVariable</definition>
+        <argsstring>(Variable a_var)</argsstring>
+        <name>putVariable</name>
+        <param>
+          <type>Variable</type>
+          <declname>a_var</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stores a Variable.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Variable to store</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1156" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1156" bodyend="1158"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a66770c2d4fb9645f33afec5dc37bb47c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Variable</type>
+        <definition>Variable org.jgap.gp.impl.GPGenotype.getVariable</definition>
+        <argsstring>(String a_varName)</argsstring>
+        <name>getVariable</name>
+        <param>
+          <type>String</type>
+          <declname>a_varName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_varName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of variable to retriebe </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Variable instance or null, if not found</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1167" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1167" bodyend="1169"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a8ada3482e8689629778fe77164afb271" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.gp.impl.GPGenotype.addFittestProgram</definition>
+        <argsstring>(final IGPProgram a_toAdd)</argsstring>
+        <name>addFittestProgram</name>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program" kindref="compound">IGPProgram</ref></type>
+          <declname>a_toAdd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a GP program to this <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref>. Does nothing when given null. The injection is actually executed in method create(..) of <ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_population" kindref="compound">GPPopulation</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_toAdd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the program to add</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1180" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1180" bodyend="1184"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af4a221f34692a5b47147dbbd31d26d23" compoundref="_g_p_genotype_8java" startline="108">org.jgap.gp.impl.GPGenotype.m_fittestToAdd</references>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa465c7cbfb45d77644b3d195782a12c9" compoundref="_g_p_genotype_8java" startline="557" endline="639">org.jgap.gp.impl.GPGenotype.calcFitness</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a4327e7a69fcbcfe051e00e46c933ea7a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.gp.impl.GPGenotype.fillPopulation</definition>
+        <argsstring>(final int a_num)</argsstring>
+        <name>fillPopulation</name>
+        <param>
+          <type>final int</type>
+          <declname>a_num</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fills up the population with random programs if necessary.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of programs to add </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000150"><xreftitle>Todo</xreftitle><xrefdescription><para>care about </para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000151"><xreftitle>Todo</xreftitle><xrefdescription><para>implement filling up population </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1195" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1195" bodyend="1217"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a318ae291daca64dc4ba0b1e5085b4b87" compoundref="_g_p_genotype_8java" startline="470" endline="472">org.jgap.gp.impl.GPGenotype.getGPConfiguration</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a6b017f0f0e028cc1a9164782c5ce5095" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.gp.impl.GPGenotype.init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="230" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="230" bodyend="232"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a66b8b63a2379f9b4f4e94ee3cc6974ad" compoundref="_g_p_genotype_8java" startline="121" endline="124">org.jgap.gp.impl.GPGenotype.GPGenotype</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a11dce8ec844c102bc151e4ab81c52ac7" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.gp.impl.GPGenotype.setGPPopulation</definition>
+        <argsstring>(GPPopulation a_pop)</argsstring>
+        <name>setGPPopulation</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_population" kindref="compound">GPPopulation</ref></type>
+          <declname>a_pop</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="997" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="997" bodyend="999"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a32bf2d50f238455154d3466fc1ef09a1" compoundref="_g_p_genotype_8java" startline="39">org.jgap.gp.impl.GPGenotype.m_population</references>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad495c700786596290a63e3d88a902766" compoundref="_g_p_genotype_8java" startline="696" endline="912">org.jgap.gp.impl.GPGenotype.evolve</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a71854e2aa9fc4e178a0c768efe9c80ad" compoundref="_g_p_genotype_8java" startline="176" endline="228">org.jgap.gp.impl.GPGenotype.GPGenotype</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a59354275c3ff7c6b47c4c676c13a4422" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype" kindref="compound">GPGenotype</ref></type>
+        <definition>static GPGenotype org.jgap.gp.impl.GPGenotype.randomInitialGenotype</definition>
+        <argsstring>(final GPConfiguration a_conf, Class[] a_types, Class[][] a_argTypes, CommandGene[][] a_nodeSets, int a_maxNodes, boolean a_verboseOutput)</argsstring>
+        <name>randomInitialGenotype</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_configuration" kindref="compound">GPConfiguration</ref></type>
+          <declname>a_conf</declname>
+        </param>
+        <param>
+          <type>Class[]</type>
+          <declname>a_types</declname>
+        </param>
+        <param>
+          <type>Class</type>
+          <declname>a_argTypes</declname>
+          <array>[][]</array>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref></type>
+          <declname>a_nodeSets</declname>
+          <array>[][]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_maxNodes</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_verboseOutput</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a genotype with initial population for the world set.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_types</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of each chromosome, the length is the number of chromosomes </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_argTypes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the types of the arguments to each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of arguments to the chromosome </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_nodeSets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the nodes which are allowed to be used by each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of nodes. Note that it is not necessary to include the arguments of a chromosome as terminals in the chromosome&apos;s node set. This is done automatically </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_maxNodes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reserve space for a_maxNodes number of nodes </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_verboseOutput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true: output status information to console</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>created genotype with initialized population</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="260" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="260" bodyend="269"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a7e59aff645b8386adcad62e9ccdfd00d" compoundref="_g_p_genotype_8java" startline="301" endline="317">org.jgap.gp.impl.GPGenotype.randomInitialGenotype</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a7e59aff645b8386adcad62e9ccdfd00d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype" kindref="compound">GPGenotype</ref></type>
+        <definition>static GPGenotype org.jgap.gp.impl.GPGenotype.randomInitialGenotype</definition>
+        <argsstring>(final GPConfiguration a_conf, Class[] a_types, Class[][] a_argTypes, CommandGene[][] a_nodeSets, int[] a_minDepths, int[] a_maxDepths, int a_maxNodes, boolean a_verboseOutput)</argsstring>
+        <name>randomInitialGenotype</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_configuration" kindref="compound">GPConfiguration</ref></type>
+          <declname>a_conf</declname>
+        </param>
+        <param>
+          <type>Class[]</type>
+          <declname>a_types</declname>
+        </param>
+        <param>
+          <type>Class</type>
+          <declname>a_argTypes</declname>
+          <array>[][]</array>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref></type>
+          <declname>a_nodeSets</declname>
+          <array>[][]</array>
+        </param>
+        <param>
+          <type>int[]</type>
+          <declname>a_minDepths</declname>
+        </param>
+        <param>
+          <type>int[]</type>
+          <declname>a_maxDepths</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_maxNodes</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_verboseOutput</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a genotype with initial population for the world set.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_types</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of each chromosome, the length is the number of chromosomes </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_argTypes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the types of the arguments to each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of arguments to the chromosome </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_nodeSets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the nodes which are allowed to be used by each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of nodes. Note that it is not necessary to include the arguments of a chromosome as terminals in the chromosome&apos;s node set. This is done automatically </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_minDepths</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of minimum depths to use: for each chromosome one entry </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_maxDepths</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of maximum depths to use: for each chromosome one entry </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_maxNodes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reserve space for a_maxNodes number of nodes </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_verboseOutput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true: output status information to console</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>created genotype with initialized population</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="301" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="301" bodyend="317"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a59354275c3ff7c6b47c4c676c13a4422" compoundref="_g_p_genotype_8java" startline="260" endline="269">org.jgap.gp.impl.GPGenotype.randomInitialGenotype</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a47a8848949757df02df0b4503bd2bea7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype" kindref="compound">GPGenotype</ref></type>
+        <definition>static GPGenotype org.jgap.gp.impl.GPGenotype.randomInitialGenotype</definition>
+        <argsstring>(final GPConfiguration a_conf, Class[] a_types, Class[][] a_argTypes, CommandGene[][] a_nodeSets, int[] a_minDepths, int[] a_maxDepths, int a_maxNodes, boolean[] a_fullModeAllowed, boolean a_verboseOutput)</argsstring>
+        <name>randomInitialGenotype</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_configuration" kindref="compound">GPConfiguration</ref></type>
+          <declname>a_conf</declname>
+        </param>
+        <param>
+          <type>Class[]</type>
+          <declname>a_types</declname>
+        </param>
+        <param>
+          <type>Class</type>
+          <declname>a_argTypes</declname>
+          <array>[][]</array>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref></type>
+          <declname>a_nodeSets</declname>
+          <array>[][]</array>
+        </param>
+        <param>
+          <type>int[]</type>
+          <declname>a_minDepths</declname>
+        </param>
+        <param>
+          <type>int[]</type>
+          <declname>a_maxDepths</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_maxNodes</declname>
+        </param>
+        <param>
+          <type>boolean[]</type>
+          <declname>a_fullModeAllowed</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_verboseOutput</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a genotype with a randomly created initial population.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_types</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of each chromosome, the length is the number of chromosomes </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_argTypes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the types of the arguments to each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of arguments to the chromosome </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_nodeSets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the nodes which are allowed to be used by each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of nodes. Note that it is not necessary to include the arguments of a chromosome as terminals in the chromosome&apos;s node set. This is done automatically </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_minDepths</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of minimum depths to use: for each chromosome one entry </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_maxDepths</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of maximum depths to use: for each chromosome one entry </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_maxNodes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reserve space for a_maxNodes number of nodes </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_fullModeAllowed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of boolean values. For each chromosome there is one value indicating whether the full mode for creating chromosome generations during evolution is allowed (true) or not (false) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_verboseOutput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true: output status information to console</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>created genotype with initialized population</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="352" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="352" bodyend="361"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a59354275c3ff7c6b47c4c676c13a4422" compoundref="_g_p_genotype_8java" startline="260" endline="269">org.jgap.gp.impl.GPGenotype.randomInitialGenotype</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af3246cb6a802ae1cde833013c130f6e9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype" kindref="compound">GPGenotype</ref></type>
+        <definition>static GPGenotype org.jgap.gp.impl.GPGenotype.randomInitialGenotype</definition>
+        <argsstring>(final GPConfiguration a_conf, Class[] a_types, Class[][] a_argTypes, CommandGene[][] a_nodeSets, int[] a_minDepths, int[] a_maxDepths, int a_maxNodes, boolean[] a_fullModeAllowed, boolean a_verboseOutput, IPopulationCreator a_popCreator)</argsstring>
+        <name>randomInitialGenotype</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_configuration" kindref="compound">GPConfiguration</ref></type>
+          <declname>a_conf</declname>
+        </param>
+        <param>
+          <type>Class[]</type>
+          <declname>a_types</declname>
+        </param>
+        <param>
+          <type>Class</type>
+          <declname>a_argTypes</declname>
+          <array>[][]</array>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref></type>
+          <declname>a_nodeSets</declname>
+          <array>[][]</array>
+        </param>
+        <param>
+          <type>int[]</type>
+          <declname>a_minDepths</declname>
+        </param>
+        <param>
+          <type>int[]</type>
+          <declname>a_maxDepths</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_maxNodes</declname>
+        </param>
+        <param>
+          <type>boolean[]</type>
+          <declname>a_fullModeAllowed</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_verboseOutput</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1gp_1_1_i_population_creator" kindref="compound">IPopulationCreator</ref></type>
+          <declname>a_popCreator</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows to use a custom mechanism for population creation.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_types</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of each chromosome, the length is the number of chromosomes </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_argTypes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the types of the arguments to each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of arguments to the chromosome </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_nodeSets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the nodes which are allowed to be used by each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of nodes. Note that it is not necessary to include the arguments of a chromosome as terminals in the chromosome&apos;s node set. This is done automatically </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_minDepths</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of minimum depths to use: for each chromosome one entry </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_maxDepths</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of maximum depths to use: for each chromosome one entry </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_maxNodes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reserve space for a_maxNodes number of nodes </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_fullModeAllowed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of boolean values. For each chromosome there is one value indicating whether the full mode for creating chromosome generations during evolution is allowed (true) or not (false) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_verboseOutput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true: output status information to console </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_popCreator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mechanism fior creating the population</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype" kindref="compound">GPGenotype</ref></para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000142"><xreftitle>Todo</xreftitle><xrefdescription><para>remove unused nodes from configuration </para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000143"><xreftitle>Todo</xreftitle><xrefdescription><para>optimize access to map </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="397" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="397" bodyend="468"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a71cc6d10d81d132ee542767aca12f502" compoundref="_g_p_genotype_8java" startline="1251" endline="1253">org.jgap.gp.impl.GPGenotype.checkErroneousPop</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a66b8b63a2379f9b4f4e94ee3cc6974ad" compoundref="_g_p_genotype_8java" startline="121" endline="124">org.jgap.gp.impl.GPGenotype.GPGenotype</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a03d40b9502d5bbbe9855cef68c9c8123" compoundref="_g_p_genotype_8java" startline="106">org.jgap.gp.impl.GPGenotype.m_variables</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a95fd91fcd94500415c67e18388695a61" compoundref="_g_p_genotype_8java" startline="1511" endline="1530">org.jgap.gp.impl.GPGenotype.outputDepthInfo</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ae5eb2b5f82dd89d6e8287eac90864cb1" compoundref="_g_p_genotype_8java" startline="1486" endline="1499">org.jgap.gp.impl.GPGenotype.outputWarning</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a77909da0c746ca16cdcbf0af9b1c0927" compoundref="_g_p_genotype_8java" startline="1396" endline="1451">org.jgap.gp.impl.GPGenotype.verifyChildNodes</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad264330c888b133296578decc78f265e" compoundref="_g_p_genotype_8java" startline="1532" endline="1578">org.jgap.gp.impl.GPGenotype.verifyDepthsForNodes</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a07e4b22e1cd10bbc198278efd83d27ce" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_configuration" kindref="compound">GPConfiguration</ref></type>
+        <definition>static GPConfiguration org.jgap.gp.impl.GPGenotype.getStaticGPConfiguration</definition>
+        <argsstring>()</argsstring>
+        <name>getStaticGPConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the static configuration to use with Genetic Programming</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="480" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="480" bodyend="482"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a9e2b1a8103181690f4bb6e584463214c" compoundref="_g_p_genotype_8java" startline="46">org.jgap.gp.impl.GPGenotype.m_staticConfiguration</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a7750ff9b7bd73efcfff522365f4650d7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void org.jgap.gp.impl.GPGenotype.setStaticGPConfiguration</definition>
+        <argsstring>(GPConfiguration a_configuration)</argsstring>
+        <name>setStaticGPConfiguration</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_configuration" kindref="compound">GPConfiguration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the static configuration to use with the Genetic Programming.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the static configuration to use</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="492" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="492" bodyend="494"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a9e2b1a8103181690f4bb6e584463214c" compoundref="_g_p_genotype_8java" startline="46">org.jgap.gp.impl.GPGenotype.m_staticConfiguration</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a71cc6d10d81d132ee542767aca12f502" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void org.jgap.gp.impl.GPGenotype.checkErroneousPop</definition>
+        <argsstring>(GPPopulation pop, String s)</argsstring>
+        <name>checkErroneousPop</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_population" kindref="compound">GPPopulation</ref></type>
+          <declname>pop</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Disabling a chromosome is equivalent to not declaring it. However, if you skip a declaration, indices will shift. With this method it is easier skipping a chromosome.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the chromosome to disable.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2.2</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the chromosome to check. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if chromosome disabled</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1251" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1251" bodyend="1253"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af886a583789e547400134f2ad533cf8b" compoundref="_g_p_genotype_8java" startline="1255" endline="1262">org.jgap.gp.impl.GPGenotype.checkErroneousPop</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad495c700786596290a63e3d88a902766" compoundref="_g_p_genotype_8java" startline="696" endline="912">org.jgap.gp.impl.GPGenotype.evolve</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af3246cb6a802ae1cde833013c130f6e9" compoundref="_g_p_genotype_8java" startline="397" endline="468">org.jgap.gp.impl.GPGenotype.randomInitialGenotype</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af886a583789e547400134f2ad533cf8b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void org.jgap.gp.impl.GPGenotype.checkErroneousPop</definition>
+        <argsstring>(GPPopulation a_pop, String a_s, boolean a_clearFitness)</argsstring>
+        <name>checkErroneousPop</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_population" kindref="compound">GPPopulation</ref></type>
+          <declname>a_pop</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>a_s</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_clearFitness</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1255" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1255" bodyend="1262"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a71cc6d10d81d132ee542767aca12f502" compoundref="_g_p_genotype_8java" startline="1251" endline="1253">org.jgap.gp.impl.GPGenotype.checkErroneousPop</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_population_1a6c4ab9ac1358c54cce879696e56376df" compoundref="_g_p_population_8java" startline="544" endline="546">org.jgap.gp.impl.GPPopulation.getGPConfiguration</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a6cab9ecf163e4eec850da3cc63df8665" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void org.jgap.gp.impl.GPGenotype.checkErroneousPop</definition>
+        <argsstring>(GPPopulation a_pop, String a_s, boolean a_clearFitness, boolean a_active)</argsstring>
+        <name>checkErroneousPop</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_population" kindref="compound">GPPopulation</ref></type>
+          <declname>a_pop</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>a_s</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_clearFitness</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_active</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1264" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1264" bodyend="1280"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a4104bc4b934e717c15e3a7b5e50a0748" compoundref="_g_p_genotype_8java" startline="1282" endline="1284">org.jgap.gp.impl.GPGenotype.checkErroneousProg</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a4104bc4b934e717c15e3a7b5e50a0748" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void org.jgap.gp.impl.GPGenotype.checkErroneousProg</definition>
+        <argsstring>(IGPProgram prog, String s)</argsstring>
+        <name>checkErroneousProg</name>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program" kindref="compound">IGPProgram</ref></type>
+          <declname>prog</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1282" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1282" bodyend="1284"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a6cab9ecf163e4eec850da3cc63df8665" compoundref="_g_p_genotype_8java" startline="1264" endline="1280">org.jgap.gp.impl.GPGenotype.checkErroneousPop</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a9d986d5030ce180fc402a2a73d22c42d" compoundref="_g_p_genotype_8java" startline="1286" endline="1293">org.jgap.gp.impl.GPGenotype.checkErroneousProg</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad495c700786596290a63e3d88a902766" compoundref="_g_p_genotype_8java" startline="696" endline="912">org.jgap.gp.impl.GPGenotype.evolve</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a9d986d5030ce180fc402a2a73d22c42d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void org.jgap.gp.impl.GPGenotype.checkErroneousProg</definition>
+        <argsstring>(IGPProgram a_prog, String a_s, boolean a_clearFitness)</argsstring>
+        <name>checkErroneousProg</name>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program" kindref="compound">IGPProgram</ref></type>
+          <declname>a_prog</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>a_s</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_clearFitness</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1286" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1286" bodyend="1293"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a4104bc4b934e717c15e3a7b5e50a0748" compoundref="_g_p_genotype_8java" startline="1282" endline="1284">org.jgap.gp.impl.GPGenotype.checkErroneousProg</references>
+        <references refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program_1af159eca7bbd36510b6a50c85ec4cc64f">org.jgap.gp.IGPProgram.getGPConfiguration</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa3bf0b50a73684ff3fe1177017cf9bb8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void org.jgap.gp.impl.GPGenotype.checkErroneousProg</definition>
+        <argsstring>(IGPProgram a_prog, String s, boolean a_clearFitness, boolean a_active)</argsstring>
+        <name>checkErroneousProg</name>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program" kindref="compound">IGPProgram</ref></type>
+          <declname>a_prog</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_clearFitness</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_active</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000152"><xreftitle>Todo</xreftitle><xrefdescription><para>impl. cache </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1295" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1295" bodyend="1322"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1_g_p_fitness_function_1a1044d8e90c0a44f22c74088af71a931f" compoundref="_g_p_fitness_function_8java" startline="25">org.jgap.gp.GPFitnessFunction.NO_FITNESS_VALUE</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a77909da0c746ca16cdcbf0af9b1c0927" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Map&lt; String, <ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref> &gt;</type>
+        <definition>static Map&lt;String, CommandGene&gt; org.jgap.gp.impl.GPGenotype.verifyChildNodes</definition>
+        <argsstring>(GPConfiguration a_conf, Class[] a_types, CommandGene[][] a_nodeSets)</argsstring>
+        <name>verifyChildNodes</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_configuration" kindref="compound">GPConfiguration</ref></type>
+          <declname>a_conf</declname>
+        </param>
+        <param>
+          <type>Class[]</type>
+          <declname>a_types</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref></type>
+          <declname>a_nodeSets</declname>
+          <array>[][]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine impossible functions and terminals to obtimize creation of GP programs.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GP configuration </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_types</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Class[] </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_nodeSets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref>[][] </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Map</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.4.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1396" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1396" bodyend="1451"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1_command_gene_1a479e8b5355b16cf06b8cbd02cd1dbb6c" compoundref="_command_gene_8java" startline="843" endline="845">org.jgap.gp.CommandGene.getSubChildTypes</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ae3828fb2c7d3c3cc4ee2c1562c9851d8" compoundref="_g_p_genotype_8java" startline="1465" endline="1476">org.jgap.gp.impl.GPGenotype.nodeExists</references>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af3246cb6a802ae1cde833013c130f6e9" compoundref="_g_p_genotype_8java" startline="397" endline="468">org.jgap.gp.impl.GPGenotype.randomInitialGenotype</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad264330c888b133296578decc78f265e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Map&lt; <ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref>, int[]&gt;</type>
+        <definition>static Map&lt;CommandGene, int[]&gt; org.jgap.gp.impl.GPGenotype.verifyDepthsForNodes</definition>
+        <argsstring>(GPPopulation a_pop, GPConfiguration a_conf, Class[] a_types, int[] a_minDepths, int[] a_maxDepths, int a_maxNodes, CommandGene[][] a_nodeSets)</argsstring>
+        <name>verifyDepthsForNodes</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_population" kindref="compound">GPPopulation</ref></type>
+          <declname>a_pop</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_configuration" kindref="compound">GPConfiguration</ref></type>
+          <declname>a_conf</declname>
+        </param>
+        <param>
+          <type>Class[]</type>
+          <declname>a_types</declname>
+        </param>
+        <param>
+          <type>int[]</type>
+          <declname>a_minDepths</declname>
+        </param>
+        <param>
+          <type>int[]</type>
+          <declname>a_maxDepths</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_maxNodes</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref></type>
+          <declname>a_nodeSets</declname>
+          <array>[][]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000153"><xreftitle>Todo</xreftitle><xrefdescription><para>impl </para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000154"><xreftitle>Todo</xreftitle><xrefdescription><para>impl </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1532" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1532" bodyend="1578"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1_command_gene_1a2b466f1bd4416ce97c0d2567be1f65a8" compoundref="_command_gene_8java" startline="479" endline="481">org.jgap.gp.CommandGene.getReturnType</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1_command_gene_1a9c00a591e99e0f1139388a334e613d3e" compoundref="_command_gene_8java" startline="828" endline="835">org.jgap.gp.CommandGene.getSubChildType</references>
+        <references refid="classorg_1_1jgap_1_1gp_1_1_command_gene_1af1493149bbcf86ee3d848b493f7adcc6" compoundref="_command_gene_8java" startline="817" endline="819">org.jgap.gp.CommandGene.getSubReturnType</references>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af3246cb6a802ae1cde833013c130f6e9" compoundref="_g_p_genotype_8java" startline="397" endline="468">org.jgap.gp.impl.GPGenotype.randomInitialGenotype</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa21cc2dde0ca8cbc6048b37e62dd1593" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program" kindref="compound">IGPProgram</ref></type>
+        <definition>IGPProgram org.jgap.gp.impl.GPGenotype.cloneProgram</definition>
+        <argsstring>(IGPProgram a_original)</argsstring>
+        <name>cloneProgram</name>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program" kindref="compound">IGPProgram</ref></type>
+          <declname>a_original</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1131" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1131" bodyend="1146"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a318ae291daca64dc4ba0b1e5085b4b87" compoundref="_g_p_genotype_8java" startline="470" endline="472">org.jgap.gp.impl.GPGenotype.getGPConfiguration</references>
+        <references refid="interfaceorg_1_1jgap_1_1_i_handler_1a60199862000df04a4b2491d6d08f2f2c">org.jgap.IHandler.perform</references>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad495c700786596290a63e3d88a902766" compoundref="_g_p_genotype_8java" startline="696" endline="912">org.jgap.gp.impl.GPGenotype.evolve</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ac726d5312c002c60c239a9be1bc7cfba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.gp.impl.GPGenotype.writeToFile</definition>
+        <argsstring>(IGPProgram i1, IGPProgram i2, IGPProgram inew, String header)</argsstring>
+        <name>writeToFile</name>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program" kindref="compound">IGPProgram</ref></type>
+          <declname>i1</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program" kindref="compound">IGPProgram</ref></type>
+          <declname>i2</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program" kindref="compound">IGPProgram</ref></type>
+          <declname>inew</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>header</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write three GP programs being involved in crossover as a string to a file for debug purposes.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first program </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second program </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inew</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>resulting program </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>text for header text</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1335" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1335" bodyend="1355"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a356baf22df15fe6c0c88aadb45a80a5e" compoundref="_g_p_genotype_8java" startline="1365" endline="1382">org.jgap.gp.impl.GPGenotype.getProgramString</references>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad495c700786596290a63e3d88a902766" compoundref="_g_p_genotype_8java" startline="696" endline="912">org.jgap.gp.impl.GPGenotype.evolve</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a356baf22df15fe6c0c88aadb45a80a5e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>StringBuffer</type>
+        <definition>StringBuffer org.jgap.gp.impl.GPGenotype.getProgramString</definition>
+        <argsstring>(IGPProgram i1)</argsstring>
+        <name>getProgramString</name>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program" kindref="compound">IGPProgram</ref></type>
+          <declname>i1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Utility function.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>program to get textual representation for </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>textual representation of the given program</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1365" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1365" bodyend="1382"/>
+        <references refid="classorg_1_1jgap_1_1gp_1_1_command_gene_1a236141d99059da808afe7a9217e411c7">org.jgap.gp.CommandGene.toString</references>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ac726d5312c002c60c239a9be1bc7cfba" compoundref="_g_p_genotype_8java" startline="1335" endline="1355">org.jgap.gp.impl.GPGenotype.writeToFile</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ae3828fb2c7d3c3cc4ee2c1562c9851d8" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>static boolean org.jgap.gp.impl.GPGenotype.nodeExists</definition>
+        <argsstring>(CommandGene[] a_functionSet, Class a_returnType, int a_subReturnType)</argsstring>
+        <name>nodeExists</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref>[]</type>
+          <declname>a_functionSet</declname>
+        </param>
+        <param>
+          <type>Class</type>
+          <declname>a_returnType</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_subReturnType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Is there a node with the needed return type and sub return type within the given function set?</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_functionSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>collection of available nodes </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_returnType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>needed return type </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_subReturnType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>needed sub return type </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true: node found</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.4.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1465" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1465" bodyend="1476"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a77909da0c746ca16cdcbf0af9b1c0927" compoundref="_g_p_genotype_8java" startline="1396" endline="1451">org.jgap.gp.impl.GPGenotype.verifyChildNodes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ae5eb2b5f82dd89d6e8287eac90864cb1" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void org.jgap.gp.impl.GPGenotype.outputWarning</definition>
+        <argsstring>(Map&lt; String, CommandGene &gt; invalidNodes)</argsstring>
+        <name>outputWarning</name>
+        <param>
+          <type>Map&lt; String, <ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref> &gt;</type>
+          <declname>invalidNodes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Outputs the nodes that are never used.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>invalidNodes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>never used nodes</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.4.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1486" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1486" bodyend="1499"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af3246cb6a802ae1cde833013c130f6e9" compoundref="_g_p_genotype_8java" startline="397" endline="468">org.jgap.gp.impl.GPGenotype.randomInitialGenotype</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a95fd91fcd94500415c67e18388695a61" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void org.jgap.gp.impl.GPGenotype.outputDepthInfo</definition>
+        <argsstring>(Map&lt; CommandGene, int[]&gt; a_invalidDepths)</argsstring>
+        <name>outputDepthInfo</name>
+        <param>
+          <type>Map&lt; <ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref>, int[]&gt;</type>
+          <declname>a_invalidDepths</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Outputs the nodes that are never used because they would result in creating GP programs which would not satisfy the depth constraints given in configuration.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_invalidDepths</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>impossible depths for nodes</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.4.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="1511" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="1511" bodyend="1530"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af3246cb6a802ae1cde833013c130f6e9" compoundref="_g_p_genotype_8java" startline="397" endline="468">org.jgap.gp.impl.GPGenotype.randomInitialGenotype</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> for GP Programs.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="13464">
+        <label>Serializable</label>
+      </node>
+      <node id="13465">
+        <label>Comparable</label>
+      </node>
+      <node id="13462">
+        <label>org.jgap.gp.impl.GPGenotype</label>
+        <link refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype"/>
+        <childnode refid="13463" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13464" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13465" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13463">
+        <label>Runnable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="13481">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="13487">
+        <label>org.jgap.gp.INaturalGPSelector</label>
+        <link refid="interfaceorg_1_1jgap_1_1gp_1_1_i_natural_g_p_selector"/>
+        <childnode refid="13468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13494">
+        <label>org.jgap.gp.ISingleNodeValidator</label>
+        <link refid="interfaceorg_1_1jgap_1_1gp_1_1_i_single_node_validator"/>
+      </node>
+      <node id="13486">
+        <label>List</label>
+      </node>
+      <node id="13495">
+        <label>org.jgap.gp.impl.GPPopulation</label>
+        <link refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_population"/>
+        <childnode refid="13468" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13469" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13470" relation="usage">
+          <edgelabel>LOGGER</edgelabel>
+        </childnode>
+        <childnode refid="13471" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="13493" relation="usage">
+          <edgelabel>m_programs</edgelabel>
+          <edgelabel>m_fittestToAdd</edgelabel>
+          <edgelabel>m_fittestProgram</edgelabel>
+        </childnode>
+      </node>
+      <node id="13485">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="13468" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13474" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13482">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="13468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13468">
+        <label>Serializable</label>
+      </node>
+      <node id="13469">
+        <label>Comparable</label>
+      </node>
+      <node id="13496">
+        <label>org.jgap.gp.CommandGene</label>
+        <link refid="classorg_1_1jgap_1_1gp_1_1_command_gene"/>
+        <childnode refid="13469" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13491">
+        <label>org.jgap.gp.INodeValidator</label>
+        <link refid="interfaceorg_1_1jgap_1_1gp_1_1_i_node_validator"/>
+        <childnode refid="13468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13471">
+        <label>org.jgap.gp.impl.GPConfiguration</label>
+        <link refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_configuration"/>
+        <childnode refid="13472" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13487" relation="usage">
+          <edgelabel>m_selectionMethod</edgelabel>
+        </childnode>
+        <childnode refid="13488" relation="usage">
+          <edgelabel>m_objectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="13489" relation="usage">
+          <edgelabel>m_fitnessEvaluator</edgelabel>
+        </childnode>
+        <childnode refid="13490" relation="usage">
+          <edgelabel>m_initStrategy</edgelabel>
+        </childnode>
+        <childnode refid="13477" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="13491" relation="usage">
+          <edgelabel>m_nodeValidator</edgelabel>
+        </childnode>
+        <childnode refid="13492" relation="usage">
+          <edgelabel>m_crossMethod</edgelabel>
+        </childnode>
+        <childnode refid="13493" relation="usage">
+          <edgelabel>m_prototypeProgram</edgelabel>
+        </childnode>
+        <childnode refid="13494" relation="usage">
+          <edgelabel>m_singleNodeValidator</edgelabel>
+        </childnode>
+      </node>
+      <node id="13470">
+        <label>Logger</label>
+      </node>
+      <node id="13492">
+        <label>org.jgap.gp.CrossMethod</label>
+        <link refid="classorg_1_1jgap_1_1gp_1_1_cross_method"/>
+        <childnode refid="13468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13474">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="13475" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13493">
+        <label>org.jgap.gp.IGPProgram</label>
+        <link refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program"/>
+        <childnode refid="13468" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13469" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13474" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13479">
+        <label>org.jgap.FitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_fitness_evaluator"/>
+        <childnode refid="13468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13483">
+        <label>org.jgap.BulkFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_bulk_fitness_function"/>
+        <childnode refid="13468" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13474" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13488">
+        <label>org.jgap.gp.GPFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1gp_1_1_g_p_fitness_function"/>
+        <childnode refid="13468" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13470" relation="usage">
+          <edgelabel>LOGGER</edgelabel>
+        </childnode>
+      </node>
+      <node id="13475">
+        <label>Cloneable</label>
+      </node>
+      <node id="13466">
+        <label>org.jgap.gp.impl.GPGenotype</label>
+        <link refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype"/>
+        <childnode refid="13467" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13468" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13469" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13470" relation="usage">
+          <edgelabel>LOGGER</edgelabel>
+        </childnode>
+        <childnode refid="13471" relation="usage">
+          <edgelabel>m_configuration</edgelabel>
+          <edgelabel>m_staticConfiguration</edgelabel>
+        </childnode>
+        <childnode refid="13493" relation="usage">
+          <edgelabel>m_fittestToAdd</edgelabel>
+          <edgelabel>m_allTimeBest</edgelabel>
+        </childnode>
+        <childnode refid="13495" relation="usage">
+          <edgelabel>m_population</edgelabel>
+        </childnode>
+        <childnode refid="13496" relation="usage">
+          <edgelabel>m_nodeSets</edgelabel>
+        </childnode>
+      </node>
+      <node id="13477">
+        <label>org.jgap.IJGAPFactory</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_j_g_a_p_factory"/>
+        <childnode refid="13468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13484">
+        <label>org.jgap.Configuration.ConfigurationConfigurable</label>
+        <link refid="classorg_1_1jgap_1_1_configuration_1_1_configuration_configurable"/>
+        <childnode refid="13468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13467">
+        <label>Runnable</label>
+      </node>
+      <node id="13476">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="13474" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13468" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13469" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13490">
+        <label>org.jgap.gp.IGPInitStrategy</label>
+        <link refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_init_strategy"/>
+        <childnode refid="13468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13480">
+        <label>org.jgap.IChromosome</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome"/>
+        <childnode refid="13469" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13474" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13468" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13481" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13489">
+        <label>org.jgap.gp.IGPFitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_fitness_evaluator"/>
+        <childnode refid="13468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13472">
+        <label>org.jgap.Configuration</label>
+        <link refid="classorg_1_1jgap_1_1_configuration"/>
+        <childnode refid="13473" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13468" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13474" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13469" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13476" relation="usage">
+          <edgelabel>m_breeder</edgelabel>
+        </childnode>
+        <childnode refid="13477" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="13478" relation="usage">
+          <edgelabel>m_chromosomePool</edgelabel>
+        </childnode>
+        <childnode refid="13479" relation="usage">
+          <edgelabel>m_fitnessEvaluator</edgelabel>
+        </childnode>
+        <childnode refid="13480" relation="usage">
+          <edgelabel>m_sampleChromosome</edgelabel>
+        </childnode>
+        <childnode refid="13482" relation="usage">
+          <edgelabel>m_randomGenerator</edgelabel>
+        </childnode>
+        <childnode refid="13483" relation="usage">
+          <edgelabel>m_bulkObjectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="13484" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="13485" relation="usage">
+          <edgelabel>m_objectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="13486" relation="usage">
+          <edgelabel>m_geneticOperators</edgelabel>
+        </childnode>
+      </node>
+      <node id="13478">
+        <label>org.jgap.IChromosomePool</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool"/>
+      </node>
+      <node id="13473">
+        <label>Configurable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" line="30" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/impl/GPGenotype.java" bodystart="29" bodyend="1579"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a8ada3482e8689629778fe77164afb271" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>addFittestProgram</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa465c7cbfb45d77644b3d195782a12c9" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>calcFitness</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a71cc6d10d81d132ee542767aca12f502" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>checkErroneousPop</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af886a583789e547400134f2ad533cf8b" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>checkErroneousPop</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a6cab9ecf163e4eec850da3cc63df8665" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>checkErroneousPop</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a4104bc4b934e717c15e3a7b5e50a0748" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>checkErroneousProg</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a9d986d5030ce180fc402a2a73d22c42d" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>checkErroneousProg</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa3bf0b50a73684ff3fe1177017cf9bb8" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>checkErroneousProg</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa21cc2dde0ca8cbc6048b37e62dd1593" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>cloneProgram</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aef87073769e83d93b52d8df73ebb35dc" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>compareTo</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ab88a16d04e096c2c2e1bfc4477ea7310" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a847cbf8f0b5e3e223881ac1dfe5e36d3" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>equals</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a43707d524245f50c92094e9e97568089" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>evolve</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad495c700786596290a63e3d88a902766" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>evolve</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a4327e7a69fcbcfe051e00e46c933ea7a" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>fillPopulation</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1afb8e0283f47eb7c0a0b6e09c8aeccc96" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>getAllTimeBest</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a2cff99f216e87c7e4b25c217c5bdc5af" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>getFittestProgram</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a3a1e955f3a6c035913e311570591c683" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>getFittestProgramComputed</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a318ae291daca64dc4ba0b1e5085b4b87" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>getGPConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a9a2316294bf28b413eb8b0e288cd150d" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>getGPPopulation</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a356baf22df15fe6c0c88aadb45a80a5e" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>getProgramString</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a07e4b22e1cd10bbc198278efd83d27ce" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>getStaticGPConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a631996e8862da78bdb67b76687ad1873" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>getTotalFitness</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a66770c2d4fb9645f33afec5dc37bb47c" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>getVariable</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a66b8b63a2379f9b4f4e94ee3cc6974ad" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>GPGenotype</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a470bc360f57da2d313df69c51f9e7c3e" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>GPGenotype</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a71854e2aa9fc4e178a0c768efe9c80ad" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>GPGenotype</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a9b8cb5e7395359743bbee7658be90a36" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>hashCode</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a6b017f0f0e028cc1a9164782c5ce5095" prot="protected" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>init</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ada30eb741391730f266047d15cd40338" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>LOGGER</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a6bd9f97a0bb39ec138f6d8ca8ebd25e5" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>m_allTimeBest</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a869b5d4ab431717009978a9d870bf5d8" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>m_allTimeBestFitness</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a8e26c3d41a0e1922310e9d966f80238f" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>m_argTypes</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a957b0de7013e1055b66e03223dc890f2" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>m_bestFitness</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af0ec08e1f1fdf88d76bae2ba6d0fe986" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>m_cloneWarningGPProgramShown</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a2156c601b24d1a7fdcad1c59ec05e147" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>m_configuration</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af4a221f34692a5b47147dbbd31d26d23" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>m_fittestToAdd</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a3bfbce17cabd5ef77caf8427f5511407" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>m_fullModeAllowed</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a7e95fd6aefeefa158ca044abccc0ffa9" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>m_maxDepths</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ab15e0e8d3ee0ba8c1e56727f2a2f32ed" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>m_maxNodes</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af87aee9616f225ec99bf2f3db601e492" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>m_minDepths</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a045ec05f97be18ddbd121eb709d3e450" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>m_nodeSets</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a32bf2d50f238455154d3466fc1ef09a1" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>m_population</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a9e2b1a8103181690f4bb6e584463214c" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>m_staticConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a590812317593272cd66908ef7b712a63" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>m_totalFitness</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ae23e8520ee01ca7cb8f927a262db49c6" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>m_types</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a03d40b9502d5bbbe9855cef68c9c8123" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>m_variables</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ac5e56e43bba8e3368cacb3111a5fd60a" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>m_verbose</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ae3828fb2c7d3c3cc4ee2c1562c9851d8" prot="protected" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>nodeExists</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a95fd91fcd94500415c67e18388695a61" prot="protected" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>outputDepthInfo</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1abeef3282114d1313c97045dea004afc4" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>outputSolution</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ae5eb2b5f82dd89d6e8287eac90864cb1" prot="protected" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>outputWarning</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a0b615fba7524275eb09b3d7929d73329" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>putVariable</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a59354275c3ff7c6b47c4c676c13a4422" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>randomInitialGenotype</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a7e59aff645b8386adcad62e9ccdfd00d" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>randomInitialGenotype</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a47a8848949757df02df0b4503bd2bea7" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>randomInitialGenotype</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1af3246cb6a802ae1cde833013c130f6e9" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>randomInitialGenotype</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a184964a4fc96748de13cad57bee24ad0" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>run</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a2d46992095125ecad698dc9e1a72b513" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>setGPConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a11dce8ec844c102bc151e4ab81c52ac7" prot="protected" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>setGPPopulation</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a7750ff9b7bd73efcfff522365f4650d7" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>setStaticGPConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a2cda11ec40667a6cb061a4c87ace0b6c" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>setVerboseOutput</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1a77909da0c746ca16cdcbf0af9b1c0927" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>verifyChildNodes</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ad264330c888b133296578decc78f265e" prot="public" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>verifyDepthsForNodes</name></member>
+      <member refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1ac726d5312c002c60c239a9be1bc7cfba" prot="private" virt="non-virtual"><scope>org::jgap::gp::impl::GPGenotype</scope><name>writeToFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

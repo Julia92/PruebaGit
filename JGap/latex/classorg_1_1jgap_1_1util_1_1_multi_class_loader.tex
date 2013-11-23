@@ -1,0 +1,292 @@
+\hypertarget{classorg_1_1jgap_1_1util_1_1_multi_class_loader}{\section{org.\-jgap.\-util.\-Multi\-Class\-Loader Class Reference}
+\label{classorg_1_1jgap_1_1util_1_1_multi_class_loader}\index{org.\-jgap.\-util.\-Multi\-Class\-Loader@{org.\-jgap.\-util.\-Multi\-Class\-Loader}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-util.\-Multi\-Class\-Loader\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classorg_1_1jgap_1_1util_1_1_multi_class_loader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-util.\-Multi\-Class\-Loader\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classorg_1_1jgap_1_1util_1_1_multi_class_loader__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a9247aa446a74eddcfd2a23d5c99fd57c}{Multi\-Class\-Loader} ()
+\item 
+Class \hyperlink{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a1c2821dc43cd2ca538f9e6ffe41af3f8}{load\-Class} (String class\-Name)  throws Class\-Not\-Found\-Exception 
+\item 
+synchronized Class \hyperlink{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a7c9fd481b1168cfab217afd7cd5eb428}{load\-Class} (String class\-Name, boolean resolve\-It)  throws Class\-Not\-Found\-Exception 
+\item 
+void \hyperlink{classorg_1_1jgap_1_1util_1_1_multi_class_loader_ad75cf011f65d3a509f01c81c7236fe82}{set\-Class\-Name\-Replacement\-Char} (char replacement)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract byte\mbox{[}$\,$\mbox{]} \hyperlink{classorg_1_1jgap_1_1util_1_1_multi_class_loader_aff9c184aee7c7fb61dd77d55af89f17e}{load\-Class\-Bytes} (String class\-Name)
+\item 
+String \hyperlink{classorg_1_1jgap_1_1util_1_1_multi_class_loader_af7689792a86ef761cf69e874460969e9}{format\-Class\-Name} (String class\-Name)
+\item 
+void \hyperlink{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a0ac1e5f6fe5d7e03d0dfe8dc7dd1ac99}{monitor} (String text)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a388e062b31156295786201d4cd9da2f2}{print} (String text)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boolean \hyperlink{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a46b81b84025e37993e49b206062260d2}{monitor\-On} = false
+\item 
+boolean \hyperlink{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a6b48426e9450345d5411286790932b94}{source\-Monitor\-On} = true
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Hashtable \hyperlink{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a9bf208aab68f40238eaa34493dd8c6ee}{classes} = new Hashtable()
+\item 
+char \hyperlink{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a0e255f36a9c6dd5fa577f5bbd1869a94}{class\-Name\-Replacement\-Char}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a4de9db8aab4e1d0d25363cf3dd635773}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-2 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A simple test class loader capable of loading from multiple sources, such as local files or a U\-R\-L.
+
+This class is derived from an article by Chuck Mc\-Manis \href{http://www.javaworld.com/javaworld/jw-10-1996/indepth.src.html}{\tt http\-://www.\-javaworld.\-com/javaworld/jw-\/10-\/1996/indepth.\-src.\-html} with large modifications.
+
+Note that this has been updated to use the non-\/deprecated version of define\-Class() -- J\-D\-M.
+
+\begin{DoxyAuthor}{Author}
+Jack Harich -\/ 8/18/97 
+
+John D. Mitchell -\/ 99.\-03.\-04 
+
+Klaus Meffert (integrated into J\-G\-A\-P)
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-2 
+\end{DoxySince}
+
+
+Definition at line 31 of file Multi\-Class\-Loader.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a9247aa446a74eddcfd2a23d5c99fd57c}{\index{org\-::jgap\-::util\-::\-Multi\-Class\-Loader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}!Multi\-Class\-Loader@{Multi\-Class\-Loader}}
+\index{Multi\-Class\-Loader@{Multi\-Class\-Loader}!org::jgap::util::MultiClassLoader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}}
+\subsubsection[{Multi\-Class\-Loader}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-util.\-Multi\-Class\-Loader.\-Multi\-Class\-Loader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a9247aa446a74eddcfd2a23d5c99fd57c}
+
+
+Definition at line 45 of file Multi\-Class\-Loader.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1util_1_1_multi_class_loader_af7689792a86ef761cf69e874460969e9}{\index{org\-::jgap\-::util\-::\-Multi\-Class\-Loader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}!format\-Class\-Name@{format\-Class\-Name}}
+\index{format\-Class\-Name@{format\-Class\-Name}!org::jgap::util::MultiClassLoader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}}
+\subsubsection[{format\-Class\-Name}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-jgap.\-util.\-Multi\-Class\-Loader.\-format\-Class\-Name (
+\begin{DoxyParamCaption}
+\item[{String}]{class\-Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classorg_1_1jgap_1_1util_1_1_multi_class_loader_af7689792a86ef761cf69e874460969e9}
+
+
+Definition at line 112 of file Multi\-Class\-Loader.\-java.
+
+
+
+References org.\-jgap.\-util.\-Multi\-Class\-Loader.\-class\-Name\-Replacement\-Char.
+
+
+
+Referenced by org.\-jgap.\-util.\-Jar\-Class\-Loader.\-load\-Class\-Bytes().
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a1c2821dc43cd2ca538f9e6ffe41af3f8}{\index{org\-::jgap\-::util\-::\-Multi\-Class\-Loader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}!load\-Class@{load\-Class}}
+\index{load\-Class@{load\-Class}!org::jgap::util::MultiClassLoader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}}
+\subsubsection[{load\-Class}]{\setlength{\rightskip}{0pt plus 5cm}Class org.\-jgap.\-util.\-Multi\-Class\-Loader.\-load\-Class (
+\begin{DoxyParamCaption}
+\item[{String}]{class\-Name}
+\end{DoxyParamCaption}
+) throws Class\-Not\-Found\-Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a1c2821dc43cd2ca538f9e6ffe41af3f8}
+This is a simple version for external clients since they will always want the class resolved before it is returned to them. 
+
+Definition at line 53 of file Multi\-Class\-Loader.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a7c9fd481b1168cfab217afd7cd5eb428}{\index{org\-::jgap\-::util\-::\-Multi\-Class\-Loader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}!load\-Class@{load\-Class}}
+\index{load\-Class@{load\-Class}!org::jgap::util::MultiClassLoader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}}
+\subsubsection[{load\-Class}]{\setlength{\rightskip}{0pt plus 5cm}synchronized Class org.\-jgap.\-util.\-Multi\-Class\-Loader.\-load\-Class (
+\begin{DoxyParamCaption}
+\item[{String}]{class\-Name, }
+\item[{boolean}]{resolve\-It}
+\end{DoxyParamCaption}
+) throws Class\-Not\-Found\-Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a7c9fd481b1168cfab217afd7cd5eb428}
+
+
+Definition at line 58 of file Multi\-Class\-Loader.\-java.
+
+
+
+References org.\-jgap.\-util.\-Multi\-Class\-Loader.\-classes, org.\-jgap.\-util.\-Multi\-Class\-Loader.\-load\-Class\-Bytes(), and org.\-jgap.\-util.\-Multi\-Class\-Loader.\-monitor().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a7c9fd481b1168cfab217afd7cd5eb428_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1_multi_class_loader_aff9c184aee7c7fb61dd77d55af89f17e}{\index{org\-::jgap\-::util\-::\-Multi\-Class\-Loader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}!load\-Class\-Bytes@{load\-Class\-Bytes}}
+\index{load\-Class\-Bytes@{load\-Class\-Bytes}!org::jgap::util::MultiClassLoader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}}
+\subsubsection[{load\-Class\-Bytes}]{\setlength{\rightskip}{0pt plus 5cm}abstract byte \mbox{[}$\,$\mbox{]} org.\-jgap.\-util.\-Multi\-Class\-Loader.\-load\-Class\-Bytes (
+\begin{DoxyParamCaption}
+\item[{String}]{class\-Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{classorg_1_1jgap_1_1util_1_1_multi_class_loader_aff9c184aee7c7fb61dd77d55af89f17e}
+
+
+Referenced by org.\-jgap.\-util.\-Multi\-Class\-Loader.\-load\-Class().
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a0ac1e5f6fe5d7e03d0dfe8dc7dd1ac99}{\index{org\-::jgap\-::util\-::\-Multi\-Class\-Loader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}!monitor@{monitor}}
+\index{monitor@{monitor}!org::jgap::util::MultiClassLoader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}}
+\subsubsection[{monitor}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-util.\-Multi\-Class\-Loader.\-monitor (
+\begin{DoxyParamCaption}
+\item[{String}]{text}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a0ac1e5f6fe5d7e03d0dfe8dc7dd1ac99}
+
+
+Definition at line 124 of file Multi\-Class\-Loader.\-java.
+
+
+
+References org.\-jgap.\-util.\-Multi\-Class\-Loader.\-monitor\-On, and org.\-jgap.\-util.\-Multi\-Class\-Loader.\-print().
+
+
+
+Referenced by org.\-jgap.\-util.\-Multi\-Class\-Loader.\-load\-Class().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a0ac1e5f6fe5d7e03d0dfe8dc7dd1ac99_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a388e062b31156295786201d4cd9da2f2}{\index{org\-::jgap\-::util\-::\-Multi\-Class\-Loader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}!print@{print}}
+\index{print@{print}!org::jgap::util::MultiClassLoader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}static void org.\-jgap.\-util.\-Multi\-Class\-Loader.\-print (
+\begin{DoxyParamCaption}
+\item[{String}]{text}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}}\label{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a388e062b31156295786201d4cd9da2f2}
+
+
+Definition at line 129 of file Multi\-Class\-Loader.\-java.
+
+
+
+Referenced by org.\-jgap.\-util.\-Multi\-Class\-Loader.\-monitor().
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1_multi_class_loader_ad75cf011f65d3a509f01c81c7236fe82}{\index{org\-::jgap\-::util\-::\-Multi\-Class\-Loader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}!set\-Class\-Name\-Replacement\-Char@{set\-Class\-Name\-Replacement\-Char}}
+\index{set\-Class\-Name\-Replacement\-Char@{set\-Class\-Name\-Replacement\-Char}!org::jgap::util::MultiClassLoader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}}
+\subsubsection[{set\-Class\-Name\-Replacement\-Char}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-util.\-Multi\-Class\-Loader.\-set\-Class\-Name\-Replacement\-Char (
+\begin{DoxyParamCaption}
+\item[{char}]{replacement}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1_multi_class_loader_ad75cf011f65d3a509f01c81c7236fe82}
+This optional call allows a class name such as \char`\"{}\-C\-O\-M.\-test.\-Hello\char`\"{} to be changed to \char`\"{}\-C\-O\-M\-\_\-test\-\_\-\-Hello\char`\"{}, which is useful for storing classes from different packages in the same retrival directory. In the above example the char would be '\-\_\-'. 
+
+Definition at line 106 of file Multi\-Class\-Loader.\-java.
+
+
+
+References org.\-jgap.\-util.\-Multi\-Class\-Loader.\-class\-Name\-Replacement\-Char.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a9bf208aab68f40238eaa34493dd8c6ee}{\index{org\-::jgap\-::util\-::\-Multi\-Class\-Loader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}!classes@{classes}}
+\index{classes@{classes}!org::jgap::util::MultiClassLoader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}}
+\subsubsection[{classes}]{\setlength{\rightskip}{0pt plus 5cm}Hashtable org.\-jgap.\-util.\-Multi\-Class\-Loader.\-classes = new Hashtable()\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a9bf208aab68f40238eaa34493dd8c6ee}
+
+
+Definition at line 37 of file Multi\-Class\-Loader.\-java.
+
+
+
+Referenced by org.\-jgap.\-util.\-Multi\-Class\-Loader.\-load\-Class().
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a0e255f36a9c6dd5fa577f5bbd1869a94}{\index{org\-::jgap\-::util\-::\-Multi\-Class\-Loader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}!class\-Name\-Replacement\-Char@{class\-Name\-Replacement\-Char}}
+\index{class\-Name\-Replacement\-Char@{class\-Name\-Replacement\-Char}!org::jgap::util::MultiClassLoader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}}
+\subsubsection[{class\-Name\-Replacement\-Char}]{\setlength{\rightskip}{0pt plus 5cm}char org.\-jgap.\-util.\-Multi\-Class\-Loader.\-class\-Name\-Replacement\-Char\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a0e255f36a9c6dd5fa577f5bbd1869a94}
+
+
+Definition at line 39 of file Multi\-Class\-Loader.\-java.
+
+
+
+Referenced by org.\-jgap.\-util.\-Multi\-Class\-Loader.\-format\-Class\-Name(), and org.\-jgap.\-util.\-Multi\-Class\-Loader.\-set\-Class\-Name\-Replacement\-Char().
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a4de9db8aab4e1d0d25363cf3dd635773}{\index{org\-::jgap\-::util\-::\-Multi\-Class\-Loader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::util::MultiClassLoader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-util.\-Multi\-Class\-Loader.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-2 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a4de9db8aab4e1d0d25363cf3dd635773}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 34 of file Multi\-Class\-Loader.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a46b81b84025e37993e49b206062260d2}{\index{org\-::jgap\-::util\-::\-Multi\-Class\-Loader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}!monitor\-On@{monitor\-On}}
+\index{monitor\-On@{monitor\-On}!org::jgap::util::MultiClassLoader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}}
+\subsubsection[{monitor\-On}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-util.\-Multi\-Class\-Loader.\-monitor\-On = false\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a46b81b84025e37993e49b206062260d2}
+
+
+Definition at line 41 of file Multi\-Class\-Loader.\-java.
+
+
+
+Referenced by org.\-jgap.\-util.\-Multi\-Class\-Loader.\-monitor().
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a6b48426e9450345d5411286790932b94}{\index{org\-::jgap\-::util\-::\-Multi\-Class\-Loader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}!source\-Monitor\-On@{source\-Monitor\-On}}
+\index{source\-Monitor\-On@{source\-Monitor\-On}!org::jgap::util::MultiClassLoader@{org\-::jgap\-::util\-::\-Multi\-Class\-Loader}}
+\subsubsection[{source\-Monitor\-On}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-util.\-Multi\-Class\-Loader.\-source\-Monitor\-On = true\hspace{0.3cm}{\ttfamily [protected]}}}\label{classorg_1_1jgap_1_1util_1_1_multi_class_loader_a6b48426e9450345d5411286790932b94}
+
+
+Definition at line 43 of file Multi\-Class\-Loader.\-java.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/util/\hyperlink{_multi_class_loader_8java}{Multi\-Class\-Loader.\-java}\end{DoxyCompactItemize}

@@ -1,0 +1,565 @@
+.TH "examples.gp.symbolicRegression.SymbolicRegression" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.symbolicRegression.SymbolicRegression \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.GPProblem\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBFormulaFitnessFunction\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSymbolicRegression\fP (\fBGPConfiguration\fP a_conf)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGPGenotype\fP \fBcreate\fP ()  throws InvalidConfigurationException "
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBreadFile\fP (String file)"
+.br
+.ti -1c
+.RI "static Double[][] \fBtransposeMatrix\fP (Double[][] m)"
+.br
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)  throws Exception "
+.br
+.ti -1c
+.RI "static void \fBmyOutputSolution\fP (\fBIGPProgram\fP a_best, int gen)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fBnumInputVariables\fP"
+.br
+.ti -1c
+.RI "static \fBVariable\fP[] \fBvariables\fP"
+.br
+.ti -1c
+.RI "static String[] \fBvariableNames\fP"
+.br
+.ti -1c
+.RI "static Integer \fBoutputVariable\fP"
+.br
+.ti -1c
+.RI "static int[] \fBignoreVariables\fP"
+.br
+.ti -1c
+.RI "static ArrayList< Double > \fBconstants\fP = new ArrayList<Double> ()"
+.br
+.ti -1c
+.RI "static int \fBnumRows\fP"
+.br
+.ti -1c
+.RI "static boolean \fBfoundPerfect\fP = false"
+.br
+.ti -1c
+.RI "static int \fBminInitDepth\fP = 2"
+.br
+.ti -1c
+.RI "static int \fBmaxInitDepth\fP = 4"
+.br
+.ti -1c
+.RI "static int \fBpopulationSize\fP = 100"
+.br
+.ti -1c
+.RI "static int \fBmaxCrossoverDepth\fP = 8"
+.br
+.ti -1c
+.RI "static int \fBprogramCreationMaxTries\fP = 5"
+.br
+.ti -1c
+.RI "static int \fBnumEvolutions\fP = 1800"
+.br
+.ti -1c
+.RI "static boolean \fBverboseOutput\fP = true"
+.br
+.ti -1c
+.RI "static int \fBmaxNodes\fP = 21"
+.br
+.ti -1c
+.RI "static double \fBfunctionProb\fP = 0\&.9d"
+.br
+.ti -1c
+.RI "static float \fBreproductionProb\fP = 0\&.1f"
+.br
+.ti -1c
+.RI "static float \fBmutationProb\fP = 0\&.1f"
+.br
+.ti -1c
+.RI "static double \fBcrossoverProb\fP = 0\&.9d"
+.br
+.ti -1c
+.RI "static float \fBdynamizeArityProb\fP = 0\&.08f"
+.br
+.ti -1c
+.RI "static double \fBnewChromsPercent\fP = 0\&.3d"
+.br
+.ti -1c
+.RI "static int \fBtournamentSelectorSize\fP = 0"
+.br
+.ti -1c
+.RI "static double \fBlowerRange\fP = -10\&.0d"
+.br
+.ti -1c
+.RI "static double \fBupperRange\fP = -10\&.0d"
+.br
+.ti -1c
+.RI "static boolean \fBterminalWholeNumbers\fP = true"
+.br
+.ti -1c
+.RI "static String \fBreturnType\fP = 'DoubleClass'"
+.br
+.ti -1c
+.RI "static String \fBpresentation\fP = ''"
+.br
+.ti -1c
+.RI "static int \fBadfArity\fP = 0"
+.br
+.ti -1c
+.RI "static String \fBadfType\fP = 'double'"
+.br
+.ti -1c
+.RI "static boolean \fBuseADF\fP = false"
+.br
+.ti -1c
+.RI "static String[] \fBfunctions\fP = {'Multiply', 'Divide', 'Add', 'Subtract'}"
+.br
+.ti -1c
+.RI "static String[] \fBadfFunctions\fP"
+.br
+.ti -1c
+.RI "static double \fBscaleError\fP = -1\&.0d"
+.br
+.ti -1c
+.RI "static boolean \fBbumpPerfect\fP = false"
+.br
+.ti -1c
+.RI "static Double \fBbumpValue\fP = 0\&.0000"
+.br
+.ti -1c
+.RI "static long \fBstartTime\fP"
+.br
+.ti -1c
+.RI "static long \fBendTime\fP"
+.br
+.ti -1c
+.RI "static double \fBstopCriteria\fP = -1\&.0d"
+.br
+.ti -1c
+.RI "static boolean \fBshowPopulation\fP = false"
+.br
+.ti -1c
+.RI "static boolean \fBshowSimiliar\fP = false"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static Double[][] \fBdata\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static transient Logger \fBLOGGER\fP = Logger\&.getLogger(SymbolicRegression\&.class)"
+.br
+.ti -1c
+.RI "static HashMap< String, Integer > \fBfoundSolutions\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Definition at line 58 of file SymbolicRegression\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.SymbolicRegression (\fBGPConfiguration\fPa_conf) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 183 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBGPGenotype\fP examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.create () throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [virtual]\fP"
+This method is used for setting up the commands and terminals that can be used to solve the problem\&.
+.PP
+\fBReturns:\fP
+.RS 4
+GPGenotype 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIInvalidConfigurationException\fP 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.GPProblem\fP\&.
+.PP
+Definition at line 195 of file SymbolicRegression\&.java\&.
+.PP
+References examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.adfArity, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.adfFunctions, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.adfType, org\&.jgap\&.gp\&.CommandGene\&.BooleanClass, org\&.jgap\&.gp\&.CommandGene\&.DoubleClass, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.functions, org\&.jgap\&.gp\&.GPProblem\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.IntegerClass, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.lowerRange, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.maxNodes, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.numInputVariables, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.outputVariable, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.upperRange, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.useADF, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.variableNames, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.variables, and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.verboseOutput\&.
+.SS "static void examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main (String[]args) throws Exception\fC [inline]\fP, \fC [static]\fP"
+Starts the example\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Hakan Kjellerstrand 
+.RE
+.PP
+The maximum depth of an individual resulting from crossover\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_strict\fP true: throw an error during evolution in case a situation is detected where no function or terminal of a required type is declared in the GPConfiguration; false: don't throw an error but try a completely different combination of functions and terminals
+.RE
+.PP
+In crossover: If random number (0\&.\&.1) < this value, then choose a function otherwise a terminal\&.
+.PP
+The probability that a reproduction operation is chosen during evolution\&. Must be between 0\&.0d and 1\&.0d\&. crossoverProb + reproductionProb must equal 1\&.0d\&.
+.PP
+The probability that a node is mutated during growing a program\&.
+.PP
+The probability that the arity of a node is changed during growing a program\&.
+.PP
+Percentage of the population that will be filled with new individuals during evolution\&. Must be between 0\&.0d and 1\&.0d\&.
+.PP
+The minimum depth of an individual when the world is created\&.
+.PP
+If m_strictProgramCreation is false: Maximum number of tries to construct a valid program\&.
+.PP
+Definition at line 871 of file SymbolicRegression\&.java\&.
+.PP
+References examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.data, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.dynamizeArityProb, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.endTime, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.functionProb, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.maxCrossoverDepth, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.maxInitDepth, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.minInitDepth, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.mutationProb, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.myOutputSolution(), examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.newChromsPercent, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.numEvolutions, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.numInputVariables, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.numRows, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.outputVariable, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.populationSize, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.presentation, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.programCreationMaxTries, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile(), examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.reproductionProb, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.showPopulation, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.showSimiliar, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.startTime, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.SymbolicRegression(), examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.tournamentSelectorSize, and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.variableNames\&.
+.SS "static void examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.myOutputSolution (\fBIGPProgram\fPa_best, intgen)\fC [inline]\fP, \fC [static]\fP"
+Outputs the best solution until now at standard output\&.
+.PP
+This is stolen (and somewhat edited) from \fBGPGenotype\&.outputSolution\fP which used log4j\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_best\fP the fittest ProgramChromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Hakan Kjellerstrand (originally by Klaus Meffert) 
+.RE
+.PP
+
+.PP
+Definition at line 1223 of file SymbolicRegression\&.java\&.
+.PP
+References examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.numEvolutions\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main()\&.
+.SS "static void examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile (Stringfile)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 317 of file SymbolicRegression\&.java\&.
+.PP
+References examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.adfArity, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.adfFunctions, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.adfType, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.bumpPerfect, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.bumpValue, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.crossoverProb, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.data, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.dynamizeArityProb, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.functionProb, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.functions, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.ignoreVariables, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.lowerRange, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.maxCrossoverDepth, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.maxInitDepth, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.maxNodes, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.minInitDepth, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.mutationProb, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.newChromsPercent, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.numEvolutions, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.numInputVariables, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.numRows, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.outputVariable, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.populationSize, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.presentation, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.programCreationMaxTries, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.reproductionProb, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.returnType, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.scaleError, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.showPopulation, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.showSimiliar, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.stopCriteria, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.terminalWholeNumbers, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.tournamentSelectorSize, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.transposeMatrix(), examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.upperRange, examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.useADF, and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.variableNames\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main()\&.
+.SS "static Double [][] examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.transposeMatrix (Doublem[][])\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 516 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.adfArity = 0\fC [static]\fP"
+
+.PP
+Definition at line 138 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.create(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "String [] examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.adfFunctions\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {"Multiply3", "Divide", "Add3",
+      "Subtract"}
+.fi
+.PP
+Definition at line 148 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.create(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "String examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.adfType = 'double'\fC [static]\fP"
+
+.PP
+Definition at line 140 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.create(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "boolean examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.bumpPerfect = false\fC [static]\fP"
+
+.PP
+Definition at line 161 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.FormulaFitnessFunction\&.computeRawFitness(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "Double examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.bumpValue = 0\&.0000\fC [static]\fP"
+
+.PP
+Definition at line 164 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.FormulaFitnessFunction\&.computeRawFitness(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "ArrayList<Double> examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.constants = new ArrayList<Double> ()\fC [static]\fP"
+
+.PP
+Definition at line 82 of file SymbolicRegression\&.java\&.
+.SS "double examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.crossoverProb = 0\&.9d\fC [static]\fP"
+
+.PP
+Definition at line 117 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "Double [][] examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.data\fC [static]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 89 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.FormulaFitnessFunction\&.computeRawFitness(), examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "float examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.dynamizeArityProb = 0\&.08f\fC [static]\fP"
+
+.PP
+Definition at line 119 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "long examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.endTime\fC [static]\fP"
+
+.PP
+Definition at line 173 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main()\&.
+.SS "boolean examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.foundPerfect = false\fC [static]\fP"
+
+.PP
+Definition at line 92 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.FormulaFitnessFunction\&.computeRawFitness()\&.
+.SS "HashMap<String, Integer> examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.foundSolutions\fC [static]\fP, \fC [private]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= new HashMap<String,
+      Integer> ()
+.fi
+.PP
+Definition at line 167 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.FormulaFitnessFunction\&.computeRawFitness()\&.
+.SS "double examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.functionProb = 0\&.9d\fC [static]\fP"
+
+.PP
+Definition at line 111 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "String [] examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.functions = {'Multiply', 'Divide', 'Add', 'Subtract'}\fC [static]\fP"
+
+.PP
+Definition at line 145 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.create(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "int [] examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.ignoreVariables\fC [static]\fP"
+
+.PP
+Definition at line 79 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "transient Logger examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.LOGGER = Logger\&.getLogger(SymbolicRegression\&.class)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 60 of file SymbolicRegression\&.java\&.
+.SS "double examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.lowerRange = -10\&.0d\fC [static]\fP"
+
+.PP
+Definition at line 126 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.create(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "int examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.maxCrossoverDepth = 8\fC [static]\fP"
+
+.PP
+Definition at line 101 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "int examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.maxInitDepth = 4\fC [static]\fP"
+
+.PP
+Definition at line 97 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "int examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.maxNodes = 21\fC [static]\fP"
+
+.PP
+Definition at line 109 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.create(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "int examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.minInitDepth = 2\fC [static]\fP"
+
+.PP
+Definition at line 95 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "float examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.mutationProb = 0\&.1f\fC [static]\fP"
+
+.PP
+Definition at line 115 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "double examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.newChromsPercent = 0\&.3d\fC [static]\fP"
+
+.PP
+Definition at line 121 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "int examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.numEvolutions = 1800\fC [static]\fP"
+
+.PP
+Definition at line 105 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main(), examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.myOutputSolution(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "int examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.numInputVariables\fC [static]\fP"
+
+.PP
+Definition at line 68 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.FormulaFitnessFunction\&.computeRawFitness(), examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.create(), examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "int examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.numRows\fC [static]\fP"
+
+.PP
+Definition at line 85 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.FormulaFitnessFunction\&.computeRawFitness(), examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "Integer examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.outputVariable\fC [static]\fP"
+
+.PP
+Definition at line 77 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.FormulaFitnessFunction\&.computeRawFitness(), examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.create(), examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "int examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.populationSize = 100\fC [static]\fP"
+
+.PP
+Definition at line 99 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "String examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.presentation = ''\fC [static]\fP"
+
+.PP
+Definition at line 135 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "int examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.programCreationMaxTries = 5\fC [static]\fP"
+
+.PP
+Definition at line 103 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "float examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.reproductionProb = 0\&.1f\fC [static]\fP"
+
+.PP
+Definition at line 113 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "String examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.returnType = 'DoubleClass'\fC [static]\fP"
+
+.PP
+Definition at line 133 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "double examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.scaleError = -1\&.0d\fC [static]\fP"
+
+.PP
+Definition at line 157 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.FormulaFitnessFunction\&.computeRawFitness(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "boolean examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.showPopulation = false\fC [static]\fP"
+
+.PP
+Definition at line 179 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "boolean examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.showSimiliar = false\fC [static]\fP"
+
+.PP
+Definition at line 181 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "long examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.startTime\fC [static]\fP"
+
+.PP
+Definition at line 171 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main()\&.
+.SS "double examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.stopCriteria = -1\&.0d\fC [static]\fP"
+
+.PP
+Definition at line 177 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "boolean examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.terminalWholeNumbers = true\fC [static]\fP"
+
+.PP
+Definition at line 131 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "int examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.tournamentSelectorSize = 0\fC [static]\fP"
+
+.PP
+Definition at line 123 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "double examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.upperRange = -10\&.0d\fC [static]\fP"
+
+.PP
+Definition at line 128 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.create(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "boolean examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.useADF = false\fC [static]\fP"
+
+.PP
+Definition at line 142 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.create(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "String [] examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.variableNames\fC [static]\fP"
+
+.PP
+Definition at line 74 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.create(), examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.main(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.readFile()\&.
+.SS "\fBVariable\fP [] examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.variables\fC [static]\fP"
+
+.PP
+Definition at line 71 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.FormulaFitnessFunction\&.computeRawFitness(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.create()\&.
+.SS "boolean examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.verboseOutput = true\fC [static]\fP"
+
+.PP
+Definition at line 107 of file SymbolicRegression\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.create()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

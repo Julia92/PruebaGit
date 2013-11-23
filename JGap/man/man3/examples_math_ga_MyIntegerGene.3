@@ -1,0 +1,173 @@
+.TH "examples.math.ga.MyIntegerGene" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.math.ga.MyIntegerGene \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits BaseGene, and Gene\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMyIntegerGene\fP (Configuration theConfiguration)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBMyIntegerGene\fP (Configuration theConfiguration, int theMin, int theMax)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBsetAllele\fP (Object o)"
+.br
+.ti -1c
+.RI "String \fBgetPersistentRepresentation\fP ()  throws UnsupportedOperationException "
+.br
+.ti -1c
+.RI "void \fBsetValueFromPersistentRepresentation\fP (String s)  throws UnsupportedOperationException, UnsupportedRepresentationException "
+.br
+.ti -1c
+.RI "void \fBsetToRandomValue\fP (RandomGenerator theRandomGenerator)"
+.br
+.ti -1c
+.RI "void \fBapplyMutation\fP (int i, double v)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object o)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Object \fBgetInternalValue\fP ()"
+.br
+.ti -1c
+.RI "Gene \fBnewGeneInternal\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Integer \fBmValue\fP"
+.br
+.ti -1c
+.RI "int \fBmMin\fP = Integer\&.MIN_VALUE"
+.br
+.ti -1c
+.RI "int \fBmMax\fP = Integer\&.MAX_VALUE"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.1 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Michael Grove 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file MyIntegerGene\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.math\&.ga\&.MyIntegerGene\&.MyIntegerGene (ConfigurationtheConfiguration) throws InvalidConfigurationException\fC [inline]\fP"
+
+.PP
+Definition at line 31 of file MyIntegerGene\&.java\&.
+.PP
+Referenced by examples\&.math\&.ga\&.MyIntegerGene\&.newGeneInternal()\&.
+.SS "examples\&.math\&.ga\&.MyIntegerGene\&.MyIntegerGene (ConfigurationtheConfiguration, inttheMin, inttheMax) throws InvalidConfigurationException\fC [inline]\fP"
+
+.PP
+Definition at line 36 of file MyIntegerGene\&.java\&.
+.PP
+References examples\&.math\&.ga\&.MyIntegerGene\&.mMax, examples\&.math\&.ga\&.MyIntegerGene\&.mMin, and examples\&.math\&.ga\&.MyIntegerGene\&.mValue\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void examples\&.math\&.ga\&.MyIntegerGene\&.applyMutation (inti, doublev)\fC [inline]\fP"
+
+.PP
+Definition at line 81 of file MyIntegerGene\&.java\&.
+.PP
+References examples\&.math\&.ga\&.MyIntegerGene\&.mMax, examples\&.math\&.ga\&.MyIntegerGene\&.mMin, examples\&.math\&.ga\&.MyIntegerGene\&.mValue, and examples\&.math\&.ga\&.MyIntegerGene\&.setAllele()\&.
+.SS "int examples\&.math\&.ga\&.MyIntegerGene\&.compareTo (Objecto)\fC [inline]\fP"
+
+.PP
+Definition at line 92 of file MyIntegerGene\&.java\&.
+.SS "Object examples\&.math\&.ga\&.MyIntegerGene\&.getInternalValue ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 44 of file MyIntegerGene\&.java\&.
+.PP
+References examples\&.math\&.ga\&.MyIntegerGene\&.mValue\&.
+.SS "String examples\&.math\&.ga\&.MyIntegerGene\&.getPersistentRepresentation () throws UnsupportedOperationException\fC [inline]\fP"
+
+.PP
+Definition at line 66 of file MyIntegerGene\&.java\&.
+.SS "Gene examples\&.math\&.ga\&.MyIntegerGene\&.newGeneInternal ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 48 of file MyIntegerGene\&.java\&.
+.PP
+References examples\&.math\&.ga\&.MyIntegerGene\&.mMax, examples\&.math\&.ga\&.MyIntegerGene\&.mMin, and examples\&.math\&.ga\&.MyIntegerGene\&.MyIntegerGene()\&.
+.SS "void examples\&.math\&.ga\&.MyIntegerGene\&.setAllele (Objecto)\fC [inline]\fP"
+
+.PP
+Definition at line 56 of file MyIntegerGene\&.java\&.
+.PP
+References examples\&.math\&.ga\&.MyIntegerGene\&.mMax, examples\&.math\&.ga\&.MyIntegerGene\&.mMin, and examples\&.math\&.ga\&.MyIntegerGene\&.mValue\&.
+.PP
+Referenced by examples\&.math\&.ga\&.MyIntegerGene\&.applyMutation(), and examples\&.math\&.ga\&.MyIntegerGene\&.setToRandomValue()\&.
+.SS "void examples\&.math\&.ga\&.MyIntegerGene\&.setToRandomValue (RandomGeneratortheRandomGenerator)\fC [inline]\fP"
+
+.PP
+Definition at line 76 of file MyIntegerGene\&.java\&.
+.PP
+References examples\&.math\&.ga\&.MyIntegerGene\&.mMax, examples\&.math\&.ga\&.MyIntegerGene\&.mMin, and examples\&.math\&.ga\&.MyIntegerGene\&.setAllele()\&.
+.SS "void examples\&.math\&.ga\&.MyIntegerGene\&.setValueFromPersistentRepresentation (Strings) throws UnsupportedOperationException, UnsupportedRepresentationException\fC [inline]\fP"
+
+.PP
+Definition at line 71 of file MyIntegerGene\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.math\&.ga\&.MyIntegerGene\&.CVS_REVISION = '$Revision: 1\&.1 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 23 of file MyIntegerGene\&.java\&.
+.SS "int examples\&.math\&.ga\&.MyIntegerGene\&.mMax = Integer\&.MAX_VALUE\fC [private]\fP"
+
+.PP
+Definition at line 29 of file MyIntegerGene\&.java\&.
+.PP
+Referenced by examples\&.math\&.ga\&.MyIntegerGene\&.applyMutation(), examples\&.math\&.ga\&.MyIntegerGene\&.MyIntegerGene(), examples\&.math\&.ga\&.MyIntegerGene\&.newGeneInternal(), examples\&.math\&.ga\&.MyIntegerGene\&.setAllele(), and examples\&.math\&.ga\&.MyIntegerGene\&.setToRandomValue()\&.
+.SS "int examples\&.math\&.ga\&.MyIntegerGene\&.mMin = Integer\&.MIN_VALUE\fC [private]\fP"
+
+.PP
+Definition at line 27 of file MyIntegerGene\&.java\&.
+.PP
+Referenced by examples\&.math\&.ga\&.MyIntegerGene\&.applyMutation(), examples\&.math\&.ga\&.MyIntegerGene\&.MyIntegerGene(), examples\&.math\&.ga\&.MyIntegerGene\&.newGeneInternal(), examples\&.math\&.ga\&.MyIntegerGene\&.setAllele(), and examples\&.math\&.ga\&.MyIntegerGene\&.setToRandomValue()\&.
+.SS "Integer examples\&.math\&.ga\&.MyIntegerGene\&.mValue\fC [private]\fP"
+
+.PP
+Definition at line 25 of file MyIntegerGene\&.java\&.
+.PP
+Referenced by examples\&.math\&.ga\&.MyIntegerGene\&.applyMutation(), examples\&.math\&.ga\&.MyIntegerGene\&.getInternalValue(), examples\&.math\&.ga\&.MyIntegerGene\&.MyIntegerGene(), and examples\&.math\&.ga\&.MyIntegerGene\&.setAllele()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

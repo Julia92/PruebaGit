@@ -1,0 +1,171 @@
+.TH "org.jgap.util.PersistableObject" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.util.PersistableObject \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPersistableObject\fP (File a_file)"
+.br
+.ti -1c
+.RI "\fBPersistableObject\fP (String a_filename)"
+.br
+.ti -1c
+.RI "void \fBsetObject\fP (Object a_object)"
+.br
+.ti -1c
+.RI "void \fBsave\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "void \fBsave\fP (boolean a_omitConfig)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBsave\fP (boolean a_omitConfig, Object[][] a_omitFields)  throws Exception "
+.br
+.ti -1c
+.RI "Object \fBload\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "Object \fBload\fP (File a_file)"
+.br
+.ti -1c
+.RI "Object \fBgetObject\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP (XStream a_xstream)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "transient Logger \fBlog\fP = Logger\&.getLogger(getClass())"
+.br
+.ti -1c
+.RI "Object \fBm_object\fP"
+.br
+.ti -1c
+.RI "File \fBm_file\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.7 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A wrapper that allows an object to be written to and read from a file\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file PersistableObject\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.util\&.PersistableObject\&.PersistableObject (Filea_file)\fC [inline]\fP"
+
+.PP
+Definition at line 36 of file PersistableObject\&.java\&.
+.PP
+References org\&.jgap\&.util\&.PersistableObject\&.m_file\&.
+.SS "org\&.jgap\&.util\&.PersistableObject\&.PersistableObject (Stringa_filename)\fC [inline]\fP"
+
+.PP
+Definition at line 40 of file PersistableObject\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.util\&.PersistableObject\&.getObject ()\fC [inline]\fP"
+
+.PP
+Definition at line 103 of file PersistableObject\&.java\&.
+.PP
+References org\&.jgap\&.util\&.PersistableObject\&.m_object\&.
+.SS "void org\&.jgap\&.util\&.PersistableObject\&.init (XStreama_xstream)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 107 of file PersistableObject\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.PersistableObject\&.load(), and org\&.jgap\&.util\&.PersistableObject\&.save()\&.
+.SS "Object org\&.jgap\&.util\&.PersistableObject\&.load () throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 84 of file PersistableObject\&.java\&.
+.PP
+References org\&.jgap\&.util\&.PersistableObject\&.m_file\&.
+.SS "Object org\&.jgap\&.util\&.PersistableObject\&.load (Filea_file)\fC [inline]\fP"
+
+.PP
+Definition at line 89 of file PersistableObject\&.java\&.
+.PP
+References org\&.jgap\&.util\&.PersistableObject\&.init(), and org\&.jgap\&.util\&.PersistableObject\&.m_object\&.
+.SS "void org\&.jgap\&.util\&.PersistableObject\&.save () throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 48 of file PersistableObject\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.PersistableObject\&.save()\&.
+.SS "void org\&.jgap\&.util\&.PersistableObject\&.save (booleana_omitConfig) throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 53 of file PersistableObject\&.java\&.
+.PP
+References org\&.jgap\&.util\&.PersistableObject\&.save()\&.
+.SS "void org\&.jgap\&.util\&.PersistableObject\&.save (booleana_omitConfig, Objecta_omitFields[][]) throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 57 of file PersistableObject\&.java\&.
+.PP
+References org\&.jgap\&.util\&.PersistableObject\&.init(), org\&.jgap\&.util\&.PersistableObject\&.m_file, and org\&.jgap\&.util\&.PersistableObject\&.m_object\&.
+.SS "void org\&.jgap\&.util\&.PersistableObject\&.setObject (Objecta_object)\fC [inline]\fP"
+
+.PP
+Definition at line 44 of file PersistableObject\&.java\&.
+.PP
+References org\&.jgap\&.util\&.PersistableObject\&.m_object\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.util\&.PersistableObject\&.CVS_REVISION = '$Revision: 1\&.7 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 28 of file PersistableObject\&.java\&.
+.SS "transient Logger org\&.jgap\&.util\&.PersistableObject\&.log = Logger\&.getLogger(getClass())\fC [private]\fP"
+
+.PP
+Definition at line 30 of file PersistableObject\&.java\&.
+.SS "File org\&.jgap\&.util\&.PersistableObject\&.m_file\fC [private]\fP"
+
+.PP
+Definition at line 34 of file PersistableObject\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.PersistableObject\&.load(), org\&.jgap\&.util\&.PersistableObject\&.PersistableObject(), and org\&.jgap\&.util\&.PersistableObject\&.save()\&.
+.SS "Object org\&.jgap\&.util\&.PersistableObject\&.m_object\fC [private]\fP"
+
+.PP
+Definition at line 32 of file PersistableObject\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.PersistableObject\&.getObject(), org\&.jgap\&.util\&.PersistableObject\&.load(), org\&.jgap\&.util\&.PersistableObject\&.save(), and org\&.jgap\&.util\&.PersistableObject\&.setObject()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

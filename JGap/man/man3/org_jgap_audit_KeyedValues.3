@@ -1,0 +1,388 @@
+.TH "org.jgap.audit.KeyedValues" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.audit.KeyedValues \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.util\&.ICloneable\fP, and Serializable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBKeyedValues\fP ()"
+.br
+.ti -1c
+.RI "int \fBsize\fP ()"
+.br
+.ti -1c
+.RI "Number \fBgetValue\fP (final int a_index)"
+.br
+.ti -1c
+.RI "Comparable \fBgetKey\fP (final int a_index)"
+.br
+.ti -1c
+.RI "int \fBgetIndex\fP (final Comparable a_key)"
+.br
+.ti -1c
+.RI "List \fBgetKeys\fP ()"
+.br
+.ti -1c
+.RI "Number \fBgetValue\fP (final Comparable a_key)"
+.br
+.ti -1c
+.RI "void \fBsetValue\fP (final Comparable a_key, final Number a_value)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (final Object a_obj)"
+.br
+.ti -1c
+.RI "int \fBhashCode\fP ()"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "List \fBm_data\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.7 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A collection of (key, value) tupels
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file KeyedValues\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.audit\&.KeyedValues\&.KeyedValues ()\fC [inline]\fP"
+Creates a new collection (initially empty)\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 36 of file KeyedValues\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.KeyedValues\&.m_data\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.KeyedValues\&.clone(), and org\&.jgap\&.audit\&.KeyedValues\&.equals()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.audit\&.KeyedValues\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+clone of the current instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 247 of file KeyedValues\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.KeyedValues\&.KeyedValues()\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.KeyedValuesTest\&.testClone_0()\&.
+.SS "boolean org\&.jgap\&.audit\&.KeyedValues\&.equals (final Objecta_obj)\fC [inline]\fP"
+Tests if this object is equal to another
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_obj\fP the other object
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: this object is equal to the other one
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 189 of file KeyedValues\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.KeyedValues\&.getKey(), org\&.jgap\&.audit\&.KeyedValues\&.getValue(), org\&.jgap\&.audit\&.KeyedValues\&.KeyedValues(), and org\&.jgap\&.audit\&.KeyedValues\&.size()\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.KeyedValuesTest\&.testEquals_0(), and org\&.jgap\&.audit\&.KeyedValuesTest\&.testEquals_1()\&.
+.SS "int org\&.jgap\&.audit\&.KeyedValues\&.getIndex (final Comparablea_key)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_key\fP the key to search for
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+index for a given key or -1 if the key is not found
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 97 of file KeyedValues\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.KeyedValue\&.getKey()\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.KeyedValues\&.getValue(), org\&.jgap\&.audit\&.KeyedValues\&.setValue(), org\&.jgap\&.audit\&.KeyedValuesTest\&.testGetIndex_0(), org\&.jgap\&.audit\&.KeyedValuesTest\&.testGetIndex_1(), and org\&.jgap\&.audit\&.KeyedValuesTest\&.testGetIndex_2()\&.
+.SS "Comparable org\&.jgap\&.audit\&.KeyedValues\&.getKey (final inta_index)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the item index to retrieve the key for, starting at 0
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the row key for item at given index
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 77 of file KeyedValues\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.KeyedValues\&.m_data\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.KeyedValues\&.equals(), org\&.jgap\&.audit\&.KeyedValuesTest\&.testGetKey_1(), org\&.jgap\&.audit\&.KeyedValuesTest\&.testGetKey_2(), and org\&.jgap\&.audit\&.KeyedValuesTest\&.testSetValue_0()\&.
+.SS "List org\&.jgap\&.audit\&.KeyedValues\&.getKeys ()\fC [inline]\fP"
+Returns the keys for the values in the collection
+.PP
+\fBReturns:\fP
+.RS 4
+The keys (never null)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 126 of file KeyedValues\&.java\&.
+.SS "Number org\&.jgap\&.audit\&.KeyedValues\&.getValue (final inta_index)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the index of the item to return the value for 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the value at given index
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 57 of file KeyedValues\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.KeyedValues\&.m_data\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.KeyedValues\&.equals(), org\&.jgap\&.audit\&.KeyedValues\&.getValue(), org\&.jgap\&.audit\&.KeyedValuesTest\&.testGetValue_0(), org\&.jgap\&.audit\&.KeyedValuesTest\&.testGetValue_2(), org\&.jgap\&.audit\&.KeyedValuesTest\&.testGetValue_3(), org\&.jgap\&.audit\&.KeyedValuesTest\&.testSetValue_0(), and org\&.jgap\&.audit\&.KeyedValuesTest\&.testSetValue_1()\&.
+.SS "Number org\&.jgap\&.audit\&.KeyedValues\&.getValue (final Comparablea_key)\fC [inline]\fP"
+Returns the value for a given key\&. For unknown keys, null is returned
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_key\fP the key
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the value for the key
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 146 of file KeyedValues\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.KeyedValues\&.getIndex(), and org\&.jgap\&.audit\&.KeyedValues\&.getValue()\&.
+.SS "int org\&.jgap\&.audit\&.KeyedValues\&.hashCode ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+hash code of the instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 232 of file KeyedValues\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.KeyedValues\&.m_data\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.KeyedValuesTest\&.testConstruct_0()\&.
+.SS "void org\&.jgap\&.audit\&.KeyedValues\&.setValue (final Comparablea_key, final Numbera_value)\fC [inline]\fP"
+Updates an existing value, or adds a new value to the collection
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_key\fP the key 
+.br
+\fIa_value\fP the value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 167 of file KeyedValues\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.KeyedValues\&.getIndex(), and org\&.jgap\&.audit\&.KeyedValues\&.m_data\&.
+.SS "int org\&.jgap\&.audit\&.KeyedValues\&.size ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+number of items in the collection
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 46 of file KeyedValues\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.KeyedValues\&.equals(), and org\&.jgap\&.audit\&.KeyedValuesTest\&.testConstruct_0()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.audit\&.KeyedValues\&.CVS_REVISION = '$Revision: 1\&.7 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file KeyedValues\&.java\&.
+.SS "List org\&.jgap\&.audit\&.KeyedValues\&.m_data\fC [private]\fP"
+Data storage 
+.PP
+Definition at line 28 of file KeyedValues\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.KeyedValues\&.getKey(), org\&.jgap\&.audit\&.KeyedValues\&.getValue(), org\&.jgap\&.audit\&.KeyedValues\&.hashCode(), org\&.jgap\&.audit\&.KeyedValues\&.KeyedValues(), and org\&.jgap\&.audit\&.KeyedValues\&.setValue()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

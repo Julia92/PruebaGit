@@ -1,0 +1,181 @@
+.TH "examples.gp.tictactoe.TransferBoardToMemory" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.tictactoe.TransferBoardToMemory \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandGene\fP, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTransferBoardToMemory\fP (final \fBGPConfiguration\fP a_conf, \fBBoard\fP a_board, int a_startMemoryIndex)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBTransferBoardToMemory\fP (final \fBGPConfiguration\fP a_conf, \fBBoard\fP a_board, int a_startMemoryIndex, int a_subReturnType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "void \fBexecute_void\fP (\fBProgramChromosome\fP c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBBoard\fP \fBm_board\fP"
+.br
+.ti -1c
+.RI "int \fBm_startMemoryIndex\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.3 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Definition at line 17 of file TransferBoardToMemory\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.TransferBoardToMemory (final \fBGPConfiguration\fPa_conf, \fBBoard\fPa_board, inta_startMemoryIndex) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 26 of file TransferBoardToMemory\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.clone()\&.
+.SS "examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.TransferBoardToMemory (final \fBGPConfiguration\fPa_conf, \fBBoard\fPa_board, inta_startMemoryIndex, inta_subReturnType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 32 of file TransferBoardToMemory\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.m_board, examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.m_startMemoryIndex, and org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.clone ()\fC [inline]\fP"
+Clones the object\&. Simple and straight forward implementation here\&.
+.PP
+\fBReturns:\fP
+.RS 4
+cloned instance of this object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 83 of file TransferBoardToMemory\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.getSubReturnType(), examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.m_board, examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.m_startMemoryIndex, and examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.TransferBoardToMemory()\&.
+.SS "void examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.execute_void (\fBProgramChromosome\fPc, intn, Object[]args)\fC [inline]\fP"
+Executes the command\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP ProgramChromosome 
+.br
+\fIn\fP ignored here 
+.br
+\fIargs\fP ignored here
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 64 of file TransferBoardToMemory\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), examples\&.gp\&.tictactoe\&.Board\&.HEIGHT, examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.m_startMemoryIndex, and examples\&.gp\&.tictactoe\&.Board\&.WIDTH\&.
+.SS "String examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.getName ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+textual name of this command
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 50 of file TransferBoardToMemory\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.m_startMemoryIndex\&.
+.SS "String examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 40 of file TransferBoardToMemory\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.m_startMemoryIndex\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.CVS_REVISION = '$Revision: 1\&.3 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 20 of file TransferBoardToMemory\&.java\&.
+.SS "\fBBoard\fP examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.m_board\fC [private]\fP"
+
+.PP
+Definition at line 22 of file TransferBoardToMemory\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.clone(), and examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.TransferBoardToMemory()\&.
+.SS "int examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.m_startMemoryIndex\fC [private]\fP"
+
+.PP
+Definition at line 24 of file TransferBoardToMemory\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.clone(), examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.execute_void(), examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.getName(), examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.toString(), and examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.TransferBoardToMemory()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

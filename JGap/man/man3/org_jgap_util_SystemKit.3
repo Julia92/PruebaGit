@@ -1,0 +1,226 @@
+.TH "org.jgap.util.SystemKit" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.util.SystemKit \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static double \fBgetTotalMemoryMB\fP ()"
+.br
+.ti -1c
+.RI "static double \fBgetTotalMemoryKB\fP ()"
+.br
+.ti -1c
+.RI "static double \fBgetFreeMemoryMB\fP ()"
+.br
+.ti -1c
+.RI "static double \fBgetFreeMemoryKB\fP ()"
+.br
+.ti -1c
+.RI "static String \fBniceMemory\fP (double a_mem)"
+.br
+.ti -1c
+.RI "static void \fBprintHelp\fP (CommandLine cmd, Options options)"
+.br
+.ti -1c
+.RI "static String \fBgetGUID\fP ()"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.9 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+System-related utility functions\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file SystemKit\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static double org\&.jgap\&.util\&.SystemKit\&.getFreeMemoryKB ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+free memory available in the VM in kilobytes\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 64 of file SystemKit\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.SystemKit\&.getFreeMemoryMB()\&.
+.SS "static double org\&.jgap\&.util\&.SystemKit\&.getFreeMemoryMB ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+free memory available in the VM in megabytes\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 (since 3\&.0 in GPGenotype) 
+.RE
+.PP
+
+.PP
+Definition at line 54 of file SystemKit\&.java\&.
+.PP
+References org\&.jgap\&.util\&.SystemKit\&.getFreeMemoryKB()\&.
+.SS "static String org\&.jgap\&.util\&.SystemKit\&.getGUID ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+a GUID
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 153 of file SystemKit\&.java\&.
+.SS "static double org\&.jgap\&.util\&.SystemKit\&.getTotalMemoryKB ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+total memory available by the VM in kilobytes\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 44 of file SystemKit\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.SystemKit\&.getTotalMemoryMB()\&.
+.SS "static double org\&.jgap\&.util\&.SystemKit\&.getTotalMemoryMB ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+total memory available by the VM in megabytes\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 (since 3\&.0 in GPGenotype) 
+.RE
+.PP
+
+.PP
+Definition at line 34 of file SystemKit\&.java\&.
+.PP
+References org\&.jgap\&.util\&.SystemKit\&.getTotalMemoryKB()\&.
+.SS "static String org\&.jgap\&.util\&.SystemKit\&.niceMemory (doublea_mem)\fC [inline]\fP, \fC [static]\fP"
+Nicifies a decimal string by cutting of all but two decimal places\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_mem\fP the number to make nice 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+nicified number as a string
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 76 of file SystemKit\&.java\&.
+.SS "static void org\&.jgap\&.util\&.SystemKit\&.printHelp (CommandLinecmd, Optionsoptions)\fC [inline]\fP, \fC [static]\fP"
+Prints all available comamnd line options\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcmd\fP the CommandLine object 
+.br
+\fIoptions\fP the Options list
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 132 of file SystemKit\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.util\&.SystemKit\&.CVS_REVISION = '$Revision: 1\&.9 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file SystemKit\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

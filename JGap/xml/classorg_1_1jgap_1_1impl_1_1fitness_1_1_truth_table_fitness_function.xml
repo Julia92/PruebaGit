@@ -1,0 +1,502 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function" kind="class" prot="public" abstract="yes">
+    <compoundname>org::jgap::impl::fitness::TruthTableFitnessFunction</compoundname>
+    <basecompoundref refid="classorg_1_1jgap_1_1_fitness_function" prot="public" virt="non-virtual">org.jgap.FitnessFunction</basecompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_test_1_1_truth_table_fitness_function_impl" prot="public" virt="non-virtual">org.jgap.impl.fitness.TruthTableFitnessFunctionTest.TruthTableFitnessFunctionImpl</derivedcompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1ab173d16572fa3cb076091b2a524d1e61" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.impl.fitness.TruthTableFitnessFunction.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.6 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" line="30" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a596b1525fe57652af58e9589edc7ac3f" prot="private" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int org.jgap.impl.fitness.TruthTableFitnessFunction.RELATION_FITNESS</definition>
+        <argsstring></argsstring>
+        <name>RELATION_FITNESS</name>
+        <initializer>= 100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" line="38" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a73ca12c6dd875b317bc3c316a48b447d" prot="private" static="no" mutable="no">
+        <type>Map</type>
+        <definition>Map org.jgap.impl.fitness.TruthTableFitnessFunction.m_truthTable</definition>
+        <argsstring></argsstring>
+        <name>m_truthTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" line="32" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1aebb74f1e0c020304e28b91cd60f4ec8f" compoundref="_truth_table_fitness_function_8java" startline="90" endline="92">org.jgap.impl.fitness.TruthTableFitnessFunction.getTruthTable</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a3474d928cdb3f4c78c68b774c6a664f6" compoundref="_truth_table_fitness_function_8java" startline="86" endline="88">org.jgap.impl.fitness.TruthTableFitnessFunction.setTruthTable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a9b2a529b966eee30948c09fa02a9faef" prot="private" static="no" mutable="no">
+        <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+        <definition>Configuration org.jgap.impl.fitness.TruthTableFitnessFunction.m_conf</definition>
+        <argsstring></argsstring>
+        <name>m_conf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" line="42" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" bodystart="42" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a004b96acb0858042d48179a945608d1a" compoundref="_truth_table_fitness_function_8java" startline="155" endline="157">org.jgap.impl.fitness.TruthTableFitnessFunction.getConfiguration</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1af37b3ed627769e634010544c65eb0130" compoundref="_truth_table_fitness_function_8java" startline="65" endline="67">org.jgap.impl.fitness.TruthTableFitnessFunction.TruthTableFitnessFunction</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1ad89545f0c14a72e8ce9c5974d77f824a" prot="public" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int org.jgap.impl.fitness.TruthTableFitnessFunction.MAX_FITNESS</definition>
+        <argsstring></argsstring>
+        <name>MAX_FITNESS</name>
+        <initializer>= 9999999</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" line="36" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a669cc63856333d085208307ea87a3185" prot="public" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int org.jgap.impl.fitness.TruthTableFitnessFunction.WORST</definition>
+        <argsstring></argsstring>
+        <name>WORST</name>
+        <initializer>= <ref refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1ad89545f0c14a72e8ce9c5974d77f824a" kindref="member">MAX_FITNESS</ref> / <ref refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a596b1525fe57652af58e9589edc7ac3f" kindref="member">RELATION_FITNESS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" line="40" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a721659e73d2468d70ded7979c40e8018" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.fitness.TruthTableFitnessFunction.TruthTableFitnessFunction</definition>
+        <argsstring>()</argsstring>
+        <name>TruthTableFitnessFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Only use for dynamic instantiation as configuration retrieved from static setting.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" line="51" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" bodystart="51" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1af37b3ed627769e634010544c65eb0130" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.fitness.TruthTableFitnessFunction.TruthTableFitnessFunction</definition>
+        <argsstring>(Configuration a_conf)</argsstring>
+        <name>TruthTableFitnessFunction</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_conf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor without registering a truth table. Use this constructor if the truth table is not fix over generations and needs to be set in method evaluate.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.01 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" line="65" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" bodystart="65" bodyend="67"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a9b2a529b966eee30948c09fa02a9faef" compoundref="_truth_table_fitness_function_8java" startline="42">org.jgap.impl.fitness.TruthTableFitnessFunction.m_conf</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a8aede952ab153b59aff382f8b3c683e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.fitness.TruthTableFitnessFunction.TruthTableFitnessFunction</definition>
+        <argsstring>(Configuration a_conf, final Map a_truthTable)</argsstring>
+        <name>TruthTableFitnessFunction</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_conf</declname>
+        </param>
+        <param>
+          <type>final Map</type>
+          <declname>a_truthTable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor for registering a truth table. Use this constructor if the truth table is fix over generations.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_truthTable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>table of input/output pairs for feeding the formula and determining the fitness value thru delta computation</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" line="81" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" bodystart="81" bodyend="84"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a3474d928cdb3f4c78c68b774c6a664f6" compoundref="_truth_table_fitness_function_8java" startline="86" endline="88">org.jgap.impl.fitness.TruthTableFitnessFunction.setTruthTable</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a3474d928cdb3f4c78c68b774c6a664f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.fitness.TruthTableFitnessFunction.setTruthTable</definition>
+        <argsstring>(final Map a_truthTable)</argsstring>
+        <name>setTruthTable</name>
+        <param>
+          <type>final Map</type>
+          <declname>a_truthTable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" line="86" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" bodystart="86" bodyend="88"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a73ca12c6dd875b317bc3c316a48b447d" compoundref="_truth_table_fitness_function_8java" startline="32">org.jgap.impl.fitness.TruthTableFitnessFunction.m_truthTable</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a8aede952ab153b59aff382f8b3c683e5" compoundref="_truth_table_fitness_function_8java" startline="81" endline="84">org.jgap.impl.fitness.TruthTableFitnessFunction.TruthTableFitnessFunction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1aebb74f1e0c020304e28b91cd60f4ec8f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Map</type>
+        <definition>Map org.jgap.impl.fitness.TruthTableFitnessFunction.getTruthTable</definition>
+        <argsstring>()</argsstring>
+        <name>getTruthTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" line="90" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" bodystart="90" bodyend="92"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a73ca12c6dd875b317bc3c316a48b447d" compoundref="_truth_table_fitness_function_8java" startline="32">org.jgap.impl.fitness.TruthTableFitnessFunction.m_truthTable</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1acd41df30587d5553bf61293c0e025051" compoundref="_truth_table_fitness_function_8java" startline="115" endline="147">org.jgap.impl.fitness.TruthTableFitnessFunction.calcFitness</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1acd41df30587d5553bf61293c0e025051" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double org.jgap.impl.fitness.TruthTableFitnessFunction.calcFitness</definition>
+        <argsstring>(final Map a_actualInputOutput)</argsstring>
+        <name>calcFitness</name>
+        <param>
+          <type>final Map</type>
+          <declname>a_actualInputOutput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fitness value calculation for a given table of input/output tupels and a truth-table (also given as list of input/output tupels)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_actualInputOutput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>table of actual input/output pairs </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>delta between current values and given truth table</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000163"><xreftitle>Todo</xreftitle><xrefdescription><para>consider length of formula (i.e. number of terms, e.g.) for fitness calculation </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" line="115" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" bodystart="115" bodyend="147"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1aebb74f1e0c020304e28b91cd60f4ec8f" compoundref="_truth_table_fitness_function_8java" startline="90" endline="92">org.jgap.impl.fitness.TruthTableFitnessFunction.getTruthTable</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a004b96acb0858042d48179a945608d1a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+        <definition>Configuration org.jgap.impl.fitness.TruthTableFitnessFunction.getConfiguration</definition>
+        <argsstring>()</argsstring>
+        <name>getConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> object set</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" line="155" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" bodystart="155" bodyend="157"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a9b2a529b966eee30948c09fa02a9faef" compoundref="_truth_table_fitness_function_8java" startline="42">org.jgap.impl.fitness.TruthTableFitnessFunction.m_conf</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a3f159f68ac2f247c18d1e62ff030c56c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract double</type>
+        <definition>abstract double org.jgap.impl.fitness.TruthTableFitnessFunction.evaluate</definition>
+        <argsstring>(IChromosome a_chromosome)</argsstring>
+        <name>evaluate</name>
+        <reimplements refid="classorg_1_1jgap_1_1_fitness_function_1a0078e42480eac93729f906ac4dc185d9">evaluate</reimplements>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_test_1_1_truth_table_fitness_function_impl_1ada3bae7de32db125a917447b1680482f">evaluate</reimplementedby>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+          <declname>a_chromosome</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implementation of the evaluate method from class <ref refid="classorg_1_1jgap_1_1_fitness_function" kindref="compound">FitnessFunction</ref>. Calculates the fitness of a given <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> in a determined way. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_chromosome</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> to be evaluated </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>positive integer value representing the fitness of the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref></para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" line="103" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Fitness Function relying on a truth table. To use this class, just implement a subclass of it, register the current truth table and implement the evaluate method in a way that you can call calcFitness with the required (parameter (given values: encoded with the chromosome). If the truth table is dynamic just register it in evaluate, otherwise do it after construction of this fitness function.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.4 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="18717">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="18718" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18719" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18718">
+        <label>Serializable</label>
+      </node>
+      <node id="18721">
+        <label>org.jgap.impl.fitness.TruthTableFitnessFunctionTest.TruthTableFitnessFunctionImpl</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_test_1_1_truth_table_fitness_function_impl"/>
+        <childnode refid="18716" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18719">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="18720" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18716">
+        <label>org.jgap.impl.fitness.TruthTableFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function"/>
+        <childnode refid="18717" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18720">
+        <label>Cloneable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="18735">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="18739">
+        <label>List</label>
+      </node>
+      <node id="18723">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="18724" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18725" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18736">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="18724" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18724">
+        <label>Serializable</label>
+      </node>
+      <node id="18729">
+        <label>Comparable</label>
+      </node>
+      <node id="18725">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="18726" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18733">
+        <label>org.jgap.FitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_fitness_evaluator"/>
+        <childnode refid="18724" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18737">
+        <label>org.jgap.BulkFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_bulk_fitness_function"/>
+        <childnode refid="18724" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18725" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18722">
+        <label>org.jgap.impl.fitness.TruthTableFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function"/>
+        <childnode refid="18723" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18727" relation="usage">
+          <edgelabel>m_conf</edgelabel>
+        </childnode>
+      </node>
+      <node id="18726">
+        <label>Cloneable</label>
+      </node>
+      <node id="18731">
+        <label>org.jgap.IJGAPFactory</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_j_g_a_p_factory"/>
+        <childnode refid="18724" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18738">
+        <label>org.jgap.Configuration.ConfigurationConfigurable</label>
+        <link refid="classorg_1_1jgap_1_1_configuration_1_1_configuration_configurable"/>
+        <childnode refid="18724" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18730">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="18725" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18724" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18729" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18734">
+        <label>org.jgap.IChromosome</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome"/>
+        <childnode refid="18729" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18725" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18724" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18735" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18727">
+        <label>org.jgap.Configuration</label>
+        <link refid="classorg_1_1jgap_1_1_configuration"/>
+        <childnode refid="18728" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18724" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18725" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18729" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18730" relation="usage">
+          <edgelabel>m_breeder</edgelabel>
+        </childnode>
+        <childnode refid="18731" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="18732" relation="usage">
+          <edgelabel>m_chromosomePool</edgelabel>
+        </childnode>
+        <childnode refid="18733" relation="usage">
+          <edgelabel>m_fitnessEvaluator</edgelabel>
+        </childnode>
+        <childnode refid="18734" relation="usage">
+          <edgelabel>m_sampleChromosome</edgelabel>
+        </childnode>
+        <childnode refid="18736" relation="usage">
+          <edgelabel>m_randomGenerator</edgelabel>
+        </childnode>
+        <childnode refid="18737" relation="usage">
+          <edgelabel>m_bulkObjectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="18738" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="18723" relation="usage">
+          <edgelabel>m_objectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="18739" relation="usage">
+          <edgelabel>m_geneticOperators</edgelabel>
+        </childnode>
+      </node>
+      <node id="18732">
+        <label>org.jgap.IChromosomePool</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool"/>
+      </node>
+      <node id="18728">
+        <label>Configurable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" line="28" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/fitness/TruthTableFitnessFunction.java" bodystart="27" bodyend="158"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1acd41df30587d5553bf61293c0e025051" prot="public" virt="non-virtual"><scope>org::jgap::impl::fitness::TruthTableFitnessFunction</scope><name>calcFitness</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1aa47c6f886479efc5ed5fe84eb7f9b5ca" prot="public" virt="non-virtual"><scope>org::jgap::impl::fitness::TruthTableFitnessFunction</scope><name>clone</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1ab173d16572fa3cb076091b2a524d1e61" prot="private" virt="non-virtual"><scope>org::jgap::impl::fitness::TruthTableFitnessFunction</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1a89cbf1ef4c08655f209ce69fde6731e7" prot="public" virt="non-virtual"><scope>org::jgap::impl::fitness::TruthTableFitnessFunction</scope><name>DELTA</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a3f159f68ac2f247c18d1e62ff030c56c" prot="protected" virt="pure-virtual"><scope>org::jgap::impl::fitness::TruthTableFitnessFunction</scope><name>evaluate</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a004b96acb0858042d48179a945608d1a" prot="public" virt="non-virtual"><scope>org::jgap::impl::fitness::TruthTableFitnessFunction</scope><name>getConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1a05fff0534d3cfdccd1d4d96d8ba6dda2" prot="public" virt="non-virtual"><scope>org::jgap::impl::fitness::TruthTableFitnessFunction</scope><name>getFitnessValue</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1adc5e20816cb3fd6f3486adb53b1e563d" prot="public" virt="non-virtual"><scope>org::jgap::impl::fitness::TruthTableFitnessFunction</scope><name>getLastComputedFitnessValue</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1aebb74f1e0c020304e28b91cd60f4ec8f" prot="public" virt="non-virtual"><scope>org::jgap::impl::fitness::TruthTableFitnessFunction</scope><name>getTruthTable</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a9b2a529b966eee30948c09fa02a9faef" prot="private" virt="non-virtual"><scope>org::jgap::impl::fitness::TruthTableFitnessFunction</scope><name>m_conf</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a73ca12c6dd875b317bc3c316a48b447d" prot="private" virt="non-virtual"><scope>org::jgap::impl::fitness::TruthTableFitnessFunction</scope><name>m_truthTable</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1ad89545f0c14a72e8ce9c5974d77f824a" prot="public" virt="non-virtual"><scope>org::jgap::impl::fitness::TruthTableFitnessFunction</scope><name>MAX_FITNESS</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1a5f1f23e6f8a0f9606aee5d52fac6a06b" prot="public" virt="non-virtual"><scope>org::jgap::impl::fitness::TruthTableFitnessFunction</scope><name>NO_FITNESS_VALUE</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a596b1525fe57652af58e9589edc7ac3f" prot="private" virt="non-virtual"><scope>org::jgap::impl::fitness::TruthTableFitnessFunction</scope><name>RELATION_FITNESS</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a3474d928cdb3f4c78c68b774c6a664f6" prot="public" virt="non-virtual"><scope>org::jgap::impl::fitness::TruthTableFitnessFunction</scope><name>setTruthTable</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a721659e73d2468d70ded7979c40e8018" prot="public" virt="non-virtual"><scope>org::jgap::impl::fitness::TruthTableFitnessFunction</scope><name>TruthTableFitnessFunction</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1af37b3ed627769e634010544c65eb0130" prot="public" virt="non-virtual"><scope>org::jgap::impl::fitness::TruthTableFitnessFunction</scope><name>TruthTableFitnessFunction</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a8aede952ab153b59aff382f8b3c683e5" prot="public" virt="non-virtual"><scope>org::jgap::impl::fitness::TruthTableFitnessFunction</scope><name>TruthTableFitnessFunction</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_1a669cc63856333d085208307ea87a3185" prot="public" virt="non-virtual"><scope>org::jgap::impl::fitness::TruthTableFitnessFunction</scope><name>WORST</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,161 @@
+.TH "org.jgap.impl.job.JobBase" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.job.JobBase \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.impl\&.job\&.IJob\fP\&.
+.PP
+Inherited by \fBorg\&.jgap\&.impl\&.job\&.EvolveJob\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBJobBase\fP (\fBJobData\fP a_data)"
+.br
+.ti -1c
+.RI "void \fBrun\fP ()"
+.br
+.ti -1c
+.RI "\fBJobData\fP \fBgetJobData\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisFinished\fP ()"
+.br
+.ti -1c
+.RI "\fBJobResult\fP \fBgetResult\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetFinished\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBJobData\fP \fBm_data\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_finished\fP"
+.br
+.ti -1c
+.RI "\fBJobResult\fP \fBm_result\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.5 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Abstract base class for JGAP jobs\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 18 of file JobBase\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.job\&.JobBase\&.JobBase (\fBJobData\fPa_data)\fC [inline]\fP"
+
+.PP
+Definition at line 29 of file JobBase\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.job\&.JobBase\&.m_data\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBJobData\fP org\&.jgap\&.impl\&.job\&.JobBase\&.getJobData ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.impl\&.job\&.IJob\fP\&.
+.PP
+Definition at line 47 of file JobBase\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.job\&.JobBase\&.m_data\&.
+.SS "\fBJobResult\fP org\&.jgap\&.impl\&.job\&.JobBase\&.getResult ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.impl\&.job\&.IJob\fP\&.
+.PP
+Definition at line 59 of file JobBase\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.job\&.JobBase\&.m_finished, and org\&.jgap\&.impl\&.job\&.JobBase\&.m_result\&.
+.SS "boolean org\&.jgap\&.impl\&.job\&.JobBase\&.isFinished ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.impl\&.job\&.IJob\fP\&.
+.PP
+Definition at line 51 of file JobBase\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.job\&.JobBase\&.m_finished\&.
+.SS "void org\&.jgap\&.impl\&.job\&.JobBase\&.run ()\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+what to do here? 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.impl\&.job\&.IJob\fP\&.
+.PP
+Definition at line 33 of file JobBase\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.job\&.IJob\&.execute(), org\&.jgap\&.impl\&.job\&.JobBase\&.m_data, org\&.jgap\&.impl\&.job\&.JobBase\&.m_result, and org\&.jgap\&.impl\&.job\&.JobBase\&.setFinished()\&.
+.SS "void org\&.jgap\&.impl\&.job\&.JobBase\&.setFinished ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 55 of file JobBase\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.job\&.JobBase\&.m_finished\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.job\&.JobBase\&.run()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.job\&.JobBase\&.CVS_REVISION = '$Revision: 1\&.5 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 21 of file JobBase\&.java\&.
+.SS "\fBJobData\fP org\&.jgap\&.impl\&.job\&.JobBase\&.m_data\fC [private]\fP"
+
+.PP
+Definition at line 23 of file JobBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.job\&.JobBase\&.getJobData(), org\&.jgap\&.impl\&.job\&.JobBase\&.JobBase(), and org\&.jgap\&.impl\&.job\&.JobBase\&.run()\&.
+.SS "boolean org\&.jgap\&.impl\&.job\&.JobBase\&.m_finished\fC [private]\fP"
+
+.PP
+Definition at line 25 of file JobBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.job\&.JobBase\&.getResult(), org\&.jgap\&.impl\&.job\&.JobBase\&.isFinished(), and org\&.jgap\&.impl\&.job\&.JobBase\&.setFinished()\&.
+.SS "\fBJobResult\fP org\&.jgap\&.impl\&.job\&.JobBase\&.m_result\fC [private]\fP"
+
+.PP
+Definition at line 27 of file JobBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.job\&.JobBase\&.getResult(), and org\&.jgap\&.impl\&.job\&.JobBase\&.run()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

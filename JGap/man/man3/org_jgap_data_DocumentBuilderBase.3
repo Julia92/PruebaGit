@@ -1,0 +1,284 @@
+.TH "org.jgap.data.DocumentBuilderBase" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.data.DocumentBuilderBase \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Object \fBbuildDocument\fP (final \fBIDataCreators\fP a_dataholder, final Object a_document)  throws Exception "
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "abstract Object \fBdocumentAppendChild\fP (Object a_document, Object a_element)"
+.br
+.ti -1c
+.RI "abstract Object \fBelementAppendChild\fP (Object a_rootElement, Object a_childElement)"
+.br
+.ti -1c
+.RI "abstract Object \fBcreateElement\fP (Object a_document, Object a_element, String a_tagName)"
+.br
+.ti -1c
+.RI "abstract void \fBsetAttribute\fP (Object a_element, String a_key, String a_value)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdoTraverse\fP (final \fBIDataElement\fP a_elem, final Object a_document, final Object a_Element)  throws Exception "
+.br
+.ti -1c
+.RI "Object \fBcreateElementGeneric\fP (final Object a_document, final Object a_element, final String a_tagName)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.8 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 22 of file DocumentBuilderBase\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.data\&.DocumentBuilderBase\&.buildDocument (final \fBIDataCreators\fPa_dataholder, final Objecta_document) throws Exception\fC [inline]\fP"
+Builds a document from the given input (input data + existing document)\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_dataholder\fP the input structure holding the data to be represented as a generic document 
+.br
+\fIa_document\fP the document to put the elements in 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the document built up by adding elements
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 40 of file DocumentBuilderBase\&.java\&.
+.PP
+References org\&.jgap\&.data\&.DocumentBuilderBase\&.doTraverse()\&.
+.SS "abstract Object org\&.jgap\&.data\&.DocumentBuilderBase\&.createElement (Objecta_document, Objecta_element, Stringa_tagName)\fC [protected]\fP, \fC [pure virtual]\fP"
+Creates an element with help for a given document\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_document\fP could be used as factory to create the element with 
+.br
+\fIa_element\fP null or existing element as template 
+.br
+\fIa_tagName\fP name of tag to create for the element 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+created element
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Referenced by org\&.jgap\&.data\&.DocumentBuilderBase\&.createElementGeneric()\&.
+.SS "Object org\&.jgap\&.data\&.DocumentBuilderBase\&.createElementGeneric (final Objecta_document, final Objecta_element, final Stringa_tagName)\fC [inline]\fP, \fC [private]\fP"
+Generically creates an element (Template Method)\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_document\fP could be used as factory to create the element with 
+.br
+\fIa_element\fP null or existing element as template 
+.br
+\fIa_tagName\fP name of tag to create for the element 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+created element
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 99 of file DocumentBuilderBase\&.java\&.
+.PP
+References org\&.jgap\&.data\&.DocumentBuilderBase\&.createElement(), org\&.jgap\&.data\&.DocumentBuilderBase\&.documentAppendChild(), and org\&.jgap\&.data\&.DocumentBuilderBase\&.elementAppendChild()\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DocumentBuilderBase\&.doTraverse()\&.
+.SS "abstract Object org\&.jgap\&.data\&.DocumentBuilderBase\&.documentAppendChild (Objecta_document, Objecta_element)\fC [protected]\fP, \fC [pure virtual]\fP"
+Append a child to a given document\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_document\fP to append element on (e\&.g\&. org\&.w3c\&.dom\&.Document) 
+.br
+\fIa_element\fP to append to document (e\&.g\&. org\&.w3c\&.com\&.Element) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a_document with appended element (e\&.g\&. org\&.w3c\&.dom\&.Document)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Referenced by org\&.jgap\&.data\&.DocumentBuilderBase\&.createElementGeneric()\&.
+.SS "void org\&.jgap\&.data\&.DocumentBuilderBase\&.doTraverse (final \fBIDataElement\fPa_elem, final Objecta_document, final Objecta_Element) throws Exception\fC [inline]\fP, \fC [private]\fP"
+Recursive traversing over data tree containing elements to be transformed into tags\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_elem\fP \fBIDataElement\fP 
+.br
+\fIa_document\fP Document 
+.br
+\fIa_Element\fP Element 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 66 of file DocumentBuilderBase\&.java\&.
+.PP
+References org\&.jgap\&.data\&.DocumentBuilderBase\&.createElementGeneric(), and org\&.jgap\&.data\&.DocumentBuilderBase\&.setAttribute()\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DocumentBuilderBase\&.buildDocument()\&.
+.SS "abstract Object org\&.jgap\&.data\&.DocumentBuilderBase\&.elementAppendChild (Objecta_rootElement, Objecta_childElement)\fC [protected]\fP, \fC [pure virtual]\fP"
+Append a child to a given element\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_rootElement\fP to append childElement on (e\&.g\&. org\&.w3c\&.com\&.Element) 
+.br
+\fIa_childElement\fP to append to rootElement (e\&.g\&. org\&.w3c\&.com\&.Element) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+rootElement with appended childElement (e\&.g\&. org\&.w3c\&.com\&.Element)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Referenced by org\&.jgap\&.data\&.DocumentBuilderBase\&.createElementGeneric()\&.
+.SS "abstract void org\&.jgap\&.data\&.DocumentBuilderBase\&.setAttribute (Objecta_element, Stringa_key, Stringa_value)\fC [protected]\fP, \fC [pure virtual]\fP"
+Sets an attribute for a given Element\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_element\fP the Element to set an attribute for (e\&.g\&. org\&.w3c\&.com\&.Element) 
+.br
+\fIa_key\fP the key of the attribute 
+.br
+\fIa_value\fP the value of the attribute
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Referenced by org\&.jgap\&.data\&.DocumentBuilderBase\&.doTraverse()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.data\&.DocumentBuilderBase\&.CVS_REVISION = '$Revision: 1\&.8 $'\fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+add new class DocumentCreatorBase that reads in data written by \fBDocumentBuilderBase\fP 
+.RE
+.PP
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 27 of file DocumentBuilderBase\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

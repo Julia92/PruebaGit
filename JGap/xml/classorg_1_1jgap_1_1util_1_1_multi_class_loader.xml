@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1util_1_1_multi_class_loader" kind="class" prot="public" abstract="yes">
+    <compoundname>org::jgap::util::MultiClassLoader</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ClassLoader</basecompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1util_1_1_jar_class_loader" prot="public" virt="non-virtual">org.jgap.util.JarClassLoader</derivedcompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a4de9db8aab4e1d0d25363cf3dd635773" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.util.MultiClassLoader.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.2 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" line="34" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a9bf208aab68f40238eaa34493dd8c6ee" prot="private" static="no" mutable="no">
+        <type>Hashtable</type>
+        <definition>Hashtable org.jgap.util.MultiClassLoader.classes</definition>
+        <argsstring></argsstring>
+        <name>classes</name>
+        <initializer>= new Hashtable()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" line="37" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" bodystart="37" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a7c9fd481b1168cfab217afd7cd5eb428" compoundref="_multi_class_loader_8java" startline="58" endline="97">org.jgap.util.MultiClassLoader.loadClass</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a0e255f36a9c6dd5fa577f5bbd1869a94" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char org.jgap.util.MultiClassLoader.classNameReplacementChar</definition>
+        <argsstring></argsstring>
+        <name>classNameReplacementChar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" line="39" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1af7689792a86ef761cf69e874460969e9" compoundref="_multi_class_loader_8java" startline="112" endline="122">org.jgap.util.MultiClassLoader.formatClassName</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1ad75cf011f65d3a509f01c81c7236fe82" compoundref="_multi_class_loader_8java" startline="106" endline="108">org.jgap.util.MultiClassLoader.setClassNameReplacementChar</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a46b81b84025e37993e49b206062260d2" prot="protected" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean org.jgap.util.MultiClassLoader.monitorOn</definition>
+        <argsstring></argsstring>
+        <name>monitorOn</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" line="41" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a0ac1e5f6fe5d7e03d0dfe8dc7dd1ac99" compoundref="_multi_class_loader_8java" startline="124" endline="127">org.jgap.util.MultiClassLoader.monitor</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a6b48426e9450345d5411286790932b94" prot="protected" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean org.jgap.util.MultiClassLoader.sourceMonitorOn</definition>
+        <argsstring></argsstring>
+        <name>sourceMonitorOn</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" line="43" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a9247aa446a74eddcfd2a23d5c99fd57c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.util.MultiClassLoader.MultiClassLoader</definition>
+        <argsstring>()</argsstring>
+        <name>MultiClassLoader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" line="45" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" bodystart="45" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a1c2821dc43cd2ca538f9e6ffe41af3f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Class</type>
+        <definition>Class org.jgap.util.MultiClassLoader.loadClass</definition>
+        <argsstring>(String className)</argsstring>
+        <name>loadClass</name>
+        <param>
+          <type>String</type>
+          <declname>className</declname>
+        </param>
+        <exceptions> throws ClassNotFoundException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is a simple version for external clients since they will always want the class resolved before it is returned to them. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" line="53" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a7c9fd481b1168cfab217afd7cd5eb428" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized Class</type>
+        <definition>synchronized Class org.jgap.util.MultiClassLoader.loadClass</definition>
+        <argsstring>(String className, boolean resolveIt)</argsstring>
+        <name>loadClass</name>
+        <param>
+          <type>String</type>
+          <declname>className</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>resolveIt</declname>
+        </param>
+        <exceptions> throws ClassNotFoundException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" line="58" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" bodystart="58" bodyend="97"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a9bf208aab68f40238eaa34493dd8c6ee" compoundref="_multi_class_loader_8java" startline="37">org.jgap.util.MultiClassLoader.classes</references>
+        <references refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1aff9c184aee7c7fb61dd77d55af89f17e">org.jgap.util.MultiClassLoader.loadClassBytes</references>
+        <references refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a0ac1e5f6fe5d7e03d0dfe8dc7dd1ac99" compoundref="_multi_class_loader_8java" startline="124" endline="127">org.jgap.util.MultiClassLoader.monitor</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1ad75cf011f65d3a509f01c81c7236fe82" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.util.MultiClassLoader.setClassNameReplacementChar</definition>
+        <argsstring>(char replacement)</argsstring>
+        <name>setClassNameReplacementChar</name>
+        <param>
+          <type>char</type>
+          <declname>replacement</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This optional call allows a class name such as &quot;COM.test.Hello&quot; to be changed to &quot;COM_test_Hello&quot;, which is useful for storing classes from different packages in the same retrival directory. In the above example the char would be &apos;_&apos;. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" line="106" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" bodystart="106" bodyend="108"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a0e255f36a9c6dd5fa577f5bbd1869a94" compoundref="_multi_class_loader_8java" startline="39">org.jgap.util.MultiClassLoader.classNameReplacementChar</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1aff9c184aee7c7fb61dd77d55af89f17e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract byte[]</type>
+        <definition>abstract byte [] org.jgap.util.MultiClassLoader.loadClassBytes</definition>
+        <argsstring>(String className)</argsstring>
+        <name>loadClassBytes</name>
+        <param>
+          <type>String</type>
+          <declname>className</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" line="110" column="1"/>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a7c9fd481b1168cfab217afd7cd5eb428" compoundref="_multi_class_loader_8java" startline="58" endline="97">org.jgap.util.MultiClassLoader.loadClass</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1af7689792a86ef761cf69e874460969e9" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String org.jgap.util.MultiClassLoader.formatClassName</definition>
+        <argsstring>(String className)</argsstring>
+        <name>formatClassName</name>
+        <param>
+          <type>String</type>
+          <declname>className</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" line="112" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" bodystart="112" bodyend="122"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a0e255f36a9c6dd5fa577f5bbd1869a94" compoundref="_multi_class_loader_8java" startline="39">org.jgap.util.MultiClassLoader.classNameReplacementChar</references>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_jar_class_loader_1aa3a789fc7b8816981a82be84e93dea40" compoundref="_jar_class_loader_8java" startline="31" endline="36">org.jgap.util.JarClassLoader.loadClassBytes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a0ac1e5f6fe5d7e03d0dfe8dc7dd1ac99" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.util.MultiClassLoader.monitor</definition>
+        <argsstring>(String text)</argsstring>
+        <name>monitor</name>
+        <param>
+          <type>String</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" line="124" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" bodystart="124" bodyend="127"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a46b81b84025e37993e49b206062260d2" compoundref="_multi_class_loader_8java" startline="41">org.jgap.util.MultiClassLoader.monitorOn</references>
+        <references refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a388e062b31156295786201d4cd9da2f2" compoundref="_multi_class_loader_8java" startline="129" endline="131">org.jgap.util.MultiClassLoader.print</references>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a7c9fd481b1168cfab217afd7cd5eb428" compoundref="_multi_class_loader_8java" startline="58" endline="97">org.jgap.util.MultiClassLoader.loadClass</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a388e062b31156295786201d4cd9da2f2" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void org.jgap.util.MultiClassLoader.print</definition>
+        <argsstring>(String text)</argsstring>
+        <name>print</name>
+        <param>
+          <type>String</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" line="129" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" bodystart="129" bodyend="131"/>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a0ac1e5f6fe5d7e03d0dfe8dc7dd1ac99" compoundref="_multi_class_loader_8java" startline="124" endline="127">org.jgap.util.MultiClassLoader.monitor</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A simple test class loader capable of loading from multiple sources, such as local files or a URL.</para><para>This class is derived from an article by Chuck McManis <ulink url="http://www.javaworld.com/javaworld/jw-10-1996/indepth.src.html">http://www.javaworld.com/javaworld/jw-10-1996/indepth.src.html</ulink> with large modifications.</para><para>Note that this has been updated to use the non-deprecated version of defineClass() <ndash/> JDM.</para><para><simplesect kind="author"><para>Jack Harich - 8/18/97 </para><simplesectsep/><para>John D. Mitchell - 99.03.04 </para><simplesectsep/><para>Klaus Meffert (integrated into JGAP)</para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="16059">
+        <label>ClassLoader</label>
+      </node>
+      <node id="16060">
+        <label>org.jgap.util.JarClassLoader</label>
+        <link refid="classorg_1_1jgap_1_1util_1_1_jar_class_loader"/>
+        <childnode refid="16058" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16058">
+        <label>org.jgap.util.MultiClassLoader</label>
+        <link refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader"/>
+        <childnode refid="16059" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="16062">
+        <label>ClassLoader</label>
+      </node>
+      <node id="16061">
+        <label>org.jgap.util.MultiClassLoader</label>
+        <link refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader"/>
+        <childnode refid="16062" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" line="32" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/MultiClassLoader.java" bodystart="31" bodyend="132"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a9bf208aab68f40238eaa34493dd8c6ee" prot="private" virt="non-virtual"><scope>org::jgap::util::MultiClassLoader</scope><name>classes</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a0e255f36a9c6dd5fa577f5bbd1869a94" prot="private" virt="non-virtual"><scope>org::jgap::util::MultiClassLoader</scope><name>classNameReplacementChar</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a4de9db8aab4e1d0d25363cf3dd635773" prot="private" virt="non-virtual"><scope>org::jgap::util::MultiClassLoader</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1af7689792a86ef761cf69e874460969e9" prot="protected" virt="non-virtual"><scope>org::jgap::util::MultiClassLoader</scope><name>formatClassName</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a1c2821dc43cd2ca538f9e6ffe41af3f8" prot="public" virt="non-virtual"><scope>org::jgap::util::MultiClassLoader</scope><name>loadClass</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a7c9fd481b1168cfab217afd7cd5eb428" prot="public" virt="non-virtual"><scope>org::jgap::util::MultiClassLoader</scope><name>loadClass</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1aff9c184aee7c7fb61dd77d55af89f17e" prot="protected" virt="pure-virtual"><scope>org::jgap::util::MultiClassLoader</scope><name>loadClassBytes</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a0ac1e5f6fe5d7e03d0dfe8dc7dd1ac99" prot="protected" virt="non-virtual"><scope>org::jgap::util::MultiClassLoader</scope><name>monitor</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a46b81b84025e37993e49b206062260d2" prot="protected" virt="non-virtual"><scope>org::jgap::util::MultiClassLoader</scope><name>monitorOn</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a9247aa446a74eddcfd2a23d5c99fd57c" prot="public" virt="non-virtual"><scope>org::jgap::util::MultiClassLoader</scope><name>MultiClassLoader</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a388e062b31156295786201d4cd9da2f2" prot="protected" virt="non-virtual"><scope>org::jgap::util::MultiClassLoader</scope><name>print</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1ad75cf011f65d3a509f01c81c7236fe82" prot="public" virt="non-virtual"><scope>org::jgap::util::MultiClassLoader</scope><name>setClassNameReplacementChar</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1a6b48426e9450345d5411286790932b94" prot="protected" virt="non-virtual"><scope>org::jgap::util::MultiClassLoader</scope><name>sourceMonitorOn</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

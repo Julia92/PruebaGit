@@ -1,0 +1,506 @@
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_greedy_crossover}{\section{org.\-jgap.\-impl.\-Greedy\-Crossover Class Reference}
+\label{classorg_1_1jgap_1_1impl_1_1_greedy_crossover}\index{org.\-jgap.\-impl.\-Greedy\-Crossover@{org.\-jgap.\-impl.\-Greedy\-Crossover}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-impl.\-Greedy\-Crossover\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{classorg_1_1jgap_1_1impl_1_1_greedy_crossover__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-impl.\-Greedy\-Crossover\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_greedy_crossover__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a5777f6e13508c61d2c1e43ee0900cbf3}{Greedy\-Crossover} ()  throws Invalid\-Configuration\-Exception 
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a2592b70d785e0344ac6cbc23d10c7864}{Greedy\-Crossover} (\hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} a\-\_\-configuration)  throws Invalid\-Configuration\-Exception 
+\item 
+double \hyperlink{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a41deed206eb483d92e5dee7d0bf537ef}{distance} (final Object a\-\_\-from, final Object a\-\_\-to)
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a57adb8d442035ecae43e194f29dff43c}{operate} (final \hyperlink{classorg_1_1jgap_1_1_population}{Population} a\-\_\-population, final List a\-\_\-candidate\-Chromosomes)
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a9fc2e11874fbc8b8349c1a0d93a8b5d9}{operate} (final \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} a\-\_\-first\-Mate, final \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} a\-\_\-second\-Mate)
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a6f518b090d9a358f7d96b7b11e6bf785}{set\-Start\-Offset} (int a\-\_\-offset)
+\item 
+int \hyperlink{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a6d4b71a26f742714520a6dfa931cc8c2}{get\-Start\-Offset} ()
+\item 
+int \hyperlink{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_ab1cb7c568f154dba5f43311e2c75ccfe}{compare\-To} (final Object a\-\_\-other)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}\mbox{[}$\,$\mbox{]} \hyperlink{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a6a19fa44501e6bd2d3e5be8ba7424b3a}{operate} (final \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}\mbox{[}$\,$\mbox{]} a\-\_\-g1, final \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}\mbox{[}$\,$\mbox{]} a\-\_\-g2)
+\item 
+\hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} \hyperlink{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_abb3111b92c3d771a9a4d5320071259a6}{find\-Next} (final \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}\mbox{[}$\,$\mbox{]} a\-\_\-g, final \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} a\-\_\-x)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a2c851e311ad5a263c915e01d8a30aa70}{m\-\_\-start\-Offset} = 1
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_ab6ee35a26acab5f96032250a6a5d2696}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-30 \$\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The Greedy Crossover is a specific type of crossover. It can only be is applied if 
+\begin{DoxyItemize}
+\item 
+\begin{DoxyEnumerate}
+\item All genes in the chromosome are different and  
+\end{DoxyEnumerate}
+\item 
+\begin{DoxyEnumerate}
+\item The set of genes for both chromosomes is identical and only their order in the chromosome can vary.  
+\end{DoxyEnumerate}
+\end{DoxyItemize}
+
+After the \hyperlink{classorg_1_1jgap_1_1impl_1_1_greedy_crossover}{Greedy\-Crossover}, these two conditions always remain true, so it can be applied again and again.
+
+The algorithm throws an assertion error if the two initial chromosomes does not satisfy these conditions.
+
+Greedy crossover can be best explained in the terms of the Traveling Salesman Problem\-:
+
+The algorithm selects the first city of one parent, compares the cities leaving that city in both parents, and chooses the closer one to extend the tour. If one city has already appeared in the tour, we choose the other city. If both cities have already appeared, we randomly select a non-\/selected city.
+
+See J. Grefenstette, R. Gopal, R. Rosmaita, and D. Gucht. {\itshape Genetic algorithms for the traveling salesman problem}. In Proceedings of the Second International Conference on Genetic Algorithms. Lawrence Eribaum Associates, Mahwah, N\-J, 1985. and also \href{http://ecsl.cs.unr.edu/docs/techreports/gong/node3.html}{\tt Sushil J. Louis \& Gong Li}\}
+
+\begin{DoxyAuthor}{Author}
+Audrius Meskauskas 
+
+$<$font size=\char`\"{}-\/1\char`\"{}$>$Neil Rotstan, Klaus Meffert (reused code from \hyperlink{classorg_1_1jgap_1_1impl_1_1_crossover_operator}{Crossover\-Operator})$<$/font$>$ 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 55 of file Greedy\-Crossover.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a5777f6e13508c61d2c1e43ee0900cbf3}{\index{org\-::jgap\-::impl\-::\-Greedy\-Crossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}!Greedy\-Crossover@{Greedy\-Crossover}}
+\index{Greedy\-Crossover@{Greedy\-Crossover}!org::jgap::impl::GreedyCrossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}}
+\subsubsection[{Greedy\-Crossover}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Greedy\-Crossover.\-Greedy\-Crossover (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\-Configuration\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a5777f6e13508c61d2c1e43ee0900cbf3}
+Default constructor for dynamic instantiation.
+
+Attention\-: The configuration used is the one set with the static method Genotype.\-set\-Configuration.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classorg_1_1jgap_1_1_invalid_configuration_exception}{Invalid\-Configuration\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-6 
+
+3.\-0 (since 2.\-0 without a\-\_\-configuration) 
+\end{DoxySince}
+
+
+Definition at line 76 of file Greedy\-Crossover.\-java.
+
+
+
+References org.\-jgap.\-Genotype.\-get\-Static\-Configuration().
+
+
+
+Referenced by org.\-jgap.\-impl.\-Greedy\-Crossover.\-compare\-To().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a5777f6e13508c61d2c1e43ee0900cbf3_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a2592b70d785e0344ac6cbc23d10c7864}{\index{org\-::jgap\-::impl\-::\-Greedy\-Crossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}!Greedy\-Crossover@{Greedy\-Crossover}}
+\index{Greedy\-Crossover@{Greedy\-Crossover}!org::jgap::impl::GreedyCrossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}}
+\subsubsection[{Greedy\-Crossover}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Greedy\-Crossover.\-Greedy\-Crossover (
+\begin{DoxyParamCaption}
+\item[{{\bf Configuration}}]{a\-\_\-configuration}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\-Configuration\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a2592b70d785e0344ac6cbc23d10c7864}
+Using the given configuration.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-configuration} & the configuration to use \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classorg_1_1jgap_1_1_invalid_configuration_exception}{Invalid\-Configuration\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-0 (since 2.\-6 without a\-\_\-configuration) 
+\end{DoxySince}
+
+
+Definition at line 90 of file Greedy\-Crossover.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_ab1cb7c568f154dba5f43311e2c75ccfe}{\index{org\-::jgap\-::impl\-::\-Greedy\-Crossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}!compare\-To@{compare\-To}}
+\index{compare\-To@{compare\-To}!org::jgap::impl::GreedyCrossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}}
+\subsubsection[{compare\-To}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-jgap.\-impl.\-Greedy\-Crossover.\-compare\-To (
+\begin{DoxyParamCaption}
+\item[{final Object}]{a\-\_\-other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_ab1cb7c568f154dba5f43311e2c75ccfe}
+Compares the given \hyperlink{interfaceorg_1_1jgap_1_1_genetic_operator}{Genetic\-Operator} to this \hyperlink{interfaceorg_1_1jgap_1_1_genetic_operator}{Genetic\-Operator}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-other} & the instance against which to compare this instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a negative number if this instance is \char`\"{}less than\char`\"{} the given instance, zero if they are equal to each other, and a positive number if this is \char`\"{}greater than\char`\"{} the given instance
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-6 
+\end{DoxySince}
+
+
+Definition at line 306 of file Greedy\-Crossover.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Greedy\-Crossover.\-get\-Start\-Offset(), and org.\-jgap.\-impl.\-Greedy\-Crossover.\-Greedy\-Crossover().
+
+
+
+Referenced by org.\-jgap.\-impl.\-Greedy\-Crossover\-Test.\-test\-Compare\-To\-\_\-0().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_ab1cb7c568f154dba5f43311e2c75ccfe_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a41deed206eb483d92e5dee7d0bf537ef}{\index{org\-::jgap\-::impl\-::\-Greedy\-Crossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}!distance@{distance}}
+\index{distance@{distance}!org::jgap::impl::GreedyCrossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}}
+\subsubsection[{distance}]{\setlength{\rightskip}{0pt plus 5cm}double org.\-jgap.\-impl.\-Greedy\-Crossover.\-distance (
+\begin{DoxyParamCaption}
+\item[{final Object}]{a\-\_\-from, }
+\item[{final Object}]{a\-\_\-to}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a41deed206eb483d92e5dee7d0bf537ef}
+Compute the distance between \char`\"{}cities\char`\"{}, indicated by these two given genes. The default method expects the genes to be \hyperlink{classorg_1_1jgap_1_1impl_1_1_integer_gene}{Integer\-Gene}'s and returns their absolute difference, that makes sense only for tests.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-from} & Object \\
+\hline
+{\em a\-\_\-to} & Object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+distance between the two given cities 
+\end{DoxyReturn}
+
+
+Definition at line 105 of file Greedy\-Crossover.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Integer\-Gene.\-int\-Value().
+
+
+
+Referenced by org.\-jgap.\-impl.\-Greedy\-Crossover.\-operate().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a41deed206eb483d92e5dee7d0bf537ef_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_abb3111b92c3d771a9a4d5320071259a6}{\index{org\-::jgap\-::impl\-::\-Greedy\-Crossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}!find\-Next@{find\-Next}}
+\index{find\-Next@{find\-Next}!org::jgap::impl::GreedyCrossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}}
+\subsubsection[{find\-Next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gene} org.\-jgap.\-impl.\-Greedy\-Crossover.\-find\-Next (
+\begin{DoxyParamCaption}
+\item[{final {\bf Gene}\mbox{[}$\,$\mbox{]}}]{a\-\_\-g, }
+\item[{final {\bf Gene}}]{a\-\_\-x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_abb3111b92c3d771a9a4d5320071259a6}
+
+
+Definition at line 262 of file Greedy\-Crossover.\-java.
+
+
+
+References org.\-jgap.\-Base\-Genetic\-Operator.\-equals(), and org.\-jgap.\-impl.\-Greedy\-Crossover.\-m\-\_\-start\-Offset.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Greedy\-Crossover.\-operate().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_abb3111b92c3d771a9a4d5320071259a6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a6d4b71a26f742714520a6dfa931cc8c2}{\index{org\-::jgap\-::impl\-::\-Greedy\-Crossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}!get\-Start\-Offset@{get\-Start\-Offset}}
+\index{get\-Start\-Offset@{get\-Start\-Offset}!org::jgap::impl::GreedyCrossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}}
+\subsubsection[{get\-Start\-Offset}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-jgap.\-impl.\-Greedy\-Crossover.\-get\-Start\-Offset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a6d4b71a26f742714520a6dfa931cc8c2}
+Gets a number of genes at the start of chromosome, that are excluded from the swapping. In the Salesman task, the first city in the list should (where the salesman leaves from) probably should not change as it is part of the list. The default value is 1.
+
+\begin{DoxyReturn}{Returns}
+the start offset used 
+\end{DoxyReturn}
+
+
+Definition at line 291 of file Greedy\-Crossover.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Greedy\-Crossover.\-m\-\_\-start\-Offset.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Greedy\-Crossover.\-compare\-To(), and org.\-jgap.\-impl.\-Greedy\-Crossover\-Test.\-test\-Startoffset\-\_\-0().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a57adb8d442035ecae43e194f29dff43c}{\index{org\-::jgap\-::impl\-::\-Greedy\-Crossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}!operate@{operate}}
+\index{operate@{operate}!org::jgap::impl::GreedyCrossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}}
+\subsubsection[{operate}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Greedy\-Crossover.\-operate (
+\begin{DoxyParamCaption}
+\item[{final {\bf Population}}]{a\-\_\-population, }
+\item[{final List}]{a\-\_\-candidate\-Chromosomes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a57adb8d442035ecae43e194f29dff43c}
+The operate method will be invoked on each of the genetic operators referenced by the current \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} object during the evolution phase. Operators are given an opportunity to run in the order that they are added to the \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration}. Implementations of this method may reference the population of Chromosomes as it was at the beginning of the evolutionary phase and/or they may instead reference the candidate Chromosomes, which are the results of prior genetic operators. In either case, only Chromosomes added to the list of candidate chromosomes will be considered for natural selection.
+
+The parameters a\-\_\-population and a\-\_\-candidate\-Chromosomes may refer to the same list of chromosomes for performance issues. Thus would mean an in-\/place modification. In ealier J\-G\-A\-P versions it was suggested never modifying the input population. Please refer to implementations delivered with J\-G\-A\-P to get a picture of the way non-\/susceptible in-\/place modifications are possible. If wrongly done, Concurrent\-Modification\-Exception could be risen when accessing the population by an iterator in a \hyperlink{interfaceorg_1_1jgap_1_1_genetic_operator}{Genetic\-Operator}. Or, if population.\-get\-Chromosomes().size() was used inside a loop where chromosomes were added to the input population this could lead to an infinite loop in worst case.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-population} & the population of chromosomes from the current evolution prior to exposure to any genetic operators. Chromosomes in this array should not be modified. Please, notice, that the call in \hyperlink{classorg_1_1jgap_1_1_genotype_a54a6791fbb6e13920e79f4e2dd719eb4}{Genotype.\-evolve()} to the implementations of \hyperlink{interfaceorg_1_1jgap_1_1_genetic_operator}{Genetic\-Operator} overgoes this due to performance issues \\
+\hline
+{\em a\-\_\-candidate\-Chromosomes} & the pool of chromosomes that have been selected for the next evolved population\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 (earlier versions referenced the \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} object) 
+\end{DoxySince}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1_genetic_operator_a0f9dfe925c4c21e07522be67d6c5d084}{org.\-jgap.\-Genetic\-Operator}.
+
+
+
+Definition at line 111 of file Greedy\-Crossover.\-java.
+
+
+
+References org.\-jgap.\-util.\-I\-Cloneable.\-clone(), org.\-jgap.\-Base\-Genetic\-Operator.\-get\-Configuration(), org.\-jgap.\-Base\-Genetic\-Operator.\-m\-\_\-monitor\-Active, and org.\-jgap.\-Population.\-size().
+
+
+
+Referenced by org.\-jgap.\-impl.\-Greedy\-Crossover.\-operate().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a57adb8d442035ecae43e194f29dff43c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a9fc2e11874fbc8b8349c1a0d93a8b5d9}{\index{org\-::jgap\-::impl\-::\-Greedy\-Crossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}!operate@{operate}}
+\index{operate@{operate}!org::jgap::impl::GreedyCrossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}}
+\subsubsection[{operate}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Greedy\-Crossover.\-operate (
+\begin{DoxyParamCaption}
+\item[{final {\bf I\-Chromosome}}]{a\-\_\-first\-Mate, }
+\item[{final {\bf I\-Chromosome}}]{a\-\_\-second\-Mate}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a9fc2e11874fbc8b8349c1a0d93a8b5d9}
+Performs a greedy crossover for the two given chromosoms.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-first\-Mate} & the first chromosome to crossover on \\
+\hline
+{\em a\-\_\-second\-Mate} & the second chromosome to crossover on \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Error} & if the gene set in the chromosomes is not identical\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Audrius Meskauskas 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-1 
+\end{DoxySince}
+
+
+Definition at line 155 of file Greedy\-Crossover.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Greedy\-Crossover.\-m\-\_\-start\-Offset, and org.\-jgap.\-impl.\-Greedy\-Crossover.\-operate().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a9fc2e11874fbc8b8349c1a0d93a8b5d9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a6a19fa44501e6bd2d3e5be8ba7424b3a}{\index{org\-::jgap\-::impl\-::\-Greedy\-Crossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}!operate@{operate}}
+\index{operate@{operate}!org::jgap::impl::GreedyCrossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}}
+\subsubsection[{operate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gene} \mbox{[}$\,$\mbox{]} org.\-jgap.\-impl.\-Greedy\-Crossover.\-operate (
+\begin{DoxyParamCaption}
+\item[{final {\bf Gene}\mbox{[}$\,$\mbox{]}}]{a\-\_\-g1, }
+\item[{final {\bf Gene}\mbox{[}$\,$\mbox{]}}]{a\-\_\-g2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a6a19fa44501e6bd2d3e5be8ba7424b3a}
+
+
+Definition at line 176 of file Greedy\-Crossover.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Greedy\-Crossover.\-distance(), org.\-jgap.\-Base\-Genetic\-Operator.\-equals(), org.\-jgap.\-impl.\-Greedy\-Crossover.\-find\-Next(), and org.\-jgap.\-impl.\-Greedy\-Crossover.\-m\-\_\-start\-Offset.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a6a19fa44501e6bd2d3e5be8ba7424b3a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a6f518b090d9a358f7d96b7b11e6bf785}{\index{org\-::jgap\-::impl\-::\-Greedy\-Crossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}!set\-Start\-Offset@{set\-Start\-Offset}}
+\index{set\-Start\-Offset@{set\-Start\-Offset}!org::jgap::impl::GreedyCrossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}}
+\subsubsection[{set\-Start\-Offset}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Greedy\-Crossover.\-set\-Start\-Offset (
+\begin{DoxyParamCaption}
+\item[{int}]{a\-\_\-offset}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a6f518b090d9a358f7d96b7b11e6bf785}
+Sets a number of genes at the start of chromosome, that are excluded from the swapping. In the Salesman task, the first city in the list should (where the salesman leaves from) probably should not change as it is part of the list. The default value is 1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-offset} & the start offset to use \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 279 of file Greedy\-Crossover.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Greedy\-Crossover.\-m\-\_\-start\-Offset.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_ab6ee35a26acab5f96032250a6a5d2696}{\index{org\-::jgap\-::impl\-::\-Greedy\-Crossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::impl::GreedyCrossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-impl.\-Greedy\-Crossover.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-30 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_ab6ee35a26acab5f96032250a6a5d2696}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 58 of file Greedy\-Crossover.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a2c851e311ad5a263c915e01d8a30aa70}{\index{org\-::jgap\-::impl\-::\-Greedy\-Crossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}!m\-\_\-start\-Offset@{m\-\_\-start\-Offset}}
+\index{m\-\_\-start\-Offset@{m\-\_\-start\-Offset}!org::jgap::impl::GreedyCrossover@{org\-::jgap\-::impl\-::\-Greedy\-Crossover}}
+\subsubsection[{m\-\_\-start\-Offset}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-jgap.\-impl.\-Greedy\-Crossover.\-m\-\_\-start\-Offset = 1\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a2c851e311ad5a263c915e01d8a30aa70}
+
+
+Definition at line 63 of file Greedy\-Crossover.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Greedy\-Crossover.\-find\-Next(), org.\-jgap.\-impl.\-Greedy\-Crossover.\-get\-Start\-Offset(), org.\-jgap.\-impl.\-Greedy\-Crossover.\-operate(), and org.\-jgap.\-impl.\-Greedy\-Crossover.\-set\-Start\-Offset().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/impl/\hyperlink{_greedy_crossover_8java}{Greedy\-Crossover.\-java}\end{DoxyCompactItemize}

@@ -1,0 +1,470 @@
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board}{\section{examples.\-gp.\-tictactoe.\-Board Class Reference}
+\label{classexamples_1_1gp_1_1tictactoe_1_1_board}\index{examples.\-gp.\-tictactoe.\-Board@{examples.\-gp.\-tictactoe.\-Board}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_af7a6c3241d7cdbcbe469780f5b4efa3f}{Board} ()
+\item 
+void \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_a6a7211faba911ea008efee47cf1a0c15}{reset\-Board} ()
+\item 
+void \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_ac46c9ae108fe371ca04658a70da9787d}{start\-New\-Round} ()
+\item 
+void \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_abeffe3405b61e784325328bca0966537}{begin\-Turn} ()
+\item 
+void \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_a232f0325b5ef3fe5f8fd2ceeb832e9a3}{end\-Turn} ()
+\item 
+void \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_a79fdca483b7510757c09556c74cf1a71}{end\-Round} ()
+\item 
+boolean \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_a68ff8972942d75e84e0f1d6aed92099f}{put\-Stone} (int x, int y, int a\-\_\-color)  throws Illegal\-Argument\-Exception 
+\item 
+int \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_a0eb055a2660809449417c167699e44d7}{read\-Field} (int x, int y)  throws Illegal\-Argument\-Exception 
+\item 
+int \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_aebf2a859e86f2640b8e372f8fe050ab7}{get\-Read\-Position\-Count} ()
+\item 
+int \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_adb145c8f1efde7c97895ce125a52f0ce}{read\-Field} (int a\-\_\-index)  throws Illegal\-Argument\-Exception 
+\item 
+boolean \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_ac0d47f11096b45b444232bb152469c46}{is\-End\-Of\-Game} ()
+\item 
+int \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_a7c558f63181ef10aaaeb69186799c182}{get\-Last\-Color} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_a09c11cc14ebbe4fdabb088a97fcfd5ea}{W\-I\-D\-T\-H} = 3
+\item 
+static int \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_aa0183ffc1692e094a69283aeb7903003}{H\-E\-I\-G\-H\-T} = \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_a09c11cc14ebbe4fdabb088a97fcfd5ea}{W\-I\-D\-T\-H}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+boolean \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_a9600ee9c35a8f599f024d05102cd2dac}{is\-Winner} (int a\-\_\-first\-X, int a\-\_\-last\-X, int a\-\_\-first\-Y, int a\-\_\-last\-Y)
+\item 
+boolean \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_a447d664de2f55e195e732b47221351e4}{is\-Winner\-Diag} (int a\-\_\-start\-X, int a\-\_\-start\-Y, int a\-\_\-increment)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_ac9a85f9960650c1049d9939f66c89457}{m\-\_\-board}
+\item 
+int \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_acd48df1a754036bd19d55f17239b4e05}{m\-\_\-last\-Color}
+\item 
+int \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_abbbe4475b523d12b347b7d778804295b}{moves\-In\-Round}
+\item 
+int \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_a46d9da07a0b53107047b89120aab646d}{moves\-In\-Turn}
+\item 
+Map \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_aa10007ea09d3626f4be425e2aaa416a1}{m\-\_\-read\-Positions}
+\item 
+int \hyperlink{classexamples_1_1gp_1_1tictactoe_1_1_board_a82ff9c8f75d493909e1bd0e06d261a21}{m\-\_\-read\-Position\-Count}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Tic Tac Toe board (3x3).
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-2 
+\end{DoxySince}
+
+
+Definition at line 20 of file Board.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_af7a6c3241d7cdbcbe469780f5b4efa3f}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!Board@{Board}}
+\index{Board@{Board}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{Board}]{\setlength{\rightskip}{0pt plus 5cm}examples.\-gp.\-tictactoe.\-Board.\-Board (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_af7a6c3241d7cdbcbe469780f5b4efa3f}
+
+
+Definition at line 34 of file Board.\-java.
+
+
+
+References examples.\-gp.\-tictactoe.\-Board.\-H\-E\-I\-G\-H\-T, examples.\-gp.\-tictactoe.\-Board.\-m\-\_\-board, examples.\-gp.\-tictactoe.\-Board.\-m\-\_\-read\-Positions, examples.\-gp.\-tictactoe.\-Board.\-start\-New\-Round(), and examples.\-gp.\-tictactoe.\-Board.\-W\-I\-D\-T\-H.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1gp_1_1tictactoe_1_1_board_af7a6c3241d7cdbcbe469780f5b4efa3f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_abeffe3405b61e784325328bca0966537}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!begin\-Turn@{begin\-Turn}}
+\index{begin\-Turn@{begin\-Turn}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{begin\-Turn}]{\setlength{\rightskip}{0pt plus 5cm}void examples.\-gp.\-tictactoe.\-Board.\-begin\-Turn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_abeffe3405b61e784325328bca0966537}
+
+
+Definition at line 54 of file Board.\-java.
+
+
+
+References examples.\-gp.\-tictactoe.\-Board.\-m\-\_\-read\-Position\-Count, and examples.\-gp.\-tictactoe.\-Board.\-moves\-In\-Turn.
+
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_a79fdca483b7510757c09556c74cf1a71}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!end\-Round@{end\-Round}}
+\index{end\-Round@{end\-Round}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{end\-Round}]{\setlength{\rightskip}{0pt plus 5cm}void examples.\-gp.\-tictactoe.\-Board.\-end\-Round (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_a79fdca483b7510757c09556c74cf1a71}
+
+
+Definition at line 66 of file Board.\-java.
+
+
+
+References examples.\-gp.\-tictactoe.\-Board.\-m\-\_\-last\-Color, and examples.\-gp.\-tictactoe.\-Board.\-moves\-In\-Round.
+
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_a232f0325b5ef3fe5f8fd2ceeb832e9a3}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!end\-Turn@{end\-Turn}}
+\index{end\-Turn@{end\-Turn}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{end\-Turn}]{\setlength{\rightskip}{0pt plus 5cm}void examples.\-gp.\-tictactoe.\-Board.\-end\-Turn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_a232f0325b5ef3fe5f8fd2ceeb832e9a3}
+
+
+Definition at line 60 of file Board.\-java.
+
+
+
+References examples.\-gp.\-tictactoe.\-Board.\-moves\-In\-Turn.
+
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_a7c558f63181ef10aaaeb69186799c182}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!get\-Last\-Color@{get\-Last\-Color}}
+\index{get\-Last\-Color@{get\-Last\-Color}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{get\-Last\-Color}]{\setlength{\rightskip}{0pt plus 5cm}int examples.\-gp.\-tictactoe.\-Board.\-get\-Last\-Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_a7c558f63181ef10aaaeb69186799c182}
+
+
+Definition at line 205 of file Board.\-java.
+
+
+
+References examples.\-gp.\-tictactoe.\-Board.\-m\-\_\-last\-Color.
+
+
+
+Referenced by examples.\-gp.\-tictactoe.\-Put\-Stone1.\-check(), and examples.\-gp.\-tictactoe.\-Put\-Stone.\-check().
+
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_aebf2a859e86f2640b8e372f8fe050ab7}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!get\-Read\-Position\-Count@{get\-Read\-Position\-Count}}
+\index{get\-Read\-Position\-Count@{get\-Read\-Position\-Count}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{get\-Read\-Position\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int examples.\-gp.\-tictactoe.\-Board.\-get\-Read\-Position\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_aebf2a859e86f2640b8e372f8fe050ab7}
+
+
+Definition at line 116 of file Board.\-java.
+
+
+
+References examples.\-gp.\-tictactoe.\-Board.\-m\-\_\-read\-Position\-Count.
+
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_ac0d47f11096b45b444232bb152469c46}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!is\-End\-Of\-Game@{is\-End\-Of\-Game}}
+\index{is\-End\-Of\-Game@{is\-End\-Of\-Game}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{is\-End\-Of\-Game}]{\setlength{\rightskip}{0pt plus 5cm}boolean examples.\-gp.\-tictactoe.\-Board.\-is\-End\-Of\-Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_ac0d47f11096b45b444232bb152469c46}
+
+
+Definition at line 131 of file Board.\-java.
+
+
+
+References examples.\-gp.\-tictactoe.\-Board.\-H\-E\-I\-G\-H\-T, examples.\-gp.\-tictactoe.\-Board.\-is\-Winner(), examples.\-gp.\-tictactoe.\-Board.\-is\-Winner\-Diag(), and examples.\-gp.\-tictactoe.\-Board.\-W\-I\-D\-T\-H.
+
+
+
+Referenced by examples.\-gp.\-tictactoe.\-Board.\-put\-Stone().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1gp_1_1tictactoe_1_1_board_ac0d47f11096b45b444232bb152469c46_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_a9600ee9c35a8f599f024d05102cd2dac}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!is\-Winner@{is\-Winner}}
+\index{is\-Winner@{is\-Winner}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{is\-Winner}]{\setlength{\rightskip}{0pt plus 5cm}boolean examples.\-gp.\-tictactoe.\-Board.\-is\-Winner (
+\begin{DoxyParamCaption}
+\item[{int}]{a\-\_\-first\-X, }
+\item[{int}]{a\-\_\-last\-X, }
+\item[{int}]{a\-\_\-first\-Y, }
+\item[{int}]{a\-\_\-last\-Y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_a9600ee9c35a8f599f024d05102cd2dac}
+
+
+Definition at line 151 of file Board.\-java.
+
+
+
+References examples.\-gp.\-tictactoe.\-Board.\-m\-\_\-board.
+
+
+
+Referenced by examples.\-gp.\-tictactoe.\-Board.\-is\-End\-Of\-Game().
+
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_a447d664de2f55e195e732b47221351e4}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!is\-Winner\-Diag@{is\-Winner\-Diag}}
+\index{is\-Winner\-Diag@{is\-Winner\-Diag}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{is\-Winner\-Diag}]{\setlength{\rightskip}{0pt plus 5cm}boolean examples.\-gp.\-tictactoe.\-Board.\-is\-Winner\-Diag (
+\begin{DoxyParamCaption}
+\item[{int}]{a\-\_\-start\-X, }
+\item[{int}]{a\-\_\-start\-Y, }
+\item[{int}]{a\-\_\-increment}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_a447d664de2f55e195e732b47221351e4}
+
+
+Definition at line 177 of file Board.\-java.
+
+
+
+References examples.\-gp.\-tictactoe.\-Board.\-m\-\_\-board, and examples.\-gp.\-tictactoe.\-Board.\-W\-I\-D\-T\-H.
+
+
+
+Referenced by examples.\-gp.\-tictactoe.\-Board.\-is\-End\-Of\-Game().
+
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_a68ff8972942d75e84e0f1d6aed92099f}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!put\-Stone@{put\-Stone}}
+\index{put\-Stone@{put\-Stone}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{put\-Stone}]{\setlength{\rightskip}{0pt plus 5cm}boolean examples.\-gp.\-tictactoe.\-Board.\-put\-Stone (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{a\-\_\-color}
+\end{DoxyParamCaption}
+) throws Illegal\-Argument\-Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_a68ff8972942d75e84e0f1d6aed92099f}
+
+
+Definition at line 78 of file Board.\-java.
+
+
+
+References examples.\-gp.\-tictactoe.\-Board.\-H\-E\-I\-G\-H\-T, examples.\-gp.\-tictactoe.\-Board.\-is\-End\-Of\-Game(), examples.\-gp.\-tictactoe.\-Board.\-m\-\_\-board, examples.\-gp.\-tictactoe.\-Board.\-m\-\_\-last\-Color, examples.\-gp.\-tictactoe.\-Board.\-moves\-In\-Round, examples.\-gp.\-tictactoe.\-Board.\-moves\-In\-Turn, and examples.\-gp.\-tictactoe.\-Board.\-W\-I\-D\-T\-H.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1gp_1_1tictactoe_1_1_board_a68ff8972942d75e84e0f1d6aed92099f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_a0eb055a2660809449417c167699e44d7}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!read\-Field@{read\-Field}}
+\index{read\-Field@{read\-Field}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{read\-Field}]{\setlength{\rightskip}{0pt plus 5cm}int examples.\-gp.\-tictactoe.\-Board.\-read\-Field (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+) throws Illegal\-Argument\-Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_a0eb055a2660809449417c167699e44d7}
+
+
+Definition at line 103 of file Board.\-java.
+
+
+
+References examples.\-gp.\-tictactoe.\-Board.\-H\-E\-I\-G\-H\-T, examples.\-gp.\-tictactoe.\-Board.\-m\-\_\-board, examples.\-gp.\-tictactoe.\-Board.\-m\-\_\-read\-Position\-Count, examples.\-gp.\-tictactoe.\-Board.\-m\-\_\-read\-Positions, and examples.\-gp.\-tictactoe.\-Board.\-W\-I\-D\-T\-H.
+
+
+
+Referenced by examples.\-gp.\-tictactoe.\-Count\-Stones.\-read\-Col(), examples.\-gp.\-tictactoe.\-Count\-Stones.\-read\-Dia(), and examples.\-gp.\-tictactoe.\-Count\-Stones.\-read\-Row().
+
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_adb145c8f1efde7c97895ce125a52f0ce}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!read\-Field@{read\-Field}}
+\index{read\-Field@{read\-Field}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{read\-Field}]{\setlength{\rightskip}{0pt plus 5cm}int examples.\-gp.\-tictactoe.\-Board.\-read\-Field (
+\begin{DoxyParamCaption}
+\item[{int}]{a\-\_\-index}
+\end{DoxyParamCaption}
+) throws Illegal\-Argument\-Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_adb145c8f1efde7c97895ce125a52f0ce}
+
+
+Definition at line 120 of file Board.\-java.
+
+
+
+References examples.\-gp.\-tictactoe.\-Board.\-H\-E\-I\-G\-H\-T, examples.\-gp.\-tictactoe.\-Board.\-m\-\_\-board, and examples.\-gp.\-tictactoe.\-Board.\-W\-I\-D\-T\-H.
+
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_a6a7211faba911ea008efee47cf1a0c15}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!reset\-Board@{reset\-Board}}
+\index{reset\-Board@{reset\-Board}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{reset\-Board}]{\setlength{\rightskip}{0pt plus 5cm}void examples.\-gp.\-tictactoe.\-Board.\-reset\-Board (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_a6a7211faba911ea008efee47cf1a0c15}
+
+
+Definition at line 40 of file Board.\-java.
+
+
+
+References examples.\-gp.\-tictactoe.\-Board.\-H\-E\-I\-G\-H\-T, examples.\-gp.\-tictactoe.\-Board.\-m\-\_\-board, and examples.\-gp.\-tictactoe.\-Board.\-W\-I\-D\-T\-H.
+
+
+
+Referenced by examples.\-gp.\-tictactoe.\-Board.\-start\-New\-Round().
+
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_ac46c9ae108fe371ca04658a70da9787d}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!start\-New\-Round@{start\-New\-Round}}
+\index{start\-New\-Round@{start\-New\-Round}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{start\-New\-Round}]{\setlength{\rightskip}{0pt plus 5cm}void examples.\-gp.\-tictactoe.\-Board.\-start\-New\-Round (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_ac46c9ae108fe371ca04658a70da9787d}
+
+
+Definition at line 48 of file Board.\-java.
+
+
+
+References examples.\-gp.\-tictactoe.\-Board.\-m\-\_\-last\-Color, examples.\-gp.\-tictactoe.\-Board.\-moves\-In\-Round, and examples.\-gp.\-tictactoe.\-Board.\-reset\-Board().
+
+
+
+Referenced by examples.\-gp.\-tictactoe.\-Board.\-Board().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1gp_1_1tictactoe_1_1_board_ac46c9ae108fe371ca04658a70da9787d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_aa0183ffc1692e094a69283aeb7903003}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!H\-E\-I\-G\-H\-T@{H\-E\-I\-G\-H\-T}}
+\index{H\-E\-I\-G\-H\-T@{H\-E\-I\-G\-H\-T}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{H\-E\-I\-G\-H\-T}]{\setlength{\rightskip}{0pt plus 5cm}int examples.\-gp.\-tictactoe.\-Board.\-H\-E\-I\-G\-H\-T = {\bf W\-I\-D\-T\-H}\hspace{0.3cm}{\ttfamily [static]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_aa0183ffc1692e094a69283aeb7903003}
+
+
+Definition at line 27 of file Board.\-java.
+
+
+
+Referenced by examples.\-gp.\-tictactoe.\-Board.\-Board(), examples.\-gp.\-tictactoe.\-Tic\-Tac\-Toe\-Main.\-Game\-Fitness\-Function.\-compute\-Raw\-Fitness(), examples.\-gp.\-tictactoe.\-Tic\-Tac\-Toe\-Main.\-create(), examples.\-gp.\-tictactoe.\-Put\-Stone1.\-execute\-\_\-void(), examples.\-gp.\-tictactoe.\-Count\-Stones.\-execute\-\_\-void(), examples.\-gp.\-tictactoe.\-If\-Is\-Free.\-execute\-\_\-void(), examples.\-gp.\-tictactoe.\-If\-Is\-Occupied.\-execute\-\_\-void(), examples.\-gp.\-tictactoe.\-Transfer\-Board\-To\-Memory.\-execute\-\_\-void(), examples.\-gp.\-tictactoe.\-Evaluate\-Board.\-execute\-\_\-void(), examples.\-gp.\-tictactoe.\-Board.\-is\-End\-Of\-Game(), examples.\-gp.\-tictactoe.\-Board.\-put\-Stone(), examples.\-gp.\-tictactoe.\-Count\-Stones.\-read\-Col(), examples.\-gp.\-tictactoe.\-Count\-Stones.\-read\-Dia(), examples.\-gp.\-tictactoe.\-Board.\-read\-Field(), and examples.\-gp.\-tictactoe.\-Board.\-reset\-Board().
+
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_ac9a85f9960650c1049d9939f66c89457}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!m\-\_\-board@{m\-\_\-board}}
+\index{m\-\_\-board@{m\-\_\-board}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{m\-\_\-board}]{\setlength{\rightskip}{0pt plus 5cm}int \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} examples.\-gp.\-tictactoe.\-Board.\-m\-\_\-board\hspace{0.3cm}{\ttfamily [private]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_ac9a85f9960650c1049d9939f66c89457}
+
+
+Definition at line 21 of file Board.\-java.
+
+
+
+Referenced by examples.\-gp.\-tictactoe.\-Board.\-Board(), examples.\-gp.\-tictactoe.\-Board.\-is\-Winner(), examples.\-gp.\-tictactoe.\-Board.\-is\-Winner\-Diag(), examples.\-gp.\-tictactoe.\-Board.\-put\-Stone(), examples.\-gp.\-tictactoe.\-Board.\-read\-Field(), and examples.\-gp.\-tictactoe.\-Board.\-reset\-Board().
+
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_acd48df1a754036bd19d55f17239b4e05}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!m\-\_\-last\-Color@{m\-\_\-last\-Color}}
+\index{m\-\_\-last\-Color@{m\-\_\-last\-Color}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{m\-\_\-last\-Color}]{\setlength{\rightskip}{0pt plus 5cm}int examples.\-gp.\-tictactoe.\-Board.\-m\-\_\-last\-Color\hspace{0.3cm}{\ttfamily [private]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_acd48df1a754036bd19d55f17239b4e05}
+
+
+Definition at line 23 of file Board.\-java.
+
+
+
+Referenced by examples.\-gp.\-tictactoe.\-Board.\-end\-Round(), examples.\-gp.\-tictactoe.\-Board.\-get\-Last\-Color(), examples.\-gp.\-tictactoe.\-Board.\-put\-Stone(), and examples.\-gp.\-tictactoe.\-Board.\-start\-New\-Round().
+
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_a82ff9c8f75d493909e1bd0e06d261a21}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!m\-\_\-read\-Position\-Count@{m\-\_\-read\-Position\-Count}}
+\index{m\-\_\-read\-Position\-Count@{m\-\_\-read\-Position\-Count}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{m\-\_\-read\-Position\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int examples.\-gp.\-tictactoe.\-Board.\-m\-\_\-read\-Position\-Count\hspace{0.3cm}{\ttfamily [private]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_a82ff9c8f75d493909e1bd0e06d261a21}
+
+
+Definition at line 32 of file Board.\-java.
+
+
+
+Referenced by examples.\-gp.\-tictactoe.\-Board.\-begin\-Turn(), examples.\-gp.\-tictactoe.\-Board.\-get\-Read\-Position\-Count(), and examples.\-gp.\-tictactoe.\-Board.\-read\-Field().
+
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_aa10007ea09d3626f4be425e2aaa416a1}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!m\-\_\-read\-Positions@{m\-\_\-read\-Positions}}
+\index{m\-\_\-read\-Positions@{m\-\_\-read\-Positions}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{m\-\_\-read\-Positions}]{\setlength{\rightskip}{0pt plus 5cm}Map examples.\-gp.\-tictactoe.\-Board.\-m\-\_\-read\-Positions\hspace{0.3cm}{\ttfamily [private]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_aa10007ea09d3626f4be425e2aaa416a1}
+
+
+Definition at line 31 of file Board.\-java.
+
+
+
+Referenced by examples.\-gp.\-tictactoe.\-Board.\-Board(), and examples.\-gp.\-tictactoe.\-Board.\-read\-Field().
+
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_abbbe4475b523d12b347b7d778804295b}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!moves\-In\-Round@{moves\-In\-Round}}
+\index{moves\-In\-Round@{moves\-In\-Round}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{moves\-In\-Round}]{\setlength{\rightskip}{0pt plus 5cm}int examples.\-gp.\-tictactoe.\-Board.\-moves\-In\-Round\hspace{0.3cm}{\ttfamily [private]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_abbbe4475b523d12b347b7d778804295b}
+
+
+Definition at line 29 of file Board.\-java.
+
+
+
+Referenced by examples.\-gp.\-tictactoe.\-Board.\-end\-Round(), examples.\-gp.\-tictactoe.\-Board.\-put\-Stone(), and examples.\-gp.\-tictactoe.\-Board.\-start\-New\-Round().
+
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_a46d9da07a0b53107047b89120aab646d}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!moves\-In\-Turn@{moves\-In\-Turn}}
+\index{moves\-In\-Turn@{moves\-In\-Turn}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{moves\-In\-Turn}]{\setlength{\rightskip}{0pt plus 5cm}int examples.\-gp.\-tictactoe.\-Board.\-moves\-In\-Turn\hspace{0.3cm}{\ttfamily [private]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_a46d9da07a0b53107047b89120aab646d}
+
+
+Definition at line 30 of file Board.\-java.
+
+
+
+Referenced by examples.\-gp.\-tictactoe.\-Board.\-begin\-Turn(), examples.\-gp.\-tictactoe.\-Board.\-end\-Turn(), and examples.\-gp.\-tictactoe.\-Board.\-put\-Stone().
+
+\hypertarget{classexamples_1_1gp_1_1tictactoe_1_1_board_a09c11cc14ebbe4fdabb088a97fcfd5ea}{\index{examples\-::gp\-::tictactoe\-::\-Board@{examples\-::gp\-::tictactoe\-::\-Board}!W\-I\-D\-T\-H@{W\-I\-D\-T\-H}}
+\index{W\-I\-D\-T\-H@{W\-I\-D\-T\-H}!examples::gp::tictactoe::Board@{examples\-::gp\-::tictactoe\-::\-Board}}
+\subsubsection[{W\-I\-D\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}int examples.\-gp.\-tictactoe.\-Board.\-W\-I\-D\-T\-H = 3\hspace{0.3cm}{\ttfamily [static]}}}\label{classexamples_1_1gp_1_1tictactoe_1_1_board_a09c11cc14ebbe4fdabb088a97fcfd5ea}
+
+
+Definition at line 25 of file Board.\-java.
+
+
+
+Referenced by examples.\-gp.\-tictactoe.\-Board.\-Board(), examples.\-gp.\-tictactoe.\-Tic\-Tac\-Toe\-Main.\-Game\-Fitness\-Function.\-compute\-Raw\-Fitness(), examples.\-gp.\-tictactoe.\-Tic\-Tac\-Toe\-Main.\-create(), examples.\-gp.\-tictactoe.\-Put\-Stone1.\-execute\-\_\-void(), examples.\-gp.\-tictactoe.\-Count\-Stones.\-execute\-\_\-void(), examples.\-gp.\-tictactoe.\-If\-Is\-Free.\-execute\-\_\-void(), examples.\-gp.\-tictactoe.\-If\-Is\-Occupied.\-execute\-\_\-void(), examples.\-gp.\-tictactoe.\-Transfer\-Board\-To\-Memory.\-execute\-\_\-void(), examples.\-gp.\-tictactoe.\-Evaluate\-Board.\-execute\-\_\-void(), examples.\-gp.\-tictactoe.\-Board.\-is\-End\-Of\-Game(), examples.\-gp.\-tictactoe.\-Board.\-is\-Winner\-Diag(), examples.\-gp.\-tictactoe.\-Board.\-put\-Stone(), examples.\-gp.\-tictactoe.\-Count\-Stones.\-read\-Dia(), examples.\-gp.\-tictactoe.\-Board.\-read\-Field(), examples.\-gp.\-tictactoe.\-Count\-Stones.\-read\-Row(), and examples.\-gp.\-tictactoe.\-Board.\-reset\-Board().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/examples/src/examples/gp/tictactoe/\hyperlink{_board_8java}{Board.\-java}\end{DoxyCompactItemize}

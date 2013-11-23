@@ -1,0 +1,594 @@
+.TH "org.jgap.gp.GPProgramBase" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.GPProgramBase \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Inherited by \fBorg\&.jgap\&.gp\&.impl\&.GPProgram\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGPProgramBase\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "\fBGPProgramBase\fP (GPConfiguration a_conf)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGPProgramBase\fP (\fBIGPProgram\fP a_prog)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "GPConfiguration \fBgetGPConfiguration\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.ti -1c
+.RI "double \fBcalcFitnessValue\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetFitnessValue\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetFitnessValueDirectly\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetFitnessValue\fP (double a_fitness)"
+.br
+.ti -1c
+.RI "void \fBsetTypes\fP (Class[] a_types)"
+.br
+.ti -1c
+.RI "Class[] \fBgetTypes\fP ()"
+.br
+.ti -1c
+.RI "Class \fBgetType\fP (int a_index)"
+.br
+.ti -1c
+.RI "void \fBsetArgTypes\fP (Class[][] a_argTypes)"
+.br
+.ti -1c
+.RI "Class[][] \fBgetArgTypes\fP ()"
+.br
+.ti -1c
+.RI "Class[] \fBgetArgType\fP (int a_index)"
+.br
+.ti -1c
+.RI "void \fBsetNodeSets\fP (\fBCommandGene\fP[][] a_nodeSets)"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP[][] \fBgetNodeSets\fP ()"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP[] \fBgetNodeSet\fP (int a_index)"
+.br
+.ti -1c
+.RI "void \fBsetMaxDepths\fP (int[] a_maxDepths)"
+.br
+.ti -1c
+.RI "int[] \fBgetMaxDepths\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMinDepths\fP (int[] a_minDepths)"
+.br
+.ti -1c
+.RI "int[] \fBgetMinDepths\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMaxNodes\fP (int a_maxNodes)"
+.br
+.ti -1c
+.RI "int \fBgetMaxNodes\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetApplicationData\fP (Object a_data)"
+.br
+.ti -1c
+.RI "Object \fBgetApplicationData\fP ()"
+.br
+.ti -1c
+.RI "abstract Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBm_fitnessValue\fP = \fBFitnessFunction\&.NO_FITNESS_VALUE\fP"
+.br
+.ti -1c
+.RI "GPConfiguration \fBm_conf\fP"
+.br
+.ti -1c
+.RI "Class[] \fBm_types\fP"
+.br
+.ti -1c
+.RI "Class[][] \fBm_argTypes\fP"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP[][] \fBm_nodeSets\fP"
+.br
+.ti -1c
+.RI "int[] \fBm_minDepths\fP"
+.br
+.ti -1c
+.RI "int[] \fBm_maxDepths\fP"
+.br
+.ti -1c
+.RI "int \fBm_maxNodes\fP"
+.br
+.ti -1c
+.RI "Object \fBm_applicationData\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.14 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Base class for GPProgram's\&. See \fBorg\&.jgap\&.gp\&.impl\&.GPProgram\fP for an implementation\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file GPProgramBase\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.GPProgramBase\&.GPProgramBase () throws Exception\fC [inline]\fP"
+Default constructor, only for dynamic instantiation\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 75 of file GPProgramBase\&.java\&.
+.SS "org\&.jgap\&.gp\&.GPProgramBase\&.GPProgramBase (GPConfigurationa_conf) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 79 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_conf\&.
+.SS "org\&.jgap\&.gp\&.GPProgramBase\&.GPProgramBase (\fBIGPProgram\fPa_prog) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 87 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_argTypes, org\&.jgap\&.gp\&.GPProgramBase\&.m_maxDepths, org\&.jgap\&.gp\&.GPProgramBase\&.m_maxNodes, org\&.jgap\&.gp\&.GPProgramBase\&.m_minDepths, org\&.jgap\&.gp\&.GPProgramBase\&.m_nodeSets, and org\&.jgap\&.gp\&.GPProgramBase\&.m_types\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "double org\&.jgap\&.gp\&.GPProgramBase\&.calcFitnessValue ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+fitness value of this program determined via the registered fitness function
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 126 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.getGPConfiguration(), org\&.jgap\&.gp\&.GPProgramBase\&.m_fitnessValue, and org\&.jgap\&.gp\&.GPFitnessFunction\&.NO_FITNESS_VALUE\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.GPProgramBase\&.getFitnessValue()\&.
+.SS "abstract Object org\&.jgap\&.gp\&.GPProgramBase\&.clone ()\fC [pure virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+deep clone of this instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.impl\&.GPProgram\fP\&.
+.SS "boolean org\&.jgap\&.gp\&.GPProgramBase\&.equals (Objecta_other)\fC [inline]\fP"
+Compares this entity against the specified object\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the object to compare against 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: if the objects are the same, false otherwise
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 111 of file GPProgramBase\&.java\&.
+.SS "Object org\&.jgap\&.gp\&.GPProgramBase\&.getApplicationData ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the application data object set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 250 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_applicationData\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.clone()\&.
+.SS "Class [] org\&.jgap\&.gp\&.GPProgramBase\&.getArgType (inta_index)\fC [inline]\fP"
+
+.PP
+Definition at line 192 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_argTypes\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.growOrFull()\&.
+.SS "Class [][] org\&.jgap\&.gp\&.GPProgramBase\&.getArgTypes ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 188 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_argTypes\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.clone(), and org\&.jgap\&.gp\&.impl\&.GPProgram\&.growOrFull()\&.
+.SS "double org\&.jgap\&.gp\&.GPProgramBase\&.getFitnessValue ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+fitness value of this program, cached access
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 149 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.calcFitnessValue(), and org\&.jgap\&.gp\&.GPProgramBase\&.m_fitnessValue\&.
+.SS "double org\&.jgap\&.gp\&.GPProgramBase\&.getFitnessValueDirectly ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+computed fitness value of this program, may be unitialized
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 164 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_fitnessValue\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.clone()\&.
+.SS "GPConfiguration org\&.jgap\&.gp\&.GPProgramBase\&.getGPConfiguration ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 98 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_conf\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.GPProgramBase\&.calcFitnessValue(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.clone(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.growOrFull(), and org\&.jgap\&.gp\&.impl\&.GPProgram\&.putToCache()\&.
+.SS "int [] org\&.jgap\&.gp\&.GPProgramBase\&.getMaxDepths ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 212 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_maxDepths\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.clone(), and org\&.jgap\&.gp\&.impl\&.GPProgram\&.growOrFull()\&.
+.SS "int org\&.jgap\&.gp\&.GPProgramBase\&.getMaxNodes ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 228 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_maxNodes\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.clone()\&.
+.SS "int [] org\&.jgap\&.gp\&.GPProgramBase\&.getMinDepths ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 220 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_minDepths\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.clone(), and org\&.jgap\&.gp\&.impl\&.GPProgram\&.growOrFull()\&.
+.SS "\fBCommandGene\fP [] org\&.jgap\&.gp\&.GPProgramBase\&.getNodeSet (inta_index)\fC [inline]\fP"
+
+.PP
+Definition at line 204 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_nodeSets\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.growOrFull()\&.
+.SS "\fBCommandGene\fP [][] org\&.jgap\&.gp\&.GPProgramBase\&.getNodeSets ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 200 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_nodeSets\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.clone(), and org\&.jgap\&.gp\&.impl\&.GPProgram\&.growOrFull()\&.
+.SS "Class org\&.jgap\&.gp\&.GPProgramBase\&.getType (inta_index)\fC [inline]\fP"
+
+.PP
+Definition at line 180 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_types\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.growOrFull()\&.
+.SS "Class [] org\&.jgap\&.gp\&.GPProgramBase\&.getTypes ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 176 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_types\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.clone(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.GPProgram(), and org\&.jgap\&.gp\&.impl\&.GPProgram\&.growOrFull()\&.
+.SS "void org\&.jgap\&.gp\&.GPProgramBase\&.setApplicationData (Objecta_data)\fC [inline]\fP"
+Sets the application data object\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_data\fP the object to set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 240 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_applicationData\&.
+.SS "void org\&.jgap\&.gp\&.GPProgramBase\&.setArgTypes (Classa_argTypes[][])\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 184 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_argTypes\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.GPProgram()\&.
+.SS "void org\&.jgap\&.gp\&.GPProgramBase\&.setFitnessValue (doublea_fitness)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 168 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_fitnessValue\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.growOrFull()\&.
+.SS "void org\&.jgap\&.gp\&.GPProgramBase\&.setMaxDepths (int[]a_maxDepths)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 208 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_maxDepths\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.GPProgram()\&.
+.SS "void org\&.jgap\&.gp\&.GPProgramBase\&.setMaxNodes (inta_maxNodes)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 224 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_maxNodes\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.GPProgram()\&.
+.SS "void org\&.jgap\&.gp\&.GPProgramBase\&.setMinDepths (int[]a_minDepths)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 216 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_minDepths\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.GPProgram()\&.
+.SS "void org\&.jgap\&.gp\&.GPProgramBase\&.setNodeSets (\fBCommandGene\fPa_nodeSets[][])\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 196 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_nodeSets\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.GPProgram()\&.
+.SS "void org\&.jgap\&.gp\&.GPProgramBase\&.setTypes (Class[]a_types)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 172 of file GPProgramBase\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.m_types\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.GPProgram()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.GPProgramBase\&.CVS_REVISION = '$Revision: 1\&.14 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file GPProgramBase\&.java\&.
+.SS "Object org\&.jgap\&.gp\&.GPProgramBase\&.m_applicationData\fC [private]\fP"
+Free to use data object\&. 
+.PP
+Definition at line 65 of file GPProgramBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.GPProgramBase\&.getApplicationData(), and org\&.jgap\&.gp\&.GPProgramBase\&.setApplicationData()\&.
+.SS "Class [][] org\&.jgap\&.gp\&.GPProgramBase\&.m_argTypes\fC [private]\fP"
+Argument types for ADF's 
+.PP
+Definition at line 39 of file GPProgramBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.GPProgramBase\&.getArgType(), org\&.jgap\&.gp\&.GPProgramBase\&.getArgTypes(), org\&.jgap\&.gp\&.GPProgramBase\&.GPProgramBase(), and org\&.jgap\&.gp\&.GPProgramBase\&.setArgTypes()\&.
+.SS "GPConfiguration org\&.jgap\&.gp\&.GPProgramBase\&.m_conf\fC [private]\fP"
+
+.PP
+Definition at line 29 of file GPProgramBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.GPProgramBase\&.getGPConfiguration(), and org\&.jgap\&.gp\&.GPProgramBase\&.GPProgramBase()\&.
+.SS "double org\&.jgap\&.gp\&.GPProgramBase\&.m_fitnessValue = \fBFitnessFunction\&.NO_FITNESS_VALUE\fP\fC [private]\fP"
+
+.PP
+Definition at line 27 of file GPProgramBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.GPProgramBase\&.calcFitnessValue(), org\&.jgap\&.gp\&.GPProgramBase\&.getFitnessValue(), org\&.jgap\&.gp\&.GPProgramBase\&.getFitnessValueDirectly(), and org\&.jgap\&.gp\&.GPProgramBase\&.setFitnessValue()\&.
+.SS "int [] org\&.jgap\&.gp\&.GPProgramBase\&.m_maxDepths\fC [private]\fP"
+Maximum depth per each chromosome 
+.PP
+Definition at line 54 of file GPProgramBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.GPProgramBase\&.getMaxDepths(), org\&.jgap\&.gp\&.GPProgramBase\&.GPProgramBase(), and org\&.jgap\&.gp\&.GPProgramBase\&.setMaxDepths()\&.
+.SS "int org\&.jgap\&.gp\&.GPProgramBase\&.m_maxNodes\fC [private]\fP"
+Maximum number of nodes allowed per chromosome (when exceeded program aborts) 
+.PP
+Definition at line 60 of file GPProgramBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.GPProgramBase\&.getMaxNodes(), org\&.jgap\&.gp\&.GPProgramBase\&.GPProgramBase(), and org\&.jgap\&.gp\&.GPProgramBase\&.setMaxNodes()\&.
+.SS "int [] org\&.jgap\&.gp\&.GPProgramBase\&.m_minDepths\fC [private]\fP"
+Minimum depth per each chromosome 
+.PP
+Definition at line 49 of file GPProgramBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.GPProgramBase\&.getMinDepths(), org\&.jgap\&.gp\&.GPProgramBase\&.GPProgramBase(), and org\&.jgap\&.gp\&.GPProgramBase\&.setMinDepths()\&.
+.SS "\fBCommandGene\fP [][] org\&.jgap\&.gp\&.GPProgramBase\&.m_nodeSets\fC [private]\fP"
+Available GP-functions\&. 
+.PP
+Definition at line 44 of file GPProgramBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.GPProgramBase\&.getNodeSet(), org\&.jgap\&.gp\&.GPProgramBase\&.getNodeSets(), org\&.jgap\&.gp\&.GPProgramBase\&.GPProgramBase(), and org\&.jgap\&.gp\&.GPProgramBase\&.setNodeSets()\&.
+.SS "Class [] org\&.jgap\&.gp\&.GPProgramBase\&.m_types\fC [private]\fP"
+Return type per chromosome\&. 
+.PP
+Definition at line 34 of file GPProgramBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.GPProgramBase\&.getType(), org\&.jgap\&.gp\&.GPProgramBase\&.getTypes(), org\&.jgap\&.gp\&.GPProgramBase\&.GPProgramBase(), and org\&.jgap\&.gp\&.GPProgramBase\&.setTypes()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

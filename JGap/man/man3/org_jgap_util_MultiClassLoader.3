@@ -1,0 +1,182 @@
+.TH "org.jgap.util.MultiClassLoader" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.util.MultiClassLoader \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits ClassLoader\&.
+.PP
+Inherited by \fBorg\&.jgap\&.util\&.JarClassLoader\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMultiClassLoader\fP ()"
+.br
+.ti -1c
+.RI "Class \fBloadClass\fP (String className)  throws ClassNotFoundException "
+.br
+.ti -1c
+.RI "synchronized Class \fBloadClass\fP (String className, boolean resolveIt)  throws ClassNotFoundException "
+.br
+.ti -1c
+.RI "void \fBsetClassNameReplacementChar\fP (char replacement)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "abstract byte[] \fBloadClassBytes\fP (String className)"
+.br
+.ti -1c
+.RI "String \fBformatClassName\fP (String className)"
+.br
+.ti -1c
+.RI "void \fBmonitor\fP (String text)"
+.br
+.in -1c
+.SS "Static Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBprint\fP (String text)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "boolean \fBmonitorOn\fP = false"
+.br
+.ti -1c
+.RI "boolean \fBsourceMonitorOn\fP = true"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Hashtable \fBclasses\fP = new Hashtable()"
+.br
+.ti -1c
+.RI "char \fBclassNameReplacementChar\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.2 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A simple test class loader capable of loading from multiple sources, such as local files or a URL\&.
+.PP
+This class is derived from an article by Chuck McManis http://www.javaworld.com/javaworld/jw-10-1996/indepth.src.html with large modifications\&.
+.PP
+Note that this has been updated to use the non-deprecated version of defineClass() -- JDM\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Jack Harich - 8/18/97 
+.PP
+John D\&. Mitchell - 99\&.03\&.04 
+.PP
+Klaus Meffert (integrated into JGAP)
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 31 of file MultiClassLoader\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.util\&.MultiClassLoader\&.MultiClassLoader ()\fC [inline]\fP"
+
+.PP
+Definition at line 45 of file MultiClassLoader\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "String org\&.jgap\&.util\&.MultiClassLoader\&.formatClassName (StringclassName)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 112 of file MultiClassLoader\&.java\&.
+.PP
+References org\&.jgap\&.util\&.MultiClassLoader\&.classNameReplacementChar\&.
+.PP
+Referenced by org\&.jgap\&.util\&.JarClassLoader\&.loadClassBytes()\&.
+.SS "Class org\&.jgap\&.util\&.MultiClassLoader\&.loadClass (StringclassName) throws ClassNotFoundException\fC [inline]\fP"
+This is a simple version for external clients since they will always want the class resolved before it is returned to them\&. 
+.PP
+Definition at line 53 of file MultiClassLoader\&.java\&.
+.SS "synchronized Class org\&.jgap\&.util\&.MultiClassLoader\&.loadClass (StringclassName, booleanresolveIt) throws ClassNotFoundException\fC [inline]\fP"
+
+.PP
+Definition at line 58 of file MultiClassLoader\&.java\&.
+.PP
+References org\&.jgap\&.util\&.MultiClassLoader\&.classes, org\&.jgap\&.util\&.MultiClassLoader\&.loadClassBytes(), and org\&.jgap\&.util\&.MultiClassLoader\&.monitor()\&.
+.SS "abstract byte [] org\&.jgap\&.util\&.MultiClassLoader\&.loadClassBytes (StringclassName)\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+Referenced by org\&.jgap\&.util\&.MultiClassLoader\&.loadClass()\&.
+.SS "void org\&.jgap\&.util\&.MultiClassLoader\&.monitor (Stringtext)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 124 of file MultiClassLoader\&.java\&.
+.PP
+References org\&.jgap\&.util\&.MultiClassLoader\&.monitorOn, and org\&.jgap\&.util\&.MultiClassLoader\&.print()\&.
+.PP
+Referenced by org\&.jgap\&.util\&.MultiClassLoader\&.loadClass()\&.
+.SS "static void org\&.jgap\&.util\&.MultiClassLoader\&.print (Stringtext)\fC [inline]\fP, \fC [static]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 129 of file MultiClassLoader\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.MultiClassLoader\&.monitor()\&.
+.SS "void org\&.jgap\&.util\&.MultiClassLoader\&.setClassNameReplacementChar (charreplacement)\fC [inline]\fP"
+This optional call allows a class name such as 'COM\&.test\&.Hello' to be changed to 'COM_test_Hello', which is useful for storing classes from different packages in the same retrival directory\&. In the above example the char would be '_'\&. 
+.PP
+Definition at line 106 of file MultiClassLoader\&.java\&.
+.PP
+References org\&.jgap\&.util\&.MultiClassLoader\&.classNameReplacementChar\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "Hashtable org\&.jgap\&.util\&.MultiClassLoader\&.classes = new Hashtable()\fC [private]\fP"
+
+.PP
+Definition at line 37 of file MultiClassLoader\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.MultiClassLoader\&.loadClass()\&.
+.SS "char org\&.jgap\&.util\&.MultiClassLoader\&.classNameReplacementChar\fC [private]\fP"
+
+.PP
+Definition at line 39 of file MultiClassLoader\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.MultiClassLoader\&.formatClassName(), and org\&.jgap\&.util\&.MultiClassLoader\&.setClassNameReplacementChar()\&.
+.SS "final String org\&.jgap\&.util\&.MultiClassLoader\&.CVS_REVISION = '$Revision: 1\&.2 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 34 of file MultiClassLoader\&.java\&.
+.SS "boolean org\&.jgap\&.util\&.MultiClassLoader\&.monitorOn = false\fC [protected]\fP"
+
+.PP
+Definition at line 41 of file MultiClassLoader\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.MultiClassLoader\&.monitor()\&.
+.SS "boolean org\&.jgap\&.util\&.MultiClassLoader\&.sourceMonitorOn = true\fC [protected]\fP"
+
+.PP
+Definition at line 43 of file MultiClassLoader\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

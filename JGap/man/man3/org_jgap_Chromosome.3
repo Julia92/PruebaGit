@@ -1,0 +1,1299 @@
+.TH "org.jgap.Chromosome" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.Chromosome \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.BaseChromosome\fP\&.
+.PP
+Inherited by \fBorg\&.jgap\&.ChromosomeForTesting\fP, \fBorg\&.jgap\&.ChromosomeForTesting2\fP, and org\&.jgap\&.ChromosomeTest\&.MyChromosome\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChromosome\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBChromosome\fP (final \fBConfiguration\fP a_configuration)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBChromosome\fP (final \fBConfiguration\fP a_configuration, String a_persistentRepresentatuion)  throws InvalidConfigurationException, UnsupportedRepresentationException "
+.br
+.ti -1c
+.RI "\fBChromosome\fP (final \fBConfiguration\fP a_configuration, final int a_desiredSize)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBChromosome\fP (final \fBConfiguration\fP a_configuration, final \fBGene\fP a_sampleGene, final int a_desiredSize)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBChromosome\fP (final \fBConfiguration\fP a_configuration, \fBGene\fP a_sampleGene, int a_desiredSize, \fBIGeneConstraintChecker\fP a_constraintChecker)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBChromosome\fP (final \fBConfiguration\fP a_configuration, \fBGene\fP[] a_initialGenes)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBChromosome\fP (final \fBConfiguration\fP a_configuration, \fBGene\fP[] a_initialGenes, \fBIGeneConstraintChecker\fP a_constraintChecker)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "synchronized Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetFitnessValue\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetFitnessValueDirectly\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetFitnessValue\fP (double a_newFitnessValue)"
+.br
+.ti -1c
+.RI "void \fBsetFitnessValueDirectly\fP (double a_newFitnessValue)"
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object other)"
+.br
+.ti -1c
+.RI "int \fBhashCode\fP ()"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object other)"
+.br
+.ti -1c
+.RI "void \fBsetIsSelectedForNextGeneration\fP (boolean a_isSelected)"
+.br
+.ti -1c
+.RI "boolean \fBisSelectedForNextGeneration\fP ()"
+.br
+.ti -1c
+.RI "void \fBcleanup\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetApplicationData\fP (Object a_newData)"
+.br
+.ti -1c
+.RI "Object \fBgetApplicationData\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetGenes\fP (\fBGene\fP[] a_genes)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBsetCompareApplicationData\fP (boolean a_doCompare)"
+.br
+.ti -1c
+.RI "boolean \fBisCompareApplicationData\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetConstraintChecker\fP (\fBIGeneConstraintChecker\fP a_constraintChecker)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBIGeneConstraintChecker\fP \fBgetConstraintChecker\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisHandlerFor\fP (Object a_obj, Class a_class)"
+.br
+.ti -1c
+.RI "Object \fBperform\fP (Object a_obj, Class a_class, Object a_params)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBsetMultiObjectives\fP (List a_values)"
+.br
+.ti -1c
+.RI "List \fBgetMultiObjectives\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static Object \fBcloneObject\fP (\fBConfiguration\fP a_config, Object a_object, Object a_master)  throws Exception "
+.br
+.ti -1c
+.RI "static \fBIChromosome\fP \fBrandomInitialChromosome\fP (\fBConfiguration\fP a_configuration)  throws InvalidConfigurationException "
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinitFromGene\fP (\fBGene\fP a_sampleGene)"
+.br
+.ti -1c
+.RI "void \fBcheckGenes\fP (\fBGene\fP[] a_initialGenes)"
+.br
+.ti -1c
+.RI "Object \fBcloneObject\fP (Object a_object)  throws Exception "
+.br
+.ti -1c
+.RI "double \fBcalcFitnessValue\fP ()"
+.br
+.ti -1c
+.RI "void \fBverify\fP (\fBIGeneConstraintChecker\fP a_constraintChecker)  throws InvalidConfigurationException "
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBm_fitnessValue\fP = \fBFitnessFunction\&.NO_FITNESS_VALUE\fP"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Object \fBm_applicationData\fP"
+.br
+.ti -1c
+.RI "List \fBm_multiObjective\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_isSelectedForNextGeneration\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_compareAppData\fP"
+.br
+.ti -1c
+.RI "\fBIGeneConstraintChecker\fP \fBm_geneAlleleChecker\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_alwaysCalculate\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.105 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Chromosomes represent potential solutions and consist of a fixed-length collection of genes\&. Each gene represents a discrete part of the solution\&. Each gene in the \fBChromosome\fP may be backed by a different concrete implementation of the \fBGene\fP interface, but all genes in a respective position (locus) must share the same concrete implementation across Chromosomes within a single population (genotype)\&. In other words, gene 1 in a chromosome must share the same concrete implementation as gene 1 in all other chromosomes in the population\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 65 of file Chromosome\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.Chromosome\&.Chromosome () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Default constructor, only provided for dynamic instantiation\&.
+.PP
+Attention: The configuration used is the one set with the static method Genotype\&.setConfiguration\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 141 of file Chromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.clone(), and org\&.jgap\&.Chromosome\&.randomInitialChromosome()\&.
+.SS "org\&.jgap\&.Chromosome\&.Chromosome (final \fBConfiguration\fPa_configuration) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructor, provided for dynamic or minimal instantiation\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 155 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.m_alwaysCalculate\&.
+.SS "org\&.jgap\&.Chromosome\&.Chromosome (final \fBConfiguration\fPa_configuration, Stringa_persistentRepresentatuion) throws \fBInvalidConfigurationException\fP, \fBUnsupportedRepresentationException\fP\fC [inline]\fP"
+Constructor, provided for instantiation via persistent representation\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.br
+\fIa_persistentRepresentatuion\fP valid persistent representation that was most likely obtained via \fBgetPersistentRepresentation()\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.br
+\fI\fBUnsupportedRepresentationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 173 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.setValueFromPersistentRepresentation()\&.
+.SS "org\&.jgap\&.Chromosome\&.Chromosome (final \fBConfiguration\fPa_configuration, final inta_desiredSize) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructor for specifying the number of genes\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.br
+\fIa_desiredSize\fP number of genes the chromosome contains of 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 190 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.setGenes()\&.
+.SS "org\&.jgap\&.Chromosome\&.Chromosome (final \fBConfiguration\fPa_configuration, final \fBGene\fPa_sampleGene, final inta_desiredSize) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a \fBChromosome\fP of the given size separate from any specific \fBConfiguration\fP\&. This constructor will use the given sample \fBGene\fP to construct a new \fBChromosome\fP instance containing genes all of the same type as the sample \fBGene\fP\&. This can be useful for constructing sample chromosomes that use the same \fBGene\fP type for all of their genes and that are to be used to setup a \fBConfiguration\fP object\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.br
+\fIa_sampleGene\fP a concrete sampleGene instance that will be used as a template for all of the genes in this \fBChromosome\fP 
+.br
+\fIa_desiredSize\fP the desired size (number of genes) of this \fBChromosome\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 219 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.initFromGene()\&.
+.SS "org\&.jgap\&.Chromosome\&.Chromosome (final \fBConfiguration\fPa_configuration, \fBGene\fPa_sampleGene, inta_desiredSize, \fBIGeneConstraintChecker\fPa_constraintChecker) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 226 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.initFromGene(), and org\&.jgap\&.Chromosome\&.setConstraintChecker()\&.
+.SS "org\&.jgap\&.Chromosome\&.Chromosome (final \fBConfiguration\fPa_configuration, \fBGene\fP[]a_initialGenes) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a \fBChromosome\fP separate from any specific \fBConfiguration\fP\&. This can be useful for constructing sample chromosomes that are to be used to setup a \fBConfiguration\fP object\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.br
+\fIa_initialGenes\fP the initial genes of this \fBChromosome\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 264 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.checkGenes(), and org\&.jgap\&.Chromosome\&.setGenes()\&.
+.SS "org\&.jgap\&.Chromosome\&.Chromosome (final \fBConfiguration\fPa_configuration, \fBGene\fP[]a_initialGenes, \fBIGeneConstraintChecker\fPa_constraintChecker) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a \fBChromosome\fP separate from any specific \fBConfiguration\fP\&. This can be useful for constructing sample chromosomes that are to be used to setup a \fBConfiguration\fP object\&. Additionally, a constraint checker can be specified\&. It is used right here to verify the validity of the gene types supplied\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.br
+\fIa_initialGenes\fP the initial genes of this \fBChromosome\fP 
+.br
+\fIa_constraintChecker\fP constraint checker to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP in case the constraint checker reports a configuration error
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 287 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.checkGenes(), org\&.jgap\&.Chromosome\&.setConstraintChecker(), and org\&.jgap\&.Chromosome\&.setGenes()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "double org\&.jgap\&.Chromosome\&.calcFitnessValue ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+fitness value of this chromosome determined via the registered fitness function
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 560 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.getConfiguration(), and org\&.jgap\&.Chromosome\&.m_fitnessValue\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.getFitnessValue()\&.
+.SS "void org\&.jgap\&.Chromosome\&.checkGenes (\fBGene\fP[]a_initialGenes)\fC [inline]\fP, \fC [protected]\fP"
+Helper: called by constructors only to verify the initial genes\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_initialGenes\fP the initial genes of this \fBChromosome\fP to verify
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 304 of file Chromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.Chromosome()\&.
+.SS "void org\&.jgap\&.Chromosome\&.cleanup ()\fC [inline]\fP"
+Invoked when this \fBChromosome\fP is no longer needed and should perform any necessary cleanup\&. Note that this method will attempt to release this \fBChromosome\fP instance to the active ChromosomePool, if any\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 928 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.getConfiguration(), org\&.jgap\&.BaseChromosome\&.getGene(), org\&.jgap\&.Chromosome\&.m_fitnessValue, org\&.jgap\&.Chromosome\&.m_isSelectedForNextGeneration, and org\&.jgap\&.BaseChromosome\&.size()\&.
+.SS "synchronized Object org\&.jgap\&.Chromosome\&.clone ()\fC [inline]\fP, \fC [virtual]\fP"
+Returns a copy of this \fBChromosome\fP\&. The returned instance can evolve independently of this instance\&. Note that, if possible, this method will first attempt to acquire a \fBChromosome\fP instance from the active ChromosomePool (if any) and set its value appropriately before returning it\&. If that is not possible, then a new \fBChromosome\fP instance will be constructed and its value set appropriately before returning\&.
+.PP
+\fBReturns:\fP
+.RS 4
+copy of this \fBChromosome\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIllegalStateException\fP instead of CloneNotSupportedException
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+once output a warning: allele should be cloneable! 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.BaseChromosome\fP\&.
+.PP
+Reimplemented in \fBorg\&.jgap\&.ChromosomeForTesting\fP\&.
+.PP
+Definition at line 334 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.Chromosome(), org\&.jgap\&.Chromosome\&.cloneObject(), org\&.jgap\&.Chromosome\&.getApplicationData(), org\&.jgap\&.BaseChromosome\&.getConfiguration(), org\&.jgap\&.Chromosome\&.getConstraintChecker(), org\&.jgap\&.BaseChromosome\&.getGene(), org\&.jgap\&.Chromosome\&.m_fitnessValue, org\&.jgap\&.Chromosome\&.m_multiObjective, and org\&.jgap\&.BaseChromosome\&.size()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GABreeder\&.bulkFunctionEvaluation(), org\&.jgap\&.ChromosomeTest\&.testClone_1(), org\&.jgap\&.ChromosomeTest\&.testClone_2(), org\&.jgap\&.ChromosomeTest\&.testClone_4(), org\&.jgap\&.ChromosomeTest\&.testClone_5(), org\&.jgap\&.ChromosomeTest\&.testClone_6(), org\&.jgap\&.impl\&.AveragingCrossoverOperatorTest\&.testOperate_1(), org\&.jgap\&.impl\&.GaussianMutationOperatorTest\&.testOperate_1(), org\&.jgap\&.impl\&.InversionOperatorTest\&.testOperate_1(), and org\&.jgap\&.impl\&.CrossoverOperatorTest\&.testOperate_1()\&.
+.SS "Object org\&.jgap\&.Chromosome\&.cloneObject (Objecta_object) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Clones an object by using clone handlers\&. If no deep cloning possible, then return the reference\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_object\fP the object to clone 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the cloned object, or the object itself if no coning supported 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 478 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.getConfiguration()\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.clone(), and org\&.jgap\&.Chromosome\&.randomInitialChromosome()\&.
+.SS "static Object org\&.jgap\&.Chromosome\&.cloneObject (\fBConfiguration\fPa_config, Objecta_object, Objecta_master) throws Exception\fC [inline]\fP, \fC [static]\fP"
+Static convenience method\&. Clones an object by using clone handlers\&. If no deep cloning possible, then return the reference\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP a valid configuration to obtain the JGAPFactory from 
+.br
+\fIa_object\fP the object to clone 
+.br
+\fIa_master\fP the super object of a_object, e\&.g\&. a chromosome in case of application to be cloned 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the cloned object, or the object itself if no coning supported 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 498 of file Chromosome\&.java\&.
+.SS "int org\&.jgap\&.Chromosome\&.compareTo (Objectother)\fC [inline]\fP"
+Compares the given \fBChromosome\fP to this \fBChromosome\fP\&. This chromosome is considered to be 'less than' the given chromosome if it has a fewer number of genes or if any of its gene values (alleles) are less than their corresponding gene values in the other chromosome\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIother\fP the \fBChromosome\fP against which to compare this chromosome 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a negative number if this chromosome is 'less than' the given chromosome, zero if they are equal to each other, and a positive number if this chromosome is 'greater than' the given chromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+improve 
+.RE
+.PP
+
+.PP
+Definition at line 816 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.IChromosome\&.getApplicationData(), org\&.jgap\&.Chromosome\&.getApplicationData(), org\&.jgap\&.BaseChromosome\&.getConfiguration(), org\&.jgap\&.IChromosome\&.getFitnessValueDirectly(), org\&.jgap\&.BaseChromosome\&.getGene(), org\&.jgap\&.FitnessEvaluator\&.isFitter(), org\&.jgap\&.Chromosome\&.m_compareAppData, org\&.jgap\&.Chromosome\&.m_fitnessValue, org\&.jgap\&.IChromosome\&.size(), and org\&.jgap\&.BaseChromosome\&.size()\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.equals(), org\&.jgap\&.ChromosomeTest\&.testCompareTo_1(), org\&.jgap\&.ChromosomeTest\&.testCompareTo_2(), org\&.jgap\&.ChromosomeTest\&.testCompareTo_3(), and org\&.jgap\&.ChromosomeTest\&.testCompareTo_4()\&.
+.SS "boolean org\&.jgap\&.Chromosome\&.equals (Objectother)\fC [inline]\fP"
+Compares this \fBChromosome\fP against the specified object\&. The result is true if and the argument is an instance of the \fBChromosome\fP class and has a set of genes equal to this one\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIother\fP the object to compare against 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: if the objects are the same, false otherwise
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 751 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.compareTo()\&.
+.PP
+Referenced by org\&.jgap\&.ChromosomeTest\&.testEquals_0(), org\&.jgap\&.ChromosomeTest\&.testEquals_1(), org\&.jgap\&.ChromosomeTest\&.testEquals_2(), org\&.jgap\&.ChromosomeTest\&.testEquals_3(), org\&.jgap\&.xml\&.XMLManagerTest\&.testGetChromosomeFromDocument_1(), and org\&.jgap\&.PopulationTest\&.testSetChromosome_1()\&.
+.SS "Object org\&.jgap\&.Chromosome\&.getApplicationData ()\fC [inline]\fP"
+Retrieves the application-specific data that is attached to this \fBChromosome\fP\&. Attaching application-specific data may be useful for some applications when it comes time to evaluate this \fBChromosome\fP in the fitness function\&. JGAP ignores this data functionally\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the application-specific data previously attached to this \fBChromosome\fP, or null if there is no data attached
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 993 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.m_applicationData\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.clone(), org\&.jgap\&.Chromosome\&.compareTo(), and org\&.jgap\&.Chromosome\&.toString()\&.
+.SS "\fBIGeneConstraintChecker\fP org\&.jgap\&.Chromosome\&.getConstraintChecker ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+\fBIGeneConstraintChecker\fP the constraint checker to be used whenever method \fBsetGenes(Gene[])\fP is called\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 1059 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.m_geneAlleleChecker\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.clone(), org\&.jgap\&.Chromosome\&.setGenes(), org\&.jgap\&.ChromosomeTest\&.testSetConstraintChecker_0(), org\&.jgap\&.ChromosomeTest\&.testSetConstraintChecker_1(), and org\&.jgap\&.ChromosomeTest\&.testSetConstraintChecker_2()\&.
+.SS "double org\&.jgap\&.Chromosome\&.getFitnessValue ()\fC [inline]\fP"
+Retrieves the fitness value of this \fBChromosome\fP, as determined by the active fitness function\&. If a bulk fitness function is in use and has not yet assigned a fitness value to this \fBChromosome\fP, then -1 is returned\&.
+.PP
+Attention: should not be called from \fBtoString()\fP as the fitness value would be computed if it was initial!
+.PP
+\fBReturns:\fP
+.RS 4
+a positive double value representing the fitness of this \fBChromosome\fP, or -1 if a bulk fitness function is in use and has not yet assigned a fitness value to this \fBChromosome\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 534 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.calcFitnessValue(), org\&.jgap\&.Chromosome\&.m_alwaysCalculate, and org\&.jgap\&.Chromosome\&.m_fitnessValue\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BulkFitnessOffsetRemoverTest\&.testEvaluate_3(), and org\&.jgap\&.impl\&.BulkFitnessOffsetRemoverTest\&.testGetAbsoluteFitness_0()\&.
+.SS "double org\&.jgap\&.Chromosome\&.getFitnessValueDirectly ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the lastly computed fitness value, or \fBFitnessFunction\&.NO_FITNESS_VALUE\fP in case no value has been computed yet\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 549 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.m_fitnessValue\&.
+.SS "List org\&.jgap\&.Chromosome\&.getMultiObjectives ()\fC [inline]\fP"
+
+.PP
+Definition at line 1121 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.m_multiObjective\&.
+.PP
+Referenced by org\&.jgap\&.ChromosomeTest\&.testSetMultiObjectives_0()\&.
+.SS "int org\&.jgap\&.Chromosome\&.hashCode ()\fC [inline]\fP"
+Retrieve a hash code for this \fBChromosome\fP\&. Does not considers the order of the Genes for all cases (especially when gene is empty)\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the hash code of this \fBChromosome\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 780 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.getGene(), org\&.jgap\&.BaseChromosome\&.getGenes(), and org\&.jgap\&.BaseChromosome\&.size()\&.
+.SS "void org\&.jgap\&.Chromosome\&.initFromGene (\fBGene\fPa_sampleGene)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 235 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Gene\&.newGene(), org\&.jgap\&.BaseChromosome\&.setGene(), and org\&.jgap\&.BaseChromosome\&.size()\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.Chromosome()\&.
+.SS "boolean org\&.jgap\&.Chromosome\&.isCompareApplicationData ()\fC [inline]\fP"
+
+.PP
+Definition at line 1032 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.m_compareAppData\&.
+.PP
+Referenced by org\&.jgap\&.ChromosomeTest\&.testSetCompareApplicationData_0()\&.
+.SS "boolean org\&.jgap\&.Chromosome\&.isHandlerFor (Objecta_obj, Classa_class)\fC [inline]\fP"
+Determines whether the handler is suitable for the given object instance or class\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_obj\fP the object instance to check 
+.br
+\fIa_class\fP the class to check, alternatively if no object instance is available (some handlers could need to get an object and would always return false if only a class is provided) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: handler suitable for given object or class
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6
+.RE
+.PP
+ 
+.PP
+Implements \fBorg\&.jgap\&.IHandler\fP\&.
+.PP
+Definition at line 1095 of file Chromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.ChromosomeTest\&.testIsHandlerFor_0()\&.
+.SS "boolean org\&.jgap\&.Chromosome\&.isSelectedForNextGeneration ()\fC [inline]\fP"
+Retrieves whether this \fBChromosome\fP has been selected by the natural selector to continue to the next generation\&.
+.PP
+\fBReturns:\fP
+.RS 4
+true if this \fBChromosome\fP has been selected, false otherwise
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 916 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.m_isSelectedForNextGeneration\&.
+.SS "Object org\&.jgap\&.Chromosome\&.perform (Objecta_obj, Classa_class, Objecta_params) throws Exception\fC [inline]\fP"
+Performs a task for the given object or class\&. For some handlers, additional parameters are necessary, which could be provided\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_obj\fP the object instance to perform the handler task for 
+.br
+\fIa_class\fP the class to perform the handler task for, in case no object instance is available (some handlers could need to get an object and would always throw an exception if only a class is provided) 
+.br
+\fIa_params\fP optional parameters needed for the handler to perform its task 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP in case of any error 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6
+.RE
+.PP
+ 
+.PP
+Implements \fBorg\&.jgap\&.IHandler\fP\&.
+.PP
+Definition at line 1105 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.getConfiguration(), and org\&.jgap\&.Chromosome\&.randomInitialChromosome()\&.
+.PP
+Referenced by org\&.jgap\&.ChromosomeTest\&.testIsHandlerFor_0()\&.
+.SS "static \fBIChromosome\fP org\&.jgap\&.Chromosome\&.randomInitialChromosome (\fBConfiguration\fPa_configuration) throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [static]\fP"
+Convenience method that returns a new \fBChromosome\fP instance with its genes values (alleles) randomized\&. Note that, if possible, this method will acquire a \fBChromosome\fP instance from the active ChromosomePool (if any) and then randomize its gene values before returning it\&. If a \fBChromosome\fP cannot be acquired from the pool, then a new instance will be constructed and its gene values randomized before returning it\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+randomly initialized \fBChromosome\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP if the given \fBConfiguration\fP instance is invalid 
+.br
+\fIIllegalArgumentException\fP if the given \fBConfiguration\fP instance is null
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+what about \fBGene\fP's energy? 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+what about \fBGene\fP's energy? 
+.RE
+.PP
+
+.PP
+Definition at line 668 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.Chromosome(), org\&.jgap\&.Chromosome\&.cloneObject(), and org\&.jgap\&.FitnessFunction\&.NO_FITNESS_VALUE\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.perform(), and org\&.jgap\&.ChromosomeTest\&.testSetCompareApplicationData_0()\&.
+.SS "void org\&.jgap\&.Chromosome\&.setApplicationData (Objecta_newData)\fC [inline]\fP"
+This sets the application-specific data that is attached to this \fBChromosome\fP\&. Attaching application-specific data may be useful for some applications when it comes time to evaluate this \fBChromosome\fP in the fitness function\&. JGAP ignores this data, except for cloning and comparison (latter only if opted in via setCompareApplicationData(\&.\&.))
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_newData\fP the new application-specific data to attach to this \fBChromosome\fP\&. Should be an instance of \fBIApplicationData\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 977 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.m_applicationData\&.
+.SS "void org\&.jgap\&.Chromosome\&.setCompareApplicationData (booleana_doCompare)\fC [inline]\fP"
+Should we also consider the application data when comparing? Default is 'false' as 'true' means a \fBChromosome\fP is losing its identity when application data is set differently!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_doCompare\fP true: consider application data in method compareTo
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 1022 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.m_compareAppData\&.
+.SS "void org\&.jgap\&.Chromosome\&.setConstraintChecker (\fBIGeneConstraintChecker\fPa_constraintChecker) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Sets the constraint checker to be used for this gene whenever method setAllele(Object) is called\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_constraintChecker\fP the constraint checker to be set 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.5 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1046 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.m_geneAlleleChecker, and org\&.jgap\&.Chromosome\&.verify()\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.Chromosome()\&.
+.SS "void org\&.jgap\&.Chromosome\&.setFitnessValue (doublea_newFitnessValue)\fC [inline]\fP"
+Sets the fitness value of this \fBChromosome\fP\&. This method is for use by bulk fitness functions and should not be invoked from anything else (except test cases)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_newFitnessValue\fP a positive integer representing the fitness of this \fBChromosome\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 585 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.m_fitnessValue\&.
+.SS "void org\&.jgap\&.Chromosome\&.setFitnessValueDirectly (doublea_newFitnessValue)\fC [inline]\fP"
+Sets the fitness value of this \fBChromosome\fP directly without any constraint checks, conversions or checks\&. Only use if you know what you do\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_newFitnessValue\fP a positive integer representing the fitness of this \fBChromosome\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 602 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.m_fitnessValue\&.
+.SS "void org\&.jgap\&.Chromosome\&.setGenes (\fBGene\fP[]a_genes) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Sets the genes for the chromosome\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_genes\fP the genes to set for the chromosome
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP in case constraint checker is provided
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1006 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.getConstraintChecker(), and org\&.jgap\&.Chromosome\&.verify()\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.Chromosome()\&.
+.SS "void org\&.jgap\&.Chromosome\&.setIsSelectedForNextGeneration (booleana_isSelected)\fC [inline]\fP"
+Sets whether this \fBChromosome\fP has been selected by the natural selector to continue to the next generation or manually (e\&.g\&. via an add-method)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_isSelected\fP true if this \fBChromosome\fP has been selected, false otherwise
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 903 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.m_isSelectedForNextGeneration\&.
+.SS "void org\&.jgap\&.Chromosome\&.setMultiObjectives (Lista_values)\fC [inline]\fP"
+
+.PP
+Definition at line 1113 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.m_multiObjective\&.
+.SS "String org\&.jgap\&.Chromosome\&.toString ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+a string representation of this \fBChromosome\fP, useful for display purposes
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 614 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.getApplicationData(), org\&.jgap\&.BaseChromosome\&.getGene(), org\&.jgap\&.Chromosome\&.m_fitnessValue, org\&.jgap\&.IChromosome\&.S_ALLELES, org\&.jgap\&.IChromosome\&.S_APPLICATION_DATA, org\&.jgap\&.IChromosome\&.S_FITNESS_VALUE, org\&.jgap\&.IChromosome\&.S_SIZE, and org\&.jgap\&.BaseChromosome\&.size()\&.
+.SS "void org\&.jgap\&.Chromosome\&.verify (\fBIGeneConstraintChecker\fPa_constraintChecker) throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [protected]\fP"
+Verifies the state of the chromosome\&. Especially takes care of the given constraint checker\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_constraintChecker\fP the constraint checker to verify
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 1073 of file Chromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.getGene(), and org\&.jgap\&.BaseChromosome\&.getGenes()\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.setConstraintChecker(), and org\&.jgap\&.Chromosome\&.setGenes()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.Chromosome\&.CVS_REVISION = '$Revision: 1\&.105 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 68 of file Chromosome\&.java\&.
+.SS "boolean org\&.jgap\&.Chromosome\&.m_alwaysCalculate\fC [private]\fP"
+If set to true the method \fBgetFitnessValue()\fP will always (re-)calculate the fitness value\&. This may be necessary in case of environments where the state changes without the chromosome to notice
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 129 of file Chromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.Chromosome(), and org\&.jgap\&.Chromosome\&.getFitnessValue()\&.
+.SS "Object org\&.jgap\&.Chromosome\&.m_applicationData\fC [private]\fP"
+Application-specific data that is attached to this \fBChromosome\fP\&. This data may assist the application in evaluating this \fBChromosome\fP in the fitness function\&. JGAP does not operate on the data, aside from allowing it to be set and retrieved, and considering it with comparations (if user opted in to do so)\&. 
+.PP
+Definition at line 77 of file Chromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.getApplicationData(), and org\&.jgap\&.Chromosome\&.setApplicationData()\&.
+.SS "boolean org\&.jgap\&.Chromosome\&.m_compareAppData\fC [private]\fP"
+Method \fBcompareTo()\fP: Should we also consider the application data when comparing? Default is 'false', as 'true' means a \fBChromosome\fP's losing its identity when application data is set differently!
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 111 of file Chromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.compareTo(), org\&.jgap\&.Chromosome\&.isCompareApplicationData(), and org\&.jgap\&.Chromosome\&.setCompareApplicationData()\&.
+.SS "double org\&.jgap\&.Chromosome\&.m_fitnessValue = \fBFitnessFunction\&.NO_FITNESS_VALUE\fP\fC [protected]\fP"
+Stores the fitness value of this \fBChromosome\fP as determined by the active fitness function\&. A value of -1 indicates that this field has not yet been set with this \fBChromosome\fP's fitness values (valid fitness values are always positive)\&.
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 (until 1\&.1: type int) 
+.RE
+.PP
+
+.PP
+Definition at line 102 of file Chromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.calcFitnessValue(), org\&.jgap\&.Chromosome\&.cleanup(), org\&.jgap\&.Chromosome\&.clone(), org\&.jgap\&.Chromosome\&.compareTo(), org\&.jgap\&.ChromosomeForTesting\&.getFitnessValue(), org\&.jgap\&.Chromosome\&.getFitnessValue(), org\&.jgap\&.Chromosome\&.getFitnessValueDirectly(), org\&.jgap\&.Chromosome\&.setFitnessValue(), org\&.jgap\&.Chromosome\&.setFitnessValueDirectly(), and org\&.jgap\&.Chromosome\&.toString()\&.
+.SS "\fBIGeneConstraintChecker\fP org\&.jgap\&.Chromosome\&.m_geneAlleleChecker\fC [private]\fP"
+Optional helper class for checking if a given allele value to be set for a given gene is valid\&. If not, the allele value may not be set for the gene or the gene type (e\&.g\&. IntegerGene) is not allowed in general!
+.PP
+\fBSince:\fP
+.RS 4
+2\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 120 of file Chromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.getConstraintChecker(), and org\&.jgap\&.Chromosome\&.setConstraintChecker()\&.
+.SS "boolean org\&.jgap\&.Chromosome\&.m_isSelectedForNextGeneration\fC [private]\fP"
+Keeps track of whether or not this \fBChromosome\fP has been selected by the natural selector to move on to the next generation\&. 
+.PP
+Definition at line 92 of file Chromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.cleanup(), org\&.jgap\&.Chromosome\&.isSelectedForNextGeneration(), and org\&.jgap\&.Chromosome\&.setIsSelectedForNextGeneration()\&.
+.SS "List org\&.jgap\&.Chromosome\&.m_multiObjective\fC [private]\fP"
+Holds multiobjective values\&.
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+move to new subclass of \fBChromosome\fP (and introduce new interface IMultiObjective with that) 
+.RE
+.PP
+
+.PP
+Definition at line 86 of file Chromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.clone(), org\&.jgap\&.Chromosome\&.getMultiObjectives(), and org\&.jgap\&.Chromosome\&.setMultiObjectives()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

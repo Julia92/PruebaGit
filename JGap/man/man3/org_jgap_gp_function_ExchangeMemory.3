@@ -1,0 +1,255 @@
+.TH "org.jgap.gp.function.ExchangeMemory" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.function.ExchangeMemory \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandGene\fP, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBExchangeMemory\fP (final GPConfiguration a_conf, String a_firstStorageName, String a_secondStorageName)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "void \fBexecute_void\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "boolean \fBisAffectGlobalState\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisValid\fP (ProgramChromosome a_program)"
+.br
+.ti -1c
+.RI "Class \fBgetChildType\fP (\fBIGPProgram\fP a_ind, int a_chromNum)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "String \fBm_sourceStorageName\fP"
+.br
+.ti -1c
+.RI "String \fBm_targetStorageName\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.4 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Exchanges the values of two memory cells\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file ExchangeMemory\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.ExchangeMemory (final GPConfigurationa_conf, Stringa_firstStorageName, Stringa_secondStorageName) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 37 of file ExchangeMemory\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.m_sourceStorageName, org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.m_targetStorageName, and org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.clone(), org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.compareTo(), and org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.equals()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.clone ()\fC [inline]\fP"
+Clones the object\&. Simple and straight forward implementation here\&.
+.PP
+\fBReturns:\fP
+.RS 4
+cloned instance of this object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 164 of file ExchangeMemory\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.ExchangeMemory(), org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.m_sourceStorageName, and org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.m_targetStorageName\&.
+.SS "int org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.compareTo (Objecta_other)\fC [inline]\fP"
+The compareTo-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+-1, 0, 1
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 117 of file ExchangeMemory\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.ExchangeMemory(), org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.m_sourceStorageName, and org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.m_targetStorageName\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.equals (Objecta_other)\fC [inline]\fP"
+The equals-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the objects are seen as equal
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 139 of file ExchangeMemory\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.ExchangeMemory(), org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.m_sourceStorageName, and org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.m_targetStorageName\&.
+.SS "void org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.execute_void (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 76 of file ExchangeMemory\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.m_sourceStorageName, and org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.m_targetStorageName\&.
+.SS "Class org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.getChildType (\fBIGPProgram\fPa_ind, inta_chromNum)\fC [inline]\fP"
+
+.PP
+Definition at line 104 of file ExchangeMemory\&.java\&.
+.SS "String org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.getName ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+textual name of this command
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 72 of file ExchangeMemory\&.java\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.isAffectGlobalState ()\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+subclass from new abstract class MemoryCommand? 
+.RE
+.PP
+
+.PP
+Definition at line 95 of file ExchangeMemory\&.java\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.isValid (ProgramChromosomea_program)\fC [inline]\fP"
+
+.PP
+Definition at line 100 of file ExchangeMemory\&.java\&.
+.SS "String org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 58 of file ExchangeMemory\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.m_sourceStorageName, and org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.m_targetStorageName\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.CVS_REVISION = '$Revision: 1\&.4 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 27 of file ExchangeMemory\&.java\&.
+.SS "String org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.m_sourceStorageName\fC [private]\fP"
+Symbolic name of the storage\&. Must correspond with a chosen name for ReadTerminalCommand\&. 
+.PP
+Definition at line 33 of file ExchangeMemory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.clone(), org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.compareTo(), org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.equals(), org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.ExchangeMemory(), org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.execute_void(), and org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.toString()\&.
+.SS "String org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.m_targetStorageName\fC [private]\fP"
+
+.PP
+Definition at line 35 of file ExchangeMemory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.clone(), org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.compareTo(), org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.equals(), org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.ExchangeMemory(), org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.execute_void(), and org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.toString()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

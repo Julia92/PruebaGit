@@ -1,0 +1,231 @@
+.TH "org.jgap.impl.NumberGene" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.NumberGene \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Inherited by \fBorg\&.jgap\&.impl\&.DoubleGene\fP, \fBorg\&.jgap\&.impl\&.IntegerGene\fP, \fBorg\&.jgap\&.impl\&.MutipleIntegerGene\fP, and \fBorg\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNumberGene\fP (\fBConfiguration\fP a_config)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (final Object a_other)"
+.br
+.ti -1c
+.RI "void \fBsetAllele\fP (final Object a_newValue)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "abstract int \fBcompareToNative\fP (Object a_o1, Object a_o2)"
+.br
+.ti -1c
+.RI "abstract void \fBmapValueToWithinBounds\fP ()"
+.br
+.ti -1c
+.RI "Object \fBgetInternalValue\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Object \fBm_value\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.23 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Base class for all Genes based on numbers\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 (most code moved and adapted from \fBIntegerGene\fP) 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file NumberGene\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.NumberGene\&.NumberGene (\fBConfiguration\fPa_config) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 31 of file NumberGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.NumberGene\&.compareTo()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int org\&.jgap\&.impl\&.NumberGene\&.compareTo (final Objecta_other)\fC [inline]\fP"
+Compares this \fBNumberGene\fP with the specified object (which must also be a \fBNumberGene\fP) for order, which is determined by the number value of this \fBGene\fP compared to the one provided for comparison\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the \fBNumberGene\fP to be compared to this \fBNumberGene\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a negative integer, zero, or a positive integer as this object is less than, equal to, or greater than the object provided for comparison
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIClassCastException\fP if the specified object's type prevents it from being compared to this \fBNumberGene\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 50 of file NumberGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.compareApplicationData(), org\&.jgap\&.impl\&.NumberGene\&.compareToNative(), org\&.jgap\&.BaseGene\&.getApplicationData(), org\&.jgap\&.BaseGene\&.isCompareApplicationData(), org\&.jgap\&.impl\&.NumberGene\&.m_value, and org\&.jgap\&.impl\&.NumberGene\&.NumberGene()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.equals()\&.
+.SS "abstract int org\&.jgap\&.impl\&.NumberGene\&.compareToNative (Objecta_o1, Objecta_o2)\fC [protected]\fP, \fC [pure virtual]\fP"
+Compares to objects by first casting them into their expected type (e\&.g\&. Integer for \fBIntegerGene\fP) and then calling the compareTo-method of the casted type\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_o1\fP first object to be compared, always is not null 
+.br
+\fIa_o2\fP second object to be compared, always is not null 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a negative integer, zero, or a positive integer as this object is less than, equal to, or greater than the object provided for comparison
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\fP, and \fBorg\&.jgap\&.impl\&.DoubleGene\fP\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.NumberGene\&.compareTo()\&.
+.SS "Object org\&.jgap\&.impl\&.NumberGene\&.getInternalValue ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Each \fBGene\fP implementation holds its own m_value object keeping the allele value\&. In your \fBGene\fP implementation, just return it with this method (see \fBorg\&.jgap\&.impl\&.BooleanGene\fP for example) 
+.PP
+\fBReturns:\fP
+.RS 4
+the m_value object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Definition at line 165 of file NumberGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.NumberGene\&.m_value\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.DoubleGene\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.IntegerGene\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.MutipleIntegerGene\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.DoubleGene\&.hashCode(), org\&.jgap\&.impl\&.IntegerGene\&.hashCode(), org\&.jgap\&.impl\&.MutipleIntegerGene\&.hashCode(), org\&.jgap\&.impl\&.DoubleGene\&.toString(), org\&.jgap\&.impl\&.IntegerGene\&.toString(), and org\&.jgap\&.impl\&.MutipleIntegerGene\&.toString()\&.
+.SS "abstract void org\&.jgap\&.impl\&.NumberGene\&.mapValueToWithinBounds ()\fC [protected]\fP, \fC [pure virtual]\fP"
+Maps the value of this \fBNumberGene\fP to within the bounds specified by the m_upperBounds and m_lowerBounds instance variables\&. The value's relative position within the integer range will be preserved within the bounds range (in other words, if the value is about halfway between the integer max and min, then the resulting value will be about halfway between the upper bounds and lower bounds)\&. If the value is null or is already within the bounds, it will be left unchanged\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\fP, \fBorg\&.jgap\&.impl\&.MutipleIntegerGene\fP, \fBorg\&.jgap\&.impl\&.IntegerGene\fP, and \fBorg\&.jgap\&.impl\&.DoubleGene\fP\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.NumberGene\&.setAllele()\&.
+.SS "void org\&.jgap\&.impl\&.NumberGene\&.setAllele (final Objecta_newValue)\fC [inline]\fP"
+Sets the value (allele) of this \fBGene\fP to the new given value\&. This class expects the value to be an instance of current type (e\&.g\&. Integer)\&. If the value is above or below the upper or lower bounds, it will be mappped to within the allowable range\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_newValue\fP the new value of this \fBGene\fP instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 138 of file NumberGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getConstraintChecker(), org\&.jgap\&.impl\&.NumberGene\&.m_value, and org\&.jgap\&.impl\&.NumberGene\&.mapValueToWithinBounds()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.DoubleGene\&.applyMutation(), org\&.jgap\&.impl\&.IntegerGene\&.applyMutation(), org\&.jgap\&.impl\&.MutipleIntegerGene\&.applyMutation(), org\&.jgap\&.impl\&.DoubleGene\&.mapValueToWithinBounds(), org\&.jgap\&.impl\&.IntegerGene\&.mapValueToWithinBounds(), org\&.jgap\&.impl\&.MutipleIntegerGene\&.mapValueToWithinBounds(), org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.mapValueToWithinBounds(), org\&.jgap\&.impl\&.DoubleGene\&.setToRandomValue(), org\&.jgap\&.impl\&.IntegerGene\&.setToRandomValue(), org\&.jgap\&.impl\&.MutipleIntegerGene\&.setToRandomValue(), org\&.jgap\&.impl\&.DoubleGene\&.setValueFromPersistentRepresentation(), org\&.jgap\&.impl\&.IntegerGene\&.setValueFromPersistentRepresentation(), and org\&.jgap\&.impl\&.MutipleIntegerGene\&.setValueFromPersistentRepresentation()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.NumberGene\&.CVS_REVISION = '$Revision: 1\&.23 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 23 of file NumberGene\&.java\&.
+.SS "Object org\&.jgap\&.impl\&.NumberGene\&.m_value\fC [private]\fP"
+References the internal value (allele) of this \fBGene\fP E\&.g\&., for \fBDoubleGene\fP this is of type Double 
+.PP
+Definition at line 29 of file NumberGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.NumberGene\&.compareTo(), org\&.jgap\&.impl\&.NumberGene\&.getInternalValue(), and org\&.jgap\&.impl\&.NumberGene\&.setAllele()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

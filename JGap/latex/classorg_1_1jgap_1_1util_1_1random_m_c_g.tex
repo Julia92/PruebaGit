@@ -1,0 +1,155 @@
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_m_c_g}{\section{org.\-jgap.\-util.\-random\-M\-C\-G Class Reference}
+\label{classorg_1_1jgap_1_1util_1_1random_m_c_g}\index{org.\-jgap.\-util.\-random\-M\-C\-G@{org.\-jgap.\-util.\-random\-M\-C\-G}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-util.\-random\-M\-C\-G\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classorg_1_1jgap_1_1util_1_1random_m_c_g__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-util.\-random\-M\-C\-G\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classorg_1_1jgap_1_1util_1_1random_m_c_g__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1util_1_1random_m_c_g_a4d8d49f42596799eaff242af6b071244}{random\-M\-C\-G} ()
+\item 
+\hyperlink{classorg_1_1jgap_1_1util_1_1random_m_c_g_aba47f0417c2e9b719d2867b4ebf01368}{random\-M\-C\-G} (long seed)  throws Illegal\-Argument\-Exception 
+\item 
+void \hyperlink{classorg_1_1jgap_1_1util_1_1random_m_c_g_a57fb7f7f8bd68b98efa56a91f4aa98ea}{set\-Seed} (long seed)  throws Illegal\-Argument\-Exception 
+\item 
+byte \hyperlink{classorg_1_1jgap_1_1util_1_1random_m_c_g_acb654143cff19333454f9be140a66092}{next\-Byte} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of a {\bfseries \hyperlink{classorg_1_1jgap_1_1util_1_1random_x}{random\-X}}-\/compliant class using the \char`\"{}\-Minimal Standard\char`\"{} multiplicative congruential generator of Park and Miller. \mbox{[}Park, S.\-K. and K.\-W. Miller, $<$cite$>$Communications of the A\-C\-M$<$/cite$>$ {\bfseries 31}, 1192-\/1201 (1988).\mbox{]}
+
+The generation algorithm is\-:
+
+\begin{center} {\itshape I$_{\mbox{j+1}}$ } = ({\itshape I$_{\mbox{j}}$ } × 16807) \& 0x7\-F\-F\-F\-F\-F\-F\-F \end{center} 
+
+Note that the intermediate value of the multiplication by 16807 (7$^{\mbox{5}}$ ) exceeds that representable in 32 bits; this has deterred use of this generator in most portable languages. Fortunately, Java's {\ttfamily long} type is guaranteed to be 64 bits, so a straightforward and portable implementation is possible.
+
+Designed and implemented in July 1996 by \href{http://www.fourmilab.ch/}{\tt John Walker}, \href{mailto:kelvin@fourmilab.ch}{\tt kelvin@fourmilab.\-ch}. 
+
+Definition at line 31 of file random\-M\-C\-G.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_m_c_g_a4d8d49f42596799eaff242af6b071244}{\index{org\-::jgap\-::util\-::random\-M\-C\-G@{org\-::jgap\-::util\-::random\-M\-C\-G}!random\-M\-C\-G@{random\-M\-C\-G}}
+\index{random\-M\-C\-G@{random\-M\-C\-G}!org::jgap::util::randomMCG@{org\-::jgap\-::util\-::random\-M\-C\-G}}
+\subsubsection[{random\-M\-C\-G}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-util.\-random\-M\-C\-G.\-random\-M\-C\-G (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1random_m_c_g_a4d8d49f42596799eaff242af6b071244}
+Creates a new pseudorandom number generator, seeded from the current time. 
+
+Definition at line 39 of file random\-M\-C\-G.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_m_c_g_aba47f0417c2e9b719d2867b4ebf01368}{\index{org\-::jgap\-::util\-::random\-M\-C\-G@{org\-::jgap\-::util\-::random\-M\-C\-G}!random\-M\-C\-G@{random\-M\-C\-G}}
+\index{random\-M\-C\-G@{random\-M\-C\-G}!org::jgap::util::randomMCG@{org\-::jgap\-::util\-::random\-M\-C\-G}}
+\subsubsection[{random\-M\-C\-G}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-util.\-random\-M\-C\-G.\-random\-M\-C\-G (
+\begin{DoxyParamCaption}
+\item[{long}]{seed}
+\end{DoxyParamCaption}
+) throws Illegal\-Argument\-Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1random_m_c_g_aba47f0417c2e9b719d2867b4ebf01368}
+\begin{DoxyVerb}    Creates a new pseudorandom number generator with a
+    specified nonzero seed.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & initial seed for the generator \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 49 of file random\-M\-C\-G.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_m_c_g_acb654143cff19333454f9be140a66092}{\index{org\-::jgap\-::util\-::random\-M\-C\-G@{org\-::jgap\-::util\-::random\-M\-C\-G}!next\-Byte@{next\-Byte}}
+\index{next\-Byte@{next\-Byte}!org::jgap::util::randomMCG@{org\-::jgap\-::util\-::random\-M\-C\-G}}
+\subsubsection[{next\-Byte}]{\setlength{\rightskip}{0pt plus 5cm}byte org.\-jgap.\-util.\-random\-M\-C\-G.\-next\-Byte (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classorg_1_1jgap_1_1util_1_1random_m_c_g_acb654143cff19333454f9be140a66092}
+\begin{DoxyVerb}    Get next byte from generator.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+the next byte from the generator. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classorg_1_1jgap_1_1util_1_1random_x_a3ef715392cb00b38bba43e5abc5ab845}{org.\-jgap.\-util.\-random\-X}.
+
+
+
+Definition at line 79 of file random\-M\-C\-G.\-java.
+
+
+
+Referenced by org.\-jgap.\-util.\-random\-M\-C\-G.\-set\-Seed().
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_m_c_g_a57fb7f7f8bd68b98efa56a91f4aa98ea}{\index{org\-::jgap\-::util\-::random\-M\-C\-G@{org\-::jgap\-::util\-::random\-M\-C\-G}!set\-Seed@{set\-Seed}}
+\index{set\-Seed@{set\-Seed}!org::jgap::util::randomMCG@{org\-::jgap\-::util\-::random\-M\-C\-G}}
+\subsubsection[{set\-Seed}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-util.\-random\-M\-C\-G.\-set\-Seed (
+\begin{DoxyParamCaption}
+\item[{long}]{seed}
+\end{DoxyParamCaption}
+) throws Illegal\-Argument\-Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1random_m_c_g_a57fb7f7f8bd68b98efa56a91f4aa98ea}
+\begin{DoxyVerb}    Set seed for generator.  Subsequent values will be based
+    on the given nonzero seed.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & seed for the generator \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 61 of file random\-M\-C\-G.\-java.
+
+
+
+References org.\-jgap.\-util.\-random\-M\-C\-G.\-next\-Byte().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1util_1_1random_m_c_g_a57fb7f7f8bd68b98efa56a91f4aa98ea_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/util/\hyperlink{random_m_c_g_8java}{random\-M\-C\-G.\-java}\end{DoxyCompactItemize}

@@ -1,0 +1,604 @@
+.TH "org.jgap.impl.MapGene" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.MapGene \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.BaseGene\fP, and \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMapGene\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBMapGene\fP (final \fBConfiguration\fP a_config)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBMapGene\fP (final \fBConfiguration\fP a_config, final Map a_alleles)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBaddAllele\fP (final Object a_key, final Object a_value)"
+.br
+.ti -1c
+.RI "void \fBaddAllele\fP (final Object a_value)"
+.br
+.ti -1c
+.RI "void \fBaddAllele\fP (final int a_value)"
+.br
+.ti -1c
+.RI "void \fBaddAlleles\fP (final Map a_alleles)"
+.br
+.ti -1c
+.RI "void \fBremoveAlleles\fP (final Object a_key)"
+.br
+.ti -1c
+.RI "Map \fBgetAlleles\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetToRandomValue\fP (final \fBRandomGenerator\fP a_numberGenerator)"
+.br
+.ti -1c
+.RI "void \fBapplyMutation\fP (final int a_index, final double a_percentage)"
+.br
+.ti -1c
+.RI "void \fBsetValueFromPersistentRepresentation\fP (final String a_representation)  throws UnsupportedRepresentationException "
+.br
+.ti -1c
+.RI "String \fBgetPersistentRepresentation\fP ()  throws UnsupportedOperationException "
+.br
+.ti -1c
+.RI "void \fBsetAllele\fP (Object a_newValue)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "int \fBhashCode\fP ()"
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGene\fP \fBnewGeneInternal\fP ()"
+.br
+.ti -1c
+.RI "Object \fBgetInternalValue\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "THashMap \fBm_geneMap\fP"
+.br
+.ti -1c
+.RI "Object \fBm_value\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.26 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Creates a gene instance in which individual alleles have both a label (key) and a value with a distinct meaning\&. This allows to realize a gene with a set of valid values instead of a range of values\&. For example, \fBIntegerGene\fP only allows for values having a continuous range, and does not have a function where it is possible to specify setValue\&.\&.\&. 
+.PP
+This implementation does not support specifying a range of valid integer values\&. Instead it is planned to provide a constraint checker plugin later on\&. With this, the current implementation will stay unchanged and can be as performant as possible without losing flexibility\&.
+.PP
+\fBSee Also:\fP
+.RS 4
+class \fBexamples\&.MapGeneExample\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Johnathan Kool, Organisation: RSMAS, University of Miami 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 34 of file MapGene\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.MapGene\&.MapGene () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Default constructor\&.
+.PP
+Attention: The configuration used is the one set with the static method Genotype\&.setConfiguration\&. 
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 64 of file MapGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.MapGene\&.compareTo(), and org\&.jgap\&.impl\&.MapGene\&.newGeneInternal()\&.
+.SS "org\&.jgap\&.impl\&.MapGene\&.MapGene (final \fBConfiguration\fPa_config) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 76 of file MapGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.MapGene\&.m_geneMap\&.
+.SS "org\&.jgap\&.impl\&.MapGene\&.MapGene (final \fBConfiguration\fPa_config, final Mapa_alleles) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructor setting up valid alleles directly\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.br
+\fIa_alleles\fP the valid alleles of the gene 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 92 of file MapGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.MapGene\&.addAlleles(), and org\&.jgap\&.impl\&.MapGene\&.m_geneMap\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.impl\&.MapGene\&.addAllele (final Objecta_key, final Objecta_value)\fC [inline]\fP"
+Adds a potential allele value to the collection\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_key\fP the key to be added, e\&.g\&. a descriptive string value 
+.br
+\fIa_value\fP the Integer value to be added 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 119 of file MapGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.MapGene\&.setValueFromPersistentRepresentation()\&.
+.SS "void org\&.jgap\&.impl\&.MapGene\&.addAllele (final Objecta_value)\fC [inline]\fP"
+Adds a potential allele value to the collection\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_value\fP the value to be added, also used as key
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 131 of file MapGene\&.java\&.
+.SS "void org\&.jgap\&.impl\&.MapGene\&.addAllele (final inta_value)\fC [inline]\fP"
+Convenience method for addAllele (Object's that are Integer's)
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_value\fP the int value to be added, also used as key
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 143 of file MapGene\&.java\&.
+.SS "void org\&.jgap\&.impl\&.MapGene\&.addAlleles (final Mapa_alleles)\fC [inline]\fP"
+Add a set of potential allele values to the collection
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_alleles\fP the set of alleles to be added
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 154 of file MapGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.MapGene\&.MapGene()\&.
+.SS "void org\&.jgap\&.impl\&.MapGene\&.applyMutation (final inta_index, final doublea_percentage)\fC [inline]\fP"
+See interface \fBGene\fP for description of applyMutation\&.
+.PP
+For this kind of gene, providing an index and a percentage of mutation would have no significance because the individual allele forms are independent of one another\&. In mutating, they can only change from one form to another\&. It may be possible to weight the likelihood of mutation to different forms, but that is not implemented currently\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP ignored here 
+.br
+\fIa_percentage\fP ignored here
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.PP
+Johnathan Kool 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 222 of file MapGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getConfiguration(), and org\&.jgap\&.impl\&.MapGene\&.setToRandomValue()\&.
+.SS "int org\&.jgap\&.impl\&.MapGene\&.compareTo (Objecta_other)\fC [inline]\fP"
+Compares this \fBNumberGene\fP with the specified object (which must also be a \fBNumberGene\fP) for order, which is determined by the number value of this \fBGene\fP compared to the one provided for comparison\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the \fBNumberGene\fP to be compared to this \fBNumberGene\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a negative integer, zero, or a positive integer as this object is less than, equal to, or greater than the object provided for comparison
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIClassCastException\fP if the specified object's type prevents it from being compared to this \fBGene\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.PP
+Johnathan Kool 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 420 of file MapGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.MapGene\&.m_geneMap, org\&.jgap\&.impl\&.MapGene\&.m_value, and org\&.jgap\&.impl\&.MapGene\&.MapGene()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.MapGeneTest\&.testCompareTo_0(), org\&.jgap\&.impl\&.MapGeneTest\&.testCompareTo_1(), org\&.jgap\&.impl\&.MapGeneTest\&.testCompareTo_2(), and org\&.jgap\&.impl\&.MapGeneTest\&.testCompareTo_3()\&.
+.SS "Map org\&.jgap\&.impl\&.MapGene\&.getAlleles ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the map of alleles
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 180 of file MapGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.MapGene\&.m_geneMap\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.MapGeneTest\&.testRemoveAlleles_0(), org\&.jgap\&.impl\&.MapGeneTest\&.testRemoveAlleles_1(), and org\&.jgap\&.impl\&.MapGeneTest\&.testSetToRandomValue_1()\&.
+.SS "Object org\&.jgap\&.impl\&.MapGene\&.getInternalValue ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the internal value of the gene 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Definition at line 537 of file MapGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.MapGene\&.m_value\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.MapGene\&.hashCode()\&.
+.SS "String org\&.jgap\&.impl\&.MapGene\&.getPersistentRepresentation () throws UnsupportedOperationException\fC [inline]\fP"
+Retrieves a string representation of this \fBGene\fP that includes any information required to reconstruct it at a later time, such as its value and internal state\&. This string will be used to represent this \fBGene\fP in XML persistence\&. This is an optional method but, if not implemented, XML persistence and possibly other features will not be available\&. An UnsupportedOperationException should be thrown if no implementation is provided\&.
+.PP
+\fBReturns:\fP
+.RS 4
+string representation of this \fBGene\fP's current state 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP to indicate that no implementation is provided for this method
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rostan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.PP
+Definition at line 352 of file MapGene\&.java\&.
+.PP
+References org\&.jgap\&.Gene\&.PERSISTENT_FIELD_DELIMITER\&.
+.SS "int org\&.jgap\&.impl\&.MapGene\&.hashCode ()\fC [inline]\fP"
+Modified \fBhashCode()\fP function to return different hashcodes for differently ordered genes in a chromosome 
+.PP
+\fBReturns:\fP
+.RS 4
+-1 if no allele set, otherwise value return by \fBBaseGene\&.hashCode()\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 549 of file MapGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.MapGene\&.getInternalValue()\&.
+.SS "\fBGene\fP org\&.jgap\&.impl\&.MapGene\&.newGeneInternal ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Definition at line 99 of file MapGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getAllele(), org\&.jgap\&.BaseGene\&.getConfiguration(), org\&.jgap\&.impl\&.MapGene\&.m_geneMap, and org\&.jgap\&.impl\&.MapGene\&.MapGene()\&.
+.SS "void org\&.jgap\&.impl\&.MapGene\&.removeAlleles (final Objecta_key)\fC [inline]\fP"
+Removes a potential allele or set of alleles from the collection\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_key\fP the unique value(s) of the object(s) to be removed
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 170 of file MapGene\&.java\&.
+.SS "void org\&.jgap\&.impl\&.MapGene\&.setAllele (Objecta_newValue)\fC [inline]\fP"
+Sets the value (allele) of this \fBGene\fP to the new given value\&. This class expects the value to be an instance of current type (e\&.g\&. Integer)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_newValue\fP the new value of this \fBGene\fP instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Johnathan Kool, Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 383 of file MapGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.MapGene\&.m_geneMap, and org\&.jgap\&.impl\&.MapGene\&.m_value\&.
+.SS "void org\&.jgap\&.impl\&.MapGene\&.setToRandomValue (final \fBRandomGenerator\fPa_numberGenerator)\fC [inline]\fP"
+Sets the allele value to be a random value using a defined random number generator\&. If no valid alleles are defined, any allele is allowed\&. Then, a new Integer with random value is set as random value\&. Override this method if you want a different behaviour, such as a Double instead of the Integer type\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_numberGenerator\fP the random generator to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 196 of file MapGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.MapGene\&.m_geneMap, org\&.jgap\&.impl\&.MapGene\&.m_value, and org\&.jgap\&.RandomGenerator\&.nextInt()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.MapGene\&.applyMutation()\&.
+.SS "void org\&.jgap\&.impl\&.MapGene\&.setValueFromPersistentRepresentation (final Stringa_representation) throws \fBUnsupportedRepresentationException\fP\fC [inline]\fP"
+Sets the value and internal state of this \fBGene\fP from the string representation returned by a previous invocation of the \fBgetPersistentRepresentation()\fP method\&. This is an optional method but, if not implemented, XML persistence and possibly other features will not be available\&. An UnsupportedOperationException should be thrown if no implementation is provided\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_representation\fP the string representation retrieved from a prior call to the \fBgetPersistentRepresentation()\fP method\&.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP to indicate that no implementation is provided for this method 
+.br
+\fI\fBUnsupportedRepresentationException\fP\fP if this \fBGene\fP implementation does not support the given string representation\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rostan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 248 of file MapGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.MapGene\&.addAllele(), org\&.jgap\&.impl\&.MapGene\&.m_value, and org\&.jgap\&.Gene\&.PERSISTENT_FIELD_DELIMITER\&.
+.SS "String org\&.jgap\&.impl\&.MapGene\&.toString ()\fC [inline]\fP"
+Retrieves a string representation of this \fBGene\fP's value that may be useful for display purposes\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a string representation of this \fBGene\fP's value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 567 of file MapGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.MapGene\&.m_geneMap\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.MapGeneTest\&.testToString_0(), org\&.jgap\&.impl\&.MapGeneTest\&.testToString_1(), org\&.jgap\&.impl\&.MapGeneTest\&.testToString_2(), org\&.jgap\&.impl\&.MapGeneTest\&.testToString_3(), org\&.jgap\&.impl\&.MapGeneTest\&.testToString_4(), and org\&.jgap\&.impl\&.MapGeneTest\&.testToString_5()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.MapGene\&.CVS_REVISION = '$Revision: 1\&.26 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 37 of file MapGene\&.java\&.
+.SS "THashMap org\&.jgap\&.impl\&.MapGene\&.m_geneMap\fC [private]\fP"
+Container for valid alleles 
+.PP
+Definition at line 42 of file MapGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.MapGene\&.compareTo(), org\&.jgap\&.impl\&.MapGene\&.getAlleles(), org\&.jgap\&.impl\&.MapGene\&.MapGene(), org\&.jgap\&.impl\&.MapGene\&.newGeneInternal(), org\&.jgap\&.impl\&.MapGene\&.setAllele(), org\&.jgap\&.impl\&.MapGene\&.setToRandomValue(), and org\&.jgap\&.impl\&.MapGene\&.toString()\&.
+.SS "Object org\&.jgap\&.impl\&.MapGene\&.m_value\fC [private]\fP"
+Represents the constant range of values supported by integers\&. 
+.PP
+Definition at line 47 of file MapGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.MapGene\&.compareTo(), org\&.jgap\&.impl\&.MapGene\&.getInternalValue(), org\&.jgap\&.impl\&.MapGene\&.setAllele(), org\&.jgap\&.impl\&.MapGene\&.setToRandomValue(), and org\&.jgap\&.impl\&.MapGene\&.setValueFromPersistentRepresentation()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

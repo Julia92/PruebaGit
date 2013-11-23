@@ -1,0 +1,134 @@
+.TH "examples.monalisa.core.GAInitialChromosomeFactory" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.monalisa.core.GAInitialChromosomeFactory \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static IChromosome \fBcreate\fP (\fBGAConfiguration\fP a_conf)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "static int \fBgetGenomeSize\fP (\fBGAConfiguration\fP a_conf)"
+.br
+.ti -1c
+.RI "static int \fBgetNumberOfPointGenes\fP (\fBGAConfiguration\fP a_conf)"
+.br
+.ti -1c
+.RI "static int \fBgetNumberOfColorGenes\fP (\fBGAConfiguration\fP a_conf)"
+.br
+.ti -1c
+.RI "static int \fBgetNumberOfGenesPerPolygon\fP ()"
+.br
+.ti -1c
+.RI "static int \fBgetNumberOfColorGenesPerPolygon\fP ()"
+.br
+.ti -1c
+.RI "static int \fBgetNumberOfGenesPerPoint\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final int \fBPOINTS\fP = 5"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.2 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Creates a suitable initial chromosome\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Yann N\&. Dauphin 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file GAInitialChromosomeFactory\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static IChromosome examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.create (\fBGAConfiguration\fPa_conf) throws InvalidConfigurationException\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 32 of file GAInitialChromosomeFactory\&.java\&.
+.PP
+References examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getGenomeSize(), examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getNumberOfColorGenesPerPolygon(), and examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.POINTS\&.
+.PP
+Referenced by examples\&.monalisa\&.core\&.GAConfiguration\&.GAConfiguration()\&.
+.SS "static int examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getGenomeSize (\fBGAConfiguration\fPa_conf)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 58 of file GAInitialChromosomeFactory\&.java\&.
+.PP
+References examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getNumberOfColorGenes(), and examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getNumberOfPointGenes()\&.
+.PP
+Referenced by examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.create()\&.
+.SS "static int examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getNumberOfColorGenes (\fBGAConfiguration\fPa_conf)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 66 of file GAInitialChromosomeFactory\&.java\&.
+.PP
+References examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getNumberOfColorGenesPerPolygon()\&.
+.PP
+Referenced by examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getGenomeSize()\&.
+.SS "static int examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getNumberOfColorGenesPerPolygon ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 75 of file GAInitialChromosomeFactory\&.java\&.
+.PP
+Referenced by examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.create(), examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.expressPolygon(), examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getNumberOfColorGenes(), and examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getNumberOfGenesPerPolygon()\&.
+.SS "static int examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getNumberOfGenesPerPoint ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 79 of file GAInitialChromosomeFactory\&.java\&.
+.PP
+Referenced by examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getNumberOfGenesPerPolygon(), examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getNumberOfPointGenes(), and examples\&.monalisa\&.core\&.PointMutationOperator\&.operate()\&.
+.SS "static int examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getNumberOfGenesPerPolygon ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 70 of file GAInitialChromosomeFactory\&.java\&.
+.PP
+References examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getNumberOfColorGenesPerPolygon(), examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getNumberOfGenesPerPoint(), and examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.POINTS\&.
+.PP
+Referenced by examples\&.monalisa\&.core\&.SingleMutationOperator\&.operate(), and examples\&.monalisa\&.core\&.PolygonMutationOperator\&.operate()\&.
+.SS "static int examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getNumberOfPointGenes (\fBGAConfiguration\fPa_conf)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 62 of file GAInitialChromosomeFactory\&.java\&.
+.PP
+References examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getNumberOfGenesPerPoint(), and examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.POINTS\&.
+.PP
+Referenced by examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getGenomeSize()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.CVS_REVISION = '$Revision: 1\&.2 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file GAInitialChromosomeFactory\&.java\&.
+.SS "final int examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.POINTS = 5\fC [static]\fP"
+Number of points in a polygon\&. 
+.PP
+Definition at line 30 of file GAInitialChromosomeFactory\&.java\&.
+.PP
+Referenced by examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.create(), examples\&.monalisa\&.core\&.GAPhenotypeExpresser\&.expressPolygon(), examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getNumberOfGenesPerPolygon(), examples\&.monalisa\&.core\&.GAInitialChromosomeFactory\&.getNumberOfPointGenes(), examples\&.monalisa\&.core\&.SingleMutationOperator\&.operate(), examples\&.monalisa\&.core\&.PointMutationOperator\&.operate(), and examples\&.monalisa\&.core\&.PolygonMutationOperator\&.operate()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

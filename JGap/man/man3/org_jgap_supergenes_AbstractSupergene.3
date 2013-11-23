@@ -1,0 +1,684 @@
+.TH "org.jgap.supergenes.AbstractSupergene" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.supergenes.AbstractSupergene \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.BaseGene\fP, \fBorg\&.jgap\&.supergenes\&.Supergene\fP, \fBorg\&.jgap\&.supergenes\&.SupergeneValidator\fP, and \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.PP
+Inherited by \fBorg\&.jgap\&.supergenes\&.InstantiableSupergeneForTesting\fP, org\&.jgap\&.supergenes\&.SupergeneInternalParserTest\&.TestClass, and org\&.jgap\&.supergenes\&.SupergenePersistentRepresentationTest\&.TestClass\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGene\fP[] \fBgetGenes\fP ()"
+.br
+.ti -1c
+.RI "final \fBGene\fP \fBgeneAt\fP (final int a_index)"
+.br
+.ti -1c
+.RI "\fBAbstractSupergene\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBAbstractSupergene\fP (final \fBConfiguration\fP a_config)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBAbstractSupergene\fP (final \fBConfiguration\fP a_conf, final \fBGene\fP[] a_genes)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "boolean \fBisValid\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisValid\fP (final \fBGene\fP[] a_case, final \fBSupergene\fP a_forSupergene)"
+.br
+.ti -1c
+.RI "void \fBapplyMutation\fP (final int a_index, final double a_percentage)"
+.br
+.ti -1c
+.RI "void \fBsetToRandomValue\fP (final \fBRandomGenerator\fP a_numberGenerator)"
+.br
+.ti -1c
+.RI "void \fBsetAllele\fP (final Object a_superAllele)"
+.br
+.ti -1c
+.RI "Object \fBgetAllele\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetPersistentRepresentation\fP ()  throws UnsupportedOperationException "
+.br
+.ti -1c
+.RI "void \fBsetValueFromPersistentRepresentation\fP (String a_representation)  throws UnsupportedRepresentationException "
+.br
+.ti -1c
+.RI "void \fBcleanup\fP ()"
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "int \fBsize\fP ()"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object o)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_gene)"
+.br
+.ti -1c
+.RI "int \fBhashCode\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddGene\fP (\fBGene\fP a_gene)"
+.br
+.ti -1c
+.RI "void \fBsetValidator\fP (\fBSupergeneValidator\fP a_validator)"
+.br
+.ti -1c
+.RI "\fBSupergeneValidator\fP \fBgetValidator\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetPersistent\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetFromPersistent\fP (String a_from)"
+.br
+.ti -1c
+.RI "Object \fBgetInternalValue\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBreset\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBGENE_DELIMITER\fP = '#'"
+.br
+.ti -1c
+.RI "static final String \fBGENE_DELIMITER_HEADING\fP = '<'"
+.br
+.ti -1c
+.RI "static final String \fBGENE_DELIMITER_CLOSING\fP = '>'"
+.br
+.ti -1c
+.RI "static final int \fBMAX_RETRIES\fP = 1"
+.br
+.ti -1c
+.RI "static final int \fBMAX_IMMUTABLE_GENES\fP = 100000"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGene\fP \fBnewGeneInternal\fP ()"
+.br
+.ti -1c
+.RI "\fBSupergeneValidator\fP \fBcreateValidator\fP (String a_rep)"
+.br
+.ti -1c
+.RI "\fBGene\fP \fBcreateGene\fP (String a_geneClassName, String a_persistentRepresentation)  throws Exception "
+.br
+.in -1c
+.SS "Static Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static final List \fBsplit\fP (String a_string)  throws UnsupportedRepresentationException "
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBSupergeneValidator\fP \fBm_validator\fP = this"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmarkImmutable\fP (final int a_index)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBGene\fP[] \fBm_genes\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.24 $'"
+.br
+.ti -1c
+.RI "static Set[] \fBm_immutable\fP = new Set[1]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Combined implementation of both \fBSupergene\fP and \fBSupergeneValidator\fP\&. A working supergene can be easily created from this class just by adding genes and overriding \fB[] a_case, Supergene a_forSupergene) isValid (Gene [], Supergene)\fP method\&. For more complex cases, you may need to set your own \fBValidator\fP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 29 of file AbstractSupergene\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.supergenes\&.AbstractSupergene\&.AbstractSupergene () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Default constructor for dynamic instantiation\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 104 of file AbstractSupergene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.AbstractSupergene\&.compareTo(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.equals(), and org\&.jgap\&.supergenes\&.AbstractSupergene\&.newGeneInternal()\&.
+.SS "org\&.jgap\&.supergenes\&.AbstractSupergene\&.AbstractSupergene (final \fBConfiguration\fPa_config) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructor for dynamic instantiation\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 118 of file AbstractSupergene\&.java\&.
+.SS "org\&.jgap\&.supergenes\&.AbstractSupergene\&.AbstractSupergene (final \fBConfiguration\fPa_conf, final \fBGene\fP[]a_genes) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs abstract supergene with the given gene list\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_genes\fP array of genes for this \fBSupergene\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+
+.PP
+Definition at line 130 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_genes\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.supergenes\&.AbstractSupergene\&.addGene (\fBGene\fPa_gene)\fC [inline]\fP"
+Append a new gene to the gene array\&. 
+.PP
+Implements \fBorg\&.jgap\&.ICompositeGene\fP\&.
+.PP
+Definition at line 611 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_genes\&.
+.SS "void org\&.jgap\&.supergenes\&.AbstractSupergene\&.applyMutation (final inta_index, final doublea_percentage)\fC [inline]\fP"
+Applies a mutation of a given intensity (percentage) onto the gene at the given index\&. Retries while \fBisValid()\fP returns true for the supergene\&. The method is delegated to the first element of the gene, indexed by a_index\&. See \fBorg\&.jgap\&.supergenes\&.AbstractSupergene\&.isValid()\fP 
+.PP
+Definition at line 222 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getConfiguration(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.isValid(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_genes, org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_immutable, org\&.jgap\&.supergenes\&.AbstractSupergene\&.markImmutable(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.MAX_RETRIES, and org\&.jgap\&.supergenes\&.AbstractSupergene\&.size()\&.
+.SS "void org\&.jgap\&.supergenes\&.AbstractSupergene\&.cleanup ()\fC [inline]\fP"
+Calls \fBcleanup()\fP for each subgene\&. 
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 499 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_genes\&.
+.SS "int org\&.jgap\&.supergenes\&.AbstractSupergene\&.compareTo (Objecto)\fC [inline]\fP"
+Calls \fBcompareTo()\fP for all subgenes\&. The passed parameter must be an instance of \fBAbstractSupergene\fP\&. 
+.PP
+Definition at line 534 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.AbstractSupergene\&.AbstractSupergene(), and org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_genes\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.SupergenePersistentRepresentationTest\&.testCompareTo_0(), org\&.jgap\&.supergenes\&.SupergenePersistentRepresentationTest\&.testCompareTo_2(), org\&.jgap\&.supergenes\&.SupergenePersistentRepresentationTest\&.testCompareTo_3(), and org\&.jgap\&.supergenes\&.SupergenePersistentRepresentationTest\&.testEquals_0()\&.
+.SS "\fBGene\fP org\&.jgap\&.supergenes\&.AbstractSupergene\&.createGene (Stringa_geneClassName, Stringa_persistentRepresentation) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Creates a new instance of gene\&. 
+.PP
+Definition at line 488 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getConfiguration()\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.AbstractSupergene\&.setValueFromPersistentRepresentation()\&.
+.SS "\fBSupergeneValidator\fP org\&.jgap\&.supergenes\&.AbstractSupergene\&.createValidator (Stringa_rep)\fC [inline]\fP, \fC [protected]\fP"
+Create validator from the string representation\&. 
+.PP
+Definition at line 453 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.decode(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.GENE_DELIMITER, and org\&.jgap\&.BaseGene\&.getConfiguration()\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.AbstractSupergene\&.setValueFromPersistentRepresentation()\&.
+.SS "boolean org\&.jgap\&.supergenes\&.AbstractSupergene\&.equals (Objecta_gene)\fC [inline]\fP"
+Calls \fBequals()\fP for each pair of genes\&. If the supplied object is an instance of the different class, returns false\&. Also, the genes are assumed to be different if they have different validator classes (or only one of the validators is set to null)\&. 
+.PP
+Definition at line 558 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.AbstractSupergene\&.AbstractSupergene(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_genes, org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_immutable, and org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_validator\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.SupergenePersistentRepresentationTest\&.testEquals_0(), and org\&.jgap\&.supergenes\&.SupergenePersistentRepresentationTest\&.testRepresentation()\&.
+.SS "final \fBGene\fP org\&.jgap\&.supergenes\&.AbstractSupergene\&.geneAt (final inta_index)\fC [inline]\fP"
+Returns the \fBGene\fP at the given index (locus) within the \fBChromosome\fP\&. The first gene is at index zero and the last gene is at the index equal to the size of this \fBChromosome\fP - 1\&.
+.PP
+This seems to be one of the bottlenecks, so it is declared final\&. I cannot imagine the reason for overriding this trivial single line method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the index of the gene value to be returned 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the \fBGene\fP at the given index 
+.RE
+.PP
+
+.PP
+Definition at line 92 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_genes\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.SupergenePersistentRepresentationTest\&.testGetGenes_0(), and org\&.jgap\&.supergenes\&.SupergenePersistentRepresentationTest\&.testSetAllele_2()\&.
+.SS "Object org\&.jgap\&.supergenes\&.AbstractSupergene\&.getAllele ()\fC [inline]\fP"
+Retrieves the allele value represented by this \fBSupergene\fP\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+array of objects, each matching the subgene in this \fBSupergene\fP 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 349 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_genes\&.
+.SS "\fBGene\fP [] org\&.jgap\&.supergenes\&.AbstractSupergene\&.getGenes ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the array of genes - components of this supergene\&. The supergene components may be supergenes itself 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.supergenes\&.Supergene\fP\&.
+.PP
+Definition at line 76 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_genes\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.SupergenePersistentRepresentationTest\&.testGetGenes_0()\&.
+.SS "Object org\&.jgap\&.supergenes\&.AbstractSupergene\&.getInternalValue ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+not needed for abstract supergene 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Definition at line 654 of file AbstractSupergene\&.java\&.
+.SS "String org\&.jgap\&.supergenes\&.AbstractSupergene\&.getPersistent ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+persistent string representation (if needed) of this validator\&. The method name is different allowing the same class to implement both \fBSupergene\fP and supergeneValidator\&.
+.RE
+.PP
+ The default implementation returns an empty string\&. 
+.PP
+Implements \fBorg\&.jgap\&.supergenes\&.SupergeneValidator\fP\&.
+.PP
+Definition at line 642 of file AbstractSupergene\&.java\&.
+.SS "String org\&.jgap\&.supergenes\&.AbstractSupergene\&.getPersistentRepresentation () throws UnsupportedOperationException\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+a string representation of the value of this \fBSupergene\fP instance, using calls to the \fBSupergene\fP components\&. Supports other (nested) supergenes in this supergene 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.PP
+Definition at line 363 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.encode(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.GENE_DELIMITER, org\&.jgap\&.supergenes\&.AbstractSupergene\&.GENE_DELIMITER_CLOSING, org\&.jgap\&.supergenes\&.AbstractSupergene\&.GENE_DELIMITER_HEADING, org\&.jgap\&.supergenes\&.AbstractSupergene\&.getValidator(), and org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_genes\&.
+.SS "\fBSupergeneValidator\fP org\&.jgap\&.supergenes\&.AbstractSupergene\&.getValidator ()\fC [inline]\fP"
+Gets an object, responsible for deciding if the \fBSupergene\fP allele combination is valid\&. If no external validator was set and the class uses its own internal validation method, it returns \fIthis\fP 
+.PP
+Implements \fBorg\&.jgap\&.supergenes\&.Supergene\fP\&.
+.PP
+Definition at line 633 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_validator\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.AbstractSupergene\&.getPersistentRepresentation()\&.
+.SS "int org\&.jgap\&.supergenes\&.AbstractSupergene\&.hashCode ()\fC [inline]\fP"
+Returns sum of \fBhashCode()\fP of the genes-components\&. 
+.PP
+Definition at line 571 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_genes\&.
+.SS "boolean org\&.jgap\&.supergenes\&.AbstractSupergene\&.isValid ()\fC [inline]\fP"
+Test the allele combination of this supergene for validity\&. This method calls isValid for the current gene list\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true only if the supergene allele combination is valid or the setValidator (\fInull\fP) has been previously called 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.supergenes\&.Supergene\fP\&.
+.PP
+Definition at line 145 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_genes, and org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_validator\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.AbstractSupergene\&.applyMutation(), and org\&.jgap\&.supergenes\&.AbstractSupergene\&.setToRandomValue()\&.
+.SS "boolean org\&.jgap\&.supergenes\&.AbstractSupergene\&.isValid (final \fBGene\fP[]a_case, final \fBSupergene\fPa_forSupergene)\fC [inline]\fP"
+Test the given gene list for validity\&. The genes must exactly the same as inside this supergene\&. At \fIleast about 5 % of the randomly generated \fBSupergene\fP suparallele values should be valid\&.\fP If the valid combinations represents too small part of all possible combinations, it can take too long to find the suitable mutation that does not brake a supergene\&. If you face this problem, try to split the supergene into several sub-supergenes\&.
+.PP
+This method is only called if you have not set any alternative validator (including \fInull\fP)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_case\fP ignored here 
+.br
+\fIa_forSupergene\fP ignored here
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true only if the supergene allele combination is valid 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIError\fP by default\&. If you do not set external validator, you should always override this method 
+.RE
+.PP
+
+.PP
+Definition at line 174 of file AbstractSupergene\&.java\&.
+.SS "void org\&.jgap\&.supergenes\&.AbstractSupergene\&.markImmutable (final inta_index)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+: Implement protection against overgrowing of this data block\&. 
+.RE
+.PP
+
+.PP
+Definition at line 267 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_immutable, org\&.jgap\&.supergenes\&.AbstractSupergene\&.MAX_IMMUTABLE_GENES, and org\&.jgap\&.supergenes\&.AbstractSupergene\&.size()\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.AbstractSupergene\&.applyMutation()\&.
+.SS "\fBGene\fP org\&.jgap\&.supergenes\&.AbstractSupergene\&.newGeneInternal ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Creates a new instance of this \fBSupergene\fP class with the same number of genes, calling \fBnewGene()\fP for each subgene\&. The class, derived from this abstract supergene will be instantiated (not the instance of abstractSupergene itself)\&. If the external validator is set, the same validator will be set for the new gene\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the new \fBGene\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIError\fP if the instance of \fIthis\fP cannot be instantiated (for example, if it is not public or the parameterless constructor is not provided)\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Definition at line 192 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.AbstractSupergene\&.AbstractSupergene(), org\&.jgap\&.BaseGene\&.getConfiguration(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_genes, and org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_validator\&.
+.SS "static void org\&.jgap\&.supergenes\&.AbstractSupergene\&.reset ()\fC [inline]\fP, \fC [static]\fP"
+Discards all internal caches, ensuring correct repetetive tests of performance\&. Differently from \fBcleanup()\fP, discards also static references, that are assumed to be useful for the multiple instances of the \fBSupergene\fP\&. Clears the set of the alleles that are known to be immutable\&. 
+.PP
+Definition at line 293 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_immutable\&.
+.SS "void org\&.jgap\&.supergenes\&.AbstractSupergene\&.setAllele (final Objecta_superAllele)\fC [inline]\fP"
+Sets the allele\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_superAllele\fP must be an array of objects, size matching the number of genes 
+.RE
+.PP
+
+.PP
+Definition at line 329 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_genes\&.
+.SS "void org\&.jgap\&.supergenes\&.AbstractSupergene\&.setFromPersistent (Stringa_from)\fC [inline]\fP"
+Set a persistend string representation (if needed) for this validator\&. The method name is different allowing the same class to implement both \fBSupergene\fP and supergeneValidator\&. The default implementation does nothing\&. 
+.PP
+Implements \fBorg\&.jgap\&.supergenes\&.SupergeneValidator\fP\&.
+.PP
+Definition at line 648 of file AbstractSupergene\&.java\&.
+.SS "void org\&.jgap\&.supergenes\&.AbstractSupergene\&.setToRandomValue (final \fBRandomGenerator\fPa_numberGenerator)\fC [inline]\fP"
+Sets the value of this \fBGene\fP to a random legal value for the implementation\&. It calls setToRandomValue for all subgenes and then validates\&. With a large number of subgenes and low percent of valid combinations this may take too long to complete\&. We think, at lease several % of the all possible combintations must be valid\&. 
+.PP
+Definition at line 304 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.AbstractSupergene\&.isValid(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_genes, and org\&.jgap\&.supergenes\&.AbstractSupergene\&.MAX_RETRIES\&.
+.SS "void org\&.jgap\&.supergenes\&.AbstractSupergene\&.setValidator (\fBSupergeneValidator\fPa_validator)\fC [inline]\fP"
+Sets an object, responsible for deciding if the \fBSupergene\fP allele combination is valid\&. If it is set to null, no validation is performed (all combinations are assumed to be valid)\&. If no validator is set, the method \fCisValid (\fBGene\fP [] ) \fPis called\&. 
+.PP
+Implements \fBorg\&.jgap\&.supergenes\&.Supergene\fP\&.
+.PP
+Definition at line 624 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_validator\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.AbstractSupergene\&.setValueFromPersistentRepresentation()\&.
+.SS "void org\&.jgap\&.supergenes\&.AbstractSupergene\&.setValueFromPersistentRepresentation (Stringa_representation) throws \fBUnsupportedRepresentationException\fP\fC [inline]\fP"
+Sets the value and internal state of this \fBGene\fP from the string representation returned by a previous invocation of the \fBgetPersistentRepresentation()\fP method\&.
+.PP
+If the validator is not THIS and not null, a new validator is created using Class\&.forName(\&.\&.)\&.newInstance\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_representation\fP the string representation retrieved from a prior call to the \fBgetPersistentRepresentation()\fP method
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBUnsupportedRepresentationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+Remove the old content\&. 
+.PP
+Implements \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.PP
+Definition at line 411 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.AbstractSupergene\&.createGene(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.createValidator(), org\&.jgap\&.BaseGene\&.decode(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.GENE_DELIMITER, org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_genes, org\&.jgap\&.supergenes\&.AbstractSupergene\&.setValidator(), and org\&.jgap\&.supergenes\&.AbstractSupergene\&.split()\&.
+.SS "int org\&.jgap\&.supergenes\&.AbstractSupergene\&.size ()\fC [inline]\fP"
+Returns the number of the genes-components of this supergene\&. 
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 528 of file AbstractSupergene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.AbstractSupergene\&.applyMutation(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.markImmutable(), org\&.jgap\&.supergenes\&.SupergenePersistentRepresentationTest\&.testSetAllele_0(), and org\&.jgap\&.supergenes\&.SupergenePersistentRepresentationTest\&.testSize_0()\&.
+.SS "static final List org\&.jgap\&.supergenes\&.AbstractSupergene\&.split (Stringa_string) throws \fBUnsupportedRepresentationException\fP\fC [inline]\fP, \fC [static]\fP, \fC [protected]\fP"
+Splits the string a_x into individual gene representations 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_string\fP the string to split 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the elements of the returned array are the persistent representation strings of the genes - components
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+
+.PP
+Definition at line 587 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.AbstractSupergene\&.GENE_DELIMITER_CLOSING, and org\&.jgap\&.supergenes\&.AbstractSupergene\&.GENE_DELIMITER_HEADING\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.AbstractSupergene\&.setValueFromPersistentRepresentation()\&.
+.SS "String org\&.jgap\&.supergenes\&.AbstractSupergene\&.toString ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+a string representation of the supergene, providing class name and calling \fBtoString()\fP for all subgenes\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 509 of file AbstractSupergene\&.java\&.
+.PP
+References org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_genes, and org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_validator\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.supergenes\&.AbstractSupergene\&.CVS_REVISION = '$Revision: 1\&.24 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 33 of file AbstractSupergene\&.java\&.
+.SS "final String org\&.jgap\&.supergenes\&.AbstractSupergene\&.GENE_DELIMITER = '#'\fC [static]\fP"
+This field separates gene class name from the gene persistent representation string\&. 
+.PP
+Definition at line 39 of file AbstractSupergene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.AbstractSupergene\&.createValidator(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.getPersistentRepresentation(), and org\&.jgap\&.supergenes\&.AbstractSupergene\&.setValueFromPersistentRepresentation()\&.
+.SS "final String org\&.jgap\&.supergenes\&.AbstractSupergene\&.GENE_DELIMITER_CLOSING = '>'\fC [static]\fP"
+Represents the closing delimiter that is used to separate genes in the persistent representation of CompositeGene instances\&. 
+.PP
+Definition at line 51 of file AbstractSupergene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.AbstractSupergene\&.getPersistentRepresentation(), and org\&.jgap\&.supergenes\&.AbstractSupergene\&.split()\&.
+.SS "final String org\&.jgap\&.supergenes\&.AbstractSupergene\&.GENE_DELIMITER_HEADING = '<'\fC [static]\fP"
+Represents the heading delimiter that is used to separate genes in the persistent representation of CompositeGene instances\&. 
+.PP
+Definition at line 45 of file AbstractSupergene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.AbstractSupergene\&.getPersistentRepresentation(), and org\&.jgap\&.supergenes\&.AbstractSupergene\&.split()\&.
+.SS "\fBGene\fP [] org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_genes\fC [private]\fP"
+Holds the genes of this supergene\&. 
+.PP
+Definition at line 67 of file AbstractSupergene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.AbstractSupergene\&.AbstractSupergene(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.addGene(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.applyMutation(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.cleanup(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.compareTo(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.equals(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.geneAt(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.getAllele(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.getGenes(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.getPersistentRepresentation(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.hashCode(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.isValid(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.newGeneInternal(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.setAllele(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.setToRandomValue(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.setValueFromPersistentRepresentation(), and org\&.jgap\&.supergenes\&.AbstractSupergene\&.toString()\&.
+.SS "Set [] org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_immutable = new Set[1]\fC [static]\fP, \fC [private]\fP"
+Set of supergene allele values that cannot mutate\&. 
+.PP
+Definition at line 70 of file AbstractSupergene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.AbstractSupergene\&.applyMutation(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.equals(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.markImmutable(), and org\&.jgap\&.supergenes\&.AbstractSupergene\&.reset()\&.
+.SS "\fBSupergeneValidator\fP org\&.jgap\&.supergenes\&.AbstractSupergene\&.m_validator = this\fC [protected]\fP"
+A validator (initially set to \fIthis\fP 
+.PP
+Definition at line 638 of file AbstractSupergene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.AbstractSupergene\&.equals(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.getValidator(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.isValid(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.newGeneInternal(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.setValidator(), and org\&.jgap\&.supergenes\&.AbstractSupergene\&.toString()\&.
+.SS "final int org\&.jgap\&.supergenes\&.AbstractSupergene\&.MAX_IMMUTABLE_GENES = 100000\fC [static]\fP"
+Maximal number of notes about immutable genes per single gene position 
+.PP
+Definition at line 64 of file AbstractSupergene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.AbstractSupergene\&.markImmutable()\&.
+.SS "final int org\&.jgap\&.supergenes\&.AbstractSupergene\&.MAX_RETRIES = 1\fC [static]\fP"
+Maximal number of retries for applyMutation and setToRandomValue\&. If the valid supergen cannot be created after this number of iterations, the error message is printed and the unchanged instance is returned\&. 
+.PP
+Definition at line 58 of file AbstractSupergene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.AbstractSupergene\&.applyMutation(), and org\&.jgap\&.supergenes\&.AbstractSupergene\&.setToRandomValue()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

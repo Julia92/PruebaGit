@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="_received_packet_8java" kind="file">
+    <compoundname>ReceivedPacket.java</compoundname>
+    <innerclass refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet" prot="public">org::jgap::distr::grid::wan::ReceivedPacket</innerclass>
+    <innernamespace refid="namespaceorg_1_1jgap_1_1distr_1_1grid_1_1wan">org::jgap::distr::grid::wan</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>JGAP.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>JGAP<sp/>offers<sp/>a<sp/>dual<sp/>license<sp/>model<sp/>containing<sp/>the<sp/>LGPL<sp/>as<sp/>well<sp/>as<sp/>the<sp/>MPL.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>For<sp/>licensing<sp/>information<sp/>please<sp/>see<sp/>the<sp/>file<sp/>license.txt<sp/>included<sp/>with<sp/>JGAP</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>or<sp/>have<sp/>a<sp/>look<sp/>at<sp/>the<sp/>top<sp/>of<sp/>class<sp/>org.jgap.Chromosome<sp/>which<sp/>representatively</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>includes<sp/>the<sp/>JGAP<sp/>license<sp/>policy<sp/>applicable<sp/>for<sp/>any<sp/>file<sp/>delivered<sp/>with<sp/>JGAP.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="namespaceorg_1_1jgap_1_1distr_1_1grid_1_1wan" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">org.jgap.distr.grid.wan;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.*;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet" kindref="compound">ReceivedPacket</ref><sp/>{</highlight></codeline>
+<codeline lineno="22" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a891027cdf2060c3fb70a2b59ce56dd1b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a891027cdf2060c3fb70a2b59ce56dd1b" kindref="member">CVS_REVISION</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$Revision:<sp/>1.1<sp/>$&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a421b11c0db76e89f3cc0cf0b2fc09518" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a421b11c0db76e89f3cc0cf0b2fc09518" kindref="member">m_title</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a5ac465938542016d1dbc87cb140e848d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>Map<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a5ac465938542016d1dbc87cb140e848d" kindref="member">m_headerData</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a125c360bf245e271f8748c8043060ca3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>Object<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a125c360bf245e271f8748c8043060ca3" kindref="member">m_data</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1aa923449981d9796ac53ff80caee8782a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1aa923449981d9796ac53ff80caee8782a" kindref="member">m_appid</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a9e6aceeae569c837c19163fa9bf07f98" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a9e6aceeae569c837c19163fa9bf07f98" kindref="member">m_URI</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a8ef0b44abc0228e774ff8e5d36ad3c8f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a8ef0b44abc0228e774ff8e5d36ad3c8f" kindref="member">ReceivedPacket</ref>(String<sp/>a_title,<sp/>Map<sp/>a_headerData,<sp/>Object<sp/>a_data,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>a_URI)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a421b11c0db76e89f3cc0cf0b2fc09518" kindref="member">m_title</ref><sp/>=<sp/>a_title;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1aa923449981d9796ac53ff80caee8782a" kindref="member">m_appid</ref><sp/>=<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a1e005aaa94d29ee9b6bdaff28e483154" kindref="member">makeAppid</ref>(<ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a421b11c0db76e89f3cc0cf0b2fc09518" kindref="member">m_title</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a5ac465938542016d1dbc87cb140e848d" kindref="member">m_headerData</ref><sp/>=<sp/>a_headerData;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a125c360bf245e271f8748c8043060ca3" kindref="member">m_data</ref><sp/>=<sp/>a_data;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a9e6aceeae569c837c19163fa9bf07f98" kindref="member">m_URI</ref><sp/>=<sp/>a_URI;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1ae5a4a35f7b67d88ca26ace64b6c56fdf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Object<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1ae5a4a35f7b67d88ca26ace64b6c56fdf" kindref="member">getData</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a125c360bf245e271f8748c8043060ca3" kindref="member">m_data</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a51a5287f65fbe6aef5b2b682002bceaf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Map<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a51a5287f65fbe6aef5b2b682002bceaf" kindref="member">getHeaderData</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a5ac465938542016d1dbc87cb140e848d" kindref="member">m_headerData</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a538df409fec004438cf9798fae25237e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a538df409fec004438cf9798fae25237e" kindref="member">getTitle</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a421b11c0db76e89f3cc0cf0b2fc09518" kindref="member">m_title</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1ad2d01e9735042cefa39011b13da328ca" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1ad2d01e9735042cefa39011b13da328ca" kindref="member">getAppid</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1aa923449981d9796ac53ff80caee8782a" kindref="member">m_appid</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a1e005aaa94d29ee9b6bdaff28e483154" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a1e005aaa94d29ee9b6bdaff28e483154" kindref="member">makeAppid</ref>(String<sp/>a_title)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a_title<sp/>==<sp/>null<sp/>||<sp/>a_title.length()<sp/>&lt;<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>a_title.indexOf(</highlight><highlight class="stringliteral">&quot;_&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a_title.substring(0,<sp/>index);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a93f6cae18da188e137fa8a704aaea517" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a93f6cae18da188e137fa8a704aaea517" kindref="member">getURI</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1a9e6aceeae569c837c19163fa9bf07f98" kindref="member">m_URI</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1ae717c4ad849794e09f616b25882e2861" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1wan_1_1_received_packet_1ae717c4ad849794e09f616b25882e2861" kindref="member">clearHeaderData</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>m_headerData.clear();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/wan/ReceivedPacket.java"/>
+  </compounddef>
+</doxygen>

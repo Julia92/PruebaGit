@@ -1,0 +1,417 @@
+.TH "org.jgap.distr.grid.DummyGridClientMediator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.grid.DummyGridClientMediator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.distr\&.grid\&.IGridClientMediator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDummyGridClientMediator\fP (GridNodeClientConfig a_gridconfig)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBstop\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "void \fBsend\fP (GridMessage a_msg, \fBMessageContext\fP a_context, Map< String, String > a_headerData)  throws Exception "
+.br
+.ti -1c
+.RI "GridMessage \fBgetGridMessage\fP (\fBMessageContext\fP a_context, String a_datetime, int a_timeoutSeconds, int a_waitTimeSeconds, boolean a_removeRequest)  throws Exception "
+.br
+.ti -1c
+.RI "List \fBlistRequests\fP (\fBMessageContext\fP a_context, String a_datetime, String a_pattern)  throws Exception "
+.br
+.ti -1c
+.RI "List \fBlistResults\fP (\fBMessageContext\fP a_context, String a_datetime, String a_pattern)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBconnect\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "void \fBdisconnect\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "void \fBremoveMessage\fP (Object a_entry)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBbackupResult\fP (Object a_result, String a_subDir, String a_title)  throws Exception "
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "GridClient \fBstartClient\fP ()  throws Exception "
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "GridNodeClientConfig \fBm_gridconfig\fP"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "transient Logger \fBlog\fP = Logger\&.getLogger(getClass())"
+.br
+.ti -1c
+.RI "GridClient \fBm_gc\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.6 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Mediates requests and responses either within a LAN or via internet (WAN)\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file DummyGridClientMediator\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.DummyGridClientMediator (GridNodeClientConfiga_gridconfig) throws Exception\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_gridconfig\fP GridNodeClientConfig 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 46 of file DummyGridClientMediator\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.m_gc, org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.m_gridconfig, and org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.startClient()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.backupResult (Objecta_result, Stringa_subDir, Stringa_title) throws Exception\fC [inline]\fP"
+Backs up a result in the given sub directory\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_result\fP the result to backup 
+.br
+\fIa_subDir\fP sub directory to store the copy of the result in 
+.br
+\fIa_title\fP the title of the entry to create
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridClientMediator\fP\&.
+.PP
+Definition at line 185 of file DummyGridClientMediator\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.connect () throws Exception\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridClientMediator\fP\&.
+.PP
+Definition at line 167 of file DummyGridClientMediator\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.disconnect () throws Exception\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridClientMediator\fP\&.
+.PP
+Definition at line 173 of file DummyGridClientMediator\&.java\&.
+.SS "GridMessage org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.getGridMessage (\fBMessageContext\fPa_context, Stringa_datetime, inta_timeoutSeconds, inta_waitTimeSeconds, booleana_removeRequest) throws Exception\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_context\fP \fBMessageContext\fP 
+.br
+\fIa_datetime\fP String 
+.br
+\fIa_timeoutSeconds\fP int 
+.br
+\fIa_waitTimeSeconds\fP int 
+.br
+\fIa_removeRequest\fP boolean 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+GridMessage 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+fallback solution 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridClientMediator\fP\&.
+.PP
+Definition at line 117 of file DummyGridClientMediator\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.m_gc\&.
+.SS "List org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.listRequests (\fBMessageContext\fPa_context, Stringa_datetime, Stringa_pattern) throws Exception\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_context\fP \fBMessageContext\fP 
+.br
+\fIa_datetime\fP String 
+.br
+\fIa_pattern\fP String 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+List 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridClientMediator\fP\&.
+.PP
+Definition at line 140 of file DummyGridClientMediator\&.java\&.
+.SS "List org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.listResults (\fBMessageContext\fPa_context, Stringa_datetime, Stringa_pattern) throws Exception\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_context\fP \fBMessageContext\fP 
+.br
+\fIa_datetime\fP String 
+.br
+\fIa_pattern\fP String 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+List 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridClientMediator\fP\&.
+.PP
+Definition at line 159 of file DummyGridClientMediator\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.removeMessage (Objecta_entry) throws Exception\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridClientMediator\fP\&.
+.PP
+Definition at line 179 of file DummyGridClientMediator\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.send (GridMessagea_msg, \fBMessageContext\fPa_context, Map< String, String >a_headerData) throws Exception\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_msg\fP GridMessage 
+.br
+\fIa_context\fP \fBMessageContext\fP 
+.br
+\fIa_headerData\fP Map 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridClientMediator\fP\&.
+.PP
+Definition at line 98 of file DummyGridClientMediator\&.java\&.
+.SS "GridClient org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.startClient () throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Starts the underlying grid client service\&.
+.PP
+\fBReturns:\fP
+.RS 4
+GridClient 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+allow asynchronous wait for server (check for 'java\&.net\&.ConnectException: Connection refused: connect') 
+.RE
+.PP
+
+.PP
+Definition at line 66 of file DummyGridClientMediator\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.m_gridconfig\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.DummyGridClientMediator()\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.stop () throws Exception\fC [inline]\fP"
+Stops this service\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridClientMediator\fP\&.
+.PP
+Definition at line 83 of file DummyGridClientMediator\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.CVS_REVISION = '$Revision: 1\&.6 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 27 of file DummyGridClientMediator\&.java\&.
+.SS "transient Logger org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.log = Logger\&.getLogger(getClass())\fC [private]\fP"
+
+.PP
+Definition at line 29 of file DummyGridClientMediator\&.java\&.
+.SS "GridClient org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.m_gc\fC [private]\fP"
+For LAN transmissions 
+.PP
+Definition at line 36 of file DummyGridClientMediator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.DummyGridClientMediator(), and org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.getGridMessage()\&.
+.SS "GridNodeClientConfig org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.m_gridconfig\fC [protected]\fP"
+
+.PP
+Definition at line 31 of file DummyGridClientMediator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.DummyGridClientMediator(), and org\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.startClient()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

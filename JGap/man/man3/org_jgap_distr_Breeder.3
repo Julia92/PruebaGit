@@ -1,0 +1,303 @@
+.TH "org.jgap.distr.Breeder" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.Breeder \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Runnable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBreeder\fP (final \fBIPopulationMerger\fP a_populationMerger)"
+.br
+.ti -1c
+.RI "void \fBrun\fP ()"
+.br
+.ti -1c
+.RI "void \fBstart\fP ()"
+.br
+.ti -1c
+.RI "void \fBstop\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisRunning\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBcanBeStarted\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBcanBeStopped\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinformParent\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBevalOneGeneration\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "synchronized void \fBpause\fP (final int a_milliSec)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBBreeder\fP \fBm_master\fP"
+.br
+.ti -1c
+.RI "\fBBreeder\fP[] \fBm_workers\fP"
+.br
+.ti -1c
+.RI "\fBGenotype\fP \fBm_genotype\fP"
+.br
+.ti -1c
+.RI "\fBIPopulationMerger\fP \fBm_populationMerger\fP"
+.br
+.ti -1c
+.RI "transient boolean \fBm_running\fP"
+.br
+.ti -1c
+.RI "transient boolean \fBm_stopped\fP = true"
+.br
+.ti -1c
+.RI "transient MeanBuffer \fBm_meanBuffer\fP = new MeanBuffer(40)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.13 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Breeds populations using a GA that will be executed either on a single server or on multiple servers, whose results will be merged/synchronized later on\&. 
+.PP
+A breeder is part of a fractal structure (fractal because each \fBBreeder\fP can be parent and/or child of other \fBBreeder\fP's)\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file Breeder\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.distr\&.Breeder\&.Breeder (final \fBIPopulationMerger\fPa_populationMerger)\fC [inline]\fP"
+
+.PP
+Definition at line 56 of file Breeder\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Breeder\&.m_populationMerger\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "boolean org\&.jgap\&.distr\&.Breeder\&.canBeStarted ()\fC [inline]\fP"
+
+.PP
+Definition at line 155 of file Breeder\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Breeder\&.m_running\&.
+.SS "boolean org\&.jgap\&.distr\&.Breeder\&.canBeStopped ()\fC [inline]\fP"
+
+.PP
+Definition at line 159 of file Breeder\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Breeder\&.m_running\&.
+.SS "void org\&.jgap\&.distr\&.Breeder\&.evalOneGeneration () throws Exception\fC [inline]\fP, \fC [private]\fP"
+Evaluate one generation and memorize the time needed\&. This is important for load balancing and calculating the performance of a system 
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 99 of file Breeder\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Breeder\&.informParent()\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Breeder\&.run()\&.
+.SS "void org\&.jgap\&.distr\&.Breeder\&.informParent ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+implement 
+.RE
+.PP
+
+.PP
+Definition at line 107 of file Breeder\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Breeder\&.evalOneGeneration()\&.
+.SS "boolean org\&.jgap\&.distr\&.Breeder\&.isRunning ()\fC [inline]\fP"
+
+.PP
+Definition at line 151 of file Breeder\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Breeder\&.m_running\&.
+.SS "synchronized void org\&.jgap\&.distr\&.Breeder\&.pause (final inta_milliSec)\fC [inline]\fP, \fC [private]\fP"
+Pauses the \fBBreeder\fP\&. This is important if a user providing a system for running the GA does not want to make available 100% of his CPU resources\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_milliSec\fP number of milliseconds to wait
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 119 of file Breeder\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Breeder\&.run()\&.
+.SS "void org\&.jgap\&.distr\&.Breeder\&.run ()\fC [inline]\fP"
+Runs the evolution\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 67 of file Breeder\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Breeder\&.evalOneGeneration(), org\&.jgap\&.distr\&.Breeder\&.m_running, org\&.jgap\&.distr\&.Breeder\&.m_stopped, and org\&.jgap\&.distr\&.Breeder\&.pause()\&.
+.SS "void org\&.jgap\&.distr\&.Breeder\&.start ()\fC [inline]\fP"
+
+.PP
+Definition at line 128 of file Breeder\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Breeder\&.m_running\&.
+.SS "void org\&.jgap\&.distr\&.Breeder\&.stop ()\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+implement 
+.RE
+.PP
+
+.PP
+Definition at line 136 of file Breeder\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Breeder\&.m_genotype, and org\&.jgap\&.distr\&.Breeder\&.m_running\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.Breeder\&.CVS_REVISION = '$Revision: 1\&.13 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 28 of file Breeder\&.java\&.
+.SS "\fBGenotype\fP org\&.jgap\&.distr\&.Breeder\&.m_genotype\fC [private]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+use 
+.RE
+.PP
+The \fBGenotype\fP this \fBBreeder\fP is responsible for 
+.PP
+Definition at line 43 of file Breeder\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Breeder\&.stop()\&.
+.SS "\fBBreeder\fP org\&.jgap\&.distr\&.Breeder\&.m_master\fC [private]\fP"
+The parent \fBBreeder\fP to report to 
+.PP
+Definition at line 33 of file Breeder\&.java\&.
+.SS "transient MeanBuffer org\&.jgap\&.distr\&.Breeder\&.m_meanBuffer = new MeanBuffer(40)\fC [private]\fP"
+
+.PP
+Definition at line 54 of file Breeder\&.java\&.
+.SS "\fBIPopulationMerger\fP org\&.jgap\&.distr\&.Breeder\&.m_populationMerger\fC [private]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+construct somewhere 
+.RE
+.PP
+Helper class for merging together two Populations into one\&. 
+.PP
+Definition at line 48 of file Breeder\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Breeder\&.Breeder()\&.
+.SS "transient boolean org\&.jgap\&.distr\&.Breeder\&.m_running\fC [private]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+use 
+.RE
+.PP
+
+.PP
+Definition at line 50 of file Breeder\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Breeder\&.canBeStarted(), org\&.jgap\&.distr\&.Breeder\&.canBeStopped(), org\&.jgap\&.distr\&.Breeder\&.isRunning(), org\&.jgap\&.distr\&.Breeder\&.run(), org\&.jgap\&.distr\&.Breeder\&.start(), and org\&.jgap\&.distr\&.Breeder\&.stop()\&.
+.SS "transient boolean org\&.jgap\&.distr\&.Breeder\&.m_stopped = true\fC [private]\fP"
+
+.PP
+Definition at line 52 of file Breeder\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Breeder\&.run()\&.
+.SS "\fBBreeder\fP [] org\&.jgap\&.distr\&.Breeder\&.m_workers\fC [private]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+use 
+.RE
+.PP
+The child \fBBreeder\fP's doing work for us and reporting to this \fBBreeder\fP\&. 
+.PP
+Definition at line 38 of file Breeder\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

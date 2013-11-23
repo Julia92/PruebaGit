@@ -1,0 +1,446 @@
+.TH "org.jgap.impl.MutationOperator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.MutationOperator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.BaseGeneticOperator\fP, and Configurable\&.
+.PP
+Inherited by \fBorg\&.jgap\&.impl\&.RangedSwappingMutationOperator\fP, and \fBorg\&.jgap\&.impl\&.SwappingMutationOperator\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBMutationOperatorConfigurable\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMutationOperator\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBMutationOperator\fP (final \fBConfiguration\fP a_conf)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBMutationOperator\fP (final \fBConfiguration\fP a_config, final \fBIUniversalRateCalculator\fP a_mutationRateCalculator)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBMutationOperator\fP (final \fBConfiguration\fP a_config, final int a_desiredMutationRate)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBoperate\fP (final \fBPopulation\fP a_population, final List a_candidateChromosomes)"
+.br
+.ti -1c
+.RI "\fBIUniversalRateCalculator\fP \fBgetMutationRateCalc\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMutationRateCalc\fP (final \fBIUniversalRateCalculator\fP a_mutationRateCalc)"
+.br
+.ti -1c
+.RI "void \fBsetMutationRate\fP (int a_mutationRate)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (final Object a_other)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "int \fBgetMutationRate\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmutateGene\fP (final \fBGene\fP a_gene, final \fBRandomGenerator\fP a_generator)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBIUniversalRateCalculator\fP \fBm_mutationRateCalc\fP"
+.br
+.ti -1c
+.RI "MutationOperatorConfigurable \fBm_config\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.49 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The mutation operator runs through the genes in each of the Chromosomes in the population and mutates them in statistical accordance to the given mutation rate\&. Mutated Chromosomes are then added to the list of candidate Chromosomes destined for the natural selection process\&.
+.PP
+This \fBMutationOperator\fP supports both fixed and dynamic mutation rates\&. A fixed rate is one specified at construction time by the user\&. A dynamic rate is determined by this class if no fixed rate is provided, and is calculated based on the size of the Chromosomes in the population\&. Details are specified in the \fBDefaultMutationRateCalculator\fP class\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 33 of file MutationOperator\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.MutationOperator\&.MutationOperator () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this \fBMutationOperator\fP without a specified mutation rate, which results in dynamic mutation being turned on\&. This means that the mutation rate will be automatically determined by this operator based upon the number of genes present in the chromosomes\&. 
+.PP
+Attention: The configuration used is the one set with the static method Genotype\&.setConfiguration\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 63 of file MutationOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.MutationOperator\&.compareTo()\&.
+.SS "org\&.jgap\&.impl\&.MutationOperator\&.MutationOperator (final \fBConfiguration\fPa_conf) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 75 of file MutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.MutationOperator\&.setMutationRateCalc()\&.
+.SS "org\&.jgap\&.impl\&.MutationOperator\&.MutationOperator (final \fBConfiguration\fPa_config, final \fBIUniversalRateCalculator\fPa_mutationRateCalculator) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this \fBMutationOperator\fP with a specified mutation rate calculator, which results in dynamic mutation being turned on\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.br
+\fIa_mutationRateCalculator\fP calculator for dynamic mutation rate computation 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 93 of file MutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.MutationOperator\&.setMutationRateCalc()\&.
+.SS "org\&.jgap\&.impl\&.MutationOperator\&.MutationOperator (final \fBConfiguration\fPa_config, final inta_desiredMutationRate) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this \fBMutationOperator\fP with the given mutation rate\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.br
+\fIa_desiredMutationRate\fP desired rate of mutation, expressed as the denominator of the 1 / X fraction\&. For example, 1000 would result in 1/1000 genes being mutated on average\&. A mutation rate of zero disables mutation entirely 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 115 of file MutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.MutationOperator\&.setMutationRateCalc()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int org\&.jgap\&.impl\&.MutationOperator\&.compareTo (Objecta_other)\fC [inline]\fP"
+Compares the given \fBGeneticOperator\fP to this \fBGeneticOperator\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the instance against which to compare this instance 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a negative number if this instance is 'less than' the given instance, zero if they are equal to each other, and a positive number if this is 'greater than' the given instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 342 of file MutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.MutationOperator\&.m_config, org\&.jgap\&.impl\&.MutationOperator\&.m_mutationRateCalc, and org\&.jgap\&.impl\&.MutationOperator\&.MutationOperator()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.MutationOperator\&.equals(), and org\&.jgap\&.impl\&.MutationOperatorTest\&.testCompareTo_0()\&.
+.SS "boolean org\&.jgap\&.impl\&.MutationOperator\&.equals (final Objecta_other)\fC [inline]\fP"
+Compares this \fBGeneticOperator\fP against the specified object\&. The result is true if and the argument is an instance of this class and is equal wrt the data\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the object to compare against 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: if the objects are the same, false otherwise
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 323 of file MutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.MutationOperator\&.compareTo()\&.
+.SS "int org\&.jgap\&.impl\&.MutationOperator\&.getMutationRate ()\fC [inline]\fP"
+
+.PP
+Definition at line 372 of file MutationOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.SwappingMutationOperator\&.operate(), org\&.jgap\&.impl\&.RangedSwappingMutationOperator\&.operate(), org\&.jgap\&.impl\&.MutationOperatorTest\&.testConstruct_0(), org\&.jgap\&.impl\&.SwappingMutationOperatorTest\&.testConstruct_0(), org\&.jgap\&.impl\&.MutationOperatorTest\&.testConstruct_1(), org\&.jgap\&.impl\&.SwappingMutationOperatorTest\&.testConstruct_1(), org\&.jgap\&.impl\&.MutationOperatorTest\&.testConstruct_2(), org\&.jgap\&.impl\&.SwappingMutationOperatorTest\&.testConstruct_2(), org\&.jgap\&.impl\&.MutationOperatorTest\&.testConstruct_3(), and org\&.jgap\&.impl\&.SwappingMutationOperatorTest\&.testConstruct_3()\&.
+.SS "\fBIUniversalRateCalculator\fP org\&.jgap\&.impl\&.MutationOperator\&.getMutationRateCalc ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the MutationRateCalculator used
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 276 of file MutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.MutationOperator\&.m_mutationRateCalc\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.SwappingMutationOperator\&.operate(), org\&.jgap\&.impl\&.RangedSwappingMutationOperator\&.operate(), org\&.jgap\&.impl\&.MutationOperatorTest\&.testConstruct_0(), org\&.jgap\&.impl\&.SwappingMutationOperatorTest\&.testConstruct_0(), org\&.jgap\&.impl\&.MutationOperatorTest\&.testConstruct_1(), org\&.jgap\&.impl\&.SwappingMutationOperatorTest\&.testConstruct_1(), org\&.jgap\&.impl\&.MutationOperatorTest\&.testConstruct_2(), org\&.jgap\&.impl\&.SwappingMutationOperatorTest\&.testConstruct_2(), org\&.jgap\&.impl\&.MutationOperatorTest\&.testConstruct_3(), and org\&.jgap\&.impl\&.SwappingMutationOperatorTest\&.testConstruct_3()\&.
+.SS "void org\&.jgap\&.impl\&.MutationOperator\&.mutateGene (final \fBGene\fPa_gene, final \fBRandomGenerator\fPa_generator)\fC [inline]\fP, \fC [private]\fP"
+Helper: mutate all atomic elements of a gene\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_gene\fP the gene to be mutated 
+.br
+\fIa_generator\fP the generator delivering the amount of mutation
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 258 of file MutationOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.MutationOperator\&.operate()\&.
+.SS "void org\&.jgap\&.impl\&.MutationOperator\&.operate (final \fBPopulation\fPa_population, final Lista_candidateChromosomes)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_population\fP the population of chromosomes from the current evolution prior to exposure to any genetic operators\&. Chromosomes in this array should not be modified\&. Please notice, that the call in \fBGenotype\&.evolve()\fP to the implementations of \fBGeneticOperator\fP overgoes this due to performance issues 
+.br
+\fIa_candidateChromosomes\fP the pool of chromosomes that have been mutated
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+move to base class, refactor 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.GeneticOperator\fP\&.
+.PP
+Definition at line 136 of file MutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.util\&.ICloneable\&.clone(), org\&.jgap\&.ICompositeGene\&.geneAt(), org\&.jgap\&.BaseGeneticOperator\&.getConfiguration(), org\&.jgap\&.impl\&.MutationOperator\&.m_config, org\&.jgap\&.BaseGeneticOperator\&.m_monitorActive, org\&.jgap\&.impl\&.MutationOperator\&.m_mutationRateCalc, org\&.jgap\&.impl\&.MutationOperator\&.mutateGene(), and org\&.jgap\&.Population\&.size()\&.
+.SS "void org\&.jgap\&.impl\&.MutationOperator\&.setMutationRate (inta_mutationRate)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_mutationRate\fP new rate of mutation, expressed as the denominator of the 1 / X fraction\&. For example, 1000 would result in 1/1000 genes being mutated on average\&. A mutation rate of zero disables mutation entirely
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 307 of file MutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.MutationOperator\&.setMutationRateCalc()\&.
+.SS "void org\&.jgap\&.impl\&.MutationOperator\&.setMutationRateCalc (final \fBIUniversalRateCalculator\fPa_mutationRateCalc)\fC [inline]\fP"
+Sets the MutationRateCalculator to be used for determining the strength of mutation\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_mutationRateCalc\fP MutationRateCalculator
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 289 of file MutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.MutationOperator\&.m_mutationRateCalc\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.MutationOperator\&.MutationOperator(), and org\&.jgap\&.impl\&.MutationOperator\&.setMutationRate()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.MutationOperator\&.CVS_REVISION = '$Revision: 1\&.49 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 36 of file MutationOperator\&.java\&.
+.SS "MutationOperatorConfigurable org\&.jgap\&.impl\&.MutationOperator\&.m_config\fC [private]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= new
+      MutationOperatorConfigurable()
+.fi
+.PP
+Definition at line 45 of file MutationOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.MutationOperator\&.compareTo(), and org\&.jgap\&.impl\&.MutationOperator\&.operate()\&.
+.SS "\fBIUniversalRateCalculator\fP org\&.jgap\&.impl\&.MutationOperator\&.m_mutationRateCalc\fC [private]\fP"
+Calculator for dynamically determining the mutation rate\&. If set to null the value of m_mutationRate will be used\&. Replaces the previously used boolean m_dynamicMutationRate\&. 
+.PP
+Definition at line 43 of file MutationOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.MutationOperator\&.compareTo(), org\&.jgap\&.impl\&.MutationOperator\&.getMutationRateCalc(), org\&.jgap\&.impl\&.SwappingMutationOperator\&.operate(), org\&.jgap\&.impl\&.RangedSwappingMutationOperator\&.operate(), org\&.jgap\&.impl\&.MutationOperator\&.operate(), and org\&.jgap\&.impl\&.MutationOperator\&.setMutationRateCalc()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

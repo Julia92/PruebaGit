@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="_hot_bits_random_generator_8java" kind="file">
+    <compoundname>HotBitsRandomGenerator.java</compoundname>
+    <innerclass refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator" prot="public">org::jgap::impl::HotBitsRandomGenerator</innerclass>
+    <innernamespace refid="namespaceorg_1_1jgap_1_1impl">org::jgap::impl</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>JGAP.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>JGAP<sp/>offers<sp/>a<sp/>dual<sp/>license<sp/>model<sp/>containing<sp/>the<sp/>LGPL<sp/>as<sp/>well<sp/>as<sp/>the<sp/>MPL.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>For<sp/>licensing<sp/>information<sp/>please<sp/>see<sp/>the<sp/>file<sp/>license.txt<sp/>included<sp/>with<sp/>JGAP</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>or<sp/>have<sp/>a<sp/>look<sp/>at<sp/>the<sp/>top<sp/>of<sp/>class<sp/>org.jgap.Chromosome<sp/>which<sp/>representatively</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>includes<sp/>the<sp/>JGAP<sp/>license<sp/>policy<sp/>applicable<sp/>for<sp/>any<sp/>file<sp/>delivered<sp/>with<sp/>JGAP.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">org.jgap.impl;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.*;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.util.*;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator" kindref="compound">HotBitsRandomGenerator</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">implements</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1_random_generator" kindref="compound">RandomGenerator</ref><sp/>{</highlight></codeline>
+<codeline lineno="25" refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1a902b9dbe4496da72c6c3807a0c266523" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1a902b9dbe4496da72c6c3807a0c266523" kindref="member">CVS_REVISION</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$Revision:<sp/>1.3<sp/>$&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1afb3d4f751eec2635618aee7d91323a63" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>randomX<sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1afb3d4f751eec2635618aee7d91323a63" kindref="member">m_randomGenerator</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1a9e55f5cd47a861f70b051f86278a378c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1a9e55f5cd47a861f70b051f86278a378c" kindref="member">HotBitsRandomGenerator</ref>(randomX<sp/>a_randomGenerator)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1afb3d4f751eec2635618aee7d91323a63" kindref="member">m_randomGenerator</ref><sp/>=<sp/>a_randomGenerator;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1a84bbb39c921d46f5cff77c8e6a5baabc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>randomX<sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1a84bbb39c921d46f5cff77c8e6a5baabc" kindref="member">getRandomGenerator</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1afb3d4f751eec2635618aee7d91323a63" kindref="member">m_randomGenerator</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1a5460b602a8d1fd5bf2c71ab972a973ab" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>byte<sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1a5460b602a8d1fd5bf2c71ab972a973ab" kindref="member">nextByte</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_randomGenerator.nextByte();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1a212886b62617d156a8dfaa8753ab1ae9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1a212886b62617d156a8dfaa8753ab1ae9" kindref="member">nextInt</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_randomGenerator.nextInt();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1ad532bb61610054a88c7a46633937f62f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1ad532bb61610054a88c7a46633937f62f" kindref="member">nextInt</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ceiling)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_randomGenerator.nextInt()<sp/>%<sp/>ceiling;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1a084ac095168363d42c9b581475b314b4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1a084ac095168363d42c9b581475b314b4" kindref="member">nextLong</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_randomGenerator.nextLong();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1a21342093908fb90520d7506d0bec49f0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1a21342093908fb90520d7506d0bec49f0" kindref="member">nextDouble</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_randomGenerator.nextDouble();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1a4d60bfea27c1cf66d355c2608091cc30" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1a4d60bfea27c1cf66d355c2608091cc30" kindref="member">nextFloat</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_randomGenerator.nextFloat();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1aa660e3a60dca1802dbc28c564f2a9428" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_hot_bits_random_generator_1aa660e3a60dca1802dbc28c564f2a9428" kindref="member">nextBoolean</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_randomGenerator.nextBit();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/tests/org/jgap/impl/HotBitsRandomGenerator.java"/>
+  </compounddef>
+</doxygen>

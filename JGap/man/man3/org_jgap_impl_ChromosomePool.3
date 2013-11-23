@@ -1,0 +1,139 @@
+.TH "org.jgap.impl.ChromosomePool" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.ChromosomePool \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.IChromosomePool\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChromosomePool\fP ()"
+.br
+.ti -1c
+.RI "synchronized \fBIChromosome\fP \fBacquireChromosome\fP ()"
+.br
+.ti -1c
+.RI "synchronized void \fBreleaseChromosome\fP (final \fBIChromosome\fP a_chromosome)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPool\fP \fBm_chromosomePool\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.12 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Provides a pooling mechanism for \fBChromosome\fP instances so that discarded \fBChromosome\fP instances can be recycled, thus saving memory and the overhead of constructing new ones from scratch each time\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file ChromosomePool\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.ChromosomePool\&.ChromosomePool ()\fC [inline]\fP"
+Constructor\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rostan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 39 of file ChromosomePool\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.ChromosomePool\&.m_chromosomePool\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "synchronized \fBIChromosome\fP org\&.jgap\&.impl\&.ChromosomePool\&.acquireChromosome ()\fC [inline]\fP"
+Attempts to acquire an \fBChromosome\fP instance from the chromosome pool\&. It should be noted that nothing is guaranteed about the value of the \fBChromosome\fP's genes and they should be treated as undefined\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a \fBChromosome\fP instance from the pool or null if no \fBChromosome\fP instances are available in the pool
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rostan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosomePool\fP\&.
+.PP
+Definition at line 54 of file ChromosomePool\&.java\&.
+.SS "synchronized void org\&.jgap\&.impl\&.ChromosomePool\&.releaseChromosome (final \fBIChromosome\fPa_chromosome)\fC [inline]\fP"
+Releases a \fBChromosome\fP to the pool\&. It's not required that the \fBChromosome\fP originated from the pool--any \fBChromosome\fP can be released to it\&. This method will invoke the cleanup() method on each of the \fBChromosome\fP's genes prior to adding it back to the pool\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosome\fP the \fBChromosome\fP instance to be released into the pool
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rostan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 69 of file ChromosomePool\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.ChromosomePool\&.CVS_REVISION = '$Revision: 1\&.12 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file ChromosomePool\&.java\&.
+.SS "\fBPool\fP org\&.jgap\&.impl\&.ChromosomePool\&.m_chromosomePool\fC [private]\fP"
+The internal pool in which the Chromosomes are stored\&. 
+.PP
+Definition at line 31 of file ChromosomePool\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.ChromosomePool\&.ChromosomePool()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

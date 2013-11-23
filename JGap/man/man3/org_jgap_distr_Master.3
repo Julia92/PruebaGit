@@ -1,0 +1,256 @@
+.TH "org.jgap.distr.Master" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.Master \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMaster\fP (final \fBRequestDispatcher\fP a_dispatcher, final \fBWorkerListener\fP a_workerListener)  throws Exception "
+.br
+.ti -1c
+.RI "abstract void \fBstart\fP ()  throws Exception"
+.br
+.ti -1c
+.RI "void \fBstop\fP ()"
+.br
+.ti -1c
+.RI "\fBMasterInfo\fP \fBgetMasterInfo\fP ()"
+.br
+.ti -1c
+.RI "void \fBsendToWorker\fP (final \fBIWorker\fP a_worker, final \fBWorkerCommand\fP a_command)  throws IOException "
+.br
+.ti -1c
+.RI "\fBRequestDispatcher\fP \fBgetDispatcher\fP ()"
+.br
+.ti -1c
+.RI "\fBWorkerListener\fP \fBgetWorkerListener\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBMasterInfo\fP \fBm_masterinfo\fP"
+.br
+.ti -1c
+.RI "\fBRequestDispatcher\fP \fBm_dispatcher\fP"
+.br
+.ti -1c
+.RI "\fBWorkerListener\fP \fBm_workerListener\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.12 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Represents an IMaster instance\&. Distributes work to \fBIWorker\fP instances\&. Allows to receive new tasks and send them to the workers when applicable\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file Master\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.distr\&.Master\&.Master (final \fBRequestDispatcher\fPa_dispatcher, final \fBWorkerListener\fPa_workerListener) throws Exception\fC [inline]\fP"
+Constructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_dispatcher\fP the dispatcher to use for requests to workers 
+.br
+\fIa_workerListener\fP the listener to use for listening to worker messages 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 52 of file Master\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Master\&.m_dispatcher, org\&.jgap\&.distr\&.Master\&.m_masterinfo, and org\&.jgap\&.distr\&.Master\&.m_workerListener\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBRequestDispatcher\fP org\&.jgap\&.distr\&.Master\&.getDispatcher ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the \fBRequestDispatcher\fP used
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 114 of file Master\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Master\&.m_dispatcher\&.
+.SS "\fBMasterInfo\fP org\&.jgap\&.distr\&.Master\&.getMasterInfo ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+information about this master
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 90 of file Master\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Master\&.m_masterinfo\&.
+.SS "\fBWorkerListener\fP org\&.jgap\&.distr\&.Master\&.getWorkerListener ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the \fBWorkerListener\fP used
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 124 of file Master\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Master\&.m_workerListener\&.
+.SS "void org\&.jgap\&.distr\&.Master\&.sendToWorker (final \fBIWorker\fPa_worker, final \fBWorkerCommand\fPa_command) throws IOException\fC [inline]\fP"
+Sends a command to a worker\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_worker\fP the worker to send the command to 
+.br
+\fIa_command\fP the command to send 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIOException\fP 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+implement 
+.RE
+.PP
+
+.PP
+Definition at line 100 of file Master\&.java\&.
+.SS "abstract void org\&.jgap\&.distr\&.Master\&.start () throws Exception\fC [pure virtual]\fP"
+Starts the master listener\&. Implement in specific implementations of \fBMaster\fP\&. 
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.SS "void org\&.jgap\&.distr\&.Master\&.stop ()\fC [inline]\fP"
+Stops the master from being working\&. 
+.PP
+\fBTodo\fP
+.RS 4
+notify all workers to stop working??? No, better would be: next time master is available it can receive old results from workers\&. So, the workers need to store them for some time, until the master is able to receive the worker results\&. 
+.RE
+.PP
+
+.PP
+Definition at line 76 of file Master\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.Master\&.CVS_REVISION = '$Revision: 1\&.12 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file Master\&.java\&.
+.SS "\fBRequestDispatcher\fP org\&.jgap\&.distr\&.Master\&.m_dispatcher\fC [private]\fP"
+Dispatcher of a request 
+.PP
+Definition at line 35 of file Master\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Master\&.getDispatcher(), and org\&.jgap\&.distr\&.Master\&.Master()\&.
+.SS "\fBMasterInfo\fP org\&.jgap\&.distr\&.Master\&.m_masterinfo\fC [private]\fP"
+Information needed by workers 
+.PP
+Definition at line 30 of file Master\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Master\&.getMasterInfo(), and org\&.jgap\&.distr\&.Master\&.Master()\&.
+.SS "\fBWorkerListener\fP org\&.jgap\&.distr\&.Master\&.m_workerListener\fC [private]\fP"
+Listener to requests and answers from workers (= KKMultiServer) 
+.PP
+Definition at line 40 of file Master\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Master\&.getWorkerListener(), and org\&.jgap\&.distr\&.Master\&.Master()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

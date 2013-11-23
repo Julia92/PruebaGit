@@ -1,0 +1,814 @@
+.TH "org.jgap.distr.CultureMemoryCell" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.CultureMemoryCell \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable, and Comparable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCultureMemoryCell\fP ()"
+.br
+.ti -1c
+.RI "\fBCultureMemoryCell\fP (final String a_name)"
+.br
+.ti -1c
+.RI "\fBCultureMemoryCell\fP (final String a_name, final int a_historySize)"
+.br
+.ti -1c
+.RI "void \fBsetName\fP (final String a_name)"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetValue\fP (final Object a_value)"
+.br
+.ti -1c
+.RI "void \fBsetDouble\fP (final double a_value)"
+.br
+.ti -1c
+.RI "double \fBgetCurrentValueAsDouble\fP ()"
+.br
+.ti -1c
+.RI "Object \fBgetCurrentValue\fP ()"
+.br
+.ti -1c
+.RI "List \fBgetHistory\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetVersion\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetReadAccessed\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetReadAccessedCurrentVersion\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetHistorySize\fP (final int a_size)"
+.br
+.ti -1c
+.RI "int \fBgetHistorySize\fP ()"
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "long \fBgetVersionTimeMilliseconds\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBincrementVersion\fP ()"
+.br
+.ti -1c
+.RI "void \fBkeepHistory\fP (final Object a_value, final int a_version, final String a_name)"
+.br
+.ti -1c
+.RI "\fBCultureMemoryCell\fP \fBgetNewInstance\fP (final Object a_value, final int a_version, final String a_name)"
+.br
+.ti -1c
+.RI "void \fBtrimHistory\fP (final int a_size)"
+.br
+.ti -1c
+.RI "void \fBtoStringRecursive\fP (StringBuffer a_result, final int a_historySize)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "String \fBm_name\fP"
+.br
+.ti -1c
+.RI "int \fBm_version\fP"
+.br
+.ti -1c
+.RI "Object \fBm_value\fP"
+.br
+.ti -1c
+.RI "int \fBm_readAccessed\fP"
+.br
+.ti -1c
+.RI "int \fBm_historySize\fP"
+.br
+.ti -1c
+.RI "int \fBm_internalHistorySize\fP"
+.br
+.ti -1c
+.RI "\fBCultureMemoryCell\fP \fBm_previousVersion\fP"
+.br
+.ti -1c
+.RI "List \fBm_history\fP"
+.br
+.ti -1c
+.RI "long \fBm_dateTimeVersion\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.13 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Represents a memory cell used within \fBorg\&.jgap\&.distr\&.Culture\fP, a special form of memory\&. 
+.PP
+\fBCultureMemoryCell\fP also stores metadata along with the value-to-store, like date/time of setting a value, change history\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file CultureMemoryCell\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.distr\&.CultureMemoryCell\&.CultureMemoryCell ()\fC [inline]\fP"
+Default constructor\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 84 of file CultureMemoryCell\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.compareTo(), org\&.jgap\&.distr\&.CultureMemoryCell\&.getNewInstance(), org\&.jgap\&.distr\&.CultureMemoryCell\&.getReadAccessedCurrentVersion(), and org\&.jgap\&.distr\&.CultureMemoryCell\&.toStringRecursive()\&.
+.SS "org\&.jgap\&.distr\&.CultureMemoryCell\&.CultureMemoryCell (final Stringa_name)\fC [inline]\fP"
+Sets history size to 3\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP informative name of the memory cell
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 95 of file CultureMemoryCell\&.java\&.
+.SS "org\&.jgap\&.distr\&.CultureMemoryCell\&.CultureMemoryCell (final Stringa_name, final inta_historySize)\fC [inline]\fP"
+Allows to freely specify informative name of memory cell as well as size of history to keep\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP informative name of the memory cell 
+.br
+\fIa_historySize\fP size of history to keep\&. Use values less than 1 for turning history logging off
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 109 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.getHistorySize(), org\&.jgap\&.distr\&.CultureMemoryCell\&.m_history, org\&.jgap\&.distr\&.CultureMemoryCell\&.setHistorySize(), and org\&.jgap\&.distr\&.CultureMemoryCell\&.setName()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int org\&.jgap\&.distr\&.CultureMemoryCell\&.compareTo (Objecta_other)\fC [inline]\fP"
+The compareTo-method\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+-1, 0, 1
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 420 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.CultureMemoryCell(), org\&.jgap\&.distr\&.CultureMemoryCell\&.m_historySize, org\&.jgap\&.distr\&.CultureMemoryCell\&.m_value, and org\&.jgap\&.distr\&.CultureMemoryCell\&.m_version\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.equals()\&.
+.SS "boolean org\&.jgap\&.distr\&.CultureMemoryCell\&.equals (Objecta_other)\fC [inline]\fP"
+The equals-method\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the objects are regarded as equal
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 404 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.compareTo()\&.
+.SS "Object org\&.jgap\&.distr\&.CultureMemoryCell\&.getCurrentValue ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+current memory value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 185 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.m_readAccessed, and org\&.jgap\&.distr\&.CultureMemoryCell\&.m_value\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.getCurrentValueAsDouble(), org\&.jgap\&.distr\&.CultureMemoryCellTest\&.testSetDouble_0(), and org\&.jgap\&.distr\&.CultureMemoryCellTest\&.testSetValue_0()\&.
+.SS "double org\&.jgap\&.distr\&.CultureMemoryCell\&.getCurrentValueAsDouble ()\fC [inline]\fP"
+Convenience method to retrieve a primitive double value from memory easily\&. Here a ClassCastException could occur! 
+.PP
+\fBReturns:\fP
+.RS 4
+double value representing current memory value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 175 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.getCurrentValue()\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCellTest\&.testSetDouble_0()\&.
+.SS "List org\&.jgap\&.distr\&.CultureMemoryCell\&.getHistory ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+list of most recent entries (except current entry)\&. The item at index 0 is the oldest, the item at highest index is the youngest one\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 197 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.m_history\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.setHistorySize(), and org\&.jgap\&.distr\&.CultureMemoryCell\&.toStringRecursive()\&.
+.SS "int org\&.jgap\&.distr\&.CultureMemoryCell\&.getHistorySize ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+size of the history
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 340 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.m_historySize\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.CultureMemoryCell(), and org\&.jgap\&.distr\&.CultureMemoryCell\&.toString()\&.
+.SS "String org\&.jgap\&.distr\&.CultureMemoryCell\&.getName ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+informative name of the memory cell
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 132 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.m_name\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.setValue(), and org\&.jgap\&.distr\&.CultureMemoryCell\&.toStringRecursive()\&.
+.SS "\fBCultureMemoryCell\fP org\&.jgap\&.distr\&.CultureMemoryCell\&.getNewInstance (final Objecta_value, final inta_version, final Stringa_name)\fC [inline]\fP, \fC [protected]\fP"
+Creates a new instance of \fBCultureMemoryCell\fP preset with the given parameters\&. Used for creating history entries\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_value\fP memory value to store 
+.br
+\fIa_version\fP version of the value 
+.br
+\fIa_name\fP name to store 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+new instance of \fBCultureMemoryCell\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 255 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.CultureMemoryCell()\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.keepHistory(), and org\&.jgap\&.distr\&.CultureMemoryCell\&.setValue()\&.
+.SS "int org\&.jgap\&.distr\&.CultureMemoryCell\&.getReadAccessed ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+number of times the memory cell has been read accessed
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 271 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.m_readAccessed\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.getReadAccessedCurrentVersion(), org\&.jgap\&.distr\&.CultureMemoryCellTest\&.testSetValue_0(), and org\&.jgap\&.distr\&.CultureMemoryCell\&.toStringRecursive()\&.
+.SS "int org\&.jgap\&.distr\&.CultureMemoryCell\&.getReadAccessedCurrentVersion ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+number of read accesses since current value has been set\&. Calculated by subtracting number of read accesses for prior version from total number of read accesses
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 283 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.CultureMemoryCell(), org\&.jgap\&.distr\&.CultureMemoryCell\&.getReadAccessed(), org\&.jgap\&.distr\&.CultureMemoryCell\&.m_history, and org\&.jgap\&.distr\&.CultureMemoryCell\&.m_historySize\&.
+.SS "int org\&.jgap\&.distr\&.CultureMemoryCell\&.getVersion ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+version of memory value, read only
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 207 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.m_version\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.setValue(), org\&.jgap\&.distr\&.CultureMemoryCellTest\&.testSetValue_0(), and org\&.jgap\&.distr\&.CultureMemoryCell\&.toStringRecursive()\&.
+.SS "long org\&.jgap\&.distr\&.CultureMemoryCell\&.getVersionTimeMilliseconds ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+time in milliseconds when the current version has been created
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 392 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.m_dateTimeVersion\&.
+.SS "void org\&.jgap\&.distr\&.CultureMemoryCell\&.incrementVersion ()\fC [inline]\fP, \fC [protected]\fP"
+Increment version number and keep track of current time\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 217 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.m_dateTimeVersion, and org\&.jgap\&.distr\&.CultureMemoryCell\&.m_version\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.setValue()\&.
+.SS "void org\&.jgap\&.distr\&.CultureMemoryCell\&.keepHistory (final Objecta_value, final inta_version, final Stringa_name)\fC [inline]\fP, \fC [protected]\fP"
+Puts an entry into history\&. Stores all information as a new \fBCultureMemoryCell\fP instance\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_value\fP memory value to store 
+.br
+\fIa_version\fP version of the value 
+.br
+\fIa_name\fP name to store
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 234 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.getNewInstance(), org\&.jgap\&.distr\&.CultureMemoryCell\&.m_historySize, and org\&.jgap\&.distr\&.CultureMemoryCell\&.trimHistory()\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.setValue()\&.
+.SS "void org\&.jgap\&.distr\&.CultureMemoryCell\&.setDouble (final doublea_value)\fC [inline]\fP"
+Convenience method to store a primitive double easily\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_value\fP double value to store
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 163 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.setValue()\&.
+.SS "void org\&.jgap\&.distr\&.CultureMemoryCell\&.setHistorySize (final inta_size)\fC [inline]\fP"
+Sets the size of the history and scales down the history log it is larger than the given size\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_size\fP new size of the history log = how many entries to store
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 306 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.getHistory(), org\&.jgap\&.distr\&.CultureMemoryCell\&.m_historySize, and org\&.jgap\&.distr\&.CultureMemoryCell\&.trimHistory()\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.CultureMemoryCell()\&.
+.SS "void org\&.jgap\&.distr\&.CultureMemoryCell\&.setName (final Stringa_name)\fC [inline]\fP"
+Sets the informative name of the memory cell\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP informative name
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 122 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.m_name\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.CultureMemoryCell()\&.
+.SS "void org\&.jgap\&.distr\&.CultureMemoryCell\&.setValue (final Objecta_value)\fC [inline]\fP"
+Sets a new memory value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_value\fP the memory value to set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 143 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.getName(), org\&.jgap\&.distr\&.CultureMemoryCell\&.getNewInstance(), org\&.jgap\&.distr\&.CultureMemoryCell\&.getVersion(), org\&.jgap\&.distr\&.CultureMemoryCell\&.incrementVersion(), org\&.jgap\&.distr\&.CultureMemoryCell\&.keepHistory(), org\&.jgap\&.distr\&.CultureMemoryCell\&.m_historySize, org\&.jgap\&.distr\&.CultureMemoryCell\&.m_previousVersion, and org\&.jgap\&.distr\&.CultureMemoryCell\&.m_value\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.setDouble()\&.
+.SS "String org\&.jgap\&.distr\&.CultureMemoryCell\&.toString ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+String representation of the cultural memory cell including all important information (also history log)\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 351 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.getHistorySize(), and org\&.jgap\&.distr\&.CultureMemoryCell\&.toStringRecursive()\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCellTest\&.testToString_0(), org\&.jgap\&.distr\&.CultureMemoryCellTest\&.testToString_1(), and org\&.jgap\&.distr\&.CultureMemoryCellTest\&.testToString_2()\&.
+.SS "void org\&.jgap\&.distr\&.CultureMemoryCell\&.toStringRecursive (StringBuffera_result, final inta_historySize)\fC [inline]\fP, \fC [protected]\fP"
+Recursive part of \fBtoString()\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_result\fP gathered result so far and modified here 
+.br
+\fIa_historySize\fP history size just for information purpose
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 365 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.CultureMemoryCell(), org\&.jgap\&.distr\&.CultureMemoryCell\&.getHistory(), org\&.jgap\&.distr\&.CultureMemoryCell\&.getName(), org\&.jgap\&.distr\&.CultureMemoryCell\&.getReadAccessed(), org\&.jgap\&.distr\&.CultureMemoryCell\&.getVersion(), and org\&.jgap\&.distr\&.CultureMemoryCell\&.m_value\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.toString()\&.
+.SS "void org\&.jgap\&.distr\&.CultureMemoryCell\&.trimHistory (final inta_size)\fC [inline]\fP, \fC [protected]\fP"
+Trims the history to the given size\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_size\fP new size of history
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 326 of file CultureMemoryCell\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.CultureMemoryCell\&.m_history\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.keepHistory(), and org\&.jgap\&.distr\&.CultureMemoryCell\&.setHistorySize()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.CultureMemoryCell\&.CVS_REVISION = '$Revision: 1\&.13 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 29 of file CultureMemoryCell\&.java\&.
+.SS "long org\&.jgap\&.distr\&.CultureMemoryCell\&.m_dateTimeVersion\fC [private]\fP"
+Time in milliseconds when the version number is incremented (e\&.g\&. when setting the value of the cell) 
+.PP
+Definition at line 76 of file CultureMemoryCell\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.getVersionTimeMilliseconds(), and org\&.jgap\&.distr\&.CultureMemoryCell\&.incrementVersion()\&.
+.SS "List org\&.jgap\&.distr\&.CultureMemoryCell\&.m_history\fC [private]\fP"
+History of memory values 
+.PP
+Definition at line 70 of file CultureMemoryCell\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.CultureMemoryCell(), org\&.jgap\&.distr\&.CultureMemoryCell\&.getHistory(), org\&.jgap\&.distr\&.CultureMemoryCell\&.getReadAccessedCurrentVersion(), and org\&.jgap\&.distr\&.CultureMemoryCell\&.trimHistory()\&.
+.SS "int org\&.jgap\&.distr\&.CultureMemoryCell\&.m_historySize\fC [private]\fP"
+How many historical values should be kept for evaluation purposes? Values less than one turn history feature off 
+.PP
+Definition at line 57 of file CultureMemoryCell\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.compareTo(), org\&.jgap\&.distr\&.CultureMemoryCell\&.getHistorySize(), org\&.jgap\&.distr\&.CultureMemoryCell\&.getReadAccessedCurrentVersion(), org\&.jgap\&.distr\&.CultureMemoryCell\&.keepHistory(), org\&.jgap\&.distr\&.CultureMemoryCell\&.setHistorySize(), and org\&.jgap\&.distr\&.CultureMemoryCell\&.setValue()\&.
+.SS "int org\&.jgap\&.distr\&.CultureMemoryCell\&.m_internalHistorySize\fC [private]\fP"
+
+.PP
+Definition at line 59 of file CultureMemoryCell\&.java\&.
+.SS "String org\&.jgap\&.distr\&.CultureMemoryCell\&.m_name\fC [private]\fP"
+Informative name of the memory cell (optional) 
+.PP
+Definition at line 34 of file CultureMemoryCell\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.getName(), and org\&.jgap\&.distr\&.CultureMemoryCell\&.setName()\&.
+.SS "\fBCultureMemoryCell\fP org\&.jgap\&.distr\&.CultureMemoryCell\&.m_previousVersion\fC [private]\fP"
+If history logging turned off, we need to keep the prior version for evaluation purpose, e\&.g\&. see getReadAccessedCurrentVersion 
+.PP
+Definition at line 65 of file CultureMemoryCell\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.setValue()\&.
+.SS "int org\&.jgap\&.distr\&.CultureMemoryCell\&.m_readAccessed\fC [private]\fP"
+How many times has the memory cell been read out? 
+.PP
+Definition at line 51 of file CultureMemoryCell\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.getCurrentValue(), and org\&.jgap\&.distr\&.CultureMemoryCell\&.getReadAccessed()\&.
+.SS "Object org\&.jgap\&.distr\&.CultureMemoryCell\&.m_value\fC [private]\fP"
+Value of the memory cell 
+.PP
+Definition at line 46 of file CultureMemoryCell\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.compareTo(), org\&.jgap\&.distr\&.CultureMemoryCell\&.getCurrentValue(), org\&.jgap\&.distr\&.CultureMemoryCell\&.setValue(), and org\&.jgap\&.distr\&.CultureMemoryCell\&.toStringRecursive()\&.
+.SS "int org\&.jgap\&.distr\&.CultureMemoryCell\&.m_version\fC [private]\fP"
+Version of the memory value, i\&.e\&. how many times has setValue(\&.\&.) been called)? First version (no value assigned) is zero, second version (first time a value is assigned to the memory) is 1 etc\&. 
+.PP
+Definition at line 41 of file CultureMemoryCell\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureMemoryCell\&.compareTo(), org\&.jgap\&.distr\&.CultureMemoryCell\&.getVersion(), and org\&.jgap\&.distr\&.CultureMemoryCell\&.incrementVersion()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

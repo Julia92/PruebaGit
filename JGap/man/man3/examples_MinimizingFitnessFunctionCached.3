@@ -1,0 +1,177 @@
+.TH "examples.MinimizingFitnessFunctionCached" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.MinimizingFitnessFunctionCached \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits CachedFitnessFunction\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMinimizingFitnessFunctionCached\fP (int a_targetAmount)"
+.br
+.ti -1c
+.RI "double \fBevaluate\fP (IChromosome a_subject)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fBamountOfChange\fP (IChromosome a_potentialSolution)"
+.br
+.ti -1c
+.RI "static int \fBgetNumberOfCoinsAtGene\fP (IChromosome a_potentialSolution, int a_position)"
+.br
+.ti -1c
+.RI "static int \fBgetTotalNumberOfCoins\fP (IChromosome a_potentialsolution)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final int \fBMAX_BOUND\fP = 4000"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "double \fBchangeDifferenceBonus\fP (double a_maxFitness, int a_changeDifference)"
+.br
+.ti -1c
+.RI "double \fBcomputeCoinNumberPenalty\fP (double a_maxFitness, int a_coins)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "final int \fBm_targetAmount\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.2 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+For any Javadoc see \fBMinimizingMakeChangeFitnessFunction\fP\&.
+.PP
+Additionally, this fitness function is cached\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file MinimizingFitnessFunctionCached\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.MinimizingFitnessFunctionCached\&.MinimizingFitnessFunctionCached (inta_targetAmount)\fC [inline]\fP"
+
+.PP
+Definition at line 30 of file MinimizingFitnessFunctionCached\&.java\&.
+.PP
+References examples\&.MinimizingFitnessFunctionCached\&.m_targetAmount, and examples\&.MinimizingFitnessFunctionCached\&.MAX_BOUND\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static int examples\&.MinimizingFitnessFunctionCached\&.amountOfChange (IChromosomea_potentialSolution)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 115 of file MinimizingFitnessFunctionCached\&.java\&.
+.PP
+References examples\&.MinimizingFitnessFunctionCached\&.getNumberOfCoinsAtGene()\&.
+.PP
+Referenced by examples\&.MinimizingFitnessFunctionCached\&.evaluate()\&.
+.SS "double examples\&.MinimizingFitnessFunctionCached\&.changeDifferenceBonus (doublea_maxFitness, inta_changeDifference)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 85 of file MinimizingFitnessFunctionCached\&.java\&.
+.PP
+Referenced by examples\&.MinimizingFitnessFunctionCached\&.evaluate()\&.
+.SS "double examples\&.MinimizingFitnessFunctionCached\&.computeCoinNumberPenalty (doublea_maxFitness, inta_coins)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 102 of file MinimizingFitnessFunctionCached\&.java\&.
+.PP
+Referenced by examples\&.MinimizingFitnessFunctionCached\&.evaluate()\&.
+.SS "double examples\&.MinimizingFitnessFunctionCached\&.evaluate (IChromosomea_subject)\fC [inline]\fP"
+
+.PP
+Definition at line 38 of file MinimizingFitnessFunctionCached\&.java\&.
+.PP
+References examples\&.MinimizingFitnessFunctionCached\&.amountOfChange(), examples\&.MinimizingFitnessFunctionCached\&.changeDifferenceBonus(), examples\&.MinimizingFitnessFunctionCached\&.computeCoinNumberPenalty(), examples\&.MinimizingFitnessFunctionCached\&.getTotalNumberOfCoins(), examples\&.MinimizingFitnessFunctionCached\&.m_targetAmount, and examples\&.MinimizingFitnessFunctionCached\&.MAX_BOUND\&.
+.SS "static int examples\&.MinimizingFitnessFunctionCached\&.getNumberOfCoinsAtGene (IChromosomea_potentialSolution, inta_position)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 124 of file MinimizingFitnessFunctionCached\&.java\&.
+.PP
+Referenced by examples\&.MinimizingFitnessFunctionCached\&.amountOfChange(), and examples\&.MinimizingFitnessFunctionCached\&.getTotalNumberOfCoins()\&.
+.SS "static int examples\&.MinimizingFitnessFunctionCached\&.getTotalNumberOfCoins (IChromosomea_potentialsolution)\fC [inline]\fP, \fC [static]\fP"
+Returns the total number of coins represented by all of the genes in the given potential solution\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_potentialsolution\fP the potential solution to evaluate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+total number of coins represented by the given Chromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 141 of file MinimizingFitnessFunctionCached\&.java\&.
+.PP
+References examples\&.MinimizingFitnessFunctionCached\&.getNumberOfCoinsAtGene()\&.
+.PP
+Referenced by examples\&.MinimizingFitnessFunctionCached\&.evaluate(), and examples\&.MinimizingMakeChangeCached\&.makeChangeForAmount()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.MinimizingFitnessFunctionCached\&.CVS_REVISION = '$Revision: 1\&.2 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 24 of file MinimizingFitnessFunctionCached\&.java\&.
+.SS "final int examples\&.MinimizingFitnessFunctionCached\&.m_targetAmount\fC [private]\fP"
+
+.PP
+Definition at line 26 of file MinimizingFitnessFunctionCached\&.java\&.
+.PP
+Referenced by examples\&.MinimizingFitnessFunctionCached\&.evaluate(), and examples\&.MinimizingFitnessFunctionCached\&.MinimizingFitnessFunctionCached()\&.
+.SS "final int examples\&.MinimizingFitnessFunctionCached\&.MAX_BOUND = 4000\fC [static]\fP"
+
+.PP
+Definition at line 28 of file MinimizingFitnessFunctionCached\&.java\&.
+.PP
+Referenced by examples\&.MinimizingFitnessFunctionCached\&.evaluate(), examples\&.MinimizingMakeChangeCached\&.main(), and examples\&.MinimizingFitnessFunctionCached\&.MinimizingFitnessFunctionCached()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

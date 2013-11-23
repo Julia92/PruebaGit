@@ -1,0 +1,388 @@
+.TH "org.jgap.audit.EvolutionMonitor" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.audit.EvolutionMonitor \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.audit\&.IEvolutionMonitor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEvolutionMonitor\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBnextCycle\fP (\fBPopulation\fP a_pop, List< String > a_messages)"
+.br
+.ti -1c
+.RI "void \fBstart\fP (\fBConfiguration\fP a_config)"
+.br
+.ti -1c
+.RI "void \fBevent\fP (String a_monitorEvent, int a_evolutionNo, Object[] a_information)"
+.br
+.ti -1c
+.RI "\fBPopulationHistoryIndexed\fP \fBgetPopulations\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final int \fBCONTEXT_UPDATE_CHROMOSOMES1\fP = 0"
+.br
+.ti -1c
+.RI "static final int \fBCONTEXT_OFFSET_NATURAL_SELECTOR1\fP = 1"
+.br
+.ti -1c
+.RI "static final int \fBCONTEXT_OFFSET_AFTER_OPERATE\fP = 10"
+.br
+.ti -1c
+.RI "static final int \fBCONTEXT_AFTER_BULK_EVALUATION\fP = 20"
+.br
+.ti -1c
+.RI "static final int \fBCONTEXT_UPDATE_CHROMOSOMES2\fP = 22"
+.br
+.ti -1c
+.RI "static final int \fBCONTEXT_NEW_CHROMOSOME\fP = 22"
+.br
+.ti -1c
+.RI "static final int \fBCONTEXT_READD_FITTEST\fP = 23"
+.br
+.ti -1c
+.RI "static final int \fBCONTEXT_OFFSET_NATURAL_SELECTOR2\fP = 30"
+.br
+.ti -1c
+.RI "static final int \fBCONTEXT_END_OF_CYCLE\fP = 999"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinitCounters\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBm_checks\fP"
+.br
+.ti -1c
+.RI "\fBPopulationHistoryIndexed\fP \fBm_popHist\fP"
+.br
+.ti -1c
+.RI "int \fBm_selectorIndex\fP"
+.br
+.ti -1c
+.RI "int \fBm_operatorIndex\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.3 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Monitors the evolution progress extensively\&. Keeps track of the population development for each single generation during the whole evolution process\&. Monitors chromosomes as well as genes\&. For each chromosome the originating chromosome is monitored (applies for natural selectors as well as for genetic operators that transform a single chromosome, like MutationOperator)\&. For more complex genetic operators, like CrossoverOperator, all originating chromosomes are monitored (in crossover there are two)\&. For genes an analogue monitoring is supported as for chromosomes\&.
+.PP
+TO ACTIVATE MONITORING: \fBConfiguration\&.setMonitor\fP(new \fBEvolutionMonitor()\fP);
+.PP
+Each chromosome and gene itself has a unique ID\&. This ID is set by method setUniqueID\&. A unique ID is a String value that, in best case, is unique worldwide\&.
+.PP
+A chromosome's or gene's originator is set by method setUniqueIDTemplate\&. This method accepts an index, as there could be more than one originator (see below)\&. 
+.PP
+.PP
+To give a better view, here are the population snapshots that are taken during a single evolution generation (chromosomes are given by *,+,-,\&.): 
+.PP
+.nf
+|-------|      |-------|      |-------|      |-------|      |-------|
+| ** *  |      | **    |      |  *    |      |  +    |      |  +    |
+|* *  * |  =>  |* *  * |  =>  |*    * |  =>  |*    - |  =>  |*    . |
+| * **  |      |   **  |      |   **  |      |   **  |      |   -*  |
+|-------|      |-------|      |-------|      |-------|      |-------|
+  Update        Natural        Natural        Genetic        Genetic
+
+.fi
+.PP
+ Chromosomes Selector 1 Selector i Operator 1 Operator j (Fitness calc\&.)
+.PP
+|-------| |-------| |-------| |-------| |-------| | + | | + | | +** | | +** | | + * | => |* \&. | => |* \&. | => |* \&. | => |* * \&. | => |* * \&. | | -* | | -* | |* -* | |* -* | |* - | |-------| |-------| |-------| |-------| |-------| Bulk Fitness Update Add new Re-add Natural Function Chromosomes Chromosomes Fittest Selector k (optional) \fBChromosome\fP (Post-Sel\&.)
+.PP
+|-------| | + * | => |* * \&. | |* - | |-------| End of cycle
+.PP
+For each single evolution cycle, these population states are kept separately\&. 
+.PP
+.PP
+For each chromosome the originating chromosomes are tracked\&. Here are examples:
+.PP
+Natural Selection, e\&.g\&. WeightedRouletteSelector: \fBChromosome\fP 4715 has originator \fBChromosome\fP 4711 (different ID because of cloning)
+.PP
+Genetic Operation, e\&.g\&. MutationOperator: \fBChromosome\fP 5512 has originator \fBChromosome\fP 1139
+.PP
+Genetic Operation, e\&.g\&. CrossoverOperator: \fBChromosome\fP 7119 has originator Chromosomes 807 and 5703 \fBChromosome\fP 7120 has originator Chromosomes 807 and 5703 => two resulting Chromosomes have the same originators!
+.PP
+Genetic, Operation, e\&.g\&. YourOperator: There can be as many originating Chromosomes as your operator regards 
+.PP
+.PP
+For each gene the originating genes are tracked\&. Examples:
+.PP
+Natural Selection, e\&.g\&. WeightedRouletteSelector: All Genes in \fBChromosome\fP 4711 have the same originating genes as \fBChromosome\fP 4711's originating \fBChromosome\fP's genes\&. => \fBChromosome\fP is selected only, not modified, thus the Genes stick to the \fBChromosome\fP they belong to\&. Genes unique ID of template is not set\&.
+.PP
+Genetic Operation, e\&.g\&. MutationOperator: Each mutated \fBGene\fP originates from exactly one other \fBGene\fP
+.PP
+Genetic Operation, e\&.g\&. CrossoverOperator: Each crossed over \fBGene\fP A has one originating \fBGene\fP B\&. In turn, \fBGene\fP B has one originating \fBGene\fP A, as their alleles are swapped\&. All uncrossed Genes have the same originator as the \fBChromosome\fP they belong to, thus their unique ID of template is not set\&.
+.PP
+Genetic, Operation, e\&.g\&. YourOperator: A \fBGene\fP could virtually have any number of originators\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 114 of file EvolutionMonitor\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.audit\&.EvolutionMonitor\&.EvolutionMonitor ()\fC [inline]\fP"
+
+.PP
+Definition at line 145 of file EvolutionMonitor\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.EvolutionMonitor\&.init()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.audit\&.EvolutionMonitor\&.event (Stringa_monitorEvent, inta_evolutionNo, Object[]a_information)\fC [inline]\fP"
+Called whenever it's worth monitoring\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_monitorEvent\fP see constants at top of class \fBIEvolutionMonitor\fP 
+.br
+\fIa_evolutionNo\fP the index of the evolution round (1, 2, \&.\&.\&.) 
+.br
+\fIa_information\fP event-specific information
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.audit\&.IEvolutionMonitor\fP\&.
+.PP
+Definition at line 216 of file EvolutionMonitor\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.EvolutionMonitor\&.CONTEXT_AFTER_BULK_EVALUATION, org\&.jgap\&.audit\&.EvolutionMonitor\&.CONTEXT_NEW_CHROMOSOME, org\&.jgap\&.audit\&.EvolutionMonitor\&.CONTEXT_OFFSET_AFTER_OPERATE, org\&.jgap\&.audit\&.EvolutionMonitor\&.CONTEXT_OFFSET_NATURAL_SELECTOR1, org\&.jgap\&.audit\&.EvolutionMonitor\&.CONTEXT_OFFSET_NATURAL_SELECTOR2, org\&.jgap\&.audit\&.EvolutionMonitor\&.CONTEXT_READD_FITTEST, org\&.jgap\&.audit\&.EvolutionMonitor\&.CONTEXT_UPDATE_CHROMOSOMES1, org\&.jgap\&.audit\&.EvolutionMonitor\&.CONTEXT_UPDATE_CHROMOSOMES2, org\&.jgap\&.audit\&.EvolutionMonitor\&.m_checks, org\&.jgap\&.audit\&.EvolutionMonitor\&.m_operatorIndex, org\&.jgap\&.audit\&.EvolutionMonitor\&.m_selectorIndex, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_AFTER_BULK_EVAL, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_AFTER_OPERATE, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_AFTER_SELECT, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_AFTER_UPDATE_CHROMOSOMES1, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_AFTER_UPDATE_CHROMOSOMES2, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_BEFORE_ADD_CHROMOSOME, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_BEFORE_BULK_EVAL, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_BEFORE_OPERATE, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_BEFORE_SELECT, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_BEFORE_UPDATE_CHROMOSOMES1, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_BEFORE_UPDATE_CHROMOSOMES2, org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_READD_FITTEST, and org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_REMOVE_CHROMOSOME\&.
+.SS "\fBPopulationHistoryIndexed\fP org\&.jgap\&.audit\&.EvolutionMonitor\&.getPopulations ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the gathered monitoring data
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.audit\&.IEvolutionMonitor\fP\&.
+.PP
+Definition at line 352 of file EvolutionMonitor\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.EvolutionMonitor\&.m_popHist\&.
+.SS "void org\&.jgap\&.audit\&.EvolutionMonitor\&.init ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 149 of file EvolutionMonitor\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.EvolutionMonitor\&.m_popHist\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvolutionMonitor\&.EvolutionMonitor()\&.
+.SS "void org\&.jgap\&.audit\&.EvolutionMonitor\&.initCounters ()\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 201 of file EvolutionMonitor\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.EvolutionMonitor\&.m_operatorIndex, and org\&.jgap\&.audit\&.EvolutionMonitor\&.m_selectorIndex\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvolutionMonitor\&.nextCycle(), and org\&.jgap\&.audit\&.EvolutionMonitor\&.start()\&.
+.SS "boolean org\&.jgap\&.audit\&.EvolutionMonitor\&.nextCycle (\fBPopulation\fPa_pop, List< String >a_messages)\fC [inline]\fP"
+Called after another evolution cycle has been executed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pop\fP the currently evolved population 
+.br
+\fIa_messages\fP the monitor can append messages to indicate why it asks evolution to stop 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: continue with the evolution; false: stop evolution
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.audit\&.IEvolutionMonitor\fP\&.
+.PP
+Definition at line 164 of file EvolutionMonitor\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.clone(), org\&.jgap\&.audit\&.EvolutionMonitor\&.CONTEXT_END_OF_CYCLE, org\&.jgap\&.audit\&.EvolutionMonitor\&.initCounters(), and org\&.jgap\&.audit\&.EvolutionMonitor\&.m_checks\&.
+.SS "void org\&.jgap\&.audit\&.EvolutionMonitor\&.start (\fBConfiguration\fPa_config)\fC [inline]\fP"
+Called just before the evolution starts\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration used
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.audit\&.IEvolutionMonitor\fP\&.
+.PP
+Definition at line 197 of file EvolutionMonitor\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.EvolutionMonitor\&.initCounters()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final int org\&.jgap\&.audit\&.EvolutionMonitor\&.CONTEXT_AFTER_BULK_EVALUATION = 20\fC [static]\fP"
+
+.PP
+Definition at line 125 of file EvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvolutionMonitor\&.event()\&.
+.SS "final int org\&.jgap\&.audit\&.EvolutionMonitor\&.CONTEXT_END_OF_CYCLE = 999\fC [static]\fP"
+
+.PP
+Definition at line 135 of file EvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvolutionMonitor\&.nextCycle(), and org\&.jgap\&.audit\&.EvolutionEvaluator\&.trackChromosomes()\&.
+.SS "final int org\&.jgap\&.audit\&.EvolutionMonitor\&.CONTEXT_NEW_CHROMOSOME = 22\fC [static]\fP"
+
+.PP
+Definition at line 129 of file EvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvolutionMonitor\&.event()\&.
+.SS "final int org\&.jgap\&.audit\&.EvolutionMonitor\&.CONTEXT_OFFSET_AFTER_OPERATE = 10\fC [static]\fP"
+
+.PP
+Definition at line 123 of file EvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvolutionMonitor\&.event()\&.
+.SS "final int org\&.jgap\&.audit\&.EvolutionMonitor\&.CONTEXT_OFFSET_NATURAL_SELECTOR1 = 1\fC [static]\fP"
+
+.PP
+Definition at line 121 of file EvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvolutionMonitor\&.event()\&.
+.SS "final int org\&.jgap\&.audit\&.EvolutionMonitor\&.CONTEXT_OFFSET_NATURAL_SELECTOR2 = 30\fC [static]\fP"
+
+.PP
+Definition at line 133 of file EvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvolutionMonitor\&.event()\&.
+.SS "final int org\&.jgap\&.audit\&.EvolutionMonitor\&.CONTEXT_READD_FITTEST = 23\fC [static]\fP"
+
+.PP
+Definition at line 131 of file EvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvolutionMonitor\&.event()\&.
+.SS "final int org\&.jgap\&.audit\&.EvolutionMonitor\&.CONTEXT_UPDATE_CHROMOSOMES1 = 0\fC [static]\fP"
+
+.PP
+Definition at line 119 of file EvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvolutionMonitor\&.event()\&.
+.SS "final int org\&.jgap\&.audit\&.EvolutionMonitor\&.CONTEXT_UPDATE_CHROMOSOMES2 = 22\fC [static]\fP"
+
+.PP
+Definition at line 127 of file EvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvolutionMonitor\&.event()\&.
+.SS "final String org\&.jgap\&.audit\&.EvolutionMonitor\&.CVS_REVISION = '$Revision: 1\&.3 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 117 of file EvolutionMonitor\&.java\&.
+.SS "int org\&.jgap\&.audit\&.EvolutionMonitor\&.m_checks\fC [private]\fP"
+
+.PP
+Definition at line 137 of file EvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvolutionMonitor\&.event(), and org\&.jgap\&.audit\&.EvolutionMonitor\&.nextCycle()\&.
+.SS "int org\&.jgap\&.audit\&.EvolutionMonitor\&.m_operatorIndex\fC [private]\fP"
+
+.PP
+Definition at line 143 of file EvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvolutionMonitor\&.event(), and org\&.jgap\&.audit\&.EvolutionMonitor\&.initCounters()\&.
+.SS "\fBPopulationHistoryIndexed\fP org\&.jgap\&.audit\&.EvolutionMonitor\&.m_popHist\fC [private]\fP"
+
+.PP
+Definition at line 139 of file EvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvolutionMonitor\&.getPopulations(), and org\&.jgap\&.audit\&.EvolutionMonitor\&.init()\&.
+.SS "int org\&.jgap\&.audit\&.EvolutionMonitor\&.m_selectorIndex\fC [private]\fP"
+
+.PP
+Definition at line 141 of file EvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvolutionMonitor\&.event(), and org\&.jgap\&.audit\&.EvolutionMonitor\&.initCounters()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

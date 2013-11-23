@@ -1,0 +1,164 @@
+.TH "examples.gp.anttrail.IfFoodAheadLeft" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.anttrail.IfFoodAheadLeft \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBexamples\&.gp\&.anttrail\&.AntCommand\fP, and IMutateable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIfFoodAheadLeft\fP (final \fBGPConfiguration\fP a_conf)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBIfFoodAheadLeft\fP (final \fBGPConfiguration\fP a_conf, int a_lookAheadFields)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCommandGene\fP \fBapplyMutation\fP (int index, double a_percentage)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBexecute_void\fP (ProgramChromosome a_chrom, int a_n, Object[] a_args)"
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBm_lookAheadFields\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.4 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+If food-ahead to the left then execute <child 0> else execute <child 1>\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file IfFoodAheadLeft\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.IfFoodAheadLeft (final \fBGPConfiguration\fPa_conf) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Looks ahead 1 field to the left\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIInvalidConfigurationException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 38 of file IfFoodAheadLeft\&.java\&.
+.SS "examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.IfFoodAheadLeft (final \fBGPConfiguration\fPa_conf, inta_lookAheadFields) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Allows to specify how many fields to look ahead to the left\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_lookAheadFields\fP look ahead n fields
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIInvalidConfigurationException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 54 of file IfFoodAheadLeft\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.m_lookAheadFields, and org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBCommandGene\fP examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.applyMutation (intindex, doublea_percentage) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 60 of file IfFoodAheadLeft\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), and examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.m_lookAheadFields\&.
+.SS "void examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.execute_void (ProgramChromosomea_chrom, inta_n, Object[]a_args)\fC [inline]\fP"
+
+.PP
+Definition at line 67 of file IfFoodAheadLeft\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntMap\&.EMPTY, examples\&.gp\&.anttrail\&.AntMap\&.ERROR, examples\&.gp\&.anttrail\&.AntMap\&.FOOD, examples\&.gp\&.anttrail\&.AntMap\&.getHeight(), examples\&.gp\&.anttrail\&.AntCommand\&.getMap(), examples\&.gp\&.anttrail\&.AntMap\&.getWidth(), and examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.m_lookAheadFields\&.
+.SS "String examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 120 of file IfFoodAheadLeft\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.m_lookAheadFields\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.CVS_REVISION = '$Revision: 1\&.4 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file IfFoodAheadLeft\&.java\&.
+.SS "int examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.m_lookAheadFields\fC [private]\fP"
+
+.PP
+Definition at line 27 of file IfFoodAheadLeft\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.applyMutation(), examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.execute_void(), examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.IfFoodAheadLeft(), and examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.toString()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,105 @@
+.TH "org.jgap.supergenes.Supergene" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.supergenes.Supergene \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.Gene\fP, and \fBorg\&.jgap\&.ICompositeGene\fP\&.
+.PP
+Inherited by \fBorg\&.jgap\&.supergenes\&.AbstractSupergene\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "boolean \fBisValid\fP ()"
+.br
+.ti -1c
+.RI "\fBGene\fP[] \fBgetGenes\fP ()"
+.br
+.ti -1c
+.RI "\fBGene\fP \fBgeneAt\fP (int a_index)"
+.br
+.ti -1c
+.RI "void \fBsetValidator\fP (\fBSupergeneValidator\fP a_validator)"
+.br
+.ti -1c
+.RI "\fBSupergeneValidator\fP \fBgetValidator\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.14 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBSupergene\fP represents several genes, which usually control closely related aspects of the phenotype\&. The \fBSupergene\fP mutates only in such way, that the allele combination remains valid\&. Mutations, that make allele combination invalid, are rejected inside \fBorg\&.jgap\&.Gene#applyMutation\fP method\&. \fBSupergene\fP components can also be a \fBSupergene\fP, creating the tree-like structures in this way\&. 
+.PP
+In biology, the invalid combinations represent completely broken metabolic chains, unbalanced signaling pathways (activator without supressor) and so on\&. 
+.PP
+At \fIleast about 5 % of the randomly generated \fBSupergene\fP suparallele values should be valid\&.\fP If the valid combinations represents too small part of all possible combinations, it can take too long to find the suitable mutation that does not brake a supergene\&. If you face this problem, try to split the supergene into several sub-supergenes\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+
+.PP
+Definition at line 34 of file Supergene\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBGene\fP org\&.jgap\&.supergenes\&.Supergene\&.geneAt (inta_index)"
+Returns the \fBGene\fP at the given index (locus) within the \fBSupergene\fP\&. The first gene is at index zero and the last gene is at the index equal to the size of this \fBSupergene\fP - 1\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the index of the gene value to be returned 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the \fBGene\fP at the given index 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.ICompositeGene\fP\&.
+.SS "\fBGene\fP [] org\&.jgap\&.supergenes\&.Supergene\&.getGenes ()"
+Get the array of genes - components of this supergene\&. The supergene components may be supergenes itself\&. 
+.PP
+Implemented in \fBorg\&.jgap\&.supergenes\&.AbstractSupergene\fP\&.
+.SS "\fBSupergeneValidator\fP org\&.jgap\&.supergenes\&.Supergene\&.getValidator ()"
+Gets an object, responsible for deciding if the \fBSupergene\fP allele combination is valid\&. If no external validator was set and the class uses its own internal validation method, it still must be able to return a validator, using the same method (typicallly, such classes just return \fIthis\fP\&. 
+.PP
+Implemented in \fBorg\&.jgap\&.supergenes\&.AbstractSupergene\fP\&.
+.SS "boolean org\&.jgap\&.supergenes\&.Supergene\&.isValid ()"
+Test the allele combination of this supergene for validity\&. If a validator was previously set be calling \fBsetValidator()\fP, the decission is delegated to this validator\&. The derived classes may have internal default validator for the case when no external validator is set\&. See note in the interface header\&.
+.PP
+\fBReturns:\fP
+.RS 4
+true only if the supergene allele combination is valid 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.supergenes\&.AbstractSupergene\fP\&.
+.SS "void org\&.jgap\&.supergenes\&.Supergene\&.setValidator (\fBSupergeneValidator\fPa_validator)"
+Sets an object, responsible for deciding if the \fBSupergene\fP allele combination is valid\&. If it is set to null, no validation is performed (all combinations are assumed to be valid)\&. The derived classes may have internal default validator for the case when no external validator is set\&. 
+.PP
+Implemented in \fBorg\&.jgap\&.supergenes\&.AbstractSupergene\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.supergenes\&.Supergene\&.CVS_REVISION = '$Revision: 1\&.14 $'\fC [static]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 37 of file Supergene\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

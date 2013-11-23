@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="interfaceorg_1_1jgap_1_1_fitness_evaluator" kind="interface" prot="public">
+    <compoundname>org::jgap::FitnessEvaluator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1_default_fitness_evaluator" prot="public" virt="non-virtual">org.jgap.DefaultFitnessEvaluator</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1_delta_fitness_evaluator" prot="public" virt="non-virtual">org.jgap.DeltaFitnessEvaluator</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1_population_test_1_1_my_fitness_evaluator" prot="public" virt="non-virtual">org.jgap.PopulationTest.MyFitnessEvaluator</derivedcompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="interfaceorg_1_1jgap_1_1_fitness_evaluator_1a32a4b647d27c9df5261b4efb0e7a8452" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.FitnessEvaluator.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.9 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/FitnessEvaluator.java" line="26" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/FitnessEvaluator.java" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1_fitness_evaluator_1aad9309b75a437b32641480be173550eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.FitnessEvaluator.isFitter</definition>
+        <argsstring>(double a_fitness_value1, double a_fitness_value2)</argsstring>
+        <name>isFitter</name>
+        <param>
+          <type>double</type>
+          <declname>a_fitness_value1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_fitness_value2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compares the first given fitness value with the second and returns true if the first one is greater than the second one. Otherwise returns false <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_fitness_value1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first fitness value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_fitness_value2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second fitness value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true: first fitness value greater than second</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 (until 1.1: input types int) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/FitnessEvaluator.java" line="38" column="1"/>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_chromosome_fitness_comparator_1a690f397bbe843f98c2c875f7e0aae36d" compoundref="_chromosome_fitness_comparator_8java" startline="65" endline="77">org.jgap.util.ChromosomeFitnessComparator.compare</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_fittest_population_merger_1_1_fitness_chromosome_comparator_1aec3a8e6ecb333a9bea1622b296ac3862" compoundref="_fittest_population_merger_8java" startline="93" endline="109">org.jgap.impl.FittestPopulationMerger.FitnessChromosomeComparator.compare</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a2be0507944e2ca98bef8372402b33e13" compoundref="_chromosome_8java" startline="816" endline="891">org.jgap.Chromosome.compareTo</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_population_1a010cf1cbf6a1f771d34e5c3ce9420f25" compoundref="_population_8java" startline="342" endline="360">org.jgap.Population.determineFittestChromosome</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_delta_fitness_evaluator_test_1aa718e6051e39f7ce56b66f55df0c6d5c" compoundref="_delta_fitness_evaluator_test_8java" startline="30" endline="34">org.jgap.DeltaFitnessEvaluatorTest.testIsFitter_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_default_fitness_evaluator_test_1a6c30688ce129f8e69c78bb7d2740572e" compoundref="_default_fitness_evaluator_test_8java" startline="31" endline="35">org.jgap.DefaultFitnessEvaluatorTest.testIsFitter_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_delta_fitness_evaluator_test_1a364645c672441279dd860897b5fb735e" compoundref="_delta_fitness_evaluator_test_8java" startline="36" endline="40">org.jgap.DeltaFitnessEvaluatorTest.testIsFitter_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_default_fitness_evaluator_test_1af6cde7622bf3d3009a774101db3be32c" compoundref="_default_fitness_evaluator_test_8java" startline="37" endline="41">org.jgap.DefaultFitnessEvaluatorTest.testIsFitter_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_delta_fitness_evaluator_test_1abd090d0169b56221aeafa8608ab94efe" compoundref="_delta_fitness_evaluator_test_8java" startline="42" endline="46">org.jgap.DeltaFitnessEvaluatorTest.testIsFitter_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_default_fitness_evaluator_test_1af01e6176b17e7953a21ca93eae3e70ee" compoundref="_default_fitness_evaluator_test_8java" startline="43" endline="47">org.jgap.DefaultFitnessEvaluatorTest.testIsFitter_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_delta_fitness_evaluator_test_1a06e736719cea3d868e152b4e408aa3e7" compoundref="_delta_fitness_evaluator_test_8java" startline="48" endline="51">org.jgap.DeltaFitnessEvaluatorTest.testIsFitter_3</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_default_fitness_evaluator_test_1ae84fd6816b2ac5e5e4dcac86cf8c5955" compoundref="_default_fitness_evaluator_test_8java" startline="49" endline="52">org.jgap.DefaultFitnessEvaluatorTest.testIsFitter_3</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_delta_fitness_evaluator_test_1a6c2f9c43d122197f70b757baacc4744f" compoundref="_delta_fitness_evaluator_test_8java" startline="53" endline="56">org.jgap.DeltaFitnessEvaluatorTest.testIsFitter_4</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_default_fitness_evaluator_test_1a5ef0d89635e7a4f3a51ffda74ef1c46e" compoundref="_default_fitness_evaluator_test_8java" startline="54" endline="57">org.jgap.DefaultFitnessEvaluatorTest.testIsFitter_4</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_delta_fitness_evaluator_test_1acc78e2b95a387b8cf26c6777bd3a1c3c" compoundref="_delta_fitness_evaluator_test_8java" startline="58" endline="62">org.jgap.DeltaFitnessEvaluatorTest.testIsFitter_5</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_default_fitness_evaluator_test_1a6e5c133714592b71d7441d7083f8b4e4" compoundref="_default_fitness_evaluator_test_8java" startline="59" endline="63">org.jgap.DefaultFitnessEvaluatorTest.testIsFitter_5</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_delta_fitness_evaluator_test_1a13f295a16b2d61720f54a029d005aa30" compoundref="_delta_fitness_evaluator_test_8java" startline="64" endline="77">org.jgap.DeltaFitnessEvaluatorTest.testIsFitter_6</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1_fitness_evaluator_1ad22e8b020f3975345f3f94f96de35a89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.FitnessEvaluator.isFitter</definition>
+        <argsstring>(IChromosome a_chrom1, IChromosome a_chrom2)</argsstring>
+        <name>isFitter</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1_default_fitness_evaluator_1a6a1e94d08736c1eca97c91a19bfbeb64">isFitter</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1_delta_fitness_evaluator_1ab0b04bde3d5a8e994618e770996d0a6e">isFitter</reimplementedby>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+          <declname>a_chrom1</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+          <declname>a_chrom2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/FitnessEvaluator.java" line="40" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Interface for a fitness evaluator used in a <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> to determine how to interpret the fitness value. The fitness value can either be interpreted straight forward as a fitness indicator (the higher the better). Or it could be seen as a defect rate (the lower the better).</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="12672">
+        <label>org.jgap.DefaultFitnessEvaluator</label>
+        <link refid="classorg_1_1jgap_1_1_default_fitness_evaluator"/>
+        <childnode refid="12670" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12671">
+        <label>Serializable</label>
+      </node>
+      <node id="12673">
+        <label>org.jgap.DeltaFitnessEvaluator</label>
+        <link refid="classorg_1_1jgap_1_1_delta_fitness_evaluator"/>
+        <childnode refid="12670" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12670">
+        <label>org.jgap.FitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_fitness_evaluator"/>
+        <childnode refid="12671" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12674">
+        <label>org.jgap.PopulationTest.MyFitnessEvaluator</label>
+        <childnode refid="12670" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12676">
+        <label>Serializable</label>
+      </node>
+      <node id="12675">
+        <label>org.jgap.FitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_fitness_evaluator"/>
+        <childnode refid="12676" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/FitnessEvaluator.java" line="24" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/FitnessEvaluator.java" bodystart="23" bodyend="41"/>
+    <listofallmembers>
+      <member refid="interfaceorg_1_1jgap_1_1_fitness_evaluator_1a32a4b647d27c9df5261b4efb0e7a8452" prot="public" virt="non-virtual"><scope>org::jgap::FitnessEvaluator</scope><name>CVS_REVISION</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_fitness_evaluator_1aad9309b75a437b32641480be173550eb" prot="public" virt="non-virtual"><scope>org::jgap::FitnessEvaluator</scope><name>isFitter</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_fitness_evaluator_1ad22e8b020f3975345f3f94f96de35a89" prot="public" virt="non-virtual"><scope>org::jgap::FitnessEvaluator</scope><name>isFitter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,144 @@
+.TH "examples.gp.paintedDesert.IfLessThanOrEqual" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.paintedDesert.IfLessThanOrEqual \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIfLessThanOrEqual\fP (final \fBGPConfiguration\fP a_conf, Class a_type)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "void \fBexecute_void\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "Class \fBgetChildType\fP (\fBIGPProgram\fP a_ind, int a_chromNum)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Class \fBm_type\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.2 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A four argument version of if-less-than-or-equal (IFLTE) construct\&. If the first argument is less than the second argument, then return the third argument, else the return the fourth argument\&. Mimics the Lisp function from Koza\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Scott Mueller 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file IfLessThanOrEqual\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\&.IfLessThanOrEqual (final \fBGPConfiguration\fPa_conf, Classa_type) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Creates the 4 argument \fBIfLessThanOrEqual\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP 
+.br
+\fIa_type\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIInvalidConfigurationException\fP 
+.RE
+.PP
+
+.PP
+Definition at line 42 of file IfLessThanOrEqual\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\&.m_type, and org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void examples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\&.execute_void (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+Executes the \fBIfLessThanOrEqual\fP for void arguments 
+.PP
+Definition at line 66 of file IfLessThanOrEqual\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.BooleanClass, org\&.jgap\&.gp\&.CommandGene\&.check(), org\&.jgap\&.gp\&.CommandGene\&.DoubleClass, org\&.jgap\&.gp\&.CommandGene\&.FloatClass, org\&.jgap\&.gp\&.CommandGene\&.IntegerClass, org\&.jgap\&.gp\&.CommandGene\&.LongClass, and examples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\&.m_type\&.
+.SS "Class examples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\&.getChildType (\fBIGPProgram\fPa_ind, inta_chromNum)\fC [inline]\fP"
+Determines which type a specific child of this command has\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ind\fP ignored here 
+.br
+\fIa_chromNum\fP index of child 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+type of the a_chromNum'th child 
+.RE
+.PP
+
+.PP
+Definition at line 103 of file IfLessThanOrEqual\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\&.m_type, and org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.SS "String examples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\&.getName ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+textual name of this command 
+.RE
+.PP
+
+.PP
+Definition at line 59 of file IfLessThanOrEqual\&.java\&.
+.SS "String examples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+Reutrns the program listing name 
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 51 of file IfLessThanOrEqual\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\&.CVS_REVISION = '$Revision: 1\&.2 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 28 of file IfLessThanOrEqual\&.java\&.
+.SS "Class examples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\&.m_type\fC [private]\fP"
+Returns the type of the arguments for this function 
+.PP
+Definition at line 33 of file IfLessThanOrEqual\&.java\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\&.execute_void(), examples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\&.getChildType(), and examples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\&.IfLessThanOrEqual()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,215 @@
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator}{\section{org.\-jgap.\-distr.\-grid.\-I\-Grid\-Client\-Mediator Interface Reference}
+\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator}\index{org.\-jgap.\-distr.\-grid.\-I\-Grid\-Client\-Mediator@{org.\-jgap.\-distr.\-grid.\-I\-Grid\-Client\-Mediator}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-distr.\-grid.\-I\-Grid\-Client\-Mediator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-distr.\-grid.\-I\-Grid\-Client\-Mediator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_a9c167ee36b2c5c1b1d0c3a73535b4c67}{connect} ()  throws Exception
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_ae0f495c6b3b530c17080176a0ab1bb35}{disconnect} ()  throws Exception
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_affc59251eaf699da84a107ebbf27ed78}{send} (Grid\-Message a\-\_\-msg, \hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_message_context}{Message\-Context} a\-\_\-context, Map$<$ String, String $>$ a\-\_\-header\-Data)  throws Exception
+\item 
+List \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_a6d3b85a4f42475b5825f924d9ba59eba}{list\-Requests} (\hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_message_context}{Message\-Context} a\-\_\-context, String a\-\_\-datetime, String a\-\_\-pattern)  throws Exception
+\item 
+List \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_a7499a616fadcee3847e73535799e74a4}{list\-Results} (\hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_message_context}{Message\-Context} a\-\_\-context, String a\-\_\-datetime, String a\-\_\-pattern)  throws Exception
+\item 
+Grid\-Message \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_a1716e496659e90ae169149fd11ef0637}{get\-Grid\-Message} (\hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_message_context}{Message\-Context} a\-\_\-context, String a\-\_\-datetime, int a\-\_\-timeout\-Seconds, int a\-\_\-wait\-Time\-Seconds, boolean a\-\_\-remove\-Request)  throws Exception
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_ab6b6be3e765dd6b96d44f9d5daa6ffbd}{remove\-Message} (Object a\-\_\-entry)  throws Exception
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_a1754c025617ae00ef9c8905c5b7aa4ec}{stop} ()  throws Exception
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_a811c4a83e3e1cc91e23804f56aafa9a4}{backup\-Result} (Object a\-\_\-result, String a\-\_\-sub\-Dir, String a\-\_\-title)  throws Exception
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_a40d2352a76e3fd5e56b1c4ac6443a54c}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-8 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for grid client mediators.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-3.\-3 
+\end{DoxySince}
+
+
+Definition at line 22 of file I\-Grid\-Client\-Mediator.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_a811c4a83e3e1cc91e23804f56aafa9a4}{\index{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator@{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator}!backup\-Result@{backup\-Result}}
+\index{backup\-Result@{backup\-Result}!org::jgap::distr::grid::IGridClientMediator@{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator}}
+\subsubsection[{backup\-Result}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-distr.\-grid.\-I\-Grid\-Client\-Mediator.\-backup\-Result (
+\begin{DoxyParamCaption}
+\item[{Object}]{a\-\_\-result, }
+\item[{String}]{a\-\_\-sub\-Dir, }
+\item[{String}]{a\-\_\-title}
+\end{DoxyParamCaption}
+) throws Exception}}\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_a811c4a83e3e1cc91e23804f56aafa9a4}
+Backs up a result in the given sub directory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-result} & the result to backup \\
+\hline
+{\em a\-\_\-sub\-Dir} & sub directory to store the copy of the result in \\
+\hline
+{\em a\-\_\-title} & the title of the entry to create\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-3.\-4 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_ad75ecd94f86875a82de94a4ccf83d6ce}{org.\-jgap.\-distr.\-grid.\-Dummy\-Grid\-Client\-Mediator}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_a9c167ee36b2c5c1b1d0c3a73535b4c67}{\index{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator@{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator}!connect@{connect}}
+\index{connect@{connect}!org::jgap::distr::grid::IGridClientMediator@{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-distr.\-grid.\-I\-Grid\-Client\-Mediator.\-connect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws Exception}}\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_a9c167ee36b2c5c1b1d0c3a73535b4c67}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_a6f464e99178fe73142944a3a134389a0}{org.\-jgap.\-distr.\-grid.\-Dummy\-Grid\-Client\-Mediator}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_ae0f495c6b3b530c17080176a0ab1bb35}{\index{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator@{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!org::jgap::distr::grid::IGridClientMediator@{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator}}
+\subsubsection[{disconnect}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-distr.\-grid.\-I\-Grid\-Client\-Mediator.\-disconnect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws Exception}}\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_ae0f495c6b3b530c17080176a0ab1bb35}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_a1f30008ccd49b0ad0762d450796b9f43}{org.\-jgap.\-distr.\-grid.\-Dummy\-Grid\-Client\-Mediator}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_a1716e496659e90ae169149fd11ef0637}{\index{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator@{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator}!get\-Grid\-Message@{get\-Grid\-Message}}
+\index{get\-Grid\-Message@{get\-Grid\-Message}!org::jgap::distr::grid::IGridClientMediator@{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator}}
+\subsubsection[{get\-Grid\-Message}]{\setlength{\rightskip}{0pt plus 5cm}Grid\-Message org.\-jgap.\-distr.\-grid.\-I\-Grid\-Client\-Mediator.\-get\-Grid\-Message (
+\begin{DoxyParamCaption}
+\item[{{\bf Message\-Context}}]{a\-\_\-context, }
+\item[{String}]{a\-\_\-datetime, }
+\item[{int}]{a\-\_\-timeout\-Seconds, }
+\item[{int}]{a\-\_\-wait\-Time\-Seconds, }
+\item[{boolean}]{a\-\_\-remove\-Request}
+\end{DoxyParamCaption}
+) throws Exception}}\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_a1716e496659e90ae169149fd11ef0637}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_a7212ea568d78375a552bc599e62e4648}{org.\-jgap.\-distr.\-grid.\-Dummy\-Grid\-Client\-Mediator}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_a6d3b85a4f42475b5825f924d9ba59eba}{\index{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator@{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator}!list\-Requests@{list\-Requests}}
+\index{list\-Requests@{list\-Requests}!org::jgap::distr::grid::IGridClientMediator@{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator}}
+\subsubsection[{list\-Requests}]{\setlength{\rightskip}{0pt plus 5cm}List org.\-jgap.\-distr.\-grid.\-I\-Grid\-Client\-Mediator.\-list\-Requests (
+\begin{DoxyParamCaption}
+\item[{{\bf Message\-Context}}]{a\-\_\-context, }
+\item[{String}]{a\-\_\-datetime, }
+\item[{String}]{a\-\_\-pattern}
+\end{DoxyParamCaption}
+) throws Exception}}\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_a6d3b85a4f42475b5825f924d9ba59eba}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_a950d64600cc838a85c06f497b0075ce0}{org.\-jgap.\-distr.\-grid.\-Dummy\-Grid\-Client\-Mediator}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_a7499a616fadcee3847e73535799e74a4}{\index{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator@{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator}!list\-Results@{list\-Results}}
+\index{list\-Results@{list\-Results}!org::jgap::distr::grid::IGridClientMediator@{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator}}
+\subsubsection[{list\-Results}]{\setlength{\rightskip}{0pt plus 5cm}List org.\-jgap.\-distr.\-grid.\-I\-Grid\-Client\-Mediator.\-list\-Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Message\-Context}}]{a\-\_\-context, }
+\item[{String}]{a\-\_\-datetime, }
+\item[{String}]{a\-\_\-pattern}
+\end{DoxyParamCaption}
+) throws Exception}}\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_a7499a616fadcee3847e73535799e74a4}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_afade62453ebe98f4c8361c40777cc987}{org.\-jgap.\-distr.\-grid.\-Dummy\-Grid\-Client\-Mediator}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_ab6b6be3e765dd6b96d44f9d5daa6ffbd}{\index{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator@{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator}!remove\-Message@{remove\-Message}}
+\index{remove\-Message@{remove\-Message}!org::jgap::distr::grid::IGridClientMediator@{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator}}
+\subsubsection[{remove\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-distr.\-grid.\-I\-Grid\-Client\-Mediator.\-remove\-Message (
+\begin{DoxyParamCaption}
+\item[{Object}]{a\-\_\-entry}
+\end{DoxyParamCaption}
+) throws Exception}}\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_ab6b6be3e765dd6b96d44f9d5daa6ffbd}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_a0c5ffc3df90242b0f79261e6a9fed827}{org.\-jgap.\-distr.\-grid.\-Dummy\-Grid\-Client\-Mediator}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_affc59251eaf699da84a107ebbf27ed78}{\index{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator@{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator}!send@{send}}
+\index{send@{send}!org::jgap::distr::grid::IGridClientMediator@{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-distr.\-grid.\-I\-Grid\-Client\-Mediator.\-send (
+\begin{DoxyParamCaption}
+\item[{Grid\-Message}]{a\-\_\-msg, }
+\item[{{\bf Message\-Context}}]{a\-\_\-context, }
+\item[{Map$<$ String, String $>$}]{a\-\_\-header\-Data}
+\end{DoxyParamCaption}
+) throws Exception}}\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_affc59251eaf699da84a107ebbf27ed78}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_a4f94da08e9439931b276891b3a6150ce}{org.\-jgap.\-distr.\-grid.\-Dummy\-Grid\-Client\-Mediator}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_a1754c025617ae00ef9c8905c5b7aa4ec}{\index{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator@{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator}!stop@{stop}}
+\index{stop@{stop}!org::jgap::distr::grid::IGridClientMediator@{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-distr.\-grid.\-I\-Grid\-Client\-Mediator.\-stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws Exception}}\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_a1754c025617ae00ef9c8905c5b7aa4ec}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_add00b971fe4812626f1e952d8da2648f}{org.\-jgap.\-distr.\-grid.\-Dummy\-Grid\-Client\-Mediator}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_a40d2352a76e3fd5e56b1c4ac6443a54c}{\index{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator@{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::distr::grid::IGridClientMediator@{org\-::jgap\-::distr\-::grid\-::\-I\-Grid\-Client\-Mediator}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-distr.\-grid.\-I\-Grid\-Client\-Mediator.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-8 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_a40d2352a76e3fd5e56b1c4ac6443a54c}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 25 of file I\-Grid\-Client\-Mediator.\-java.
+
+
+
+The documentation for this interface was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/distr/grid/\hyperlink{_i_grid_client_mediator_8java}{I\-Grid\-Client\-Mediator.\-java}\end{DoxyCompactItemize}

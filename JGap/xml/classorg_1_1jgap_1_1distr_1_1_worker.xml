@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1distr_1_1_worker" kind="class" prot="public">
+    <compoundname>org::jgap::distr::Worker</compoundname>
+    <basecompoundref refid="interfaceorg_1_1jgap_1_1distr_1_1_i_worker" prot="public" virt="non-virtual">org.jgap.distr.IWorker</basecompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_worker_g_p" prot="public" virt="non-virtual">org.jgap.distr.grid.gp.JGAPWorkerGP</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_worker" prot="public" virt="non-virtual">org.jgap.distr.grid.JGAPWorker</derivedcompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1_worker_1a32010b95d3aeeab1b9135157d47f35f4" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.distr.Worker.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.8 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" line="23" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1_worker_1a4f95b57112e0f70df3c4dea695104cee" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String org.jgap.distr.Worker.m_displayName</definition>
+        <argsstring></argsstring>
+        <name>m_displayName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Display name, only textual information. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" line="28" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1distr_1_1_worker_1a7e68f897ba168b0508674203daf586ae" compoundref="_worker_8java" startline="64" endline="66">org.jgap.distr.Worker.getDisplayName</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1distr_1_1_worker_1a0862f61abbb980c3c6252922e356e697" compoundref="_worker_8java" startline="51" endline="56">org.jgap.distr.Worker.Worker</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1_worker_1aea3bcf9d90ca3b75efd3b342df8861e7" prot="private" static="no" mutable="no">
+        <type><ref refid="classorg_1_1jgap_1_1distr_1_1_master_listener" kindref="compound">MasterListener</ref></type>
+        <definition>MasterListener org.jgap.distr.Worker.m_masterListener</definition>
+        <argsstring></argsstring>
+        <name>m_masterListener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Listener to requests from the (one and only) master of this worker (=KKMultiServerThread resp. KKMultiServer (to make it more sophisticated and allow multiple requests from the master at once)) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" line="35" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1distr_1_1_worker_1a0862f61abbb980c3c6252922e356e697" compoundref="_worker_8java" startline="51" endline="56">org.jgap.distr.Worker.Worker</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1_worker_1a70aaa7dde62236412db41eaf80187c57" prot="private" static="no" mutable="no">
+        <type><ref refid="classorg_1_1jgap_1_1distr_1_1_master_info" kindref="compound">MasterInfo</ref></type>
+        <definition>MasterInfo org.jgap.distr.Worker.m_master</definition>
+        <argsstring></argsstring>
+        <name>m_master</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reference to master for calling him back. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" line="40" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1distr_1_1_worker_1a0862f61abbb980c3c6252922e356e697" compoundref="_worker_8java" startline="51" endline="56">org.jgap.distr.Worker.Worker</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1_worker_1a0862f61abbb980c3c6252922e356e697" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.distr.Worker.Worker</definition>
+        <argsstring>(final String a_displayName, final MasterInfo a_master, final MasterListener a_masterListener)</argsstring>
+        <name>Worker</name>
+        <param>
+          <type>final String</type>
+          <declname>a_displayName</declname>
+        </param>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1distr_1_1_master_info" kindref="compound">MasterInfo</ref></type>
+          <declname>a_master</declname>
+        </param>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1distr_1_1_master_listener" kindref="compound">MasterListener</ref></type>
+          <declname>a_masterListener</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct the worker and tell him who his master is. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_displayName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name for imformative purpose </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_master</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the master of this worker </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_masterListener</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>listener for requests from master</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" line="51" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" bodystart="51" bodyend="56"/>
+        <references refid="classorg_1_1jgap_1_1distr_1_1_worker_1a4f95b57112e0f70df3c4dea695104cee" compoundref="_worker_8java" startline="28">org.jgap.distr.Worker.m_displayName</references>
+        <references refid="classorg_1_1jgap_1_1distr_1_1_worker_1a70aaa7dde62236412db41eaf80187c57" compoundref="_worker_8java" startline="40">org.jgap.distr.Worker.m_master</references>
+        <references refid="classorg_1_1jgap_1_1distr_1_1_worker_1aea3bcf9d90ca3b75efd3b342df8861e7" compoundref="_worker_8java" startline="35">org.jgap.distr.Worker.m_masterListener</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1_worker_1a7e68f897ba168b0508674203daf586ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String org.jgap.distr.Worker.getDisplayName</definition>
+        <argsstring>()</argsstring>
+        <name>getDisplayName</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1distr_1_1_i_worker_1ae1ed7812a9285de55f5091f5be7a8da2">getDisplayName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>display name of the worker</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" line="64" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" bodystart="64" bodyend="66"/>
+        <references refid="classorg_1_1jgap_1_1distr_1_1_worker_1a4f95b57112e0f70df3c4dea695104cee" compoundref="_worker_8java" startline="28">org.jgap.distr.Worker.m_displayName</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1_worker_1aee8f7803e2655bdfb3aceff9a3f92eb7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.distr.Worker.sendCommand</definition>
+        <argsstring>(final WorkerCommand a_command)</argsstring>
+        <name>sendCommand</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1distr_1_1_worker_command" kindref="compound">WorkerCommand</ref></type>
+          <declname>a_command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lets a server send a command to process to the worker <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the command to process </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status message</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000111"><xreftitle>Todo</xreftitle><xrefdescription><para>this should be moved to a thread </para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000112"><xreftitle>Todo</xreftitle><xrefdescription><para>implement: currently working? if yes, add to queue (if queue not full) if no: start work </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" line="76" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" bodystart="76" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1_worker_1a405f281453fcdd0046a370a001af92ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.distr.Worker.getStatus</definition>
+        <argsstring>()</argsstring>
+        <name>getStatus</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1distr_1_1_i_worker_1aaf06b7ac385ade8ddab09a0428ac5f9a">getStatus</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>current status of the entity</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000113"><xreftitle>Todo</xreftitle><xrefdescription><para>implement: idle starting receiving task working sending result stopping stopped </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" line="90" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" bodystart="90" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1_worker_1aea81d8531d56e4035cd94c5278e5c604" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.distr.Worker.pause</definition>
+        <argsstring>()</argsstring>
+        <name>pause</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1distr_1_1_i_worker_1acb611f7ef823cb7a128330965d008f31">pause</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Forces the worker to pause its work (can be resumed) <simplesect kind="return"><para>status message</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000114"><xreftitle>Todo</xreftitle><xrefdescription><para>implement: able to pause resp. in work? </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" line="109" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" bodystart="109" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1_worker_1a7ecb6526e7b056129e7f4f8a584865de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.distr.Worker.stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1distr_1_1_i_worker_1a6d1dcb48750d1fb0acd7ab9e3033a3e5">stop</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Forces the worker to stop its work (cannot be resumed) <simplesect kind="return"><para>status message</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000115"><xreftitle>Todo</xreftitle><xrefdescription><para>implement: able to stop resp. in work? </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" line="122" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" bodystart="122" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1_worker_1afc27690dd01d55455271aba6dc32b434" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.distr.Worker.resume</definition>
+        <argsstring>()</argsstring>
+        <name>resume</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1distr_1_1_i_worker_1ab279e28dc98ac6769f68f31ed437b876">resume</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Forces the worker to resume a paused work <simplesect kind="return"><para>status message</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000116"><xreftitle>Todo</xreftitle><xrefdescription><para>implement: able to resum resp. paused? </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" line="135" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" bodystart="135" bodyend="139"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classorg_1_1jgap_1_1distr_1_1_worker" kindref="compound">Worker</ref> implementation. A worker receives commands from an IMaster instance and returns results to the master. A worker can receive commands even when it is working but it can only work on one task at a time.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.4 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="19010">
+        <label>org.jgap.distr.grid.gp.JGAPWorkerGP</label>
+        <link refid="classorg_1_1jgap_1_1distr_1_1grid_1_1gp_1_1_j_g_a_p_worker_g_p"/>
+        <childnode refid="19008" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19008">
+        <label>org.jgap.distr.Worker</label>
+        <link refid="classorg_1_1jgap_1_1distr_1_1_worker"/>
+        <childnode refid="19009" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19011">
+        <label>org.jgap.distr.grid.JGAPWorker</label>
+        <link refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_worker"/>
+        <childnode refid="19008" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19009">
+        <label>org.jgap.distr.IWorker</label>
+        <link refid="interfaceorg_1_1jgap_1_1distr_1_1_i_worker"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="19014">
+        <label>org.jgap.distr.MasterInfo</label>
+        <link refid="classorg_1_1jgap_1_1distr_1_1_master_info"/>
+        <childnode refid="19015" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19012">
+        <label>org.jgap.distr.Worker</label>
+        <link refid="classorg_1_1jgap_1_1distr_1_1_worker"/>
+        <childnode refid="19013" relation="public-inheritance">
+        </childnode>
+        <childnode refid="19014" relation="usage">
+          <edgelabel>m_master</edgelabel>
+        </childnode>
+        <childnode refid="19016" relation="usage">
+          <edgelabel>m_masterListener</edgelabel>
+        </childnode>
+      </node>
+      <node id="19016">
+        <label>org.jgap.distr.MasterListener</label>
+        <link refid="classorg_1_1jgap_1_1distr_1_1_master_listener"/>
+      </node>
+      <node id="19015">
+        <label>Serializable</label>
+      </node>
+      <node id="19013">
+        <label>org.jgap.distr.IWorker</label>
+        <link refid="interfaceorg_1_1jgap_1_1distr_1_1_i_worker"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" line="21" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/Worker.java" bodystart="20" bodyend="140"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1distr_1_1_worker_1a32010b95d3aeeab1b9135157d47f35f4" prot="private" virt="non-virtual"><scope>org::jgap::distr::Worker</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1_worker_1a7e68f897ba168b0508674203daf586ae" prot="public" virt="non-virtual"><scope>org::jgap::distr::Worker</scope><name>getDisplayName</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1_worker_1a405f281453fcdd0046a370a001af92ef" prot="public" virt="non-virtual"><scope>org::jgap::distr::Worker</scope><name>getStatus</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1_worker_1a4f95b57112e0f70df3c4dea695104cee" prot="private" virt="non-virtual"><scope>org::jgap::distr::Worker</scope><name>m_displayName</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1_worker_1a70aaa7dde62236412db41eaf80187c57" prot="private" virt="non-virtual"><scope>org::jgap::distr::Worker</scope><name>m_master</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1_worker_1aea3bcf9d90ca3b75efd3b342df8861e7" prot="private" virt="non-virtual"><scope>org::jgap::distr::Worker</scope><name>m_masterListener</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1_worker_1aea81d8531d56e4035cd94c5278e5c604" prot="public" virt="non-virtual"><scope>org::jgap::distr::Worker</scope><name>pause</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1_worker_1afc27690dd01d55455271aba6dc32b434" prot="public" virt="non-virtual"><scope>org::jgap::distr::Worker</scope><name>resume</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1_worker_1aee8f7803e2655bdfb3aceff9a3f92eb7" prot="public" virt="non-virtual"><scope>org::jgap::distr::Worker</scope><name>sendCommand</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1distr_1_1_i_worker_1ac852bfd339a9f0c85903b1e335c3926d" prot="public" virt="non-virtual" ambiguityscope="org::jgap::distr::IWorker."><scope>org::jgap::distr::Worker</scope><name>sendCommand</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1_worker_1a7ecb6526e7b056129e7f4f8a584865de" prot="public" virt="non-virtual"><scope>org::jgap::distr::Worker</scope><name>stop</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1_worker_1a0862f61abbb980c3c6252922e356e697" prot="public" virt="non-virtual"><scope>org::jgap::distr::Worker</scope><name>Worker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

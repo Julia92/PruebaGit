@@ -1,0 +1,269 @@
+.TH "examples.gp.anttrail.AntTrailProblem" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.anttrail.AntTrailProblem \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.GPProblem\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBAntFitnessFunction\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAntTrailProblem\fP (\fBGPConfiguration\fP config, String a_filename)  throws InvalidConfigurationException, Exception "
+.br
+.ti -1c
+.RI "\fBGPGenotype\fP \fBcreate\fP ()  throws InvalidConfigurationException "
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fBm_maxMoves\fP = 400"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdisplaySolution\fP (int[][] a_antmap)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "int[][] \fBm_map\fP"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fBtotalFood\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "int[][] \fBreadTrail\fP (String a_filename)  throws Exception "
+.br
+.ti -1c
+.RI "\fBGPFitnessFunction\fP \fBcreateFitFunc\fP ()"
+.br
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fBcountFood\fP (\fBAntMap\fP a_map)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.20 $'"
+.br
+.ti -1c
+.RI "static int \fBfoodAvail\fP"
+.br
+.ti -1c
+.RI "static int \fBm_maxx\fP"
+.br
+.ti -1c
+.RI "static int \fBm_maxy\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The ant trail problem\&. It demonstrates Genetic Programming (GP) capabilities of JGAP\&.
+.PP
+The ant trail problem searches for a solution to let an ant pick up as many food as possible on a given parcours with as few steps as possible\&. The ant can move, take food and see food in adjacent fields\&.
+.PP
+Whenever a new best solution has been found, the ant trail is printed to the console\&. Additionally, the tree represented by the GP program is output in graphical representation\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 38 of file AntTrailProblem\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.gp\&.anttrail\&.AntTrailProblem\&.AntTrailProblem (\fBGPConfiguration\fPconfig, Stringa_filename) throws \fBInvalidConfigurationException\fP, Exception\fC [inline]\fP"
+
+.PP
+Definition at line 58 of file AntTrailProblem\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntTrailProblem\&.countFood(), examples\&.gp\&.anttrail\&.AntTrailProblem\&.create(), examples\&.gp\&.anttrail\&.AntTrailProblem\&.createFitFunc(), examples\&.gp\&.anttrail\&.AntTrailProblem\&.m_map, examples\&.gp\&.anttrail\&.AntTrailProblem\&.m_maxMoves, examples\&.gp\&.anttrail\&.AntTrailProblem\&.readTrail(), and examples\&.gp\&.anttrail\&.AntTrailProblem\&.totalFood\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntTrailProblem\&.main()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static int examples\&.gp\&.anttrail\&.AntTrailProblem\&.countFood (\fBAntMap\fPa_map)\fC [inline]\fP, \fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 349 of file AntTrailProblem\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntMap\&.FOOD, examples\&.gp\&.anttrail\&.AntMap\&.getFromMap(), examples\&.gp\&.anttrail\&.AntTrailProblem\&.m_maxx, and examples\&.gp\&.anttrail\&.AntTrailProblem\&.m_maxy\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntTrailProblem\&.AntTrailProblem()\&.
+.SS "\fBGPGenotype\fP examples\&.gp\&.anttrail\&.AntTrailProblem\&.create () throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [virtual]\fP"
+Sets up the functions to use and other parameters\&. Then creates the initial genotype\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the genotype created 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIInvalidConfigurationException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.GPProblem\fP\&.
+.PP
+Definition at line 126 of file AntTrailProblem\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProblem\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.IntegerClass, and org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntTrailProblem\&.AntTrailProblem()\&.
+.SS "\fBGPFitnessFunction\fP examples\&.gp\&.anttrail\&.AntTrailProblem\&.createFitFunc ()\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 289 of file AntTrailProblem\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntTrailProblem\&.AntTrailProblem()\&.
+.SS "void examples\&.gp\&.anttrail\&.AntTrailProblem\&.displaySolution (inta_antmap[][])\fC [inline]\fP, \fC [protected]\fP"
+Display ant trail as found by GP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_antmap\fP the map containing the trail 
+.RE
+.PP
+
+.PP
+Definition at line 263 of file AntTrailProblem\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntTrailProblem\&.m_maxx, and examples\&.gp\&.anttrail\&.AntTrailProblem\&.m_maxy\&.
+.SS "static void examples\&.gp\&.anttrail\&.AntTrailProblem\&.main (String[]args)\fC [inline]\fP, \fC [static]\fP"
+Starts the example\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP ignored 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 229 of file AntTrailProblem\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntTrailProblem\&.AntTrailProblem()\&.
+.SS "int [][] examples\&.gp\&.anttrail\&.AntTrailProblem\&.readTrail (Stringa_filename) throws Exception\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 157 of file AntTrailProblem\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntMap\&.EMPTY, examples\&.gp\&.anttrail\&.AntMap\&.FOOD, examples\&.gp\&.anttrail\&.AntTrailProblem\&.foodAvail, examples\&.gp\&.anttrail\&.AntTrailProblem\&.m_maxx, examples\&.gp\&.anttrail\&.AntTrailProblem\&.m_maxy, and examples\&.gp\&.anttrail\&.AntMap\&.TRAIL\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntTrailProblem\&.AntTrailProblem()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.gp\&.anttrail\&.AntTrailProblem\&.CVS_REVISION = '$Revision: 1\&.20 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 41 of file AntTrailProblem\&.java\&.
+.SS "int examples\&.gp\&.anttrail\&.AntTrailProblem\&.foodAvail\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 45 of file AntTrailProblem\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntTrailProblem\&.readTrail()\&.
+.SS "int [][] examples\&.gp\&.anttrail\&.AntTrailProblem\&.m_map\fC [protected]\fP"
+
+.PP
+Definition at line 43 of file AntTrailProblem\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntTrailProblem\&.AntTrailProblem()\&.
+.SS "int examples\&.gp\&.anttrail\&.AntTrailProblem\&.m_maxMoves = 400\fC [static]\fP"
+Maximum number of moves allowed\&. 
+.PP
+Definition at line 56 of file AntTrailProblem\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntTrailProblem\&.AntTrailProblem()\&.
+.SS "int examples\&.gp\&.anttrail\&.AntTrailProblem\&.m_maxx\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 47 of file AntTrailProblem\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntTrailProblem\&.countFood(), examples\&.gp\&.anttrail\&.AntTrailProblem\&.displaySolution(), and examples\&.gp\&.anttrail\&.AntTrailProblem\&.readTrail()\&.
+.SS "int examples\&.gp\&.anttrail\&.AntTrailProblem\&.m_maxy\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 49 of file AntTrailProblem\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntTrailProblem\&.countFood(), examples\&.gp\&.anttrail\&.AntTrailProblem\&.displaySolution(), and examples\&.gp\&.anttrail\&.AntTrailProblem\&.readTrail()\&.
+.SS "int examples\&.gp\&.anttrail\&.AntTrailProblem\&.totalFood\fC [static]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 51 of file AntTrailProblem\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntTrailProblem\&.AntTrailProblem()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

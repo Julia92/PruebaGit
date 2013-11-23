@@ -1,0 +1,87 @@
+.TH "org.jgap.IGeneConstraintChecker" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.IGeneConstraintChecker \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable\&.
+.PP
+Inherited by org\&.jgap\&.ChromosomeTest\&.MyConstraintChecker, org\&.jgap\&.impl\&.CompositeGeneTest\&.GeneConstraintChecker, org\&.jgap\&.impl\&.DoubleGeneTest\&.GeneConstraintChecker, org\&.jgap\&.impl\&.FixedBinaryGeneTest\&.GeneConstraintChecker, org\&.jgap\&.impl\&.IntegerGeneTest\&.GeneConstraintChecker, \fBorg\&.jgap\&.impl\&.InversionOperatorTest\&.TestConstraintChecker\fP, and org\&.jgap\&.impl\&.StringGeneTest\&.GeneConstraintChecker\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "boolean \fBverify\fP (\fBGene\fP a_gene, Object a_alleleValue, \fBIChromosome\fP a_chromosome, int a_geneIndex)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.8 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Interface for checking whether a given allele value is valid to be set for a given gene instance\&. The contained validate()-method will be called in the setAllele(Object) method of \fBGene\fP implementations\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file IGeneConstraintChecker\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "boolean org\&.jgap\&.IGeneConstraintChecker\&.verify (\fBGene\fPa_gene, Objecta_alleleValue, \fBIChromosome\fPa_chromosome, inta_geneIndex)"
+Check if a given allele value is valid for the given gene instance\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_gene\fP the gene the given allele is to be validated for 
+.br
+\fIa_alleleValue\fP the allele value to be validated 
+.br
+\fIa_chromosome\fP the chromosome the gene is contained (or null, if unknown) 
+.br
+\fIa_geneIndex\fP the index the gene is contained in the chromosome at, or -1 if unknown 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: allele may be set for gene; false: validity check failed
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.InversionOperatorTest\&.TestConstraintChecker\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.IGeneConstraintChecker\&.CVS_REVISION = '$Revision: 1\&.8 $'\fC [static]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 23 of file IGeneConstraintChecker\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

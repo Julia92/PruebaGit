@@ -1,0 +1,448 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1util_1_1_plugin_discoverer" kind="class" prot="public">
+    <compoundname>org::jgap::util::PluginDiscoverer</compoundname>
+    <innerclass refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1_1_class_filter" prot="public">org::jgap::util::PluginDiscoverer::ClassFilter</innerclass>
+    <innerclass refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1_1_directory_filter" prot="public">org::jgap::util::PluginDiscoverer::DirectoryFilter</innerclass>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a6b0e92ff50135d1e259f7e44cf692058" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.util.PluginDiscoverer.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.9 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" line="30" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1adc9a10b57d7574fb5cc677f93ad79398" prot="private" static="yes" mutable="no">
+        <type>final boolean</type>
+        <definition>final boolean org.jgap.util.PluginDiscoverer.DEBUG</definition>
+        <argsstring></argsstring>
+        <name>DEBUG</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" line="32" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a01eafe900cd1820c78039597272fcd86" compoundref="_plugin_discoverer_8java" startline="92" endline="148">org.jgap.util.PluginDiscoverer.checkIfClassMatches</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a323a9570d75ed8205d69d8f5c785bb73" prot="private" static="no" mutable="no">
+        <type>List</type>
+        <definition>List org.jgap.util.PluginDiscoverer.m_classpathFolders</definition>
+        <argsstring></argsstring>
+        <name>m_classpathFolders</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" line="35" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a057e96e50cce44c736b93c0f89b682a0" compoundref="_plugin_discoverer_8java" startline="78" endline="81">org.jgap.util.PluginDiscoverer.init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a8ec8f977e92750122b6a67780238e8e2" prot="private" static="no" mutable="no">
+        <type>List</type>
+        <definition>List org.jgap.util.PluginDiscoverer.m_classpathJars</definition>
+        <argsstring></argsstring>
+        <name>m_classpathJars</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" line="38" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a057e96e50cce44c736b93c0f89b682a0" compoundref="_plugin_discoverer_8java" startline="78" endline="81">org.jgap.util.PluginDiscoverer.init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a5b6575c6f464171001c919aa23944fec" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String org.jgap.util.PluginDiscoverer.m_jarFile</definition>
+        <argsstring></argsstring>
+        <name>m_jarFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" line="40" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1ac8235b0726b35f80e0bacddeed96b9a8" compoundref="_plugin_discoverer_8java" startline="72" endline="76">org.jgap.util.PluginDiscoverer.PluginDiscoverer</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1acd0356075ba9149924a9341101c0e6ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.util.PluginDiscoverer.PluginDiscoverer</definition>
+        <argsstring>()</argsstring>
+        <name>PluginDiscoverer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads the list of jars and classpath folders into instance variables for later (cached) access.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" line="49" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" bodystart="49" bodyend="63"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a057e96e50cce44c736b93c0f89b682a0" compoundref="_plugin_discoverer_8java" startline="78" endline="81">org.jgap.util.PluginDiscoverer.init</references>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a2c2dd0dca32f171eed6e8452362645a8" compoundref="_plugin_discoverer_8java" startline="314" endline="342">org.jgap.util.PluginDiscoverer.main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1ac8235b0726b35f80e0bacddeed96b9a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.util.PluginDiscoverer.PluginDiscoverer</definition>
+        <argsstring>(String a_jarFile)</argsstring>
+        <name>PluginDiscoverer</name>
+        <param>
+          <type>String</type>
+          <declname>a_jarFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prepares the discoverer for a single jar file <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_jarFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" line="72" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" bodystart="72" bodyend="76"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a057e96e50cce44c736b93c0f89b682a0" compoundref="_plugin_discoverer_8java" startline="78" endline="81">org.jgap.util.PluginDiscoverer.init</references>
+        <references refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a5b6575c6f464171001c919aa23944fec" compoundref="_plugin_discoverer_8java" startline="40">org.jgap.util.PluginDiscoverer.m_jarFile</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a2364ca4f685f61ab1bb3d9594280812b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List</type>
+        <definition>List org.jgap.util.PluginDiscoverer.findImplementingClasses</definition>
+        <argsstring>(final String a_fullInterfaceName)</argsstring>
+        <name>findImplementingClasses</name>
+        <param>
+          <type>final String</type>
+          <declname>a_fullInterfaceName</declname>
+        </param>
+        <exceptions> throws ClassNotFoundException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Finds all classes implementing the given interface <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_fullInterfaceName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the interface (inclusive package name) to find implementing classes (not abstract) for </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>list of class names that implement the given interface</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ClassNotFoundException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" line="161" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" bodystart="161" bodyend="165"/>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1aa9454f104245321f720e9592105b397a" compoundref="_plugin_discoverer_8java" startline="234" endline="256">org.jgap.util.PluginDiscoverer.findImplementingClasses0</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1aa1acd7c75cf00693df86c53712ec5e6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List</type>
+        <definition>List org.jgap.util.PluginDiscoverer.findImplementingClasses</definition>
+        <argsstring>(final Class a_intrface)</argsstring>
+        <name>findImplementingClasses</name>
+        <param>
+          <type>final Class</type>
+          <declname>a_intrface</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Finds all classes implementing the given interface <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_intrface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the interface to check against </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>list of class names that implement the given interface</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" line="175" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" bodystart="175" bodyend="221"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a01eafe900cd1820c78039597272fcd86" compoundref="_plugin_discoverer_8java" startline="92" endline="148">org.jgap.util.PluginDiscoverer.checkIfClassMatches</references>
+        <references refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1aa9454f104245321f720e9592105b397a" compoundref="_plugin_discoverer_8java" startline="234" endline="256">org.jgap.util.PluginDiscoverer.findImplementingClasses0</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a398c250ba353fb77f49596c7d2d7d578" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List</type>
+        <definition>List org.jgap.util.PluginDiscoverer.findImplementingClasses</definition>
+        <argsstring>(final Class a_intrface, final String a_base, final String a_path)</argsstring>
+        <name>findImplementingClasses</name>
+        <param>
+          <type>final Class</type>
+          <declname>a_intrface</declname>
+        </param>
+        <param>
+          <type>final String</type>
+          <declname>a_base</declname>
+        </param>
+        <param>
+          <type>final String</type>
+          <declname>a_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Finds all classes implementing the given interface within a given directory.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_intrface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>List </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" line="267" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" bodystart="267" bodyend="284"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a01eafe900cd1820c78039597272fcd86" compoundref="_plugin_discoverer_8java" startline="92" endline="148">org.jgap.util.PluginDiscoverer.checkIfClassMatches</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a057e96e50cce44c736b93c0f89b682a0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.util.PluginDiscoverer.init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" line="78" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" bodystart="78" bodyend="81"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a323a9570d75ed8205d69d8f5c785bb73" compoundref="_plugin_discoverer_8java" startline="35">org.jgap.util.PluginDiscoverer.m_classpathFolders</references>
+        <references refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a8ec8f977e92750122b6a67780238e8e2" compoundref="_plugin_discoverer_8java" startline="38">org.jgap.util.PluginDiscoverer.m_classpathJars</references>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1acd0356075ba9149924a9341101c0e6ed" compoundref="_plugin_discoverer_8java" startline="49" endline="63">org.jgap.util.PluginDiscoverer.PluginDiscoverer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a01eafe900cd1820c78039597272fcd86" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String org.jgap.util.PluginDiscoverer.checkIfClassMatches</definition>
+        <argsstring>(String a_jarFilename, final Class a_interfaceClass, String a_testClass)</argsstring>
+        <name>checkIfClassMatches</name>
+        <param>
+          <type>String</type>
+          <declname>a_jarFilename</declname>
+        </param>
+        <param>
+          <type>final Class</type>
+          <declname>a_interfaceClass</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>a_testClass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if a given class matches a given interface <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>interfaceClass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The interface we are looking for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>testClass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>class under test against the interface </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>corrected name of matched class, or null if not matching</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" line="92" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" bodystart="92" bodyend="148"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1adc9a10b57d7574fb5cc677f93ad79398" compoundref="_plugin_discoverer_8java" startline="32">org.jgap.util.PluginDiscoverer.DEBUG</references>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1aa1acd7c75cf00693df86c53712ec5e6d" compoundref="_plugin_discoverer_8java" startline="175" endline="221">org.jgap.util.PluginDiscoverer.findImplementingClasses</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1aa9454f104245321f720e9592105b397a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.util.PluginDiscoverer.findImplementingClasses0</definition>
+        <argsstring>(final Class a_intrface, final List a_result, final String a_base, final String a_path)</argsstring>
+        <name>findImplementingClasses0</name>
+        <param>
+          <type>final Class</type>
+          <declname>a_intrface</declname>
+        </param>
+        <param>
+          <type>final List</type>
+          <declname>a_result</declname>
+        </param>
+        <param>
+          <type>final String</type>
+          <declname>a_base</declname>
+        </param>
+        <param>
+          <type>final String</type>
+          <declname>a_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recursive helper method, searching a path recursively for class files conforming to a given interface <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>intrface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the interface we are looking for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>container for storing the results </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base directory </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current location in the traversal</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" line="234" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" bodystart="234" bodyend="256"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a2364ca4f685f61ab1bb3d9594280812b" compoundref="_plugin_discoverer_8java" startline="161" endline="165">org.jgap.util.PluginDiscoverer.findImplementingClasses</references>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1aa1acd7c75cf00693df86c53712ec5e6d" compoundref="_plugin_discoverer_8java" startline="175" endline="221">org.jgap.util.PluginDiscoverer.findImplementingClasses</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a2c2dd0dca32f171eed6e8452362645a8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void org.jgap.util.PluginDiscoverer.main</definition>
+        <argsstring>(String[] args)</argsstring>
+        <name>main</name>
+        <param>
+          <type>String[]</type>
+          <declname>args</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For testing purpose <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>not used </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in case of any problem</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" line="314" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" bodystart="314" bodyend="342"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1acd0356075ba9149924a9341101c0e6ed" compoundref="_plugin_discoverer_8java" startline="49" endline="63">org.jgap.util.PluginDiscoverer.PluginDiscoverer</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class will (slightly inefficiently) look for all classes that implement a particular interface. It is useful for plugins. This is done by looking through the contents of all jar files in the classpath, as well as performing a recursive search for *.class files in the classpath directories</para><para>This particular class may not work in restrictive ClassLoader environments such as Applets or WebStart. (It may...but unlikely and untested.)</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.3 </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="16816">
+        <label>List</label>
+      </node>
+      <node id="16815">
+        <label>org.jgap.util.PluginDiscoverer</label>
+        <link refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer"/>
+        <childnode refid="16816" relation="usage">
+          <edgelabel>m_classpathFolders</edgelabel>
+          <edgelabel>m_classpathJars</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" line="28" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/PluginDiscoverer.java" bodystart="28" bodyend="343"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a01eafe900cd1820c78039597272fcd86" prot="private" virt="non-virtual"><scope>org::jgap::util::PluginDiscoverer</scope><name>checkIfClassMatches</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a6b0e92ff50135d1e259f7e44cf692058" prot="private" virt="non-virtual"><scope>org::jgap::util::PluginDiscoverer</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1adc9a10b57d7574fb5cc677f93ad79398" prot="private" virt="non-virtual"><scope>org::jgap::util::PluginDiscoverer</scope><name>DEBUG</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a2364ca4f685f61ab1bb3d9594280812b" prot="public" virt="non-virtual"><scope>org::jgap::util::PluginDiscoverer</scope><name>findImplementingClasses</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1aa1acd7c75cf00693df86c53712ec5e6d" prot="public" virt="non-virtual"><scope>org::jgap::util::PluginDiscoverer</scope><name>findImplementingClasses</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a398c250ba353fb77f49596c7d2d7d578" prot="public" virt="non-virtual"><scope>org::jgap::util::PluginDiscoverer</scope><name>findImplementingClasses</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1aa9454f104245321f720e9592105b397a" prot="private" virt="non-virtual"><scope>org::jgap::util::PluginDiscoverer</scope><name>findImplementingClasses0</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a057e96e50cce44c736b93c0f89b682a0" prot="private" virt="non-virtual"><scope>org::jgap::util::PluginDiscoverer</scope><name>init</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a323a9570d75ed8205d69d8f5c785bb73" prot="private" virt="non-virtual"><scope>org::jgap::util::PluginDiscoverer</scope><name>m_classpathFolders</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a8ec8f977e92750122b6a67780238e8e2" prot="private" virt="non-virtual"><scope>org::jgap::util::PluginDiscoverer</scope><name>m_classpathJars</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a5b6575c6f464171001c919aa23944fec" prot="private" virt="non-virtual"><scope>org::jgap::util::PluginDiscoverer</scope><name>m_jarFile</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1a2c2dd0dca32f171eed6e8452362645a8" prot="public" virt="non-virtual"><scope>org::jgap::util::PluginDiscoverer</scope><name>main</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1acd0356075ba9149924a9341101c0e6ed" prot="public" virt="non-virtual"><scope>org::jgap::util::PluginDiscoverer</scope><name>PluginDiscoverer</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_plugin_discoverer_1ac8235b0726b35f80e0bacddeed96b9a8" prot="public" virt="non-virtual"><scope>org::jgap::util::PluginDiscoverer</scope><name>PluginDiscoverer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

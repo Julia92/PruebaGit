@@ -1,0 +1,1336 @@
+.TH "org.jgap.distr.grid.gp.JGAPClientGP" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.grid.gp.JGAPClientGP \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Thread\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBJGAPClientGP\fP (GridNodeClientConfig a_gridconfig, String a_clientClassName, boolean a_WANMode, boolean a_receiveOnly, boolean a_list, boolean a_no_comm, boolean a_no_evolution, boolean a_endless, int a_max_fetch_results)  throws Exception "
+.br
+.ti -1c
+.RI "\fBJGAPClientGP\fP (\fBIGridClientMediator\fP a_gcmed, GridNodeClientConfig a_gridconfig, String a_clientClassName, boolean a_WANMode, boolean a_receiveOnly, boolean a_list, boolean a_no_comm, boolean a_no_evolution, boolean a_endless, int a_max_fetch_results)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBsetWorkRequest\fP (\fBJGAPRequestGP\fP a_request)"
+.br
+.ti -1c
+.RI "void \fBrun\fP ()"
+.br
+.ti -1c
+.RI "void \fBstart\fP ()"
+.br
+.ti -1c
+.RI "\fBGPConfiguration\fP \fBgetConfiguration\fP ()"
+.br
+.ti -1c
+.RI "\fBIGridClientMediator\fP \fBgetGridClientMediator\fP ()"
+.br
+.ti -1c
+.RI "void \fBwriteToFile\fP (Object a_obj, String a_dir, String a_filename)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBsetWorkDirectory\fP (String a_workDir)  throws IOException "
+.br
+.ti -1c
+.RI "String \fBgetWorkDirectory\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisNoCommunication\fP ()"
+.br
+.ti -1c
+.RI "String[] \fBgetFilenames\fP (String a_dir)  throws Exception "
+.br
+.ti -1c
+.RI "int \fBgetMaxFetchResults\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBAPP_VERSION\fP = '1\&.02a'"
+.br
+.ti -1c
+.RI "static final String \fBMODULE_CS\fP = 'CS'"
+.br
+.ti -1c
+.RI "static final String \fBCLIENT_DATABASE\fP = 'clientdbGP\&.jgap'"
+.br
+.ti -1c
+.RI "static final String \fBRESULTS_DATABASE\fP = 'results\&.jgap'"
+.br
+.ti -1c
+.RI "static final String \fBMODULE_SC\fP = 'SC'"
+.br
+.ti -1c
+.RI "static final String \fBMODULE_SW\fP = 'SW'"
+.br
+.ti -1c
+.RI "static final String \fBMODULE_WS\fP = 'WS'"
+.br
+.ti -1c
+.RI "static final String \fBMODULE_ANY\fP = '*'"
+.br
+.ti -1c
+.RI "static final String \fBCONTEXT_WORK_REQUEST\fP = 'WREQ'"
+.br
+.ti -1c
+.RI "static final String \fBCONTEXT_WORK_RESULT\fP = 'WRES'"
+.br
+.ti -1c
+.RI "static final String \fBCONTEXT_ANY\fP = 'W*'"
+.br
+.ti -1c
+.RI "static final String \fBCONTEXT_ID_EMPTY\fP = '0'"
+.br
+.ti -1c
+.RI "static final String \fBCONTEXT_ID_ANY\fP = '*'"
+.br
+.ti -1c
+.RI "static final int \fBTIMEOUT_SECONDS\fP = 20"
+.br
+.ti -1c
+.RI "static final int \fBWAITTIME_SECONDS\fP = 5"
+.br
+.ti -1c
+.RI "static final Object[][] \fBFIELDSTOSKIP\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "String \fBgetRunID\fP ()"
+.br
+.ti -1c
+.RI "void \fBonBeginOfRunning\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "boolean \fBbeforeSendWorkRequests\fP (\fBJGAPRequestGP\fP[] a_workRequests)  throws Exception "
+.br
+.ti -1c
+.RI "boolean \fBbeforeGenerateWorkRequests\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "boolean \fBafterSendWorkRequests\fP (\fBJGAPRequestGP\fP[] a_workRequests)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBerrorOnSendWorkRequests\fP (Throwable uex, \fBJGAPRequestGP\fP[] a_workRequests)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBbeforeEvolve\fP (\fBIGridClientMediator\fP a_gcmed)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBafterEvolve\fP (\fBIGridClientMediator\fP a_gcmed)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBafterStopped\fP (Throwable a_t)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBonError\fP (Exception a_ex)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBonDeleteError\fP (Exception a_ex)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBonErrorReceiveWorkResults\fP (\fBJGAPRequestGP\fP[] a_workRequests, Exception a_ex)  throws Exception "
+.br
+.ti -1c
+.RI "\fBJGAPRequestGP\fP[] \fBsendWorkRequests\fP (int a_evolutionIndex, \fBIClientEvolveStrategyGP\fP evolver, \fBIRequestSplitStrategyGP\fP splitter, \fBIClientFeedbackGP\fP feedback)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBsendWorkRequests\fP (\fBJGAPRequestGP\fP[] a_workList)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBreceiveWorkResults\fP (\fBJGAPRequestGP\fP[] workList)  throws Exception "
+.br
+.ti -1c
+.RI "String \fBgetResultFilename\fP (\fBJGAPResultGP\fP a_result)"
+.br
+.ti -1c
+.RI "void \fBevolve\fP (\fBIGridClientMediator\fP a_gcmed, boolean a_receiveOnly)  throws Exception "
+.br
+.ti -1c
+.RI "\fBIGridConfigurationGP\fP \fBgetGridConfigurationGP\fP ()"
+.br
+.ti -1c
+.RI "void \fBcheckForUpdates\fP (String a_URL, String a_libDir, String a_workDir)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBlistRequests\fP ()"
+.br
+.ti -1c
+.RI "void \fBlistResults\fP ()"
+.br
+.ti -1c
+.RI "void \fBremoveEntries\fP (Map a_cachedKeys, Map a_foundKeys)"
+.br
+.ti -1c
+.RI "String \fBgetKeyFromObject\fP (Object a_obj)  throws Exception "
+.br
+.ti -1c
+.RI "boolean \fBresultReceived\fP (GPPopulation a_pop)  throws Exception "
+.br
+.ti -1c
+.RI "boolean \fBresultReceived\fP (IGPProgram a_fittest)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBsaveResult\fP (String a_dir, String a_filename, IGPProgram a_obj)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBpresetPopulation\fP (\fBJGAPRequestGP\fP a_workRequest)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBshowCurrentResults\fP ()  throws Exception "
+.br
+.in -1c
+.SS "Static Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static Options \fBmakeOptions\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "GridNodeClientConfig \fBm_gridconfig\fP"
+.br
+.ti -1c
+.RI "\fBJGAPRequestGP\fP \fBm_workReq\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "\fBJGAPResultGP\fP \fBreceiveWorkResult\fP (Object a_result, \fBIClientFeedbackGP\fP feedback, boolean a_remove)  throws Exception "
+.br
+.ti -1c
+.RI "\fBJGAPResultGP\fP \fBreceiveWorkResult\fP (\fBJGAPRequestGP\fP[] workList, \fBIClientFeedbackGP\fP feedback)  throws Exception "
+.br
+.ti -1c
+.RI "boolean \fBstartsWith\fP (String s, String a_prefix)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBIGridClientMediator\fP \fBm_gcmed\fP"
+.br
+.ti -1c
+.RI "\fBIGridConfigurationGP\fP \fBm_gridConfig\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_WANMode\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_receiveOnly\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_list\fP"
+.br
+.ti -1c
+.RI "String \fBm_workDir\fP"
+.br
+.ti -1c
+.RI "String \fBm_ntbResultsDir\fP"
+.br
+.ti -1c
+.RI "String \fBm_runID\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_endless\fP"
+.br
+.ti -1c
+.RI "ClientStatus \fBm_objects\fP"
+.br
+.ti -1c
+.RI "PersistableObject \fBm_persister\fP"
+.br
+.ti -1c
+.RI "ResultVerification \fBm_resultsVerified\fP"
+.br
+.ti -1c
+.RI "PersistableObject \fBm_resultsPersister\fP"
+.br
+.ti -1c
+.RI "int \fBm_requestIdx\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_no_comm\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_no_evolution\fP"
+.br
+.ti -1c
+.RI "int \fBm_max_fetch_results\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.21 $'"
+.br
+.ti -1c
+.RI "static transient 
+.br
+org\&.apache\&.log4j\&.Logger \fBlog\fP = org\&.apache\&.log4j\&.Logger\&.getLogger(JGAPClientGP\&.class)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A client defines work for the grid and sends it to the \fBJGAPServer\fP\&. Use this class as base class for your grid client implementations\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 39 of file JGAPClientGP\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.JGAPClientGP (GridNodeClientConfiga_gridconfig, Stringa_clientClassName, booleana_WANMode, booleana_receiveOnly, booleana_list, booleana_no_comm, booleana_no_evolution, booleana_endless, inta_max_fetch_results) throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 152 of file JGAPClientGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_gcmed, and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_gridconfig\&.
+.SS "org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.JGAPClientGP (\fBIGridClientMediator\fPa_gcmed, GridNodeClientConfiga_gridconfig, Stringa_clientClassName, booleana_WANMode, booleana_receiveOnly, booleana_list, booleana_no_comm, booleana_no_evolution, booleana_endless, inta_max_fetch_results) throws Exception\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+ab 2\&. zyklus ist pop\&.grösse nur 1 ! 
+.RE
+.PP
+
+.PP
+Definition at line 164 of file JGAPClientGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.APP_VERSION, org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.getRunID(), org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_endless, org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_gridconfig, org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_gridConfig, org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_list, org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_max_fetch_results, org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_no_comm, org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_no_evolution, org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_receiveOnly, org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_runID, and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_WANMode\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.afterEvolve (\fBIGridClientMediator\fPa_gcmed) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Called in \fBrun()\fP after one evolution step is executed\&. Override in sub classes if needed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_gcmed\fP the GridClient mediator
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 381 of file JGAPClientGP\&.java\&.
+.SS "boolean org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.afterSendWorkRequests (\fBJGAPRequestGP\fP[]a_workRequests) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Called in \fBrun()\fP after sending work requests successfully\&. Override in sub classes if needed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_workRequests\fP the sent requests 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: process further, false: stop processing the rest 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 345 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.afterStopped (Throwablea_t) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Called after stopping the client in \fBrun()\fP\&. Override in sub classes if needed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_t\fP null if no error occured on stopping, otherwise exception object
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 396 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.beforeEvolve (\fBIGridClientMediator\fPa_gcmed) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Called in \fBrun()\fP before one evolution step is executed\&. Override in sub classes if needed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_gcmed\fP the GridClient mediator
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 366 of file JGAPClientGP\&.java\&.
+.SS "boolean org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.beforeGenerateWorkRequests () throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Called in \fBrun()\fP before generating work requests for sending\&. Override in sub classes if needed\&.
+.PP
+\fBReturns:\fP
+.RS 4
+true: do generate work requests, false: don't generate any work request
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 329 of file JGAPClientGP\&.java\&.
+.SS "boolean org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.beforeSendWorkRequests (\fBJGAPRequestGP\fP[]a_workRequests) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Called in \fBrun()\fP before sending work requests\&. Override in sub classes if needed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_workRequests\fP work requests pending to be sent
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: do send work requests, false: don't send any work request
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 312 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.checkForUpdates (Stringa_URL, Stringa_libDir, Stringa_workDir) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 1068 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.errorOnSendWorkRequests (Throwableuex, \fBJGAPRequestGP\fP[]a_workRequests) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 350 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.evolve (\fBIGridClientMediator\fPa_gcmed, booleana_receiveOnly) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+If necessary: override to implement your evolution cycle individually\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_gcmed\fP the GridClient mediator 
+.br
+\fIa_receiveOnly\fP false: Don't send any work requests, just receive results from former evolutions
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+
+.PP
+Definition at line 899 of file JGAPClientGP\&.java\&.
+.SS "\fBGPConfiguration\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.getConfiguration ()\fC [inline]\fP"
+
+.PP
+Definition at line 1023 of file JGAPClientGP\&.java\&.
+.SS "String [] org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.getFilenames (Stringa_dir) throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 1388 of file JGAPClientGP\&.java\&.
+.SS "\fBIGridClientMediator\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.getGridClientMediator ()\fC [inline]\fP"
+
+.PP
+Definition at line 1027 of file JGAPClientGP\&.java\&.
+.SS "\fBIGridConfigurationGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.getGridConfigurationGP ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 1031 of file JGAPClientGP\&.java\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.getKeyFromObject (Objecta_obj) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Override in sub classes\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_obj\fP the object to get the key from 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the key of the object
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+
+.PP
+Definition at line 1199 of file JGAPClientGP\&.java\&.
+.SS "int org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.getMaxFetchResults ()\fC [inline]\fP"
+
+.PP
+Definition at line 1520 of file JGAPClientGP\&.java\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.getResultFilename (\fBJGAPResultGP\fPa_result)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 805 of file JGAPClientGP\&.java\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.getRunID ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the most possibly unique ID of a single program execution
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 273 of file JGAPClientGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.JGAPClientGP()\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.getWorkDirectory ()\fC [inline]\fP"
+
+.PP
+Definition at line 1064 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.init () throws Exception\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 235 of file JGAPClientGP\&.java\&.
+.SS "boolean org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.isNoCommunication ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+false: normal mode, true: do not communicate with the server
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 1095 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.listRequests ()\fC [inline]\fP, \fC [protected]\fP"
+Override in sub classes: list available requests 
+.PP
+Definition at line 1077 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.listResults ()\fC [inline]\fP, \fC [protected]\fP"
+Override in sub classes: list available results
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 1086 of file JGAPClientGP\&.java\&.
+.SS "static void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.main (String[]args)\fC [inline]\fP, \fC [static]\fP"
+Starts a client (first parameter: name of specific setup class)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP String[]
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 1107 of file JGAPClientGP\&.java\&.
+.SS "static Options org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.makeOptions ()\fC [inline]\fP, \fC [static]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 1161 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.onBeginOfRunning () throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Called at start of \fBrun()\fP\&. Override in sub classes if needed\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 295 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.onDeleteError (Exceptiona_ex) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Called in case of any unhandled error when trying to delete a request or result\&. Override in sub classes if needed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ex\fP exception object expressing the error
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 430 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.onError (Exceptiona_ex) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Called in \fBrun()\fP in case of any unhandled error\&. Override in sub classes if needed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ex\fP exception object expressing the error
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 411 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.onErrorReceiveWorkResults (\fBJGAPRequestGP\fP[]a_workRequests, Exceptiona_ex) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Called in \fBrun()\fP on error when receiving work results\&. Override in sub classes if needed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_workRequests\fP for which to receive results 
+.br
+\fIa_ex\fP Exception occured 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP rethrow an unhandled exception!
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 448 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.presetPopulation (\fBJGAPRequestGP\fPa_workRequest) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Presets initial population to be included for input to workers\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_workRequest\fP the work request that is about to be sent\&.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+remove results[index] 
+.RE
+.PP
+
+.PP
+Definition at line 1404 of file JGAPClientGP\&.java\&.
+.PP
+References org\&.jgap\&.RandomGenerator\&.nextDouble()\&.
+.SS "\fBJGAPResultGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.receiveWorkResult (Objecta_result, \fBIClientFeedbackGP\fPfeedback, booleana_remove) throws Exception\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+later: SC 
+.RE
+.PP
+
+.PP
+Definition at line 827 of file JGAPClientGP\&.java\&.
+.SS "\fBJGAPResultGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.receiveWorkResult (\fBJGAPRequestGP\fP[]workList, \fBIClientFeedbackGP\fPfeedback) throws Exception\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+make this asynchronous with fall-back and reconnect! 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+later: SC 
+.RE
+.PP
+
+.PP
+Definition at line 855 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.receiveWorkResults (\fBJGAPRequestGP\fP[]workList) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+later: SC 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+sort results according to post date, the oldest first 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+config\&.params wie popsite, evol\&.anz dazu 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+allow fitness 0\&.0 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+do this here explicitely and not in receiveWorkResult 
+.RE
+.PP
+
+.PP
+Definition at line 679 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.removeEntries (Mapa_cachedKeys, Mapa_foundKeys)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 1181 of file JGAPClientGP\&.java\&.
+.SS "boolean org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.resultReceived (GPPopulationa_pop) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+New results has been received\&. Care that the best of them are stored in case it is a top 3 result\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pop\fP the fittest results received for a work request 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: new top result
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 1216 of file JGAPClientGP\&.java\&.
+.SS "boolean org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.resultReceived (IGPPrograma_fittest) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+A new result has been received\&. Care that it is stored to top list on disk in case it is a top 3 result\&. Also store it in other cases and if the result is not too bad to be able to mix it in when generating new work requests\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_fittest\fP the fittest result received for a work request
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: new top result
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+jeden \fBWorker\fP einer von n (rein logischen) Gruppen zuteilen\&. Pro logischer Gruppe top n Ergebnisse halten 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+make configurable 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+compare with toStringNorm(0), use remove(int) instead of remove(Object) 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+ist nur test! 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+skip unnecessary data, inject it after reload 
+.RE
+.PP
+
+.PP
+Definition at line 1244 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.run ()\fC [inline]\fP"
+Threaded: Splits work, sends it to workers and receives computed solutions\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 462 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.saveResult (Stringa_dir, Stringa_filename, IGPPrograma_obj) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Saves a result to disk\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_dir\fP the directory to put the result into 
+.br
+\fIa_filename\fP name of the file to write 
+.br
+\fIa_obj\fP the result object to write
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 1379 of file JGAPClientGP\&.java\&.
+.SS "\fBJGAPRequestGP\fP [] org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.sendWorkRequests (inta_evolutionIndex, \fBIClientEvolveStrategyGP\fPevolver, \fBIRequestSplitStrategyGP\fPsplitter, \fBIClientFeedbackGP\fPfeedback) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+merge previous results in req\&.getPopulation() 
+.RE
+.PP
+
+.PP
+Definition at line 610 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.sendWorkRequests (\fBJGAPRequestGP\fP[]a_workList) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+hier ist fehler aufgetreten! 
+.RE
+.PP
+
+.PP
+Definition at line 653 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.setWorkDirectory (Stringa_workDir) throws IOException\fC [inline]\fP"
+
+.PP
+Definition at line 1057 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.setWorkRequest (\fBJGAPRequestGP\fPa_request)\fC [inline]\fP"
+
+.PP
+Definition at line 282 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.showCurrentResults () throws Exception\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 1479 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.start ()\fC [inline]\fP"
+
+.PP
+Definition at line 1014 of file JGAPClientGP\&.java\&.
+.SS "boolean org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.startsWith (Strings, Stringa_prefix)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 1524 of file JGAPClientGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.writeToFile (Objecta_obj, Stringa_dir, Stringa_filename) throws Exception\fC [inline]\fP"
+Writes an object to a local file\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_obj\fP the object to persist 
+.br
+\fIa_dir\fP directory to write the file to 
+.br
+\fIa_filename\fP name of the file to create 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 1046 of file JGAPClientGP\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.APP_VERSION = '1\&.02a'\fC [static]\fP"
+
+.PP
+Definition at line 59 of file JGAPClientGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.JGAPClientGP()\&.
+.SS "final String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.CLIENT_DATABASE = 'clientdbGP\&.jgap'\fC [static]\fP"
+
+.PP
+Definition at line 65 of file JGAPClientGP\&.java\&.
+.SS "final String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.CONTEXT_ANY = 'W*'\fC [static]\fP"
+
+.PP
+Definition at line 83 of file JGAPClientGP\&.java\&.
+.SS "final String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.CONTEXT_ID_ANY = '*'\fC [static]\fP"
+
+.PP
+Definition at line 87 of file JGAPClientGP\&.java\&.
+.SS "final String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.CONTEXT_ID_EMPTY = '0'\fC [static]\fP"
+
+.PP
+Definition at line 85 of file JGAPClientGP\&.java\&.
+.SS "final String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.CONTEXT_WORK_REQUEST = 'WREQ'\fC [static]\fP"
+
+.PP
+Definition at line 79 of file JGAPClientGP\&.java\&.
+.SS "final String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.CONTEXT_WORK_RESULT = 'WRES'\fC [static]\fP"
+
+.PP
+Definition at line 81 of file JGAPClientGP\&.java\&.
+.SS "final String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.CVS_REVISION = '$Revision: 1\&.21 $'\fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+in dateiname requester/worker kodieren 
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+auch schlechtere ergebnisse einmixen: die direkt empfangenen gleich wieder in einen request reinstecken --> aber mischen verschiedener results in einen request! 
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+small, medium, large work requests 
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+re-evaluate each result on behalf of another worker: keep separate lookup-table for all requests --> m_resultsVerified, m_resultsPersister 
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+remove old requests from online store automatically 
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+info when work request has been taken 
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+info when worker logs on --> evaluate logon files 
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+top results in eigener datei speichern, komprimierung durch weglassen überfl\&. infos, siehe xml --> injection after reload 
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+copy good results to online folder 
+.RE
+.PP
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 57 of file JGAPClientGP\&.java\&.
+.SS "final Object [][] org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.FIELDSTOSKIP\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= new Object[][] { {GPPopulation\&.class,
+      "m_fitnessRank"}, {GPPopulation\&.class, "m_fittestProgram"}, {GPPopulation\&.class,
+      "m_changed"}, {GPPopulation\&.class, "m_sorted"}, {GPPopulation\&.class,
+      "m_fittestToAdd"}, {BaseGPChromosome\&.class,
+      "m_ind"},
+  }
+.fi
+.PP
+Definition at line 93 of file JGAPClientGP\&.java\&.
+.SS "transient org\&.apache\&.log4j\&.Logger org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.log = org\&.apache\&.log4j\&.Logger\&.getLogger(JGAPClientGP\&.class)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 101 of file JGAPClientGP\&.java\&.
+.SS "boolean org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_endless\fC [private]\fP"
+
+.PP
+Definition at line 134 of file JGAPClientGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.JGAPClientGP()\&.
+.SS "\fBIGridClientMediator\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_gcmed\fC [private]\fP"
+
+.PP
+Definition at line 107 of file JGAPClientGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.JGAPClientGP()\&.
+.SS "GridNodeClientConfig org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_gridconfig\fC [protected]\fP"
+
+.PP
+Definition at line 103 of file JGAPClientGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.JGAPClientGP()\&.
+.SS "\fBIGridConfigurationGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_gridConfig\fC [private]\fP"
+
+.PP
+Definition at line 109 of file JGAPClientGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.JGAPClientGP()\&.
+.SS "boolean org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_list\fC [private]\fP"
+
+.PP
+Definition at line 123 of file JGAPClientGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.JGAPClientGP()\&.
+.SS "int org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_max_fetch_results\fC [private]\fP"
+
+.PP
+Definition at line 150 of file JGAPClientGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.JGAPClientGP()\&.
+.SS "boolean org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_no_comm\fC [private]\fP"
+
+.PP
+Definition at line 146 of file JGAPClientGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.JGAPClientGP()\&.
+.SS "boolean org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_no_evolution\fC [private]\fP"
+
+.PP
+Definition at line 148 of file JGAPClientGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.JGAPClientGP()\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_ntbResultsDir\fC [private]\fP"
+Dir for not too bad results 
+.PP
+Definition at line 130 of file JGAPClientGP\&.java\&.
+.SS "ClientStatus org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_objects\fC [private]\fP"
+
+.PP
+Definition at line 136 of file JGAPClientGP\&.java\&.
+.SS "PersistableObject org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_persister\fC [private]\fP"
+
+.PP
+Definition at line 138 of file JGAPClientGP\&.java\&.
+.SS "boolean org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_receiveOnly\fC [private]\fP"
+Only received results or send requests beforehand? 
+.PP
+Definition at line 121 of file JGAPClientGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.JGAPClientGP()\&.
+.SS "int org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_requestIdx\fC [private]\fP"
+
+.PP
+Definition at line 144 of file JGAPClientGP\&.java\&.
+.SS "PersistableObject org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_resultsPersister\fC [private]\fP"
+
+.PP
+Definition at line 142 of file JGAPClientGP\&.java\&.
+.SS "ResultVerification org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_resultsVerified\fC [private]\fP"
+
+.PP
+Definition at line 140 of file JGAPClientGP\&.java\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_runID\fC [private]\fP"
+
+.PP
+Definition at line 132 of file JGAPClientGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.JGAPClientGP()\&.
+.SS "boolean org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_WANMode\fC [private]\fP"
+Is the client operating in a WAN or in a LAN? TRUE: WAN --> Do not use JCGrid architecture FALSE: LAN --> Do use JCGrid architecture 
+.PP
+Definition at line 116 of file JGAPClientGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.JGAPClientGP()\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_workDir\fC [private]\fP"
+
+.PP
+Definition at line 125 of file JGAPClientGP\&.java\&.
+.SS "\fBJGAPRequestGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.m_workReq\fC [protected]\fP"
+
+.PP
+Definition at line 105 of file JGAPClientGP\&.java\&.
+.SS "final String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.MODULE_ANY = '*'\fC [static]\fP"
+
+.PP
+Definition at line 77 of file JGAPClientGP\&.java\&.
+.SS "final String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.MODULE_CS = 'CS'\fC [static]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+store version in external file 
+.RE
+.PP
+
+.PP
+Definition at line 63 of file JGAPClientGP\&.java\&.
+.SS "final String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.MODULE_SC = 'SC'\fC [static]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+das ist nicht module, sondern sender-receiver 
+.RE
+.PP
+
+.PP
+Definition at line 71 of file JGAPClientGP\&.java\&.
+.SS "final String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.MODULE_SW = 'SW'\fC [static]\fP"
+
+.PP
+Definition at line 73 of file JGAPClientGP\&.java\&.
+.SS "final String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.MODULE_WS = 'WS'\fC [static]\fP"
+
+.PP
+Definition at line 75 of file JGAPClientGP\&.java\&.
+.SS "final String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.RESULTS_DATABASE = 'results\&.jgap'\fC [static]\fP"
+
+.PP
+Definition at line 67 of file JGAPClientGP\&.java\&.
+.SS "final int org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.TIMEOUT_SECONDS = 20\fC [static]\fP"
+
+.PP
+Definition at line 89 of file JGAPClientGP\&.java\&.
+.SS "final int org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.WAITTIME_SECONDS = 5\fC [static]\fP"
+
+.PP
+Definition at line 91 of file JGAPClientGP\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

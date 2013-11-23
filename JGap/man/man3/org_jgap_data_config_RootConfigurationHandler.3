@@ -1,0 +1,330 @@
+.TH "org.jgap.data.config.RootConfigurationHandler" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.data.config.RootConfigurationHandler \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.data\&.config\&.ConfigurationHandler\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "List \fBgetConfigProperties\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetNS\fP ()"
+.br
+.ti -1c
+.RI "void \fBreadConfig\fP ()  throws ConfigException, InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBsetConfigurable\fP (\fBConfigurable\fP a_configurable)"
+.br
+.ti -1c
+.RI "void \fBsetConfigProperty\fP (Object a_configurable, String a_propertyName, String a_value)  throws IllegalAccessException "
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static Field \fBgetPrivateField\fP (Object a_instance, String a_fieldName)"
+.br
+.ti -1c
+.RI "static void \fBconfigureClass\fP (String className)  throws ConfigException "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBConfigurable\fP \fBm_configurable\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.12 $'"
+.br
+.ti -1c
+.RI "static final String \fBCONFIG_NAMESPACE\fP = 'org\&.jgap\&.Configuration'"
+.br
+.ti -1c
+.RI "static final String \fBGENETIC_OPS\fP = 'GeneticOperators'"
+.br
+.ti -1c
+.RI "static final String \fBNATURAL_SELS\fP = 'NaturalSelectors'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBConfigurationHandler\fP for the \fBConfiguration\fP class itself\&. This is the entry point for a \fBConfiguration\fP\&. In other words this is for dynamically building up a \fBConfiguration\fP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file RootConfigurationHandler\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static void org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.configureClass (StringclassName) throws \fBConfigException\fP\fC [inline]\fP, \fC [static]\fP"
+Retrieve all instances of a certain property from the config file reader and configure each of these\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIclassName\fP the name of the property to configure 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBConfigException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 210 of file RootConfigurationHandler\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.readConfig()\&.
+.SS "List org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.getConfigProperties ()\fC [inline]\fP"
+Return the information to generate the GUI for configuring this class\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+a list of \fBConfigProperty\fP objects 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.data\&.config\&.ConfigurationHandler\fP\&.
+.PP
+Definition at line 57 of file RootConfigurationHandler\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.RootConfigurationHandlerTest\&.testConstruct_0()\&.
+.SS "String org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.getName ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+Name of this \fBConfiguration\fP Object (name of what you are configuring) to be used in the properties file\&.
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.data\&.config\&.ConfigurationHandler\fP\&.
+.PP
+Definition at line 48 of file RootConfigurationHandler\&.java\&.
+.SS "String org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.getNS ()\fC [inline]\fP"
+Get the namespace to be used in the config file for the \fBConfigurable\fP this \fBConfigurationHandler\fP belongs to\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+the namespace of the \fBConfigurable\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.data\&.config\&.ConfigurationHandler\fP\&.
+.PP
+Definition at line 69 of file RootConfigurationHandler\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.CONFIG_NAMESPACE\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.RootConfigurationHandlerTest\&.testGetNameSpace_0()\&.
+.SS "static Field org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.getPrivateField (Objecta_instance, Stringa_fieldName)\fC [inline]\fP, \fC [static]\fP"
+Helper method: Read a private field\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_instance\fP the instance the field is contained with 
+.br
+\fIa_fieldName\fP the name of the field to read 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the Field object or null, if none found
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 190 of file RootConfigurationHandler\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.setConfigProperty(), org\&.jgap\&.data\&.config\&.RootConfigurationHandlerTest\&.testGetPrivateField_0(), and org\&.jgap\&.data\&.config\&.RootConfigurationHandlerTest\&.testGetPrivateField_1()\&.
+.SS "void org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.readConfig () throws \fBConfigException\fP, \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Method that will populate an \fBConfigurable\fP with the properties in the config file\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBConfigException\fP\fP 
+.br
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.data\&.config\&.ConfigurationHandler\fP\&.
+.PP
+Definition at line 83 of file RootConfigurationHandler\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.CONFIG_NAMESPACE, org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.configureClass(), org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.GENETIC_OPS, org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.m_configurable, org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.NATURAL_SELS, and org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.setConfigProperty()\&.
+.SS "void org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.setConfigProperty (Objecta_configurable, Stringa_propertyName, Stringa_value) throws IllegalAccessException\fC [inline]\fP"
+Sets the property of a configurable to a given value\&. Uses reflection to do so\&. Queries the method getConfigVarName for the name of the field hosting the configurable properties\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configurable\fP the configurable to use 
+.br
+\fIa_propertyName\fP the property to set 
+.br
+\fIa_value\fP the value to assign to the property 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIllegalAccessException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 129 of file RootConfigurationHandler\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.getPrivateField()\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.readConfig()\&.
+.SS "void org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.setConfigurable (\fBConfigurable\fPa_configurable)\fC [inline]\fP"
+Set the \fBConfigurable\fP to which this \fBConfigurationHandler\fP belongs\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configurable\fP the \fBConfigurable\fP to which this \fBConfigurationHandler\fP belongs
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.data\&.config\&.ConfigurationHandler\fP\&.
+.PP
+Definition at line 112 of file RootConfigurationHandler\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.m_configurable\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.CONFIG_NAMESPACE = 'org\&.jgap\&.Configuration'\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 32 of file RootConfigurationHandler\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.getNS(), and org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.readConfig()\&.
+.SS "final String org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.CVS_REVISION = '$Revision: 1\&.12 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 29 of file RootConfigurationHandler\&.java\&.
+.SS "final String org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.GENETIC_OPS = 'GeneticOperators'\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 36 of file RootConfigurationHandler\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.readConfig()\&.
+.SS "\fBConfigurable\fP org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.m_configurable\fC [private]\fP"
+
+.PP
+Definition at line 40 of file RootConfigurationHandler\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.readConfig(), and org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.setConfigurable()\&.
+.SS "final String org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.NATURAL_SELS = 'NaturalSelectors'\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 38 of file RootConfigurationHandler\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.RootConfigurationHandler\&.readConfig()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

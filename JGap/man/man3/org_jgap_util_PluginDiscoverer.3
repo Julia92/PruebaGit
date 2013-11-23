@@ -1,0 +1,362 @@
+.TH "org.jgap.util.PluginDiscoverer" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.util.PluginDiscoverer \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBClassFilter\fP"
+.br
+.ti -1c
+.RI "class \fBDirectoryFilter\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPluginDiscoverer\fP ()"
+.br
+.ti -1c
+.RI "\fBPluginDiscoverer\fP (String a_jarFile)"
+.br
+.ti -1c
+.RI "List \fBfindImplementingClasses\fP (final String a_fullInterfaceName)  throws ClassNotFoundException "
+.br
+.ti -1c
+.RI "List \fBfindImplementingClasses\fP (final Class a_intrface)"
+.br
+.ti -1c
+.RI "List \fBfindImplementingClasses\fP (final Class a_intrface, final String a_base, final String a_path)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)  throws Exception "
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.ti -1c
+.RI "String \fBcheckIfClassMatches\fP (String a_jarFilename, final Class a_interfaceClass, String a_testClass)"
+.br
+.ti -1c
+.RI "void \fBfindImplementingClasses0\fP (final Class a_intrface, final List a_result, final String a_base, final String a_path)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "List \fBm_classpathFolders\fP"
+.br
+.ti -1c
+.RI "List \fBm_classpathJars\fP"
+.br
+.ti -1c
+.RI "String \fBm_jarFile\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.9 $'"
+.br
+.ti -1c
+.RI "static final boolean \fBDEBUG\fP = false"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class will (slightly inefficiently) look for all classes that implement a particular interface\&. It is useful for plugins\&. This is done by looking through the contents of all jar files in the classpath, as well as performing a recursive search for *\&.class files in the classpath directories
+.PP
+This particular class may not work in restrictive ClassLoader environments such as Applets or WebStart\&. (It may\&.\&.\&.but unlikely and untested\&.)
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 28 of file PluginDiscoverer\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.util\&.PluginDiscoverer\&.PluginDiscoverer ()\fC [inline]\fP"
+Reads the list of jars and classpath folders into instance variables for later (cached) access\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 49 of file PluginDiscoverer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.PluginDiscoverer\&.init()\&.
+.PP
+Referenced by org\&.jgap\&.util\&.PluginDiscoverer\&.main()\&.
+.SS "org\&.jgap\&.util\&.PluginDiscoverer\&.PluginDiscoverer (Stringa_jarFile)\fC [inline]\fP"
+Prepares the discoverer for a single jar file 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_jarFile\fP String
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 72 of file PluginDiscoverer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.PluginDiscoverer\&.init(), and org\&.jgap\&.util\&.PluginDiscoverer\&.m_jarFile\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "String org\&.jgap\&.util\&.PluginDiscoverer\&.checkIfClassMatches (Stringa_jarFilename, final Classa_interfaceClass, Stringa_testClass)\fC [inline]\fP, \fC [private]\fP"
+Checks if a given class matches a given interface 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinterfaceClass\fP The interface we are looking for 
+.br
+\fItestClass\fP class under test against the interface 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+corrected name of matched class, or null if not matching
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 92 of file PluginDiscoverer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.PluginDiscoverer\&.DEBUG\&.
+.PP
+Referenced by org\&.jgap\&.util\&.PluginDiscoverer\&.findImplementingClasses()\&.
+.SS "List org\&.jgap\&.util\&.PluginDiscoverer\&.findImplementingClasses (final Stringa_fullInterfaceName) throws ClassNotFoundException\fC [inline]\fP"
+Finds all classes implementing the given interface 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_fullInterfaceName\fP name of the interface (inclusive package name) to find implementing classes (not abstract) for 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+list of class names that implement the given interface
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIClassNotFoundException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 161 of file PluginDiscoverer\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.PluginDiscoverer\&.findImplementingClasses0()\&.
+.SS "List org\&.jgap\&.util\&.PluginDiscoverer\&.findImplementingClasses (final Classa_intrface)\fC [inline]\fP"
+Finds all classes implementing the given interface 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_intrface\fP the interface to check against 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+list of class names that implement the given interface
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 175 of file PluginDiscoverer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.PluginDiscoverer\&.checkIfClassMatches(), and org\&.jgap\&.util\&.PluginDiscoverer\&.findImplementingClasses0()\&.
+.SS "List org\&.jgap\&.util\&.PluginDiscoverer\&.findImplementingClasses (final Classa_intrface, final Stringa_base, final Stringa_path)\fC [inline]\fP"
+Finds all classes implementing the given interface within a given directory\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_intrface\fP Class 
+.br
+\fIa_base\fP String 
+.br
+\fIa_path\fP String 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+List 
+.RE
+.PP
+
+.PP
+Definition at line 267 of file PluginDiscoverer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.PluginDiscoverer\&.checkIfClassMatches()\&.
+.SS "void org\&.jgap\&.util\&.PluginDiscoverer\&.findImplementingClasses0 (final Classa_intrface, final Lista_result, final Stringa_base, final Stringa_path)\fC [inline]\fP, \fC [private]\fP"
+Recursive helper method, searching a path recursively for class files conforming to a given interface 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIintrface\fP the interface we are looking for 
+.br
+\fIresult\fP container for storing the results 
+.br
+\fIbase\fP base directory 
+.br
+\fIpath\fP current location in the traversal
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 234 of file PluginDiscoverer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.PluginDiscoverer\&.findImplementingClasses()\&.
+.PP
+Referenced by org\&.jgap\&.util\&.PluginDiscoverer\&.findImplementingClasses()\&.
+.SS "void org\&.jgap\&.util\&.PluginDiscoverer\&.init ()\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 78 of file PluginDiscoverer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.PluginDiscoverer\&.m_classpathFolders, and org\&.jgap\&.util\&.PluginDiscoverer\&.m_classpathJars\&.
+.PP
+Referenced by org\&.jgap\&.util\&.PluginDiscoverer\&.PluginDiscoverer()\&.
+.SS "static void org\&.jgap\&.util\&.PluginDiscoverer\&.main (String[]args) throws Exception\fC [inline]\fP, \fC [static]\fP"
+For testing purpose 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP not used 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP in case of any problem
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 314 of file PluginDiscoverer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.PluginDiscoverer\&.PluginDiscoverer()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.util\&.PluginDiscoverer\&.CVS_REVISION = '$Revision: 1\&.9 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 30 of file PluginDiscoverer\&.java\&.
+.SS "final boolean org\&.jgap\&.util\&.PluginDiscoverer\&.DEBUG = false\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 32 of file PluginDiscoverer\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.PluginDiscoverer\&.checkIfClassMatches()\&.
+.SS "List org\&.jgap\&.util\&.PluginDiscoverer\&.m_classpathFolders\fC [private]\fP"
+
+.PP
+Definition at line 35 of file PluginDiscoverer\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.PluginDiscoverer\&.init()\&.
+.SS "List org\&.jgap\&.util\&.PluginDiscoverer\&.m_classpathJars\fC [private]\fP"
+
+.PP
+Definition at line 38 of file PluginDiscoverer\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.PluginDiscoverer\&.init()\&.
+.SS "String org\&.jgap\&.util\&.PluginDiscoverer\&.m_jarFile\fC [private]\fP"
+
+.PP
+Definition at line 40 of file PluginDiscoverer\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.PluginDiscoverer\&.PluginDiscoverer()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

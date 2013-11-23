@@ -1,0 +1,293 @@
+.TH "org.jgap.impl.NumberGeneTest.NumberGeneImpl" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.NumberGeneTest.NumberGeneImpl \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.impl\&.NumberGene\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNumberGeneImpl\fP (final \fBConfiguration\fP a_conf, int a_lowerBounds, int a_upperBounds)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBgetPersistentRepresentation\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetValueFromPersistentRepresentation\fP (String a_representation)"
+.br
+.ti -1c
+.RI "void \fBsetToRandomValue\fP (\fBRandomGenerator\fP a_numberGenerator)"
+.br
+.ti -1c
+.RI "void \fBapplyMutation\fP (int a_index, double a_percentage)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGene\fP \fBnewGeneInternal\fP ()"
+.br
+.ti -1c
+.RI "void \fBcalculateBoundsUnitsToIntegerUnitsRatio\fP ()"
+.br
+.ti -1c
+.RI "void \fBmapValueToWithinBounds\fP ()"
+.br
+.ti -1c
+.RI "int \fBcompareToNative\fP (Object a_o1, Object a_o2)"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final long \fBINTEGER_RANGE\fP"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBm_upperBounds\fP"
+.br
+.ti -1c
+.RI "int \fBm_lowerBounds\fP"
+.br
+.ti -1c
+.RI "long \fBm_boundsUnitsToIntegerUnits\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Test implementation of \fBNumberGene\fP, based on \fBIntegerGene\fP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 469 of file NumberGeneTest\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.NumberGeneImpl (final \fBConfiguration\fPa_conf, inta_lowerBounds, inta_upperBounds) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 480 of file NumberGeneTest\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.calculateBoundsUnitsToIntegerUnitsRatio(), org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.m_lowerBounds, and org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.m_upperBounds\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.newGeneInternal()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.applyMutation (intindex, doublea_percentage)\fC [inline]\fP"
+Applies a mutation of a given intensity (percentage) onto the atomic element at given index (NumberGenes only have one atomic element) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIindex\fP index of atomic element, between 0 and \fBsize()\fP-1 
+.br
+\fIa_percentage\fP percentage of mutation (greater than -1 and smaller than 1)\&.
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 514 of file NumberGeneTest\&.java\&.
+.SS "void org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.calculateBoundsUnitsToIntegerUnitsRatio ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 519 of file NumberGeneTest\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.INTEGER_RANGE, org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.m_boundsUnitsToIntegerUnits, org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.m_lowerBounds, and org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.m_upperBounds\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.NumberGeneImpl()\&.
+.SS "int org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.compareToNative (Objecta_o1, Objecta_o2)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Compares to objects by first casting them into their expected type (e\&.g\&. Integer for \fBIntegerGene\fP) and then calling the compareTo-method of the casted type\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_o1\fP first object to be compared, always is not null 
+.br
+\fIa_o2\fP second object to be compared, always is not null 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a negative integer, zero, or a positive integer as this object is less than, equal to, or greater than the object provided for comparison
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.impl\&.NumberGene\fP\&.
+.PP
+Definition at line 549 of file NumberGeneTest\&.java\&.
+.SS "boolean org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.equals (Objecta_other)\fC [inline]\fP"
+
+.PP
+Definition at line 553 of file NumberGeneTest\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.NumberGene\&.compareTo()\&.
+.SS "String org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.getPersistentRepresentation ()\fC [inline]\fP"
+Retrieves a string representation of the value of this \fBGene\fP instance that includes any information required to reconstruct it at a later time, such as its value and internal state\&. This string will be used to represent this \fBGene\fP instance in XML persistence\&. This is an optional method but, if not implemented, XML persistence and possibly other features will not be available\&. An UnsupportedOperationException should be thrown if no implementation is provided\&.
+.PP
+\fBReturns:\fP
+.RS 4
+string representation of this \fBGene\fP's current state 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP to indicate that no implementation is provided for this method
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 499 of file NumberGeneTest\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.m_lowerBounds, org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.m_upperBounds, org\&.jgap\&.Gene\&.PERSISTENT_FIELD_DELIMITER, and org\&.jgap\&.BaseGene\&.toString()\&.
+.SS "void org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.mapValueToWithinBounds ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Maps the value of this \fBNumberGene\fP to within the bounds specified by the m_upperBounds and m_lowerBounds instance variables\&. The value's relative position within the integer range will be preserved within the bounds range (in other words, if the value is about halfway between the integer max and min, then the resulting value will be about halfway between the upper bounds and lower bounds)\&. If the value is null or is already within the bounds, it will be left unchanged\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.impl\&.NumberGene\fP\&.
+.PP
+Definition at line 529 of file NumberGeneTest\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getAllele(), org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.m_boundsUnitsToIntegerUnits, org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.m_lowerBounds, org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.m_upperBounds, and org\&.jgap\&.impl\&.NumberGene\&.setAllele()\&.
+.SS "\fBGene\fP org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.newGeneInternal ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Definition at line 489 of file NumberGeneTest\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getConfiguration(), org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.m_lowerBounds, org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.m_upperBounds, and org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.NumberGeneImpl()\&.
+.SS "void org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.setToRandomValue (\fBRandomGenerator\fPa_numberGenerator)\fC [inline]\fP"
+Sets the value of this \fBGene\fP to a random legal value for the implementation\&. This method exists for the benefit of mutation and other operations that simply desire to randomize the value of a gene\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_numberGenerator\fP The random number generator that should be used to create any random values\&. It's important to use this generator to maintain the user's flexibility to configure the genetic engine to use the random number generator of their choice
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 509 of file NumberGeneTest\&.java\&.
+.SS "void org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.setValueFromPersistentRepresentation (Stringa_representation)\fC [inline]\fP"
+Sets the value and internal state of this \fBGene\fP from the string representation returned by a previous invocation of the \fBgetPersistentRepresentation()\fP method\&. This is an optional method but, if not implemented, XML persistence and possibly other features will not be available\&. An UnsupportedOperationException should be thrown if no implementation is provided\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_representation\fP the string representation retrieved from a prior call to the \fBgetPersistentRepresentation()\fP method
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP to indicate that no implementation is provided for this method 
+.br
+\fI\fBUnsupportedRepresentationException\fP\fP if this \fBGene\fP implementation does not support the given string representation
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 504 of file NumberGeneTest\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final long org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.INTEGER_RANGE\fC [static]\fP, \fC [protected]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= (long) Integer\&.MAX_VALUE
+        - (long) Integer\&.MIN_VALUE
+.fi
+.PP
+Definition at line 471 of file NumberGeneTest\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.calculateBoundsUnitsToIntegerUnitsRatio()\&.
+.SS "long org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.m_boundsUnitsToIntegerUnits\fC [private]\fP"
+
+.PP
+Definition at line 478 of file NumberGeneTest\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.calculateBoundsUnitsToIntegerUnitsRatio(), and org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.mapValueToWithinBounds()\&.
+.SS "int org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.m_lowerBounds\fC [private]\fP"
+
+.PP
+Definition at line 476 of file NumberGeneTest\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.calculateBoundsUnitsToIntegerUnitsRatio(), org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.mapValueToWithinBounds(), org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.newGeneInternal(), and org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.NumberGeneImpl()\&.
+.SS "int org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.m_upperBounds\fC [private]\fP"
+
+.PP
+Definition at line 474 of file NumberGeneTest\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.calculateBoundsUnitsToIntegerUnitsRatio(), org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.mapValueToWithinBounds(), org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.newGeneInternal(), and org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.NumberGeneImpl()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

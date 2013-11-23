@@ -1,0 +1,192 @@
+\hypertarget{classexamples_1_1_map_gene_example}{\section{examples.\-Map\-Gene\-Example Class Reference}
+\label{classexamples_1_1_map_gene_example}\index{examples.\-Map\-Gene\-Example@{examples.\-Map\-Gene\-Example}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classexamples_1_1_map_gene_example_a166e10f6a754c026cb499be231f8f9a0}{make\-Change\-For\-Amount} (int a\-\_\-target\-Change\-Amount)  throws Exception 
+\item 
+static void \hyperlink{classexamples_1_1_map_gene_example_a6d9bbe7446f68761b3008d464c50a7d6}{main} (String\mbox{[}$\,$\mbox{]} args)  throws Exception 
+\item 
+static boolean \hyperlink{classexamples_1_1_map_gene_example_af459ec18838a6bd52544e025ebfa78ef}{unique\-Chromosomes} (Population a\-\_\-pop)
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classexamples_1_1_map_gene_example_ab71e91c9712991e9009775da2ab9d09f}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-1 \$\char`\"{}
+\item 
+static final int \hyperlink{classexamples_1_1_map_gene_example_a7504a010ffefd4d9df37d3e8c96b0c1a}{M\-A\-X\-\_\-\-A\-L\-L\-O\-W\-E\-D\-\_\-\-E\-V\-O\-L\-U\-T\-I\-O\-N\-S} = 200
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class provides an implementation of the classic \char`\"{}\-Make change\char`\"{} problem using a genetic algorithm. It is equivalent to the example in class \hyperlink{classexamples_1_1_minimizing_make_change}{Minimizing\-Make\-Change} in the same package, except that it uses a Map\-Gene.
+
+A Map\-Gene allows to specify discrete values for possible solutions. Instead, an Integer\-Gene (used in the original example) uses a range of values.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-6 
+\end{DoxySince}
+
+
+Definition at line 28 of file Map\-Gene\-Example.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classexamples_1_1_map_gene_example_a6d9bbe7446f68761b3008d464c50a7d6}{\index{examples\-::\-Map\-Gene\-Example@{examples\-::\-Map\-Gene\-Example}!main@{main}}
+\index{main@{main}!examples::MapGeneExample@{examples\-::\-Map\-Gene\-Example}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void examples.\-Map\-Gene\-Example.\-main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classexamples_1_1_map_gene_example_a6d9bbe7446f68761b3008d464c50a7d6}
+Main method. A single command-\/line argument is expected, which is the amount of change to create (in other words, 75 would be equal to 75 cents).
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & amount of change in cents to create \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 174 of file Map\-Gene\-Example.\-java.
+
+
+
+References examples.\-Map\-Gene\-Example.\-make\-Change\-For\-Amount(), and examples.\-Minimizing\-Make\-Change\-Fitness\-Function.\-M\-A\-X\-\_\-\-B\-O\-U\-N\-D.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1_map_gene_example_a6d9bbe7446f68761b3008d464c50a7d6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classexamples_1_1_map_gene_example_a166e10f6a754c026cb499be231f8f9a0}{\index{examples\-::\-Map\-Gene\-Example@{examples\-::\-Map\-Gene\-Example}!make\-Change\-For\-Amount@{make\-Change\-For\-Amount}}
+\index{make\-Change\-For\-Amount@{make\-Change\-For\-Amount}!examples::MapGeneExample@{examples\-::\-Map\-Gene\-Example}}
+\subsubsection[{make\-Change\-For\-Amount}]{\setlength{\rightskip}{0pt plus 5cm}static void examples.\-Map\-Gene\-Example.\-make\-Change\-For\-Amount (
+\begin{DoxyParamCaption}
+\item[{int}]{a\-\_\-target\-Change\-Amount}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classexamples_1_1_map_gene_example_a166e10f6a754c026cb499be231f8f9a0}
+Executes the genetic algorithm to determine the minimum number of coins necessary to make up the given target amount of change. The solution will then be written to System.\-out.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-target\-Change\-Amount} & the target amount of change for which this method is attempting to produce the minimum number of coins\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 51 of file Map\-Gene\-Example.\-java.
+
+
+
+References examples.\-Map\-Gene\-Example.\-M\-A\-X\-\_\-\-A\-L\-L\-O\-W\-E\-D\-\_\-\-E\-V\-O\-L\-U\-T\-I\-O\-N\-S, and examples.\-Map\-Gene\-Example.\-unique\-Chromosomes().
+
+
+
+Referenced by examples.\-Map\-Gene\-Example.\-main().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1_map_gene_example_a166e10f6a754c026cb499be231f8f9a0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classexamples_1_1_map_gene_example_af459ec18838a6bd52544e025ebfa78ef}{\index{examples\-::\-Map\-Gene\-Example@{examples\-::\-Map\-Gene\-Example}!unique\-Chromosomes@{unique\-Chromosomes}}
+\index{unique\-Chromosomes@{unique\-Chromosomes}!examples::MapGeneExample@{examples\-::\-Map\-Gene\-Example}}
+\subsubsection[{unique\-Chromosomes}]{\setlength{\rightskip}{0pt plus 5cm}static boolean examples.\-Map\-Gene\-Example.\-unique\-Chromosomes (
+\begin{DoxyParamCaption}
+\item[{Population}]{a\-\_\-pop}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classexamples_1_1_map_gene_example_af459ec18838a6bd52544e025ebfa78ef}
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-pop} & the population to verify \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all chromosomes in the populationa are unique
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-3.\-1 
+\end{DoxySince}
+
+
+Definition at line 209 of file Map\-Gene\-Example.\-java.
+
+
+
+Referenced by examples.\-Map\-Gene\-Example.\-make\-Change\-For\-Amount().
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classexamples_1_1_map_gene_example_ab71e91c9712991e9009775da2ab9d09f}{\index{examples\-::\-Map\-Gene\-Example@{examples\-::\-Map\-Gene\-Example}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!examples::MapGeneExample@{examples\-::\-Map\-Gene\-Example}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String examples.\-Map\-Gene\-Example.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-1 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classexamples_1_1_map_gene_example_ab71e91c9712991e9009775da2ab9d09f}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 30 of file Map\-Gene\-Example.\-java.
+
+\hypertarget{classexamples_1_1_map_gene_example_a7504a010ffefd4d9df37d3e8c96b0c1a}{\index{examples\-::\-Map\-Gene\-Example@{examples\-::\-Map\-Gene\-Example}!M\-A\-X\-\_\-\-A\-L\-L\-O\-W\-E\-D\-\_\-\-E\-V\-O\-L\-U\-T\-I\-O\-N\-S@{M\-A\-X\-\_\-\-A\-L\-L\-O\-W\-E\-D\-\_\-\-E\-V\-O\-L\-U\-T\-I\-O\-N\-S}}
+\index{M\-A\-X\-\_\-\-A\-L\-L\-O\-W\-E\-D\-\_\-\-E\-V\-O\-L\-U\-T\-I\-O\-N\-S@{M\-A\-X\-\_\-\-A\-L\-L\-O\-W\-E\-D\-\_\-\-E\-V\-O\-L\-U\-T\-I\-O\-N\-S}!examples::MapGeneExample@{examples\-::\-Map\-Gene\-Example}}
+\subsubsection[{M\-A\-X\-\_\-\-A\-L\-L\-O\-W\-E\-D\-\_\-\-E\-V\-O\-L\-U\-T\-I\-O\-N\-S}]{\setlength{\rightskip}{0pt plus 5cm}final int examples.\-Map\-Gene\-Example.\-M\-A\-X\-\_\-\-A\-L\-L\-O\-W\-E\-D\-\_\-\-E\-V\-O\-L\-U\-T\-I\-O\-N\-S = 200\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classexamples_1_1_map_gene_example_a7504a010ffefd4d9df37d3e8c96b0c1a}
+The total number of times we'll let the population evolve. 
+
+Definition at line 35 of file Map\-Gene\-Example.\-java.
+
+
+
+Referenced by examples.\-Map\-Gene\-Example.\-make\-Change\-For\-Amount().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/examples/src/examples/\hyperlink{_map_gene_example_8java}{Map\-Gene\-Example.\-java}\end{DoxyCompactItemize}

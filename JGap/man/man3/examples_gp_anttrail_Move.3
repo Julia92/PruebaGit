@@ -1,0 +1,155 @@
+.TH "examples.gp.anttrail.Move" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.anttrail.Move \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBexamples\&.gp\&.anttrail\&.AntCommand\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMove\fP (final \fBGPConfiguration\fP a_conf)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBMove\fP (final \fBGPConfiguration\fP a_conf, int a_moves)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBexecute_void\fP (ProgramChromosome a_chrom, int a_n, Object[] a_args)"
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBm_moves\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.4 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+\fBMove\fP the ant\&. Allows to specify how many times in a row a move will be executed\&. The classic ant problem uses 1 as parameter value\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file Move\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.gp\&.anttrail\&.Move\&.Move (final \fBGPConfiguration\fPa_conf) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Standard constructor for classic ant problem\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIInvalidConfigurationException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 38 of file Move\&.java\&.
+.SS "examples\&.gp\&.anttrail\&.Move\&.Move (final \fBGPConfiguration\fPa_conf, inta_moves) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Allows to move more than one time in a row\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_moves\fP number of moves to execute in a row
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIInvalidConfigurationException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 54 of file Move\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.Move\&.m_moves\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void examples\&.gp\&.anttrail\&.Move\&.execute_void (ProgramChromosomea_chrom, inta_n, Object[]a_args)\fC [inline]\fP"
+
+.PP
+Definition at line 60 of file Move\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntMap\&.getHeight(), examples\&.gp\&.anttrail\&.AntCommand\&.getMap(), examples\&.gp\&.anttrail\&.AntMap\&.getWidth(), and examples\&.gp\&.anttrail\&.Move\&.m_moves\&.
+.SS "String examples\&.gp\&.anttrail\&.Move\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 102 of file Move\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.Move\&.m_moves\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.gp\&.anttrail\&.Move\&.CVS_REVISION = '$Revision: 1\&.4 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file Move\&.java\&.
+.SS "int examples\&.gp\&.anttrail\&.Move\&.m_moves\fC [private]\fP"
+
+.PP
+Definition at line 27 of file Move\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.Move\&.execute_void(), examples\&.gp\&.anttrail\&.Move\&.Move(), and examples\&.gp\&.anttrail\&.Move\&.toString()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

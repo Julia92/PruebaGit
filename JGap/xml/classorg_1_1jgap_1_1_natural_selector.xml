@@ -1,0 +1,417 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1_natural_selector" kind="class" prot="public" abstract="yes">
+    <compoundname>org::jgap::NaturalSelector</compoundname>
+    <basecompoundref refid="interfaceorg_1_1jgap_1_1_i_natural_selector" prot="public" virt="non-virtual">org.jgap.INaturalSelector</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Configurable</basecompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1impl_1_1_standard_post_selector" prot="public" virt="non-virtual">org.jgap.impl.StandardPostSelector</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1_natural_selector_ext" prot="public" virt="non-virtual">org.jgap.NaturalSelectorExt</derivedcompoundref>
+    <innerclass refid="classorg_1_1jgap_1_1_natural_selector_1_1_age_fitness_value_comparator" prot="public">org::jgap::NaturalSelector::AgeFitnessValueComparator</innerclass>
+    <innerclass refid="classorg_1_1jgap_1_1_natural_selector_1_1_fitness_age_value_comparator" prot="public">org::jgap::NaturalSelector::FitnessAgeValueComparator</innerclass>
+    <innerclass refid="classorg_1_1jgap_1_1_natural_selector_1_1_fitness_value_comparator" prot="public">org::jgap::NaturalSelector::FitnessValueComparator</innerclass>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1_natural_selector_1ae82aaa8c1ac8d50218d8178b1262d46c" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.NaturalSelector.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.32 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/NaturalSelector.java" line="27" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/NaturalSelector.java" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1_natural_selector_1ac8b1ddd06acc72b0e1d8e551729f46b3" prot="protected" static="no" mutable="no">
+        <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+        <definition>Configuration org.jgap.NaturalSelector.m_config</definition>
+        <argsstring></argsstring>
+        <name>m_config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/NaturalSelector.java" line="29" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/NaturalSelector.java" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1_natural_selector_1a70fc78d093b52685eae39ffdb30b9ef4" compoundref="_natural_selector_8java" startline="68" endline="70">org.jgap.NaturalSelector.getConfiguration</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_natural_selector_1abdf8ec5961eae78b4ab7c5e242a32d32" compoundref="_natural_selector_8java" startline="51" endline="60">org.jgap.NaturalSelector.NaturalSelector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1_natural_selector_1a0ecc4abad2b9f2235e686113913dec17" prot="protected" static="no" mutable="no">
+        <type>IEvolutionMonitor</type>
+        <definition>IEvolutionMonitor org.jgap.NaturalSelector.m_monitor</definition>
+        <argsstring></argsstring>
+        <name>m_monitor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/NaturalSelector.java" line="31" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/NaturalSelector.java" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1_natural_selector_1abdf8ec5961eae78b4ab7c5e242a32d32" compoundref="_natural_selector_8java" startline="51" endline="60">org.jgap.NaturalSelector.NaturalSelector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1_natural_selector_1a97b709b2715d76b87b3e15da6a22d5f8" prot="protected" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean org.jgap.NaturalSelector.m_monitorActive</definition>
+        <argsstring></argsstring>
+        <name>m_monitorActive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/NaturalSelector.java" line="33" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/NaturalSelector.java" bodystart="33" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1_natural_selector_1abdf8ec5961eae78b4ab7c5e242a32d32" compoundref="_natural_selector_8java" startline="51" endline="60">org.jgap.NaturalSelector.NaturalSelector</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_natural_selector_ext_1ad330fe572e650caf3549d5896beb40a9" compoundref="_natural_selector_ext_8java" startline="156" endline="180">org.jgap.NaturalSelectorExt.selectChromosome</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1afa8c26dbb642fa1809cd89cb9b7e0d43" compoundref="_best_chromosomes_selector_8java" startline="141" endline="208">org.jgap.impl.BestChromosomesSelector.selectChromosomes</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a8d501289de36fcd27de2352ce8f6404a" compoundref="_weighted_roulette_selector_8java" startline="158" endline="231">org.jgap.impl.WeightedRouletteSelector.selectChromosomes</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_natural_selector_1a3eb9d0041ece6e97945fa2a67cbef9a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.NaturalSelector.NaturalSelector</definition>
+        <argsstring>()</argsstring>
+        <name>NaturalSelector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/NaturalSelector.java" line="41" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/NaturalSelector.java" bodystart="41" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_natural_selector_1abdf8ec5961eae78b4ab7c5e242a32d32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.NaturalSelector.NaturalSelector</definition>
+        <argsstring>(Configuration a_config)</argsstring>
+        <name>NaturalSelector</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/NaturalSelector.java" line="51" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/NaturalSelector.java" bodystart="51" bodyend="60"/>
+        <references refid="classorg_1_1jgap_1_1_natural_selector_1a70fc78d093b52685eae39ffdb30b9ef4" compoundref="_natural_selector_8java" startline="68" endline="70">org.jgap.NaturalSelector.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1_natural_selector_1ac8b1ddd06acc72b0e1d8e551729f46b3" compoundref="_natural_selector_8java" startline="29">org.jgap.NaturalSelector.m_config</references>
+        <references refid="classorg_1_1jgap_1_1_natural_selector_1a0ecc4abad2b9f2235e686113913dec17" compoundref="_natural_selector_8java" startline="31">org.jgap.NaturalSelector.m_monitor</references>
+        <references refid="classorg_1_1jgap_1_1_natural_selector_1a97b709b2715d76b87b3e15da6a22d5f8" compoundref="_natural_selector_8java" startline="33">org.jgap.NaturalSelector.m_monitorActive</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_natural_selector_1a70fc78d093b52685eae39ffdb30b9ef4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+        <definition>Configuration org.jgap.NaturalSelector.getConfiguration</definition>
+        <argsstring>()</argsstring>
+        <name>getConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the (immutable) configuration to use</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/NaturalSelector.java" line="68" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/NaturalSelector.java" bodystart="68" bodyend="70"/>
+        <references refid="classorg_1_1jgap_1_1_natural_selector_1ac8b1ddd06acc72b0e1d8e551729f46b3" compoundref="_natural_selector_8java" startline="29">org.jgap.NaturalSelector.m_config</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a0bc7fd36123954647b0c8a7e6ca8e5ae" compoundref="_best_chromosomes_selector_8java" startline="94" endline="128">org.jgap.impl.BestChromosomesSelector.add</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_standard_post_selector_1aa172ee108af148a133def70d8d3190a0" compoundref="_standard_post_selector_8java" startline="216" endline="224">org.jgap.impl.StandardPostSelector.clone</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a5853ec606d4404adc52c906857fee0c5" compoundref="_best_chromosomes_selector_8java" startline="298" endline="309">org.jgap.impl.BestChromosomesSelector.clone</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a6d11f3e1551fbee391ce80e3d643b14e" compoundref="_weighted_roulette_selector_8java" startline="419" endline="430">org.jgap.impl.WeightedRouletteSelector.clone</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_natural_selector_1_1_fitness_value_comparator_1aa71752b784c75fe45853451f7afb755c" compoundref="_natural_selector_8java" startline="91" endline="105">org.jgap.NaturalSelector.FitnessValueComparator.compare</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_natural_selector_1_1_age_fitness_value_comparator_1ab7093be07c8a2a64cfe5cfe0873e5075" compoundref="_natural_selector_8java" startline="116" endline="136">org.jgap.NaturalSelector.AgeFitnessValueComparator.compare</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_natural_selector_1_1_fitness_age_value_comparator_1a15809e3ede2182056a1c4747449e0575" compoundref="_natural_selector_8java" startline="148" endline="168">org.jgap.NaturalSelector.FitnessAgeValueComparator.compare</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1_1_fitness_value_comparator_1ab9f48e7f1a3b19a12a656cdd3ed48c60" compoundref="_threshold_selector_8java" startline="172" endline="186">org.jgap.impl.ThresholdSelector.FitnessValueComparator.compare</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_tournament_selector_1_1_fitness_value_comparator_1a4689c8abe59a5bf657817f89bb4f836f" compoundref="impl_2_tournament_selector_8java" startline="198" endline="212">org.jgap.impl.TournamentSelector.FitnessValueComparator.compare</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_natural_selector_1abdf8ec5961eae78b4ab7c5e242a32d32" compoundref="_natural_selector_8java" startline="51" endline="60">org.jgap.NaturalSelector.NaturalSelector</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_natural_selector_ext_1ad330fe572e650caf3549d5896beb40a9" compoundref="_natural_selector_ext_8java" startline="156" endline="180">org.jgap.NaturalSelectorExt.selectChromosome</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a0503b950969a0c79b42963391ca131f5" compoundref="_threshold_selector_8java" startline="97" endline="131">org.jgap.impl.ThresholdSelector.selectChromosomes</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_tournament_selector_1a138ac797f8f77f92bd58b950b05fc20b" compoundref="impl_2_tournament_selector_8java" startline="123" endline="159">org.jgap.impl.TournamentSelector.selectChromosomes</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1afa8c26dbb642fa1809cd89cb9b7e0d43" compoundref="_best_chromosomes_selector_8java" startline="141" endline="208">org.jgap.impl.BestChromosomesSelector.selectChromosomes</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a8d501289de36fcd27de2352ce8f6404a" compoundref="_weighted_roulette_selector_8java" startline="158" endline="231">org.jgap.impl.WeightedRouletteSelector.selectChromosomes</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a7eabf165a70445ab131f7fcc6b4aa3fd" compoundref="_weighted_roulette_selector_8java" startline="252" endline="325">org.jgap.impl.WeightedRouletteSelector.spinWheel</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_natural_selector_1a889f35e483ad2b7590a4af17771b7ffa" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract void</type>
+        <definition>abstract void org.jgap.NaturalSelector.add</definition>
+        <argsstring>(IChromosome a_chromosomeToAdd)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+          <declname>a_chromosomeToAdd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> instance to this selector&apos;s working pool of Chromosomes.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_chromosomeToAdd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the specimen to add to the pool</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/NaturalSelector.java" line="80" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Abstract base implementation of interface <ref refid="interfaceorg_1_1jgap_1_1_i_natural_selector" kindref="compound">INaturalSelector</ref>.</para><para><simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="16464">
+        <label>org.jgap.NaturalSelector</label>
+        <link refid="classorg_1_1jgap_1_1_natural_selector"/>
+        <childnode refid="16465" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16467" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16473">
+        <label>org.jgap.impl.WeightedRouletteSelector</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector"/>
+        <childnode refid="16469" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16466">
+        <label>Serializable</label>
+      </node>
+      <node id="16472">
+        <label>org.jgap.impl.TournamentSelector</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_tournament_selector"/>
+        <childnode refid="16469" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16470">
+        <label>org.jgap.impl.BestChromosomesSelector</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector"/>
+        <childnode refid="16469" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16465">
+        <label>org.jgap.INaturalSelector</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_natural_selector"/>
+        <childnode refid="16466" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16469">
+        <label>org.jgap.NaturalSelectorExt</label>
+        <link refid="classorg_1_1jgap_1_1_natural_selector_ext"/>
+        <childnode refid="16464" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16471">
+        <label>org.jgap.impl.ThresholdSelector</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector"/>
+        <childnode refid="16469" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16468">
+        <label>org.jgap.impl.StandardPostSelector</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_standard_post_selector"/>
+        <childnode refid="16464" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16467">
+        <label>Configurable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="16487">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="16474">
+        <label>org.jgap.NaturalSelector</label>
+        <link refid="classorg_1_1jgap_1_1_natural_selector"/>
+        <childnode refid="16475" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16477" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16478" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+      </node>
+      <node id="16492">
+        <label>List</label>
+      </node>
+      <node id="16491">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="16476" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16479" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16488">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="16476" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16476">
+        <label>Serializable</label>
+      </node>
+      <node id="16481">
+        <label>Comparable</label>
+      </node>
+      <node id="16479">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="16480" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16485">
+        <label>org.jgap.FitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_fitness_evaluator"/>
+        <childnode refid="16476" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16475">
+        <label>org.jgap.INaturalSelector</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_natural_selector"/>
+        <childnode refid="16476" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16489">
+        <label>org.jgap.BulkFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_bulk_fitness_function"/>
+        <childnode refid="16476" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16479" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16480">
+        <label>Cloneable</label>
+      </node>
+      <node id="16483">
+        <label>org.jgap.IJGAPFactory</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_j_g_a_p_factory"/>
+        <childnode refid="16476" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16490">
+        <label>org.jgap.Configuration.ConfigurationConfigurable</label>
+        <link refid="classorg_1_1jgap_1_1_configuration_1_1_configuration_configurable"/>
+        <childnode refid="16476" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16482">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="16479" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16476" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16481" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16486">
+        <label>org.jgap.IChromosome</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome"/>
+        <childnode refid="16481" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16479" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16476" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16487" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16478">
+        <label>org.jgap.Configuration</label>
+        <link refid="classorg_1_1jgap_1_1_configuration"/>
+        <childnode refid="16477" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16476" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16479" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16481" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16482" relation="usage">
+          <edgelabel>m_breeder</edgelabel>
+        </childnode>
+        <childnode refid="16483" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="16484" relation="usage">
+          <edgelabel>m_chromosomePool</edgelabel>
+        </childnode>
+        <childnode refid="16485" relation="usage">
+          <edgelabel>m_fitnessEvaluator</edgelabel>
+        </childnode>
+        <childnode refid="16486" relation="usage">
+          <edgelabel>m_sampleChromosome</edgelabel>
+        </childnode>
+        <childnode refid="16488" relation="usage">
+          <edgelabel>m_randomGenerator</edgelabel>
+        </childnode>
+        <childnode refid="16489" relation="usage">
+          <edgelabel>m_bulkObjectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="16490" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="16491" relation="usage">
+          <edgelabel>m_objectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="16492" relation="usage">
+          <edgelabel>m_geneticOperators</edgelabel>
+        </childnode>
+      </node>
+      <node id="16484">
+        <label>org.jgap.IChromosomePool</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool"/>
+      </node>
+      <node id="16477">
+        <label>Configurable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/NaturalSelector.java" line="25" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/NaturalSelector.java" bodystart="24" bodyend="170"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1a889f35e483ad2b7590a4af17771b7ffa" prot="protected" virt="pure-virtual"><scope>org::jgap::NaturalSelector</scope><name>add</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1ae82aaa8c1ac8d50218d8178b1262d46c" prot="private" virt="non-virtual"><scope>org::jgap::NaturalSelector</scope><name>CVS_REVISION</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_natural_selector_1a824307b8be94282a3dfd03aaa6531139" prot="public" virt="non-virtual"><scope>org::jgap::NaturalSelector</scope><name>empty</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1a70fc78d093b52685eae39ffdb30b9ef4" prot="public" virt="non-virtual"><scope>org::jgap::NaturalSelector</scope><name>getConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1ac8b1ddd06acc72b0e1d8e551729f46b3" prot="protected" virt="non-virtual"><scope>org::jgap::NaturalSelector</scope><name>m_config</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1a0ecc4abad2b9f2235e686113913dec17" prot="protected" virt="non-virtual"><scope>org::jgap::NaturalSelector</scope><name>m_monitor</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1a97b709b2715d76b87b3e15da6a22d5f8" prot="protected" virt="non-virtual"><scope>org::jgap::NaturalSelector</scope><name>m_monitorActive</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1a3eb9d0041ece6e97945fa2a67cbef9a4" prot="public" virt="non-virtual"><scope>org::jgap::NaturalSelector</scope><name>NaturalSelector</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1abdf8ec5961eae78b4ab7c5e242a32d32" prot="public" virt="non-virtual"><scope>org::jgap::NaturalSelector</scope><name>NaturalSelector</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_natural_selector_1a7a6e97dab3548d73a829c9b998df377a" prot="public" virt="non-virtual"><scope>org::jgap::NaturalSelector</scope><name>returnsUniqueChromosomes</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_natural_selector_1a621ca08e2f66866178214093ca4412fd" prot="public" virt="non-virtual"><scope>org::jgap::NaturalSelector</scope><name>select</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

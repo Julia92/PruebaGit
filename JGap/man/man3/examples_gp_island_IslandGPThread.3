@@ -1,0 +1,277 @@
+.TH "examples.gp.island.IslandGPThread" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.island.IslandGPThread \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.GPProblem\fP, and Runnable\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBSimpleFitnessFunction\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGPConfiguration\fP \fBcreateConfiguration\fP (String a_threadKey, int a_popSize)  throws Exception "
+.br
+.ti -1c
+.RI "\fBGPGenotype\fP \fBcreate\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBrun\fP ()"
+.br
+.ti -1c
+.RI "void \fBoutputBestSolution\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisFinished\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisLocked\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetLocked\fP ()"
+.br
+.ti -1c
+.RI "void \fBreleaseLocked\fP ()"
+.br
+.ti -1c
+.RI "\fBIGPProgram\fP \fBgetBestSolution\fP ()"
+.br
+.ti -1c
+.RI "GPPopulation \fBgetPopulation\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBIslandGPThread\fP \fBnewInstance\fP (int nextNumber, int popSize)  throws Exception "
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static boolean \fBlocked\fP = false"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBVariable\fP \fBvx\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIslandGPThread\fP (int nextNumber)  throws Exception "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBGPGenotype\fP \fBgen\fP"
+.br
+.ti -1c
+.RI "int \fBm_nextNumber\fP"
+.br
+.ti -1c
+.RI "\fBIGPProgram\fP \fBm_best\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_finished\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.5 $'"
+.br
+.ti -1c
+.RI "static \fBGPConfiguration\fP \fBconfig\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Simple GP example of an island thread\&. It utilizes the former example class \fBSimpleExample\fP in the gp package for reasons of simplicity\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file IslandGPThread\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.gp\&.island\&.IslandGPThread\&.IslandGPThread (intnextNumber) throws Exception\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 67 of file IslandGPThread\&.java\&.
+.PP
+Referenced by examples\&.gp\&.island\&.IslandGPThread\&.newInstance()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBGPGenotype\fP examples\&.gp\&.island\&.IslandGPThread\&.create () throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+newly created GPGenotype 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIInvalidConfigurationException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.GPProblem\fP\&.
+.PP
+Definition at line 83 of file IslandGPThread\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.BooleanClass, org\&.jgap\&.gp\&.GPProblem\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.IntegerClass, and examples\&.gp\&.island\&.IslandGPThread\&.vx\&.
+.SS "\fBGPConfiguration\fP examples\&.gp\&.island\&.IslandGPThread\&.createConfiguration (Stringa_threadKey, inta_popSize) throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 42 of file IslandGPThread\&.java\&.
+.PP
+References examples\&.gp\&.island\&.IslandGPThread\&.config, and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP()\&.
+.SS "\fBIGPProgram\fP examples\&.gp\&.island\&.IslandGPThread\&.getBestSolution ()\fC [inline]\fP"
+
+.PP
+Definition at line 205 of file IslandGPThread\&.java\&.
+.PP
+References examples\&.gp\&.island\&.IslandGPThread\&.m_best, and examples\&.gp\&.island\&.IslandGPThread\&.m_finished\&.
+.SS "GPPopulation examples\&.gp\&.island\&.IslandGPThread\&.getPopulation ()\fC [inline]\fP"
+
+.PP
+Definition at line 212 of file IslandGPThread\&.java\&.
+.SS "boolean examples\&.gp\&.island\&.IslandGPThread\&.isFinished ()\fC [inline]\fP"
+
+.PP
+Definition at line 189 of file IslandGPThread\&.java\&.
+.PP
+References examples\&.gp\&.island\&.IslandGPThread\&.m_finished\&.
+.PP
+Referenced by examples\&.gp\&.island\&.IslandGPExample\&.start()\&.
+.SS "boolean examples\&.gp\&.island\&.IslandGPThread\&.isLocked ()\fC [inline]\fP"
+
+.PP
+Definition at line 193 of file IslandGPThread\&.java\&.
+.PP
+References examples\&.gp\&.island\&.IslandGPThread\&.locked\&.
+.PP
+Referenced by examples\&.gp\&.island\&.IslandGPExample\&.start()\&.
+.SS "static \fBIslandGPThread\fP examples\&.gp\&.island\&.IslandGPThread\&.newInstance (intnextNumber, intpopSize) throws Exception\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 71 of file IslandGPThread\&.java\&.
+.PP
+References examples\&.gp\&.island\&.IslandGPThread\&.config, and examples\&.gp\&.island\&.IslandGPThread\&.IslandGPThread()\&.
+.SS "void examples\&.gp\&.island\&.IslandGPThread\&.outputBestSolution ()\fC [inline]\fP"
+Output the currently best solution for the current thread\&. 
+.PP
+Definition at line 177 of file IslandGPThread\&.java\&.
+.PP
+References examples\&.gp\&.island\&.IslandGPThread\&.m_best, examples\&.gp\&.island\&.IslandGPThread\&.m_nextNumber, and org\&.jgap\&.gp\&.IGPProgram\&.toStringNorm()\&.
+.PP
+Referenced by examples\&.gp\&.island\&.IslandGPThread\&.run()\&.
+.SS "void examples\&.gp\&.island\&.IslandGPThread\&.releaseLocked ()\fC [inline]\fP"
+
+.PP
+Definition at line 201 of file IslandGPThread\&.java\&.
+.PP
+References examples\&.gp\&.island\&.IslandGPThread\&.locked\&.
+.SS "void examples\&.gp\&.island\&.IslandGPThread\&.run ()\fC [inline]\fP"
+
+.PP
+Definition at line 128 of file IslandGPThread\&.java\&.
+.PP
+References org\&.jgap\&.util\&.ICloneable\&.clone(), org\&.jgap\&.gp\&.IGPProgram\&.getFitnessValue(), examples\&.gp\&.island\&.IslandGPThread\&.locked, examples\&.gp\&.island\&.IslandGPThread\&.m_best, examples\&.gp\&.island\&.IslandGPThread\&.m_finished, examples\&.gp\&.island\&.IslandGPThread\&.m_nextNumber, and examples\&.gp\&.island\&.IslandGPThread\&.outputBestSolution()\&.
+.SS "void examples\&.gp\&.island\&.IslandGPThread\&.setLocked ()\fC [inline]\fP"
+
+.PP
+Definition at line 197 of file IslandGPThread\&.java\&.
+.PP
+References examples\&.gp\&.island\&.IslandGPThread\&.locked\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBGPConfiguration\fP examples\&.gp\&.island\&.IslandGPThread\&.config\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 38 of file IslandGPThread\&.java\&.
+.PP
+Referenced by examples\&.gp\&.island\&.IslandGPThread\&.createConfiguration(), and examples\&.gp\&.island\&.IslandGPThread\&.newInstance()\&.
+.SS "final String examples\&.gp\&.island\&.IslandGPThread\&.CVS_REVISION = '$Revision: 1\&.5 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 28 of file IslandGPThread\&.java\&.
+.SS "\fBGPGenotype\fP examples\&.gp\&.island\&.IslandGPThread\&.gen\fC [private]\fP"
+
+.PP
+Definition at line 30 of file IslandGPThread\&.java\&.
+.SS "boolean examples\&.gp\&.island\&.IslandGPThread\&.locked = false\fC [static]\fP"
+
+.PP
+Definition at line 126 of file IslandGPThread\&.java\&.
+.PP
+Referenced by examples\&.gp\&.island\&.IslandGPThread\&.isLocked(), examples\&.gp\&.island\&.IslandGPThread\&.releaseLocked(), examples\&.gp\&.island\&.IslandGPThread\&.run(), and examples\&.gp\&.island\&.IslandGPThread\&.setLocked()\&.
+.SS "\fBIGPProgram\fP examples\&.gp\&.island\&.IslandGPThread\&.m_best\fC [private]\fP"
+
+.PP
+Definition at line 34 of file IslandGPThread\&.java\&.
+.PP
+Referenced by examples\&.gp\&.island\&.IslandGPThread\&.getBestSolution(), examples\&.gp\&.island\&.IslandGPThread\&.outputBestSolution(), and examples\&.gp\&.island\&.IslandGPThread\&.run()\&.
+.SS "boolean examples\&.gp\&.island\&.IslandGPThread\&.m_finished\fC [private]\fP"
+
+.PP
+Definition at line 36 of file IslandGPThread\&.java\&.
+.PP
+Referenced by examples\&.gp\&.island\&.IslandGPThread\&.getBestSolution(), examples\&.gp\&.island\&.IslandGPThread\&.isFinished(), and examples\&.gp\&.island\&.IslandGPThread\&.run()\&.
+.SS "int examples\&.gp\&.island\&.IslandGPThread\&.m_nextNumber\fC [private]\fP"
+
+.PP
+Definition at line 32 of file IslandGPThread\&.java\&.
+.PP
+Referenced by examples\&.gp\&.island\&.IslandGPThread\&.outputBestSolution(), and examples\&.gp\&.island\&.IslandGPThread\&.run()\&.
+.SS "\fBVariable\fP examples\&.gp\&.island\&.IslandGPThread\&.vx\fC [static]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 40 of file IslandGPThread\&.java\&.
+.PP
+Referenced by examples\&.gp\&.island\&.IslandGPThread\&.create()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

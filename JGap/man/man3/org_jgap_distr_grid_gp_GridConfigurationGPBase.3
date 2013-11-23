@@ -1,0 +1,589 @@
+.TH "org.jgap.distr.grid.gp.GridConfigurationGPBase" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.grid.gp.GridConfigurationGPBase \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGridConfigurationGPBase\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetContext\fP (BasicContext a_context)"
+.br
+.ti -1c
+.RI "BasicContext \fBgetContext\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetPackageName\fP ()"
+.br
+.ti -1c
+.RI "\fBIClientFeedbackGP\fP \fBgetClientFeedback\fP ()"
+.br
+.ti -1c
+.RI "\fBIClientEvolveStrategyGP\fP \fBgetClientEvolveStrategy\fP ()"
+.br
+.ti -1c
+.RI "\fBIRequestSplitStrategyGP\fP \fBgetRequestSplitStrategy\fP ()"
+.br
+.ti -1c
+.RI "\fBGPConfiguration\fP \fBgetConfiguration\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetConfiguration\fP (\fBGPConfiguration\fP a_config)"
+.br
+.ti -1c
+.RI "\fBIWorkerEvolveStrategyGP\fP \fBgetWorkerEvolveStrategy\fP ()"
+.br
+.ti -1c
+.RI "\fBIWorkerReturnStrategyGP\fP \fBgetWorkerReturnStrategy\fP ()"
+.br
+.ti -1c
+.RI "\fBIGenotypeInitializerGP\fP \fBgetGenotypeInitializer\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetGenotypeInitializer\fP (\fBIGenotypeInitializerGP\fP a_initializer)"
+.br
+.ti -1c
+.RI "void \fBsetWorkerReturnStrategy\fP (\fBIWorkerReturnStrategyGP\fP a_strategy)"
+.br
+.ti -1c
+.RI "void \fBsetWorkerEvolveStrategy\fP (\fBIWorkerEvolveStrategyGP\fP a_strategy)"
+.br
+.ti -1c
+.RI "abstract void \fBinitialize\fP (GridNodeClientConfig a_gridconfig)  throws Exception"
+.br
+.ti -1c
+.RI "abstract void \fBvalidate\fP ()  throws Exception"
+.br
+.ti -1c
+.RI "void \fBsetClientEvolveStrategy\fP (\fBIClientEvolveStrategyGP\fP a_strategy)"
+.br
+.ti -1c
+.RI "void \fBsetClientFeedback\fP (\fBIClientFeedbackGP\fP a_clientFeedback)"
+.br
+.ti -1c
+.RI "void \fBsetRequestSplitStrategy\fP (\fBIRequestSplitStrategyGP\fP a_splitStrategy)"
+.br
+.ti -1c
+.RI "void \fBsetTypes\fP (Class[] a_types)"
+.br
+.ti -1c
+.RI "void \fBsetArgTypes\fP (Class[][] a_argTypes)"
+.br
+.ti -1c
+.RI "void \fBsetNodeSets\fP (\fBCommandGene\fP[][] a_nodeSets)"
+.br
+.ti -1c
+.RI "void \fBsetMinDepths\fP (int[] a_minDepths)"
+.br
+.ti -1c
+.RI "void \fBsetMaxDepths\fP (int[] a_maxDepths)"
+.br
+.ti -1c
+.RI "void \fBsetMaxNodes\fP (int a_maxNodes)"
+.br
+.ti -1c
+.RI "Class[] \fBgetTypes\fP ()"
+.br
+.ti -1c
+.RI "Class[][] \fBgetArgTypes\fP ()"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP[][] \fBgetNodeSets\fP ()"
+.br
+.ti -1c
+.RI "int[] \fBgetMinDepths\fP ()"
+.br
+.ti -1c
+.RI "int[] \fBgetMaxDepths\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetMaxNodes\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetMinFitnessToStore\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMinFitnessToStore\fP (double a_minFitnessToStore)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBIClientFeedbackGP\fP \fBm_clientFeedback\fP"
+.br
+.ti -1c
+.RI "\fBIRequestSplitStrategyGP\fP \fBm_splitStrategy\fP"
+.br
+.ti -1c
+.RI "\fBGPConfiguration\fP \fBm_config\fP"
+.br
+.ti -1c
+.RI "BasicContext \fBm_context\fP"
+.br
+.ti -1c
+.RI "\fBIClientEvolveStrategyGP\fP \fBm_clientEvolveStrategy\fP"
+.br
+.ti -1c
+.RI "\fBIWorkerEvolveStrategyGP\fP \fBm_workerEvolveStrategy\fP"
+.br
+.ti -1c
+.RI "\fBIWorkerReturnStrategyGP\fP \fBm_workerReturnStrategy\fP"
+.br
+.ti -1c
+.RI "\fBIGenotypeInitializerGP\fP \fBm_genotypeInitializer\fP"
+.br
+.ti -1c
+.RI "String \fBm_packageName\fP"
+.br
+.ti -1c
+.RI "Class[] \fBm_types\fP"
+.br
+.ti -1c
+.RI "Class[][] \fBm_argTypes\fP"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP[][] \fBm_nodeSets\fP"
+.br
+.ti -1c
+.RI "int[] \fBm_minDepths\fP"
+.br
+.ti -1c
+.RI "int[] \fBm_maxDepths\fP"
+.br
+.ti -1c
+.RI "int \fBm_maxNodes\fP"
+.br
+.ti -1c
+.RI "double \fBm_minFitnessToStore\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.6 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Abstract base class for the important GP grid configuration\&. It holds any information necessary to describe a problem and the way it is solved distributedly\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file GridConfigurationGPBase\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.GridConfigurationGPBase ()\fC [inline]\fP"
+
+.PP
+Definition at line 62 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_context\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Class [][] org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getArgTypes ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 184 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_argTypes\&.
+.SS "\fBIClientEvolveStrategyGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getClientEvolveStrategy ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 83 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_clientEvolveStrategy\&.
+.SS "\fBIClientFeedbackGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getClientFeedback ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 79 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_clientFeedback\&.
+.SS "\fBGPConfiguration\fP org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getConfiguration ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 91 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_config\&.
+.SS "BasicContext org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getContext ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 71 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_context\&.
+.SS "\fBIGenotypeInitializerGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getGenotypeInitializer ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 107 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_genotypeInitializer\&.
+.SS "int [] org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getMaxDepths ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 196 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_maxDepths\&.
+.SS "int org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getMaxNodes ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 200 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_maxNodes\&.
+.SS "int [] org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getMinDepths ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 192 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_minDepths\&.
+.SS "double org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getMinFitnessToStore ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 204 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_minFitnessToStore\&.
+.SS "\fBCommandGene\fP [][] org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getNodeSets ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 188 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_nodeSets\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getPackageName ()\fC [inline]\fP"
+
+.PP
+Definition at line 75 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_packageName\&.
+.SS "\fBIRequestSplitStrategyGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getRequestSplitStrategy ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 87 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_splitStrategy\&.
+.SS "Class [] org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getTypes ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 180 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_types\&.
+.SS "\fBIWorkerEvolveStrategyGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getWorkerEvolveStrategy ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 99 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_workerEvolveStrategy\&.
+.SS "\fBIWorkerReturnStrategyGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getWorkerReturnStrategy ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 103 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_workerReturnStrategy\&.
+.SS "abstract void org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.initialize (GridNodeClientConfiga_gridconfig) throws Exception\fC [pure virtual]\fP"
+Write your initialization of the private attributes here!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_gridconfig\fP current grid node client configuration (provided via the command line at startup) 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP in case of any error 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setArgTypes (Classa_argTypes[][])\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 160 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_argTypes\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setClientEvolveStrategy (\fBIClientEvolveStrategyGP\fPa_strategy)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 143 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_clientEvolveStrategy\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setClientFeedback (\fBIClientFeedbackGP\fPa_clientFeedback)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 148 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_clientFeedback\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setConfiguration (\fBGPConfiguration\fPa_config)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 95 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_config\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setContext (BasicContexta_context)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 67 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_context\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setGenotypeInitializer (\fBIGenotypeInitializerGP\fPa_initializer)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 111 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_genotypeInitializer\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setMaxDepths (int[]a_maxDepths)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 172 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_maxDepths\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setMaxNodes (inta_maxNodes)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 176 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_maxNodes\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setMinDepths (int[]a_minDepths)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 168 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_minDepths\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setMinFitnessToStore (doublea_minFitnessToStore)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 208 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_minFitnessToStore\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setNodeSets (\fBCommandGene\fPa_nodeSets[][])\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 164 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_nodeSets\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setRequestSplitStrategy (\fBIRequestSplitStrategyGP\fPa_splitStrategy)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 152 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_splitStrategy\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setTypes (Class[]a_types)\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+move the following to GPConfiguration, elegantly 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 156 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_types\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setWorkerEvolveStrategy (\fBIWorkerEvolveStrategyGP\fPa_strategy)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 119 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_workerEvolveStrategy\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setWorkerReturnStrategy (\fBIWorkerReturnStrategyGP\fPa_strategy)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.PP
+Definition at line 115 of file GridConfigurationGPBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_workerReturnStrategy\&.
+.SS "abstract void org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.validate () throws Exception\fC [pure virtual]\fP"
+Called immediately before starting the grid computation\&. Verify here, if your configuration is setup properly and all fields are initialized correctly\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.CVS_REVISION = '$Revision: 1\&.6 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 28 of file GridConfigurationGPBase\&.java\&.
+.SS "Class [][] org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_argTypes\fC [private]\fP"
+
+.PP
+Definition at line 50 of file GridConfigurationGPBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getArgTypes(), and org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setArgTypes()\&.
+.SS "\fBIClientEvolveStrategyGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_clientEvolveStrategy\fC [private]\fP"
+
+.PP
+Definition at line 38 of file GridConfigurationGPBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getClientEvolveStrategy(), and org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setClientEvolveStrategy()\&.
+.SS "\fBIClientFeedbackGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_clientFeedback\fC [private]\fP"
+
+.PP
+Definition at line 30 of file GridConfigurationGPBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getClientFeedback(), and org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setClientFeedback()\&.
+.SS "\fBGPConfiguration\fP org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_config\fC [private]\fP"
+
+.PP
+Definition at line 34 of file GridConfigurationGPBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getConfiguration(), and org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setConfiguration()\&.
+.SS "BasicContext org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_context\fC [private]\fP"
+
+.PP
+Definition at line 36 of file GridConfigurationGPBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getContext(), org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.GridConfigurationGPBase(), and org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setContext()\&.
+.SS "\fBIGenotypeInitializerGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_genotypeInitializer\fC [private]\fP"
+
+.PP
+Definition at line 44 of file GridConfigurationGPBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getGenotypeInitializer(), and org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setGenotypeInitializer()\&.
+.SS "int [] org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_maxDepths\fC [private]\fP"
+
+.PP
+Definition at line 56 of file GridConfigurationGPBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getMaxDepths(), and org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setMaxDepths()\&.
+.SS "int org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_maxNodes\fC [private]\fP"
+
+.PP
+Definition at line 58 of file GridConfigurationGPBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getMaxNodes(), and org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setMaxNodes()\&.
+.SS "int [] org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_minDepths\fC [private]\fP"
+
+.PP
+Definition at line 54 of file GridConfigurationGPBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getMinDepths(), and org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setMinDepths()\&.
+.SS "double org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_minFitnessToStore\fC [private]\fP"
+
+.PP
+Definition at line 60 of file GridConfigurationGPBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getMinFitnessToStore(), and org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setMinFitnessToStore()\&.
+.SS "\fBCommandGene\fP [][] org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_nodeSets\fC [private]\fP"
+
+.PP
+Definition at line 52 of file GridConfigurationGPBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getNodeSets(), and org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setNodeSets()\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_packageName\fC [private]\fP"
+
+.PP
+Definition at line 46 of file GridConfigurationGPBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getPackageName()\&.
+.SS "\fBIRequestSplitStrategyGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_splitStrategy\fC [private]\fP"
+
+.PP
+Definition at line 32 of file GridConfigurationGPBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getRequestSplitStrategy(), and org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setRequestSplitStrategy()\&.
+.SS "Class [] org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_types\fC [private]\fP"
+
+.PP
+Definition at line 48 of file GridConfigurationGPBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getTypes(), and org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setTypes()\&.
+.SS "\fBIWorkerEvolveStrategyGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_workerEvolveStrategy\fC [private]\fP"
+
+.PP
+Definition at line 40 of file GridConfigurationGPBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getWorkerEvolveStrategy(), and org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setWorkerEvolveStrategy()\&.
+.SS "\fBIWorkerReturnStrategyGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.m_workerReturnStrategy\fC [private]\fP"
+
+.PP
+Definition at line 42 of file GridConfigurationGPBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.getWorkerReturnStrategy(), and org\&.jgap\&.distr\&.grid\&.gp\&.GridConfigurationGPBase\&.setWorkerReturnStrategy()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

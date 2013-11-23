@@ -1,0 +1,272 @@
+.TH "org.jgap.ChromosomeForTesting" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.ChromosomeForTesting \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.Chromosome\fP\&.
+.PP
+Inherited by \fBorg\&.jgap\&.GenotypeTest\&.ChromosomeForTest2\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBTestResultHolder\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChromosomeForTesting\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBChromosomeForTesting\fP (\fBConfiguration\fP a_config)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBChromosomeForTesting\fP (\fBConfiguration\fP a_config, final \fBGene\fP[] a_initialGenes)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "int \fBgetComputedTimes\fP ()"
+.br
+.ti -1c
+.RI "void \fBresetComputedTimes\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetFitnessValue\fP ()"
+.br
+.ti -1c
+.RI "void \fBresetIsCloned\fP ()"
+.br
+.ti -1c
+.RI "\fBIChromosome\fP \fBrandomInitialChromosome2\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "synchronized Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisHandlerFor\fP (Object a_obj, Class a_class)"
+.br
+.ti -1c
+.RI "Object \fBperform\fP (Object a_obj, Class a_class, Object a_params)  throws Exception "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "boolean \fBm_isCloned\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Derived \fBChromosome\fP class for testing purposes only\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 18 of file ChromosomeForTesting\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.ChromosomeForTesting\&.ChromosomeForTesting () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 23 of file ChromosomeForTesting\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.getStaticConfiguration()\&.
+.PP
+Referenced by org\&.jgap\&.ChromosomeForTesting\&.clone(), and org\&.jgap\&.ChromosomeForTesting\&.randomInitialChromosome2()\&.
+.SS "org\&.jgap\&.ChromosomeForTesting\&.ChromosomeForTesting (\fBConfiguration\fPa_config) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 28 of file ChromosomeForTesting\&.java\&.
+.SS "org\&.jgap\&.ChromosomeForTesting\&.ChromosomeForTesting (\fBConfiguration\fPa_config, final \fBGene\fP[]a_initialGenes) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 33 of file ChromosomeForTesting\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "synchronized Object org\&.jgap\&.ChromosomeForTesting\&.clone ()\fC [inline]\fP, \fC [virtual]\fP"
+Returns a copy of this \fBChromosome\fP\&. The returned instance can evolve independently of this instance\&. Note that, if possible, this method will first attempt to acquire a \fBChromosome\fP instance from the active ChromosomePool (if any) and set its value appropriately before returning it\&. If that is not possible, then a new \fBChromosome\fP instance will be constructed and its value set appropriately before returning\&.
+.PP
+\fBReturns:\fP
+.RS 4
+copy of this \fBChromosome\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIllegalStateException\fP instead of CloneNotSupportedException
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+once output a warning: allele should be cloneable! 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBorg\&.jgap\&.Chromosome\fP\&.
+.PP
+Definition at line 114 of file ChromosomeForTesting\&.java\&.
+.PP
+References org\&.jgap\&.ChromosomeForTesting\&.ChromosomeForTesting(), and org\&.jgap\&.BaseChromosome\&.getConfiguration()\&.
+.SS "int org\&.jgap\&.ChromosomeForTesting\&.getComputedTimes ()\fC [inline]\fP"
+
+.PP
+Definition at line 38 of file ChromosomeForTesting\&.java\&.
+.SS "double org\&.jgap\&.ChromosomeForTesting\&.getFitnessValue ()\fC [inline]\fP"
+Retrieves the fitness value of this \fBChromosome\fP, as determined by the active fitness function\&. If a bulk fitness function is in use and has not yet assigned a fitness value to this \fBChromosome\fP, then -1 is returned\&.
+.PP
+Attention: should not be called from \fBtoString()\fP as the fitness value would be computed if it was initial!
+.PP
+\fBReturns:\fP
+.RS 4
+a positive double value representing the fitness of this \fBChromosome\fP, or -1 if a bulk fitness function is in use and has not yet assigned a fitness value to this \fBChromosome\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 46 of file ChromosomeForTesting\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.m_fitnessValue, and org\&.jgap\&.ChromosomeForTesting\&.m_isCloned\&.
+.SS "boolean org\&.jgap\&.ChromosomeForTesting\&.isHandlerFor (Objecta_obj, Classa_class)\fC [inline]\fP"
+Determines whether the handler is suitable for the given object instance or class\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_obj\fP the object instance to check 
+.br
+\fIa_class\fP the class to check, alternatively if no object instance is available (some handlers could need to get an object and would always return false if only a class is provided) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: handler suitable for given object or class
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IHandler\fP\&.
+.PP
+Definition at line 129 of file ChromosomeForTesting\&.java\&.
+.SS "Object org\&.jgap\&.ChromosomeForTesting\&.perform (Objecta_obj, Classa_class, Objecta_params) throws Exception\fC [inline]\fP"
+Performs a task for the given object or class\&. For some handlers, additional parameters are necessary, which could be provided\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_obj\fP the object instance to perform the handler task for 
+.br
+\fIa_class\fP the class to perform the handler task for, in case no object instance is available (some handlers could need to get an object and would always throw an exception if only a class is provided) 
+.br
+\fIa_params\fP optional parameters needed for the handler to perform its task 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP in case of any error 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IHandler\fP\&.
+.PP
+Definition at line 138 of file ChromosomeForTesting\&.java\&.
+.PP
+References org\&.jgap\&.ChromosomeForTesting\&.randomInitialChromosome2()\&.
+.SS "\fBIChromosome\fP org\&.jgap\&.ChromosomeForTesting\&.randomInitialChromosome2 () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 58 of file ChromosomeForTesting\&.java\&.
+.PP
+References org\&.jgap\&.ChromosomeForTesting\&.ChromosomeForTesting(), org\&.jgap\&.BaseChromosome\&.getConfiguration(), and org\&.jgap\&.FitnessFunction\&.NO_FITNESS_VALUE\&.
+.PP
+Referenced by org\&.jgap\&.ChromosomeForTesting\&.perform(), and org\&.jgap\&.GenotypeTest\&.ChromosomeForTest2\&.perform()\&.
+.SS "void org\&.jgap\&.ChromosomeForTesting\&.resetComputedTimes ()\fC [inline]\fP"
+
+.PP
+Definition at line 42 of file ChromosomeForTesting\&.java\&.
+.SS "void org\&.jgap\&.ChromosomeForTesting\&.resetIsCloned ()\fC [inline]\fP"
+
+.PP
+Definition at line 54 of file ChromosomeForTesting\&.java\&.
+.PP
+References org\&.jgap\&.ChromosomeForTesting\&.m_isCloned\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "boolean org\&.jgap\&.ChromosomeForTesting\&.m_isCloned\fC [private]\fP"
+
+.PP
+Definition at line 20 of file ChromosomeForTesting\&.java\&.
+.PP
+Referenced by org\&.jgap\&.ChromosomeForTesting\&.getFitnessValue(), and org\&.jgap\&.ChromosomeForTesting\&.resetIsCloned()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

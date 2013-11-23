@@ -1,0 +1,1289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1impl_1_1_composite_gene" kind="class" prot="public">
+    <compoundname>org::jgap::impl::CompositeGene</compoundname>
+    <basecompoundref refid="classorg_1_1jgap_1_1_base_gene" prot="public" virt="non-virtual">org.jgap.BaseGene</basecompoundref>
+    <basecompoundref refid="interfaceorg_1_1jgap_1_1_i_composite_gene" prot="public" virt="non-virtual">org.jgap.ICompositeGene</basecompoundref>
+    <basecompoundref refid="interfaceorg_1_1jgap_1_1_i_persistent_representation" prot="public" virt="non-virtual">org.jgap.IPersistentRepresentation</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a9a4802f5b06ad58a96f1a40b60f836c6" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.impl.CompositeGene.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.60 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="42" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ad2e0364fa1181ae5b7334a545864f96b" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.impl.CompositeGene.GENE_DELIMITER</definition>
+        <argsstring></argsstring>
+        <name>GENE_DELIMITER</name>
+        <initializer>= &quot;#&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This field separates gene class name from the gene persistent representation string. &apos;*&apos; does not work properly with URLEncoder! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="48" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="48" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_persistent_repr_test_1a2e6369b8dc50507ba3b4d2cc8de50106" compoundref="_composite_gene_persistent_repr_test_8java" startline="50" endline="88">org.jgap.impl.CompositeGenePersistentReprTest.createSampleNestedGene</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ad33dc860fffad1457c3f44a8b3b031f7" compoundref="_composite_gene_8java" startline="339" endline="354">org.jgap.impl.CompositeGene.getPersistentRepresentation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1abd62d1ccb9e0753b93d11a89fd055d0e" compoundref="_composite_gene_8java" startline="275" endline="305">org.jgap.impl.CompositeGene.setValueFromPersistentRepresentation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_string_gene_test_1a7def9d23e7c8b19def106b51e2436361" compoundref="_string_gene_test_8java" startline="645" endline="657">org.jgap.impl.StringGeneTest.testPersistentRepresentation_5</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ad30baf0c08afe2bba30d25ada096d88a" compoundref="_composite_gene_8java" startline="522" endline="538">org.jgap.impl.CompositeGene.toString</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1aedd0a6ff682d116a12aabf06b110922a" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.impl.CompositeGene.GENE_DELIMITER_HEADING</definition>
+        <argsstring></argsstring>
+        <name>GENE_DELIMITER_HEADING</name>
+        <initializer>= &quot;&lt;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Represents the heading delimiter that is used to separate genes in the persistent representation of <ref refid="classorg_1_1jgap_1_1impl_1_1_composite_gene" kindref="compound">CompositeGene</ref> instances. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="54" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="54" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a0e0046a81c4adb9ff4d444c37e092b30" compoundref="_composite_gene_8java" startline="697" endline="715">org.jgap.impl.CompositeGene.getBusinessKey</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ad33dc860fffad1457c3f44a8b3b031f7" compoundref="_composite_gene_8java" startline="339" endline="354">org.jgap.impl.CompositeGene.getPersistentRepresentation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a8a2fa0b4b68a8c06457d2b56166c56fd" compoundref="_composite_gene_8java" startline="644" endline="667">org.jgap.impl.CompositeGene.split</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ab95ce27b4f68e0d22791bb4d82d6c0d5" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.impl.CompositeGene.GENE_DELIMITER_CLOSING</definition>
+        <argsstring></argsstring>
+        <name>GENE_DELIMITER_CLOSING</name>
+        <initializer>= &quot;&gt;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Represents the closing delimiter that is used to separate genes in the persistent representation of <ref refid="classorg_1_1jgap_1_1impl_1_1_composite_gene" kindref="compound">CompositeGene</ref> instances. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="60" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="60" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a0e0046a81c4adb9ff4d444c37e092b30" compoundref="_composite_gene_8java" startline="697" endline="715">org.jgap.impl.CompositeGene.getBusinessKey</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ad33dc860fffad1457c3f44a8b3b031f7" compoundref="_composite_gene_8java" startline="339" endline="354">org.jgap.impl.CompositeGene.getPersistentRepresentation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a8a2fa0b4b68a8c06457d2b56166c56fd" compoundref="_composite_gene_8java" startline="644" endline="667">org.jgap.impl.CompositeGene.split</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a490eb7a6c703d4f20bbbe4d25b78eea3" prot="private" static="no" mutable="no">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+        <definition>Gene org.jgap.impl.CompositeGene.m_geneTypeAllowed</definition>
+        <argsstring></argsstring>
+        <name>m_geneTypeAllowed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="62" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="62" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ac8b7dd5b3d2fb4ade4e9d5c95ad4e719" compoundref="_composite_gene_8java" startline="154" endline="180">org.jgap.impl.CompositeGene.addGene</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a905c8f416472c504d93ba6a97fb17be6" compoundref="_composite_gene_8java" startline="112" endline="120">org.jgap.impl.CompositeGene.CompositeGene</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1aabb760c92e6d5ae8c866c0bd41c6b6a3" compoundref="_composite_gene_8java" startline="137" endline="139">org.jgap.impl.CompositeGene.getGeneTypeAllowed</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a20eb52e3e6e1966527dd8a7282660b2c" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> &gt;</type>
+        <definition>List&lt;Gene&gt; org.jgap.impl.CompositeGene.m_genes</definition>
+        <argsstring></argsstring>
+        <name>m_genes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The genes contained in this <ref refid="classorg_1_1jgap_1_1impl_1_1_composite_gene" kindref="compound">CompositeGene</ref></para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="70" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="70" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a69244d0036ad5f7f05766a3341f21841" compoundref="_composite_gene_8java" startline="231" endline="238">org.jgap.impl.CompositeGene.cleanup</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a905c8f416472c504d93ba6a97fb17be6" compoundref="_composite_gene_8java" startline="112" endline="120">org.jgap.impl.CompositeGene.CompositeGene</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a06d9f8415a3386a04b4eebc12850dbcf" compoundref="_composite_gene_8java" startline="367" endline="376">org.jgap.impl.CompositeGene.getAllele</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ac8bb9bd8f19371c51a5231c6a1e9b4e9" compoundref="_composite_gene_8java" startline="568" endline="570">org.jgap.impl.CompositeGene.getGenes</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ab71f66feb3b88bb9bdcab5682abd4b03" compoundref="_composite_gene_8java" startline="418" endline="433">org.jgap.impl.CompositeGene.newGeneInternal</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a9e22ec1330a1b2009da1f587c299ed74" compoundref="_composite_gene_8java" startline="389" endline="406">org.jgap.impl.CompositeGene.setAllele</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a41d0187fbd5adbcb7c3bfff7d76f1180" compoundref="_composite_gene_8java" startline="251" endline="261">org.jgap.impl.CompositeGene.setToRandomValue</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ad30baf0c08afe2bba30d25ada096d88a" compoundref="_composite_gene_8java" startline="522" endline="538">org.jgap.impl.CompositeGene.toString</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a564e6b2959bb4b0203cbcbda2fa0e75f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.CompositeGene.CompositeGene</definition>
+        <argsstring>()</argsstring>
+        <name>CompositeGene</name>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor.</para><para>Attention: The configuration used is the one set with the static method Genotype.setConfiguration.</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="82" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="82" bodyend="85"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ab05429ae96ad205f88855f6dbe242638" compoundref="_composite_gene_8java" startline="450" endline="508">org.jgap.impl.CompositeGene.compareTo</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ab71f66feb3b88bb9bdcab5682abd4b03" compoundref="_composite_gene_8java" startline="418" endline="433">org.jgap.impl.CompositeGene.newGeneInternal</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1af834b058b7ad9e396c761ca47eaa5192" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.CompositeGene.CompositeGene</definition>
+        <argsstring>(Configuration a_config)</argsstring>
+        <name>CompositeGene</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_config</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="94" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a905c8f416472c504d93ba6a97fb17be6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.CompositeGene.CompositeGene</definition>
+        <argsstring>(final Configuration a_config, final Gene a_geneTypeAllowed)</argsstring>
+        <name>CompositeGene</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_config</declname>
+        </param>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+          <declname>a_geneTypeAllowed</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows to specify which <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> implementation is allowed to be added to the <ref refid="classorg_1_1jgap_1_1impl_1_1_composite_gene" kindref="compound">CompositeGene</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_geneTypeAllowed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the class of Genes to be allowed to be added to the <ref refid="classorg_1_1jgap_1_1impl_1_1_composite_gene" kindref="compound">CompositeGene</ref></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="112" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="112" bodyend="120"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a20eb52e3e6e1966527dd8a7282660b2c" compoundref="_composite_gene_8java" startline="70">org.jgap.impl.CompositeGene.m_genes</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a490eb7a6c703d4f20bbbe4d25b78eea3" compoundref="_composite_gene_8java" startline="62">org.jgap.impl.CompositeGene.m_geneTypeAllowed</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ab452b46689654525e3df79bf1ca242f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.CompositeGene.addGene</definition>
+        <argsstring>(final Gene a_gene)</argsstring>
+        <name>addGene</name>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+          <declname>a_gene</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a gene to the <ref refid="classorg_1_1jgap_1_1impl_1_1_composite_gene" kindref="compound">CompositeGene</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_gene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the gene to add </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="127" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="127" bodyend="129"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1abd62d1ccb9e0753b93d11a89fd055d0e" compoundref="_composite_gene_8java" startline="275" endline="305">org.jgap.impl.CompositeGene.setValueFromPersistentRepresentation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1aabb760c92e6d5ae8c866c0bd41c6b6a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+        <definition>Gene org.jgap.impl.CompositeGene.getGeneTypeAllowed</definition>
+        <argsstring>()</argsstring>
+        <name>getGeneTypeAllowed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the gene type allowed, or null if any type allowed</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="137" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="137" bodyend="139"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a490eb7a6c703d4f20bbbe4d25b78eea3" compoundref="_composite_gene_8java" startline="62">org.jgap.impl.CompositeGene.m_geneTypeAllowed</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1a41f10da19cc7dce4e445f1474c4b761f" compoundref="_composite_gene_test_8java" startline="125" endline="131">org.jgap.impl.CompositeGeneTest.testAddGene_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1a5af6d78dbbe50c0bd4e79605e00dc870" compoundref="_composite_gene_test_8java" startline="63" endline="68">org.jgap.impl.CompositeGeneTest.testConstruct_0</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ac8b7dd5b3d2fb4ade4e9d5c95ad4e719" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.CompositeGene.addGene</definition>
+        <argsstring>(final Gene a_gene, final boolean a_strict)</argsstring>
+        <name>addGene</name>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+          <declname>a_gene</declname>
+        </param>
+        <param>
+          <type>final boolean</type>
+          <declname>a_strict</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a gene to the <ref refid="classorg_1_1jgap_1_1impl_1_1_composite_gene" kindref="compound">CompositeGene</ref>&apos;s container. See comments in class header for additional details about equality (concerning &quot;strict&quot; param.)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_gene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the gene to be added </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_strict</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>false: add the given gene except the gene itself already is contained within the <ref refid="classorg_1_1jgap_1_1impl_1_1_composite_gene" kindref="compound">CompositeGene</ref>&apos;s container. true: add the gene if there is no other gene being equal to the given gene in request to the <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>&apos;s equals method</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="154" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="154" bodyend="180"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a2870d0e00136fa07477629ab04e91f96" compoundref="_composite_gene_8java" startline="592" endline="610">org.jgap.impl.CompositeGene.containsGeneByIdentity</references>
+        <references refid="classorg_1_1jgap_1_1_base_gene_1a9fb0e302ae57ee3f2f5d1ee08a75bf43" compoundref="_base_gene_8java" startline="193" endline="216">org.jgap.BaseGene.equals</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a490eb7a6c703d4f20bbbe4d25b78eea3" compoundref="_composite_gene_8java" startline="62">org.jgap.impl.CompositeGene.m_geneTypeAllowed</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a770487c7ce405ffc76c0c5ead65342ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.CompositeGene.removeGeneByIdentity</definition>
+        <argsstring>(final Gene a_gene)</argsstring>
+        <name>removeGeneByIdentity</name>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+          <declname>a_gene</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes the given gene from the collection of genes. The gene is only removed if an object of the same identity is contained. The equals method is not used here intentionally.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_gene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the gene to be removed </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true: given gene found and removed</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="193" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="193" bodyend="207"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1aa5c573b6b4343fe76163357c021e35ce" compoundref="_composite_gene_8java" startline="557" endline="559">org.jgap.impl.CompositeGene.geneAt</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ac6078356e9ce615740ab4e5fcd53b86a" compoundref="_composite_gene_8java" startline="578" endline="580">org.jgap.impl.CompositeGene.size</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1a8b81965f142cc00a43daf344accc0c20" compoundref="_composite_gene_test_8java" startline="771" endline="776">org.jgap.impl.CompositeGeneTest.testRemoveGeneByIdentity_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1afaaf2f9dc85977784184fff4e3ae22e4" compoundref="_composite_gene_test_8java" startline="785" endline="794">org.jgap.impl.CompositeGeneTest.testRemoveGeneByIdentity_1</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a9d45afd175bbbe529fdb5a51c5ac0945" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.CompositeGene.removeGene</definition>
+        <argsstring>(final Gene a_gene)</argsstring>
+        <name>removeGene</name>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+          <declname>a_gene</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes the given gene from the collection of genes. The gene is removed if another gene exists that is equal to the given gene in respect to the equals method of the gene.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_gene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the gene to be removed </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true: given gene found and removed</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="220" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="220" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a69244d0036ad5f7f05766a3341f21841" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.CompositeGene.cleanup</definition>
+        <argsstring>()</argsstring>
+        <name>cleanup</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_gene_1a5e353bbf6a9576b702bf466a5f952b82">cleanup</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Executed by the genetic engine when this <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> instance is no longer needed and should perform any necessary resource cleanup.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="231" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="231" bodyend="238"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a20eb52e3e6e1966527dd8a7282660b2c" compoundref="_composite_gene_8java" startline="70">org.jgap.impl.CompositeGene.m_genes</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ac6078356e9ce615740ab4e5fcd53b86a" compoundref="_composite_gene_8java" startline="578" endline="580">org.jgap.impl.CompositeGene.size</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a41d0187fbd5adbcb7c3bfff7d76f1180" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.CompositeGene.setToRandomValue</definition>
+        <argsstring>(final RandomGenerator a_numberGenerator)</argsstring>
+        <name>setToRandomValue</name>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_random_generator" kindref="compound">RandomGenerator</ref></type>
+          <declname>a_numberGenerator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>See interface <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> for description.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_numberGenerator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the random number generator that should be used to create any random values. It&apos;s important to use this generator to maintain the user&apos;s flexibility to configure the genetic engine to use the random number generator of their choice</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="251" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="251" bodyend="261"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a20eb52e3e6e1966527dd8a7282660b2c" compoundref="_composite_gene_8java" startline="70">org.jgap.impl.CompositeGene.m_genes</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ac6078356e9ce615740ab4e5fcd53b86a" compoundref="_composite_gene_8java" startline="578" endline="580">org.jgap.impl.CompositeGene.size</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1abd62d1ccb9e0753b93d11a89fd055d0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.CompositeGene.setValueFromPersistentRepresentation</definition>
+        <argsstring>(String a_representation)</argsstring>
+        <name>setValueFromPersistentRepresentation</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_persistent_representation_1a94a345f1919c4840dd0b9eecf7afc6a3">setValueFromPersistentRepresentation</reimplements>
+        <param>
+          <type>String</type>
+          <declname>a_representation</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_unsupported_representation_exception" kindref="compound">UnsupportedRepresentationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>See interface <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> for description.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_representation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the string representation retrieved from a prior call to the <ref refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ad33dc860fffad1457c3f44a8b3b031f7" kindref="member">getPersistentRepresentation()</ref> method</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_unsupported_representation_exception" kindref="compound">UnsupportedRepresentationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para><simplesectsep/><para>Audrius Meskauskas </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="275" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="275" bodyend="305"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ab452b46689654525e3df79bf1ca242f3" compoundref="_composite_gene_8java" startline="127" endline="129">org.jgap.impl.CompositeGene.addGene</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a8bf4b223b9614799efa2ee90d36b0602" compoundref="_composite_gene_8java" startline="319" endline="327">org.jgap.impl.CompositeGene.createGene</references>
+        <references refid="classorg_1_1jgap_1_1_base_gene_1ae9277d0b77c1e8ca244687a8ab8cf42f" compoundref="_base_gene_8java" startline="426" endline="428">org.jgap.BaseGene.decode</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ad2e0364fa1181ae5b7334a545864f96b" compoundref="_composite_gene_8java" startline="48">org.jgap.impl.CompositeGene.GENE_DELIMITER</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a8a2fa0b4b68a8c06457d2b56166c56fd" compoundref="_composite_gene_8java" startline="644" endline="667">org.jgap.impl.CompositeGene.split</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ad33dc860fffad1457c3f44a8b3b031f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String org.jgap.impl.CompositeGene.getPersistentRepresentation</definition>
+        <argsstring>()</argsstring>
+        <name>getPersistentRepresentation</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_persistent_representation_1a07bf7dbaa8de08e268c9357a46e79dac">getPersistentRepresentation</reimplements>
+        <exceptions> throws UnsupportedOperationException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>See interface <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> for description.</para><para><simplesect kind="return"><para>string representation of this <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>&apos;s current state </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>UnsupportedOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para><simplesectsep/><para>Audrius Meskauskas </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="339" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="339" bodyend="354"/>
+        <references refid="classorg_1_1jgap_1_1_base_gene_1a5e8fc72c1fccdb665113c0c34e3fa4b5" compoundref="_base_gene_8java" startline="422" endline="424">org.jgap.BaseGene.encode</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ad2e0364fa1181ae5b7334a545864f96b" compoundref="_composite_gene_8java" startline="48">org.jgap.impl.CompositeGene.GENE_DELIMITER</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ab95ce27b4f68e0d22791bb4d82d6c0d5" compoundref="_composite_gene_8java" startline="60">org.jgap.impl.CompositeGene.GENE_DELIMITER_CLOSING</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1aedd0a6ff682d116a12aabf06b110922a" compoundref="_composite_gene_8java" startline="54">org.jgap.impl.CompositeGene.GENE_DELIMITER_HEADING</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a06d9f8415a3386a04b4eebc12850dbcf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.impl.CompositeGene.getAllele</definition>
+        <argsstring>()</argsstring>
+        <name>getAllele</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_gene_1aa06c80639659ddbcfa1cfe7b7bb109f9">getAllele</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the value represented by this <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>. All values returned by this class will be Vector instances. Each element of the Vector represents the allele of the corresponding gene in the <ref refid="classorg_1_1jgap_1_1impl_1_1_composite_gene" kindref="compound">CompositeGene</ref>&apos;s container</para><para><simplesect kind="return"><para>the value of this <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="367" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="367" bodyend="376"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a20eb52e3e6e1966527dd8a7282660b2c" compoundref="_composite_gene_8java" startline="70">org.jgap.impl.CompositeGene.m_genes</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ac6078356e9ce615740ab4e5fcd53b86a" compoundref="_composite_gene_8java" startline="578" endline="580">org.jgap.impl.CompositeGene.size</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1a6bf6bbfa64aada8a4badfbf9bf7b1027" compoundref="_composite_gene_test_8java" startline="257" endline="268">org.jgap.impl.CompositeGeneTest.testGetAllele_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1ad3817f1ccfd22a82fd91740376ede5b3" compoundref="_composite_gene_test_8java" startline="270" endline="285">org.jgap.impl.CompositeGeneTest.testGetAllele_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_averaging_crossover_operator_test_1aea721bcd9f97d7e05e0df42f75e022b8" compoundref="_averaging_crossover_operator_test_8java" startline="142" endline="190">org.jgap.impl.AveragingCrossoverOperatorTest.testOperate_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_inversion_operator_test_1a309cf99a30aef85d7f0f54b30b6583aa" compoundref="_inversion_operator_test_8java" startline="173" endline="222">org.jgap.impl.InversionOperatorTest.testOperate_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_test_1a04597a3c0b3976e1f9e723e74072ed76" compoundref="_crossover_operator_test_8java" startline="357" endline="405">org.jgap.impl.CrossoverOperatorTest.testOperate_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_averaging_crossover_operator_test_1a10b7f54f4998e2b5128a0164ec373b0b" compoundref="_averaging_crossover_operator_test_8java" startline="253" endline="300">org.jgap.impl.AveragingCrossoverOperatorTest.testOperate_4</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a9e22ec1330a1b2009da1f587c299ed74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.CompositeGene.setAllele</definition>
+        <argsstring>(Object a_newValue)</argsstring>
+        <name>setAllele</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_gene_1af46a0c31e0fecea483497e87ca278127">setAllele</reimplements>
+        <param>
+          <type>Object</type>
+          <declname>a_newValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the value of the contained Genes to the new given value. This class expects the value to be of a Vector type. Each element of the Vector must conform with the type of the gene in the <ref refid="classorg_1_1jgap_1_1impl_1_1_composite_gene" kindref="compound">CompositeGene</ref>&apos;s container at the corresponding position.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_newValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new value of this <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> instance</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="389" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="389" bodyend="406"/>
+        <references refid="classorg_1_1jgap_1_1_base_gene_1ae9823bef7c550fc1533afb8ab2b34d93" compoundref="_base_gene_8java" startline="370" endline="372">org.jgap.BaseGene.getConstraintChecker</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a20eb52e3e6e1966527dd8a7282660b2c" compoundref="_composite_gene_8java" startline="70">org.jgap.impl.CompositeGene.m_genes</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ab05429ae96ad205f88855f6dbe242638" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.impl.CompositeGene.compareTo</definition>
+        <argsstring>(Object a_other)</argsstring>
+        <name>compareTo</name>
+        <param>
+          <type>Object</type>
+          <declname>a_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compares this <ref refid="classorg_1_1jgap_1_1impl_1_1_composite_gene" kindref="compound">CompositeGene</ref> with the specified object for order. A false value is considered to be less than a true value. A null value is considered to be less than any non-null value.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classorg_1_1jgap_1_1impl_1_1_composite_gene" kindref="compound">CompositeGene</ref> to be compared </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a negative integer, zero, or a positive integer as this object is less than, equal to, or greater than the specified object</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ClassCastException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the specified object&apos;s type prevents it from being compared to this <ref refid="classorg_1_1jgap_1_1impl_1_1_composite_gene" kindref="compound">CompositeGene</ref></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="450" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="450" bodyend="508"/>
+        <references refid="classorg_1_1jgap_1_1_base_gene_1a72fa365cdcc9f2eb399fb8346a0a511b" compoundref="_base_gene_8java" startline="306" endline="339">org.jgap.BaseGene.compareApplicationData</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a564e6b2959bb4b0203cbcbda2fa0e75f" compoundref="_composite_gene_8java" startline="82" endline="85">org.jgap.impl.CompositeGene.CompositeGene</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1aa5c573b6b4343fe76163357c021e35ce" compoundref="_composite_gene_8java" startline="557" endline="559">org.jgap.impl.CompositeGene.geneAt</references>
+        <references refid="classorg_1_1jgap_1_1_base_gene_1a0520139dc694dc6034aeb631ae7d70bd" compoundref="_base_gene_8java" startline="278" endline="280">org.jgap.BaseGene.getApplicationData</references>
+        <references refid="classorg_1_1jgap_1_1_base_gene_1acd6431c06c81bc03b4abbe32e4d9d8ef" compoundref="_base_gene_8java" startline="302" endline="304">org.jgap.BaseGene.isCompareApplicationData</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a18ca33f66617e762ee657212866f6b7c" compoundref="_composite_gene_8java" startline="546" endline="548">org.jgap.impl.CompositeGene.isEmpty</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ac6078356e9ce615740ab4e5fcd53b86a" compoundref="_composite_gene_8java" startline="578" endline="580">org.jgap.impl.CompositeGene.size</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1aff77c831d35b221df23b0809ac477c7b" compoundref="_composite_gene_test_8java" startline="947" endline="958">org.jgap.impl.CompositeGeneTest.testCompareTo_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1aebbb1ef31d8e9eba385ee1ae980e39f6" compoundref="_composite_gene_test_8java" startline="967" endline="976">org.jgap.impl.CompositeGeneTest.testCompareTo_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1af0c4f7eca799736976c0b33459e92f38" compoundref="_composite_gene_test_8java" startline="985" endline="995">org.jgap.impl.CompositeGeneTest.testCompareTo_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1ac4ad37a79efaae5f15bbb1cbd6ad3793" compoundref="_composite_gene_test_8java" startline="1015" endline="1027">org.jgap.impl.CompositeGeneTest.testCompareTo_3_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1a13d509e6ee8a3321b06734430897bf2d" compoundref="_composite_gene_test_8java" startline="39" endline="56">org.jgap.impl.CompositeGeneTest.testCompareTo_4</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1a18eb5d638f8441fb555dc86d7bcdfafd" compoundref="_composite_gene_test_8java" startline="1037" endline="1063">org.jgap.impl.CompositeGeneTest.testCompareTo_5</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1a3dc0b7707c453efc03db91c0e812f210" compoundref="_composite_gene_test_8java" startline="1071" endline="1080">org.jgap.impl.CompositeGeneTest.testCompareTo_6</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ad30baf0c08afe2bba30d25ada096d88a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String org.jgap.impl.CompositeGene.toString</definition>
+        <argsstring>()</argsstring>
+        <name>toString</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_gene_1ac62239b4b7bf81179fd491a4c4bd1901">toString</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a string representation of this <ref refid="classorg_1_1jgap_1_1impl_1_1_composite_gene" kindref="compound">CompositeGene</ref>&apos;s value that may be useful for display purposes. <simplesect kind="return"><para>string representation of this <ref refid="classorg_1_1jgap_1_1impl_1_1_composite_gene" kindref="compound">CompositeGene</ref>&apos;s value. Every contained gene&apos;s string representation is delimited by the given delimiter</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para><simplesectsep/><para>Audrius Meskauskas </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="522" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="522" bodyend="538"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ad2e0364fa1181ae5b7334a545864f96b" compoundref="_composite_gene_8java" startline="48">org.jgap.impl.CompositeGene.GENE_DELIMITER</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a20eb52e3e6e1966527dd8a7282660b2c" compoundref="_composite_gene_8java" startline="70">org.jgap.impl.CompositeGene.m_genes</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1a62e6b1961eb6dbcc835eaa65c7d4b17f" compoundref="_composite_gene_test_8java" startline="224" endline="236">org.jgap.impl.CompositeGeneTest.testToString_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1aa1d241338660b17f3e24c8630d6ea5b7" compoundref="_composite_gene_test_8java" startline="244" endline="248">org.jgap.impl.CompositeGeneTest.testToString_1</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a18ca33f66617e762ee657212866f6b7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.CompositeGene.isEmpty</definition>
+        <argsstring>()</argsstring>
+        <name>isEmpty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true: no genes contained, false otherwise</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="546" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="546" bodyend="548"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ab05429ae96ad205f88855f6dbe242638" compoundref="_composite_gene_8java" startline="450" endline="508">org.jgap.impl.CompositeGene.compareTo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1aa5c573b6b4343fe76163357c021e35ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+        <definition>Gene org.jgap.impl.CompositeGene.geneAt</definition>
+        <argsstring>(int a_index)</argsstring>
+        <name>geneAt</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_composite_gene_1adad062c4c8453eb4bfafd2d7c8abd1fb">geneAt</reimplements>
+        <param>
+          <type>int</type>
+          <declname>a_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index to return the gene at </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the gene at the given index</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="557" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="557" bodyend="559"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ab05429ae96ad205f88855f6dbe242638" compoundref="_composite_gene_8java" startline="450" endline="508">org.jgap.impl.CompositeGene.compareTo</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a2870d0e00136fa07477629ab04e91f96" compoundref="_composite_gene_8java" startline="592" endline="610">org.jgap.impl.CompositeGene.containsGeneByIdentity</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a153d4e31eb61c134167102ced3aea71e" compoundref="_composite_gene_8java" startline="677" endline="685">org.jgap.impl.CompositeGene.hashCode</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_1aa33da8cc4da351383f79ddaae90e988a" compoundref="_gaussian_mutation_operator_8java" startline="87" endline="147">org.jgap.impl.GaussianMutationOperator.operate</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a770487c7ce405ffc76c0c5ead65342ce" compoundref="_composite_gene_8java" startline="193" endline="207">org.jgap.impl.CompositeGene.removeGeneByIdentity</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1a3a8ec16032bc05ae64c6b38c177173fa" compoundref="_composite_gene_test_8java" startline="1151" endline="1170">org.jgap.impl.CompositeGeneTest.testGetGenes_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1a691e9d03e916efc556b423bce6956fc9" compoundref="_composite_gene_test_8java" startline="586" endline="639">org.jgap.impl.CompositeGeneTest.testPersistentPresentation_1</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ac8bb9bd8f19371c51a5231c6a1e9b4e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> &gt;</type>
+        <definition>List&lt;Gene&gt; org.jgap.impl.CompositeGene.getGenes</definition>
+        <argsstring>()</argsstring>
+        <name>getGenes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>list of genes contained in the <ref refid="classorg_1_1jgap_1_1impl_1_1_composite_gene" kindref="compound">CompositeGene</ref></para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="568" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="568" bodyend="570"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a20eb52e3e6e1966527dd8a7282660b2c" compoundref="_composite_gene_8java" startline="70">org.jgap.impl.CompositeGene.m_genes</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1a3a8ec16032bc05ae64c6b38c177173fa" compoundref="_composite_gene_test_8java" startline="1151" endline="1170">org.jgap.impl.CompositeGeneTest.testGetGenes_1</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ac6078356e9ce615740ab4e5fcd53b86a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.impl.CompositeGene.size</definition>
+        <argsstring>()</argsstring>
+        <name>size</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_gene_1a7a975e180dd0ac0fd33cdc182f64bea8">size</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the number of genes contained</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="578" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="578" bodyend="580"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a69244d0036ad5f7f05766a3341f21841" compoundref="_composite_gene_8java" startline="231" endline="238">org.jgap.impl.CompositeGene.cleanup</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ab05429ae96ad205f88855f6dbe242638" compoundref="_composite_gene_8java" startline="450" endline="508">org.jgap.impl.CompositeGene.compareTo</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a2870d0e00136fa07477629ab04e91f96" compoundref="_composite_gene_8java" startline="592" endline="610">org.jgap.impl.CompositeGene.containsGeneByIdentity</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a06d9f8415a3386a04b4eebc12850dbcf" compoundref="_composite_gene_8java" startline="367" endline="376">org.jgap.impl.CompositeGene.getAllele</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a153d4e31eb61c134167102ced3aea71e" compoundref="_composite_gene_8java" startline="677" endline="685">org.jgap.impl.CompositeGene.hashCode</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a770487c7ce405ffc76c0c5ead65342ce" compoundref="_composite_gene_8java" startline="193" endline="207">org.jgap.impl.CompositeGene.removeGeneByIdentity</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a41d0187fbd5adbcb7c3bfff7d76f1180" compoundref="_composite_gene_8java" startline="251" endline="261">org.jgap.impl.CompositeGene.setToRandomValue</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1ab696648cc690dbe1587e5a13da8017c3" compoundref="_composite_gene_test_8java" startline="91" endline="96">org.jgap.impl.CompositeGeneTest.testAddGene_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1a2b1bdeba5166eb54d879d42bd04b6d66" compoundref="_composite_gene_test_8java" startline="98" endline="117">org.jgap.impl.CompositeGeneTest.testAddGene_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1a41f10da19cc7dce4e445f1474c4b761f" compoundref="_composite_gene_test_8java" startline="125" endline="131">org.jgap.impl.CompositeGeneTest.testAddGene_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1a4f9ac7474b593f9202979d4b5841edc0" compoundref="_composite_gene_test_8java" startline="157" endline="162">org.jgap.impl.CompositeGeneTest.testAddGene_4</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1a6d87947e73b56641a1bd2b2eba3f9f6b" compoundref="_composite_gene_test_8java" startline="803" endline="821">org.jgap.impl.CompositeGeneTest.testCleanup_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1acb5416fec687f783255a0d027dafb326" compoundref="_composite_gene_test_8java" startline="830" endline="835">org.jgap.impl.CompositeGeneTest.testCleanup_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1a3a8ec16032bc05ae64c6b38c177173fa" compoundref="_composite_gene_test_8java" startline="1151" endline="1170">org.jgap.impl.CompositeGeneTest.testGetGenes_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1aa5f55acb3c2359884cff03e4cc517a59" compoundref="_composite_gene_test_8java" startline="647" endline="652">org.jgap.impl.CompositeGeneTest.testPersistentPresentation_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1a7534668b1dbc318d30106ab70f101d1b" compoundref="_composite_gene_test_8java" startline="746" endline="761">org.jgap.impl.CompositeGeneTest.testPersistentPresentation_7</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1afaaf2f9dc85977784184fff4e3ae22e4" compoundref="_composite_gene_test_8java" startline="785" endline="794">org.jgap.impl.CompositeGeneTest.testRemoveGeneByIdentity_1</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a2870d0e00136fa07477629ab04e91f96" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.CompositeGene.containsGeneByIdentity</definition>
+        <argsstring>(Gene gene)</argsstring>
+        <name>containsGeneByIdentity</name>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+          <declname>gene</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks whether a specific gene is already contained. The determination will be done by checking for identity and not using the equal method!</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the gene under test </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true: the given gene object is contained</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="592" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="592" bodyend="610"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1aa5c573b6b4343fe76163357c021e35ce" compoundref="_composite_gene_8java" startline="557" endline="559">org.jgap.impl.CompositeGene.geneAt</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ac6078356e9ce615740ab4e5fcd53b86a" compoundref="_composite_gene_8java" startline="578" endline="580">org.jgap.impl.CompositeGene.size</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ac8b7dd5b3d2fb4ade4e9d5c95ad4e719" compoundref="_composite_gene_8java" startline="154" endline="180">org.jgap.impl.CompositeGene.addGene</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a06e95c3f9f2d2d8784dc1ac0eaff49da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.CompositeGene.applyMutation</definition>
+        <argsstring>(int a_index, double a_percentage)</argsstring>
+        <name>applyMutation</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_gene_1af506b6e1d6ceb3e88e522da4c79adba4">applyMutation</reimplements>
+        <param>
+          <type>int</type>
+          <declname>a_index</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_percentage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Don&apos;t use this method, is makes no sense here. It is just there to satisfy the <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> interface. Instead, loop over all contained genes and call their applyMutation method. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>does not matter here </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_percentage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>does not matter here</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="622" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="622" bodyend="631"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a153d4e31eb61c134167102ced3aea71e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.impl.CompositeGene.hashCode</definition>
+        <argsstring>()</argsstring>
+        <name>hashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the hash code value for this <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>.</para><para><simplesect kind="return"><para>this <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>&apos;s hash code</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="677" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="677" bodyend="685"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1aa5c573b6b4343fe76163357c021e35ce" compoundref="_composite_gene_8java" startline="557" endline="559">org.jgap.impl.CompositeGene.geneAt</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ac6078356e9ce615740ab4e5fcd53b86a" compoundref="_composite_gene_8java" startline="578" endline="580">org.jgap.impl.CompositeGene.size</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1a16d92b95d6741115829f5ec4c21b854c" compoundref="_composite_gene_test_8java" startline="1120" endline="1135">org.jgap.impl.CompositeGeneTest.testHashCode_0</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a0e0046a81c4adb9ff4d444c37e092b30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String org.jgap.impl.CompositeGene.getBusinessKey</definition>
+        <argsstring>()</argsstring>
+        <name>getBusinessKey</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_business_key_1ab1b12087d8726e9020441a1fed6be0f8">getBusinessKey</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>business key</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="697" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="697" bodyend="715"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ab95ce27b4f68e0d22791bb4d82d6c0d5" compoundref="_composite_gene_8java" startline="60">org.jgap.impl.CompositeGene.GENE_DELIMITER_CLOSING</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1aedd0a6ff682d116a12aabf06b110922a" compoundref="_composite_gene_8java" startline="54">org.jgap.impl.CompositeGene.GENE_DELIMITER_HEADING</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a8bf4b223b9614799efa2ee90d36b0602" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+        <definition>Gene org.jgap.impl.CompositeGene.createGene</definition>
+        <argsstring>(String a_geneClassName, String a_persistentRepresentation)</argsstring>
+        <name>createGene</name>
+        <param>
+          <type>String</type>
+          <declname>a_geneClassName</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>a_persistentRepresentation</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a new instance of gene.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_geneClassName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the gene class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_persistentRepresentation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>persistent representation of the gene to create (could be obtained via getPersistentRepresentation)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>newly created gene </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="319" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="319" bodyend="327"/>
+        <references refid="classorg_1_1jgap_1_1_base_gene_1a32a316c9cc9e273bd75182cbdf188fb6" compoundref="_base_gene_8java" startline="409" endline="411">org.jgap.BaseGene.getConfiguration</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1abd62d1ccb9e0753b93d11a89fd055d0e" compoundref="_composite_gene_8java" startline="275" endline="305">org.jgap.impl.CompositeGene.setValueFromPersistentRepresentation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ab71f66feb3b88bb9bdcab5682abd4b03" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+        <definition>Gene org.jgap.impl.CompositeGene.newGeneInternal</definition>
+        <argsstring>()</argsstring>
+        <name>newGeneInternal</name>
+        <reimplements refid="classorg_1_1jgap_1_1_base_gene_1aa423e96ffac5a9589fb3a4fbda791b3c">newGeneInternal</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provides an implementation-independent means for creating new <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> instances.</para><para><simplesect kind="return"><para>a new <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> instance of the same type and with the same setup as this concrete <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="418" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="418" bodyend="433"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a564e6b2959bb4b0203cbcbda2fa0e75f" compoundref="_composite_gene_8java" startline="82" endline="85">org.jgap.impl.CompositeGene.CompositeGene</references>
+        <references refid="classorg_1_1jgap_1_1_base_gene_1a32a316c9cc9e273bd75182cbdf188fb6" compoundref="_base_gene_8java" startline="409" endline="411">org.jgap.BaseGene.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1_base_gene_1ae9823bef7c550fc1533afb8ab2b34d93" compoundref="_base_gene_8java" startline="370" endline="372">org.jgap.BaseGene.getConstraintChecker</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a20eb52e3e6e1966527dd8a7282660b2c" compoundref="_composite_gene_8java" startline="70">org.jgap.impl.CompositeGene.m_genes</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a9ee20f6169c0d441cdacb3685d5336f6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.impl.CompositeGene.getInternalValue</definition>
+        <argsstring>()</argsstring>
+        <name>getInternalValue</name>
+        <reimplements refid="classorg_1_1jgap_1_1_base_gene_1ad20da6b23ba524a95caa28f727c26dcd">getInternalValue</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is not called internally because <ref refid="classorg_1_1jgap_1_1_base_gene_1a35e754e8e217bdd26962e1c3c31d0169" kindref="member">BaseGene.getAllele()</ref> is overridden here! <simplesect kind="return"><para>always null </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="692" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="692" bodyend="694"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1a8ea542376be85fe399dc9bb41a8bc35c" compoundref="_composite_gene_test_8java" startline="1108" endline="1112">org.jgap.impl.CompositeGeneTest.testGetAllele_3</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a8a2fa0b4b68a8c06457d2b56166c56fd" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>final List</type>
+        <definition>static final List org.jgap.impl.CompositeGene.split</definition>
+        <argsstring>(String a_string)</argsstring>
+        <name>split</name>
+        <param>
+          <type>String</type>
+          <declname>a_string</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_unsupported_representation_exception" kindref="compound">UnsupportedRepresentationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Splits a_string into individual gene representations.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the string to split </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the elements of the returned array are the persistent representation strings of the gene&apos;s components </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_unsupported_representation_exception" kindref="compound">UnsupportedRepresentationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Audrius Meskauskas </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="644" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="644" bodyend="667"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ab95ce27b4f68e0d22791bb4d82d6c0d5" compoundref="_composite_gene_8java" startline="60">org.jgap.impl.CompositeGene.GENE_DELIMITER_CLOSING</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1aedd0a6ff682d116a12aabf06b110922a" compoundref="_composite_gene_8java" startline="54">org.jgap.impl.CompositeGene.GENE_DELIMITER_HEADING</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1abd62d1ccb9e0753b93d11a89fd055d0e" compoundref="_composite_gene_8java" startline="275" endline="305">org.jgap.impl.CompositeGene.setValueFromPersistentRepresentation</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Ordered container for multiple genes Has the same interface as a single gene and could be used accordingly. Use the <ref refid="interfaceorg_1_1jgap_1_1_i_composite_gene_1a28fc3a076dc6983c39108dc10751596d" kindref="member">addGene(Gene)</ref> method to add single genes (possibly CompositeGenes) after construction, an empty <ref refid="classorg_1_1jgap_1_1impl_1_1_composite_gene" kindref="compound">CompositeGene</ref> without genes makes no sense. Beware that there are two equalities defined for a <ref refid="classorg_1_1jgap_1_1impl_1_1_composite_gene" kindref="compound">CompositeGene</ref> in respect to its contained genes: a) Two genes are (only) equal if they are identical b) Two genes are (seen as) equal if their equals method returns true</para><para>This influences several methods such as addGene. Notice that it is safer to use addGene(a_gene, false) than addGene(a_gene, true) because the second variant only allows to add genes not seen as equal to already added genes in respect to their equals function. But: the equals function returns true for two different DoubleGenes (e.g.) just after their creation. If no specific (and hopefully different) allele is set for these DoubleGenes they are seen as equal!</para><para><simplesect kind="author"><para>Klaus Meffert </para><simplesectsep/><para>Audrius Meskauskas </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="11015">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="11017">
+        <label>org.jgap.ICompositeGene</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_composite_gene"/>
+        <childnode refid="11012" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11014">
+        <label>Serializable</label>
+      </node>
+      <node id="11013">
+        <label>Comparable</label>
+      </node>
+      <node id="11016">
+        <label>org.jgap.IBusinessKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_business_key"/>
+      </node>
+      <node id="11011">
+        <label>org.jgap.BaseGene</label>
+        <link refid="classorg_1_1jgap_1_1_base_gene"/>
+        <childnode refid="11012" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11016" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11012">
+        <label>org.jgap.Gene</label>
+        <link refid="interfaceorg_1_1jgap_1_1_gene"/>
+        <childnode refid="11013" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11014" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11015" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11018">
+        <label>org.jgap.IPersistentRepresentation</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_persistent_representation"/>
+      </node>
+      <node id="11010">
+        <label>org.jgap.impl.CompositeGene</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_composite_gene"/>
+        <childnode refid="11011" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11017" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11018" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11024">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="11039">
+        <label>List</label>
+      </node>
+      <node id="11038">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="11023" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11028" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11041">
+        <label>org.jgap.ICompositeGene</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_composite_gene"/>
+        <childnode refid="11021" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11035">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="11023" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11023">
+        <label>Serializable</label>
+      </node>
+      <node id="11022">
+        <label>Comparable</label>
+      </node>
+      <node id="11025">
+        <label>org.jgap.IBusinessKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_business_key"/>
+      </node>
+      <node id="11020">
+        <label>org.jgap.BaseGene</label>
+        <link refid="classorg_1_1jgap_1_1_base_gene"/>
+        <childnode refid="11021" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11025" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11026" relation="usage">
+          <edgelabel>m_configuration</edgelabel>
+        </childnode>
+        <childnode refid="11040" relation="usage">
+          <edgelabel>m_geneAlleleChecker</edgelabel>
+        </childnode>
+      </node>
+      <node id="11043">
+        <label>List&lt; org.jgap.Gene &gt;</label>
+      </node>
+      <node id="11028">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="11029" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11033">
+        <label>org.jgap.FitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_fitness_evaluator"/>
+        <childnode refid="11023" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11040">
+        <label>org.jgap.IGeneConstraintChecker</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_gene_constraint_checker"/>
+        <childnode refid="11023" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11036">
+        <label>org.jgap.BulkFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_bulk_fitness_function"/>
+        <childnode refid="11023" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11028" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11029">
+        <label>Cloneable</label>
+      </node>
+      <node id="11021">
+        <label>org.jgap.Gene</label>
+        <link refid="interfaceorg_1_1jgap_1_1_gene"/>
+        <childnode refid="11022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11023" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11024" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11042">
+        <label>org.jgap.IPersistentRepresentation</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_persistent_representation"/>
+      </node>
+      <node id="11031">
+        <label>org.jgap.IJGAPFactory</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_j_g_a_p_factory"/>
+        <childnode refid="11023" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11037">
+        <label>org.jgap.Configuration.ConfigurationConfigurable</label>
+        <link refid="classorg_1_1jgap_1_1_configuration_1_1_configuration_configurable"/>
+        <childnode refid="11023" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11030">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="11028" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11023" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11034">
+        <label>org.jgap.IChromosome</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome"/>
+        <childnode refid="11022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11028" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11023" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11024" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11019">
+        <label>org.jgap.impl.CompositeGene</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_composite_gene"/>
+        <childnode refid="11020" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11041" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11042" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11043" relation="usage">
+          <edgelabel>m_genes</edgelabel>
+        </childnode>
+        <childnode refid="11021" relation="usage">
+          <edgelabel>m_geneTypeAllowed</edgelabel>
+        </childnode>
+      </node>
+      <node id="11026">
+        <label>org.jgap.Configuration</label>
+        <link refid="classorg_1_1jgap_1_1_configuration"/>
+        <childnode refid="11027" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11023" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11028" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11030" relation="usage">
+          <edgelabel>m_breeder</edgelabel>
+        </childnode>
+        <childnode refid="11031" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="11032" relation="usage">
+          <edgelabel>m_chromosomePool</edgelabel>
+        </childnode>
+        <childnode refid="11033" relation="usage">
+          <edgelabel>m_fitnessEvaluator</edgelabel>
+        </childnode>
+        <childnode refid="11034" relation="usage">
+          <edgelabel>m_sampleChromosome</edgelabel>
+        </childnode>
+        <childnode refid="11035" relation="usage">
+          <edgelabel>m_randomGenerator</edgelabel>
+        </childnode>
+        <childnode refid="11036" relation="usage">
+          <edgelabel>m_bulkObjectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="11037" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="11038" relation="usage">
+          <edgelabel>m_objectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="11039" relation="usage">
+          <edgelabel>m_geneticOperators</edgelabel>
+        </childnode>
+      </node>
+      <node id="11032">
+        <label>org.jgap.IChromosomePool</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool"/>
+      </node>
+      <node id="11027">
+        <label>Configurable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" line="40" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CompositeGene.java" bodystart="38" bodyend="716"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ab452b46689654525e3df79bf1ca242f3" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>addGene</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ac8b7dd5b3d2fb4ade4e9d5c95ad4e719" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>addGene</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_composite_gene_1a28fc3a076dc6983c39108dc10751596d" prot="public" virt="non-virtual" ambiguityscope="org::jgap::ICompositeGene."><scope>org::jgap::impl::CompositeGene</scope><name>addGene</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a06e95c3f9f2d2d8784dc1ac0eaff49da" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>applyMutation</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1acea53de5bb68978322967e8019607f24" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>BaseGene</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a69244d0036ad5f7f05766a3341f21841" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>cleanup</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1a72fa365cdcc9f2eb399fb8346a0a511b" prot="protected" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>compareApplicationData</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ab05429ae96ad205f88855f6dbe242638" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>compareTo</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a564e6b2959bb4b0203cbcbda2fa0e75f" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>CompositeGene</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1af834b058b7ad9e396c761ca47eaa5192" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>CompositeGene</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a905c8f416472c504d93ba6a97fb17be6" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>CompositeGene</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a2870d0e00136fa07477629ab04e91f96" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>containsGeneByIdentity</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a8bf4b223b9614799efa2ee90d36b0602" prot="protected" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>createGene</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a9a4802f5b06ad58a96f1a40b60f836c6" prot="private" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1ae9277d0b77c1e8ca244687a8ab8cf42f" prot="protected" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>decode</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1a86edb3d2c29e5064305fabc2dd59a3b9" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>DELTA</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1a5e8fc72c1fccdb665113c0c34e3fa4b5" prot="protected" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>encode</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1a9fb0e302ae57ee3f2f5d1ee08a75bf43" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>equals</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ad2e0364fa1181ae5b7334a545864f96b" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>GENE_DELIMITER</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ab95ce27b4f68e0d22791bb4d82d6c0d5" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>GENE_DELIMITER_CLOSING</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1aedd0a6ff682d116a12aabf06b110922a" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>GENE_DELIMITER_HEADING</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1aa5c573b6b4343fe76163357c021e35ce" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>geneAt</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a06d9f8415a3386a04b4eebc12850dbcf" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>getAllele</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1a0520139dc694dc6034aeb631ae7d70bd" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>getApplicationData</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a0e0046a81c4adb9ff4d444c37e092b30" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>getBusinessKey</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1a32a316c9cc9e273bd75182cbdf188fb6" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>getConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1ae9823bef7c550fc1533afb8ab2b34d93" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>getConstraintChecker</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1a48f71c4c1282de2ca2cf8f4009c4615a" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>getEnergy</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ac8bb9bd8f19371c51a5231c6a1e9b4e9" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>getGenes</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1aabb760c92e6d5ae8c866c0bd41c6b6a3" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>getGeneTypeAllowed</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a9ee20f6169c0d441cdacb3685d5336f6" prot="protected" virt="virtual"><scope>org::jgap::impl::CompositeGene</scope><name>getInternalValue</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ad33dc860fffad1457c3f44a8b3b031f7" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>getPersistentRepresentation</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1ab53d562a62f5c72fc88c7e5315a23ed7" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>getUniqueID</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1ad3c210e440f2b542391db5a909fda3b7" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>getUniqueIDTemplate</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a153d4e31eb61c134167102ced3aea71e" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>hashCode</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1acd6431c06c81bc03b4abbe32e4d9d8ef" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>isCompareApplicationData</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a18ca33f66617e762ee657212866f6b7c" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>isEmpty</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a20eb52e3e6e1966527dd8a7282660b2c" prot="private" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>m_genes</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a490eb7a6c703d4f20bbbe4d25b78eea3" prot="private" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>m_geneTypeAllowed</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1a40f8f3d249145ad028892cd706ba9dae" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>newGene</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ab71f66feb3b88bb9bdcab5682abd4b03" prot="protected" virt="virtual"><scope>org::jgap::impl::CompositeGene</scope><name>newGeneInternal</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_gene_1ae49de1c9f46601f1b60d393a9ce3901a" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>PERSISTENT_FIELD_DELIMITER</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a9d45afd175bbbe529fdb5a51c5ac0945" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>removeGene</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a770487c7ce405ffc76c0c5ead65342ce" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>removeGeneByIdentity</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1acc4b1c46f3508b835bf95b9058eae3a0" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>S_APPLICATION_DATA</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a9e22ec1330a1b2009da1f587c299ed74" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>setAllele</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1afeb9a5f42018c057c8197fb0e7d57354" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>setApplicationData</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_gene_1ae8405395f244a18424794e8f2e36c608" prot="public" virt="non-virtual" ambiguityscope="org::jgap::Gene."><scope>org::jgap::impl::CompositeGene</scope><name>setApplicationData</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1adad4ccd46efd7b2a3dc81bd0ba0c410c" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>setCompareApplicationData</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_gene_1a404ee1527c7dab2f8115f18507d0544b" prot="public" virt="non-virtual" ambiguityscope="org::jgap::Gene."><scope>org::jgap::impl::CompositeGene</scope><name>setCompareApplicationData</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1a334db8a543f3008719d78ee219826b65" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>setConstraintChecker</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1afb39fbd8997971a140a9a4380ceecc4a" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>setEnergy</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_gene_1af5c429a29c338d2ad5d5514d5beea6e7" prot="public" virt="non-virtual" ambiguityscope="org::jgap::Gene."><scope>org::jgap::impl::CompositeGene</scope><name>setEnergy</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a41d0187fbd5adbcb7c3bfff7d76f1180" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>setToRandomValue</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_gene_1a4ef135da7549ee98139928e21adb841a" prot="public" virt="non-virtual" ambiguityscope="org::jgap::BaseGene."><scope>org::jgap::impl::CompositeGene</scope><name>setToRandomValue</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_gene_1aa7d9f1c3c2e727d496d66a85818c17d0" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>setUniqueIDTemplate</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1abd62d1ccb9e0753b93d11a89fd055d0e" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>setValueFromPersistentRepresentation</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ac6078356e9ce615740ab4e5fcd53b86a" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>size</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1a8a2fa0b4b68a8c06457d2b56166c56fd" prot="protected" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>split</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_1ad30baf0c08afe2bba30d25ada096d88a" prot="public" virt="non-virtual"><scope>org::jgap::impl::CompositeGene</scope><name>toString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

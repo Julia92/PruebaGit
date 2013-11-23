@@ -1,0 +1,490 @@
+\hypertarget{classexamples_1_1energy_1_1_coins_energy_fitness_function}{\section{examples.\-energy.\-Coins\-Energy\-Fitness\-Function Class Reference}
+\label{classexamples_1_1energy_1_1_coins_energy_fitness_function}\index{examples.\-energy.\-Coins\-Energy\-Fitness\-Function@{examples.\-energy.\-Coins\-Energy\-Fitness\-Function}}
+}
+
+
+Inheritance diagram for examples.\-energy.\-Coins\-Energy\-Fitness\-Function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classexamples_1_1energy_1_1_coins_energy_fitness_function__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for examples.\-energy.\-Coins\-Energy\-Fitness\-Function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classexamples_1_1energy_1_1_coins_energy_fitness_function__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classexamples_1_1energy_1_1_coins_energy_fitness_function_a758bc8c12c72af929451d1b836765fdf}{Coins\-Energy\-Fitness\-Function} (int a\-\_\-target\-Amount, double a\-\_\-max\-Weight)
+\item 
+double \hyperlink{classexamples_1_1energy_1_1_coins_energy_fitness_function_a647f56ab17e1de1ce724c104f960e375}{evaluate} (I\-Chromosome a\-\_\-subject)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classexamples_1_1energy_1_1_coins_energy_fitness_function_a39b14edc81ee46d55ba8eb8e4b49343a}{amount\-Of\-Change} (I\-Chromosome a\-\_\-potential\-Solution)
+\item 
+static int \hyperlink{classexamples_1_1energy_1_1_coins_energy_fitness_function_ad0c2f852bfec71e3bee9f5da0299d3ea}{get\-Number\-Of\-Coins\-At\-Gene} (I\-Chromosome a\-\_\-potential\-Solution, int a\-\_\-position)
+\item 
+static int \hyperlink{classexamples_1_1energy_1_1_coins_energy_fitness_function_a445c98a57b3e2c4e4077625d873753b2}{get\-Total\-Number\-Of\-Coins} (I\-Chromosome a\-\_\-potentialsolution)
+\item 
+static double \hyperlink{classexamples_1_1energy_1_1_coins_energy_fitness_function_a784078a27e79464d231c85eed97ae5f2}{get\-Total\-Weight} (I\-Chromosome a\-\_\-potential\-Solution)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{classexamples_1_1energy_1_1_coins_energy_fitness_function_ac02e8fa7435c47582e6afcd04dd49d89}{M\-A\-X\-\_\-\-B\-O\-U\-N\-D} = 10000
+\item 
+static final double \hyperlink{classexamples_1_1energy_1_1_coins_energy_fitness_function_a2dcea27142210c447f29ef1ffb12fed3}{M\-A\-X\-\_\-\-W\-E\-I\-G\-H\-T} = 500
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classexamples_1_1energy_1_1_coins_energy_fitness_function_a2524fcb067f71c157f796e4bca796fc4}{change\-Difference\-Bonus} (double a\-\_\-max\-Fitness, int a\-\_\-change\-Difference)
+\item 
+double \hyperlink{classexamples_1_1energy_1_1_coins_energy_fitness_function_acaae0bc3e2fc761477fec4ac4fa94037}{compute\-Coin\-Number\-Penalty} (double a\-\_\-max\-Fitness, int a\-\_\-coins)
+\item 
+double \hyperlink{classexamples_1_1energy_1_1_coins_energy_fitness_function_a4a1a52e10d8967624c31f70de102366c}{compute\-Weight\-Penalty} (double a\-\_\-max\-Fitness, double a\-\_\-weight)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final int \hyperlink{classexamples_1_1energy_1_1_coins_energy_fitness_function_afb63b58598f3772fa2f97c979879b281}{m\-\_\-target\-Amount}
+\item 
+final double \hyperlink{classexamples_1_1energy_1_1_coins_energy_fitness_function_a079206bf03780d52517c7407ced880fe}{m\-\_\-max\-Weight}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classexamples_1_1energy_1_1_coins_energy_fitness_function_a3389a0536829e5063a1e0a311a865396}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-5 \$\char`\"{}
+\item 
+static final double \hyperlink{classexamples_1_1energy_1_1_coins_energy_fitness_function_aa4488040e568b03f30ad220c4425e612}{Z\-E\-R\-O\-\_\-\-D\-I\-F\-F\-E\-R\-E\-N\-C\-E\-\_\-\-F\-I\-T\-N\-E\-S\-S} = Math.\-sqrt(\hyperlink{classexamples_1_1energy_1_1_coins_energy_fitness_function_ac02e8fa7435c47582e6afcd04dd49d89}{M\-A\-X\-\_\-\-B\-O\-U\-N\-D})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sample fitness function for the \hyperlink{classexamples_1_1energy_1_1_coins_energy}{Coins\-Energy} example. Adapted from \hyperlink{classexamples_1_1_minimizing_make_change_fitness_function}{examples.\-Minimizing\-Make\-Change\-Fitness\-Function}
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-4 
+\end{DoxySince}
+
+
+Definition at line 21 of file Coins\-Energy\-Fitness\-Function.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classexamples_1_1energy_1_1_coins_energy_fitness_function_a758bc8c12c72af929451d1b836765fdf}{\index{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}!Coins\-Energy\-Fitness\-Function@{Coins\-Energy\-Fitness\-Function}}
+\index{Coins\-Energy\-Fitness\-Function@{Coins\-Energy\-Fitness\-Function}!examples::energy::CoinsEnergyFitnessFunction@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}}
+\subsubsection[{Coins\-Energy\-Fitness\-Function}]{\setlength{\rightskip}{0pt plus 5cm}examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-Coins\-Energy\-Fitness\-Function (
+\begin{DoxyParamCaption}
+\item[{int}]{a\-\_\-target\-Amount, }
+\item[{double}]{a\-\_\-max\-Weight}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classexamples_1_1energy_1_1_coins_energy_fitness_function_a758bc8c12c72af929451d1b836765fdf}
+
+
+Definition at line 35 of file Coins\-Energy\-Fitness\-Function.\-java.
+
+
+
+References examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-m\-\_\-max\-Weight, examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-m\-\_\-target\-Amount, examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-M\-A\-X\-\_\-\-B\-O\-U\-N\-D, and examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-M\-A\-X\-\_\-\-W\-E\-I\-G\-H\-T.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classexamples_1_1energy_1_1_coins_energy_fitness_function_a39b14edc81ee46d55ba8eb8e4b49343a}{\index{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}!amount\-Of\-Change@{amount\-Of\-Change}}
+\index{amount\-Of\-Change@{amount\-Of\-Change}!examples::energy::CoinsEnergyFitnessFunction@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}}
+\subsubsection[{amount\-Of\-Change}]{\setlength{\rightskip}{0pt plus 5cm}static int examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-amount\-Of\-Change (
+\begin{DoxyParamCaption}
+\item[{I\-Chromosome}]{a\-\_\-potential\-Solution}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classexamples_1_1energy_1_1_coins_energy_fitness_function_a39b14edc81ee46d55ba8eb8e4b49343a}
+Calculates the total amount of change (in cents) represented by the given potential solution and returns that amount.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-potential\-Solution} & the potential solution to evaluate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the total amount of change (in cents) represented by the given solution
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 195 of file Coins\-Energy\-Fitness\-Function.\-java.
+
+
+
+References examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-get\-Number\-Of\-Coins\-At\-Gene().
+
+
+
+Referenced by examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-evaluate().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1energy_1_1_coins_energy_fitness_function_a39b14edc81ee46d55ba8eb8e4b49343a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classexamples_1_1energy_1_1_coins_energy_fitness_function_a2524fcb067f71c157f796e4bca796fc4}{\index{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}!change\-Difference\-Bonus@{change\-Difference\-Bonus}}
+\index{change\-Difference\-Bonus@{change\-Difference\-Bonus}!examples::energy::CoinsEnergyFitnessFunction@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}}
+\subsubsection[{change\-Difference\-Bonus}]{\setlength{\rightskip}{0pt plus 5cm}double examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-change\-Difference\-Bonus (
+\begin{DoxyParamCaption}
+\item[{double}]{a\-\_\-max\-Fitness, }
+\item[{int}]{a\-\_\-change\-Difference}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classexamples_1_1energy_1_1_coins_energy_fitness_function_a2524fcb067f71c157f796e4bca796fc4}
+Bonus calculation of fitness value. 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-max\-Fitness} & maximum fitness value appliable \\
+\hline
+{\em a\-\_\-change\-Difference} & change difference in coins for the coins problem \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bonus for given change difference 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-3 
+\end{DoxySince}
+
+
+Definition at line 145 of file Coins\-Energy\-Fitness\-Function.\-java.
+
+
+
+Referenced by examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-evaluate().
+
+\hypertarget{classexamples_1_1energy_1_1_coins_energy_fitness_function_acaae0bc3e2fc761477fec4ac4fa94037}{\index{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}!compute\-Coin\-Number\-Penalty@{compute\-Coin\-Number\-Penalty}}
+\index{compute\-Coin\-Number\-Penalty@{compute\-Coin\-Number\-Penalty}!examples::energy::CoinsEnergyFitnessFunction@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}}
+\subsubsection[{compute\-Coin\-Number\-Penalty}]{\setlength{\rightskip}{0pt plus 5cm}double examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-compute\-Coin\-Number\-Penalty (
+\begin{DoxyParamCaption}
+\item[{double}]{a\-\_\-max\-Fitness, }
+\item[{int}]{a\-\_\-coins}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classexamples_1_1energy_1_1_coins_energy_fitness_function_acaae0bc3e2fc761477fec4ac4fa94037}
+Calculates the penalty to apply to the fitness value based on the ammount of coins in the solution
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-max\-Fitness} & maximum fitness value allowed \\
+\hline
+{\em a\-\_\-coins} & number of coins in the solution \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+penalty for the fitness value base on the number of coins
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+John Serri 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-4 
+\end{DoxySince}
+
+
+Definition at line 168 of file Coins\-Energy\-Fitness\-Function.\-java.
+
+
+
+Referenced by examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-evaluate().
+
+\hypertarget{classexamples_1_1energy_1_1_coins_energy_fitness_function_a4a1a52e10d8967624c31f70de102366c}{\index{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}!compute\-Weight\-Penalty@{compute\-Weight\-Penalty}}
+\index{compute\-Weight\-Penalty@{compute\-Weight\-Penalty}!examples::energy::CoinsEnergyFitnessFunction@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}}
+\subsubsection[{compute\-Weight\-Penalty}]{\setlength{\rightskip}{0pt plus 5cm}double examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-compute\-Weight\-Penalty (
+\begin{DoxyParamCaption}
+\item[{double}]{a\-\_\-max\-Fitness, }
+\item[{double}]{a\-\_\-weight}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classexamples_1_1energy_1_1_coins_energy_fitness_function_a4a1a52e10d8967624c31f70de102366c}
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-max\-Fitness} & the maximum fitness value allowed \\
+\hline
+{\em a\-\_\-weight} & the coins weight of the current solution \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the penalty computed 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-4 
+\end{DoxySince}
+
+
+Definition at line 269 of file Coins\-Energy\-Fitness\-Function.\-java.
+
+
+
+Referenced by examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-evaluate().
+
+\hypertarget{classexamples_1_1energy_1_1_coins_energy_fitness_function_a647f56ab17e1de1ce724c104f960e375}{\index{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!examples::energy::CoinsEnergyFitnessFunction@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}}
+\subsubsection[{evaluate}]{\setlength{\rightskip}{0pt plus 5cm}double examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-evaluate (
+\begin{DoxyParamCaption}
+\item[{I\-Chromosome}]{a\-\_\-subject}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classexamples_1_1energy_1_1_coins_energy_fitness_function_a647f56ab17e1de1ce724c104f960e375}
+Determine the fitness of the given Chromosome instance. The higher the return value, the more fit the instance. This method should always return the same fitness value for two equivalent Chromosome instances.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-subject} & the Chromosome instance to evaluate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+positive double reflecting the fitness rating of the given Chromosome 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+2.\-0 (until 1.\-1\-: return type int) 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan, Klaus Meffert, John Serri 
+\end{DoxyAuthor}
+
+
+Definition at line 62 of file Coins\-Energy\-Fitness\-Function.\-java.
+
+
+
+References examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-amount\-Of\-Change(), examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-change\-Difference\-Bonus(), examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-compute\-Coin\-Number\-Penalty(), examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-compute\-Weight\-Penalty(), examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-get\-Total\-Number\-Of\-Coins(), examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-get\-Total\-Weight(), examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-m\-\_\-max\-Weight, examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-m\-\_\-target\-Amount, and examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-M\-A\-X\-\_\-\-B\-O\-U\-N\-D.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1energy_1_1_coins_energy_fitness_function_a647f56ab17e1de1ce724c104f960e375_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classexamples_1_1energy_1_1_coins_energy_fitness_function_ad0c2f852bfec71e3bee9f5da0299d3ea}{\index{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}!get\-Number\-Of\-Coins\-At\-Gene@{get\-Number\-Of\-Coins\-At\-Gene}}
+\index{get\-Number\-Of\-Coins\-At\-Gene@{get\-Number\-Of\-Coins\-At\-Gene}!examples::energy::CoinsEnergyFitnessFunction@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}}
+\subsubsection[{get\-Number\-Of\-Coins\-At\-Gene}]{\setlength{\rightskip}{0pt plus 5cm}static int examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-get\-Number\-Of\-Coins\-At\-Gene (
+\begin{DoxyParamCaption}
+\item[{I\-Chromosome}]{a\-\_\-potential\-Solution, }
+\item[{int}]{a\-\_\-position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classexamples_1_1energy_1_1_coins_energy_fitness_function_ad0c2f852bfec71e3bee9f5da0299d3ea}
+Retrieves the number of coins represented by the given potential solution at the given gene position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-potential\-Solution} & the potential solution to evaluate \\
+\hline
+{\em a\-\_\-position} & the gene position to evaluate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of coins represented by the potential solution at the given gene position
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 216 of file Coins\-Energy\-Fitness\-Function.\-java.
+
+
+
+Referenced by examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-amount\-Of\-Change(), examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-get\-Total\-Number\-Of\-Coins(), and examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-get\-Total\-Weight().
+
+\hypertarget{classexamples_1_1energy_1_1_coins_energy_fitness_function_a445c98a57b3e2c4e4077625d873753b2}{\index{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}!get\-Total\-Number\-Of\-Coins@{get\-Total\-Number\-Of\-Coins}}
+\index{get\-Total\-Number\-Of\-Coins@{get\-Total\-Number\-Of\-Coins}!examples::energy::CoinsEnergyFitnessFunction@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}}
+\subsubsection[{get\-Total\-Number\-Of\-Coins}]{\setlength{\rightskip}{0pt plus 5cm}static int examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-get\-Total\-Number\-Of\-Coins (
+\begin{DoxyParamCaption}
+\item[{I\-Chromosome}]{a\-\_\-potentialsolution}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classexamples_1_1energy_1_1_coins_energy_fitness_function_a445c98a57b3e2c4e4077625d873753b2}
+Returns the total number of coins represented by all of the genes in the given potential solution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-potentialsolution} & the potential solution to evaluate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+total number of coins represented by the given Chromosome
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-4 
+\end{DoxySince}
+
+
+Definition at line 233 of file Coins\-Energy\-Fitness\-Function.\-java.
+
+
+
+References examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-get\-Number\-Of\-Coins\-At\-Gene().
+
+
+
+Referenced by examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-evaluate(), and examples.\-energy.\-Coins\-Energy.\-make\-Change\-For\-Amount().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1energy_1_1_coins_energy_fitness_function_a445c98a57b3e2c4e4077625d873753b2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classexamples_1_1energy_1_1_coins_energy_fitness_function_a784078a27e79464d231c85eed97ae5f2}{\index{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}!get\-Total\-Weight@{get\-Total\-Weight}}
+\index{get\-Total\-Weight@{get\-Total\-Weight}!examples::energy::CoinsEnergyFitnessFunction@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}}
+\subsubsection[{get\-Total\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}static double examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-get\-Total\-Weight (
+\begin{DoxyParamCaption}
+\item[{I\-Chromosome}]{a\-\_\-potential\-Solution}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classexamples_1_1energy_1_1_coins_energy_fitness_function_a784078a27e79464d231c85eed97ae5f2}
+Returns the total weight of all coins.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-potential\-Solution} & the potential solution to evaluate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+total weight of all coins
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-4 
+\end{DoxySince}
+
+
+Definition at line 251 of file Coins\-Energy\-Fitness\-Function.\-java.
+
+
+
+References examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-get\-Number\-Of\-Coins\-At\-Gene().
+
+
+
+Referenced by examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-evaluate().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1energy_1_1_coins_energy_fitness_function_a784078a27e79464d231c85eed97ae5f2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classexamples_1_1energy_1_1_coins_energy_fitness_function_a3389a0536829e5063a1e0a311a865396}{\index{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!examples::energy::CoinsEnergyFitnessFunction@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-5 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classexamples_1_1energy_1_1_coins_energy_fitness_function_a3389a0536829e5063a1e0a311a865396}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 24 of file Coins\-Energy\-Fitness\-Function.\-java.
+
+\hypertarget{classexamples_1_1energy_1_1_coins_energy_fitness_function_a079206bf03780d52517c7407ced880fe}{\index{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}!m\-\_\-max\-Weight@{m\-\_\-max\-Weight}}
+\index{m\-\_\-max\-Weight@{m\-\_\-max\-Weight}!examples::energy::CoinsEnergyFitnessFunction@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}}
+\subsubsection[{m\-\_\-max\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}final double examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-m\-\_\-max\-Weight\hspace{0.3cm}{\ttfamily [private]}}}\label{classexamples_1_1energy_1_1_coins_energy_fitness_function_a079206bf03780d52517c7407ced880fe}
+
+
+Definition at line 28 of file Coins\-Energy\-Fitness\-Function.\-java.
+
+
+
+Referenced by examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-Coins\-Energy\-Fitness\-Function(), and examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-evaluate().
+
+\hypertarget{classexamples_1_1energy_1_1_coins_energy_fitness_function_afb63b58598f3772fa2f97c979879b281}{\index{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}!m\-\_\-target\-Amount@{m\-\_\-target\-Amount}}
+\index{m\-\_\-target\-Amount@{m\-\_\-target\-Amount}!examples::energy::CoinsEnergyFitnessFunction@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}}
+\subsubsection[{m\-\_\-target\-Amount}]{\setlength{\rightskip}{0pt plus 5cm}final int examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-m\-\_\-target\-Amount\hspace{0.3cm}{\ttfamily [private]}}}\label{classexamples_1_1energy_1_1_coins_energy_fitness_function_afb63b58598f3772fa2f97c979879b281}
+
+
+Definition at line 26 of file Coins\-Energy\-Fitness\-Function.\-java.
+
+
+
+Referenced by examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-Coins\-Energy\-Fitness\-Function(), and examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-evaluate().
+
+\hypertarget{classexamples_1_1energy_1_1_coins_energy_fitness_function_ac02e8fa7435c47582e6afcd04dd49d89}{\index{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}!M\-A\-X\-\_\-\-B\-O\-U\-N\-D@{M\-A\-X\-\_\-\-B\-O\-U\-N\-D}}
+\index{M\-A\-X\-\_\-\-B\-O\-U\-N\-D@{M\-A\-X\-\_\-\-B\-O\-U\-N\-D}!examples::energy::CoinsEnergyFitnessFunction@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}}
+\subsubsection[{M\-A\-X\-\_\-\-B\-O\-U\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}final int examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-M\-A\-X\-\_\-\-B\-O\-U\-N\-D = 10000\hspace{0.3cm}{\ttfamily [static]}}}\label{classexamples_1_1energy_1_1_coins_energy_fitness_function_ac02e8fa7435c47582e6afcd04dd49d89}
+
+
+Definition at line 30 of file Coins\-Energy\-Fitness\-Function.\-java.
+
+
+
+Referenced by examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-Coins\-Energy\-Fitness\-Function(), and examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-evaluate().
+
+\hypertarget{classexamples_1_1energy_1_1_coins_energy_fitness_function_a2dcea27142210c447f29ef1ffb12fed3}{\index{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}!M\-A\-X\-\_\-\-W\-E\-I\-G\-H\-T@{M\-A\-X\-\_\-\-W\-E\-I\-G\-H\-T}}
+\index{M\-A\-X\-\_\-\-W\-E\-I\-G\-H\-T@{M\-A\-X\-\_\-\-W\-E\-I\-G\-H\-T}!examples::energy::CoinsEnergyFitnessFunction@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}}
+\subsubsection[{M\-A\-X\-\_\-\-W\-E\-I\-G\-H\-T}]{\setlength{\rightskip}{0pt plus 5cm}final double examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-M\-A\-X\-\_\-\-W\-E\-I\-G\-H\-T = 500\hspace{0.3cm}{\ttfamily [static]}}}\label{classexamples_1_1energy_1_1_coins_energy_fitness_function_a2dcea27142210c447f29ef1ffb12fed3}
+
+
+Definition at line 31 of file Coins\-Energy\-Fitness\-Function.\-java.
+
+
+
+Referenced by examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-Coins\-Energy\-Fitness\-Function().
+
+\hypertarget{classexamples_1_1energy_1_1_coins_energy_fitness_function_aa4488040e568b03f30ad220c4425e612}{\index{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}!Z\-E\-R\-O\-\_\-\-D\-I\-F\-F\-E\-R\-E\-N\-C\-E\-\_\-\-F\-I\-T\-N\-E\-S\-S@{Z\-E\-R\-O\-\_\-\-D\-I\-F\-F\-E\-R\-E\-N\-C\-E\-\_\-\-F\-I\-T\-N\-E\-S\-S}}
+\index{Z\-E\-R\-O\-\_\-\-D\-I\-F\-F\-E\-R\-E\-N\-C\-E\-\_\-\-F\-I\-T\-N\-E\-S\-S@{Z\-E\-R\-O\-\_\-\-D\-I\-F\-F\-E\-R\-E\-N\-C\-E\-\_\-\-F\-I\-T\-N\-E\-S\-S}!examples::energy::CoinsEnergyFitnessFunction@{examples\-::energy\-::\-Coins\-Energy\-Fitness\-Function}}
+\subsubsection[{Z\-E\-R\-O\-\_\-\-D\-I\-F\-F\-E\-R\-E\-N\-C\-E\-\_\-\-F\-I\-T\-N\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}final double examples.\-energy.\-Coins\-Energy\-Fitness\-Function.\-Z\-E\-R\-O\-\_\-\-D\-I\-F\-F\-E\-R\-E\-N\-C\-E\-\_\-\-F\-I\-T\-N\-E\-S\-S = Math.\-sqrt({\bf M\-A\-X\-\_\-\-B\-O\-U\-N\-D})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classexamples_1_1energy_1_1_coins_energy_fitness_function_aa4488040e568b03f30ad220c4425e612}
+
+
+Definition at line 33 of file Coins\-Energy\-Fitness\-Function.\-java.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/examples/src/examples/energy/\hyperlink{_coins_energy_fitness_function_8java}{Coins\-Energy\-Fitness\-Function.\-java}\end{DoxyCompactItemize}

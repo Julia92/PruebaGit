@@ -1,0 +1,153 @@
+\hypertarget{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler}{\section{org.\-jgap.\-data.\-config.\-Configuration\-Handler Interface Reference}
+\label{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler}\index{org.\-jgap.\-data.\-config.\-Configuration\-Handler@{org.\-jgap.\-data.\-config.\-Configuration\-Handler}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-data.\-config.\-Configuration\-Handler\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler_a37c99182a454a723a40dba5da3a0b569}{get\-Name} ()
+\item 
+List \hyperlink{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler_afab2c248c1508f4c5aff07476d14535c}{get\-Config\-Properties} ()
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler_a36e474a6166d082c375cf521e0174804}{read\-Config} ()  throws Config\-Exception, Invalid\-Configuration\-Exception
+\item 
+String \hyperlink{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler_a2ecd95a1925db767c89f887b3e585b04}{get\-N\-S} ()
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler_a831ec614e3a75bb8c8ef395877d21178}{set\-Configurable} (\hyperlink{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configurable}{Configurable} a\-\_\-configurable)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler_a36c79d84ace5cb07b47732b1ca361e91}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-5 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The interface for the G\-U\-I to retrieve the information about what a \hyperlink{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configurable}{Configurable} looks like and how it must be rendered.
+
+\begin{DoxyAuthor}{Author}
+Siddhartha Azad 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-3 
+\end{DoxySince}
+
+
+Definition at line 22 of file Configuration\-Handler.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler_afab2c248c1508f4c5aff07476d14535c}{\index{org\-::jgap\-::data\-::config\-::\-Configuration\-Handler@{org\-::jgap\-::data\-::config\-::\-Configuration\-Handler}!get\-Config\-Properties@{get\-Config\-Properties}}
+\index{get\-Config\-Properties@{get\-Config\-Properties}!org::jgap::data::config::ConfigurationHandler@{org\-::jgap\-::data\-::config\-::\-Configuration\-Handler}}
+\subsubsection[{get\-Config\-Properties}]{\setlength{\rightskip}{0pt plus 5cm}List org.\-jgap.\-data.\-config.\-Configuration\-Handler.\-get\-Config\-Properties (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler_afab2c248c1508f4c5aff07476d14535c}
+Return the information to generate the G\-U\-I for configuring this class. \begin{DoxyReturn}{Returns}
+a list of \hyperlink{classorg_1_1jgap_1_1data_1_1config_1_1_config_property}{Config\-Property} objects 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1data_1_1config_1_1_root_configuration_handler_a2ba39a7530f7b00ad252c18a4a7c13c3}{org.\-jgap.\-data.\-config.\-Root\-Configuration\-Handler}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler_a37c99182a454a723a40dba5da3a0b569}{\index{org\-::jgap\-::data\-::config\-::\-Configuration\-Handler@{org\-::jgap\-::data\-::config\-::\-Configuration\-Handler}!get\-Name@{get\-Name}}
+\index{get\-Name@{get\-Name}!org::jgap::data::config::ConfigurationHandler@{org\-::jgap\-::data\-::config\-::\-Configuration\-Handler}}
+\subsubsection[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-jgap.\-data.\-config.\-Configuration\-Handler.\-get\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler_a37c99182a454a723a40dba5da3a0b569}
+Return the name of this \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} Object to be used in the properties file. \begin{DoxyReturn}{Returns}
+name of this config Object (name of what you are configuring) 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1data_1_1config_1_1_root_configuration_handler_aae8e13674f79c02665def867f95f633f}{org.\-jgap.\-data.\-config.\-Root\-Configuration\-Handler}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler_a2ecd95a1925db767c89f887b3e585b04}{\index{org\-::jgap\-::data\-::config\-::\-Configuration\-Handler@{org\-::jgap\-::data\-::config\-::\-Configuration\-Handler}!get\-N\-S@{get\-N\-S}}
+\index{get\-N\-S@{get\-N\-S}!org::jgap::data::config::ConfigurationHandler@{org\-::jgap\-::data\-::config\-::\-Configuration\-Handler}}
+\subsubsection[{get\-N\-S}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-jgap.\-data.\-config.\-Configuration\-Handler.\-get\-N\-S (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler_a2ecd95a1925db767c89f887b3e585b04}
+Get the namespace to be used in the config file for the \hyperlink{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configurable}{Configurable} this \hyperlink{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler}{Configuration\-Handler} belongs to. \begin{DoxyReturn}{Returns}
+namepsace of the \hyperlink{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configurable}{Configurable}
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Siddhartha Azad 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-3 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1data_1_1config_1_1_root_configuration_handler_a3c79d1f7c1ccc36e27fe9f82a04c40f9}{org.\-jgap.\-data.\-config.\-Root\-Configuration\-Handler}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler_a36e474a6166d082c375cf521e0174804}{\index{org\-::jgap\-::data\-::config\-::\-Configuration\-Handler@{org\-::jgap\-::data\-::config\-::\-Configuration\-Handler}!read\-Config@{read\-Config}}
+\index{read\-Config@{read\-Config}!org::jgap::data::config::ConfigurationHandler@{org\-::jgap\-::data\-::config\-::\-Configuration\-Handler}}
+\subsubsection[{read\-Config}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-data.\-config.\-Configuration\-Handler.\-read\-Config (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws {\bf Config\-Exception}, {\bf Invalid\-Configuration\-Exception}}}\label{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler_a36e474a6166d082c375cf521e0174804}
+Method that will populate a \hyperlink{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configurable}{Configurable} with the properties in the config file.
+
+\begin{DoxyAuthor}{Author}
+Siddhartha Azad 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-3 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1data_1_1config_1_1_root_configuration_handler_ade997372877bd63adeac47f2ebde995a}{org.\-jgap.\-data.\-config.\-Root\-Configuration\-Handler}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler_a831ec614e3a75bb8c8ef395877d21178}{\index{org\-::jgap\-::data\-::config\-::\-Configuration\-Handler@{org\-::jgap\-::data\-::config\-::\-Configuration\-Handler}!set\-Configurable@{set\-Configurable}}
+\index{set\-Configurable@{set\-Configurable}!org::jgap::data::config::ConfigurationHandler@{org\-::jgap\-::data\-::config\-::\-Configuration\-Handler}}
+\subsubsection[{set\-Configurable}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-data.\-config.\-Configuration\-Handler.\-set\-Configurable (
+\begin{DoxyParamCaption}
+\item[{{\bf Configurable}}]{a\-\_\-configurable}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler_a831ec614e3a75bb8c8ef395877d21178}
+Set the \hyperlink{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configurable}{Configurable} to which this \hyperlink{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler}{Configuration\-Handler} belongs. 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-configurable} & The \hyperlink{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configurable}{Configurable} to which this \hyperlink{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler}{Configuration\-Handler} belongs.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Siddhartha Azad 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-3 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1data_1_1config_1_1_root_configuration_handler_a953d5e716d1029b3cdefed4f271ffa9a}{org.\-jgap.\-data.\-config.\-Root\-Configuration\-Handler}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler_a36c79d84ace5cb07b47732b1ca361e91}{\index{org\-::jgap\-::data\-::config\-::\-Configuration\-Handler@{org\-::jgap\-::data\-::config\-::\-Configuration\-Handler}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::data::config::ConfigurationHandler@{org\-::jgap\-::data\-::config\-::\-Configuration\-Handler}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-data.\-config.\-Configuration\-Handler.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-5 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{interfaceorg_1_1jgap_1_1data_1_1config_1_1_configuration_handler_a36c79d84ace5cb07b47732b1ca361e91}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 24 of file Configuration\-Handler.\-java.
+
+
+
+The documentation for this interface was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/data/config/\hyperlink{_configuration_handler_8java}{Configuration\-Handler.\-java}\end{DoxyCompactItemize}

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="_date_kit_8java" kind="file">
+    <compoundname>DateKit.java</compoundname>
+    <innerclass refid="classorg_1_1jgap_1_1util_1_1_date_kit" prot="public">org::jgap::util::DateKit</innerclass>
+    <innernamespace refid="namespaceorg_1_1jgap_1_1util">org::jgap::util</innernamespace>
+    <innernamespace refid="namespacejava_1_1text_1_1">java::text::</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>JGAP.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>JGAP<sp/>offers<sp/>a<sp/>dual<sp/>license<sp/>model<sp/>containing<sp/>the<sp/>LGPL<sp/>as<sp/>well<sp/>as<sp/>the<sp/>MPL.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>For<sp/>licensing<sp/>information<sp/>please<sp/>see<sp/>the<sp/>file<sp/>license.txt<sp/>included<sp/>with<sp/>JGAP</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>or<sp/>have<sp/>a<sp/>look<sp/>at<sp/>the<sp/>top<sp/>of<sp/>class<sp/>org.jgap.Chromosome<sp/>which<sp/>representatively</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>includes<sp/>the<sp/>JGAP<sp/>license<sp/>policy<sp/>applicable<sp/>for<sp/>any<sp/>file<sp/>delivered<sp/>with<sp/>JGAP.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">org.jgap.util;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.text.*;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.*;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classorg_1_1jgap_1_1util_1_1_date_kit" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classorg_1_1jgap_1_1util_1_1_date_kit" kindref="compound">DateKit</ref><sp/>{</highlight></codeline>
+<codeline lineno="23" refid="classorg_1_1jgap_1_1util_1_1_date_kit_1acdc1e2e0a7f960fdfb9506c34068112b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classorg_1_1jgap_1_1util_1_1_date_kit_1acdc1e2e0a7f960fdfb9506c34068112b" kindref="member">CVS_REVISION</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$Revision:<sp/>1.4<sp/>$&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="classorg_1_1jgap_1_1util_1_1_date_kit_1a2bbecbcb52fcdd64f65e3776361163b5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>Calendar<sp/><ref refid="classorg_1_1jgap_1_1util_1_1_date_kit_1a2bbecbcb52fcdd64f65e3776361163b5" kindref="member">m_cal</ref><sp/>=<sp/>Calendar.getInstance();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classorg_1_1jgap_1_1util_1_1_date_kit_1ab54ce445a14668d8045a3952f2293622" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classorg_1_1jgap_1_1util_1_1_date_kit_1ab54ce445a14668d8045a3952f2293622" kindref="member">DATEFORMAT_FULL_0</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;yyyyMMddHHmmssSSS&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28" refid="classorg_1_1jgap_1_1util_1_1_date_kit_1a65db97cf5c49ed0c7716d09621f3e0c3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classorg_1_1jgap_1_1util_1_1_date_kit_1a65db97cf5c49ed0c7716d09621f3e0c3" kindref="member">DATEFORMAT_FULL_1</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;yyyy/MM/dd<sp/>HH:mm:ss:SSS&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29" refid="classorg_1_1jgap_1_1util_1_1_date_kit_1af6ae28529731d6ab17dd2899f35a52a6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classorg_1_1jgap_1_1util_1_1_date_kit_1af6ae28529731d6ab17dd2899f35a52a6" kindref="member">DATEFORMAT_NORMAL</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;yyyy/MM/dd&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classorg_1_1jgap_1_1util_1_1_date_kit_1abd728fab6e51025cd5adb0823ecd7186" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SimpleDateFormat<sp/><ref refid="classorg_1_1jgap_1_1util_1_1_date_kit_1abd728fab6e51025cd5adb0823ecd7186" kindref="member">m_sdfNow</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SimpleDateFormat(<ref refid="classorg_1_1jgap_1_1util_1_1_date_kit_1ab54ce445a14668d8045a3952f2293622" kindref="member">DATEFORMAT_FULL_0</ref>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classorg_1_1jgap_1_1util_1_1_date_kit_1a97e98a68f3fdd21c2839de2de65b1f56" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SimpleDateFormat<sp/><ref refid="classorg_1_1jgap_1_1util_1_1_date_kit_1a97e98a68f3fdd21c2839de2de65b1f56" kindref="member">m_sdfToday</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SimpleDateFormat(</highlight><highlight class="stringliteral">&quot;yyyyMMdd&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classorg_1_1jgap_1_1util_1_1_date_kit_1a56347c8fe3d5dcaf5567249c7a509f7e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classorg_1_1jgap_1_1util_1_1_date_kit_1a56347c8fe3d5dcaf5567249c7a509f7e" kindref="member">getNowAsString</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_sdfNow.format(m_cal.getTime());</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="classorg_1_1jgap_1_1util_1_1_date_kit_1a22c7fec9a17d3afe548f7d3e9a1a755e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classorg_1_1jgap_1_1util_1_1_date_kit_1a22c7fec9a17d3afe548f7d3e9a1a755e" kindref="member">getTodayAsString</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_sdfToday.format(m_cal.getTime());</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classorg_1_1jgap_1_1util_1_1_date_kit_1a81991a20ddb5678e1a0ea05d0f1e12e1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classorg_1_1jgap_1_1util_1_1_date_kit_1a81991a20ddb5678e1a0ea05d0f1e12e1" kindref="member">dateToString</ref>(Date<sp/>a_date,<sp/>String<sp/>a_dateFormat)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>SimpleDateFormat<sp/>sdf<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SimpleDateFormat(a_dateFormat);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sdf.format(a_date);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="classorg_1_1jgap_1_1util_1_1_date_kit_1ac8b5fe618846f967af7f726e23ef9f0e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>Date<sp/><ref refid="classorg_1_1jgap_1_1util_1_1_date_kit_1ac8b5fe618846f967af7f726e23ef9f0e" kindref="member">now</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Date();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/DateKit.java"/>
+  </compounddef>
+</doxygen>

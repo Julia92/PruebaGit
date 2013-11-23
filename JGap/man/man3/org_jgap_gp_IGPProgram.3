@@ -1,0 +1,576 @@
+.TH "org.jgap.gp.IGPProgram" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.IGPProgram \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable, Comparable, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Inherited by \fBorg\&.jgap\&.gp\&.GPProgramBase\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBexecute_int\fP (int a_chromosomeNum, Object[] a_args)"
+.br
+.ti -1c
+.RI "float \fBexecute_float\fP (int a_chromosomeNum, Object[] a_args)"
+.br
+.ti -1c
+.RI "double \fBexecute_double\fP (int a_chromosomeNum, Object[] a_args)"
+.br
+.ti -1c
+.RI "boolean \fBexecute_boolean\fP (int a_chromosomeNum, Object[] a_args)"
+.br
+.ti -1c
+.RI "Object \fBexecute_object\fP (int a_chromosomeNum, Object[] a_args)"
+.br
+.ti -1c
+.RI "void \fBexecute_void\fP (int a_chromosomeNum, Object[] a_args)"
+.br
+.ti -1c
+.RI "int \fBsize\fP ()"
+.br
+.ti -1c
+.RI "ProgramChromosome \fBgetChromosome\fP (int a_index)"
+.br
+.ti -1c
+.RI "double \fBgetFitnessValue\fP ()"
+.br
+.ti -1c
+.RI "String \fBtoStringNorm\fP (int a_startNode)"
+.br
+.ti -1c
+.RI "void \fBsetChromosome\fP (int a_index, ProgramChromosome a_chrom)"
+.br
+.ti -1c
+.RI "int \fBgetCommandOfClass\fP (int a_chromosomeNum, Class a_class)"
+.br
+.ti -1c
+.RI "void \fBsetFitnessValue\fP (double a_fitness)"
+.br
+.ti -1c
+.RI "void \fBsetTypes\fP (Class[] a_types)"
+.br
+.ti -1c
+.RI "Class[] \fBgetTypes\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetArgTypes\fP (Class[][] a_argTypes)"
+.br
+.ti -1c
+.RI "Class[][] \fBgetArgTypes\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetNodeSets\fP (\fBCommandGene\fP[][] a_nodeSets)"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP[][] \fBgetNodeSets\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMaxDepths\fP (int[] a_maxDepths)"
+.br
+.ti -1c
+.RI "int[] \fBgetMaxDepths\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMinDepths\fP (int[] a_minDepths)"
+.br
+.ti -1c
+.RI "int[] \fBgetMinDepths\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMaxNodes\fP (int a_maxNodes)"
+.br
+.ti -1c
+.RI "int \fBgetMaxNodes\fP ()"
+.br
+.ti -1c
+.RI "GPConfiguration \fBgetGPConfiguration\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetApplicationData\fP (Object a_data)"
+.br
+.ti -1c
+.RI "Object \fBgetApplicationData\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetPersistentRepresentation\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.14 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Interface for GP programs\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file IGPProgram\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "boolean org\&.jgap\&.gp\&.IGPProgram\&.execute_boolean (inta_chromosomeNum, Object[]a_args)"
+Executes the given chromosome as a boolean function\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomeNum\fP the index of the chromosome to execute 
+.br
+\fIa_args\fP the arguments to use 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the boolean return value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.impl\&.GPProgram\fP\&.
+.SS "double org\&.jgap\&.gp\&.IGPProgram\&.execute_double (inta_chromosomeNum, Object[]a_args)"
+Executes the given chromosome as a double function\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomeNum\fP the index of the chromosome to execute 
+.br
+\fIa_args\fP the arguments to use 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the double return value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.impl\&.GPProgram\fP\&.
+.SS "float org\&.jgap\&.gp\&.IGPProgram\&.execute_float (inta_chromosomeNum, Object[]a_args)"
+Executes the given chromosome as a float function\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomeNum\fP the index of the chromosome to execute 
+.br
+\fIa_args\fP the arguments to use 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the floar return value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.impl\&.GPProgram\fP\&.
+.SS "int org\&.jgap\&.gp\&.IGPProgram\&.execute_int (inta_chromosomeNum, Object[]a_args)"
+Executes the given chromosome as an integer function\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomeNum\fP the index of the chromosome to execute 
+.br
+\fIa_args\fP the arguments to use 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the integer return value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.impl\&.GPProgram\fP\&.
+.SS "Object org\&.jgap\&.gp\&.IGPProgram\&.execute_object (inta_chromosomeNum, Object[]a_args)"
+Executes the given chromosome as an object function\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomeNum\fP the index of the chromosome to execute 
+.br
+\fIa_args\fP the arguments to use 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the object return value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.impl\&.GPProgram\fP\&.
+.SS "void org\&.jgap\&.gp\&.IGPProgram\&.execute_void (inta_chromosomeNum, Object[]a_args)"
+Executes the given chromosome as an object function\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomeNum\fP the index of the chromosome to execute 
+.br
+\fIa_args\fP the arguments to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.impl\&.GPProgram\fP\&.
+.SS "Object org\&.jgap\&.gp\&.IGPProgram\&.getApplicationData ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the application data object set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.GPProgramBase\fP\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.main(), and examples\&.gp\&.monalisa\&.gui\&.EvolutionRunnable\&.run()\&.
+.SS "Class [][] org\&.jgap\&.gp\&.IGPProgram\&.getArgTypes ()"
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.GPProgramBase\fP\&.
+.SS "ProgramChromosome org\&.jgap\&.gp\&.IGPProgram\&.getChromosome (inta_index)"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the chromosome to get 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the ProgramChromosome with the given index
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.impl\&.GPProgram\fP\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.operate(), and org\&.jgap\&.gp\&.impl\&.GPGenotypeTest\&.testRandomInitialize_0()\&.
+.SS "int org\&.jgap\&.gp\&.IGPProgram\&.getCommandOfClass (inta_chromosomeNum, Classa_class)"
+Searches for a chromosome that has the given class and returns its index\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomeNum\fP the index of the chromosome to start the search with 
+.br
+\fIa_class\fP the class to find 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the index of the first chromosome found that is of a_class, or -1
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.impl\&.GPProgram\fP\&.
+.SS "double org\&.jgap\&.gp\&.IGPProgram\&.getFitnessValue ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+fitness value of this program
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.GPProgramBase\fP\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getFittestProgram(), org\&.jgap\&.gp\&.impl\&.DeltaGPFitnessEvaluator\&.isFitter(), examples\&.gp\&.monalisa\&.gui\&.EvolutionRunnable\&.run(), examples\&.gp\&.island\&.IslandGPThread\&.run(), and examples\&.gp\&.island\&.IslandGPExample\&.start()\&.
+.SS "GPConfiguration org\&.jgap\&.gp\&.IGPProgram\&.getGPConfiguration ()"
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.GPProgramBase\fP\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.checkErroneousProg(), and examples\&.gp\&.Fibonacci\&.FormulaFitnessFunction\&.computeRawFitness()\&.
+.SS "int [] org\&.jgap\&.gp\&.IGPProgram\&.getMaxDepths ()"
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.GPProgramBase\fP\&.
+.SS "int org\&.jgap\&.gp\&.IGPProgram\&.getMaxNodes ()"
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.GPProgramBase\fP\&.
+.SS "int [] org\&.jgap\&.gp\&.IGPProgram\&.getMinDepths ()"
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.GPProgramBase\fP\&.
+.SS "\fBCommandGene\fP [][] org\&.jgap\&.gp\&.IGPProgram\&.getNodeSets ()"
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.GPProgramBase\fP\&.
+.SS "String org\&.jgap\&.gp\&.IGPProgram\&.getPersistentRepresentation ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the persistent representation of the population, including all GP programs
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.impl\&.GPProgram\fP\&.
+.SS "Class [] org\&.jgap\&.gp\&.IGPProgram\&.getTypes ()"
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.GPProgramBase\fP\&.
+.SS "void org\&.jgap\&.gp\&.IGPProgram\&.setApplicationData (Objecta_data)"
+Sets the application data object\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_data\fP the object to set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.GPProgramBase\fP\&.
+.SS "void org\&.jgap\&.gp\&.IGPProgram\&.setArgTypes (Classa_argTypes[][])"
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.GPProgramBase\fP\&.
+.SS "void org\&.jgap\&.gp\&.IGPProgram\&.setChromosome (inta_index, ProgramChromosomea_chrom)"
+Sets the given chromosome at the given index\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the index to the the chromosome at 
+.br
+\fIa_chrom\fP the chromosome to set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.SS "void org\&.jgap\&.gp\&.IGPProgram\&.setFitnessValue (doublea_fitness)"
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.GPProgramBase\fP\&.
+.SS "void org\&.jgap\&.gp\&.IGPProgram\&.setMaxDepths (int[]a_maxDepths)"
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.GPProgramBase\fP\&.
+.SS "void org\&.jgap\&.gp\&.IGPProgram\&.setMaxNodes (inta_maxNodes)"
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.GPProgramBase\fP\&.
+.SS "void org\&.jgap\&.gp\&.IGPProgram\&.setMinDepths (int[]a_minDepths)"
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.GPProgramBase\fP\&.
+.SS "void org\&.jgap\&.gp\&.IGPProgram\&.setNodeSets (\fBCommandGene\fPa_nodeSets[][])"
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.GPProgramBase\fP\&.
+.SS "void org\&.jgap\&.gp\&.IGPProgram\&.setTypes (Class[]a_types)"
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.GPProgramBase\fP\&.
+.SS "int org\&.jgap\&.gp\&.IGPProgram\&.size ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the number of chromosomes in the program
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.impl\&.GPProgram\fP\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotypeTest\&.computeFitness(), examples\&.gp\&.Fibonacci\&.FormulaFitnessFunction\&.computeRawFitness(), examples\&.gp\&.tictactoe\&.TicTacToeMain\&.GameFitnessFunction\&.computeRawFitness(), org\&.jgap\&.gp\&.function\&.ADF\&.getArity(), and org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.operate()\&.
+.SS "String org\&.jgap\&.gp\&.IGPProgram\&.toStringNorm (inta_startNode)"
+Builds a string that represents the normalized output of the GP program\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_startNode\fP the node to start with 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+textual output in normalized notion
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.impl\&.GPProgram\fP\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.calcFitness(), examples\&.gp\&.island\&.IslandGPThread\&.outputBestSolution(), and examples\&.gp\&.island\&.IslandGPExample\&.start()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.IGPProgram\&.CVS_REVISION = '$Revision: 1\&.14 $'\fC [static]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file IGPProgram\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

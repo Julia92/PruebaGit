@@ -1,0 +1,86 @@
+.TH "org.jgap.distr.grid.IRequestSplitStrategy" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.grid.IRequestSplitStrategy \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable\&.
+.PP
+Inherited by \fBorg\&.jgap\&.distr\&.grid\&.SampleSplitStrategy\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBJGAPRequest\fP[] \fBsplit\fP (\fBJGAPRequest\fP a_request)  throws Exception"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.2 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Interface for a strategy how to split a work request into parts\&. Each part will be sent to a worker as an individual work request\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file IRequestSplitStrategy\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBJGAPRequest\fP [] org\&.jgap\&.distr\&.grid\&.IRequestSplitStrategy\&.split (\fBJGAPRequest\fPa_request) throws Exception"
+Creates single requests to be sent to workers\&. This is done by splitting a single request into several parts\&. Each parts is sort of a modified clone of the original (super) request
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_request\fP the request to split 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+single requests to be computed by workers 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.distr\&.grid\&.SampleSplitStrategy\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.grid\&.IRequestSplitStrategy\&.CVS_REVISION = '$Revision: 1\&.2 $'\fC [static]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file IRequestSplitStrategy\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

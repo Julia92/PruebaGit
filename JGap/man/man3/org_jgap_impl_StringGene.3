@@ -1,0 +1,743 @@
+.TH "org.jgap.impl.StringGene" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.StringGene \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.BaseGene\fP, \fBorg\&.jgap\&.IPersistentRepresentation\fP, and \fBorg\&.jgap\&.IBusinessKey\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStringGene\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBStringGene\fP (final \fBConfiguration\fP a_config)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBStringGene\fP (final \fBConfiguration\fP a_config, final int a_minLength, final int a_maxLength)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBStringGene\fP (final \fBConfiguration\fP a_config, final int a_minLength, final int a_maxLength, final String a_alphabet)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBsetToRandomValue\fP (final \fBRandomGenerator\fP a_numberGenerator)"
+.br
+.ti -1c
+.RI "void \fBsetValueFromPersistentRepresentation\fP (final String a_representation)  throws UnsupportedRepresentationException "
+.br
+.ti -1c
+.RI "String \fBgetPersistentRepresentation\fP ()  throws UnsupportedOperationException "
+.br
+.ti -1c
+.RI "String \fBgetBusinessKey\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetAllele\fP (final Object a_newValue)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "int \fBsize\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetMaxLength\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetMinLength\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMinLength\fP (int \fBm_minLength\fP)"
+.br
+.ti -1c
+.RI "void \fBsetMaxLength\fP (int \fBm_maxLength\fP)"
+.br
+.ti -1c
+.RI "String \fBgetAlphabet\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetAlphabet\fP (String a_alphabet)"
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "String \fBstringValue\fP ()"
+.br
+.ti -1c
+.RI "void \fBapplyMutation\fP (int index, double a_percentage)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBALPHABET_CHARACTERS_UPPER\fP"
+.br
+.ti -1c
+.RI "static final String \fBALPHABET_CHARACTERS_LOWER\fP"
+.br
+.ti -1c
+.RI "static final String \fBALPHABET_CHARACTERS_DIGITS\fP = '0123456789'"
+.br
+.ti -1c
+.RI "static final String \fBALPHABET_CHARACTERS_SPECIAL\fP = '+\&.*/\\\\,;@'"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGene\fP \fBnewGeneInternal\fP ()"
+.br
+.ti -1c
+.RI "Object \fBgetInternalValue\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "boolean \fBisValidAlphabet\fP (String a_value, String a_alphabet)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBm_minLength\fP"
+.br
+.ti -1c
+.RI "int \fBm_maxLength\fP"
+.br
+.ti -1c
+.RI "String \fBm_alphabet\fP"
+.br
+.ti -1c
+.RI "String \fBm_value\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.58 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A \fBGene\fP implementation that supports a string for its allele\&. The valid alphabet as well as the minimum and maximum length of the string can be specified\&.
+.PP
+An alphabet == null indicates that all characters are seen as valid\&.
+.br
+ An alphabet == '' indicates that no character is seen to be valid\&.
+.PP
+Partly copied from \fBIntegerGene\fP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.PP
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file StringGene\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.StringGene\&.StringGene () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Default constructor, sets minimum and maximum length to arbitrary\&. You need to set the valid alphabet later!
+.PP
+Do not use this constructor with a sample chromosome set in the configuration\&.
+.PP
+Attention: The configuration used is the one set with the static method Genotype\&.setConfiguration\&. 
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 66 of file StringGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.StringGene\&.compareTo(), and org\&.jgap\&.impl\&.StringGene\&.newGeneInternal()\&.
+.SS "org\&.jgap\&.impl\&.StringGene\&.StringGene (final \fBConfiguration\fPa_config) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Default constructor, sets minimum and maximum length to arbitrary\&. You need to set the valid alphabet later!
+.PP
+Do not use this constructor with a sample chromosome set in the configuration\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 83 of file StringGene\&.java\&.
+.SS "org\&.jgap\&.impl\&.StringGene\&.StringGene (final \fBConfiguration\fPa_config, final inta_minLength, final inta_maxLength) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructor, allows to specify minimum and maximum lengths of the string held by this gene\&. You need to set the valid alphabet later!
+.PP
+Do not use this constructor with a sample chromosome set in the configuration\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.br
+\fIa_minLength\fP minimum valid length of allele 
+.br
+\fIa_maxLength\fP maximum valid length of allele 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 102 of file StringGene\&.java\&.
+.SS "org\&.jgap\&.impl\&.StringGene\&.StringGene (final \fBConfiguration\fPa_config, final inta_minLength, final inta_maxLength, final Stringa_alphabet) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructor, allows to specify minimum and maximum lengths of the string held by this gene, as well as the valid alphabet\&. This constructor can be used to construct a sample chromosome with a configuration\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.br
+\fIa_minLength\fP minimum valid length of an allele 
+.br
+\fIa_maxLength\fP maximum valid length of an allele 
+.br
+\fIa_alphabet\fP valid alphabet for an allele 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 122 of file StringGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.StringGene\&.m_maxLength, org\&.jgap\&.impl\&.StringGene\&.m_minLength, and org\&.jgap\&.impl\&.StringGene\&.setAlphabet()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.impl\&.StringGene\&.applyMutation (intindex, doublea_percentage)\fC [inline]\fP"
+Applies a mutation of a given intensity (percentage) onto the atomic element at given index (NumberGenes only have one atomic element)\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIindex\fP index of atomic element, between 0 and \fBsize()\fP-1 
+.br
+\fIa_percentage\fP percentage of mutation (greater than -1 and smaller than 1)\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 568 of file StringGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getConfiguration(), org\&.jgap\&.impl\&.StringGene\&.m_alphabet, org\&.jgap\&.impl\&.StringGene\&.setAllele(), and org\&.jgap\&.impl\&.StringGene\&.stringValue()\&.
+.SS "int org\&.jgap\&.impl\&.StringGene\&.compareTo (Objecta_other)\fC [inline]\fP"
+Compares this \fBStringGene\fP with the specified object (which must also be a \fBStringGene\fP) for order, which is determined by the String value of this \fBGene\fP compared to the one provided for comparison\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the \fBStringGene\fP to be compared to this \fBStringGene\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a negative int, zero, or a positive int as this object is less than, equal to, or greater than the object provided for comparison
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIClassCastException\fP if the specified object's type prevents it from being compared to this \fBStringGene\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 409 of file StringGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.compareApplicationData(), org\&.jgap\&.BaseGene\&.getApplicationData(), org\&.jgap\&.BaseGene\&.isCompareApplicationData(), org\&.jgap\&.impl\&.StringGene\&.m_value, and org\&.jgap\&.impl\&.StringGene\&.StringGene()\&.
+.SS "String org\&.jgap\&.impl\&.StringGene\&.getAlphabet ()\fC [inline]\fP"
+
+.PP
+Definition at line 472 of file StringGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.StringGene\&.m_alphabet\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.StringGeneTest\&.testConstruct_0(), org\&.jgap\&.impl\&.StringGeneTest\&.testPersistentRepresentation_5(), org\&.jgap\&.impl\&.StringGeneTest\&.testPersistentRepresentation_5_2(), and org\&.jgap\&.impl\&.StringGeneTest\&.testSetAlphabet_1()\&.
+.SS "String org\&.jgap\&.impl\&.StringGene\&.getBusinessKey ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+business key
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IBusinessKey\fP\&.
+.PP
+Definition at line 331 of file StringGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.StringGene\&.m_maxLength, org\&.jgap\&.impl\&.StringGene\&.m_minLength, org\&.jgap\&.impl\&.StringGene\&.m_value, and org\&.jgap\&.Gene\&.PERSISTENT_FIELD_DELIMITER\&.
+.SS "Object org\&.jgap\&.impl\&.StringGene\&.getInternalValue ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Each \fBGene\fP implementation holds its own m_value object keeping the allele value\&. In your \fBGene\fP implementation, just return it with this method (see \fBorg\&.jgap\&.impl\&.BooleanGene\fP for example) 
+.PP
+\fBReturns:\fP
+.RS 4
+the m_value object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Definition at line 616 of file StringGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.StringGene\&.m_value\&.
+.SS "int org\&.jgap\&.impl\&.StringGene\&.getMaxLength ()\fC [inline]\fP"
+
+.PP
+Definition at line 456 of file StringGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.StringGene\&.m_maxLength\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.StringGeneTest\&.testConstruct_0(), and org\&.jgap\&.impl\&.StringGeneTest\&.testSetMinMaxLength_0()\&.
+.SS "int org\&.jgap\&.impl\&.StringGene\&.getMinLength ()\fC [inline]\fP"
+
+.PP
+Definition at line 460 of file StringGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.StringGene\&.m_minLength\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.StringGeneTest\&.testConstruct_0(), and org\&.jgap\&.impl\&.StringGeneTest\&.testSetMinMaxLength_0()\&.
+.SS "String org\&.jgap\&.impl\&.StringGene\&.getPersistentRepresentation () throws UnsupportedOperationException\fC [inline]\fP"
+Retrieves a string representation of this \fBGene\fP that includes any information required to reconstruct it at a later time, such as its value and internal state\&. This string will be used to represent this \fBGene\fP in XML persistence\&. This is an optional method but, if not implemented, XML persistence and possibly other features will not be available\&. An UnsupportedOperationException should be thrown if no implementation is provided\&.
+.PP
+\fBReturns:\fP
+.RS 4
+string representation of this \fBGene\fP's current state 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP to indicate that no implementation is provided for this method
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.PP
+Definition at line 306 of file StringGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.encode(), org\&.jgap\&.impl\&.StringGene\&.m_alphabet, org\&.jgap\&.impl\&.StringGene\&.m_maxLength, org\&.jgap\&.impl\&.StringGene\&.m_minLength, org\&.jgap\&.impl\&.StringGene\&.m_value, and org\&.jgap\&.Gene\&.PERSISTENT_FIELD_DELIMITER\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.StringGeneTest\&.testPersistentRepresentation_7(), and org\&.jgap\&.impl\&.StringGeneTest\&.testPersistentRepresentation_9()\&.
+.SS "boolean org\&.jgap\&.impl\&.StringGene\&.isValidAlphabet (Stringa_value, Stringa_alphabet)\fC [inline]\fP, \fC [private]\fP"
+Checks whether a string value is valid concerning a given alphabet\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_value\fP the value to check 
+.br
+\fIa_alphabet\fP the valid alphabet to check against 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: given string value is valid
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 535 of file StringGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.StringGene\&.setAllele(), and org\&.jgap\&.impl\&.StringGene\&.setValueFromPersistentRepresentation()\&.
+.SS "\fBGene\fP org\&.jgap\&.impl\&.StringGene\&.newGeneInternal ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Provides an implementation-independent means for creating new \fBGene\fP instances\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a new \fBGene\fP instance of the same type and with the same setup as this concrete \fBGene\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Definition at line 383 of file StringGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getConfiguration(), org\&.jgap\&.BaseGene\&.getConstraintChecker(), org\&.jgap\&.impl\&.StringGene\&.m_alphabet, org\&.jgap\&.impl\&.StringGene\&.m_maxLength, org\&.jgap\&.impl\&.StringGene\&.m_minLength, and org\&.jgap\&.impl\&.StringGene\&.StringGene()\&.
+.SS "void org\&.jgap\&.impl\&.StringGene\&.setAllele (final Objecta_newValue)\fC [inline]\fP"
+Sets the value (allele) of this \fBGene\fP to the new given value\&. This class expects the value to be a String instance\&. If the value is shorter or longer than the minimum or maximum length or any character is not within the valid alphabet an exception is thrown\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_newValue\fP the new value of this \fBGene\fP instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 347 of file StringGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getConstraintChecker(), org\&.jgap\&.impl\&.StringGene\&.isValidAlphabet(), org\&.jgap\&.impl\&.StringGene\&.m_alphabet, org\&.jgap\&.impl\&.StringGene\&.m_maxLength, org\&.jgap\&.impl\&.StringGene\&.m_minLength, and org\&.jgap\&.impl\&.StringGene\&.m_value\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.StringGene\&.applyMutation(), and org\&.jgap\&.impl\&.StringGene\&.setToRandomValue()\&.
+.SS "void org\&.jgap\&.impl\&.StringGene\&.setAlphabet (Stringa_alphabet)\fC [inline]\fP"
+Sets the valid alphabet of the \fBStringGene\fP\&. The caller needs to care that there are no doublettes in the alphabet\&. Otherwise there is no guarantee for correct functioning of the class! 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_alphabet\fP valid alphabet for allele
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 485 of file StringGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.StringGene\&.m_alphabet\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.StringGene\&.StringGene()\&.
+.SS "void org\&.jgap\&.impl\&.StringGene\&.setMaxLength (intm_maxLength)\fC [inline]\fP"
+
+.PP
+Definition at line 468 of file StringGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.StringGene\&.m_maxLength\&.
+.SS "void org\&.jgap\&.impl\&.StringGene\&.setMinLength (intm_minLength)\fC [inline]\fP"
+
+.PP
+Definition at line 464 of file StringGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.StringGene\&.m_minLength\&.
+.SS "void org\&.jgap\&.impl\&.StringGene\&.setToRandomValue (final \fBRandomGenerator\fPa_numberGenerator)\fC [inline]\fP"
+Sets the value (allele) of this \fBGene\fP to a random String according to the valid alphabet and boundaries of length\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_numberGenerator\fP the random number generator that should be used to create any random values\&. It's important to use this generator to maintain the user's flexibility to configure the genetic engine to use the random number generator of their choice
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 153 of file StringGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.StringGene\&.m_alphabet, org\&.jgap\&.impl\&.StringGene\&.m_maxLength, org\&.jgap\&.impl\&.StringGene\&.m_minLength, and org\&.jgap\&.impl\&.StringGene\&.setAllele()\&.
+.SS "void org\&.jgap\&.impl\&.StringGene\&.setValueFromPersistentRepresentation (final Stringa_representation) throws \fBUnsupportedRepresentationException\fP\fC [inline]\fP"
+Sets the value and internal state of this \fBGene\fP from the string representation returned by a previous invocation of the \fBgetPersistentRepresentation()\fP method\&. This is an optional method but, if not implemented, XML persistence and possibly other features will not be available\&. An UnsupportedOperationException should be thrown if no implementation is provided\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_representation\fP the string representation retrieved from a prior call to the \fBgetPersistentRepresentation()\fP method
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBUnsupportedRepresentationException\fP\fP if this \fBGene\fP implementation does not support the given string representation
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 205 of file StringGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.decode(), org\&.jgap\&.impl\&.StringGene\&.isValidAlphabet(), org\&.jgap\&.impl\&.StringGene\&.m_alphabet, org\&.jgap\&.impl\&.StringGene\&.m_maxLength, org\&.jgap\&.impl\&.StringGene\&.m_minLength, org\&.jgap\&.impl\&.StringGene\&.m_value, and org\&.jgap\&.Gene\&.PERSISTENT_FIELD_DELIMITER\&.
+.SS "int org\&.jgap\&.impl\&.StringGene\&.size ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the size of the gene, i\&.e the number of atomic elements\&. Always 1 for numbers
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 452 of file StringGene\&.java\&.
+.SS "String org\&.jgap\&.impl\&.StringGene\&.stringValue ()\fC [inline]\fP"
+Retrieves the String value of this \fBGene\fP, which may be more convenient in some cases than the more general \fBgetAllele()\fP method\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the String value of this \fBGene\fP
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 522 of file StringGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.StringGene\&.m_value\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.StringGene\&.applyMutation(), org\&.jgap\&.impl\&.StringGeneTest\&.testSetAllele_5(), and org\&.jgap\&.impl\&.StringGeneTest\&.testSetAllele_6()\&.
+.SS "String org\&.jgap\&.impl\&.StringGene\&.toString ()\fC [inline]\fP"
+Retrieves a string representation of this \fBStringGene\fP's value that may be useful for display purposes\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a string representation of this \fBStringGene\fP's value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 498 of file StringGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.StringGene\&.m_value\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.StringGeneTest\&.testToString_1(), and org\&.jgap\&.impl\&.StringGeneTest\&.testToString_2()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.StringGene\&.ALPHABET_CHARACTERS_DIGITS = '0123456789'\fC [static]\fP"
+
+.PP
+Definition at line 36 of file StringGene\&.java\&.
+.SS "final String org\&.jgap\&.impl\&.StringGene\&.ALPHABET_CHARACTERS_LOWER\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+      "abcdefghijklmnopqrstuvwxyz"
+.fi
+.PP
+Definition at line 33 of file StringGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.StringGeneTest\&.testApplyMutation_4(), org\&.jgap\&.impl\&.StringGeneTest\&.testApplyMutation_5(), and org\&.jgap\&.impl\&.StringGeneTest\&.testSetToRandomValue_5()\&.
+.SS "final String org\&.jgap\&.impl\&.StringGene\&.ALPHABET_CHARACTERS_SPECIAL = '+\&.*/\\\\,;@'\fC [static]\fP"
+
+.PP
+Definition at line 38 of file StringGene\&.java\&.
+.SS "final String org\&.jgap\&.impl\&.StringGene\&.ALPHABET_CHARACTERS_UPPER\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+.fi
+.PP
+Definition at line 30 of file StringGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGenePersistentReprTest\&.createSampleNestedGene(), org\&.jgap\&.impl\&.StringGeneTest\&.testSetToRandomValue_0(), and org\&.jgap\&.impl\&.StringGeneTest\&.testSetToRandomValue_1()\&.
+.SS "final String org\&.jgap\&.impl\&.StringGene\&.CVS_REVISION = '$Revision: 1\&.58 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 41 of file StringGene\&.java\&.
+.SS "String org\&.jgap\&.impl\&.StringGene\&.m_alphabet\fC [private]\fP"
+
+.PP
+Definition at line 47 of file StringGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.StringGene\&.applyMutation(), org\&.jgap\&.impl\&.StringGene\&.getAlphabet(), org\&.jgap\&.impl\&.StringGene\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.StringGene\&.newGeneInternal(), org\&.jgap\&.impl\&.StringGene\&.setAllele(), org\&.jgap\&.impl\&.StringGene\&.setAlphabet(), org\&.jgap\&.impl\&.StringGene\&.setToRandomValue(), and org\&.jgap\&.impl\&.StringGene\&.setValueFromPersistentRepresentation()\&.
+.SS "int org\&.jgap\&.impl\&.StringGene\&.m_maxLength\fC [private]\fP"
+
+.PP
+Definition at line 45 of file StringGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.StringGene\&.getBusinessKey(), org\&.jgap\&.impl\&.StringGene\&.getMaxLength(), org\&.jgap\&.impl\&.StringGene\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.StringGene\&.newGeneInternal(), org\&.jgap\&.impl\&.StringGene\&.setAllele(), org\&.jgap\&.impl\&.StringGene\&.setMaxLength(), org\&.jgap\&.impl\&.StringGene\&.setToRandomValue(), org\&.jgap\&.impl\&.StringGene\&.setValueFromPersistentRepresentation(), and org\&.jgap\&.impl\&.StringGene\&.StringGene()\&.
+.SS "int org\&.jgap\&.impl\&.StringGene\&.m_minLength\fC [private]\fP"
+
+.PP
+Definition at line 43 of file StringGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.StringGene\&.getBusinessKey(), org\&.jgap\&.impl\&.StringGene\&.getMinLength(), org\&.jgap\&.impl\&.StringGene\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.StringGene\&.newGeneInternal(), org\&.jgap\&.impl\&.StringGene\&.setAllele(), org\&.jgap\&.impl\&.StringGene\&.setMinLength(), org\&.jgap\&.impl\&.StringGene\&.setToRandomValue(), org\&.jgap\&.impl\&.StringGene\&.setValueFromPersistentRepresentation(), and org\&.jgap\&.impl\&.StringGene\&.StringGene()\&.
+.SS "String org\&.jgap\&.impl\&.StringGene\&.m_value\fC [private]\fP"
+References the internal String value (allele) of this \fBGene\fP\&. 
+.PP
+Definition at line 52 of file StringGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.StringGene\&.compareTo(), org\&.jgap\&.impl\&.StringGene\&.getBusinessKey(), org\&.jgap\&.impl\&.StringGene\&.getInternalValue(), org\&.jgap\&.impl\&.StringGene\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.StringGene\&.setAllele(), org\&.jgap\&.impl\&.StringGene\&.setValueFromPersistentRepresentation(), org\&.jgap\&.impl\&.StringGene\&.stringValue(), and org\&.jgap\&.impl\&.StringGene\&.toString()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

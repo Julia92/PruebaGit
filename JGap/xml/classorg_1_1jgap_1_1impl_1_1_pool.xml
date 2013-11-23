@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1impl_1_1_pool" kind="class" prot="public">
+    <compoundname>org::jgap::impl::Pool</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_pool_1ab7440c6f3b541e84d9c1ea60dd2c4bd6" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.impl.Pool.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.9 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/Pool.java" line="35" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/Pool.java" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_pool_1ab6b1b9c3817ac388078aabcd0cf2206f" prot="private" static="no" mutable="no">
+        <type>List</type>
+        <definition>List org.jgap.impl.Pool.m_pooledObjects</definition>
+        <argsstring></argsstring>
+        <name>m_pooledObjects</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The objects currently in the pool. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/Pool.java" line="40" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/Pool.java" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_pool_1a84ab7ce249536f638b0ec873f47cd72a" compoundref="_pool_8java" startline="64" endline="76">org.jgap.impl.Pool.acquirePooledObject</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_pool_1a6a98590fd1c845e1b4c41941f6febf8c" compoundref="_pool_8java" startline="48" endline="50">org.jgap.impl.Pool.Pool</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_pool_1a6a98590fd1c845e1b4c41941f6febf8c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.Pool.Pool</definition>
+        <argsstring>()</argsstring>
+        <name>Pool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/Pool.java" line="48" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/Pool.java" bodystart="48" bodyend="50"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_pool_1ab6b1b9c3817ac388078aabcd0cf2206f" compoundref="_pool_8java" startline="40">org.jgap.impl.Pool.m_pooledObjects</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_pool_1a84ab7ce249536f638b0ec873f47cd72a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized Object</type>
+        <definition>synchronized Object org.jgap.impl.Pool.acquirePooledObject</definition>
+        <argsstring>()</argsstring>
+        <name>acquirePooledObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Attempts to acquire an Object instance from the pool. It should be noted that no cleanup or re-initialization occurs on these objects, so it&apos;s up to the caller to reset the state of the returned Object if that&apos;s desirable.</para><para><simplesect kind="return"><para>an Object instance from the pool or null if no Object instances are available in the pool</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/Pool.java" line="64" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/Pool.java" bodystart="64" bodyend="76"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_pool_1ab6b1b9c3817ac388078aabcd0cf2206f" compoundref="_pool_8java" startline="40">org.jgap.impl.Pool.m_pooledObjects</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a9159512255d11e69543387cd3a155a31" compoundref="_weighted_roulette_selector_8java" startline="106" endline="140">org.jgap.impl.WeightedRouletteSelector.add</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_pool_test_1acf00e4ecbd3231d57cd0a8b87abc5c48" compoundref="_pool_test_8java" startline="60" endline="69">org.jgap.impl.PoolTest.testAcquirePooledObject_0</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_pool_1a7b979b8c659166d5e01b985698074cb0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized void</type>
+        <definition>synchronized void org.jgap.impl.Pool.releaseObject</definition>
+        <argsstring>(final Object a_objectToPool)</argsstring>
+        <name>releaseObject</name>
+        <param>
+          <type>final Object</type>
+          <declname>a_objectToPool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Releases an object to the pool. It&apos;s not required that the Object originated from the pool - any Object can be released to it.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_objectToPool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Object instance to be released into the pool</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/Pool.java" line="87" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/Pool.java" bodystart="87" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_pool_1a1006cf50190e8be37fe21e3030b46060" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized void</type>
+        <definition>synchronized void org.jgap.impl.Pool.releaseAllObjects</definition>
+        <argsstring>(final Collection a_objectsToPool)</argsstring>
+        <name>releaseAllObjects</name>
+        <param>
+          <type>final Collection</type>
+          <declname>a_objectsToPool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Releases a Collection of objects to the pool. It&apos;s not required that the objects in the Collection originated from the pool - any objects can be released to it.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_objectsToPool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Collection of objects to release into the pool</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/Pool.java" line="101" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/Pool.java" bodystart="101" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_pool_1a22f44a20fa8f6867604a9c2d39fbc16a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized int</type>
+        <definition>synchronized int org.jgap.impl.Pool.size</definition>
+        <argsstring>()</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the number of objects currently available in this pool.</para><para><simplesect kind="return"><para>the number of objects in this pool</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/Pool.java" line="115" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/Pool.java" bodystart="115" bodyend="117"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_pool_test_1acf00e4ecbd3231d57cd0a8b87abc5c48" compoundref="_pool_test_8java" startline="60" endline="69">org.jgap.impl.PoolTest.testAcquirePooledObject_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_pool_test_1a327d6771ab328cd4d1604e10d657fcd8" compoundref="_pool_test_8java" startline="44" endline="55">org.jgap.impl.PoolTest.testClear_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_pool_test_1a1393c00755c3ecbba36ddadcdc4d7491" compoundref="_pool_test_8java" startline="74" endline="78">org.jgap.impl.PoolTest.testReleaseAllObjects_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_pool_test_1ad24da82ff2bd91d23706924d19432b71" compoundref="_pool_test_8java" startline="83" endline="93">org.jgap.impl.PoolTest.testReleaseAllObjects_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_pool_test_1ac33ee46af53597bc4c26ab46f0c32748" compoundref="_pool_test_8java" startline="98" endline="101">org.jgap.impl.PoolTest.testSize_0</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_pool_1abdd9e34abe2f0f485bc2b364b0fab9b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized void</type>
+        <definition>synchronized void org.jgap.impl.Pool.clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Empties out this pool of all objects.</para><para><simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/Pool.java" line="125" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/Pool.java" bodystart="125" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A simple, generic pool class that can be used to pool any kind of object. Objects can be released to this pool, either individually or as a Collection, and then later acquired again. It is not necessary for an object to have been originally acquired from the pool in order for it to be released to the pool. If there are no objects present in the pool, an attempt to acquire one will return null. The number of objects available in the pool can be determined with the <ref refid="classorg_1_1jgap_1_1impl_1_1_pool_1a22f44a20fa8f6867604a9c2d39fbc16a" kindref="member">size()</ref> method. Finally, it should be noted that the pool does not attempt to perform any kind of cleanup or re-initialization on the objects to restore them to some clean state when they are released to the pool; it&apos;s up to the user to reset any necessary state in the object prior to the release call (or just after the acquire call).</para><para><simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="16872">
+        <label>org.jgap.impl.Pool</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_pool"/>
+        <childnode refid="16873" relation="usage">
+          <edgelabel>m_pooledObjects</edgelabel>
+        </childnode>
+      </node>
+      <node id="16873">
+        <label>List</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/Pool.java" line="32" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/Pool.java" bodystart="32" bodyend="128"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_pool_1a84ab7ce249536f638b0ec873f47cd72a" prot="public" virt="non-virtual"><scope>org::jgap::impl::Pool</scope><name>acquirePooledObject</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_pool_1abdd9e34abe2f0f485bc2b364b0fab9b6" prot="public" virt="non-virtual"><scope>org::jgap::impl::Pool</scope><name>clear</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_pool_1ab7440c6f3b541e84d9c1ea60dd2c4bd6" prot="private" virt="non-virtual"><scope>org::jgap::impl::Pool</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_pool_1ab6b1b9c3817ac388078aabcd0cf2206f" prot="private" virt="non-virtual"><scope>org::jgap::impl::Pool</scope><name>m_pooledObjects</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_pool_1a6a98590fd1c845e1b4c41941f6febf8c" prot="public" virt="non-virtual"><scope>org::jgap::impl::Pool</scope><name>Pool</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_pool_1a1006cf50190e8be37fe21e3030b46060" prot="public" virt="non-virtual"><scope>org::jgap::impl::Pool</scope><name>releaseAllObjects</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_pool_1a7b979b8c659166d5e01b985698074cb0" prot="public" virt="non-virtual"><scope>org::jgap::impl::Pool</scope><name>releaseObject</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_pool_1a22f44a20fa8f6867604a9c2d39fbc16a" prot="public" virt="non-virtual"><scope>org::jgap::impl::Pool</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

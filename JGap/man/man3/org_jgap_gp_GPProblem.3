@@ -1,0 +1,288 @@
+.TH "org.jgap.gp.GPProblem" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.GPProblem \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBexamples\&.gp\&.anttrail\&.AntTrailProblem\fP, \fBexamples\&.gp\&.Fibonacci\fP, \fBexamples\&.gp\&.island\&.IslandGPThread\fP, \fBexamples\&.gp\&.KarubProblem\fP, \fBexamples\&.gp\&.MathProblem\fP, \fBexamples\&.gp\&.monalisa\&.core\&.DrawingProblem\fP, \fBexamples\&.gp\&.paintedDesert\&.PaintedDesertProblem\fP, \fBexamples\&.gp\&.SimpleExample\fP, \fBexamples\&.gp\&.symbolicRegression\&.SymbolicRegression\fP, and \fBexamples\&.gp\&.tictactoe\&.TicTacToeMain\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGPProblem\fP (GPConfiguration a_conf)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGPProblem\fP ()"
+.br
+.ti -1c
+.RI "abstract GPGenotype \fBcreate\fP ()  throws InvalidConfigurationException"
+.br
+.ti -1c
+.RI "void \fBshowTree\fP (\fBIGPProgram\fP a_prog, String a_filename)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBshowTree\fP (\fBIGPProgram\fP a_prog, String a_filename, TreeBranchRenderer a_treeBranchRenderer, TreeNodeRenderer a_treeNodeRenderer)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "TreeNode \fBcreateTree\fP (\fBIGPProgram\fP a_prog)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "GPConfiguration \fBgetGPConfiguration\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetGPConfiguration\fP (GPConfiguration a_conf)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "GPConfiguration \fBm_conf\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.8 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Abstract base class for all GP problems\&. See packages \fBexamples\&.gp\fP and \fBexamples\&.grid\fP for sample implementations\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 29 of file GPProblem\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.GPProblem\&.GPProblem (GPConfigurationa_conf) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 35 of file GPProblem\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProblem\&.m_conf\&.
+.SS "org\&.jgap\&.gp\&.GPProblem\&.GPProblem ()\fC [inline]\fP"
+Default constructor for dynamic instantiation\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 49 of file GPProblem\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "abstract GPGenotype org\&.jgap\&.gp\&.GPProblem\&.create () throws \fBInvalidConfigurationException\fP\fC [pure virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+newly created GPGenotype 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBexamples\&.gp\&.tictactoe\&.TicTacToeMain\fP, \fBexamples\&.gp\&.symbolicRegression\&.SymbolicRegression\fP, \fBexamples\&.gp\&.anttrail\&.AntTrailProblem\fP, \fBexamples\&.gp\&.paintedDesert\&.PaintedDesertProblem\fP, \fBexamples\&.gp\&.island\&.IslandGPThread\fP, \fBexamples\&.gp\&.Fibonacci\fP, \fBexamples\&.gp\&.MathProblem\fP, \fBexamples\&.gp\&.KarubProblem\fP, \fBexamples\&.gp\&.monalisa\&.core\&.DrawingProblem\fP, and \fBexamples\&.gp\&.SimpleExample\fP\&.
+.SS "TreeNode org\&.jgap\&.gp\&.GPProblem\&.createTree (\fBIGPProgram\fPa_prog) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Creates a tree out of a given GP program\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_prog\fP the GPGenotype to visualize a tree for 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the TreeNode object corresponding to the GP program 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 137 of file GPProblem\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProblem\&.m_conf, and org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.GPProblem\&.showTree()\&.
+.SS "GPConfiguration org\&.jgap\&.gp\&.GPProblem\&.getGPConfiguration ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the GPConfiguration set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 173 of file GPProblem\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProblem\&.m_conf\&.
+.PP
+Referenced by examples\&.gp\&.SimpleExample\&.create(), examples\&.gp\&.monalisa\&.core\&.DrawingProblem\&.create(), examples\&.gp\&.KarubProblem\&.create(), examples\&.gp\&.MathProblem\&.create(), examples\&.gp\&.Fibonacci\&.create(), examples\&.gp\&.island\&.IslandGPThread\&.create(), examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.create(), examples\&.gp\&.anttrail\&.AntTrailProblem\&.create(), and examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.create()\&.
+.SS "void org\&.jgap\&.gp\&.GPProblem\&.setGPConfiguration (GPConfigurationa_conf)\fC [inline]\fP, \fC [protected]\fP"
+Sets the configuration\&. Only use in case of dynamic instantiation (in case constructor with parameter GPConfiguration is not used)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 186 of file GPProblem\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProblem\&.m_conf\&.
+.SS "void org\&.jgap\&.gp\&.GPProblem\&.showTree (\fBIGPProgram\fPa_prog, Stringa_filename) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Creates a graphical tree out of a given GP program and saves it to a file\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_prog\fP the GP program to visualize a tree for 
+.br
+\fIa_filename\fP the name of the file to save the tree in 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 73 of file GPProblem\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProblem\&.createTree()\&.
+.SS "void org\&.jgap\&.gp\&.GPProblem\&.showTree (\fBIGPProgram\fPa_prog, Stringa_filename, TreeBranchRenderera_treeBranchRenderer, TreeNodeRenderera_treeNodeRenderer) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Creates a tree out of a given GP program and saves it to a file\&. Allows to preset the tree renderers\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_prog\fP the GP program to visualize a tree for 
+.br
+\fIa_filename\fP the name of the file to save the tree in 
+.br
+\fIa_treeBranchRenderer\fP renderer for the tree's branches 
+.br
+\fIa_treeNodeRenderer\fP renderer for the tree's nodes 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 107 of file GPProblem\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProblem\&.createTree()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.GPProblem\&.CVS_REVISION = '$Revision: 1\&.8 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 31 of file GPProblem\&.java\&.
+.SS "GPConfiguration org\&.jgap\&.gp\&.GPProblem\&.m_conf\fC [private]\fP"
+
+.PP
+Definition at line 33 of file GPProblem\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.GPProblem\&.createTree(), org\&.jgap\&.gp\&.GPProblem\&.getGPConfiguration(), org\&.jgap\&.gp\&.GPProblem\&.GPProblem(), and org\&.jgap\&.gp\&.GPProblem\&.setGPConfiguration()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,526 @@
+.TH "org.jgap.audit.KeyedValues2D" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.audit.KeyedValues2D \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.util\&.ICloneable\fP, and Serializable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBKeyedValues2D\fP ()"
+.br
+.ti -1c
+.RI "\fBKeyedValues2D\fP (final boolean a_sortRowKeys)"
+.br
+.ti -1c
+.RI "int \fBgetRowCount\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetColumnCount\fP ()"
+.br
+.ti -1c
+.RI "Number \fBgetValue\fP (final int a_row, final int a_column)"
+.br
+.ti -1c
+.RI "Comparable \fBgetRowKey\fP (final int a_row)"
+.br
+.ti -1c
+.RI "int \fBgetRowIndex\fP (final Comparable a_key)"
+.br
+.ti -1c
+.RI "List \fBgetRowKeys\fP ()"
+.br
+.ti -1c
+.RI "Comparable \fBgetColumnKey\fP (final int a_column)"
+.br
+.ti -1c
+.RI "List \fBgetColumnKeys\fP ()"
+.br
+.ti -1c
+.RI "Number \fBgetValue\fP (final Comparable a_rowKey, final Comparable a_columnKey)"
+.br
+.ti -1c
+.RI "void \fBsetValue\fP (final Number a_value, final Comparable a_rowKey, final Comparable a_columnKey)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (final Object a_object)"
+.br
+.ti -1c
+.RI "int \fBhashCode\fP ()"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "List \fBm_rowKeys\fP"
+.br
+.ti -1c
+.RI "List \fBm_columnKeys\fP"
+.br
+.ti -1c
+.RI "List \fBm_rows\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_sortRowKeys\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.7 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A collection of (row, column) tupels
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file KeyedValues2D\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.audit\&.KeyedValues2D\&.KeyedValues2D ()\fC [inline]\fP"
+Constructor setting behavior: non-sorted keys
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 45 of file KeyedValues2D\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.KeyedValues2D\&.equals()\&.
+.SS "org\&.jgap\&.audit\&.KeyedValues2D\&.KeyedValues2D (final booleana_sortRowKeys)\fC [inline]\fP"
+Constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_sortRowKeys\fP true: row keys should be sorted
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 57 of file KeyedValues2D\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.KeyedValues2D\&.m_columnKeys, org\&.jgap\&.audit\&.KeyedValues2D\&.m_rowKeys, org\&.jgap\&.audit\&.KeyedValues2D\&.m_rows, and org\&.jgap\&.audit\&.KeyedValues2D\&.m_sortRowKeys\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.audit\&.KeyedValues2D\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+clone of the current instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 293 of file KeyedValues2D\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.KeyedValues2DTest\&.testClone_0()\&.
+.SS "boolean org\&.jgap\&.audit\&.KeyedValues2D\&.equals (final Objecta_object)\fC [inline]\fP"
+Tests if this object is equal to another
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_object\fP other object\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: this object is equal to the other one
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 235 of file KeyedValues2D\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.KeyedValues2D\&.getColumnCount(), org\&.jgap\&.audit\&.KeyedValues2D\&.getColumnKeys(), org\&.jgap\&.audit\&.KeyedValues2D\&.getRowCount(), org\&.jgap\&.audit\&.KeyedValues2D\&.getRowKeys(), org\&.jgap\&.audit\&.KeyedValues2D\&.getValue(), and org\&.jgap\&.audit\&.KeyedValues2D\&.KeyedValues2D()\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.KeyedValues2DTest\&.testEquals_0(), org\&.jgap\&.audit\&.KeyedValues2DTest\&.testEquals_1(), org\&.jgap\&.audit\&.KeyedValues2DTest\&.testEquals_2(), org\&.jgap\&.audit\&.KeyedValues2DTest\&.testEquals_3(), and org\&.jgap\&.audit\&.KeyedValues2DTest\&.testEquals_4()\&.
+.SS "int org\&.jgap\&.audit\&.KeyedValues2D\&.getColumnCount ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the number of columns
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 80 of file KeyedValues2D\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.KeyedValues2D\&.equals(), and org\&.jgap\&.audit\&.KeyedValues2DTest\&.testConstruct_0()\&.
+.SS "Comparable org\&.jgap\&.audit\&.KeyedValues2D\&.getColumnKey (final inta_column)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_column\fP the column
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+key for the given column
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 152 of file KeyedValues2D\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.Evaluator\&.calcAvgFitnessHelper(), and org\&.jgap\&.audit\&.KeyedValues2DTest\&.testClone_0()\&.
+.SS "List org\&.jgap\&.audit\&.KeyedValues2D\&.getColumnKeys ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the column keys
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 162 of file KeyedValues2D\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.KeyedValues2D\&.m_columnKeys\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.KeyedValues2D\&.equals()\&.
+.SS "int org\&.jgap\&.audit\&.KeyedValues2D\&.getRowCount ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the number of rows
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 70 of file KeyedValues2D\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.KeyedValues2D\&.equals(), and org\&.jgap\&.audit\&.KeyedValues2DTest\&.testConstruct_0()\&.
+.SS "int org\&.jgap\&.audit\&.KeyedValues2D\&.getRowIndex (final Comparablea_key)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_key\fP the row key
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+row index for the given key
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 125 of file KeyedValues2D\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.KeyedValues2D\&.m_rowKeys, and org\&.jgap\&.audit\&.KeyedValues2D\&.m_sortRowKeys\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.KeyedValues2D\&.getValue(), and org\&.jgap\&.audit\&.KeyedValues2D\&.setValue()\&.
+.SS "Comparable org\&.jgap\&.audit\&.KeyedValues2D\&.getRowKey (final inta_row)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_row\fP the row index, starting at 0
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+key for the given row
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 113 of file KeyedValues2D\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.Evaluator\&.calcAvgFitnessHelper(), org\&.jgap\&.audit\&.KeyedValues2DTest\&.testClone_0(), org\&.jgap\&.audit\&.KeyedValues2DTest\&.testSetValue_0(), and org\&.jgap\&.audit\&.KeyedValues2DTest\&.testSetValue_02()\&.
+.SS "List org\&.jgap\&.audit\&.KeyedValues2D\&.getRowKeys ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+row keys
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 140 of file KeyedValues2D\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.KeyedValues2D\&.m_rowKeys\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.KeyedValues2D\&.equals()\&.
+.SS "Number org\&.jgap\&.audit\&.KeyedValues2D\&.getValue (final inta_row, final inta_column)\fC [inline]\fP"
+Returns the value for a given row and column
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_row\fP the row index 
+.br
+\fIa_column\fP the column index
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+value at given row and column
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 95 of file KeyedValues2D\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.KeyedValues2D\&.m_columnKeys, and org\&.jgap\&.audit\&.KeyedValues2D\&.m_rows\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.Evaluator\&.calcAvgFitnessHelper(), org\&.jgap\&.audit\&.KeyedValues2D\&.equals(), org\&.jgap\&.audit\&.KeyedValues2DTest\&.testClone_0(), org\&.jgap\&.audit\&.KeyedValues2DTest\&.testGetValue_0(), org\&.jgap\&.audit\&.KeyedValues2DTest\&.testSetValue_0(), org\&.jgap\&.audit\&.KeyedValues2DTest\&.testSetValue_02(), org\&.jgap\&.audit\&.KeyedValues2DTest\&.testSetValue_1(), org\&.jgap\&.audit\&.KeyedValues2DTest\&.testSetValue_2(), and org\&.jgap\&.audit\&.KeyedValues2DTest\&.testSetValue_3()\&.
+.SS "Number org\&.jgap\&.audit\&.KeyedValues2D\&.getValue (final Comparablea_rowKey, final Comparablea_columnKey)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_rowKey\fP the row key 
+.br
+\fIa_columnKey\fP the column key
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+value for the given row and column keys
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 175 of file KeyedValues2D\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.KeyedValues2D\&.getRowIndex(), and org\&.jgap\&.audit\&.KeyedValues2D\&.m_rows\&.
+.SS "int org\&.jgap\&.audit\&.KeyedValues2D\&.hashCode ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+hash code of the instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 279 of file KeyedValues2D\&.java\&.
+.SS "void org\&.jgap\&.audit\&.KeyedValues2D\&.setValue (final Numbera_value, final Comparablea_rowKey, final Comparablea_columnKey)\fC [inline]\fP"
+Sets a value\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_value\fP the value 
+.br
+\fIa_rowKey\fP the row key 
+.br
+\fIa_columnKey\fP the column key
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 199 of file KeyedValues2D\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.KeyedValues2D\&.getRowIndex(), org\&.jgap\&.audit\&.KeyedValues2D\&.m_rows, and org\&.jgap\&.audit\&.KeyedValues2D\&.m_sortRowKeys\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.audit\&.KeyedValues2D\&.CVS_REVISION = '$Revision: 1\&.7 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file KeyedValues2D\&.java\&.
+.SS "List org\&.jgap\&.audit\&.KeyedValues2D\&.m_columnKeys\fC [private]\fP"
+The column keys 
+.PP
+Definition at line 31 of file KeyedValues2D\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.KeyedValues2D\&.getColumnKeys(), org\&.jgap\&.audit\&.KeyedValues2D\&.getValue(), and org\&.jgap\&.audit\&.KeyedValues2D\&.KeyedValues2D()\&.
+.SS "List org\&.jgap\&.audit\&.KeyedValues2D\&.m_rowKeys\fC [private]\fP"
+The row keys 
+.PP
+Definition at line 28 of file KeyedValues2D\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.KeyedValues2D\&.getRowIndex(), org\&.jgap\&.audit\&.KeyedValues2D\&.getRowKeys(), and org\&.jgap\&.audit\&.KeyedValues2D\&.KeyedValues2D()\&.
+.SS "List org\&.jgap\&.audit\&.KeyedValues2D\&.m_rows\fC [private]\fP"
+The row data 
+.PP
+Definition at line 34 of file KeyedValues2D\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.KeyedValues2D\&.getValue(), org\&.jgap\&.audit\&.KeyedValues2D\&.KeyedValues2D(), and org\&.jgap\&.audit\&.KeyedValues2D\&.setValue()\&.
+.SS "boolean org\&.jgap\&.audit\&.KeyedValues2D\&.m_sortRowKeys\fC [private]\fP"
+Should row keys be sorted by their comparable order? 
+.PP
+Definition at line 37 of file KeyedValues2D\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.KeyedValues2D\&.getRowIndex(), org\&.jgap\&.audit\&.KeyedValues2D\&.KeyedValues2D(), and org\&.jgap\&.audit\&.KeyedValues2D\&.setValue()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

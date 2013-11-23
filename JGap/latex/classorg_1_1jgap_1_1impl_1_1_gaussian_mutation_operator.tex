@@ -1,0 +1,357 @@
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator}{\section{org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator Class Reference}
+\label{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator}\index{org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator@{org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a1387ca01dd329887f37c4a7533f0d83c}{Gaussian\-Mutation\-Operator} ()  throws Invalid\-Configuration\-Exception 
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a542fbeeb659fbd8ff614ff68dd7f2fc6}{Gaussian\-Mutation\-Operator} (\hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} a\-\_\-config)  throws Invalid\-Configuration\-Exception 
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a1e9d9ca44977b1aa08e6b7a385a730ad}{Gaussian\-Mutation\-Operator} (final \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} a\-\_\-configuration, final double a\-\_\-deviation)  throws Invalid\-Configuration\-Exception 
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_aa33da8cc4da351383f79ddaae90e988a}{operate} (final \hyperlink{classorg_1_1jgap_1_1_population}{Population} a\-\_\-population, final List a\-\_\-candidate\-Chromosomes)
+\item 
+int \hyperlink{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a3c910d5358450dd8a22118e4b5c31d1d}{compare\-To} (final Object a\-\_\-other)
+\item 
+double \hyperlink{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a41ffe4e1c827b8f26da750f31a46669d}{get\-Deviation} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a11e112e00b6ad792cca9c980de3198a6}{mutate\-Gene} (final \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} a\-\_\-gene, final double a\-\_\-percentage)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a4278e98a678979f59d6c0f9242d2da33}{m\-\_\-deviation}
+\item 
+\hyperlink{interfaceorg_1_1jgap_1_1_random_generator}{Random\-Generator} \hyperlink{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a8f6f5c01260bae127da24ca8231ac158}{m\-\_\-rg}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_afb314b840f00bec5fc37ff2457c0c9ee}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-25 \$\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This genetic operator performs Gaussian mutation across all genes in a \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome}.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert (modified J\-O\-O\-N\-E\-G\-A\-P source) 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 22 of file Gaussian\-Mutation\-Operator.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a1387ca01dd329887f37c4a7533f0d83c}{\index{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator@{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator}!Gaussian\-Mutation\-Operator@{Gaussian\-Mutation\-Operator}}
+\index{Gaussian\-Mutation\-Operator@{Gaussian\-Mutation\-Operator}!org::jgap::impl::GaussianMutationOperator@{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator}}
+\subsubsection[{Gaussian\-Mutation\-Operator}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-Gaussian\-Mutation\-Operator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\-Configuration\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a1387ca01dd329887f37c4a7533f0d83c}
+Constructs a \hyperlink{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator}{Gaussian\-Mutation\-Operator} with a default deviation of 0.\-05. Attention\-: The configuration used is the one set with the static method Genotype.\-set\-Configuration.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classorg_1_1jgap_1_1_invalid_configuration_exception}{Invalid\-Configuration\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 41 of file Gaussian\-Mutation\-Operator.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-compare\-To().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a542fbeeb659fbd8ff614ff68dd7f2fc6}{\index{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator@{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator}!Gaussian\-Mutation\-Operator@{Gaussian\-Mutation\-Operator}}
+\index{Gaussian\-Mutation\-Operator@{Gaussian\-Mutation\-Operator}!org::jgap::impl::GaussianMutationOperator@{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator}}
+\subsubsection[{Gaussian\-Mutation\-Operator}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-Gaussian\-Mutation\-Operator (
+\begin{DoxyParamCaption}
+\item[{{\bf Configuration}}]{a\-\_\-config}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\-Configuration\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a542fbeeb659fbd8ff614ff68dd7f2fc6}
+Constructs a \hyperlink{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator}{Gaussian\-Mutation\-Operator} with a default deviation of 0.\-05.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-config} & the configuration to use\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classorg_1_1jgap_1_1_invalid_configuration_exception}{Invalid\-Configuration\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-0 
+\end{DoxySince}
+
+
+Definition at line 56 of file Gaussian\-Mutation\-Operator.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a1e9d9ca44977b1aa08e6b7a385a730ad}{\index{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator@{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator}!Gaussian\-Mutation\-Operator@{Gaussian\-Mutation\-Operator}}
+\index{Gaussian\-Mutation\-Operator@{Gaussian\-Mutation\-Operator}!org::jgap::impl::GaussianMutationOperator@{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator}}
+\subsubsection[{Gaussian\-Mutation\-Operator}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-Gaussian\-Mutation\-Operator (
+\begin{DoxyParamCaption}
+\item[{final {\bf Configuration}}]{a\-\_\-configuration, }
+\item[{final double}]{a\-\_\-deviation}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\-Configuration\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a1e9d9ca44977b1aa08e6b7a385a730ad}
+Constructs a \hyperlink{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator}{Gaussian\-Mutation\-Operator} with the given deviation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-configuration} & the configuration to use \\
+\hline
+{\em a\-\_\-deviation} & sic\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classorg_1_1jgap_1_1_invalid_configuration_exception}{Invalid\-Configuration\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySince}{Since}
+3.\-0 (since 2.\-0 without a\-\_\-configuration) 
+\end{DoxySince}
+
+
+Definition at line 71 of file Gaussian\-Mutation\-Operator.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-m\-\_\-deviation.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a3c910d5358450dd8a22118e4b5c31d1d}{\index{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator@{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator}!compare\-To@{compare\-To}}
+\index{compare\-To@{compare\-To}!org::jgap::impl::GaussianMutationOperator@{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator}}
+\subsubsection[{compare\-To}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-compare\-To (
+\begin{DoxyParamCaption}
+\item[{final Object}]{a\-\_\-other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a3c910d5358450dd8a22118e4b5c31d1d}
+Compares the given \hyperlink{interfaceorg_1_1jgap_1_1_genetic_operator}{Genetic\-Operator} to this \hyperlink{interfaceorg_1_1jgap_1_1_genetic_operator}{Genetic\-Operator}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-other} & the instance against which to compare this instance\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a negative number if this instance is \char`\"{}less than\char`\"{} the given instance, zero if they are equal to each other, and a positive number if this is \char`\"{}greater than\char`\"{} the given instance
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-6 
+\end{DoxySince}
+
+
+Definition at line 178 of file Gaussian\-Mutation\-Operator.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-Gaussian\-Mutation\-Operator(), and org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-m\-\_\-deviation.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator\-Test.\-test\-Compare\-To\-\_\-0().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a3c910d5358450dd8a22118e4b5c31d1d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a41ffe4e1c827b8f26da750f31a46669d}{\index{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator@{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator}!get\-Deviation@{get\-Deviation}}
+\index{get\-Deviation@{get\-Deviation}!org::jgap::impl::GaussianMutationOperator@{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator}}
+\subsubsection[{get\-Deviation}]{\setlength{\rightskip}{0pt plus 5cm}double org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-get\-Deviation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a41ffe4e1c827b8f26da750f31a46669d}
+\begin{DoxyReturn}{Returns}
+the deviation set
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-1 
+\end{DoxySince}
+
+
+Definition at line 202 of file Gaussian\-Mutation\-Operator.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-m\-\_\-deviation.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator\-Test.\-test\-Construct\-\_\-0(), org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator\-Test.\-test\-Construct\-\_\-1(), and org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator\-Test.\-test\-Construct\-\_\-3().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a11e112e00b6ad792cca9c980de3198a6}{\index{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator@{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator}!mutate\-Gene@{mutate\-Gene}}
+\index{mutate\-Gene@{mutate\-Gene}!org::jgap::impl::GaussianMutationOperator@{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator}}
+\subsubsection[{mutate\-Gene}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-mutate\-Gene (
+\begin{DoxyParamCaption}
+\item[{final {\bf Gene}}]{a\-\_\-gene, }
+\item[{final double}]{a\-\_\-percentage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a11e112e00b6ad792cca9c980de3198a6}
+Helper\-: mutate all atomic elements of a gene.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-gene} & the gene to be mutated \\
+\hline
+{\em a\-\_\-percentage} & the percentage the gene is to be mutated with\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 158 of file Gaussian\-Mutation\-Operator.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-operate().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_aa33da8cc4da351383f79ddaae90e988a}{\index{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator@{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator}!operate@{operate}}
+\index{operate@{operate}!org::jgap::impl::GaussianMutationOperator@{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator}}
+\subsubsection[{operate}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-operate (
+\begin{DoxyParamCaption}
+\item[{final {\bf Population}}]{a\-\_\-population, }
+\item[{final List}]{a\-\_\-candidate\-Chromosomes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_aa33da8cc4da351383f79ddaae90e988a}
+Executes the operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-population} & containing chromosomes to be mutated \\
+\hline
+{\em a\-\_\-candidate\-Chromosomes} & resulting chromosomes\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1_genetic_operator_a0f9dfe925c4c21e07522be67d6c5d084}{org.\-jgap.\-Genetic\-Operator}.
+
+
+
+Definition at line 87 of file Gaussian\-Mutation\-Operator.\-java.
+
+
+
+References org.\-jgap.\-util.\-I\-Cloneable.\-clone(), org.\-jgap.\-impl.\-Composite\-Gene.\-gene\-At(), org.\-jgap.\-Base\-Genetic\-Operator.\-get\-Configuration(), org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-m\-\_\-deviation, org.\-jgap.\-Base\-Genetic\-Operator.\-m\-\_\-monitor\-Active, org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-m\-\_\-rg, org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-mutate\-Gene(), and org.\-jgap.\-Population.\-size().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_aa33da8cc4da351383f79ddaae90e988a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_afb314b840f00bec5fc37ff2457c0c9ee}{\index{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator@{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::impl::GaussianMutationOperator@{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-25 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_afb314b840f00bec5fc37ff2457c0c9ee}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 25 of file Gaussian\-Mutation\-Operator.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a4278e98a678979f59d6c0f9242d2da33}{\index{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator@{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator}!m\-\_\-deviation@{m\-\_\-deviation}}
+\index{m\-\_\-deviation@{m\-\_\-deviation}!org::jgap::impl::GaussianMutationOperator@{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator}}
+\subsubsection[{m\-\_\-deviation}]{\setlength{\rightskip}{0pt plus 5cm}double org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-m\-\_\-deviation\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a4278e98a678979f59d6c0f9242d2da33}
+
+
+Definition at line 27 of file Gaussian\-Mutation\-Operator.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-compare\-To(), org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-Gaussian\-Mutation\-Operator(), org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-get\-Deviation(), and org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-operate().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a8f6f5c01260bae127da24ca8231ac158}{\index{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator@{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator}!m\-\_\-rg@{m\-\_\-rg}}
+\index{m\-\_\-rg@{m\-\_\-rg}!org::jgap::impl::GaussianMutationOperator@{org\-::jgap\-::impl\-::\-Gaussian\-Mutation\-Operator}}
+\subsubsection[{m\-\_\-rg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Random\-Generator} org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-m\-\_\-rg\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_a8f6f5c01260bae127da24ca8231ac158}
+
+
+Definition at line 29 of file Gaussian\-Mutation\-Operator.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator.\-operate().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/impl/\hyperlink{_gaussian_mutation_operator_8java}{Gaussian\-Mutation\-Operator.\-java}\end{DoxyCompactItemize}

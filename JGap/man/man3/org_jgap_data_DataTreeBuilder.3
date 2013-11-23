@@ -1,0 +1,464 @@
+.TH "org.jgap.data.DataTreeBuilder" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.data.DataTreeBuilder \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIDataCreators\fP \fBrepresentGenotypeAsDocument\fP (final \fBGenotype\fP a_subject)  throws Exception "
+.br
+.ti -1c
+.RI "\fBIDataElement\fP \fBrepresentGenotypeAsElement\fP (final \fBGenotype\fP a_subject)  throws Exception "
+.br
+.ti -1c
+.RI "\fBIDataCreators\fP \fBrepresentChromosomeAsDocument\fP (final \fBIChromosome\fP a_subject)  throws Exception "
+.br
+.ti -1c
+.RI "\fBIDataElement\fP \fBrepresentChromosomeAsElement\fP (final \fBIChromosome\fP a_subject)  throws Exception "
+.br
+.ti -1c
+.RI "\fBIDataElement\fP \fBrepresentGenesAsElement\fP (final \fBGene\fP[] a_geneValues)  throws Exception "
+.br
+.ti -1c
+.RI "\fBIDataElement\fP \fBrepresentGeneAsElement\fP (final \fBGene\fP a_gene)  throws Exception "
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static synchronized \fBDataTreeBuilder\fP \fBgetInstance\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIDataElementList\fP \fBcreateTree\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDataTreeBuilder\fP ()"
+.br
+.ti -1c
+.RI "\fBIDataElement\fP \fBrepresentAlleleAsElement\fP (final \fBGene\fP a_gene)  throws Exception "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Object \fBm_lock\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.12 $'"
+.br
+.ti -1c
+.RI "static final String \fBGENOTYPE_TAG\fP = 'genotype'"
+.br
+.ti -1c
+.RI "static final String \fBCHROMOSOME_TAG\fP = 'chromosome'"
+.br
+.ti -1c
+.RI "static final String \fBGENES_TAG\fP = 'genes'"
+.br
+.ti -1c
+.RI "static final String \fBGENE_TAG\fP = 'gene'"
+.br
+.ti -1c
+.RI "static final String \fBALLELE_TAG\fP = 'allele'"
+.br
+.ti -1c
+.RI "static final String \fBSIZE_ATTRIBUTE\fP = 'size'"
+.br
+.ti -1c
+.RI "static final String \fBCLASS_ATTRIBUTE\fP = 'class'"
+.br
+.ti -1c
+.RI "static \fBDataTreeBuilder\fP \fBm_instance\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Builds a tree structure from Genes, Chrosomes or from a \fBGenotype\fP\&. 
+.PP
+Generated result is generic data type usable for concrete persistence strategies, including XML documents, writing an object to a file or stream etc\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file DataTreeBuilder\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.data\&.DataTreeBuilder\&.DataTreeBuilder ()\fC [inline]\fP, \fC [private]\fP"
+Private constructor for Singleton 
+.PP
+Definition at line 88 of file DataTreeBuilder\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataTreeBuilder\&.getInstance()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBIDataElementList\fP org\&.jgap\&.data\&.DataTreeBuilder\&.createTree ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 181 of file DataTreeBuilder\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataTreeBuilder\&.representChromosomeAsDocument(), and org\&.jgap\&.data\&.DataTreeBuilder\&.representGenotypeAsDocument()\&.
+.SS "static synchronized \fBDataTreeBuilder\fP org\&.jgap\&.data\&.DataTreeBuilder\&.getInstance ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the singleton instance of this class
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 77 of file DataTreeBuilder\&.java\&.
+.PP
+References org\&.jgap\&.data\&.DataTreeBuilder\&.DataTreeBuilder(), and org\&.jgap\&.data\&.DataTreeBuilder\&.m_instance\&.
+.SS "\fBIDataElement\fP org\&.jgap\&.data\&.DataTreeBuilder\&.representAlleleAsElement (final \fBGene\fPa_gene) throws Exception\fC [inline]\fP, \fC [private]\fP"
+Represent an Allele as a generic data element
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_gene\fP the gene holding the allele 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBIDataElement\fP created data element
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 281 of file DataTreeBuilder\&.java\&.
+.PP
+References org\&.jgap\&.data\&.DataTreeBuilder\&.ALLELE_TAG\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataTreeBuilder\&.representGeneAsElement()\&.
+.SS "\fBIDataCreators\fP org\&.jgap\&.data\&.DataTreeBuilder\&.representChromosomeAsDocument (final \fBIChromosome\fPa_subject) throws Exception\fC [inline]\fP"
+Represent a \fBChromosome\fP as a generic data type document, including its contained \fBGene\fP instances\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_subject\fP the chromosome to represent 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a document object representing the given \fBChromosome\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 164 of file DataTreeBuilder\&.java\&.
+.PP
+References org\&.jgap\&.data\&.DataTreeBuilder\&.createTree(), org\&.jgap\&.data\&.DataTreeBuilder\&.m_lock, and org\&.jgap\&.data\&.DataTreeBuilder\&.representChromosomeAsElement()\&.
+.SS "\fBIDataElement\fP org\&.jgap\&.data\&.DataTreeBuilder\&.representChromosomeAsElement (final \fBIChromosome\fPa_subject) throws Exception\fC [inline]\fP"
+Represent a \fBChromosome\fP as a generic data element, including its contained \fBGene\fP instances\&. This may be useful in scenarios where representation as an entire document is undesirable, such as when the representation of this \fBChromosome\fP is to be combined with other elements in a single document\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_subject\fP the chromosome to represent 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+an element object representing the given \fBChromosome\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 199 of file DataTreeBuilder\&.java\&.
+.PP
+References org\&.jgap\&.data\&.DataTreeBuilder\&.CHROMOSOME_TAG, org\&.jgap\&.data\&.DataTreeBuilder\&.representGenesAsElement(), and org\&.jgap\&.data\&.DataTreeBuilder\&.SIZE_ATTRIBUTE\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataTreeBuilder\&.representChromosomeAsDocument(), and org\&.jgap\&.data\&.DataTreeBuilder\&.representGenotypeAsElement()\&.
+.SS "\fBIDataElement\fP org\&.jgap\&.data\&.DataTreeBuilder\&.representGeneAsElement (final \fBGene\fPa_gene) throws Exception\fC [inline]\fP"
+Represent a \fBGene\fP as a generic data element\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_gene\fP the \fBGene\fP to represent 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+an element object representing the given gene
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 254 of file DataTreeBuilder\&.java\&.
+.PP
+References org\&.jgap\&.data\&.DataTreeBuilder\&.CLASS_ATTRIBUTE, org\&.jgap\&.data\&.DataTreeBuilder\&.GENE_TAG, and org\&.jgap\&.data\&.DataTreeBuilder\&.representAlleleAsElement()\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataTreeBuilder\&.representGenesAsElement()\&.
+.SS "\fBIDataElement\fP org\&.jgap\&.data\&.DataTreeBuilder\&.representGenesAsElement (final \fBGene\fP[]a_geneValues) throws Exception\fC [inline]\fP"
+Represent Genes as a generic data type element\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_geneValues\fP the genes to represent 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+an element object representing the given genes
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 229 of file DataTreeBuilder\&.java\&.
+.PP
+References org\&.jgap\&.data\&.DataTreeBuilder\&.GENES_TAG, and org\&.jgap\&.data\&.DataTreeBuilder\&.representGeneAsElement()\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataTreeBuilder\&.representChromosomeAsElement()\&.
+.SS "\fBIDataCreators\fP org\&.jgap\&.data\&.DataTreeBuilder\&.representGenotypeAsDocument (final \fBGenotype\fPa_subject) throws Exception\fC [inline]\fP"
+Represent a \fBGenotype\fP as a generic data document, including its population of \fBChromosome\fP instances\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_subject\fP the genotype to represent 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a generic document object representing the given \fBGenotype\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 102 of file DataTreeBuilder\&.java\&.
+.PP
+References org\&.jgap\&.data\&.DataTreeBuilder\&.createTree(), org\&.jgap\&.data\&.DataTreeBuilder\&.m_lock, and org\&.jgap\&.data\&.DataTreeBuilder\&.representGenotypeAsElement()\&.
+.SS "\fBIDataElement\fP org\&.jgap\&.data\&.DataTreeBuilder\&.representGenotypeAsElement (final \fBGenotype\fPa_subject) throws Exception\fC [inline]\fP"
+Represent a \fBGenotype\fP as a generic data element, including its population of \fBChromosome\fP instances\&.
+.PP
+This may be useful in scenarios where representation as an entire document is undesirable, such as when the representation of this \fBGenotype\fP is to be combined with other elements in a single document\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_subject\fP the genotype to represent 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+an element object representing the given \fBGenotype\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 132 of file DataTreeBuilder\&.java\&.
+.PP
+References org\&.jgap\&.data\&.DataTreeBuilder\&.GENOTYPE_TAG, org\&.jgap\&.Population\&.getChromosome(), org\&.jgap\&.data\&.DataTreeBuilder\&.representChromosomeAsElement(), and org\&.jgap\&.data\&.DataTreeBuilder\&.SIZE_ATTRIBUTE\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataTreeBuilder\&.representGenotypeAsDocument()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.data\&.DataTreeBuilder\&.ALLELE_TAG = 'allele'\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 50 of file DataTreeBuilder\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataTreeBuilder\&.representAlleleAsElement()\&.
+.SS "final String org\&.jgap\&.data\&.DataTreeBuilder\&.CHROMOSOME_TAG = 'chromosome'\fC [static]\fP, \fC [private]\fP"
+Constant representing the name of the chromosome element tag\&. 
+.PP
+Definition at line 38 of file DataTreeBuilder\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataTreeBuilder\&.representChromosomeAsElement()\&.
+.SS "final String org\&.jgap\&.data\&.DataTreeBuilder\&.CLASS_ATTRIBUTE = 'class'\fC [static]\fP, \fC [private]\fP"
+Constant representing the fully-qualified name of the concrete \fBGene\fP class that was marshalled\&. 
+.PP
+Definition at line 62 of file DataTreeBuilder\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataTreeBuilder\&.representGeneAsElement()\&.
+.SS "final String org\&.jgap\&.data\&.DataTreeBuilder\&.CVS_REVISION = '$Revision: 1\&.12 $'\fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+implement representGPGenotype\&.\&. 
+.RE
+.PP
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 28 of file DataTreeBuilder\&.java\&.
+.SS "final String org\&.jgap\&.data\&.DataTreeBuilder\&.GENE_TAG = 'gene'\fC [static]\fP, \fC [private]\fP"
+Constant representing the name of the gene element tag\&. 
+.PP
+Definition at line 48 of file DataTreeBuilder\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataTreeBuilder\&.representGeneAsElement()\&.
+.SS "final String org\&.jgap\&.data\&.DataTreeBuilder\&.GENES_TAG = 'genes'\fC [static]\fP, \fC [private]\fP"
+Constant representing the name of the gene element tag\&. 
+.PP
+Definition at line 43 of file DataTreeBuilder\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataTreeBuilder\&.representGenesAsElement()\&.
+.SS "final String org\&.jgap\&.data\&.DataTreeBuilder\&.GENOTYPE_TAG = 'genotype'\fC [static]\fP, \fC [private]\fP"
+Constant representing the name of the genotype element tag\&. 
+.PP
+Definition at line 33 of file DataTreeBuilder\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataTreeBuilder\&.representGenotypeAsElement()\&.
+.SS "\fBDataTreeBuilder\fP org\&.jgap\&.data\&.DataTreeBuilder\&.m_instance\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 69 of file DataTreeBuilder\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataTreeBuilder\&.getInstance()\&.
+.SS "Object org\&.jgap\&.data\&.DataTreeBuilder\&.m_lock\fC [private]\fP"
+Shared lock object used for synchronization purposes\&. 
+.PP
+Definition at line 67 of file DataTreeBuilder\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataTreeBuilder\&.representChromosomeAsDocument(), and org\&.jgap\&.data\&.DataTreeBuilder\&.representGenotypeAsDocument()\&.
+.SS "final String org\&.jgap\&.data\&.DataTreeBuilder\&.SIZE_ATTRIBUTE = 'size'\fC [static]\fP, \fC [private]\fP"
+Constant representing the name of the size attribute that is added to genotype and chromosome elements to describe their size\&. 
+.PP
+Definition at line 56 of file DataTreeBuilder\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataTreeBuilder\&.representChromosomeAsElement(), and org\&.jgap\&.data\&.DataTreeBuilder\&.representGenotypeAsElement()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

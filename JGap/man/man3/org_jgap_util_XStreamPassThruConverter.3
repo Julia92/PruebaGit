@@ -1,0 +1,202 @@
+.TH "org.jgap.util.XStreamPassThruConverter" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.util.XStreamPassThruConverter \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Converter\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXStreamPassThruConverter\fP (Mapper mapper, ReflectionProvider reflectionProvider, Class a_clazz)"
+.br
+.ti -1c
+.RI "\fBXStreamPassThruConverter\fP (XStream a_xstream, Class a_clazz)"
+.br
+.ti -1c
+.RI "boolean \fBcanConvert\fP (Class type)"
+.br
+.ti -1c
+.RI "void \fBmarshal\fP (Object source, HierarchicalStreamWriter writer, MarshallingContext context)"
+.br
+.ti -1c
+.RI "Object \fBunmarshal\fP (HierarchicalStreamReader reader, UnmarshallingContext context)"
+.br
+.ti -1c
+.RI "abstract Object \fBdoUnmarshal\fP (UnmarshallingContext context)  throws Exception"
+.br
+.ti -1c
+.RI "void \fBsetConfiguration\fP (GPConfiguration a_conf)"
+.br
+.ti -1c
+.RI "GPConfiguration \fBgetConfiguration\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmarshalDefault\fP (Object source, HierarchicalStreamWriter writer, MarshallingContext context)"
+.br
+.ti -1c
+.RI "Object \fBunmarshalDefault\fP (UnmarshallingContext context, Object a_obj)"
+.br
+.ti -1c
+.RI "void \fBsetConfiguration\fP (Object a_obj, String a_fieldName)  throws Exception "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Mapper \fBm_mapper\fP"
+.br
+.ti -1c
+.RI "ReflectionProvider \fBm_reflectionProvider\fP"
+.br
+.ti -1c
+.RI "AnnotationProvider \fBm_annotationProvider\fP"
+.br
+.ti -1c
+.RI "Class \fBm_clazz\fP"
+.br
+.ti -1c
+.RI "GPConfiguration \fBm_conf\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.1 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+An abstract XSTream converter that offers services for default marshalling and unmarshalling of objects\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 30 of file XStreamPassThruConverter\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.util\&.XStreamPassThruConverter\&.XStreamPassThruConverter (Mappermapper, ReflectionProviderreflectionProvider, Classa_clazz)\fC [inline]\fP"
+
+.PP
+Definition at line 45 of file XStreamPassThruConverter\&.java\&.
+.PP
+References org\&.jgap\&.util\&.XStreamPassThruConverter\&.m_annotationProvider, org\&.jgap\&.util\&.XStreamPassThruConverter\&.m_clazz, org\&.jgap\&.util\&.XStreamPassThruConverter\&.m_mapper, and org\&.jgap\&.util\&.XStreamPassThruConverter\&.m_reflectionProvider\&.
+.SS "org\&.jgap\&.util\&.XStreamPassThruConverter\&.XStreamPassThruConverter (XStreama_xstream, Classa_clazz)\fC [inline]\fP"
+
+.PP
+Definition at line 54 of file XStreamPassThruConverter\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "boolean org\&.jgap\&.util\&.XStreamPassThruConverter\&.canConvert (Classtype)\fC [inline]\fP"
+
+.PP
+Definition at line 58 of file XStreamPassThruConverter\&.java\&.
+.SS "abstract Object org\&.jgap\&.util\&.XStreamPassThruConverter\&.doUnmarshal (UnmarshallingContextcontext) throws Exception\fC [pure virtual]\fP"
+
+.PP
+Referenced by org\&.jgap\&.util\&.XStreamPassThruConverter\&.unmarshal()\&.
+.SS "GPConfiguration org\&.jgap\&.util\&.XStreamPassThruConverter\&.getConfiguration ()\fC [inline]\fP"
+
+.PP
+Definition at line 96 of file XStreamPassThruConverter\&.java\&.
+.PP
+References org\&.jgap\&.util\&.XStreamPassThruConverter\&.m_conf\&.
+.PP
+Referenced by org\&.jgap\&.util\&.XStreamPassThruConverter\&.setConfiguration()\&.
+.SS "void org\&.jgap\&.util\&.XStreamPassThruConverter\&.marshal (Objectsource, HierarchicalStreamWriterwriter, MarshallingContextcontext)\fC [inline]\fP"
+
+.PP
+Definition at line 62 of file XStreamPassThruConverter\&.java\&.
+.PP
+References org\&.jgap\&.util\&.XStreamPassThruConverter\&.marshalDefault()\&.
+.SS "void org\&.jgap\&.util\&.XStreamPassThruConverter\&.marshalDefault (Objectsource, HierarchicalStreamWriterwriter, MarshallingContextcontext)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 67 of file XStreamPassThruConverter\&.java\&.
+.PP
+References org\&.jgap\&.util\&.XStreamPassThruConverter\&.m_annotationProvider, org\&.jgap\&.util\&.XStreamPassThruConverter\&.m_mapper, and org\&.jgap\&.util\&.XStreamPassThruConverter\&.m_reflectionProvider\&.
+.PP
+Referenced by org\&.jgap\&.util\&.XStreamPassThruConverter\&.marshal()\&.
+.SS "void org\&.jgap\&.util\&.XStreamPassThruConverter\&.setConfiguration (GPConfigurationa_conf)\fC [inline]\fP"
+
+.PP
+Definition at line 92 of file XStreamPassThruConverter\&.java\&.
+.PP
+References org\&.jgap\&.util\&.XStreamPassThruConverter\&.m_conf\&.
+.SS "void org\&.jgap\&.util\&.XStreamPassThruConverter\&.setConfiguration (Objecta_obj, Stringa_fieldName) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 100 of file XStreamPassThruConverter\&.java\&.
+.PP
+References org\&.jgap\&.util\&.XStreamPassThruConverter\&.getConfiguration()\&.
+.SS "Object org\&.jgap\&.util\&.XStreamPassThruConverter\&.unmarshal (HierarchicalStreamReaderreader, UnmarshallingContextcontext)\fC [inline]\fP"
+
+.PP
+Definition at line 74 of file XStreamPassThruConverter\&.java\&.
+.PP
+References org\&.jgap\&.util\&.XStreamPassThruConverter\&.doUnmarshal()\&.
+.SS "Object org\&.jgap\&.util\&.XStreamPassThruConverter\&.unmarshalDefault (UnmarshallingContextcontext, Objecta_obj)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 86 of file XStreamPassThruConverter\&.java\&.
+.PP
+References org\&.jgap\&.util\&.XStreamPassThruConverter\&.m_annotationProvider, org\&.jgap\&.util\&.XStreamPassThruConverter\&.m_mapper, and org\&.jgap\&.util\&.XStreamPassThruConverter\&.m_reflectionProvider\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.util\&.XStreamPassThruConverter\&.CVS_REVISION = '$Revision: 1\&.1 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 33 of file XStreamPassThruConverter\&.java\&.
+.SS "AnnotationProvider org\&.jgap\&.util\&.XStreamPassThruConverter\&.m_annotationProvider\fC [private]\fP"
+
+.PP
+Definition at line 39 of file XStreamPassThruConverter\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.XStreamPassThruConverter\&.marshalDefault(), org\&.jgap\&.util\&.XStreamPassThruConverter\&.unmarshalDefault(), and org\&.jgap\&.util\&.XStreamPassThruConverter\&.XStreamPassThruConverter()\&.
+.SS "Class org\&.jgap\&.util\&.XStreamPassThruConverter\&.m_clazz\fC [private]\fP"
+
+.PP
+Definition at line 41 of file XStreamPassThruConverter\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.XStreamPassThruConverter\&.XStreamPassThruConverter()\&.
+.SS "GPConfiguration org\&.jgap\&.util\&.XStreamPassThruConverter\&.m_conf\fC [private]\fP"
+
+.PP
+Definition at line 43 of file XStreamPassThruConverter\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.XStreamPassThruConverter\&.getConfiguration(), and org\&.jgap\&.util\&.XStreamPassThruConverter\&.setConfiguration()\&.
+.SS "Mapper org\&.jgap\&.util\&.XStreamPassThruConverter\&.m_mapper\fC [private]\fP"
+
+.PP
+Definition at line 35 of file XStreamPassThruConverter\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.XStreamPassThruConverter\&.marshalDefault(), org\&.jgap\&.util\&.XStreamPassThruConverter\&.unmarshalDefault(), and org\&.jgap\&.util\&.XStreamPassThruConverter\&.XStreamPassThruConverter()\&.
+.SS "ReflectionProvider org\&.jgap\&.util\&.XStreamPassThruConverter\&.m_reflectionProvider\fC [private]\fP"
+
+.PP
+Definition at line 37 of file XStreamPassThruConverter\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.XStreamPassThruConverter\&.marshalDefault(), org\&.jgap\&.util\&.XStreamPassThruConverter\&.unmarshalDefault(), and org\&.jgap\&.util\&.XStreamPassThruConverter\&.XStreamPassThruConverter()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

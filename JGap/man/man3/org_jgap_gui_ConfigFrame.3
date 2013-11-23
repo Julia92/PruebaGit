@@ -1,0 +1,384 @@
+.TH "org.jgap.gui.ConfigFrame" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gui.ConfigFrame \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits JFrame, and IConfigInfo\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBConfigButtonListener\fP"
+.br
+.ti -1c
+.RI "class \fBConfigListSelectionListener\fP"
+.br
+.ti -1c
+.RI "class \fBListButtonListener\fP"
+.br
+.ti -1c
+.RI "class \fBListGroup\fP"
+.br
+.ti -1c
+.RI "class \fBTextGroup\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcreateAndShowGUI\fP (final Object a_conHandler)"
+.br
+.ti -1c
+.RI "ConfigData \fBgetConfigData\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetFileName\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetup\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddWidgets\fP (int a_numPanels, final int a_numLists, final int a_numTexts)"
+.br
+.ti -1c
+.RI "void \fBnotifySelection\fP (final String a_value)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Object \fBm_conHandler\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_isRoot\fP"
+.br
+.ti -1c
+.RI "List \fBm_panels\fP"
+.br
+.ti -1c
+.RI "List \fBm_listProps\fP"
+.br
+.ti -1c
+.RI "List \fBm_textProps\fP"
+.br
+.ti -1c
+.RI "List \fBm_listGroups\fP"
+.br
+.ti -1c
+.RI "List \fBm_textGroups\fP"
+.br
+.ti -1c
+.RI "JPanel \fBm_listPanel\fP"
+.br
+.ti -1c
+.RI "JPanel \fBm_textPanel\fP"
+.br
+.ti -1c
+.RI "JPanel \fBm_configPanel\fP"
+.br
+.ti -1c
+.RI "JButton \fBm_configButton\fP"
+.br
+.ti -1c
+.RI "ConfigButtonListener \fBm_cbl\fP"
+.br
+.ti -1c
+.RI "JTextField \fBm_fileName\fP"
+.br
+.ti -1c
+.RI "JButton \fBm_configureButton\fP"
+.br
+.ti -1c
+.RI "JTextField \fBm_configItem\fP"
+.br
+.ti -1c
+.RI "Configurable \fBm_conObj\fP"
+.br
+.ti -1c
+.RI "\fBConfigFrame\fP \fBm_parent\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.19 $'"
+.br
+.ti -1c
+.RI "static final String \fBm_defaultConfigFile\fP = 'jgap\&.con'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+GUI for the JGAP Configurator\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 29 of file ConfigFrame\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.gui\&.ConfigFrame\&.addWidgets (inta_numPanels, final inta_numLists, final inta_numTexts)\fC [inline]\fP, \fC [private]\fP"
+Add the widgets to the frame\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_numPanels\fP Number of panels to add 
+.br
+\fIa_numLists\fP Number of lists to add 
+.br
+\fIa_numTexts\fP Number of text boxes to add
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 299 of file ConfigFrame\&.java\&.
+.PP
+References org\&.jgap\&.gui\&.ConfigFrame\&.m_cbl, org\&.jgap\&.gui\&.ConfigFrame\&.m_configButton, org\&.jgap\&.gui\&.ConfigFrame\&.m_configItem, org\&.jgap\&.gui\&.ConfigFrame\&.m_configPanel, org\&.jgap\&.gui\&.ConfigFrame\&.m_configureButton, org\&.jgap\&.gui\&.ConfigFrame\&.m_fileName, org\&.jgap\&.gui\&.ConfigFrame\&.m_isRoot, org\&.jgap\&.gui\&.ConfigFrame\&.m_listPanel, and org\&.jgap\&.gui\&.ConfigFrame\&.m_textPanel\&.
+.PP
+Referenced by org\&.jgap\&.gui\&.ConfigFrame\&.setup()\&.
+.SS "void org\&.jgap\&.gui\&.ConfigFrame\&.createAndShowGUI (final Objecta_conHandler)\fC [inline]\fP"
+Does the initial setup of the JFrame and shows it\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conHandler\fP the configuration handler from which this \fBConfigFrame\fP would get information
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 109 of file ConfigFrame\&.java\&.
+.PP
+References org\&.jgap\&.gui\&.ConfigFrame\&.m_conHandler, org\&.jgap\&.gui\&.ConfigFrame\&.m_isRoot, and org\&.jgap\&.gui\&.ConfigFrame\&.setup()\&.
+.SS "ConfigData org\&.jgap\&.gui\&.ConfigFrame\&.getConfigData ()\fC [inline]\fP"
+Getter for the \fBConfiguration\fP Information on this frame\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The ConfigData object containing the configuration information on this frame
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 154 of file ConfigFrame\&.java\&.
+.SS "String org\&.jgap\&.gui\&.ConfigFrame\&.getFileName ()\fC [inline]\fP"
+Get the config file to write to\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+the config file name to write to
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 195 of file ConfigFrame\&.java\&.
+.PP
+References org\&.jgap\&.gui\&.ConfigFrame\&.m_defaultConfigFile, and org\&.jgap\&.gui\&.ConfigFrame\&.m_isRoot\&.
+.SS "void org\&.jgap\&.gui\&.ConfigFrame\&.notifySelection (final Stringa_value)\fC [inline]\fP, \fC [private]\fP"
+Notify the frame that a value has been selected in the output list for further configuration\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 861 of file ConfigFrame\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gui\&.ConfigFrame\&.ConfigListSelectionListener\&.valueChanged()\&.
+.SS "void org\&.jgap\&.gui\&.ConfigFrame\&.setup ()\fC [inline]\fP, \fC [private]\fP"
+Setup the GUI\&. There are 3 maximum panels at this time\&. The first one contains JLists if there are configurable values that can be choosen from a list of items\&. The second panel contains all values configurable via a JTextField\&. The third panel contains the filename and configure button\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+find a better way to get the classname than getNS() 
+.RE
+.PP
+
+.PP
+Definition at line 220 of file ConfigFrame\&.java\&.
+.PP
+References org\&.jgap\&.gui\&.ConfigFrame\&.addWidgets(), and org\&.jgap\&.gui\&.ConfigFrame\&.m_conHandler\&.
+.PP
+Referenced by org\&.jgap\&.gui\&.ConfigFrame\&.createAndShowGUI()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gui\&.ConfigFrame\&.CVS_REVISION = '$Revision: 1\&.19 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 33 of file ConfigFrame\&.java\&.
+.SS "ConfigButtonListener org\&.jgap\&.gui\&.ConfigFrame\&.m_cbl\fC [private]\fP"
+
+.PP
+Definition at line 63 of file ConfigFrame\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gui\&.ConfigFrame\&.addWidgets()\&.
+.SS "JButton org\&.jgap\&.gui\&.ConfigFrame\&.m_configButton\fC [private]\fP"
+
+.PP
+Definition at line 61 of file ConfigFrame\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gui\&.ConfigFrame\&.addWidgets()\&.
+.SS "JTextField org\&.jgap\&.gui\&.ConfigFrame\&.m_configItem\fC [private]\fP"
+
+.PP
+Definition at line 69 of file ConfigFrame\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gui\&.ConfigFrame\&.addWidgets()\&.
+.SS "JPanel org\&.jgap\&.gui\&.ConfigFrame\&.m_configPanel\fC [private]\fP"
+
+.PP
+Definition at line 59 of file ConfigFrame\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gui\&.ConfigFrame\&.addWidgets()\&.
+.SS "JButton org\&.jgap\&.gui\&.ConfigFrame\&.m_configureButton\fC [private]\fP"
+
+.PP
+Definition at line 67 of file ConfigFrame\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gui\&.ConfigFrame\&.addWidgets()\&.
+.SS "Object org\&.jgap\&.gui\&.ConfigFrame\&.m_conHandler\fC [private]\fP"
+
+.PP
+Definition at line 36 of file ConfigFrame\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gui\&.ConfigFrame\&.createAndShowGUI(), and org\&.jgap\&.gui\&.ConfigFrame\&.setup()\&.
+.SS "Configurable org\&.jgap\&.gui\&.ConfigFrame\&.m_conObj\fC [private]\fP"
+
+.PP
+Definition at line 71 of file ConfigFrame\&.java\&.
+.SS "final String org\&.jgap\&.gui\&.ConfigFrame\&.m_defaultConfigFile = 'jgap\&.con'\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 77 of file ConfigFrame\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gui\&.ConfigFrame\&.getFileName()\&.
+.SS "JTextField org\&.jgap\&.gui\&.ConfigFrame\&.m_fileName\fC [private]\fP"
+
+.PP
+Definition at line 65 of file ConfigFrame\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gui\&.ConfigFrame\&.addWidgets()\&.
+.SS "boolean org\&.jgap\&.gui\&.ConfigFrame\&.m_isRoot\fC [private]\fP"
+
+.PP
+Definition at line 38 of file ConfigFrame\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gui\&.ConfigFrame\&.addWidgets(), org\&.jgap\&.gui\&.ConfigFrame\&.createAndShowGUI(), and org\&.jgap\&.gui\&.ConfigFrame\&.getFileName()\&.
+.SS "List org\&.jgap\&.gui\&.ConfigFrame\&.m_listGroups\fC [private]\fP"
+
+.PP
+Definition at line 50 of file ConfigFrame\&.java\&.
+.SS "JPanel org\&.jgap\&.gui\&.ConfigFrame\&.m_listPanel\fC [private]\fP"
+
+.PP
+Definition at line 55 of file ConfigFrame\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gui\&.ConfigFrame\&.addWidgets()\&.
+.SS "List org\&.jgap\&.gui\&.ConfigFrame\&.m_listProps\fC [private]\fP"
+
+.PP
+Definition at line 44 of file ConfigFrame\&.java\&.
+.SS "List org\&.jgap\&.gui\&.ConfigFrame\&.m_panels\fC [private]\fP"
+
+.PP
+Definition at line 41 of file ConfigFrame\&.java\&.
+.SS "\fBConfigFrame\fP org\&.jgap\&.gui\&.ConfigFrame\&.m_parent\fC [private]\fP"
+
+.PP
+Definition at line 74 of file ConfigFrame\&.java\&.
+.SS "List org\&.jgap\&.gui\&.ConfigFrame\&.m_textGroups\fC [private]\fP"
+
+.PP
+Definition at line 53 of file ConfigFrame\&.java\&.
+.SS "JPanel org\&.jgap\&.gui\&.ConfigFrame\&.m_textPanel\fC [private]\fP"
+
+.PP
+Definition at line 57 of file ConfigFrame\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gui\&.ConfigFrame\&.addWidgets()\&.
+.SS "List org\&.jgap\&.gui\&.ConfigFrame\&.m_textProps\fC [private]\fP"
+
+.PP
+Definition at line 47 of file ConfigFrame\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

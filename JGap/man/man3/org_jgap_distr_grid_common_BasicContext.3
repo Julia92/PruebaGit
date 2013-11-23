@@ -1,0 +1,153 @@
+.TH "org.jgap.distr.grid.common.BasicContext" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.grid.common.BasicContext \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBasicContext\fP ()"
+.br
+.ti -1c
+.RI "\fBBasicContext\fP (String a_appId, Object a_contextId)"
+.br
+.ti -1c
+.RI "Object \fBgetContextId\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetContextIdAsString\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetContextId\fP (Object a_contextId)"
+.br
+.ti -1c
+.RI "String \fBgetAppId\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetAppId\fP (String a_appId)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "String \fBm_appId\fP"
+.br
+.ti -1c
+.RI "Object \fBm_contextId\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.3 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Holds information to identify the context in which a solution should be evolved\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file BasicContext\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.BasicContext ()\fC [inline]\fP"
+
+.PP
+Definition at line 29 of file BasicContext\&.java\&.
+.SS "org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.BasicContext (Stringa_appId, Objecta_contextId)\fC [inline]\fP"
+
+.PP
+Definition at line 32 of file BasicContext\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.setAppId(), and org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.setContextId()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "String org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.getAppId ()\fC [inline]\fP"
+
+.PP
+Definition at line 59 of file BasicContext\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.m_appId\&.
+.SS "Object org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.getContextId ()\fC [inline]\fP"
+
+.PP
+Definition at line 37 of file BasicContext\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.m_contextId\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.getContextIdAsString ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+context ID as a string, as it should be a string most times (but not always!) 
+.RE
+.PP
+
+.PP
+Definition at line 45 of file BasicContext\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.m_contextId\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.setAppId (Stringa_appId)\fC [inline]\fP"
+
+.PP
+Definition at line 63 of file BasicContext\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.m_appId\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.BasicContext()\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.setContextId (Objecta_contextId)\fC [inline]\fP"
+Sets the context id\&. It is an object, not a string, as a request or a response could be available as a header-object and not by its ID\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_contextId\fP the context id to set 
+.RE
+.PP
+
+.PP
+Definition at line 55 of file BasicContext\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.m_contextId\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.BasicContext()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.CVS_REVISION = '$Revision: 1\&.3 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 23 of file BasicContext\&.java\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.m_appId\fC [private]\fP"
+
+.PP
+Definition at line 25 of file BasicContext\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.getAppId(), and org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.setAppId()\&.
+.SS "Object org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.m_contextId\fC [private]\fP"
+
+.PP
+Definition at line 27 of file BasicContext\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.getContextId(), org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.getContextIdAsString(), and org\&.jgap\&.distr\&.grid\&.common\&.BasicContext\&.setContextId()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

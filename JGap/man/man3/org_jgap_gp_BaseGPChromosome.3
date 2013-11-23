@@ -1,0 +1,566 @@
+.TH "org.jgap.gp.BaseGPChromosome" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.BaseGPChromosome \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.IGPChromosome\fP\&.
+.PP
+Inherited by \fBorg\&.jgap\&.gp\&.impl\&.ProgramChromosome\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBaseGPChromosome\fP (GPConfiguration a_configuration)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBBaseGPChromosome\fP (GPConfiguration a_configuration, \fBIGPProgram\fP a_ind)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBIGPProgram\fP \fBgetIndividual\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetIndividual\fP (\fBIGPProgram\fP a_ind)"
+.br
+.ti -1c
+.RI "int \fBgetTerminal\fP (int a_index)"
+.br
+.ti -1c
+.RI "int \fBgetFunction\fP (int a_index)"
+.br
+.ti -1c
+.RI "int \fBgetTerminal\fP (int a_index, Class a_type, int a_subType)"
+.br
+.ti -1c
+.RI "int \fBgetFunction\fP (int a_index, Class a_type, int a_subType)"
+.br
+.ti -1c
+.RI "int \fBnumTerminals\fP ()"
+.br
+.ti -1c
+.RI "int \fBnumFunctions\fP ()"
+.br
+.ti -1c
+.RI "int \fBnumTerminals\fP (Class a_type, int a_subType)"
+.br
+.ti -1c
+.RI "int \fBnumFunctions\fP (Class a_type, int a_subType)"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP \fBgetNode\fP (int a_index)"
+.br
+.ti -1c
+.RI "int \fBgetCommandOfClass\fP (int a_n, Class a_class)"
+.br
+.ti -1c
+.RI "int \fBgetAssignableFromClass\fP (int a_n, Class a_class)"
+.br
+.ti -1c
+.RI "int \fBgetVariableWithReturnType\fP (int a_n, Class a_returnType)"
+.br
+.ti -1c
+.RI "GPConfiguration \fBgetGPConfiguration\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "GPConfiguration \fBm_configuration\fP"
+.br
+.ti -1c
+.RI "\fBIGPProgram\fP \fBm_ind\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.8 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Abstract base class for all implementations of \fBIGPChromosome\fP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file BaseGPChromosome\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.BaseGPChromosome\&.BaseGPChromosome (GPConfigurationa_configuration) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 37 of file BaseGPChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.BaseGPChromosome\&.m_configuration\&.
+.SS "org\&.jgap\&.gp\&.BaseGPChromosome\&.BaseGPChromosome (GPConfigurationa_configuration, \fBIGPProgram\fPa_ind) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 47 of file BaseGPChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.BaseGPChromosome\&.m_ind\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int org\&.jgap\&.gp\&.BaseGPChromosome\&.getAssignableFromClass (inta_n, Classa_class)\fC [inline]\fP"
+Helper: Find GP command being assignable from given class\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_n\fP return the n'th found command (starting at zero) 
+.br
+\fIa_class\fP the class to find a command for 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+index of first found matching GP command, or -1 if none found
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 318 of file BaseGPChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.IGPChromosome\&.getFunctions()\&.
+.SS "int org\&.jgap\&.gp\&.BaseGPChromosome\&.getCommandOfClass (inta_n, Classa_class)\fC [inline]\fP"
+Helper: Find GP command with given class and return index of it\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_n\fP return the n'th found command (starting at zero) 
+.br
+\fIa_class\fP the class to find a command for 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+index of first found matching GP command, or -1 if none found
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 295 of file BaseGPChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.IGPChromosome\&.getFunctions()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFullNode()\&.
+.SS "int org\&.jgap\&.gp\&.BaseGPChromosome\&.getFunction (inta_index)\fC [inline]\fP"
+Gets the a_index'th function in this chromosome\&. The nodes are counted in a depth-first manner, with node zero being the first function in this chromosome\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the a_index'th function to get 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the function
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 (since 3\&.0 in ProgramChromosome) 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPChromosome\fP\&.
+.PP
+Definition at line 113 of file BaseGPChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.IGPChromosome\&.getFunctions(), and org\&.jgap\&.gp\&.BaseGPChromosome\&.m_ind\&.
+.SS "int org\&.jgap\&.gp\&.BaseGPChromosome\&.getFunction (inta_index, Classa_type, inta_subType)\fC [inline]\fP"
+Gets the i'th function of the given return type in this chromosome\&. The nodes are counted in a depth-first manner, with node zero being the first function of the given type in this chromosome\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the i'th function to get 
+.br
+\fIa_type\fP the type of function to get 
+.br
+\fIa_subType\fP the subtype to consider 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the index of the function found, or -1 if no appropriate function was found
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 (since 3\&.0 in ProgramChromosome) 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPChromosome\fP\&.
+.PP
+Definition at line 169 of file BaseGPChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.IGPChromosome\&.getFunctions(), and org\&.jgap\&.gp\&.BaseGPChromosome\&.m_ind\&.
+.SS "GPConfiguration org\&.jgap\&.gp\&.BaseGPChromosome\&.getGPConfiguration ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPChromosome\fP\&.
+.PP
+Definition at line 357 of file BaseGPChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.BaseGPChromosome\&.m_configuration\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.clone(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.createGene(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFull(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFullNode(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.init(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.selectNode()\&.
+.SS "\fBIGPProgram\fP org\&.jgap\&.gp\&.BaseGPChromosome\&.getIndividual ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the individual containing this chromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 (since 3\&.0 in ProgramChromosome) 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPChromosome\fP\&.
+.PP
+Definition at line 59 of file BaseGPChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.BaseGPChromosome\&.m_ind\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.clone(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFullNode(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.isPossible(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.redepth(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.selectNode(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toString(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toStringDebug(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toStringNorm()\&.
+.SS "\fBCommandGene\fP org\&.jgap\&.gp\&.BaseGPChromosome\&.getNode (inta_index)\fC [inline]\fP"
+Gets the a_index'th node in this chromosome\&. The nodes are counted in a depth-first manner, with node zero being the root of this chromosome\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the node number to get 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the node
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPChromosome\fP\&.
+.PP
+Definition at line 278 of file BaseGPChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.IGPChromosome\&.getFunctions()\&.
+.SS "int org\&.jgap\&.gp\&.BaseGPChromosome\&.getTerminal (inta_index)\fC [inline]\fP"
+Gets the i'th terminal in this chromosome\&. The nodes are counted in a depth-first manner, with node zero being the first terminal in this chromosome\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the i'th terminal to get 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the terminal
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 (since 3\&.0 in ProgramChromosome) 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPChromosome\fP\&.
+.PP
+Definition at line 89 of file BaseGPChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.IGPChromosome\&.getFunctions(), and org\&.jgap\&.gp\&.BaseGPChromosome\&.m_ind\&.
+.SS "int org\&.jgap\&.gp\&.BaseGPChromosome\&.getTerminal (inta_index, Classa_type, inta_subType)\fC [inline]\fP"
+Gets the a_index'th terminal of the given type in this chromosome\&. The nodes are counted in a depth-first manner, with node zero being the first terminal of the given type in this chromosome\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the a_index'th terminal to get 
+.br
+\fIa_type\fP the type of terminal to get 
+.br
+\fIa_subType\fP the subtype to consider 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the index of the terminal found, or -1 if no appropriate terminal was found
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 (since 3\&.0 in ProgramChromosome) 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPChromosome\fP\&.
+.PP
+Definition at line 140 of file BaseGPChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.IGPChromosome\&.getFunctions(), and org\&.jgap\&.gp\&.BaseGPChromosome\&.m_ind\&.
+.SS "int org\&.jgap\&.gp\&.BaseGPChromosome\&.getVariableWithReturnType (inta_n, Classa_returnType)\fC [inline]\fP"
+Helper: Find GP Variable with given return type and return index of it\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_n\fP return the n'th found command (starting at zero) 
+.br
+\fIa_returnType\fP the return type to find a Variable for 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+index of first found matching GP command, or -1 if none found
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 (since 3\&.0 in ProgramChromosome) 
+.RE
+.PP
+
+.PP
+Definition at line 341 of file BaseGPChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.IGPChromosome\&.getFunctions()\&.
+.SS "int org\&.jgap\&.gp\&.BaseGPChromosome\&.numFunctions ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the number of functions in this chromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPChromosome\fP\&.
+.PP
+Definition at line 208 of file BaseGPChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.IGPChromosome\&.getFunctions(), and org\&.jgap\&.gp\&.BaseGPChromosome\&.m_ind\&.
+.SS "int org\&.jgap\&.gp\&.BaseGPChromosome\&.numFunctions (Classa_type, inta_subType)\fC [inline]\fP"
+Counts the number of functions of the given type in this chromosome\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_type\fP the type of function to count 
+.br
+\fIa_subType\fP the subtype to consider 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of functions in this chromosome\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 (since 3\&.0 in ProgramChromosome) 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPChromosome\fP\&.
+.PP
+Definition at line 254 of file BaseGPChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.IGPChromosome\&.getFunctions(), and org\&.jgap\&.gp\&.BaseGPChromosome\&.m_ind\&.
+.SS "int org\&.jgap\&.gp\&.BaseGPChromosome\&.numTerminals ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the number of terminals in this chromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPChromosome\fP\&.
+.PP
+Definition at line 190 of file BaseGPChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.IGPChromosome\&.getFunctions(), and org\&.jgap\&.gp\&.BaseGPChromosome\&.m_ind\&.
+.SS "int org\&.jgap\&.gp\&.BaseGPChromosome\&.numTerminals (Classa_type, inta_subType)\fC [inline]\fP"
+Counts the number of terminals of the given type in this chromosome\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_type\fP the type of terminal to count 
+.br
+\fIa_subType\fP the subtype to consider 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of terminals in this chromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 (since 3\&.0 in ProgramChromosome) 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPChromosome\fP\&.
+.PP
+Definition at line 230 of file BaseGPChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.IGPChromosome\&.getFunctions(), and org\&.jgap\&.gp\&.BaseGPChromosome\&.m_ind\&.
+.SS "void org\&.jgap\&.gp\&.BaseGPChromosome\&.setIndividual (\fBIGPProgram\fPa_ind)\fC [inline]\fP"
+Sets the individual the chromosome belongs to\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ind\fP the individual containing this chromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 (since 3\&.0 in ProgramChromosome) 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPChromosome\fP\&.
+.PP
+Definition at line 71 of file BaseGPChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.BaseGPChromosome\&.m_ind\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.BaseGPChromosome\&.CVS_REVISION = '$Revision: 1\&.8 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file BaseGPChromosome\&.java\&.
+.SS "GPConfiguration org\&.jgap\&.gp\&.BaseGPChromosome\&.m_configuration\fC [private]\fP"
+The configuration object to use\&. 
+.PP
+Definition at line 30 of file BaseGPChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.BaseGPChromosome\&.BaseGPChromosome(), and org\&.jgap\&.gp\&.BaseGPChromosome\&.getGPConfiguration()\&.
+.SS "\fBIGPProgram\fP org\&.jgap\&.gp\&.BaseGPChromosome\&.m_ind\fC [private]\fP"
+The individual the chromosome belongs to\&. 
+.PP
+Definition at line 35 of file BaseGPChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.BaseGPChromosome\&.BaseGPChromosome(), org\&.jgap\&.gp\&.BaseGPChromosome\&.getFunction(), org\&.jgap\&.gp\&.BaseGPChromosome\&.getIndividual(), org\&.jgap\&.gp\&.BaseGPChromosome\&.getTerminal(), org\&.jgap\&.gp\&.BaseGPChromosome\&.numFunctions(), org\&.jgap\&.gp\&.BaseGPChromosome\&.numTerminals(), and org\&.jgap\&.gp\&.BaseGPChromosome\&.setIndividual()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

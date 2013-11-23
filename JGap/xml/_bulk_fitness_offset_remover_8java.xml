@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="_bulk_fitness_offset_remover_8java" kind="file">
+    <compoundname>BulkFitnessOffsetRemover.java</compoundname>
+    <innerclass refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover" prot="public">org::jgap::impl::BulkFitnessOffsetRemover</innerclass>
+    <innernamespace refid="namespaceorg_1_1jgap_1_1impl">org::jgap::impl</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>JGAP.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>JGAP<sp/>offers<sp/>a<sp/>dual<sp/>license<sp/>model<sp/>containing<sp/>the<sp/>LGPL<sp/>as<sp/>well<sp/>as<sp/>the<sp/>MPL.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>For<sp/>licensing<sp/>information<sp/>please<sp/>see<sp/>the<sp/>file<sp/>license.txt<sp/>included<sp/>with<sp/>JGAP</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>or<sp/>have<sp/>a<sp/>look<sp/>at<sp/>the<sp/>top<sp/>of<sp/>class<sp/>org.jgap.Chromosome<sp/>which<sp/>representatively</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>includes<sp/>the<sp/>JGAP<sp/>license<sp/>policy<sp/>applicable<sp/>for<sp/>any<sp/>file<sp/>delivered<sp/>with<sp/>JGAP.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">org.jgap.impl;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.*;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.*;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223" refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover" kindref="compound">BulkFitnessOffsetRemover</ref></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1_bulk_fitness_function" kindref="compound">BulkFitnessFunction</ref><sp/>{</highlight></codeline>
+<codeline lineno="226" refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a5a306d0059b248c4b2282b633e49f878" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a5a306d0059b248c4b2282b633e49f878" kindref="member">CVS_REVISION</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$Revision:<sp/>1.12<sp/>$&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="229"><highlight class="comment"><sp/><sp/><sp/>*<sp/>Replace<sp/>this<sp/>member<sp/>by<sp/>the<sp/>Configuration<sp/>as<sp/>soon<sp/>as<sp/>Configuration<sp/>allows</highlight></codeline>
+<codeline lineno="230"><highlight class="comment"><sp/><sp/><sp/>*<sp/>bulk<sp/>fitness<sp/>function<sp/>and<sp/>fitness<sp/>function<sp/>to<sp/>be<sp/>stored<sp/>both<sp/>in<sp/>it.</highlight></codeline>
+<codeline lineno="231"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232" refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a146b2858f31e684e3bec61818a32f730" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1_fitness_function" kindref="compound">FitnessFunction</ref><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a146b2858f31e684e3bec61818a32f730" kindref="member">m_ff</ref>;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="239"><highlight class="comment"><sp/><sp/><sp/><sp/>public<sp/>BulkFitnessOffsetRemover(Configuration<sp/>conf){</highlight></codeline>
+<codeline lineno="240"><highlight class="comment"><sp/><sp/><sp/>if(m_activeConfiguration)</highlight></codeline>
+<codeline lineno="241"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="242"><highlight class="comment"><sp/><sp/><sp/>*/</highlight></codeline>
+<codeline lineno="259" refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a6741e29abe529b43b2e61d3301a1ce3c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a6741e29abe529b43b2e61d3301a1ce3c" kindref="member">m_previousOffset</ref>;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261" refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a3cb4232935702ce5db82a3e8bb378f71" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a3cb4232935702ce5db82a3e8bb378f71" kindref="member">BulkFitnessOffsetRemover</ref>(</highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1_fitness_function" kindref="compound">FitnessFunction</ref><sp/>a_ff)<sp/>{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a_ff<sp/>==<sp/>null)<sp/>{</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>IllegalArgumentException(</highlight><highlight class="stringliteral">&quot;Fitness<sp/>function<sp/>must<sp/>not<sp/>be<sp/>null!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a146b2858f31e684e3bec61818a32f730" kindref="member">m_ff</ref><sp/>=<sp/>a_ff;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>(non-Javadoc)</highlight></codeline>
+<codeline lineno="269"><highlight class="comment"><sp/><sp/><sp/>*<sp/>@see<sp/>org.jgap.BulkFitnessFunction#evaluate(org.jgap.Chromosome[])</highlight></codeline>
+<codeline lineno="270"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271" refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a5ffd62bd47b23dfa534a5f4e775d3a0e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a5ffd62bd47b23dfa534a5f4e775d3a0e" kindref="member">evaluate</ref>(</highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref><sp/>a_chromosomes)<sp/>{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>offset<sp/>=<sp/>Double.MAX_VALUE;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>curFitness;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>Iterator<sp/>itChromosomes<sp/>=<sp/>a_chromosomes.iterator();</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref><sp/>chromosome;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(itChromosomes.hasNext())<sp/>{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>chromosome<sp/>=<sp/>(<ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref>)<sp/>itChromosomes.next();</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="279"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>is<sp/>a<sp/>workaround:</highlight></codeline>
+<codeline lineno="280"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>We<sp/>have<sp/>to<sp/>check,<sp/>wethter<sp/>a<sp/>Chromosome<sp/>has</highlight></codeline>
+<codeline lineno="281"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>already<sp/>been<sp/>evaluated,<sp/>because<sp/>it<sp/>may<sp/>be<sp/>too</highlight></codeline>
+<codeline lineno="282"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>expensive<sp/>to<sp/>unconditionally<sp/>evaluate<sp/>each<sp/>Chromosome.</highlight></codeline>
+<codeline lineno="283"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>We<sp/>use<sp/>the<sp/>&quot;caching<sp/>of<sp/>fitness<sp/>values&quot;<sp/>of<sp/>the<sp/>Chromosome.</highlight></codeline>
+<codeline lineno="284"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>But<sp/>in<sp/>the<sp/>current<sp/>Configuration,</highlight></codeline>
+<codeline lineno="285"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>there<sp/>is<sp/>no<sp/>fittnessFunction:<sp/>We<sp/>have<sp/>a<sp/>bulk<sp/>fitness<sp/>function</highlight></codeline>
+<codeline lineno="286"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>assigned.</highlight></codeline>
+<codeline lineno="287"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Look<sp/>at<sp/>the<sp/>code<sp/>of<sp/>Chromosome.getFitnessValue():</highlight></codeline>
+<codeline lineno="288"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>In<sp/>that<sp/>case,<sp/>a<sp/>negative<sp/>value<sp/>will<sp/>be<sp/>returned.</highlight></codeline>
+<codeline lineno="289"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>If<sp/>a<sp/>redesign<sp/>of<sp/>that<sp/>method<sp/>is<sp/>made,<sp/>this<sp/>has<sp/>to<sp/>be<sp/>changed</highlight></codeline>
+<codeline lineno="290"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>here<sp/>too..<sp/>.</highlight></codeline>
+<codeline lineno="291"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>curFitness<sp/>=<sp/>chromosome.getFitnessValueDirectly();</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(curFitness<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>OK,<sp/>get<sp/>it<sp/>from<sp/>our<sp/>fitness<sp/>function.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>curFitness<sp/>=<sp/>m_ff.getFitnessValue(chromosome);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>And<sp/>store<sp/>it<sp/>to<sp/>avoid<sp/>evaluation<sp/>of<sp/>the<sp/>same<sp/>Chromosome<sp/>again:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chromosome.setFitnessValue(curFitness);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="301"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Those<sp/>have<sp/>fitness<sp/>values<sp/>already<sp/>without<sp/>offset</highlight></codeline>
+<codeline lineno="302"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>of<sp/>the<sp/>previous<sp/>evaluation.</highlight></codeline>
+<codeline lineno="303"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Reattach<sp/>it<sp/>to<sp/>allow<sp/>comparison.</highlight></codeline>
+<codeline lineno="304"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Else<sp/>these<sp/>Chromosomes<sp/>would<sp/>be<sp/>the<sp/>unfittest<sp/>and</highlight></codeline>
+<codeline lineno="305"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>additionally<sp/>disallow<sp/>cutting<sp/>a<sp/>huge<sp/>offset<sp/>from<sp/>the<sp/>others.</highlight></codeline>
+<codeline lineno="306"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>curFitness<sp/>+=<sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a6741e29abe529b43b2e61d3301a1ce3c" kindref="member">m_previousOffset</ref>;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chromosome.setFitnessValue(curFitness);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>search<sp/>for<sp/>the<sp/>offset<sp/>that<sp/>is<sp/>to<sp/>be<sp/>cut:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>offset<sp/>=<sp/>(offset<sp/>&lt;<sp/>curFitness)<sp/>?<sp/>offset<sp/>:<sp/>curFitness;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="314"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Now<sp/>we<sp/>have<sp/>the<sp/>classical<sp/>evaluated<sp/>Chromosomes</highlight></codeline>
+<codeline lineno="315"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>and<sp/>the<sp/>minimum<sp/>fitness.</highlight></codeline>
+<codeline lineno="316"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>It<sp/>would<sp/>be<sp/>easy<sp/>to<sp/>simply<sp/>subtract<sp/>that<sp/>value<sp/>from</highlight></codeline>
+<codeline lineno="317"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>each<sp/>Chromosomes<sp/>fitness.<sp/>But<sp/>in<sp/>that<sp/>case<sp/>the</highlight></codeline>
+<codeline lineno="318"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>unfittest<sp/>Chromosome<sp/>would<sp/>possible<sp/>have<sp/>no<sp/>chance<sp/>to<sp/>survive.</highlight></codeline>
+<codeline lineno="319"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>In<sp/>a<sp/>WeightedRouletteSelector<sp/>it<sp/>would<sp/>not<sp/>get</highlight></codeline>
+<codeline lineno="320"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>a<sp/>single<sp/>slot<sp/>to<sp/>be<sp/>selected<sp/>as<sp/>it&apos;s<sp/>fitness<sp/>value</highlight></codeline>
+<codeline lineno="321"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>would<sp/>be<sp/>zero.</highlight></codeline>
+<codeline lineno="322"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>So<sp/>we<sp/>have<sp/>to<sp/>leave<sp/>at<sp/>least<sp/>a<sp/>fitness<sp/>value<sp/>of<sp/>1.</highlight></codeline>
+<codeline lineno="323"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Ups,<sp/>if<sp/>forgot:<sp/>Neil<sp/>throws<sp/>exceptions,<sp/>whenever<sp/>a</highlight></codeline>
+<codeline lineno="324"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>fitness<sp/>value<sp/>is<sp/>below<sp/>1<sp/>and<sp/>also<sp/>does<sp/>not<sp/>accept</highlight></codeline>
+<codeline lineno="325"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>assignment<sp/>of<sp/>fitness<sp/>values<sp/>&lt;1.<sp/>Ok,<sp/>so<sp/>he<sp/>ensures</highlight></codeline>
+<codeline lineno="326"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>that<sp/>every<sp/>Chromosome<sp/>may<sp/>survive...</highlight></codeline>
+<codeline lineno="327"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/>offset--;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a6741e29abe529b43b2e61d3301a1ce3c" kindref="member">m_previousOffset</ref><sp/>=<sp/>offset;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>offset<sp/>cannot<sp/>be<sp/>&lt;0...<sp/>thx<sp/>to<sp/>fitness<sp/>value<sp/>policy<sp/>of<sp/>jgap.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>finally<sp/>remove<sp/>the<sp/>offset<sp/>from<sp/>every<sp/>fitness<sp/>value:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/>itChromosomes<sp/>=<sp/>a_chromosomes.iterator();</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(itChromosomes.hasNext())<sp/>{</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>chromosome<sp/>=<sp/>(<ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref>)<sp/>itChromosomes.next();</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>chromosome.setFitnessValue(chromosome.getFitnessValue()<sp/>-<sp/>offset);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="434" refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1ab0c11462e990be4138a99d0a6e4611e2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1ab0c11462e990be4138a99d0a6e4611e2" kindref="member">getAbsoluteFitness</ref>(</highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref><sp/>a_individuum)<sp/>{</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fitness<sp/>=<sp/>a_individuum.getFitnessValue();</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fitness<sp/>&lt;<sp/>0.0)<sp/>{</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>OK,<sp/>get<sp/>it<sp/>from<sp/>our<sp/>fitness<sp/>function.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fitness<sp/>=<sp/>m_ff.getFitnessValue(a_individuum);</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>And<sp/>store<sp/>it<sp/>to<sp/>avoid<sp/>evaluation<sp/>of<sp/>the<sp/>same<sp/>Chromosome<sp/>again:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>a_individuum.setFitnessValue(fitness);</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="444"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Those<sp/>have<sp/>fitness<sp/>values<sp/>already<sp/>without<sp/>offset</highlight></codeline>
+<codeline lineno="445"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>of<sp/>the<sp/>previous<sp/>evaluation.</highlight></codeline>
+<codeline lineno="446"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Reattach<sp/>it<sp/>to<sp/>allow<sp/>comparison.</highlight></codeline>
+<codeline lineno="447"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Else<sp/>these<sp/>Chromosomes<sp/>would<sp/>be<sp/>the<sp/>unfittest<sp/>and</highlight></codeline>
+<codeline lineno="448"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>additionally<sp/>disallow<sp/>cutting<sp/>a<sp/>huge<sp/>offset<sp/>from<sp/>the<sp/>others.</highlight></codeline>
+<codeline lineno="449"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fitness<sp/>+=<sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a6741e29abe529b43b2e61d3301a1ce3c" kindref="member">m_previousOffset</ref>;</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fitness;</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"></highlight></codeline>
+<codeline lineno="461" refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1ab7f936892509f88c709361f5356d2195" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Object<sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1ab7f936892509f88c709361f5356d2195" kindref="member">clone</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1_fitness_function" kindref="compound">FitnessFunction</ref><sp/>ff<sp/>=<sp/>(<ref refid="classorg_1_1jgap_1_1_fitness_function" kindref="compound">FitnessFunction</ref>)<ref refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a146b2858f31e684e3bec61818a32f730" kindref="member">m_ff</ref>.<ref refid="classorg_1_1jgap_1_1_fitness_function_1aa47c6f886479efc5ed5fe84eb7f9b5ca" kindref="member">clone</ref>();</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover" kindref="compound">BulkFitnessOffsetRemover</ref><sp/>result<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a3cb4232935702ce5db82a3e8bb378f71" kindref="member">BulkFitnessOffsetRemover</ref>(ff);</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="466"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BulkFitnessOffsetRemover.java"/>
+  </compounddef>
+</doxygen>

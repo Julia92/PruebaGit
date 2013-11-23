@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="interfaceorg_1_1jgap_1_1_i_handler" kind="interface" prot="public">
+    <compoundname>org::jgap::IHandler</compoundname>
+    <derivedcompoundref refid="interfaceorg_1_1jgap_1_1_i_clone_handler" prot="public" virt="non-virtual">org.jgap.ICloneHandler</derivedcompoundref>
+    <derivedcompoundref refid="interfaceorg_1_1jgap_1_1_i_compare_to_handler" prot="public" virt="non-virtual">org.jgap.ICompareToHandler</derivedcompoundref>
+    <derivedcompoundref refid="interfaceorg_1_1jgap_1_1_i_initializer" prot="public" virt="non-virtual">org.jgap.IInitializer</derivedcompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="interfaceorg_1_1jgap_1_1_i_handler_1ac87eeb82b5fb4d6e5ba1f8850db52118" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.IHandler.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.3 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IHandler.java" line="22" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IHandler.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1_i_handler_1a026d7a41944049a4f812ee0d1151d40e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.IHandler.isHandlerFor</definition>
+        <argsstring>(Object a_obj, Class a_class)</argsstring>
+        <name>isHandlerFor</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1_chromosome_for_testing_1a05fb9ea1e9bcdb28eef5ab4ee7f22f94">isHandlerFor</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1_chromosome_1a45bc47533c183ecf3297d7507299cc85">isHandlerFor</reimplementedby>
+        <param>
+          <type>Object</type>
+          <declname>a_obj</declname>
+        </param>
+        <param>
+          <type>Class</type>
+          <declname>a_class</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determines whether the handler is suitable for the given object instance or class.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the object instance to check </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_class</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the class to check, alternatively if no object instance is available (some handlers could need to get an object and would always return false if only a class is provided) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true: handler suitable for given object or class</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IHandler.java" line="37" column="1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_j_g_a_p_factory_1a3888002a5c5ab9cfc5244e2b6d1d8e4f" compoundref="_j_g_a_p_factory_8java" startline="268" endline="327">org.jgap.impl.JGAPFactory.findHandlerFor</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_default_initializer_test_1a3c47d2a9562e607e966cb29bf0487f57" compoundref="_default_initializer_test_8java" startline="37" endline="47">org.jgap.impl.DefaultInitializerTest.testIsHandlerFor_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_default_compare_to_handler_test_1ac0b0be2771123f3d9b86f18b87c44991" compoundref="_default_compare_to_handler_test_8java" startline="38" endline="42">org.jgap.impl.DefaultCompareToHandlerTest.testIsHandlerFor_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_test_1a2cd8fd4891fa24c77c21736cb209e51f" compoundref="_default_clone_handler_test_8java" startline="40" endline="44">org.jgap.impl.DefaultCloneHandlerTest.testIsHandlerFor_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_default_compare_to_handler_test_1a05957c5862031734add86747193ee1c1" compoundref="_default_compare_to_handler_test_8java" startline="50" endline="54">org.jgap.impl.DefaultCompareToHandlerTest.testIsHandlerFor_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_test_1afbfdc42c1bbe80b2a2abe3f2fbe4e610" compoundref="_default_clone_handler_test_8java" startline="53" endline="57">org.jgap.impl.DefaultCloneHandlerTest.testIsHandlerFor_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_test_1a96cae263d2680a04beae6c986da7f467" compoundref="_default_clone_handler_test_8java" startline="65" endline="70">org.jgap.impl.DefaultCloneHandlerTest.testIsHandlerFor_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_default_compare_to_handler_test_1acce9aac9d4fa77f19a42e9de1449a9c2" compoundref="_default_compare_to_handler_test_8java" startline="104" endline="110">org.jgap.impl.DefaultCompareToHandlerTest.testIsHandlerFor_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_default_compare_to_handler_test_1accb19b527b5a9cd40e1f1878a025a507" compoundref="_default_compare_to_handler_test_8java" startline="62" endline="67">org.jgap.impl.DefaultCompareToHandlerTest.testIsHandlerFor_3</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_test_1a179a482c1af5c5fb9d459c8a1873b81d" compoundref="_default_clone_handler_test_8java" startline="78" endline="82">org.jgap.impl.DefaultCloneHandlerTest.testIsHandlerFor_3</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1_i_handler_1a60199862000df04a4b2491d6d08f2f2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.IHandler.perform</definition>
+        <argsstring>(Object a_obj, Class a_class, Object a_params)</argsstring>
+        <name>perform</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1_chromosome_for_testing_1a89f5971800a63faa175bed4d141aa932">perform</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1_chromosome_1abee38007a07ba7a1442dd96571ed7cc1">perform</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1_genotype_test_1_1_chromosome_for_test2_1a1bdbbfe0c132aa8096c909a7bfd7f7b8">perform</reimplementedby>
+        <param>
+          <type>Object</type>
+          <declname>a_obj</declname>
+        </param>
+        <param>
+          <type>Class</type>
+          <declname>a_class</declname>
+        </param>
+        <param>
+          <type>Object</type>
+          <declname>a_params</declname>
+        </param>
+        <exceptions> throws Exception</exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Performs a task for the given object or class. For some handlers, additional parameters are necessary, which could be provided.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the object instance to perform the handler task for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_class</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the class to perform the handler task for, in case no object instance is available (some handlers could need to get an object and would always throw an exception if only a class is provided) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>optional parameters needed for the handler to perform its task </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in case of any error </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Object</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IHandler.java" line="55" column="1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a0bc7fd36123954647b0c8a7e6ca8e5ae" compoundref="_best_chromosomes_selector_8java" startline="94" endline="128">org.jgap.impl.BestChromosomesSelector.add</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa465c7cbfb45d77644b3d195782a12c9" compoundref="_g_p_genotype_8java" startline="557" endline="639">org.jgap.gp.impl.GPGenotype.calcFitness</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa21cc2dde0ca8cbc6048b37e62dd1593" compoundref="_g_p_genotype_8java" startline="1131" endline="1146">org.jgap.gp.impl.GPGenotype.cloneProgram</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_population_1a21670302d6d9c5ad4bdc2903797eabff" compoundref="_g_p_population_8java" startline="274" endline="392">org.jgap.gp.impl.GPPopulation.create</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_population_1a6daa11823812dd94682ae3a590dd38f1" compoundref="_g_p_population_8java" startline="657" endline="695">org.jgap.gp.impl.GPPopulation.determineFittestProgram</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_natural_selector_ext_1ad330fe572e650caf3549d5896beb40a9" compoundref="_natural_selector_ext_8java" startline="156" endline="180">org.jgap.NaturalSelectorExt.selectChromosome</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a8d501289de36fcd27de2352ce8f6404a" compoundref="_weighted_roulette_selector_8java" startline="158" endline="231">org.jgap.impl.WeightedRouletteSelector.selectChromosomes</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_default_initializer_test_1af88735b99ae447a9d6fed7fcdf06bb3b" compoundref="_default_initializer_test_8java" startline="74" endline="81">org.jgap.impl.DefaultInitializerTest.testPerform_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_default_compare_to_handler_test_1af380284014d09da8a5c010c6d4051fc0" compoundref="_default_compare_to_handler_test_8java" startline="75" endline="81">org.jgap.impl.DefaultCompareToHandlerTest.testPerform_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_test_1a7bf4ce48eefd1f4478a058709a1547d8" compoundref="_default_clone_handler_test_8java" startline="90" endline="97">org.jgap.impl.DefaultCloneHandlerTest.testPerform_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_default_compare_to_handler_test_1a6cd65babd1df12aa868620d47e00b440" compoundref="_default_compare_to_handler_test_8java" startline="89" endline="96">org.jgap.impl.DefaultCompareToHandlerTest.testPerform_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_test_1a4cb16a46cc0e965beaded166b79d530d" compoundref="_default_clone_handler_test_8java" startline="105" endline="112">org.jgap.impl.DefaultCloneHandlerTest.testPerform_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_test_1a3c4e6b78ef40a97c7a902df60e23502b" compoundref="_default_clone_handler_test_8java" startline="120" endline="126">org.jgap.impl.DefaultCloneHandlerTest.testPerform_3</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_test_1a21365d7baf9c2a53394c08bdd59c9ae5" compoundref="_default_clone_handler_test_8java" startline="134" endline="140">org.jgap.impl.DefaultCloneHandlerTest.testPerform_4</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_test_1a541b4945f6f3f4d782e57d319d7d320d" compoundref="_default_clone_handler_test_8java" startline="148" endline="154">org.jgap.impl.DefaultCloneHandlerTest.testPerform_5</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_default_clone_handler_test_1aef4aea5db7513ca7902bf2dbbe51cf25" compoundref="_default_clone_handler_test_8java" startline="162" endline="172">org.jgap.impl.DefaultCloneHandlerTest.testPerform_6</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Interface for handlers capable of doing somethign specific.</para><para>Such a handler acknowledges via isHandlerFor(Class) that the method perform(Object, Object) could be executed for the given class.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="14460">
+        <label>org.jgap.ChromosomeTest.MyChromosome</label>
+        <childnode refid="14456" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14462">
+        <label>org.jgap.impl.DefaultInitializerTest.MyInitializerForTesting</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_default_initializer_test_1_1_my_initializer_for_testing"/>
+        <childnode refid="14454" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14461">
+        <label>org.jgap.impl.DefaultInitializer</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_default_initializer"/>
+        <childnode refid="14454" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14456">
+        <label>org.jgap.Chromosome</label>
+        <link refid="classorg_1_1jgap_1_1_chromosome"/>
+        <childnode refid="14455" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14449">
+        <label>org.jgap.IHandler</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_handler"/>
+      </node>
+      <node id="14457">
+        <label>org.jgap.ChromosomeForTesting</label>
+        <link refid="classorg_1_1jgap_1_1_chromosome_for_testing"/>
+        <childnode refid="14456" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14452">
+        <label>org.jgap.ICompareToHandler</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_compare_to_handler"/>
+        <childnode refid="14449" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14459">
+        <label>org.jgap.ChromosomeForTesting2</label>
+        <link refid="classorg_1_1jgap_1_1_chromosome_for_testing2"/>
+        <childnode refid="14456" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14451">
+        <label>org.jgap.impl.DefaultCloneHandler</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_default_clone_handler"/>
+        <childnode refid="14450" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14455">
+        <label>org.jgap.BaseChromosome</label>
+        <link refid="classorg_1_1jgap_1_1_base_chromosome"/>
+        <childnode refid="14454" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14453">
+        <label>org.jgap.impl.DefaultCompareToHandler</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_default_compare_to_handler"/>
+        <childnode refid="14452" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14450">
+        <label>org.jgap.ICloneHandler</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_clone_handler"/>
+        <childnode refid="14449" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14454">
+        <label>org.jgap.IInitializer</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_initializer"/>
+        <childnode refid="14449" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14458">
+        <label>org.jgap.GenotypeTest.ChromosomeForTest2</label>
+        <link refid="classorg_1_1jgap_1_1_genotype_test_1_1_chromosome_for_test2"/>
+        <childnode refid="14457" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IHandler.java" line="20" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IHandler.java" bodystart="20" bodyend="57"/>
+    <listofallmembers>
+      <member refid="interfaceorg_1_1jgap_1_1_i_handler_1ac87eeb82b5fb4d6e5ba1f8850db52118" prot="public" virt="non-virtual"><scope>org::jgap::IHandler</scope><name>CVS_REVISION</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_handler_1a026d7a41944049a4f812ee0d1151d40e" prot="public" virt="non-virtual"><scope>org::jgap::IHandler</scope><name>isHandlerFor</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_handler_1a60199862000df04a4b2491d6d08f2f2c" prot="public" virt="non-virtual"><scope>org::jgap::IHandler</scope><name>perform</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

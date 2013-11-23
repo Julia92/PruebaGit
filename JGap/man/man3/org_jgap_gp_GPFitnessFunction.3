@@ -1,0 +1,207 @@
+.TH "org.jgap.gp.GPFitnessFunction" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.GPFitnessFunction \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable\&.
+.PP
+Inherited by examples\&.gp\&.anttrail\&.AntTrailProblem\&.AntFitnessFunction, \fBexamples\&.gp\&.Fibonacci\&.FormulaFitnessFunction\fP, examples\&.gp\&.island\&.IslandGPThread\&.SimpleFitnessFunction, \fBexamples\&.gp\&.KarubProblem\&.FormulaFitnessFunction\fP, \fBexamples\&.gp\&.MathProblem\&.FormulaFitnessFunction\fP, \fBexamples\&.gp\&.monalisa\&.core\&.LMSFitnessFunction\fP, examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.AntFitnessFunction, examples\&.gp\&.SimpleExample\&.SimpleFitnessFunction, \fBexamples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.FormulaFitnessFunction\fP, \fBexamples\&.gp\&.tictactoe\&.TicTacToeMain\&.GameFitnessFunction\fP, org\&.jgap\&.gp\&.impl\&.GPGenotypeTest\&.TerminalsOnly, and \fBorg\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBGPFitnessFunction\fP ()"
+.br
+.ti -1c
+.RI "final double \fBgetFitnessValue\fP (final \fBIGPProgram\fP a_program)"
+.br
+.ti -1c
+.RI "double \fBgetLastComputedFitnessValue\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final double \fBNO_FITNESS_VALUE\fP = -1\&.0000000d"
+.br
+.ti -1c
+.RI "static final double \fBMAX_FITNESS_VALUE\fP = Double\&.MAX_VALUE / 2"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "abstract double \fBevaluate\fP (\fBIGPProgram\fP a_subject)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBm_lastComputedFitnessValue\fP = \fBNO_FITNESS_VALUE\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.11 $'"
+.br
+.ti -1c
+.RI "static transient Logger \fBLOGGER\fP = Logger\&.getLogger(GPFitnessFunction\&.class)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Fitness function for GP-Programs\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file GPFitnessFunction\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "void org\&.jgap\&.gp\&.GPFitnessFunction\&.GPFitnessFunction ()\fC [inline]\fP"
+Default constructor\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 42 of file GPFitnessFunction\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "abstract double org\&.jgap\&.gp\&.GPFitnessFunction\&.evaluate (\fBIGPProgram\fPa_subject)\fC [protected]\fP, \fC [pure virtual]\fP"
+Determine the fitness of the given GPProgram instance\&. The higher the return value, the more fit the instance\&. This method should always return the same fitness value for two equivalent GPProgram instances\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_subject\fP the GPProgram instance to evaluate
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+positive double reflecting the fitness rating of the given GPProgram\&. Note that if a non-positive double is returned, a RuntimeException should be generated
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.impl\&.StaticGPFitnessFunction\fP\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.GPFitnessFunction\&.getFitnessValue()\&.
+.SS "final double org\&.jgap\&.gp\&.GPFitnessFunction\&.getFitnessValue (final \fBIGPProgram\fPa_program)\fC [inline]\fP"
+Retrieves the fitness value of the given GPProgram\&. The fitness value will be a positive double\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_program\fP the GPProgram for which to compute and return the fitness value 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the fitness value of the given GPProgram
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 57 of file GPFitnessFunction\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPFitnessFunction\&.evaluate(), org\&.jgap\&.gp\&.GPFitnessFunction\&.m_lastComputedFitnessValue, and org\&.jgap\&.gp\&.GPFitnessFunction\&.NO_FITNESS_VALUE\&.
+.SS "double org\&.jgap\&.gp\&.GPFitnessFunction\&.getLastComputedFitnessValue ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the last fitness value computed via method getFitnessValue( \fBChromosome\fP), or NO_FITNES_VALUE if the former method has not been called yet
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 87 of file GPFitnessFunction\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPFitnessFunction\&.m_lastComputedFitnessValue\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.GPFitnessFunction\&.CVS_REVISION = '$Revision: 1\&.11 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 23 of file GPFitnessFunction\&.java\&.
+.SS "transient Logger org\&.jgap\&.gp\&.GPFitnessFunction\&.LOGGER = Logger\&.getLogger(GPFitnessFunction\&.class)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 29 of file GPFitnessFunction\&.java\&.
+.SS "double org\&.jgap\&.gp\&.GPFitnessFunction\&.m_lastComputedFitnessValue = \fBNO_FITNESS_VALUE\fP\fC [private]\fP"
+The fitness value computed during the previous run 
+.PP
+Definition at line 34 of file GPFitnessFunction\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.GPFitnessFunction\&.getFitnessValue(), and org\&.jgap\&.gp\&.GPFitnessFunction\&.getLastComputedFitnessValue()\&.
+.SS "final double org\&.jgap\&.gp\&.GPFitnessFunction\&.MAX_FITNESS_VALUE = Double\&.MAX_VALUE / 2\fC [static]\fP"
+
+.PP
+Definition at line 27 of file GPFitnessFunction\&.java\&.
+.PP
+Referenced by examples\&.gp\&.Fibonacci\&.FormulaFitnessFunction\&.computeRawFitness()\&.
+.SS "final double org\&.jgap\&.gp\&.GPFitnessFunction\&.NO_FITNESS_VALUE = -1\&.0000000d\fC [static]\fP"
+
+.PP
+Definition at line 25 of file GPFitnessFunction\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.GPProgramBase\&.calcFitnessValue(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.checkErroneousProg(), org\&.jgap\&.gp\&.GPFitnessFunction\&.getFitnessValue(), and org\&.jgap\&.distr\&.grid\&.wan\&.WANUtils\&.getFitnessValue()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

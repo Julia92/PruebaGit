@@ -1,0 +1,220 @@
+.TH "org.jgap.gp.impl.JGAPTreeNode" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.impl.JGAPTreeNode \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits TreeNode\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBJGAPTreeNode\fP (\fBProgramChromosome\fP a_chrom, int a_index)"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "TreeNode \fBgetChildAt\fP (int a_childIndex)"
+.br
+.ti -1c
+.RI "int \fBgetChildCount\fP ()"
+.br
+.ti -1c
+.RI "TreeNode \fBgetParent\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetIndex\fP (TreeNode a_node)"
+.br
+.ti -1c
+.RI "boolean \fBgetAllowsChildren\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisLeaf\fP ()"
+.br
+.ti -1c
+.RI "Enumeration \fBchildren\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBProgramChromosome\fP \fBm_chrom\fP"
+.br
+.ti -1c
+.RI "int \fBm_index\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.3 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A \fBCommandGene\fP represented as a tree node\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file JGAPTreeNode\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.JGAPTreeNode (\fBProgramChromosome\fPa_chrom, inta_index)\fC [inline]\fP"
+
+.PP
+Definition at line 31 of file JGAPTreeNode\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.m_chrom, and org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.m_index\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getChildAt(), and org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getParent()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Enumeration org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.children ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the children of the receiver as an \fCEnumeration\fP 
+.RE
+.PP
+
+.PP
+Definition at line 107 of file JGAPTreeNode\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getChildAt(), and org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getChildCount()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getAllowsChildren ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+true if the receiver allows children 
+.RE
+.PP
+
+.PP
+Definition at line 93 of file JGAPTreeNode\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getChildCount()\&.
+.SS "TreeNode org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getChildAt (inta_childIndex)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_childIndex\fP index of the child to get 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the child TreeNode at index a_childIndex 
+.RE
+.PP
+
+.PP
+Definition at line 45 of file JGAPTreeNode\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.JGAPTreeNode(), org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.m_chrom, and org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.m_index\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.children(), and org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getIndex()\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getChildCount ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the number of children \fCTreeNode\fPs the receiver contains 
+.RE
+.PP
+
+.PP
+Definition at line 54 of file JGAPTreeNode\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getChild(), org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.m_chrom, and org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.m_index\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.children(), org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getAllowsChildren(), org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getIndex(), and org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.isLeaf()\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getIndex (TreeNodea_node)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_node\fP the node to retrieve the index for 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the index of \fCnode\fP in the receivers children\&. If the receiver does not contain \fCnode\fP, -1 will be returned 
+.RE
+.PP
+
+.PP
+Definition at line 81 of file JGAPTreeNode\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getChildAt(), and org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getChildCount()\&.
+.SS "String org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getName ()\fC [inline]\fP"
+
+.PP
+Definition at line 37 of file JGAPTreeNode\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.m_index\&.
+.SS "TreeNode org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getParent ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the parent \fCTreeNode\fP of the receiver 
+.RE
+.PP
+
+.PP
+Definition at line 71 of file JGAPTreeNode\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getParentNode(), org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.JGAPTreeNode(), org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.m_chrom, and org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.m_index\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.isLeaf ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+true if the receiver is a leaf 
+.RE
+.PP
+
+.PP
+Definition at line 100 of file JGAPTreeNode\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getChildCount()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.CVS_REVISION = '$Revision: 1\&.3 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file JGAPTreeNode\&.java\&.
+.SS "\fBProgramChromosome\fP org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.m_chrom\fC [private]\fP"
+
+.PP
+Definition at line 27 of file JGAPTreeNode\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getChildAt(), org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getChildCount(), org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getParent(), and org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.JGAPTreeNode()\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.m_index\fC [private]\fP"
+
+.PP
+Definition at line 29 of file JGAPTreeNode\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getChildAt(), org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getChildCount(), org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getName(), org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getParent(), and org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.JGAPTreeNode()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,71 @@
+.TH "org.jgap.impl.BulkFitnessOffsetRemoverTest.DummyFitnessFunction" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.BulkFitnessOffsetRemoverTest.DummyFitnessFunction \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.FitnessFunction\fP\&.
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "double \fBevaluate\fP (\fBIChromosome\fP a_subject)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class is a helper to allow testing class \fBBulkFitnessOffsetRemover\fPin a plainforward way: It only works with \fBNumberGene\fPinstances and returns the addition of their primitive values as the fitness value\&. This way we can configure a \fBChromosome\fP with numerical value genes knowing their fitness and see what fitness values should be installed by the method \fBBulkFitnessOffsetRemover\fP\&. 
+.PP
+Do not copy or use this implementation it is for this test only\&. It is tested itself by the outer class (\fBtestDummyFitnessFunction()\fP) to ensure valid test results\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Achim Westermann 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 327 of file BulkFitnessOffsetRemoverTest\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "double org\&.jgap\&.impl\&.BulkFitnessOffsetRemoverTest\&.DummyFitnessFunction\&.evaluate (\fBIChromosome\fPa_subject)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Casts every \fBGene\fP to the subtype of \fBNumberGene\fP and calculates the sum of the numerical values obtained\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_subject\fP the \fBChromosome\fP to be evaluated 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the sum of all numerical values of the Genes within the given \fBChromosome\fP that only consists of \fBNumberGene\fP instances 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIClassCastException\fP if a \fBGene\fP within the \fBChromosome\fP is not derived from \fBNumberGene\fP
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBorg\&.jgap\&.FitnessFunction::evaluate\fP(\fBorg\&.jgap\&.Chromosome\fP) 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.FitnessFunction\fP\&.
+.PP
+Definition at line 341 of file BulkFitnessOffsetRemoverTest\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

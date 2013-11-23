@@ -1,0 +1,815 @@
+.TH "org.jgap.BaseGene" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.BaseGene \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.Gene\fP, and \fBorg\&.jgap\&.IBusinessKey\fP\&.
+.PP
+Inherited by org\&.jgap\&.BaseGeneTest\&.BaseGeneImpl, \fBorg\&.jgap\&.impl\&.BooleanGene\fP, \fBorg\&.jgap\&.impl\&.CompositeGene\fP, \fBorg\&.jgap\&.impl\&.FixedBinaryGene\fP, \fBorg\&.jgap\&.impl\&.MapGene\fP, \fBorg\&.jgap\&.impl\&.NumberGene\fP, \fBorg\&.jgap\&.impl\&.SetGene\fP, \fBorg\&.jgap\&.impl\&.StringGene\fP, and \fBorg\&.jgap\&.supergenes\&.AbstractSupergene\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBaseGene\fP (\fBConfiguration\fP a_configuration)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "Object \fBgetAllele\fP ()"
+.br
+.ti -1c
+.RI "int \fBhashCode\fP ()"
+.br
+.ti -1c
+.RI "void \fBcleanup\fP ()"
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "int \fBsize\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (final Object a_other)"
+.br
+.ti -1c
+.RI "double \fBgetEnergy\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetEnergy\fP (final double a_energy)"
+.br
+.ti -1c
+.RI "void \fBsetApplicationData\fP (final Object a_newData)"
+.br
+.ti -1c
+.RI "Object \fBgetApplicationData\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetCompareApplicationData\fP (final boolean a_doCompare)"
+.br
+.ti -1c
+.RI "boolean \fBisCompareApplicationData\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetConstraintChecker\fP (final \fBIGeneConstraintChecker\fP a_constraintChecker)"
+.br
+.ti -1c
+.RI "\fBIGeneConstraintChecker\fP \fBgetConstraintChecker\fP ()"
+.br
+.ti -1c
+.RI "\fBGene\fP \fBnewGene\fP ()"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBgetConfiguration\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetBusinessKey\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetUniqueID\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetUniqueIDTemplate\fP (String a_templateID, int a_index)"
+.br
+.ti -1c
+.RI "String \fBgetUniqueIDTemplate\fP (int a_index)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBS_APPLICATION_DATA\fP = 'Application data'"
+.br
+.ti -1c
+.RI "static final double \fBDELTA\fP = 0\&.0000001"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "abstract Object \fBgetInternalValue\fP ()"
+.br
+.ti -1c
+.RI "int \fBcompareApplicationData\fP (final Object a_appdata1, final Object a_appdata2)"
+.br
+.ti -1c
+.RI "abstract \fBGene\fP \fBnewGeneInternal\fP ()"
+.br
+.ti -1c
+.RI "String \fBencode\fP (String a_string)"
+.br
+.ti -1c
+.RI "String \fBdecode\fP (String a_string)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBm_energy\fP"
+.br
+.ti -1c
+.RI "Object \fBm_applicationData\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_compareAppData\fP"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBm_configuration\fP"
+.br
+.ti -1c
+.RI "String \fBm_uniqueID\fP"
+.br
+.ti -1c
+.RI "Map< Integer, String > \fBm_uniqueIDTemplates\fP"
+.br
+.ti -1c
+.RI "\fBIGeneConstraintChecker\fP \fBm_geneAlleleChecker\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.28 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Abstract base class for all genes\&. Provides default implementations\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file BaseGene\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.BaseGene\&.BaseGene (\fBConfiguration\fPa_configuration) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 82 of file BaseGene\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.getJGAPFactory(), org\&.jgap\&.Configuration\&.isUniqueKeysActive(), org\&.jgap\&.BaseGene\&.m_configuration, org\&.jgap\&.BaseGene\&.m_uniqueID, and org\&.jgap\&.BaseGene\&.m_uniqueIDTemplates\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.BaseGene\&.cleanup ()\fC [inline]\fP"
+Executed by the genetic engine when this \fBGene\fP instance is no longer needed and should perform any necessary resource cleanup\&. If you need a special cleanup, override this method\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 138 of file BaseGene\&.java\&.
+.SS "int org\&.jgap\&.BaseGene\&.compareApplicationData (final Objecta_appdata1, final Objecta_appdata2)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 306 of file BaseGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getConfiguration()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.NumberGene\&.compareTo(), org\&.jgap\&.impl\&.BooleanGene\&.compareTo(), org\&.jgap\&.impl\&.StringGene\&.compareTo(), org\&.jgap\&.impl\&.FixedBinaryGene\&.compareTo(), org\&.jgap\&.impl\&.CompositeGene\&.compareTo(), and org\&.jgap\&.BaseGene\&.equals()\&.
+.SS "String org\&.jgap\&.BaseGene\&.decode (Stringa_string)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 426 of file BaseGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.AbstractSupergene\&.createValidator(), org\&.jgap\&.impl\&.StringGene\&.setValueFromPersistentRepresentation(), org\&.jgap\&.impl\&.CompositeGene\&.setValueFromPersistentRepresentation(), and org\&.jgap\&.supergenes\&.AbstractSupergene\&.setValueFromPersistentRepresentation()\&.
+.SS "String org\&.jgap\&.BaseGene\&.encode (Stringa_string)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 422 of file BaseGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.StringGene\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.CompositeGene\&.getPersistentRepresentation(), and org\&.jgap\&.supergenes\&.AbstractSupergene\&.getPersistentRepresentation()\&.
+.SS "boolean org\&.jgap\&.BaseGene\&.equals (final Objecta_other)\fC [inline]\fP"
+Compares this \fBGene\fP with the given object and returns true if the other object is a \fBGene\fP of the same type and has the same value (allele) as this \fBGene\fP\&. Otherwise it returns false\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the object to compare to this \fBGene\fP for equality 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if this \fBGene\fP is equal to the given object, false otherwise
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 193 of file BaseGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.compareApplicationData(), org\&.jgap\&.Gene\&.getApplicationData(), org\&.jgap\&.BaseGene\&.getApplicationData(), and org\&.jgap\&.BaseGene\&.isCompareApplicationData()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGene\&.addGene(), org\&.jgap\&.impl\&.SetGeneTest\&.testEquals_2(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testEquals_5(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testEquals_5_2(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testEquals_8(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testEquals_9(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testEquals_9_2(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testEquals_9_3(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testNewGene_0(), org\&.jgap\&.impl\&.FixedBinaryGeneTest\&.testNewGene_0(), org\&.jgap\&.impl\&.MapGeneTest\&.testNewGene_2(), and org\&.jgap\&.impl\&.MapGeneTest\&.testNewGene_3()\&.
+.SS "Object org\&.jgap\&.BaseGene\&.getAllele ()\fC [inline]\fP"
+Retrieves the allele value represented by this \fBGene\fP\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the allele value of this \fBGene\fP 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 103 of file BaseGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getInternalValue()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.IntegerGene\&.applyMutation(), org\&.jgap\&.impl\&.MutipleIntegerGene\&.applyMutation(), org\&.jgap\&.impl\&.DoubleGene\&.doubleValue(), org\&.jgap\&.BaseGene\&.getBusinessKey(), org\&.jgap\&.impl\&.IntegerGene\&.intValue(), org\&.jgap\&.impl\&.DoubleGene\&.mapValueToWithinBounds(), org\&.jgap\&.impl\&.IntegerGene\&.mapValueToWithinBounds(), org\&.jgap\&.impl\&.MutipleIntegerGene\&.mapValueToWithinBounds(), org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.mapValueToWithinBounds(), org\&.jgap\&.impl\&.MapGene\&.newGeneInternal(), org\&.jgap\&.impl\&.SetGeneTest\&.testGetAllele_0(), org\&.jgap\&.impl\&.MapGeneTest\&.testGetAllele_0(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testMapValueToWithinBoundsSupportsFullDoubleRange(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testMapValueToWithinBoundsSupportsFullDoubleRange2(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testMapValueToWithinBoundsSupportsFullDoubleRange3(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testMapValueToWithinBoundsSupportsFullDoubleRange4(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testMapValueToWithinBoundsSupportsFullDoubleRange5(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testMapValueToWithinBoundsSupportsFullIntegerRange(), org\&.jgap\&.impl\&.InversionOperatorTest\&.testOperate_2(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testPersistentPresentation_1(), org\&.jgap\&.impl\&.MapGeneTest\&.testPersistentRepresentation_2(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testPersistentRepresentation_2(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testPersistentRepresentation_3(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testSetAllele_4(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testSetAllele_5(), org\&.jgap\&.impl\&.StringGeneTest\&.testSetToRandomValue_0(), org\&.jgap\&.impl\&.StringGeneTest\&.testSetToRandomValue_3(), org\&.jgap\&.impl\&.StringGeneTest\&.testSetToRandomValue_4(), org\&.jgap\&.impl\&.SetGeneTest\&.testSetValueFromPersistentRepresentation_1(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testSetValueFromPersistentRepresentation_1(), org\&.jgap\&.impl\&.SetGeneTest\&.testSetValueFromPersistentRepresentation_2(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testSetValueFromPersistentRepresentation_2(), org\&.jgap\&.impl\&.SetGeneTest\&.testSetValueFromPersistentRepresentation_3(), and org\&.jgap\&.impl\&.BooleanGeneTest\&.testSetValueFromPersistentRepresentation_3()\&.
+.SS "Object org\&.jgap\&.BaseGene\&.getApplicationData ()\fC [inline]\fP"
+Retrieves the application-specific data that is attached to this \fBGene\fP\&. Attaching application-specific data may be useful for some applications when it comes time to distinguish a \fBGene\fP from another\&. JGAP ignores this data functionally\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the application-specific data previously attached to this \fBGene\fP, or null if there is no data attached
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 278 of file BaseGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.m_applicationData\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.NumberGene\&.compareTo(), org\&.jgap\&.impl\&.BooleanGene\&.compareTo(), org\&.jgap\&.impl\&.StringGene\&.compareTo(), org\&.jgap\&.impl\&.FixedBinaryGene\&.compareTo(), org\&.jgap\&.impl\&.CompositeGene\&.compareTo(), org\&.jgap\&.BaseGene\&.equals(), org\&.jgap\&.BaseGene\&.newGene(), and org\&.jgap\&.BaseGene\&.toString()\&.
+.SS "String org\&.jgap\&.BaseGene\&.getBusinessKey ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+business key
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IBusinessKey\fP\&.
+.PP
+Definition at line 413 of file BaseGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getAllele(), and org\&.jgap\&.Gene\&.PERSISTENT_FIELD_DELIMITER\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.BaseGene\&.getConfiguration ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the configuration set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 409 of file BaseGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.m_configuration\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.SetGene\&.applyMutation(), org\&.jgap\&.impl\&.MapGene\&.applyMutation(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.applyMutation(), org\&.jgap\&.impl\&.StringGene\&.applyMutation(), org\&.jgap\&.impl\&.FixedBinaryGene\&.clone(), org\&.jgap\&.BaseGene\&.compareApplicationData(), org\&.jgap\&.impl\&.SetGene\&.compareTo(), org\&.jgap\&.impl\&.CompositeGene\&.createGene(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.createGene(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.createValidator(), org\&.jgap\&.impl\&.DoubleGene\&.mapValueToWithinBounds(), org\&.jgap\&.impl\&.IntegerGene\&.mapValueToWithinBounds(), org\&.jgap\&.impl\&.MutipleIntegerGene\&.mapValueToWithinBounds(), org\&.jgap\&.impl\&.SetGene\&.newGeneInternal(), org\&.jgap\&.impl\&.FixedBinaryGene\&.newGeneInternal(), org\&.jgap\&.impl\&.MapGene\&.newGeneInternal(), org\&.jgap\&.impl\&.DoubleGene\&.newGeneInternal(), org\&.jgap\&.impl\&.IntegerGene\&.newGeneInternal(), org\&.jgap\&.impl\&.MutipleIntegerGene\&.newGeneInternal(), org\&.jgap\&.impl\&.BooleanGene\&.newGeneInternal(), org\&.jgap\&.supergenes\&.AbstractSupergene\&.newGeneInternal(), org\&.jgap\&.impl\&.StringGene\&.newGeneInternal(), org\&.jgap\&.impl\&.CompositeGene\&.newGeneInternal(), org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.newGeneInternal(), org\&.jgap\&.impl\&.FixedBinaryGene\&.substring(), and org\&.jgap\&.impl\&.SetGeneTest\&.testConstruct_0()\&.
+.SS "\fBIGeneConstraintChecker\fP org\&.jgap\&.BaseGene\&.getConstraintChecker ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+\fBIGeneConstraintChecker\fP the constraint checker to be used whenever method \fBsetAllele(Object)\fP is called\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.5 (moved from CompositeGene, where it was since 2\&.0) 
+.RE
+.PP
+
+.PP
+Definition at line 370 of file BaseGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.m_geneAlleleChecker\&.
+.PP
+Referenced by org\&.jgap\&.BaseGene\&.newGene(), org\&.jgap\&.impl\&.StringGene\&.newGeneInternal(), org\&.jgap\&.impl\&.CompositeGene\&.newGeneInternal(), org\&.jgap\&.impl\&.FixedBinaryGene\&.setAllele(), org\&.jgap\&.impl\&.NumberGene\&.setAllele(), org\&.jgap\&.impl\&.StringGene\&.setAllele(), org\&.jgap\&.impl\&.CompositeGene\&.setAllele(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testNewGene_0(), org\&.jgap\&.impl\&.NumberGeneTest\&.testSetConstraintChecker_0(), org\&.jgap\&.impl\&.FixedBinaryGeneTest\&.testSetConstraintChecker_0(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testSetConstraintChecker_0(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testSetConstraintChecker_0(), and org\&.jgap\&.impl\&.StringGeneTest\&.testSetConstraintChecker_0()\&.
+.SS "double org\&.jgap\&.BaseGene\&.getEnergy ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+energy of the gene
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 235 of file BaseGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.m_energy\&.
+.PP
+Referenced by org\&.jgap\&.BaseGene\&.newGene(), org\&.jgap\&.impl\&.NumberGeneTest\&.testSetEnergy_0(), org\&.jgap\&.impl\&.SetGeneTest\&.testSetEnergy_0(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testSetEnergy_0(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testSetEnergy_0(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testSetEnergy_0(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testSetEnergy_0(), org\&.jgap\&.impl\&.StringGeneTest\&.testSetEnergy_0(), org\&.jgap\&.impl\&.FixedBinaryGeneTest\&.testSetEnergy_0(), org\&.jgap\&.impl\&.NumberGeneTest\&.testSetEnergy_1(), org\&.jgap\&.impl\&.SetGeneTest\&.testSetEnergy_1(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testSetEnergy_1(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testSetEnergy_1(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testSetEnergy_1(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testSetEnergy_1(), org\&.jgap\&.impl\&.StringGeneTest\&.testSetEnergy_1(), and org\&.jgap\&.impl\&.FixedBinaryGeneTest\&.testSetEnergy_1()\&.
+.SS "abstract Object org\&.jgap\&.BaseGene\&.getInternalValue ()\fC [protected]\fP, \fC [pure virtual]\fP"
+Each \fBGene\fP implementation holds its own m_value object keeping the allele value\&. In your \fBGene\fP implementation, just return it with this method (see \fBorg\&.jgap\&.impl\&.BooleanGene\fP for example) 
+.PP
+\fBReturns:\fP
+.RS 4
+the m_value object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.CompositeGene\fP, \fBorg\&.jgap\&.supergenes\&.AbstractSupergene\fP, \fBorg\&.jgap\&.impl\&.StringGene\fP, \fBorg\&.jgap\&.impl\&.MapGene\fP, \fBorg\&.jgap\&.impl\&.FixedBinaryGene\fP, \fBorg\&.jgap\&.impl\&.BooleanGene\fP, \fBorg\&.jgap\&.impl\&.SetGene\fP, and \fBorg\&.jgap\&.impl\&.NumberGene\fP\&.
+.PP
+Referenced by org\&.jgap\&.BaseGene\&.getAllele(), org\&.jgap\&.BaseGene\&.hashCode(), and org\&.jgap\&.BaseGene\&.toString()\&.
+.SS "String org\&.jgap\&.BaseGene\&.getUniqueID ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+unique ID of the gene, which allows to distinct this instance from others, in the best case worldwide
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IUniqueKey\fP\&.
+.PP
+Definition at line 437 of file BaseGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.m_uniqueID\&.
+.SS "String org\&.jgap\&.BaseGene\&.getUniqueIDTemplate (inta_index)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the index of the template to retrieve the key for 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IUniqueKey\fP\&.
+.PP
+Definition at line 465 of file BaseGene\&.java\&.
+.SS "int org\&.jgap\&.BaseGene\&.hashCode ()\fC [inline]\fP"
+Retrieves the hash code value for a \fBGene\fP\&. Override if another \fBhashCode()\fP implementation is necessary or more appropriate than this default implementation\&.
+.PP
+\fBReturns:\fP
+.RS 4
+this \fBGene\fP's hash code
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 118 of file BaseGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getInternalValue()\&.
+.SS "boolean org\&.jgap\&.BaseGene\&.isCompareApplicationData ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 302 of file BaseGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.m_compareAppData\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.NumberGene\&.compareTo(), org\&.jgap\&.impl\&.BooleanGene\&.compareTo(), org\&.jgap\&.impl\&.StringGene\&.compareTo(), org\&.jgap\&.impl\&.FixedBinaryGene\&.compareTo(), org\&.jgap\&.impl\&.CompositeGene\&.compareTo(), and org\&.jgap\&.BaseGene\&.equals()\&.
+.SS "\fBGene\fP org\&.jgap\&.BaseGene\&.newGene ()\fC [inline]\fP"
+Provides implementation-independent means for creating new \fBGene\fP instances\&. The new instance that is created and returned should be setup with any implementation-dependent configuration that this \fBGene\fP instance is setup with (aside from the actual value, of course)\&. For example, if this \fBGene\fP were setup with bounds on its value, then the \fBGene\fP instance returned from this method should also be setup with those same bounds\&. This is important, as the JGAP core will invoke this method on each \fBGene\fP in the sample \fBChromosome\fP in order to create each new \fBGene\fP in the same respective gene position for a new \fBChromosome\fP\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a new \fBGene\fP instance of the same type and with the same setup as this concrete \fBGene\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rostan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 (since 1\&.0 in IntegerGene) 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+clone app\&.data 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 392 of file BaseGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getApplicationData(), org\&.jgap\&.BaseGene\&.getConstraintChecker(), org\&.jgap\&.BaseGene\&.getEnergy(), and org\&.jgap\&.BaseGene\&.newGeneInternal()\&.
+.PP
+Referenced by org\&.jgap\&.supergenes\&.SupergenePersistentRepresentationTest\&.testNewGene_0(), org\&.jgap\&.impl\&.MapGeneTest\&.testNewGene_0(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testNewGene_0(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testNewGene_0(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testNewGene_0(), org\&.jgap\&.impl\&.StringGeneTest\&.testNewGene_0(), org\&.jgap\&.impl\&.FixedBinaryGeneTest\&.testNewGene_0(), org\&.jgap\&.supergenes\&.SupergenePersistentRepresentationTest\&.testNewGene_1(), org\&.jgap\&.impl\&.MapGeneTest\&.testNewGene_1(), org\&.jgap\&.supergenes\&.SupergenePersistentRepresentationTest\&.testNewGene_2(), org\&.jgap\&.impl\&.MapGeneTest\&.testNewGene_2(), and org\&.jgap\&.impl\&.MapGeneTest\&.testNewGene_3()\&.
+.SS "abstract \fBGene\fP org\&.jgap\&.BaseGene\&.newGeneInternal ()\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\fP, \fBorg\&.jgap\&.impl\&.CompositeGene\fP, \fBorg\&.jgap\&.impl\&.StringGene\fP, \fBorg\&.jgap\&.supergenes\&.AbstractSupergene\fP, \fBorg\&.jgap\&.impl\&.BooleanGene\fP, \fBorg\&.jgap\&.impl\&.MutipleIntegerGene\fP, \fBorg\&.jgap\&.impl\&.IntegerGene\fP, \fBorg\&.jgap\&.impl\&.DoubleGene\fP, \fBorg\&.jgap\&.impl\&.MapGene\fP, \fBorg\&.jgap\&.impl\&.FixedBinaryGene\fP, and \fBorg\&.jgap\&.impl\&.SetGene\fP\&.
+.PP
+Referenced by org\&.jgap\&.BaseGene\&.newGene()\&.
+.SS "void org\&.jgap\&.BaseGene\&.setApplicationData (final Objecta_newData)\fC [inline]\fP"
+This sets the application-specific data that is attached to this \fBGene\fP\&. Attaching application-specific data may be useful for some applications when it comes time to distinguish a \fBGene\fP from another\&. JGAP ignores this data functionally\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_newData\fP the new application-specific data to attach to this \fBGene\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 262 of file BaseGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.m_applicationData\&.
+.SS "void org\&.jgap\&.BaseGene\&.setCompareApplicationData (final booleana_doCompare)\fC [inline]\fP"
+Should we also consider the application data when comparing? Default is 'false' as 'true' means a \fBGene\fP is losing its identity when application data is set differently!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_doCompare\fP true: consider application data in method compareTo
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 292 of file BaseGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.m_compareAppData\&.
+.SS "void org\&.jgap\&.BaseGene\&.setConstraintChecker (final \fBIGeneConstraintChecker\fPa_constraintChecker)\fC [inline]\fP"
+Sets the constraint checker to be used for this gene whenever method \fBsetAllele(Object)\fP is called\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_constraintChecker\fP the constraint checker to be set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.5 (moved from CompositeGene, where it was since 2\&.0) 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 358 of file BaseGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.m_geneAlleleChecker\&.
+.SS "void org\&.jgap\&.BaseGene\&.setEnergy (final doublea_energy)\fC [inline]\fP"
+Sets the energy of the gene 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_energy\fP the energy to set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 246 of file BaseGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.m_energy\&.
+.SS "void org\&.jgap\&.BaseGene\&.setUniqueIDTemplate (Stringa_templateID, inta_index)\fC [inline]\fP"
+A template is a gene that is the logical predecessor of the current gene\&. A template can occur in mutation or crossing over\&. In the latter case can be at least two template genes\&. This is why in this setter method the parameter a_index exists\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_templateID\fP the unique ID of the template 
+.br
+\fIa_index\fP the index of the template, e\&.g\&. in crossing over for the second candidate gene this is 2
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IUniqueKey\fP\&.
+.PP
+Definition at line 454 of file BaseGene\&.java\&.
+.SS "int org\&.jgap\&.BaseGene\&.size ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the size of the gene, i\&.e the number of atomic elements\&. Always 1 for non-composed \fBGene\fP types\&. Override for composed \fBGene\fP types
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 178 of file BaseGene\&.java\&.
+.SS "String org\&.jgap\&.BaseGene\&.toString ()\fC [inline]\fP"
+Retrieves a string representation of this \fBGene\fP's value that may be useful for display purposes\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a string representation of this \fBGene\fP's value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 152 of file BaseGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getApplicationData(), org\&.jgap\&.BaseGene\&.getInternalValue(), and org\&.jgap\&.BaseGene\&.S_APPLICATION_DATA\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.SetGene\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.SetGeneTest\&.testToString_0(), and org\&.jgap\&.impl\&.SetGeneTest\&.testToString_1()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.BaseGene\&.CVS_REVISION = '$Revision: 1\&.28 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file BaseGene\&.java\&.
+.SS "final double org\&.jgap\&.BaseGene\&.DELTA = 0\&.0000001\fC [static]\fP"
+Delta, useful for comparing doubles and floats\&. 
+.PP
+Definition at line 36 of file BaseGene\&.java\&.
+.SS "Object org\&.jgap\&.BaseGene\&.m_applicationData\fC [private]\fP"
+Application-specific data that is attached to the \fBGene\fP\&. This data may assist the application in labelling this \fBGene\fP\&. JGAP ignores the data, aside from allowing it to be set and retrieved and considering it in clone() and compareTo()\&.
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 49 of file BaseGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.BaseGene\&.getApplicationData(), and org\&.jgap\&.BaseGene\&.setApplicationData()\&.
+.SS "boolean org\&.jgap\&.BaseGene\&.m_compareAppData\fC [private]\fP"
+Method compareTo(): Should we also consider the application data when comparing? Default is 'false' as 'true' means a \fBGene\fP's losing its identity when application data is set differently!
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 58 of file BaseGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.BaseGene\&.isCompareApplicationData(), and org\&.jgap\&.BaseGene\&.setCompareApplicationData()\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.BaseGene\&.m_configuration\fC [private]\fP"
+
+.PP
+Definition at line 60 of file BaseGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.BaseGene\&.BaseGene(), and org\&.jgap\&.BaseGene\&.getConfiguration()\&.
+.SS "double org\&.jgap\&.BaseGene\&.m_energy\fC [private]\fP"
+Energy of a gene, see RFE 1102206 
+.PP
+Definition at line 39 of file BaseGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.BaseGene\&.getEnergy(), and org\&.jgap\&.BaseGene\&.setEnergy()\&.
+.SS "\fBIGeneConstraintChecker\fP org\&.jgap\&.BaseGene\&.m_geneAlleleChecker\fC [private]\fP"
+Optional helper class for checking if a given allele value to be set for a given gene is valid\&. If not, the allele value may not be set for the gene or the gene type (e\&.g\&. IntegerGene) is not allowed in general!
+.PP
+\fBSince:\fP
+.RS 4
+2\&.5 (moved from CompositeGene, where it was since 2\&.0) 
+.RE
+.PP
+
+.PP
+Definition at line 348 of file BaseGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.BaseGene\&.getConstraintChecker(), and org\&.jgap\&.BaseGene\&.setConstraintChecker()\&.
+.SS "String org\&.jgap\&.BaseGene\&.m_uniqueID\fC [private]\fP"
+Unique ID of the gene that allows to distinct it from other genes\&. In the best case, this ID is unique worldwide\&. 
+.PP
+Definition at line 66 of file BaseGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.BaseGene\&.BaseGene(), and org\&.jgap\&.BaseGene\&.getUniqueID()\&.
+.SS "Map<Integer,String> org\&.jgap\&.BaseGene\&.m_uniqueIDTemplates\fC [private]\fP"
+In case mutation, crossing over etc\&. happened, this sequence gives evidence about the parent(s) of the current gene\&. 
+.PP
+Definition at line 72 of file BaseGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.BaseGene\&.BaseGene()\&.
+.SS "final String org\&.jgap\&.BaseGene\&.S_APPLICATION_DATA = 'Application data'\fC [static]\fP"
+Constants for \fBtoString()\fP 
+.PP
+Definition at line 31 of file BaseGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.BaseGeneTest\&.testToString_0(), org\&.jgap\&.impl\&.NumberGeneTest\&.testToString_0(), org\&.jgap\&.BaseGeneTest\&.testToString_1(), org\&.jgap\&.BaseGeneTest\&.testToString_2(), and org\&.jgap\&.BaseGene\&.toString()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

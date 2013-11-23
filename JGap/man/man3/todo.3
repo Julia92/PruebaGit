@@ -1,0 +1,416 @@
+.TH "todo" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+todo \- Todo List 
+
+.IP "\fBMember \fBexamples\&.audit\&.CoinsExample\&.makeChangeForAmount\fP (int a_targetChangeAmount)\fP" 1c
+class Evaluator: input:
+.IP "\(bu" 2
+PermutingConfiguration
+.IP "\(bu" 2
+Number of evaluation runs pers config (to turn off randomness as much as possible)
+.IP "\(bu" 2
+output facility (data container)
+.IP "\(bu" 2
+optional: event subscribers output:
+.IP "\(bu" 2
+averaged curve of fitness value thru all generations
+.IP "\(bu" 2
+best fitness value accomplished
+.IP "\(bu" 2
+average number of performance improvements for all generations  
+.PP
+.IP "\fBMember \fBexamples\&.energy\&.CoinsEnergy\&.EnergyGeneConstraintChecker\&.verify\fP (Gene a_gene, final Object a_alleleValue, final IChromosome a_chrom, final int a_geneIndex)\fP" 1c
+compute  
+.IP "\fBMember \fBexamples\&.gp\&.anttrail\&.AntMap\&.AntMap\fP (final int[][] a_map, int a_maxMoves)\fP" 1c
+speedup possible by using string?  
+.IP "\fBMember \fBexamples\&.gp\&.Fibonacci\&.create\fP ()\fP" 1c
+allow to optionally preset a static program in each chromosome  
+.IP "\fBMember \fBexamples\&.gp\&.Fibonacci\&.FormulaFitnessFunction\&.computeRawFitness\fP (final IGPProgram a_program)\fP" 1c
+check if program valid, i\&.e\&. worth evaluating 
+.PP
+add penalty for longer solutions  
+.IP "\fBMember \fBexamples\&.gp\&.island\&.IslandGPExample\&.IslandGPExample\fP ()\fP" 1c
+Island config\&. einbauen, so dass Island model automatisch ausgeführt wird 
+.PP
+impl\&. MergeEvent, e\&.g\&.: merge islands when one island stucks 
+.PP
+jeweils beste lösung geht öfters verloren! Beeinflusst ein Island das andere oder ist die Lösung in einem Island nicht beständig?  
+.IP "\fBMember \fBexamples\&.gp\&.tictactoe\&.EvaluateBoard\&.execute_void\fP (ProgramChromosome c, int n, Object[] args)\fP" 1c
+support other types than integer  
+.IP "\fBMember \fBexamples\&.gp\&.tictactoe\&.SingleNodeValidator\&.isAllowed\fP (int a_chromIndex, ProgramChromosome a_pc, CommandGene[] a_functionSet, CommandGene a_function, Class a_returnType, int a_subReturnTyp, int m_index)\fP" 1c
+provide convenient method setNonConsecutive(boolean) in CommandGene  
+.IP "\fBMember \fBexamples\&.gp\&.tictactoe\&.TicTacToeMain\&.create\fP (GPConfiguration a_conf, int a_color, GPGenotype a_other, int a_otherColor)\fP" 1c
+evaluate board to matrix  
+.IP "\fBMember \fBexamples\&.gp\&.tictactoe\&.TicTacToeMain\&.GameFitnessFunction\&.computeRawFitness\fP (final IGPProgram a_program)\fP" 1c
+reduce fitness for NOP 
+.PP
+value memory reads and writes  
+.IP "\fBMember \fBexamples\&.island\&.IslandExample\&.start\fP ()\fP" 1c
+.IP "\fBMember \fBexamples\&.monalisa\&.core\&.AlphaMutationOperator\&.operate\fP (final Population a_population, final List a_candidateChromosomes)\fP" 1c
+move to base class, refactor  
+.IP "\fBMember \fBexamples\&.monalisa\&.core\&.AlphaOffMutationOperator\&.operate\fP (final Population a_population, final List a_candidateChromosomes)\fP" 1c
+move to base class, refactor  
+.IP "\fBMember \fBexamples\&.monalisa\&.core\&.ColorMutationOperator\&.operate\fP (final Population a_population, final List a_candidateChromosomes)\fP" 1c
+move to base class, refactor  
+.IP "\fBMember \fBexamples\&.monalisa\&.core\&.PointMutationOperator\&.operate\fP (final Population a_population, final List a_candidateChromosomes)\fP" 1c
+move to base class, refactor  
+.IP "\fBMember \fBexamples\&.monalisa\&.core\&.PolygonMutationOperator\&.operate\fP (final Population a_population, final List a_candidateChromosomes)\fP" 1c
+move to base class, refactor  
+.IP "\fBMember \fBexamples\&.monalisa\&.core\&.SingleMutationOperator\&.operate\fP (final Population a_population, final List a_candidateChromosomes)\fP" 1c
+move to base class, refactor  
+.IP "\fBMember \fBexamples\&.simpleBooleanThreaded\&.SimpleExample\&.main\fP (String[] args)\fP" 1c
+evaluate monitor data  
+.IP "\fBMember \fBorg\&.jgap\&.audit\&.Evaluator\&.calcAvgFitnessImpr\fP (int a_permutation)\fP" 1c
+implement 
+.PP
+implement 
+.PP
+is this method used resp\&. contained in calcPerformance?  
+.IP "\fBMember \fBorg\&.jgap\&.audit\&.Evaluator\&.CVS_REVISION\fP \fP" 1c
+implement: overall score calculation (out of best/avg\&. fitness value etc\&.)  
+.IP "\fBMember \fBorg\&.jgap\&.audit\&.Evaluator\&.storePopulation\fP (int a_permutation, int a_run, Population a_pop)\fP" 1c
+implement  
+.IP "\fBMember \fBorg\&.jgap\&.audit\&.EvolutionEvaluator\&.evaluate\fP ()\fP" 1c
+use chromIDs and chromTrack 
+.PP
+.IP "\fBMember \fBorg\&.jgap\&.audit\&.PermutingConfiguration\&.next\fP ()\fP" 1c
+make permutation below computed dynamic and not static 
+.PP
+introduce new parameters: populationSize, setPreservFittestIndividual, MAX_ALLOWED_EVOLUTIONS 
+.PP
+allow for 'false' 
+.PP
+BulkFitnessOffsetRemover vs\&. FitnessFunction  
+.IP "\fBMember \fBorg\&.jgap\&.BaseChromosome\&.setValueFromPersistentRepresentation\fP (String a_representation)\fP" 1c
+we can do this faster! 
+.PP
+we can do this faster!  
+.IP "\fBMember \fBorg\&.jgap\&.BaseGene\&.newGene\fP ()\fP" 1c
+clone app\&.data  
+.IP "\fBMember \fBorg\&.jgap\&.BaseGeneTest\&.testEquals_3\fP ()\fP" 1c
+use other than JGAPFactory to be able to receive a null CompareToHandler for the application data object  
+.IP "\fBMember \fBorg\&.jgap\&.BaseGeneTest\&.testSetApplicationData_1\fP ()\fP" 1c
+find the one chromosome  
+.IP "\fBMember \fBorg\&.jgap\&.BaseGeneTest\&.testSetApplicationData_2\fP ()\fP" 1c
+find the one chromosome  
+.IP "\fBMember \fBorg\&.jgap\&.BaseGeneticOperator\&.equals\fP (final Object a_other)\fP" 1c
+also compare Configuration?  
+.IP "\fBMember \fBorg\&.jgap\&.BaseGeneticOperator\&.getConfiguration\fP ()\fP" 1c
+make returned object immutable  
+.IP "\fBMember \fBorg\&.jgap\&.BreederBase\&.applyGeneticOperators\fP (Configuration a_config, Population a_pop)\fP" 1c
+utilize jobs: integrate job into GeneticOperator  
+.IP "\fBMember \fBorg\&.jgap\&.BreederBase\&.applyNaturalSelectors\fP (Configuration a_config, Population a_pop, boolean a_processBeforeGeneticOperators)\fP" 1c
+optionally use working pool 
+.PP
+utilize jobs: integrate job into NaturalSelector!  
+.IP "\fBMember \fBorg\&.jgap\&.CachedFitnessFunction\&.CVS_REVISION\fP \fP" 1c
+allow to restrict size of cache / age of entries  
+.IP "\fBMember \fBorg\&.jgap\&.Chromosome\&.clone\fP ()\fP" 1c
+once output a warning: allele should be cloneable!  
+.IP "\fBMember \fBorg\&.jgap\&.Chromosome\&.compareTo\fP (Object other)\fP" 1c
+improve  
+.IP "\fBMember \fBorg\&.jgap\&.Chromosome\&.m_multiObjective\fP \fP" 1c
+move to new subclass of Chromosome (and introduce new interface IMultiObjective with that)  
+.IP "\fBMember \fBorg\&.jgap\&.Chromosome\&.randomInitialChromosome\fP (Configuration a_configuration)\fP" 1c
+what about Gene's energy? 
+.PP
+what about Gene's energy?  
+.IP "\fBMember \fBorg\&.jgap\&.Configuration\&.doClone\fP (Object a_objToClone)\fP" 1c
+try cloning in a standard way  
+.IP "\fBMember \fBorg\&.jgap\&.data\&.DataTreeBuilder\&.CVS_REVISION\fP \fP" 1c
+implement representGPGenotype\&.\&.  
+.IP "\fBMember \fBorg\&.jgap\&.data\&.DocumentBuilderBase\&.CVS_REVISION\fP \fP" 1c
+add new class DocumentCreatorBase that reads in data written by DocumentBuilderBase  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.Breeder\&.informParent\fP ()\fP" 1c
+implement  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.Breeder\&.m_genotype\fP \fP" 1c
+use  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.Breeder\&.m_populationMerger\fP \fP" 1c
+construct somewhere  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.Breeder\&.m_running\fP \fP" 1c
+use  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.Breeder\&.m_workers\fP \fP" 1c
+use  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.Breeder\&.stop\fP ()\fP" 1c
+implement  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.getGridMessage\fP (MessageContext a_context, String a_datetime, int a_timeoutSeconds, int a_waitTimeSeconds, boolean a_removeRequest)\fP" 1c
+fallback solution  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.DummyGridClientMediator\&.startClient\fP ()\fP" 1c
+allow asynchronous wait for server (check for 'java\&.net\&.ConnectException: Connection refused: connect')  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.gp\&.IGridConfigurationGP\&.setTypes\fP (Class[] a_types)\fP" 1c
+move the following to GPConfiguration, elegantly  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.CVS_REVISION\fP \fP" 1c
+in dateiname requester/worker kodieren 
+.PP
+auch schlechtere ergebnisse einmixen: die direkt empfangenen gleich wieder in einen request reinstecken --> aber mischen verschiedener results in einen request! 
+.PP
+small, medium, large work requests 
+.PP
+re-evaluate each result on behalf of another worker: keep separate lookup-table for all requests --> m_resultsVerified, m_resultsPersister 
+.PP
+remove old requests from online store automatically 
+.PP
+info when work request has been taken 
+.PP
+info when worker logs on --> evaluate logon files 
+.PP
+top results in eigener datei speichern, komprimierung durch weglassen überfl\&. infos, siehe xml --> injection after reload 
+.PP
+copy good results to online folder  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.JGAPClientGP\fP (IGridClientMediator a_gcmed, GridNodeClientConfig a_gridconfig, String a_clientClassName, boolean a_WANMode, boolean a_receiveOnly, boolean a_list, boolean a_no_comm, boolean a_no_evolution, boolean a_endless, int a_max_fetch_results)\fP" 1c
+ab 2\&. zyklus ist pop\&.grösse nur 1 !  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.MODULE_CS\fP \fP" 1c
+store version in external file  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.MODULE_SC\fP \fP" 1c
+das ist nicht module, sondern sender-receiver  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.presetPopulation\fP (JGAPRequestGP a_workRequest)\fP" 1c
+remove results[index]  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.receiveWorkResult\fP (Object a_result, IClientFeedbackGP feedback, boolean a_remove)\fP" 1c
+later: SC  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.receiveWorkResult\fP (JGAPRequestGP[] workList, IClientFeedbackGP feedback)\fP" 1c
+make this asynchronous with fall-back and reconnect! 
+.PP
+later: SC  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.receiveWorkResults\fP (JGAPRequestGP[] workList)\fP" 1c
+later: SC 
+.PP
+sort results according to post date, the oldest first 
+.PP
+config\&.params wie popsite, evol\&.anz dazu 
+.PP
+allow fitness 0\&.0 
+.PP
+do this here explicitely and not in receiveWorkResult  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.resultReceived\fP (IGPProgram a_fittest)\fP" 1c
+jeden Worker einer von n (rein logischen) Gruppen zuteilen\&. Pro logischer Gruppe top n Ergebnisse halten 
+.PP
+make configurable 
+.PP
+compare with toStringNorm(0), use remove(int) instead of remove(Object) 
+.PP
+ist nur test! 
+.PP
+skip unnecessary data, inject it after reload  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.sendWorkRequests\fP (int a_evolutionIndex, IClientEvolveStrategyGP evolver, IRequestSplitStrategyGP splitter, IClientFeedbackGP feedback)\fP" 1c
+merge previous results in req\&.getPopulation()  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.sendWorkRequests\fP (JGAPRequestGP[] a_workList)\fP" 1c
+hier ist fehler aufgetreten!  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.gp\&.JGAPWorkerGP\&.CVS_REVISION\fP \fP" 1c
+resume previous work in case worker was stopped  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.gp\&.JGAPWorkerGP\&.doWork\fP (WorkRequest work, String workDir)\fP" 1c
+set gridworkerfeedback in class GridWorker  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.gp\&.JGAPWorkersGP\&.getNeededFiles\fP (GridNodeWorkerConfig a_config)\fP" 1c
+implement  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.JGAPClientHandlerThread\&.handleMsg\fP (GridMessage msg)\fP" 1c
+consider 4GB limit  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.JGAPWorker\&.doWork\fP (WorkRequest work, String workDir)\fP" 1c
+set gridworkerfeedback in class GridWorker  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.JGAPWorkers\&.getNeededFiles\fP (GridNodeWorkerConfig a_config)\fP" 1c
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.RequestSplitStrategy\&.split\fP (JGAPRequest a_request)\fP" 1c
+support cloning of m_config  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.isUpdateAvailable\fP (String BASE_URL, String a_moduleName, String currentVersion)\fP" 1c
+download a versions\&.txt file and obtain version per project  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.updateModule\fP (String a_filename, String a_workDir, String a_libDir)\fP" 1c
+write log: delete manually  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.util\&.GridKit\&.updateModuleLibrary\fP (String BASE_URL, String a_moduleName, String a_libDir, String a_workDir)\fP" 1c
+zuordnung irgendwo abspeichern 
+.PP
+zuordnung irgendwo abspeichern 
+.PP
+zuordnung irgendwo abspeichern  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.grid\&.wan\&.RequestInformation\&.m_id\fP \fP" 1c
+worker gibt durch Datei an, dass er Request bearbeitet  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.Master\&.sendToWorker\fP (final IWorker a_worker, final WorkerCommand a_command)\fP" 1c
+implement  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.Master\&.stop\fP ()\fP" 1c
+notify all workers to stop working??? No, better would be: next time master is available it can receive old results from workers\&. So, the workers need to store them for some time, until the master is able to receive the worker results\&.  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.Worker\&.getStatus\fP ()\fP" 1c
+implement: idle starting receiving task working sending result stopping stopped  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.Worker\&.pause\fP ()\fP" 1c
+implement: able to pause resp\&. in work?  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.Worker\&.resume\fP ()\fP" 1c
+implement: able to resum resp\&. paused?  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.Worker\&.sendCommand\fP (final WorkerCommand a_command)\fP" 1c
+this should be moved to a thread 
+.PP
+implement: currently working? if yes, add to queue (if queue not full) if no: start work  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.Worker\&.stop\fP ()\fP" 1c
+implement: able to stop resp\&. in work?  
+.IP "\fBMember \fBorg\&.jgap\&.distr\&.WorkerCommand\&.execute\fP (final Object a_parameters)\fP" 1c
+implement  
+.IP "\fBMember \fBorg\&.jgap\&.Genotype\&.applyNaturalSelectors\fP (boolean a_processBeforeGeneticOperators)\fP" 1c
+optionally use working pool  
+.IP "\fBMember \fBorg\&.jgap\&.Genotype\&.keepPopSizeConstant\fP (Population a_pop, int a_maxSize)\fP" 1c
+use StandardPostSelector instead?  
+.IP "\fBMember \fBorg\&.jgap\&.Genotype\&.mergeResults\fP (IPopulationMerger a_merger, EvolveResult[] a_results)\fP" 1c
+use/enhance IPopulationMerger  
+.IP "\fBMember \fBorg\&.jgap\&.GenotypeTest\&.testIsSerializable_0\fP ()\fP" 1c
+following will be obsolete  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.CommandGene\&.compareTo\fP (Object a_other)\fP" 1c
+do it more precisely  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.CommandGene\&.setValueFromPersistentRepresentation\fP (final String a_representation)\fP" 1c
+finish  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.CommandGeneTest\&.testEquals_3\fP ()\fP" 1c
+use other than JGAPFactory to be able to receive a null CompareToHandler for the application data object  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.function\&.ADF\&.isValid\fP (ProgramChromosome a_chrom)\fP" 1c
+enhance  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.function\&.CountMatrix\&.CountType\&.COLUMN\fP \fP" 1c
+count over whole matrix  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.function\&.ExchangeMemory\&.isAffectGlobalState\fP ()\fP" 1c
+subclass from new abstract class MemoryCommand?  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.function\&.ForXLoop\&.execute_void\fP (ProgramChromosome c, int n, Object[] args)\fP" 1c
+only consider variables appearing before FORX in the program tree  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.function\&.If\&.execute_void\fP (ProgramChromosome c, int n, Object[] args)\fP" 1c
+add option for type of first child to constructor  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.function\&.IfDyn\&.execute_void\fP (ProgramChromosome c, int n, Object[] args)\fP" 1c
+add option for type of first child to constructor  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.function\&.Push\&.isAffectGlobalState\fP ()\fP" 1c
+use this information  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.function\&.Push\&.isValid\fP (ProgramChromosome a_program)\fP" 1c
+consider n (execute_int\&.\&.\&.)  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.function\&.SubProgram\&.applyMutation\fP ()\fP" 1c
+use dynamizeArity instead!  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.function\&.SubProgram\&.execute_int\fP (ProgramChromosome c, int n, Object[] args)\fP" 1c
+evaluate m_types  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.function\&.SubProgram\&.execute_void\fP (ProgramChromosome c, int n, Object[] args)\fP" 1c
+evaluate m_types  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.function\&.TransferMemory\&.isAffectGlobalState\fP ()\fP" 1c
+subclass from new abstract class MemoryCommand?  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.doCross\fP (ProgramChromosome a_c0, ProgramChromosome a_c1)\fP" 1c
+solve in general  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.operate\fP (final IGPProgram a_i1, final IGPProgram a_i2)\fP" 1c
+try to ensure uniqueness for unique commands: after selecting first node, check if there is a unique node in the sub tree\&. If so, check if it appears in the sub tree of the second node\&.  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.impl\&.DefaultPopulationCreator\&.initialize\fP (GPPopulation a_pop, Class[] a_types, Class[][] a_argTypes, CommandGene[][] a_nodeSets, int[] a_minDepths, int[] a_maxDepths, int a_maxNodes, boolean[] a_fullModeAllowed)\fP" 1c
+pass params (e\&.g\&. advanced yes/no for Robocode)  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.impl\&.FitnessProportionateSelection\&.select\fP (GPGenotype a_genotype)\fP" 1c
+implement for deltaMode  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getCrossoverProb\fP ()\fP" 1c
+implement something like that  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.impl\&.GPConfiguration\&.init\fP (boolean a_fullInit)\fP" 1c
+make reusable in class Configuration and reuse here from Configuration  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.impl\&.GPConfiguration\&.m_objectiveFunction\fP \fP" 1c
+introduce lock for configuration  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.impl\&.GPGenotype\&.calcFitness\fP ()\fP" 1c
+get information from fitness function how calculation happened\&. In case of Robocode: return the robot competed against, in case the -enemies option was used without -battleAll 
+.PP
+do something similar here as with Genotype\&.preserveFittestChromosome 
+.PP
+introduce global value object to be passed to the listener 
+.PP
+should not happen but does with ensureUniqueness(\&.\&.)  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.impl\&.GPGenotype\&.checkErroneousProg\fP (IGPProgram a_prog, String s, boolean a_clearFitness, boolean a_active)\fP" 1c
+impl\&. cache  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve\fP ()\fP" 1c
+use program creator in case such is registered and returns a non-null program 
+.PP
+instead of re-using prototype, create a program anyway (ignoring the validator) in case it is the last try\&. Or even better: Make the validator return a defect rate!  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.impl\&.GPGenotype\&.fillPopulation\fP (final int a_num)\fP" 1c
+care about 
+.PP
+implement filling up population  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.impl\&.GPGenotype\&.randomInitialGenotype\fP (final GPConfiguration a_conf, Class[] a_types, Class[][] a_argTypes, CommandGene[][] a_nodeSets, int[] a_minDepths, int[] a_maxDepths, int a_maxNodes, boolean[] a_fullModeAllowed, boolean a_verboseOutput, IPopulationCreator a_popCreator)\fP" 1c
+remove unused nodes from configuration 
+.PP
+optimize access to map  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.impl\&.GPGenotype\&.verifyDepthsForNodes\fP (GPPopulation a_pop, GPConfiguration a_conf, Class[] a_types, int[] a_minDepths, int[] a_maxDepths, int a_maxNodes, CommandGene[][] a_nodeSets)\fP" 1c
+impl 
+.PP
+impl  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.impl\&.GPPopulation\&.create\fP (Class[] a_types, Class[][] a_argTypes, CommandGene[][] a_nodeSets, int[] a_minDepths, int[] a_maxDepths, int a_maxNodes, boolean[] a_fullModeAllowed, IProgramCreator a_programCreator, int a_offset)\fP" 1c
+add element of randomness 
+.PP
+5: make configurable  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.impl\&.GPPopulationTest\&.testCreate_1\fP ()\fP" 1c
+adapt  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.impl\&.GPPopulationTest\&.testCreate_2\fP ()\fP" 1c
+adapt  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.impl\&.GPPopulationTest\&.testSetPrototype_0\fP ()\fP" 1c
+assert that prototype is only set automatically if none is preset  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.compareTo\fP (Object a_other)\fP" 1c
+compare m_functionSet  
+.IP "\fBMember \fBorg\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFullNode\fP (int a_num, int a_depth, Class a_returnType, int a_subReturnType, CommandGene[] a_functionSet, CommandGene a_rootNode, int a_recurseLevel, boolean a_grow, int a_childNum, boolean a_validateNode)\fP" 1c
+we could optionally use the clone handler  
+.IP "\fBMember \fBorg\&.jgap\&.gui\&.ConfigFrame\&.setup\fP ()\fP" 1c
+find a better way to get the classname than getNS()  
+.IP "\fBMember \fBorg\&.jgap\&.gui\&.ConfigWriterTest\&.testConfigData_0\fP ()\fP" 1c
+write to stream 
+.PP
+read from stream  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.BulkFitnessOffsetRemover\&.m_previousOffset\fP \fP" 1c
+This constructor is planned but not possible yet, as the Configuration permits bulk fitness function and simple fitness function both existing in it at the same time\&.  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.CauchyRandomGeneratorTest\&.testSerialize_0\fP ()\fP" 1c
+fix test as Java 5 uses java\&.util\&.concurrent\&.AtomicLong instead of sun\&.misc\&.AtomicLong  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.ChainOfSelectorsTest\&.testEquals_0\fP ()\fP" 1c
+improve: 2 unsame selectors of same class with same params should make the chain equal!  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.CrossoverOperator\&.compareTo\fP (final Object a_other)\fP" 1c
+consider Configuration  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.DoubleGene\&.setValueFromPersistentRepresentation\fP (String a_representation)\fP" 1c
+unify first part of method with IntegerGene  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.DoubleGeneTest\&.testSetToRandomValue_2\fP ()\fP" 1c
+test needed any longer?  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\&.calcFitness\fP (final Map a_actualInputOutput)\fP" 1c
+consider length of formula (i\&.e\&. number of terms, e\&.g\&.) for fitness calculation  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.FittestPopulationMerger\&.mergePopulations\fP (final Population a_population1, final Population a_population2, final int a_new_population_size)\fP" 1c
+check if configurations of both pops are equal resp\&. their fitness evaluators!  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.FixedBinaryGeneTest\&.testHashCode_0\fP ()\fP" 1c
+implement checks for uniqueness  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.GABreeder\&.bulkFunctionEvaluation\fP (Configuration a_conf, BulkFitnessFunction a_bulkFunction, Population a_pop, boolean a_monitorActive)\fP" 1c
+utilize jobs: bulk fitness function is not so important for a prototype!  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.GABreeder\&.evolve\fP (Population a_pop, Configuration a_conf)\fP" 1c
+utilize jobs\&. In pop do also utilize jobs, especially for fitness computation  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.GABreeder\&.fillPopulationRandomlyToOriginalSize\fP (Configuration a_conf, Population pop)\fP" 1c
+utilize jobs as initialization may be time-consuming as invalid combinations may have to be filtered out  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.GaussianRandomGeneratorTest\&.testGetGaussianStdDeviation_0\fP ()\fP" 1c
+finish  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.GaussianRandomGeneratorTest\&.testSerialize_0\fP ()\fP" 1c
+fix test as Java 5 uses java\&.util\&.concurrent\&.AtomicLong instead of sun\&.misc\&.AtomicLong  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.GaussianRandomGeneratorTest\&.testSerialize_1\fP ()\fP" 1c
+fix test as Java 5 uses java\&.util\&.concurrent\&.AtomicLong instead of sun\&.misc\&.AtomicLong  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.JGAPFactory\&.clone\fP ()\fP" 1c
+check if it works this way  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.job\&.EvolveJob\&.applyGeneticOperators\fP (Configuration a_config, Population a_pop)\fP" 1c
+utilize jobs: integrate job into GeneticOperator  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.job\&.EvolveJob\&.applyNaturalSelectors\fP (Configuration a_config, Population a_pop, boolean a_processBeforeGeneticOperators)\fP" 1c
+optionally use working pool 
+.PP
+utilize jobs: integrate job into NaturalSelector!  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.job\&.JobBase\&.run\fP ()\fP" 1c
+what to do here?  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.MapGeneTest\&.testSetToRandomValue_0\fP ()\fP" 1c
+add test for applyMutation  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.MutationOperator\&.operate\fP (final Population a_population, final List a_candidateChromosomes)\fP" 1c
+move to base class, refactor  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.SetGeneTest\&.testApplyMutation_3\fP ()\fP" 1c
+from here on: adapt tests to SetGene  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.SwappingMutationOperatorTest\&.testOperate_1\fP ()\fP" 1c
+assert result is correct  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.ThresholdSelector\&.selectChromosomes\fP (final int a_howManyToSelect, Population a_to_pop)\fP" 1c
+replace this step by adding newly to create chromosomes  
+.IP "\fBMember \fBorg\&.jgap\&.impl\&.TwoWayMutationOperator\&.operate\fP (final Population a_population, final List a_candidateChromosomes)\fP" 1c
+make this configurable, it is a first test, see example DynamicMutationExample 
+.PP
+move to base class, refactor  
+.IP "\fBMember \fBorg\&.jgap\&.JGAPTestCase\&.assertEqualsMap\fP (Map a_map1, Map a_map2)\fP" 1c
+implement  
+.IP "\fBMember \fBorg\&.jgap\&.Population\&.keepPopSizeConstant\fP ()\fP" 1c
+use dedicated selector for that  
+.IP "\fBMember \fBorg\&.jgap\&.supergenes\&.AbstractSupergene\&.markImmutable\fP (final int a_index)\fP" 1c
+: Implement protection against overgrowing of this data block\&.  
+.IP "\fBMember \fBorg\&.jgap\&.supergenes\&.SupergenePersistentRepresentationTest\&.testReset_0\fP ()\fP" 1c
+care that m_immutable is filled  
+.IP "\fBMember \fBorg\&.jgap\&.util\&.ClassKit\&.find\fP (final String a_tosubclassname)\fP" 1c
+take care of abstract classes --> introduce parameter for that  
+.IP "\fBMember \fBorg\&.jgap\&.util\&.ClassKit\&.getPlugins\fP (final String a_directory)\fP" 1c
+add input param: type (or list of types) to look for 
+.PP
+check if class assignable from given type  
+.IP "\fBMember \fBorg\&.jgap\&.util\&.FileKit\&.getFilename\fP (String name_and_path, String fileseparator)\fP" 1c
+possibly use File\&.getName() instead?  
+.IP "\fBMember \fBorg\&.jgap\&.util\&.NumberKitTest\&.testNiceDecimalNumber_0\fP ()\fP" 1c
+this is not an optimal result  
+.IP "\fBMember \fBorg\&.jgap\&.util\&.PluginDiscovererTest\&.testConstruct_0\fP ()\fP" 1c
+implement 
+.PP
+

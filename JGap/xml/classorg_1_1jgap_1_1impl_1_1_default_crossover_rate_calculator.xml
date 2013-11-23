@@ -1,0 +1,311 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1impl_1_1_default_crossover_rate_calculator" kind="class" prot="public">
+    <compoundname>org::jgap::impl::DefaultCrossoverRateCalculator</compoundname>
+    <basecompoundref refid="classorg_1_1jgap_1_1_base_rate_calculator" prot="public" virt="non-virtual">org.jgap.BaseRateCalculator</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_default_crossover_rate_calculator_1ac4d7435038e53143b029c981d0d0d6f6" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.impl.DefaultCrossoverRateCalculator.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.9 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCrossoverRateCalculator.java" line="23" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCrossoverRateCalculator.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_default_crossover_rate_calculator_1a4d2cf2901043011a71d5b58d2e311361" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.DefaultCrossoverRateCalculator.DefaultCrossoverRateCalculator</definition>
+        <argsstring>(Configuration a_config)</argsstring>
+        <name>DefaultCrossoverRateCalculator</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_config</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCrossoverRateCalculator.java" line="30" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCrossoverRateCalculator.java" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_default_crossover_rate_calculator_1aef0524d98b295adf06ab42c56bf0a305" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.impl.DefaultCrossoverRateCalculator.calculateCurrentRate</definition>
+        <argsstring>()</argsstring>
+        <name>calculateCurrentRate</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_universal_rate_calculator_1ae57319a9082d3a33ecb401d352404ce5">calculateCurrentRate</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the dynamic crossover rate. This is chosen to be the chromosome size. As the chromosome gets larger we assume that it is less likely to reproduce.</para><para><simplesect kind="return"><para>calculated divisor of crossover rate</para></simplesect>
+<simplesect kind="author"><para>Chris Knowles </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCrossoverRateCalculator.java" line="45" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCrossoverRateCalculator.java" bodystart="45" bodyend="51"/>
+        <references refid="classorg_1_1jgap_1_1_base_rate_calculator_1a73cc1aa27dc6be2fc0eb3c21c88a34a6" compoundref="_base_rate_calculator_8java" startline="46" endline="48">org.jgap.BaseRateCalculator.getConfiguration</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_default_crossover_rate_calculator_1a317fd5cc914427338adf2e3d72b9a89d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.DefaultCrossoverRateCalculator.toBePermutated</definition>
+        <argsstring>(IChromosome a_chrom, int a_geneIndex)</argsstring>
+        <name>toBePermutated</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_universal_rate_calculator_1aa2e90d38b67668a3bbf80820293269c0">toBePermutated</reimplements>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+          <declname>a_chrom</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_geneIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determines whether crossover is to be carried out for a given population.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_chrom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ignored </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_geneIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ignored</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true: the <ref refid="classorg_1_1jgap_1_1impl_1_1_default_crossover_rate_calculator" kindref="compound">DefaultCrossoverRateCalculator</ref> always returns a finite rate</para></simplesect>
+<simplesect kind="author"><para>Chris Knowles </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCrossoverRateCalculator.java" line="65" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCrossoverRateCalculator.java" bodystart="65" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Default implementation of a dynamic CrossoverRateCalculator.</para><para><simplesect kind="author"><para>Chris Knowles </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="11704">
+        <label>Serializable</label>
+      </node>
+      <node id="11703">
+        <label>org.jgap.IUniversalRateCalculator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_universal_rate_calculator"/>
+        <childnode refid="11704" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11702">
+        <label>org.jgap.BaseRateCalculator</label>
+        <link refid="classorg_1_1jgap_1_1_base_rate_calculator"/>
+        <childnode refid="11703" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11701">
+        <label>org.jgap.impl.DefaultCrossoverRateCalculator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_default_crossover_rate_calculator"/>
+        <childnode refid="11702" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11719">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="11724">
+        <label>List</label>
+      </node>
+      <node id="11723">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="11708" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11711" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11720">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="11708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11708">
+        <label>Serializable</label>
+      </node>
+      <node id="11707">
+        <label>org.jgap.IUniversalRateCalculator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_universal_rate_calculator"/>
+        <childnode refid="11708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11713">
+        <label>Comparable</label>
+      </node>
+      <node id="11706">
+        <label>org.jgap.BaseRateCalculator</label>
+        <link refid="classorg_1_1jgap_1_1_base_rate_calculator"/>
+        <childnode refid="11707" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11709" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+      </node>
+      <node id="11711">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="11712" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11717">
+        <label>org.jgap.FitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_fitness_evaluator"/>
+        <childnode refid="11708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11721">
+        <label>org.jgap.BulkFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_bulk_fitness_function"/>
+        <childnode refid="11708" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11711" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11712">
+        <label>Cloneable</label>
+      </node>
+      <node id="11715">
+        <label>org.jgap.IJGAPFactory</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_j_g_a_p_factory"/>
+        <childnode refid="11708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11722">
+        <label>org.jgap.Configuration.ConfigurationConfigurable</label>
+        <link refid="classorg_1_1jgap_1_1_configuration_1_1_configuration_configurable"/>
+        <childnode refid="11708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11714">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="11711" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11708" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11713" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11718">
+        <label>org.jgap.IChromosome</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome"/>
+        <childnode refid="11713" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11711" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11708" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11719" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11705">
+        <label>org.jgap.impl.DefaultCrossoverRateCalculator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_default_crossover_rate_calculator"/>
+        <childnode refid="11706" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11709">
+        <label>org.jgap.Configuration</label>
+        <link refid="classorg_1_1jgap_1_1_configuration"/>
+        <childnode refid="11710" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11708" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11711" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11713" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11714" relation="usage">
+          <edgelabel>m_breeder</edgelabel>
+        </childnode>
+        <childnode refid="11715" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="11716" relation="usage">
+          <edgelabel>m_chromosomePool</edgelabel>
+        </childnode>
+        <childnode refid="11717" relation="usage">
+          <edgelabel>m_fitnessEvaluator</edgelabel>
+        </childnode>
+        <childnode refid="11718" relation="usage">
+          <edgelabel>m_sampleChromosome</edgelabel>
+        </childnode>
+        <childnode refid="11720" relation="usage">
+          <edgelabel>m_randomGenerator</edgelabel>
+        </childnode>
+        <childnode refid="11721" relation="usage">
+          <edgelabel>m_bulkObjectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="11722" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="11723" relation="usage">
+          <edgelabel>m_objectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="11724" relation="usage">
+          <edgelabel>m_geneticOperators</edgelabel>
+        </childnode>
+      </node>
+      <node id="11716">
+        <label>org.jgap.IChromosomePool</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool"/>
+      </node>
+      <node id="11710">
+        <label>Configurable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCrossoverRateCalculator.java" line="21" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/DefaultCrossoverRateCalculator.java" bodystart="20" bodyend="68"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1_base_rate_calculator_1af142977d13e5c3719973233312e4c214" prot="public" virt="non-virtual"><scope>org::jgap::impl::DefaultCrossoverRateCalculator</scope><name>BaseRateCalculator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_default_crossover_rate_calculator_1aef0524d98b295adf06ab42c56bf0a305" prot="public" virt="non-virtual"><scope>org::jgap::impl::DefaultCrossoverRateCalculator</scope><name>calculateCurrentRate</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_default_crossover_rate_calculator_1ac4d7435038e53143b029c981d0d0d6f6" prot="private" virt="non-virtual"><scope>org::jgap::impl::DefaultCrossoverRateCalculator</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_default_crossover_rate_calculator_1a4d2cf2901043011a71d5b58d2e311361" prot="public" virt="non-virtual"><scope>org::jgap::impl::DefaultCrossoverRateCalculator</scope><name>DefaultCrossoverRateCalculator</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_rate_calculator_1a73cc1aa27dc6be2fc0eb3c21c88a34a6" prot="public" virt="non-virtual"><scope>org::jgap::impl::DefaultCrossoverRateCalculator</scope><name>getConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_default_crossover_rate_calculator_1a317fd5cc914427338adf2e3d72b9a89d" prot="public" virt="non-virtual"><scope>org::jgap::impl::DefaultCrossoverRateCalculator</scope><name>toBePermutated</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,192 @@
+.TH "org.jgap.gp.function.If" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.function.If \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandGene\fP, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIf\fP (final GPConfiguration a_conf, Class a_returnType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBIf\fP (final GPConfiguration a_conf, Class a_childType, Class a_returnType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "Class \fBgetChildType\fP (\fBIGPProgram\fP prog, int index)"
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBexecute_boolean\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "int \fBexecute_int\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "long \fBexecute_long\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "float \fBexecute_float\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "double \fBexecute_double\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "void \fBexecute_void\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Class \fBm_childType\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.9 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The if-then construct\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file If\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.function\&.If\&.If (final GPConfigurationa_conf, Classa_returnType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 30 of file If\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.If\&.m_childType\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.If\&.clone()\&.
+.SS "org\&.jgap\&.gp\&.function\&.If\&.If (final GPConfigurationa_conf, Classa_childType, Classa_returnType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 36 of file If\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.If\&.m_childType\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.gp\&.function\&.If\&.clone ()\fC [inline]\fP"
+Clones the object\&. Simple and straight forward implementation here\&.
+.PP
+\fBReturns:\fP
+.RS 4
+cloned instance of this object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 134 of file If\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.If\&.getChildType(), org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.getReturnType(), and org\&.jgap\&.gp\&.function\&.If\&.If()\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.If\&.execute_boolean (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 55 of file If\&.java\&.
+.SS "double org\&.jgap\&.gp\&.function\&.If\&.execute_double (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 109 of file If\&.java\&.
+.SS "float org\&.jgap\&.gp\&.function\&.If\&.execute_float (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 100 of file If\&.java\&.
+.SS "int org\&.jgap\&.gp\&.function\&.If\&.execute_int (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 64 of file If\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.BooleanClass, org\&.jgap\&.gp\&.CommandGene\&.DoubleClass, org\&.jgap\&.gp\&.CommandGene\&.FloatClass, org\&.jgap\&.gp\&.CommandGene\&.IntegerClass, org\&.jgap\&.gp\&.CommandGene\&.LongClass, and org\&.jgap\&.gp\&.function\&.If\&.m_childType\&.
+.SS "long org\&.jgap\&.gp\&.function\&.If\&.execute_long (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 91 of file If\&.java\&.
+.SS "void org\&.jgap\&.gp\&.function\&.If\&.execute_void (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+add option for type of first child to constructor 
+.RE
+.PP
+
+.PP
+Definition at line 118 of file If\&.java\&.
+.SS "Class org\&.jgap\&.gp\&.function\&.If\&.getChildType (\fBIGPProgram\fPprog, intindex)\fC [inline]\fP"
+
+.PP
+Definition at line 42 of file If\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getReturnType(), and org\&.jgap\&.gp\&.function\&.If\&.m_childType\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.If\&.clone()\&.
+.SS "String org\&.jgap\&.gp\&.function\&.If\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 51 of file If\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.function\&.If\&.CVS_REVISION = '$Revision: 1\&.9 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file If\&.java\&.
+.SS "Class org\&.jgap\&.gp\&.function\&.If\&.m_childType\fC [private]\fP"
+
+.PP
+Definition at line 28 of file If\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.If\&.execute_int(), org\&.jgap\&.gp\&.function\&.If\&.getChildType(), and org\&.jgap\&.gp\&.function\&.If\&.If()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,121 @@
+.TH "examples.grid.fitnessDistributed.MyRequestSplitStrategy" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.grid.fitnessDistributed.MyRequestSplitStrategy \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits IRequestSplitStrategy\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMyRequestSplitStrategy\fP (Configuration a_config)"
+.br
+.ti -1c
+.RI "Configuration \fBgetConfiguration\fP ()"
+.br
+.ti -1c
+.RI "JGAPRequest[] \fBsplit\fP (JGAPRequest a_request)  throws Exception "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Configuration \fBm_config\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.3 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Sample implementation of IRequestSplitStrategy to split a single request into multiple requests for workers\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file MyRequestSplitStrategy\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.grid\&.fitnessDistributed\&.MyRequestSplitStrategy\&.MyRequestSplitStrategy (Configurationa_config)\fC [inline]\fP"
+
+.PP
+Definition at line 29 of file MyRequestSplitStrategy\&.java\&.
+.PP
+References examples\&.grid\&.fitnessDistributed\&.MyRequestSplitStrategy\&.m_config\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Configuration examples\&.grid\&.fitnessDistributed\&.MyRequestSplitStrategy\&.getConfiguration ()\fC [inline]\fP"
+
+.PP
+Definition at line 33 of file MyRequestSplitStrategy\&.java\&.
+.PP
+References examples\&.grid\&.fitnessDistributed\&.MyRequestSplitStrategy\&.m_config\&.
+.PP
+Referenced by examples\&.grid\&.fitnessDistributed\&.MyRequestSplitStrategy\&.split()\&.
+.SS "JGAPRequest [] examples\&.grid\&.fitnessDistributed\&.MyRequestSplitStrategy\&.split (JGAPRequesta_request) throws Exception\fC [inline]\fP"
+Creates single requests to be sent to workers\&. Here, each request consists of a single chromosome for which to calculate the fitness value\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_request\fP the request to split 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+single requests to be computed by workers 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 48 of file MyRequestSplitStrategy\&.java\&.
+.PP
+References examples\&.grid\&.fitnessDistributed\&.MyRequestSplitStrategy\&.getConfiguration(), and examples\&.grid\&.fitnessDistributed\&.MyRequestSplitStrategy\&.m_config\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.grid\&.fitnessDistributed\&.MyRequestSplitStrategy\&.CVS_REVISION = '$Revision: 1\&.3 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file MyRequestSplitStrategy\&.java\&.
+.SS "Configuration examples\&.grid\&.fitnessDistributed\&.MyRequestSplitStrategy\&.m_config\fC [private]\fP"
+
+.PP
+Definition at line 27 of file MyRequestSplitStrategy\&.java\&.
+.PP
+Referenced by examples\&.grid\&.fitnessDistributed\&.MyRequestSplitStrategy\&.getConfiguration(), examples\&.grid\&.fitnessDistributed\&.MyRequestSplitStrategy\&.MyRequestSplitStrategy(), and examples\&.grid\&.fitnessDistributed\&.MyRequestSplitStrategy\&.split()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

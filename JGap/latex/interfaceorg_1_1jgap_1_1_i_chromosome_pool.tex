@@ -1,0 +1,100 @@
+\hypertarget{interfaceorg_1_1jgap_1_1_i_chromosome_pool}{\section{org.\-jgap.\-I\-Chromosome\-Pool Interface Reference}
+\label{interfaceorg_1_1jgap_1_1_i_chromosome_pool}\index{org.\-jgap.\-I\-Chromosome\-Pool@{org.\-jgap.\-I\-Chromosome\-Pool}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-I\-Chromosome\-Pool\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{interfaceorg_1_1jgap_1_1_i_chromosome_pool__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome_pool_a8ca58eebe408999a357f4c6c8d413f9d}{acquire\-Chromosome} ()
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome_pool_a79be125cb49cca7236932cc2dbc7f014}{release\-Chromosome} (\hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} a\-\_\-chromosome)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome_pool_ab847d47751d5e687022ffb82b3ce7937}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-3 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for chromosome pools (e.\-g., see class Chromosome\-Pool).
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-6 
+\end{DoxySince}
+
+
+Definition at line 18 of file I\-Chromosome\-Pool.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1_i_chromosome_pool_a8ca58eebe408999a357f4c6c8d413f9d}{\index{org\-::jgap\-::\-I\-Chromosome\-Pool@{org\-::jgap\-::\-I\-Chromosome\-Pool}!acquire\-Chromosome@{acquire\-Chromosome}}
+\index{acquire\-Chromosome@{acquire\-Chromosome}!org::jgap::IChromosomePool@{org\-::jgap\-::\-I\-Chromosome\-Pool}}
+\subsubsection[{acquire\-Chromosome}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\-Chromosome} org.\-jgap.\-I\-Chromosome\-Pool.\-acquire\-Chromosome (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_i_chromosome_pool_a8ca58eebe408999a357f4c6c8d413f9d}
+Attempts to acquire an \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} instance from the chromosome pool.
+
+\begin{DoxyReturn}{Returns}
+a \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} instance from the pool or null if no \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} instances are available in the pool
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Neil Rostan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-6 (since 1.\-0 in Chromosome\-Pool) 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1impl_1_1_chromosome_pool_a3d6d1ebd5a974a85a62e89897a2be0a7}{org.\-jgap.\-impl.\-Chromosome\-Pool}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1_i_chromosome_pool_a79be125cb49cca7236932cc2dbc7f014}{\index{org\-::jgap\-::\-I\-Chromosome\-Pool@{org\-::jgap\-::\-I\-Chromosome\-Pool}!release\-Chromosome@{release\-Chromosome}}
+\index{release\-Chromosome@{release\-Chromosome}!org::jgap::IChromosomePool@{org\-::jgap\-::\-I\-Chromosome\-Pool}}
+\subsubsection[{release\-Chromosome}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-I\-Chromosome\-Pool.\-release\-Chromosome (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Chromosome}}]{a\-\_\-chromosome}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_i_chromosome_pool_a79be125cb49cca7236932cc2dbc7f014}
+Releases a \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} to the pool. It's not required that the \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} originated from the pool--any \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} can be released to it. This method should invoke the cleanup() method on each of the \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome}'s genes prior to adding it back to the pool.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-chromosome} & the \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} instance to be released into the pool\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Neil Rostan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-6 (since 1.\-0 in Chromosome\-Pool) 
+\end{DoxySince}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1_i_chromosome_pool_ab847d47751d5e687022ffb82b3ce7937}{\index{org\-::jgap\-::\-I\-Chromosome\-Pool@{org\-::jgap\-::\-I\-Chromosome\-Pool}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::IChromosomePool@{org\-::jgap\-::\-I\-Chromosome\-Pool}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-I\-Chromosome\-Pool.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-3 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{interfaceorg_1_1jgap_1_1_i_chromosome_pool_ab847d47751d5e687022ffb82b3ce7937}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 20 of file I\-Chromosome\-Pool.\-java.
+
+
+
+The documentation for this interface was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/\hyperlink{_i_chromosome_pool_8java}{I\-Chromosome\-Pool.\-java}\end{DoxyCompactItemize}

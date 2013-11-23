@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover" kind="class" prot="public">
+    <compoundname>org::jgap::impl::BulkFitnessOffsetRemover</compoundname>
+    <basecompoundref refid="classorg_1_1jgap_1_1_bulk_fitness_function" prot="public" virt="non-virtual">org.jgap.BulkFitnessFunction</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a5a306d0059b248c4b2282b633e49f878" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.impl.BulkFitnessOffsetRemover.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.12 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BulkFitnessOffsetRemover.java" line="226" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BulkFitnessOffsetRemover.java" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a146b2858f31e684e3bec61818a32f730" prot="private" static="no" mutable="no">
+        <type><ref refid="classorg_1_1jgap_1_1_fitness_function" kindref="compound">FitnessFunction</ref></type>
+        <definition>FitnessFunction org.jgap.impl.BulkFitnessOffsetRemover.m_ff</definition>
+        <argsstring></argsstring>
+        <name>m_ff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BulkFitnessOffsetRemover.java" line="232" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BulkFitnessOffsetRemover.java" bodystart="232" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a3cb4232935702ce5db82a3e8bb378f71" compoundref="_bulk_fitness_offset_remover_8java" startline="261" endline="266">org.jgap.impl.BulkFitnessOffsetRemover.BulkFitnessOffsetRemover</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1ab7f936892509f88c709361f5356d2195" compoundref="_bulk_fitness_offset_remover_8java" startline="461" endline="465">org.jgap.impl.BulkFitnessOffsetRemover.clone</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a6741e29abe529b43b2e61d3301a1ce3c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double org.jgap.impl.BulkFitnessOffsetRemover.m_previousOffset</definition>
+        <argsstring></argsstring>
+        <name>m_previousOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000160"><xreftitle>Todo</xreftitle><xrefdescription><para>This constructor is planned but not possible yet, as the <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> permits bulk fitness function and simple fitness function both existing in it at the same time. </para></xrefdescription></xrefsect></para><para>The last generations offset. This has to be stored because Chromosomes that were put into the new generation&apos;s candidate list already have the fitness value without offset from their previous evaluation. </para><para>We try to avoid evaluations of the fitness function as it might be expensive, so we reuse fitness values. If a <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> already has a fitness value &gt;0 this previousOffset is added to it&apos;s fitness to allow comparing this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>&apos;s fitness with newly evaluated Chromosomes (which still have the offset from the evaluation). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BulkFitnessOffsetRemover.java" line="259" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BulkFitnessOffsetRemover.java" bodystart="259" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a5ffd62bd47b23dfa534a5f4e775d3a0e" compoundref="_bulk_fitness_offset_remover_8java" startline="271" endline="337">org.jgap.impl.BulkFitnessOffsetRemover.evaluate</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1ab0c11462e990be4138a99d0a6e4611e2" compoundref="_bulk_fitness_offset_remover_8java" startline="434" endline="453">org.jgap.impl.BulkFitnessOffsetRemover.getAbsoluteFitness</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a3cb4232935702ce5db82a3e8bb378f71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.BulkFitnessOffsetRemover.BulkFitnessOffsetRemover</definition>
+        <argsstring>(final FitnessFunction a_ff)</argsstring>
+        <name>BulkFitnessOffsetRemover</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_fitness_function" kindref="compound">FitnessFunction</ref></type>
+          <declname>a_ff</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BulkFitnessOffsetRemover.java" line="261" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BulkFitnessOffsetRemover.java" bodystart="261" bodyend="266"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a146b2858f31e684e3bec61818a32f730" compoundref="_bulk_fitness_offset_remover_8java" startline="232">org.jgap.impl.BulkFitnessOffsetRemover.m_ff</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1ab7f936892509f88c709361f5356d2195" compoundref="_bulk_fitness_offset_remover_8java" startline="461" endline="465">org.jgap.impl.BulkFitnessOffsetRemover.clone</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a5ffd62bd47b23dfa534a5f4e775d3a0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.BulkFitnessOffsetRemover.evaluate</definition>
+        <argsstring>(final Population a_chromosomes)</argsstring>
+        <name>evaluate</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_chromosomes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BulkFitnessOffsetRemover.java" line="271" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BulkFitnessOffsetRemover.java" bodystart="271" bodyend="337"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a6741e29abe529b43b2e61d3301a1ce3c" compoundref="_bulk_fitness_offset_remover_8java" startline="259">org.jgap.impl.BulkFitnessOffsetRemover.m_previousOffset</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1ab0c11462e990be4138a99d0a6e4611e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double org.jgap.impl.BulkFitnessOffsetRemover.getAbsoluteFitness</definition>
+        <argsstring>(final IChromosome a_individuum)</argsstring>
+        <name>getAbsoluteFitness</name>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+          <declname>a_individuum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Using this instance to remove the fitness offset in the populations brings the advantage of getting a selection more sensitive to the differences of fitness of the chromosomes. </para><para>The disadvantage is, that the fitness values are modified. The modification is good for jgap&apos;s selection method but bad for the guys that want to see the success of your work, or need a proof that a GA improves over time: <linebreak/>
+ The value of <ref refid="classorg_1_1jgap_1_1_genotype_1a05380af4c0737841c09d3a5533f9f942" kindref="member">org.jgap.Genotype#getFittestChromosome()</ref> does not seem to increase over the generations. Most often it becomes worse. This is caused by the fact, that all Chromosomes are getting better over time (the fitness interval of all Chromosomes gets narrower) and the offset that may be cut becomes bigger. </para><para>If you want to get an absolute value independant from the offset that is cut off from the chromosome&apos;s fitness value, this method has to be used. </para><para>Stop reading here because a </para><para><heading level="4">Mathematical Proof</heading>
+</para><para>is following. How can it work to get the absolute value for all Chromosomes fitness values? Some Chromosomes may have lived for many generations and everytime their fitness was evaluated here, the old offset was added and a new one was calculated and subtracted from the fitness value. </para><para>Each bulk fitness evaluation a <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> experiences, it&apos;s fitness value <emphasis>F</emphasis> get&apos;s an addition of the old offset <emphasis>O<subscript>(n-1)</subscript></emphasis> and a substraction by the new offset <emphasis>O<subscript>n</subscript></emphasis>.<linebreak/>
+ <emphasis><subscript>n</subscript></emphasis> is the generation index.</para><para><preformatted>
+F<subscript>1</subscript> = F<subscript>0</subscript> + O<subscript>0</subscript> - O<subscript>1</subscript>
+F<subscript>2</subscript> = F<subscript>1</subscript> + O<subscript>1</subscript> - O<subscript>2</subscript>
+F<subscript>3</subscript> = F<subscript>2</subscript> + O<subscript>2</subscript> - O<subscript>3</subscript></preformatted></para><para><preformatted>=&gt;</preformatted></para><para><preformatted>1) F<subscript>n</subscript> = <bold>F<subscript>(n-1)</subscript></bold>
++ O<subscript>(n-1)</subscript> - O<subscript>n</subscript></preformatted></para><para><preformatted>2) <bold>F<subscript>(n-1)</subscript></bold> = F<subscript>(n-2)</subscript>
++ O<subscript>(n-2)</subscript> - O<subscript>(n-1)</subscript></preformatted></para><para><preformatted>2 in 1)
+   F<subscript>n</subscript> = (F<subscript>(n-2)</subscript> + O<subscript>(n-2)</subscript><itemizedlist>
+<listitem><para>O<subscript>(n-1)</subscript>) + O<subscript>(n-1)</subscript> - O<subscript>n</subscript>
+   F<subscript>n</subscript> = F<subscript>(n-2)</subscript> + O<subscript>(n-2)</subscript> - O<subscript>n</subscript></para></listitem></itemizedlist>
+</preformatted></para><para><preformatted>We made a step over 2 generations: With the current offset and the
+fitness &amp; offset of the
+&quot;preprevious&quot; generation we can calculate the current fitness.
+We can assume that this generation stepping works for farer steps
+<subscript>m</subscript> (just continue step 2) until you have a generation step value
+high enough ;-))</preformatted></para><para><preformatted>=&gt; F<subscript>n</subscript> = F<subscript>(n-m)</subscript> + O<subscript>(n-m)</subscript> - O<subscript>n</subscript></preformatted></para><para><preformatted>We want to get the original absolute value of fitness:</preformatted></para><para><preformatted>3) m := n</preformatted></para><para><preformatted>=&gt; F<subscript>n</subscript> = F<subscript>0</subscript> + O<subscript>0</subscript> - O<subscript>n</subscript></preformatted></para><para><preformatted>solved to F<subscript>0</subscript> our original value:</preformatted></para><para><preformatted>F<subscript>0</subscript> = F<subscript>n</subscript> + O<subscript>n</subscript> - O<subscript>0</subscript></preformatted></para><para><preformatted>And our initial offset <ref refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a6741e29abe529b43b2e61d3301a1ce3c" kindref="member">O<subscript>0</subscript></ref> is zero!
+</preformatted> </para><para>This shows, that it is possible to compute the original fitness value of a <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> from it&apos;s current fitness value and the <ref refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a6741e29abe529b43b2e61d3301a1ce3c" kindref="member">previous offset</ref> regardless of the amounts of generations between original evaluation and the current generation. </para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_individuum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>any <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> that is normally being evaluated by this <computeroutput><ref refid="classorg_1_1jgap_1_1_bulk_fitness_function" kindref="compound">BulkFitnessFunction</ref></computeroutput> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the original fitness value as returned by the registered <ref refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a146b2858f31e684e3bec61818a32f730" kindref="member">fitnessFunction</ref> instance. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BulkFitnessOffsetRemover.java" line="434" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BulkFitnessOffsetRemover.java" bodystart="434" bodyend="453"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a6741e29abe529b43b2e61d3301a1ce3c" compoundref="_bulk_fitness_offset_remover_8java" startline="259">org.jgap.impl.BulkFitnessOffsetRemover.m_previousOffset</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1ab7f936892509f88c709361f5356d2195" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.impl.BulkFitnessOffsetRemover.clone</definition>
+        <argsstring>()</argsstring>
+        <name>clone</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable_1aa7e7d62077e6428ad7904932b1b4f7d5">clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>deep clone of current instance</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BulkFitnessOffsetRemover.java" line="461" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BulkFitnessOffsetRemover.java" bodystart="461" bodyend="465"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a3cb4232935702ce5db82a3e8bb378f71" compoundref="_bulk_fitness_offset_remover_8java" startline="261" endline="266">org.jgap.impl.BulkFitnessOffsetRemover.BulkFitnessOffsetRemover</references>
+        <references refid="classorg_1_1jgap_1_1_fitness_function_1aa47c6f886479efc5ed5fe84eb7f9b5ca" compoundref="_fitness_function_8java" startline="113" endline="119">org.jgap.FitnessFunction.clone</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a146b2858f31e684e3bec61818a32f730" compoundref="_bulk_fitness_offset_remover_8java" startline="232">org.jgap.impl.BulkFitnessOffsetRemover.m_ff</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Takes away the fitness offset of the population to evolve. The fitness function values of the population of <ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">org.jgap.IChromosome</ref> instances will start from a minimum of 1 afterwards. </para><para>The removal of an offset in the fitness values of a population strengthens the &quot;survival of the fittest&quot; effect of a selector that performs selection upon fitness values. A high offset in the fitness values of a population lowers the relative difference between the fitness values of the Chromosomes in a population. </para><para><heading level="3">Example of applicability</heading>
+</para><para>You are optimizing a black box with <emphasis>n</emphasis> parameters that are mapped to <ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">org.jgap.IChromosome</ref> instances each having <emphasis>n</emphasis> <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">org.jgap.Gene</ref> instances.<linebreak/>
+ You want to minimize the answer time of the black box and provide a <ref refid="classorg_1_1jgap_1_1_fitness_function_1a0078e42480eac93729f906ac4dc185d9" kindref="member">org.jgap.FitnessFunction#evaluate(org.jgap.IChromosome)</ref> that takes the genes out of the chromosome, put&apos;s it&apos;s <ref refid="interfaceorg_1_1jgap_1_1_gene_1aa06c80639659ddbcfa1cfe7b7bb109f9" kindref="member">org.jgap.Gene#getAllele()</ref> values to the parameters and measures the answer time of the black box (by invoking it&apos;s service to optimize). <linebreak/>
+ The longer the time takes, the worse it&apos;s fitness is, so you have to invert the measured times to fitness values: <anchor id="_1bboptimizer"/> <preformatted>
+&lt;font color=&quot;#0011EE&quot;&gt;
+class BlackBoxOptimizer extends <ref refid="classorg_1_1jgap_1_1_fitness_function" kindref="compound">org.jgap.FitnessFunction</ref>{
+  private BlackBox bbox;
+  &lt;font color=&quot;#999999&quot;&gt;//Additional code: constructors&lt;/font&gt;
+  &lt;font color=&quot;#999999&quot;&gt;...&lt;/font&gt;
+  public double evaluate(<ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">org.jgap.IChromosome</ref> chromosome){
+    double fitness = 0;
+    &lt;font color=&quot;#999999&quot;&gt;// get the <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>[] &amp; put the parameters into the box.
+    ...
+    &lt;/font&gt;
+    long duration = System.currentTimeMillis();
+&lt;font color=&quot;#999999&quot;&gt;
+// You certainly will use an advanced StopWatch...&lt;/font&gt;
+    this.bbox.service();
+&lt;font color=&quot;#999999&quot;&gt;// The black boxes service to optimize.&lt;/font&gt;
+    duration = System.currentTimeMillis()-duration;
+    &lt;font color=&quot;#999999&quot;&gt;// transform the time into fitness value:&lt;/font&gt;
+    fitness = double.MAX_VALUE - (double)duration;
+    return fitness;
+  }
+}
+&lt;/font&gt;
+</preformatted> </para><para><heading level="4">We might get the following results (each row stands for a <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>, the table is a population):</heading>
+</para><para><table rows="4" cols="3"><row>
+<entry thead="yes"><para>duration  </para></entry><entry thead="yes"><para>fitness  </para></entry><entry thead="yes"><para>piece of fitness cake   </para></entry></row>
+<row>
+<entry thead="no"><para>2000  </para></entry><entry thead="no"><para>9218868437227403311  </para></entry><entry thead="no"><para>33.333333333333336949106088992532 %   </para></entry></row>
+<row>
+<entry thead="no"><para>3000  </para></entry><entry thead="no"><para>9218868437227402311  </para></entry><entry thead="no"><para>33.333333333333333333333333333333 %   </para></entry></row>
+<row>
+<entry thead="no"><para>4000  </para></entry><entry thead="no"><para>9218868437227401311  </para></entry><entry thead="no"><para>33.333333333333329717560577674135 %   </para></entry></row>
+</table>
+</para><para>If any <ref refid="classorg_1_1jgap_1_1_natural_selector" kindref="compound">org.jgap.NaturalSelector</ref> performs selection based upon the fitness values, it will have to put those values in relation to each other. As a fact, the probability to select the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> that contained the black box parameters that caused an answer time of 4000 ms is &quot;equal&quot; to the probability to select the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> that caused a black box answer time to be 2000 ms! </para><para>Of course one could work around that problem by replacing the <computeroutput>Integer.MAX_VALUE</computeroutput> transformation by a fixed maximum value the black box would need for the service. But what, if you have no guaranteed maximum answer time for the service of the black box ? Even if you have got one, it will be chosen sufficently high above the average answer time thus letting your fitness function return values with a high offset in the fitness. </para><para><heading level="4">This is, what happens, if you use this instance for fitness evaluation:</heading>
+</para><para><table rows="4" cols="3"><row>
+<entry thead="yes"><para>duration  </para></entry><entry thead="yes"><para>fitness  </para></entry><entry thead="yes"><para>piece of fitness cake   </para></entry></row>
+<row>
+<entry thead="no"><para>2000  </para></entry><entry thead="no"><para>2001  </para></entry><entry thead="no"><para>66.63 %   </para></entry></row>
+<row>
+<entry thead="no"><para>3000  </para></entry><entry thead="no"><para>1001  </para></entry><entry thead="no"><para>33.33 %   </para></entry></row>
+<row>
+<entry thead="no"><para>4000  </para></entry><entry thead="no"><para>1  </para></entry><entry thead="no"><para>0.03 %   </para></entry></row>
+</table>
+</para><para><heading level="3">Example of usage</heading>
+</para><para>This example shows how to use this instance for cutting fitness offsets. It is the same example as used <ulink url="#bboptimizer">above</ulink>. <preformatted>
+&lt;font color=&quot;#0011EE&quot;&gt;
+class BlackBoxOptimizer extends <ref refid="classorg_1_1jgap_1_1_fitness_function" kindref="compound">org.jgap.FitnessFunction</ref>{
+  &lt;font color=&quot;#999999&quot;&gt;// Additional code: constructors
+  ...&lt;/font&gt;
+  public double evaluate(<ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">org.jgap.IChromosome</ref> chromosome){
+    &lt;font color=&quot;#999999&quot;&gt;.... // As shown above.&lt;/font&gt;
+  }</preformatted></para><para><preformatted>  public void startOptimization(<ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">org.jgap.Configuration</ref> gaConf)
+      throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref>{
+    &lt;font color=&quot;#999999&quot;&gt;
+    // The given <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> may be preconfigured with
+    // <ref refid="classorg_1_1jgap_1_1_natural_selector" kindref="compound">NaturalSelector</ref> &amp; <ref refid="interfaceorg_1_1jgap_1_1_genetic_operator" kindref="compound">GeneticOperator</ref> instances,.
+    // But should not contain a <ref refid="classorg_1_1jgap_1_1_fitness_function" kindref="compound">FitnessFunction</ref> or BulkFitnessFunction!
+&lt;/font&gt;
+    <bold>gaConf.setBulkFitnessFunction(new BulkFitnessOffsetRemover(this));</bold>
+    &lt;font color=&quot;#999999&quot;&gt;// Why does it work? We implement FitnessFunction!
+    // Still to do here:
+    // - Create a sample chromosome according to your blackbox &amp; set it to
+     //   the configuration.
+    // - Create a random inital <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref>.
+    // - loop over a desired amount of generations invoking
+     //   aGenotype.evolve()..&lt;/font&gt;
+  }
+}
+&lt;/font&gt;
+</preformatted> </para><para><simplesect kind="author"><para>Achim Westermann </para></simplesect>
+<simplesect kind="since"><para>2.2 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="10243">
+        <label>Serializable</label>
+      </node>
+      <node id="10244">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="10245" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10242">
+        <label>org.jgap.BulkFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_bulk_fitness_function"/>
+        <childnode refid="10243" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10244" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10245">
+        <label>Cloneable</label>
+      </node>
+      <node id="10241">
+        <label>org.jgap.impl.BulkFitnessOffsetRemover</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover"/>
+        <childnode refid="10242" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10251">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="10248" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10249" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10248">
+        <label>Serializable</label>
+      </node>
+      <node id="10249">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="10250" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10247">
+        <label>org.jgap.BulkFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_bulk_fitness_function"/>
+        <childnode refid="10248" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10249" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10250">
+        <label>Cloneable</label>
+      </node>
+      <node id="10246">
+        <label>org.jgap.impl.BulkFitnessOffsetRemover</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover"/>
+        <childnode refid="10247" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10251" relation="usage">
+          <edgelabel>m_ff</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BulkFitnessOffsetRemover.java" line="224" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BulkFitnessOffsetRemover.java" bodystart="223" bodyend="466"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a3cb4232935702ce5db82a3e8bb378f71" prot="public" virt="non-virtual"><scope>org::jgap::impl::BulkFitnessOffsetRemover</scope><name>BulkFitnessOffsetRemover</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1ab7f936892509f88c709361f5356d2195" prot="public" virt="non-virtual"><scope>org::jgap::impl::BulkFitnessOffsetRemover</scope><name>clone</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a5a306d0059b248c4b2282b633e49f878" prot="private" virt="non-virtual"><scope>org::jgap::impl::BulkFitnessOffsetRemover</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a5ffd62bd47b23dfa534a5f4e775d3a0e" prot="public" virt="non-virtual"><scope>org::jgap::impl::BulkFitnessOffsetRemover</scope><name>evaluate</name></member>
+      <member refid="classorg_1_1jgap_1_1_bulk_fitness_function_1a2685b837c809586e7a029e670bc1cd42" prot="public" virt="pure-virtual" ambiguityscope="org::jgap::BulkFitnessFunction."><scope>org::jgap::impl::BulkFitnessOffsetRemover</scope><name>evaluate</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1ab0c11462e990be4138a99d0a6e4611e2" prot="public" virt="non-virtual"><scope>org::jgap::impl::BulkFitnessOffsetRemover</scope><name>getAbsoluteFitness</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a146b2858f31e684e3bec61818a32f730" prot="private" virt="non-virtual"><scope>org::jgap::impl::BulkFitnessOffsetRemover</scope><name>m_ff</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_1a6741e29abe529b43b2e61d3301a1ce3c" prot="private" virt="non-virtual"><scope>org::jgap::impl::BulkFitnessOffsetRemover</scope><name>m_previousOffset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

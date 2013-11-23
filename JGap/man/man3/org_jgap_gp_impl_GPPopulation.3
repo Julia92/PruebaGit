@@ -1,0 +1,1196 @@
+.TH "org.jgap.gp.impl.GPPopulation" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.impl.GPPopulation \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable, and Comparable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGPPopulation\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "\fBGPPopulation\fP (\fBGPConfiguration\fP a_config, int a_size)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGPPopulation\fP (\fBGPPopulation\fP a_pop)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGPPopulation\fP (\fBGPPopulation\fP a_pop, boolean a_keepPrograms)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBsort\fP (Comparator c)"
+.br
+.ti -1c
+.RI "void \fBcreate\fP (Class[] a_types, Class[][] a_argTypes, \fBCommandGene\fP[][] a_nodeSets, int[] a_minDepths, int[] a_maxDepths, int a_maxNodes, boolean[] a_fullModeAllowed)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBcreate\fP (Class[] a_types, Class[][] a_argTypes, \fBCommandGene\fP[][] a_nodeSets, int[] a_minDepths, int[] a_maxDepths, int a_maxNodes, boolean[] a_fullModeAllowed, \fBIProgramCreator\fP a_programCreator)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBcreate\fP (Class[] a_types, Class[][] a_argTypes, \fBCommandGene\fP[][] a_nodeSets, int[] a_minDepths, int[] a_maxDepths, int a_maxNodes, boolean[] a_fullModeAllowed, \fBIProgramCreator\fP a_programCreator, int a_offset)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBIGPProgram\fP \fBcreate\fP (Class[] a_types, Class[][] a_argTypes, \fBCommandGene\fP[][] a_nodeSets, int[] a_minDepths, int[] a_maxDepths, int a_depth, boolean a_grow, int a_maxNodes, boolean[] a_fullModeAllowed, int a_tries)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBIGPProgram\fP \fBcreate\fP (int a_programIndex, Class[] a_types, Class[][] a_argTypes, \fBCommandGene\fP[][] a_nodeSets, int[] a_minDepths, int[] a_maxDepths, int a_depth, boolean a_grow, int a_maxNodes, boolean[] a_fullModeAllowed, int a_tries)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBIGPProgram\fP \fBcreate\fP (int a_programIndex, Class[] a_types, Class[][] a_argTypes, \fBCommandGene\fP[][] a_nodeSets, int[] a_minDepths, int[] a_maxDepths, int a_depth, boolean a_grow, int a_maxNodes, boolean[] a_fullModeAllowed, int a_tries, \fBIProgramCreator\fP a_programCreator)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "int \fBgetPopSize\fP ()"
+.br
+.ti -1c
+.RI "\fBGPConfiguration\fP \fBgetGPConfiguration\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetGPProgram\fP (final int a_index, final \fBIGPProgram\fP a_program)"
+.br
+.ti -1c
+.RI "\fBIGPProgram\fP \fBgetGPProgram\fP (int a_index)"
+.br
+.ti -1c
+.RI "void \fBsetGPPrograms\fP (final \fBGPPopulation\fP a_pop)"
+.br
+.ti -1c
+.RI "void \fBsetGPPrograms\fP (final \fBIGPProgram\fP[] a_progs)"
+.br
+.ti -1c
+.RI "void \fBcopyGPPrograms\fP (final \fBGPPopulation\fP a_pop)"
+.br
+.ti -1c
+.RI "void \fBsetGPPrograms\fP (final List a_pop)"
+.br
+.ti -1c
+.RI "\fBIGPProgram\fP[] \fBgetGPPrograms\fP ()"
+.br
+.ti -1c
+.RI "int \fBsize\fP ()"
+.br
+.ti -1c
+.RI "\fBIGPProgram\fP \fBdetermineFittestProgram\fP ()"
+.br
+.ti -1c
+.RI "\fBIGPProgram\fP \fBdetermineFittestProgramComputed\fP ()"
+.br
+.ti -1c
+.RI "List \fBdetermineFittestChromosomes\fP (final int a_numberOfPrograms)"
+.br
+.ti -1c
+.RI "void \fBsortByFitness\fP ()"
+.br
+.ti -1c
+.RI "float[] \fBgetFitnessRanks\fP ()"
+.br
+.ti -1c
+.RI "float \fBgetFitnessRank\fP (int a_index)"
+.br
+.ti -1c
+.RI "boolean \fBisChanged\fP ()"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_pop)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_pop)"
+.br
+.ti -1c
+.RI "void \fBaddFittestProgram\fP (final \fBIGPProgram\fP a_toAdd)"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisFirstEmpty\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetPersistentRepresentation\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final double \fBDELTA\fP = 0\&.0000001d"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetChanged\fP (final boolean a_changed)"
+.br
+.ti -1c
+.RI "void \fBsetSorted\fP (final boolean a_sorted)"
+.br
+.ti -1c
+.RI "boolean \fBcontainedInArray\fP (\fBIGPProgram\fP[] a_progs, \fBIGPProgram\fP a_prog)"
+.br
+.ti -1c
+.RI "String \fBencode\fP (String a_string)"
+.br
+.ti -1c
+.RI "String \fBdecode\fP (String a_string)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "transient Logger \fBLOGGER\fP = Logger\&.getLogger(GPPopulation\&.class)"
+.br
+.ti -1c
+.RI "transient int \fBwarningPrototypeReused\fP = 0"
+.br
+.ti -1c
+.RI "\fBIGPProgram\fP[] \fBm_programs\fP"
+.br
+.ti -1c
+.RI "float[] \fBm_fitnessRank\fP"
+.br
+.ti -1c
+.RI "int \fBm_popSize\fP"
+.br
+.ti -1c
+.RI "transient \fBIGPProgram\fP \fBm_fittestProgram\fP"
+.br
+.ti -1c
+.RI "\fBGPConfiguration\fP \fBm_config\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_changed\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_sorted\fP"
+.br
+.ti -1c
+.RI "\fBIGPProgram\fP \fBm_fittestToAdd\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.43 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBPopulation\fP for GP programs\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file GPPopulation\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.impl\&.GPPopulation\&.GPPopulation () throws Exception\fC [inline]\fP"
+Default constructor, only for dynamic instantiation\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 78 of file GPPopulation\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.compareTo()\&.
+.SS "org\&.jgap\&.gp\&.impl\&.GPPopulation\&.GPPopulation (\fBGPConfiguration\fPa_config, inta_size) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 89 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_config, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_fitnessRank, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_popSize, and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_programs\&.
+.SS "org\&.jgap\&.gp\&.impl\&.GPPopulation\&.GPPopulation (\fBGPPopulation\fPa_pop) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 116 of file GPPopulation\&.java\&.
+.SS "org\&.jgap\&.gp\&.impl\&.GPPopulation\&.GPPopulation (\fBGPPopulation\fPa_pop, booleana_keepPrograms) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pop\fP the population to retrieve the parameters from 
+.br
+\fIa_keepPrograms\fP true copy programs of given population to this one 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Definition at line 129 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.util\&.ICloneable\&.clone(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_changed, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_config, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_fitnessRank, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_fittestProgram, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_popSize, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_programs, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_sorted, and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setChanged()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.gp\&.impl\&.GPPopulation\&.addFittestProgram (final \fBIGPProgram\fPa_toAdd)\fC [inline]\fP"
+Adds a GP program to this \fBPopulation\fP\&. Does nothing when given null\&. The injection is actually executed in method create(\&.\&.)
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_toAdd\fP the program to add
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 907 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_fittestToAdd\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPPopulation\&.clear ()\fC [inline]\fP"
+Clears the list of programs\&. Normally, this should not be necessary\&. But especially in distributed computing, a fresh population has to be provided sometimes\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 921 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_changed, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_fittestProgram, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_programs, and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_sorted\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPPopulation\&.compareTo (Objecta_pop)\fC [inline]\fP"
+This method is not producing symmetric results as -1 is more often returned than 1 (see description of return value)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pop\fP the other population to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+1: a_pop is null or having fewer programs or equal number of programs but at least one not contained\&. 0: both populations containing exactly the same programs\&. -1: this population contains fewer programs than a_pop
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 831 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.containedInArray(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.GPPopulation(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_programs, and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.size()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.equals()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPPopulation\&.containedInArray (\fBIGPProgram\fP[]a_progs, \fBIGPProgram\fPa_prog)\fC [inline]\fP, \fC [protected]\fP"
+Checks if a program is contained within an array of programs\&. Assumes that in the array no element will follow after the first null element\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_progs\fP the array to search thru 
+.br
+\fIa_prog\fP the program to find 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: program found in array via equals-method
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 866 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.equals()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.compareTo()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPPopulation\&.copyGPPrograms (final \fBGPPopulation\fPa_pop)\fC [inline]\fP"
+Sets the GPPrograms of the given population to this population\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pop\fP the population to use as template
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 610 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_programs, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setChanged(), and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.size()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPPopulation\&.create (Class[]a_types, Classa_argTypes[][], \fBCommandGene\fPa_nodeSets[][], int[]a_minDepths, int[]a_maxDepths, inta_maxNodes, boolean[]a_fullModeAllowed) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Creates a population\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_types\fP the type for each chromosome, the length of the array represents the number of chromosomes 
+.br
+\fIa_argTypes\fP the types of the arguments to each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of arguments to the chromosome 
+.br
+\fIa_nodeSets\fP the nodes which are allowed to be used by each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of nodes 
+.br
+\fIa_minDepths\fP contains the minimum depth allowed for each chromosome 
+.br
+\fIa_maxDepths\fP contains the maximum depth allowed for each chromosome 
+.br
+\fIa_maxNodes\fP reserve space for a_maxNodes number of nodes 
+.br
+\fIa_fullModeAllowed\fP array of boolean values\&. For each chromosome there is one value indicating whether the full mode for creating chromosome generations during evolution is allowed (true) or not (false) 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 205 of file GPPopulation\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.create()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPPopulation\&.create (Class[]a_types, Classa_argTypes[][], \fBCommandGene\fPa_nodeSets[][], int[]a_minDepths, int[]a_maxDepths, inta_maxNodes, boolean[]a_fullModeAllowed, \fBIProgramCreator\fPa_programCreator) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Creates a population\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_types\fP the type for each chromosome, the length of the array represents the number of chromosomes 
+.br
+\fIa_argTypes\fP the types of the arguments to each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of arguments to the chromosome 
+.br
+\fIa_nodeSets\fP the nodes which are allowed to be used by each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of nodes 
+.br
+\fIa_minDepths\fP contains the minimum depth allowed for each chromosome 
+.br
+\fIa_maxDepths\fP contains the maximum depth allowed for each chromosome 
+.br
+\fIa_maxNodes\fP reserve space for a_maxNodes number of nodes 
+.br
+\fIa_fullModeAllowed\fP array of boolean values\&. For each chromosome there is one value indicating whether the full mode for creating chromosome generations during evolution is allowed (true) or not (false) 
+.br
+\fIa_programCreator\fP service to create new programs with 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 238 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.create()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPPopulation\&.create (Class[]a_types, Classa_argTypes[][], \fBCommandGene\fPa_nodeSets[][], int[]a_minDepths, int[]a_maxDepths, inta_maxNodes, boolean[]a_fullModeAllowed, \fBIProgramCreator\fPa_programCreator, inta_offset) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Creates a population\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_types\fP the type for each chromosome, the length of the array represents the number of chromosomes 
+.br
+\fIa_argTypes\fP the types of the arguments to each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of arguments to the chromosome 
+.br
+\fIa_nodeSets\fP the nodes which are allowed to be used by each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of nodes 
+.br
+\fIa_minDepths\fP contains the minimum depth allowed for each chromosome 
+.br
+\fIa_maxDepths\fP contains the maximum depth allowed for each chromosome 
+.br
+\fIa_maxNodes\fP reserve space for a_maxNodes number of nodes 
+.br
+\fIa_fullModeAllowed\fP array of boolean values\&. For each chromosome there is one value indicating whether the full mode for creating chromosome generations during evolution is allowed (true) or not (false) 
+.br
+\fIa_programCreator\fP service to create new programs with 
+.br
+\fIa_offset\fP start index for new programs to put into the configuration
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+add element of randomness 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+5: make configurable 
+.RE
+.PP
+
+.PP
+Definition at line 274 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.create(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getGPConfiguration(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_popSize, org\&.jgap\&.IHandler\&.perform(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setChanged(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setGPProgram(), and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.warningPrototypeReused\&.
+.SS "\fBIGPProgram\fP org\&.jgap\&.gp\&.impl\&.GPPopulation\&.create (Class[]a_types, Classa_argTypes[][], \fBCommandGene\fPa_nodeSets[][], int[]a_minDepths, int[]a_maxDepths, inta_depth, booleana_grow, inta_maxNodes, boolean[]a_fullModeAllowed, inta_tries) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Creates a population\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_types\fP Class[] 
+.br
+\fIa_argTypes\fP Class[][] 
+.br
+\fIa_nodeSets\fP \fBCommandGene\fP[][] 
+.br
+\fIa_minDepths\fP int[] 
+.br
+\fIa_maxDepths\fP int[] 
+.br
+\fIa_depth\fP int 
+.br
+\fIa_grow\fP boolean 
+.br
+\fIa_maxNodes\fP int 
+.br
+\fIa_fullModeAllowed\fP boolean[] 
+.br
+\fIa_tries\fP int 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBIGPProgram\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 413 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.create()\&.
+.SS "\fBIGPProgram\fP org\&.jgap\&.gp\&.impl\&.GPPopulation\&.create (inta_programIndex, Class[]a_types, Classa_argTypes[][], \fBCommandGene\fPa_nodeSets[][], int[]a_minDepths, int[]a_maxDepths, inta_depth, booleana_grow, inta_maxNodes, boolean[]a_fullModeAllowed, inta_tries) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_programIndex\fP int 
+.br
+\fIa_types\fP Class[] 
+.br
+\fIa_argTypes\fP Class[][] 
+.br
+\fIa_nodeSets\fP \fBCommandGene\fP[][] 
+.br
+\fIa_minDepths\fP int[] 
+.br
+\fIa_maxDepths\fP int[] 
+.br
+\fIa_depth\fP int 
+.br
+\fIa_grow\fP boolean 
+.br
+\fIa_maxNodes\fP int 
+.br
+\fIa_fullModeAllowed\fP boolean[] 
+.br
+\fIa_tries\fP int 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBIGPProgram\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 442 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.create()\&.
+.SS "\fBIGPProgram\fP org\&.jgap\&.gp\&.impl\&.GPPopulation\&.create (inta_programIndex, Class[]a_types, Classa_argTypes[][], \fBCommandGene\fPa_nodeSets[][], int[]a_minDepths, int[]a_maxDepths, inta_depth, booleana_grow, inta_maxNodes, boolean[]a_fullModeAllowed, inta_tries, \fBIProgramCreator\fPa_programCreator) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Creates a valid \fBIGPProgram\fP\&. No fitness computation is initiated here!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_programIndex\fP index of the program in the population 
+.br
+\fIa_types\fP the type of each chromosome, the length is the number of chromosomes 
+.br
+\fIa_argTypes\fP the types of the arguments to each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of arguments to the chromosome 
+.br
+\fIa_nodeSets\fP the nodes which are allowed to be used by each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of nodes 
+.br
+\fIa_minDepths\fP contains the minimum depth allowed for each chromosome 
+.br
+\fIa_maxDepths\fP contains the maximum depth allowed for each chromosome 
+.br
+\fIa_depth\fP the maximum depth of the program to create 
+.br
+\fIa_grow\fP true: grow mode, false: full mode 
+.br
+\fIa_maxNodes\fP reserve space for a_maxNodes number of nodes 
+.br
+\fIa_fullModeAllowed\fP array of boolean values\&. For each chromosome there is one value indicating whether the full mode for creating chromosomes during evolution is allowed (true) or not (false) 
+.br
+\fIa_tries\fP maximum number of tries to get a valid program 
+.br
+\fIa_programCreator\fP strategy class to create programs for the population
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+valid program
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 486 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getGPConfiguration(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_fittestToAdd, and org\&.jgap\&.IHandler\&.perform()\&.
+.SS "String org\&.jgap\&.gp\&.impl\&.GPPopulation\&.decode (Stringa_string)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 964 of file GPPopulation\&.java\&.
+.SS "List org\&.jgap\&.gp\&.impl\&.GPPopulation\&.determineFittestChromosomes (final inta_numberOfPrograms)\fC [inline]\fP"
+Sorts the GPPrograms list and returns the fittest n GPPrograms in the population\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_numberOfPrograms\fP number of top performer GPPrograms to be returned 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+list of the fittest n GPPrograms of the population, or the fittest x GPPrograms with x = number of GPPrograms in case n > x\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 743 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_changed, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_programs, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_sorted, and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.sortByFitness()\&.
+.SS "\fBIGPProgram\fP org\&.jgap\&.gp\&.impl\&.GPPopulation\&.determineFittestProgram ()\fC [inline]\fP"
+Determines the fittest \fBGPProgram\fP in the population (the one with the highest fitness value) and memorizes it\&. This is an optimized version compared to calling determineFittesPrograms(1)\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the fittest \fBGPProgram\fP of the population
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 657 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.DELTA, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getGPConfiguration(), org\&.jgap\&.gp\&.IGPFitnessEvaluator\&.isFitter(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_changed, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_fittestProgram, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_programs, org\&.jgap\&.IHandler\&.perform(), and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setChanged()\&.
+.SS "\fBIGPProgram\fP org\&.jgap\&.gp\&.impl\&.GPPopulation\&.determineFittestProgramComputed ()\fC [inline]\fP"
+Determines the fittest \fBGPProgram\fP in the population, but only considers programs with already computed fitness value\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the fittest \fBGPProgram\fP of the population
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 706 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.FitnessFunction\&.DELTA, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getGPConfiguration(), org\&.jgap\&.gp\&.IGPFitnessEvaluator\&.isFitter(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_programs, and org\&.jgap\&.FitnessFunction\&.NO_FITNESS_VALUE\&.
+.SS "String org\&.jgap\&.gp\&.impl\&.GPPopulation\&.encode (Stringa_string)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 960 of file GPPopulation\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getPersistentRepresentation()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPPopulation\&.equals (Objecta_pop)\fC [inline]\fP"
+The equals-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pop\fP the population instance to compare with 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: given object equal to comparing one
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 887 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.compareTo()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.containedInArray()\&.
+.SS "float org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getFitnessRank (inta_index)\fC [inline]\fP"
+
+.PP
+Definition at line 779 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_fitnessRank\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.FitnessProportionateSelection\&.select()\&.
+.SS "float [] org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getFitnessRanks ()\fC [inline]\fP"
+
+.PP
+Definition at line 775 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_fitnessRank\&.
+.SS "\fBGPConfiguration\fP org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getGPConfiguration ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the \fBGPConfiguration\fP set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 544 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_config\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.checkErroneousPop(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.create(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.determineFittestProgram(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.determineFittestProgramComputed(), and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.sortByFitness()\&.
+.SS "\fBIGPProgram\fP org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getGPProgram (inta_index)\fC [inline]\fP"
+
+.PP
+Definition at line 566 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_programs\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.calcFitness()\&.
+.SS "\fBIGPProgram\fP [] org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getGPPrograms ()\fC [inline]\fP"
+
+.PP
+Definition at line 639 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_programs\&.
+.SS "String org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getPersistentRepresentation ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the persistent representation of the population, including all GP programs
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 947 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.encode(), and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_programs\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getPopSize ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+fixed size of the population
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 534 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_popSize\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulationTest\&.testConstruct_0()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPPopulation\&.isChanged ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+true: population's programs (maybe) were changed, false: not changed for sure
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 803 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_changed\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPPopulation\&.isFirstEmpty ()\fC [inline]\fP"
+
+.PP
+Definition at line 930 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_programs, and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.size()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setChanged (final booleana_changed)\fC [inline]\fP, \fC [protected]\fP"
+Mark that for the population the fittest program may have changed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_changed\fP true: population's fittest program may have changed, false: fittest program evaluated earlier is still valid
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 792 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_changed, and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setSorted()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.copyGPPrograms(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.create(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.determineFittestProgram(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.GPPopulation(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setGPProgram(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setGPPrograms(), and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.sortByFitness()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setGPProgram (final inta_index, final \fBIGPProgram\fPa_program)\fC [inline]\fP"
+Sets the given \fBGPProgram\fP at the given index in the list of \fBGPProgram\fP's\&. If the given index is exceeding the list by one, the chromosome is appended\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the index to set the \fBGPProgram\fP in 
+.br
+\fIa_program\fP the \fBGPProgram\fP to be set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 559 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_programs, and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setChanged()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.create()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setGPPrograms (final \fBGPPopulation\fPa_pop)\fC [inline]\fP"
+Sets the GPPrograms of the given population to this population\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pop\fP the population to use as template
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 578 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_popSize, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_programs, and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setChanged()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setGPPrograms (final \fBIGPProgram\fP[]a_progs)\fC [inline]\fP"
+Sets the GPPrograms of the given array to this population\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_progs\fP the programs to set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 594 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_popSize, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_programs, and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setChanged()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setGPPrograms (final Lista_pop)\fC [inline]\fP"
+Sets the GPPrograms of the given population to this population\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pop\fP the population to use as template
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 628 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_programs, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setChanged(), and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.size()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setSorted (final booleana_sorted)\fC [inline]\fP, \fC [protected]\fP"
+Mark the population as sorted\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_sorted\fP true: mark population as sorted
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 814 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_sorted\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setChanged(), and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.sortByFitness()\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPPopulation\&.size ()\fC [inline]\fP"
+
+.PP
+Definition at line 643 of file GPPopulation\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.compareTo(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.copyGPPrograms(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.isFirstEmpty(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setGPPrograms(), and org\&.jgap\&.gp\&.impl\&.GPPopulationTest\&.testConstruct_0()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPPopulation\&.sort (Comparatorc)\fC [inline]\fP"
+Sorts the population into 'ascending' order using some criterion for 'ascending'\&. A Comparator is given which will compare two individuals, and if one individual compares lower than another individual, the first individual will appear in the population before the second individual\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the Comparator to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 169 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_fitnessRank, and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_programs\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.sortByFitness()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPPopulation\&.sortByFitness ()\fC [inline]\fP"
+Sorts the programs within the population according to their fitness value using \fBGPProgramFitnessComparator\fP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 764 of file GPPopulation\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getGPConfiguration(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_fittestProgram, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_programs, org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setChanged(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setSorted(), and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.sort()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.determineFittestChromosomes()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.impl\&.GPPopulation\&.CVS_REVISION = '$Revision: 1\&.43 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 29 of file GPPopulation\&.java\&.
+.SS "final double org\&.jgap\&.gp\&.impl\&.GPPopulation\&.DELTA = 0\&.0000001d\fC [static]\fP"
+
+.PP
+Definition at line 37 of file GPPopulation\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.determineFittestProgram()\&.
+.SS "transient Logger org\&.jgap\&.gp\&.impl\&.GPPopulation\&.LOGGER = Logger\&.getLogger(GPPopulation\&.class)\fC [private]\fP"
+
+.PP
+Definition at line 39 of file GPPopulation\&.java\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_changed\fC [private]\fP"
+Indicates whether at least one of the programs has been changed (deleted, added, modified)\&. 
+.PP
+Definition at line 61 of file GPPopulation\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.clear(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.determineFittestChromosomes(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.determineFittestProgram(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.GPPopulation(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.isChanged(), and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setChanged()\&.
+.SS "\fBGPConfiguration\fP org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_config\fC [private]\fP"
+
+.PP
+Definition at line 55 of file GPPopulation\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getGPConfiguration(), and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.GPPopulation()\&.
+.SS "float [] org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_fitnessRank\fC [private]\fP"
+
+.PP
+Definition at line 49 of file GPPopulation\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getFitnessRank(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getFitnessRanks(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.GPPopulation(), and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.sort()\&.
+.SS "transient \fBIGPProgram\fP org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_fittestProgram\fC [private]\fP"
+
+.PP
+Definition at line 53 of file GPPopulation\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.clear(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.determineFittestProgram(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.GPPopulation(), and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.sortByFitness()\&.
+.SS "\fBIGPProgram\fP org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_fittestToAdd\fC [private]\fP"
+
+.PP
+Definition at line 68 of file GPPopulation\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.addFittestProgram(), and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.create()\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_popSize\fC [private]\fP"
+
+.PP
+Definition at line 51 of file GPPopulation\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.create(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getPopSize(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.GPPopulation(), and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setGPPrograms()\&.
+.SS "\fBIGPProgram\fP [] org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_programs\fC [private]\fP"
+The array of \fBGPProgram\fP's that make-up the \fBGenotype\fP's population\&. 
+.PP
+Definition at line 46 of file GPPopulation\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.clear(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.compareTo(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.copyGPPrograms(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.determineFittestChromosomes(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.determineFittestProgram(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.determineFittestProgramComputed(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getGPProgram(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getGPPrograms(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.getPersistentRepresentation(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.GPPopulation(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.isFirstEmpty(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setGPProgram(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setGPPrograms(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.sort(), and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.sortByFitness()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPPopulation\&.m_sorted\fC [private]\fP"
+Indicates that the list of GPPrograms has been sorted\&. 
+.PP
+Definition at line 66 of file GPPopulation\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.clear(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.determineFittestChromosomes(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.GPPopulation(), and org\&.jgap\&.gp\&.impl\&.GPPopulation\&.setSorted()\&.
+.SS "transient int org\&.jgap\&.gp\&.impl\&.GPPopulation\&.warningPrototypeReused = 0\fC [private]\fP"
+
+.PP
+Definition at line 41 of file GPPopulation\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.create()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

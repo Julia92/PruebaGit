@@ -1,0 +1,125 @@
+.TH "org.jgap.INaturalSelector" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.INaturalSelector \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable\&.
+.PP
+Inherited by \fBorg\&.jgap\&.NaturalSelector\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBselect\fP (int a_howManyToSelect, \fBPopulation\fP a_from_population, \fBPopulation\fP a_to_population)"
+.br
+.ti -1c
+.RI "void \fBempty\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBreturnsUniqueChromosomes\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.13 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Natural selectors are responsible for actually selecting a specified number of \fBChromosome\fP specimens from a population, using the fitness values as a guide\&. Usually fitness is treated as a statistic probability of survival, not as the sole determining factor\&. Therefore, Chromosomes with higher fitness values are more likely to survive than those with lesser fitness values, but it's not guaranteed\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file INaturalSelector\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.INaturalSelector\&.empty ()"
+Empty out the working pool of Chromosomes\&. This will be invoked after each evolution cycle so that the natural selector can be reused for the next one\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.WeightedRouletteSelector\fP, \fBorg\&.jgap\&.impl\&.BestChromosomesSelector\fP, \fBorg\&.jgap\&.impl\&.StandardPostSelector\fP, \fBorg\&.jgap\&.impl\&.TournamentSelector\fP, and \fBorg\&.jgap\&.impl\&.ThresholdSelector\fP\&.
+.SS "boolean org\&.jgap\&.INaturalSelector\&.returnsUniqueChromosomes ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+true: The implementation of the \fBNaturalSelector\fP only returns unique \fBChromosome\fP's (example: BestChromosomesSelector)\&. false: Also doublettes could be returned (example: WeightedRouletteSelector)\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.WeightedRouletteSelector\fP, \fBorg\&.jgap\&.impl\&.BestChromosomesSelector\fP, \fBorg\&.jgap\&.impl\&.StandardPostSelector\fP, \fBorg\&.jgap\&.impl\&.TournamentSelector\fP, and \fBorg\&.jgap\&.impl\&.ThresholdSelector\fP\&.
+.SS "void org\&.jgap\&.INaturalSelector\&.select (inta_howManyToSelect, \fBPopulation\fPa_from_population, \fBPopulation\fPa_to_population)"
+Select a given number of Chromosomes from the pool that will move on to the next generation population\&. This selection should be guided by the fitness values, but fitness should be treated as a statistical probability of survival, not as the sole determining factor\&. In other words, Chromosomes with higher fitness values should be more likely to be selected than those with lower fitness values, but it should not be guaranteed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_howManyToSelect\fP the number of Chromosomes to select 
+.br
+\fIa_from_population\fP the population the Chromosomes will be selected from 
+.br
+\fIa_to_population\fP the population the Chromosomes will be added to
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 (since 1\&.0 with different return type) 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.INaturalSelector\&.CVS_REVISION = '$Revision: 1\&.13 $'\fC [static]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 29 of file INaturalSelector\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

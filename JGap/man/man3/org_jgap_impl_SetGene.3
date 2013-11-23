@@ -1,0 +1,416 @@
+.TH "org.jgap.impl.SetGene" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.SetGene \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.BaseGene\fP, and \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSetGene\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBSetGene\fP (final \fBConfiguration\fP a_conf)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBaddAllele\fP (final Object a_value)"
+.br
+.ti -1c
+.RI "void \fBaddAlleles\fP (final Collection a_alleles)"
+.br
+.ti -1c
+.RI "void \fBremoveAlleles\fP (final Object a_key)"
+.br
+.ti -1c
+.RI "void \fBsetToRandomValue\fP (final \fBRandomGenerator\fP a_numberGenerator)"
+.br
+.ti -1c
+.RI "void \fBapplyMutation\fP (final int a_index, final double a_percentage)"
+.br
+.ti -1c
+.RI "void \fBsetValueFromPersistentRepresentation\fP (String a_representation)  throws UnsupportedRepresentationException "
+.br
+.ti -1c
+.RI "String \fBgetPersistentRepresentation\fP ()  throws UnsupportedOperationException "
+.br
+.ti -1c
+.RI "void \fBsetAllele\fP (Object a_newValue)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object other)"
+.br
+.ti -1c
+.RI "int \fBhashCode\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGene\fP \fBnewGeneInternal\fP ()"
+.br
+.ti -1c
+.RI "Object \fBgetInternalValue\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "THashSet \fBm_geneSet\fP = new THashSet()"
+.br
+.ti -1c
+.RI "Object \fBm_value\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.18 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+ATTENTION: This class is preliminary and subject of future adaptations! Use with care or wait for a more mature version we are working on\&. 
+.PP
+Creates a gene instance in which individual alleles have both a label (key) and a value with a distinct meaning\&. For example, \fBIntegerGene\fP only allows for values having a continuous range, and does not have a function where it is possible to specify setValue\&.\&.\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Johnathan Kool (RSMAS, University of Miami) 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 28 of file SetGene\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.SetGene\&.SetGene () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Default constructor\&.
+.PP
+Attention: The configuration used is the one set with the static method Genotype\&.setConfiguration\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+
+.PP
+Definition at line 44 of file SetGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.SetGene\&.compareTo(), and org\&.jgap\&.impl\&.SetGene\&.newGeneInternal()\&.
+.SS "org\&.jgap\&.impl\&.SetGene\&.SetGene (final \fBConfiguration\fPa_conf) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 57 of file SetGene\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.impl\&.SetGene\&.addAllele (final Objecta_value)\fC [inline]\fP"
+Adds a potential allele value to the collection\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_value\fP the Integer value to be added 
+.RE
+.PP
+
+.PP
+Definition at line 76 of file SetGene\&.java\&.
+.SS "void org\&.jgap\&.impl\&.SetGene\&.addAlleles (final Collectiona_alleles)\fC [inline]\fP"
+Add a set of potential allele values to the collection
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_alleles\fP the set of alleles to be added 
+.RE
+.PP
+
+.PP
+Definition at line 85 of file SetGene\&.java\&.
+.SS "void org\&.jgap\&.impl\&.SetGene\&.applyMutation (final inta_index, final doublea_percentage)\fC [inline]\fP"
+See interface \fBGene\fP for description of applyMutation\&.
+.PP
+For this kind of gene, providing an index and a magnitude have no significance because the individual allele forms are independent of one another\&. In mutating, they can only cange from one form to another\&. It may be possible to weight the likelihood of mutation to different forms, but that will not be implemented here\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP ignored here 
+.br
+\fIa_percentage\fP ignored here
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.PP
+Johnathan Kool 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 127 of file SetGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getConfiguration(), and org\&.jgap\&.impl\&.SetGene\&.setToRandomValue()\&.
+.SS "int org\&.jgap\&.impl\&.SetGene\&.compareTo (Objectother)\fC [inline]\fP"
+Compares this \fBNumberGene\fP with the specified object (which must also be a \fBNumberGene\fP) for order, which is determined by the number value of this \fBGene\fP compared to the one provided for comparison\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIother\fP the \fBNumberGene\fP to be compared to this \fBNumberGene\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a negative integer, zero, or a positive integer as this object is less than, equal to, or greater than the object provided for comparison
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIClassCastException\fP if the specified object's type prevents it from being compared to this \fBNumberGene\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.PP
+Johnathan Kool 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 272 of file SetGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getConfiguration(), org\&.jgap\&.impl\&.SetGene\&.m_value, and org\&.jgap\&.impl\&.SetGene\&.SetGene()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.SetGeneTest\&.testCompareTo_2(), and org\&.jgap\&.impl\&.SetGeneTest\&.testCompareTo_3()\&.
+.SS "Object org\&.jgap\&.impl\&.SetGene\&.getInternalValue ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the internal value of the gene 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Definition at line 309 of file SetGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.SetGene\&.m_value\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.SetGene\&.hashCode(), and org\&.jgap\&.impl\&.SetGeneTest\&.testConstruct_1()\&.
+.SS "String org\&.jgap\&.impl\&.SetGene\&.getPersistentRepresentation () throws UnsupportedOperationException\fC [inline]\fP"
+Retrieves a string representation of this \fBGene\fP that includes any information required to reconstruct it at a later time, such as its value and internal state\&. This string will be used to represent this \fBGene\fP in XML persistence\&. This is an optional method but, if not implemented, XML persistence and possibly other features will not be available\&. An UnsupportedOperationException should be thrown if no implementation is provided\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a string representation of this \fBGene\fP's current state
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP to indicate that no implementation is provided for this method
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rostan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.PP
+Definition at line 222 of file SetGene\&.java\&.
+.PP
+References org\&.jgap\&.Gene\&.PERSISTENT_FIELD_DELIMITER, and org\&.jgap\&.BaseGene\&.toString()\&.
+.SS "int org\&.jgap\&.impl\&.SetGene\&.hashCode ()\fC [inline]\fP"
+Modified \fBhashCode()\fP function to return different hashcodes for differently ordered genes in a chromosome 
+.PP
+\fBReturns:\fP
+.RS 4
+-67 if no allele set, otherwise value return by \fBBaseGene\&.hashCode()\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 321 of file SetGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.SetGene\&.getInternalValue()\&.
+.SS "\fBGene\fP org\&.jgap\&.impl\&.SetGene\&.newGeneInternal ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Definition at line 62 of file SetGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getConfiguration(), and org\&.jgap\&.impl\&.SetGene\&.SetGene()\&.
+.SS "void org\&.jgap\&.impl\&.SetGene\&.removeAlleles (final Objecta_key)\fC [inline]\fP"
+Removes a potential allele or set of alleles from the collection\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_key\fP the unique value(s) of the object(s) to be removed 
+.RE
+.PP
+
+.PP
+Definition at line 94 of file SetGene\&.java\&.
+.SS "void org\&.jgap\&.impl\&.SetGene\&.setAllele (Objecta_newValue)\fC [inline]\fP"
+Sets the value (allele) of this \fBGene\fP to the new given value\&. This class expects the value to be an instance of current type (e\&.g\&. Integer)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_newValue\fP the new value of this \fBGene\fP instance\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Johnathan Kool 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 245 of file SetGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.SetGene\&.m_geneSet, and org\&.jgap\&.impl\&.SetGene\&.m_value\&.
+.SS "void org\&.jgap\&.impl\&.SetGene\&.setToRandomValue (final \fBRandomGenerator\fPa_numberGenerator)\fC [inline]\fP"
+Sets the allele value to be a random value using a defined random number generator\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Johnathan Kool
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_numberGenerator\fP \fBRandomGenerator\fP 
+.RE
+.PP
+
+.PP
+Definition at line 106 of file SetGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.SetGene\&.m_geneSet, org\&.jgap\&.impl\&.SetGene\&.m_value, and org\&.jgap\&.RandomGenerator\&.nextInt()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.SetGene\&.applyMutation()\&.
+.SS "void org\&.jgap\&.impl\&.SetGene\&.setValueFromPersistentRepresentation (Stringa_representation) throws \fBUnsupportedRepresentationException\fP\fC [inline]\fP"
+Sets the value and internal state of this \fBGene\fP from the string representation returned by a previous invocation of the \fBgetPersistentRepresentation()\fP method\&. This is an optional method but, if not implemented, XML persistence and possibly other features will not be available\&. An UnsupportedOperationException should be thrown if no implementation is provided\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_representation\fP the string representation retrieved from a prior call to the \fBgetPersistentRepresentation()\fP method 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBUnsupportedRepresentationException\fP\fP if this \fBGene\fP implementation does not support the given string representation
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rostan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.PP
+Definition at line 154 of file SetGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.SetGene\&.m_value, and org\&.jgap\&.Gene\&.PERSISTENT_FIELD_DELIMITER\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.SetGene\&.CVS_REVISION = '$Revision: 1\&.18 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 31 of file SetGene\&.java\&.
+.SS "THashSet org\&.jgap\&.impl\&.SetGene\&.m_geneSet = new THashSet()\fC [private]\fP"
+
+.PP
+Definition at line 33 of file SetGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.SetGene\&.setAllele(), and org\&.jgap\&.impl\&.SetGene\&.setToRandomValue()\&.
+.SS "Object org\&.jgap\&.impl\&.SetGene\&.m_value\fC [private]\fP"
+
+.PP
+Definition at line 35 of file SetGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.SetGene\&.compareTo(), org\&.jgap\&.impl\&.SetGene\&.getInternalValue(), org\&.jgap\&.impl\&.SetGene\&.setAllele(), org\&.jgap\&.impl\&.SetGene\&.setToRandomValue(), and org\&.jgap\&.impl\&.SetGene\&.setValueFromPersistentRepresentation()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,337 @@
+.TH "org.jgap.impl.GreedyCrossover" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.GreedyCrossover \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.BaseGeneticOperator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGreedyCrossover\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGreedyCrossover\fP (\fBConfiguration\fP a_configuration)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "double \fBdistance\fP (final Object a_from, final Object a_to)"
+.br
+.ti -1c
+.RI "void \fBoperate\fP (final \fBPopulation\fP a_population, final List a_candidateChromosomes)"
+.br
+.ti -1c
+.RI "void \fBoperate\fP (final \fBIChromosome\fP a_firstMate, final \fBIChromosome\fP a_secondMate)"
+.br
+.ti -1c
+.RI "void \fBsetStartOffset\fP (int a_offset)"
+.br
+.ti -1c
+.RI "int \fBgetStartOffset\fP ()"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (final Object a_other)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGene\fP[] \fBoperate\fP (final \fBGene\fP[] a_g1, final \fBGene\fP[] a_g2)"
+.br
+.ti -1c
+.RI "\fBGene\fP \fBfindNext\fP (final \fBGene\fP[] a_g, final \fBGene\fP a_x)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBm_startOffset\fP = 1"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.30 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The Greedy Crossover is a specific type of crossover\&. It can only be is applied if 
+.PD 0
+
+.IP "\(bu" 2
+.IP "  1." 6
+All genes in the chromosome are different and  
+.PP
+
+.IP "\(bu" 2
+.IP "  2." 6
+The set of genes for both chromosomes is identical and only their order in the chromosome can vary\&.  
+.PP
+
+.PP
+.PP
+After the \fBGreedyCrossover\fP, these two conditions always remain true, so it can be applied again and again\&.
+.PP
+The algorithm throws an assertion error if the two initial chromosomes does not satisfy these conditions\&.
+.PP
+Greedy crossover can be best explained in the terms of the Traveling Salesman Problem:
+.PP
+The algorithm selects the first city of one parent, compares the cities leaving that city in both parents, and chooses the closer one to extend the tour\&. If one city has already appeared in the tour, we choose the other city\&. If both cities have already appeared, we randomly select a non-selected city\&.
+.PP
+See J\&. Grefenstette, R\&. Gopal, R\&. Rosmaita, and D\&. Gucht\&. \fIGenetic algorithms for the traveling salesman problem\fP\&. In Proceedings of the Second International Conference on Genetic Algorithms\&. Lawrence Eribaum Associates, Mahwah, NJ, 1985\&. and also \fCSushil J\&. Louis & Gong Li\fP}
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.PP
+<font size='-1'>Neil Rotstan, Klaus Meffert (reused code from \fBCrossoverOperator\fP)</font> 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 55 of file GreedyCrossover\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.GreedyCrossover\&.GreedyCrossover () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Default constructor for dynamic instantiation\&.
+.PP
+Attention: The configuration used is the one set with the static method Genotype\&.setConfiguration\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.PP
+3\&.0 (since 2\&.0 without a_configuration) 
+.RE
+.PP
+
+.PP
+Definition at line 76 of file GreedyCrossover\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.getStaticConfiguration()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GreedyCrossover\&.compareTo()\&.
+.SS "org\&.jgap\&.impl\&.GreedyCrossover\&.GreedyCrossover (\fBConfiguration\fPa_configuration) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Using the given configuration\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 (since 2\&.6 without a_configuration) 
+.RE
+.PP
+
+.PP
+Definition at line 90 of file GreedyCrossover\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int org\&.jgap\&.impl\&.GreedyCrossover\&.compareTo (final Objecta_other)\fC [inline]\fP"
+Compares the given \fBGeneticOperator\fP to this \fBGeneticOperator\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the instance against which to compare this instance 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a negative number if this instance is 'less than' the given instance, zero if they are equal to each other, and a positive number if this is 'greater than' the given instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 306 of file GreedyCrossover\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.GreedyCrossover\&.getStartOffset(), and org\&.jgap\&.impl\&.GreedyCrossover\&.GreedyCrossover()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GreedyCrossoverTest\&.testCompareTo_0()\&.
+.SS "double org\&.jgap\&.impl\&.GreedyCrossover\&.distance (final Objecta_from, final Objecta_to)\fC [inline]\fP"
+Compute the distance between 'cities', indicated by these two given genes\&. The default method expects the genes to be \fBIntegerGene\fP's and returns their absolute difference, that makes sense only for tests\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_from\fP Object 
+.br
+\fIa_to\fP Object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+distance between the two given cities 
+.RE
+.PP
+
+.PP
+Definition at line 105 of file GreedyCrossover\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.IntegerGene\&.intValue()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GreedyCrossover\&.operate()\&.
+.SS "\fBGene\fP org\&.jgap\&.impl\&.GreedyCrossover\&.findNext (final \fBGene\fP[]a_g, final \fBGene\fPa_x)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 262 of file GreedyCrossover\&.java\&.
+.PP
+References org\&.jgap\&.BaseGeneticOperator\&.equals(), and org\&.jgap\&.impl\&.GreedyCrossover\&.m_startOffset\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GreedyCrossover\&.operate()\&.
+.SS "int org\&.jgap\&.impl\&.GreedyCrossover\&.getStartOffset ()\fC [inline]\fP"
+Gets a number of genes at the start of chromosome, that are excluded from the swapping\&. In the Salesman task, the first city in the list should (where the salesman leaves from) probably should not change as it is part of the list\&. The default value is 1\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the start offset used 
+.RE
+.PP
+
+.PP
+Definition at line 291 of file GreedyCrossover\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.GreedyCrossover\&.m_startOffset\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GreedyCrossover\&.compareTo(), and org\&.jgap\&.impl\&.GreedyCrossoverTest\&.testStartoffset_0()\&.
+.SS "void org\&.jgap\&.impl\&.GreedyCrossover\&.operate (final \fBPopulation\fPa_population, final Lista_candidateChromosomes)\fC [inline]\fP"
+The operate method will be invoked on each of the genetic operators referenced by the current \fBConfiguration\fP object during the evolution phase\&. Operators are given an opportunity to run in the order that they are added to the \fBConfiguration\fP\&. Implementations of this method may reference the population of Chromosomes as it was at the beginning of the evolutionary phase and/or they may instead reference the candidate Chromosomes, which are the results of prior genetic operators\&. In either case, only Chromosomes added to the list of candidate chromosomes will be considered for natural selection\&.
+.PP
+The parameters a_population and a_candidateChromosomes may refer to the same list of chromosomes for performance issues\&. Thus would mean an in-place modification\&. In ealier JGAP versions it was suggested never modifying the input population\&. Please refer to implementations delivered with JGAP to get a picture of the way non-susceptible in-place modifications are possible\&. If wrongly done, ConcurrentModificationException could be risen when accessing the population by an iterator in a \fBGeneticOperator\fP\&. Or, if population\&.getChromosomes()\&.size() was used inside a loop where chromosomes were added to the input population this could lead to an infinite loop in worst case\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_population\fP the population of chromosomes from the current evolution prior to exposure to any genetic operators\&. Chromosomes in this array should not be modified\&. Please, notice, that the call in \fBGenotype\&.evolve()\fP to the implementations of \fBGeneticOperator\fP overgoes this due to performance issues 
+.br
+\fIa_candidateChromosomes\fP the pool of chromosomes that have been selected for the next evolved population
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 (earlier versions referenced the \fBConfiguration\fP object) 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.GeneticOperator\fP\&.
+.PP
+Definition at line 111 of file GreedyCrossover\&.java\&.
+.PP
+References org\&.jgap\&.util\&.ICloneable\&.clone(), org\&.jgap\&.BaseGeneticOperator\&.getConfiguration(), org\&.jgap\&.BaseGeneticOperator\&.m_monitorActive, and org\&.jgap\&.Population\&.size()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GreedyCrossover\&.operate()\&.
+.SS "void org\&.jgap\&.impl\&.GreedyCrossover\&.operate (final \fBIChromosome\fPa_firstMate, final \fBIChromosome\fPa_secondMate)\fC [inline]\fP"
+Performs a greedy crossover for the two given chromosoms\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_firstMate\fP the first chromosome to crossover on 
+.br
+\fIa_secondMate\fP the second chromosome to crossover on 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIError\fP if the gene set in the chromosomes is not identical
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 155 of file GreedyCrossover\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.GreedyCrossover\&.m_startOffset, and org\&.jgap\&.impl\&.GreedyCrossover\&.operate()\&.
+.SS "\fBGene\fP [] org\&.jgap\&.impl\&.GreedyCrossover\&.operate (final \fBGene\fP[]a_g1, final \fBGene\fP[]a_g2)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 176 of file GreedyCrossover\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.GreedyCrossover\&.distance(), org\&.jgap\&.BaseGeneticOperator\&.equals(), org\&.jgap\&.impl\&.GreedyCrossover\&.findNext(), and org\&.jgap\&.impl\&.GreedyCrossover\&.m_startOffset\&.
+.SS "void org\&.jgap\&.impl\&.GreedyCrossover\&.setStartOffset (inta_offset)\fC [inline]\fP"
+Sets a number of genes at the start of chromosome, that are excluded from the swapping\&. In the Salesman task, the first city in the list should (where the salesman leaves from) probably should not change as it is part of the list\&. The default value is 1\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_offset\fP the start offset to use 
+.RE
+.PP
+
+.PP
+Definition at line 279 of file GreedyCrossover\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.GreedyCrossover\&.m_startOffset\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.GreedyCrossover\&.CVS_REVISION = '$Revision: 1\&.30 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 58 of file GreedyCrossover\&.java\&.
+.SS "int org\&.jgap\&.impl\&.GreedyCrossover\&.m_startOffset = 1\fC [private]\fP"
+
+.PP
+Definition at line 63 of file GreedyCrossover\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GreedyCrossover\&.findNext(), org\&.jgap\&.impl\&.GreedyCrossover\&.getStartOffset(), org\&.jgap\&.impl\&.GreedyCrossover\&.operate(), and org\&.jgap\&.impl\&.GreedyCrossover\&.setStartOffset()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

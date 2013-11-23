@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1_cached_fitness_function" kind="class" prot="public">
+    <compoundname>org::jgap::CachedFitnessFunction</compoundname>
+    <basecompoundref refid="classorg_1_1jgap_1_1_fitness_function" prot="public" virt="non-virtual">org.jgap.FitnessFunction</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1_cached_fitness_function_1ab281e35d33336f473dcc8a252ebcc932" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.CachedFitnessFunction.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.4 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000047"><xreftitle>Todo</xreftitle><xrefdescription><para>allow to restrict size of cache / age of entries </para></xrefdescription></xrefsect>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/CachedFitnessFunction.java" line="28" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/CachedFitnessFunction.java" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1_cached_fitness_function_1a050080fb109ccbf262449ded034f08b4" prot="private" static="no" mutable="no">
+        <type>Map&lt; String, Double &gt;</type>
+        <definition>Map&lt;String, Double&gt; org.jgap.CachedFitnessFunction.cachedFitnessValues</definition>
+        <argsstring></argsstring>
+        <name>cachedFitnessValues</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/CachedFitnessFunction.java" line="31" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/CachedFitnessFunction.java" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1_cached_fitness_function_1a7ff94e1abb8dbb178ba278de372e0f6d" compoundref="_cached_fitness_function_8java" startline="56" endline="58">org.jgap.CachedFitnessFunction.CachedFitnessFunction</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_cached_fitness_function_1aa9dcd784be94cfeee7d6437e9818f0c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.CachedFitnessFunction.CachedFitnessFunction</definition>
+        <argsstring>()</argsstring>
+        <name>CachedFitnessFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default Constructor ensuring downward compatibility.</para><para><simplesect kind="author"><para>Tobias Getrost </para></simplesect>
+<simplesect kind="since"><para>3.3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/CachedFitnessFunction.java" line="39" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/CachedFitnessFunction.java" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_cached_fitness_function_1a7ff94e1abb8dbb178ba278de372e0f6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.CachedFitnessFunction.CachedFitnessFunction</definition>
+        <argsstring>(Map&lt; String, Double &gt; cache)</argsstring>
+        <name>CachedFitnessFunction</name>
+        <param>
+          <type>Map&lt; String, Double &gt;</type>
+          <declname>cache</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor that allows to use a custom <computeroutput>java.util.Map</computeroutput> implementation as cache.<linebreak/>
+ E.g. for multi-threaded fitness calculations one could use one instance of <computeroutput>java.util.concurrent.ConcurrentHashMap</computeroutput> for all instances of the fitness function.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>java.util.Map</computeroutput> data structure used to cache the fitness values</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Tobias Getrost </para></simplesect>
+<simplesect kind="since"><para>3.3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/CachedFitnessFunction.java" line="56" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/CachedFitnessFunction.java" bodystart="56" bodyend="58"/>
+        <references refid="classorg_1_1jgap_1_1_cached_fitness_function_1a050080fb109ccbf262449ded034f08b4" compoundref="_cached_fitness_function_8java" startline="31">org.jgap.CachedFitnessFunction.cachedFitnessValues</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_cached_fitness_function_1a5c83cd337b2adc95adb5a46e674dd842" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>final double</type>
+        <definition>final double org.jgap.CachedFitnessFunction.getFitnessValue</definition>
+        <argsstring>(final IChromosome a_subject)</argsstring>
+        <name>getFitnessValue</name>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+          <declname>a_subject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cached fitness value function.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_subject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the chromosome to evaluate </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>fitness value, from cache if available</para></simplesect>
+<simplesect kind="author"><para>Dennis Fleurbaaij </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/CachedFitnessFunction.java" line="70" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/CachedFitnessFunction.java" bodystart="70" bodyend="96"/>
+        <references refid="classorg_1_1jgap_1_1_cached_fitness_function_1a543b8a4679c3fd68f16467d844b5b01e" compoundref="_cached_fitness_function_8java" startline="107" endline="121">org.jgap.CachedFitnessFunction.getBusinessKey</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_cached_fitness_function_1a543b8a4679c3fd68f16467d844b5b01e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String org.jgap.CachedFitnessFunction.getBusinessKey</definition>
+        <argsstring>(IChromosome a_subject)</argsstring>
+        <name>getBusinessKey</name>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+          <declname>a_subject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the business key of a chromosome instance.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_subject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the chromosome to retrieve the key for </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the business key of the chromosome</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/CachedFitnessFunction.java" line="107" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/CachedFitnessFunction.java" bodystart="107" bodyend="121"/>
+        <referencedby refid="classorg_1_1jgap_1_1_cached_fitness_function_1a5c83cd337b2adc95adb5a46e674dd842" compoundref="_cached_fitness_function_8java" startline="70" endline="96">org.jgap.CachedFitnessFunction.getFitnessValue</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The cached fitness function extends the original <ref refid="classorg_1_1jgap_1_1_fitness_function" kindref="compound">FitnessFunction</ref> functionality in order to reduce evaluating something twice.</para><para><simplesect kind="author"><para>Dennis Fleurbaaij </para><simplesectsep/><para>Klaus Meffert </para><simplesectsep/><para>Tobias Getrost </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="10277">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="10278" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10279" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10278">
+        <label>Serializable</label>
+      </node>
+      <node id="10279">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="10280" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10276">
+        <label>org.jgap.CachedFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_cached_fitness_function"/>
+        <childnode refid="10277" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10280">
+        <label>Cloneable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10282">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="10283" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10284" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10283">
+        <label>Serializable</label>
+      </node>
+      <node id="10284">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="10285" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10281">
+        <label>org.jgap.CachedFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_cached_fitness_function"/>
+        <childnode refid="10282" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10285">
+        <label>Cloneable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/CachedFitnessFunction.java" line="25" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/CachedFitnessFunction.java" bodystart="24" bodyend="122"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1_cached_fitness_function_1aa9dcd784be94cfeee7d6437e9818f0c0" prot="public" virt="non-virtual"><scope>org::jgap::CachedFitnessFunction</scope><name>CachedFitnessFunction</name></member>
+      <member refid="classorg_1_1jgap_1_1_cached_fitness_function_1a7ff94e1abb8dbb178ba278de372e0f6d" prot="public" virt="non-virtual"><scope>org::jgap::CachedFitnessFunction</scope><name>CachedFitnessFunction</name></member>
+      <member refid="classorg_1_1jgap_1_1_cached_fitness_function_1a050080fb109ccbf262449ded034f08b4" prot="private" virt="non-virtual"><scope>org::jgap::CachedFitnessFunction</scope><name>cachedFitnessValues</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1aa47c6f886479efc5ed5fe84eb7f9b5ca" prot="public" virt="non-virtual"><scope>org::jgap::CachedFitnessFunction</scope><name>clone</name></member>
+      <member refid="classorg_1_1jgap_1_1_cached_fitness_function_1ab281e35d33336f473dcc8a252ebcc932" prot="private" virt="non-virtual"><scope>org::jgap::CachedFitnessFunction</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1a89cbf1ef4c08655f209ce69fde6731e7" prot="public" virt="non-virtual"><scope>org::jgap::CachedFitnessFunction</scope><name>DELTA</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1a0078e42480eac93729f906ac4dc185d9" prot="protected" virt="pure-virtual"><scope>org::jgap::CachedFitnessFunction</scope><name>evaluate</name></member>
+      <member refid="classorg_1_1jgap_1_1_cached_fitness_function_1a543b8a4679c3fd68f16467d844b5b01e" prot="protected" virt="non-virtual"><scope>org::jgap::CachedFitnessFunction</scope><name>getBusinessKey</name></member>
+      <member refid="classorg_1_1jgap_1_1_cached_fitness_function_1a5c83cd337b2adc95adb5a46e674dd842" prot="public" virt="non-virtual"><scope>org::jgap::CachedFitnessFunction</scope><name>getFitnessValue</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1adc5e20816cb3fd6f3486adb53b1e563d" prot="public" virt="non-virtual"><scope>org::jgap::CachedFitnessFunction</scope><name>getLastComputedFitnessValue</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1a5f1f23e6f8a0f9606aee5d52fac6a06b" prot="public" virt="non-virtual"><scope>org::jgap::CachedFitnessFunction</scope><name>NO_FITNESS_VALUE</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

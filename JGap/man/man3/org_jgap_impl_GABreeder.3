@@ -1,0 +1,280 @@
+.TH "org.jgap.impl.GABreeder" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.GABreeder \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.BreederBase\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGABreeder\fP ()"
+.br
+.ti -1c
+.RI "\fBPopulation\fP \fBevolve\fP (\fBPopulation\fP a_pop, \fBConfiguration\fP a_conf)"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBgetLastConfiguration\fP ()"
+.br
+.ti -1c
+.RI "\fBPopulation\fP \fBgetLastPopulation\fP ()"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "\fBPopulation\fP \fBbulkFunctionEvaluation\fP (\fBConfiguration\fP a_conf, \fBBulkFitnessFunction\fP a_bulkFunction, \fBPopulation\fP a_pop, boolean a_monitorActive)  throws InvalidConfigurationException "
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBkeepPopSizeConstant\fP (\fBPopulation\fP a_pop, \fBConfiguration\fP a_conf)"
+.br
+.ti -1c
+.RI "\fBIChromosome\fP \fBreAddFittest\fP (\fBPopulation\fP a_pop, \fBIChromosome\fP a_fittest)"
+.br
+.ti -1c
+.RI "void \fBupdateChromosomes\fP (\fBPopulation\fP a_pop, \fBConfiguration\fP a_conf)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBfillPopulationRandomlyToOriginalSize\fP (\fBConfiguration\fP a_conf, \fBPopulation\fP pop)"
+.br
+.ti -1c
+.RI "\fBPopulation\fP \fBremoveEvaluatedChromosomes\fP (\fBPopulation\fP a_from_pop, \fBConfiguration\fP a_config)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBPopulation\fP \fBremoveChromosomesWithoutFitnessValue\fP (\fBPopulation\fP a_from_pop, \fBConfiguration\fP a_config)  throws InvalidConfigurationException "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "transient \fBConfiguration\fP \fBm_lastConf\fP"
+.br
+.ti -1c
+.RI "transient \fBPopulation\fP \fBm_lastPop\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.21 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Breeder for genetic algorithms\&. Runs the evolution process\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.PP
+Vasilis 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file GABreeder\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.GABreeder\&.GABreeder ()\fC [inline]\fP"
+
+.PP
+Definition at line 37 of file GABreeder\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GABreeder\&.clone()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBPopulation\fP org\&.jgap\&.impl\&.GABreeder\&.bulkFunctionEvaluation (\fBConfiguration\fPa_conf, \fBBulkFitnessFunction\fPa_bulkFunction, \fBPopulation\fPa_pop, booleana_monitorActive) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+utilize jobs: bulk fitness function is not so important for a prototype! 
+.RE
+.PP
+
+.PP
+Definition at line 349 of file GABreeder\&.java\&.
+.PP
+References org\&.jgap\&.Chromosome\&.clone(), org\&.jgap\&.impl\&.GABreeder\&.fillPopulationRandomlyToOriginalSize(), org\&.jgap\&.impl\&.GABreeder\&.keepPopSizeConstant(), org\&.jgap\&.FitnessFunction\&.NO_FITNESS_VALUE, org\&.jgap\&.impl\&.GABreeder\&.removeChromosomesWithoutFitnessValue(), org\&.jgap\&.impl\&.GABreeder\&.removeEvaluatedChromosomes(), and org\&.jgap\&.Population\&.size()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GABreeder\&.evolve()\&.
+.SS "Object org\&.jgap\&.impl\&.GABreeder\&.clone ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+deep clone of this instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.BreederBase\fP\&.
+.PP
+Definition at line 272 of file GABreeder\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.GABreeder\&.GABreeder()\&.
+.SS "\fBPopulation\fP org\&.jgap\&.impl\&.GABreeder\&.evolve (\fBPopulation\fPa_pop, \fBConfiguration\fPa_conf)\fC [inline]\fP"
+Evolves the population of chromosomes within a genotype\&. This will execute all of the genetic operators added to the present active configuration and then invoke the natural selector to choose which chromosomes will be included in the next generation population\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pop\fP the population to evolve 
+.br
+\fIa_conf\fP the configuration to use for evolution
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+evolved population
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+utilize jobs\&. In pop do also utilize jobs, especially for fitness computation 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IBreeder\fP\&.
+.PP
+Definition at line 56 of file GABreeder\&.java\&.
+.PP
+References org\&.jgap\&.BreederBase\&.applyGeneticOperators(), org\&.jgap\&.BreederBase\&.applyNaturalSelectors(), org\&.jgap\&.impl\&.GABreeder\&.bulkFunctionEvaluation(), org\&.jgap\&.impl\&.GABreeder\&.fillPopulationRandomlyToOriginalSize(), org\&.jgap\&.Configuration\&.getGenerationNr(), org\&.jgap\&.Configuration\&.isPreserveFittestIndividual(), org\&.jgap\&.impl\&.GABreeder\&.keepPopSizeConstant(), org\&.jgap\&.impl\&.GABreeder\&.m_lastConf, org\&.jgap\&.impl\&.GABreeder\&.m_lastPop, org\&.jgap\&.FitnessFunction\&.NO_FITNESS_VALUE, org\&.jgap\&.impl\&.GABreeder\&.reAddFittest(), and org\&.jgap\&.impl\&.GABreeder\&.updateChromosomes()\&.
+.SS "void org\&.jgap\&.impl\&.GABreeder\&.fillPopulationRandomlyToOriginalSize (\fBConfiguration\fPa_conf, \fBPopulation\fPpop)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+utilize jobs as initialization may be time-consuming as invalid combinations may have to be filtered out 
+.RE
+.PP
+
+.PP
+Definition at line 217 of file GABreeder\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.getGenerationNr(), org\&.jgap\&.Configuration\&.getMinimumPopSizePercent(), and org\&.jgap\&.Population\&.size()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GABreeder\&.bulkFunctionEvaluation(), and org\&.jgap\&.impl\&.GABreeder\&.evolve()\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.impl\&.GABreeder\&.getLastConfiguration ()\fC [inline]\fP"
+
+.PP
+Definition at line 258 of file GABreeder\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.GABreeder\&.m_lastConf\&.
+.SS "\fBPopulation\fP org\&.jgap\&.impl\&.GABreeder\&.getLastPopulation ()\fC [inline]\fP"
+
+.PP
+Definition at line 262 of file GABreeder\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.GABreeder\&.m_lastPop\&.
+.SS "void org\&.jgap\&.impl\&.GABreeder\&.keepPopSizeConstant (\fBPopulation\fPa_pop, \fBConfiguration\fPa_conf)\fC [inline]\fP, \fC [protected]\fP"
+Cares that population size is kept constant and does not exceed the desired size\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pop\fP \fBPopulation\fP 
+.br
+\fIa_conf\fP \fBConfiguration\fP 
+.RE
+.PP
+
+.PP
+Definition at line 283 of file GABreeder\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.isKeepPopulationSizeConstant()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GABreeder\&.bulkFunctionEvaluation(), and org\&.jgap\&.impl\&.GABreeder\&.evolve()\&.
+.SS "\fBIChromosome\fP org\&.jgap\&.impl\&.GABreeder\&.reAddFittest (\fBPopulation\fPa_pop, \fBIChromosome\fPa_fittest)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 293 of file GABreeder\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.contains()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GABreeder\&.evolve()\&.
+.SS "\fBPopulation\fP org\&.jgap\&.impl\&.GABreeder\&.removeChromosomesWithoutFitnessValue (\fBPopulation\fPa_from_pop, \fBConfiguration\fPa_config) throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 334 of file GABreeder\&.java\&.
+.PP
+References org\&.jgap\&.IChromosome\&.getFitnessValueDirectly(), and org\&.jgap\&.FitnessFunction\&.NO_FITNESS_VALUE\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GABreeder\&.bulkFunctionEvaluation()\&.
+.SS "\fBPopulation\fP org\&.jgap\&.impl\&.GABreeder\&.removeEvaluatedChromosomes (\fBPopulation\fPa_from_pop, \fBConfiguration\fPa_config) throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 319 of file GABreeder\&.java\&.
+.PP
+References org\&.jgap\&.IChromosome\&.getFitnessValueDirectly(), and org\&.jgap\&.FitnessFunction\&.NO_FITNESS_VALUE\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GABreeder\&.bulkFunctionEvaluation()\&.
+.SS "void org\&.jgap\&.impl\&.GABreeder\&.updateChromosomes (\fBPopulation\fPa_pop, \fBConfiguration\fPa_conf)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 305 of file GABreeder\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GABreeder\&.evolve()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.GABreeder\&.CVS_REVISION = '$Revision: 1\&.21 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 27 of file GABreeder\&.java\&.
+.SS "transient \fBConfiguration\fP org\&.jgap\&.impl\&.GABreeder\&.m_lastConf\fC [private]\fP"
+
+.PP
+Definition at line 29 of file GABreeder\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GABreeder\&.evolve(), and org\&.jgap\&.impl\&.GABreeder\&.getLastConfiguration()\&.
+.SS "transient \fBPopulation\fP org\&.jgap\&.impl\&.GABreeder\&.m_lastPop\fC [private]\fP"
+
+.PP
+Definition at line 31 of file GABreeder\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GABreeder\&.evolve(), and org\&.jgap\&.impl\&.GABreeder\&.getLastPopulation()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

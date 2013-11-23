@@ -1,0 +1,371 @@
+.TH "org.jgap.impl.CauchyRandomGenerator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.CauchyRandomGenerator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.RandomGenerator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCauchyRandomGenerator\fP ()"
+.br
+.ti -1c
+.RI "\fBCauchyRandomGenerator\fP (final double a_location, final double a_scale)"
+.br
+.ti -1c
+.RI "int \fBnextInt\fP ()"
+.br
+.ti -1c
+.RI "int \fBnextInt\fP (final int a_ceiling)"
+.br
+.ti -1c
+.RI "long \fBnextLong\fP ()"
+.br
+.ti -1c
+.RI "double \fBnextDouble\fP ()"
+.br
+.ti -1c
+.RI "float \fBnextFloat\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBnextBoolean\fP ()"
+.br
+.ti -1c
+.RI "double \fBnextCauchy\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetCauchyStandardDeviation\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBreadObject\fP (ObjectInputStream a_inputStream)  throws IOException, ClassNotFoundException "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBm_scale\fP"
+.br
+.ti -1c
+.RI "double \fBm_location\fP"
+.br
+.ti -1c
+.RI "Random \fBm_rn\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.15 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Cauchy probability density function (cumulative distribution function)\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file CauchyRandomGenerator\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.CauchyRandomGenerator\&.CauchyRandomGenerator ()\fC [inline]\fP"
+Defaults to location = 0\&.0 and scale = 1\&.0\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 40 of file CauchyRandomGenerator\&.java\&.
+.SS "org\&.jgap\&.impl\&.CauchyRandomGenerator\&.CauchyRandomGenerator (final doublea_location, final doublea_scale)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_location\fP cauchy parameter, 0 is standard 
+.br
+\fIa_scale\fP cauchy parameter, 1 is standard
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file CauchyRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CauchyRandomGenerator\&.m_location, org\&.jgap\&.impl\&.CauchyRandomGenerator\&.m_rn, and org\&.jgap\&.impl\&.CauchyRandomGenerator\&.m_scale\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "double org\&.jgap\&.impl\&.CauchyRandomGenerator\&.getCauchyStandardDeviation ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the cauchy standard deviation
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 104 of file CauchyRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CauchyRandomGenerator\&.m_scale\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CauchyRandomGeneratorTest\&.testGetCauchyStdDeviation_0()\&.
+.SS "boolean org\&.jgap\&.impl\&.CauchyRandomGenerator\&.nextBoolean ()\fC [inline]\fP"
+Returns the next pseudorandom, uniformly distributed boolean value from this random number generator's sequence\&. The general contract of nextBoolean is that one boolean value is pseudorandomly generated and returned\&. The values true and false are produced with (approximately) equal probability\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a pseudorandom boolean value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.RandomGenerator\fP\&.
+.PP
+Definition at line 81 of file CauchyRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CauchyRandomGenerator\&.nextCauchy()\&.
+.SS "double org\&.jgap\&.impl\&.CauchyRandomGenerator\&.nextCauchy ()\fC [inline]\fP"
+Calculate Cumulative Cauchy distribution function\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the probability that a stochastic variable x is less than X
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 93 of file CauchyRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CauchyRandomGenerator\&.m_location, and org\&.jgap\&.impl\&.CauchyRandomGenerator\&.m_scale\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CauchyRandomGenerator\&.nextBoolean(), org\&.jgap\&.impl\&.CauchyRandomGenerator\&.nextDouble(), org\&.jgap\&.impl\&.CauchyRandomGenerator\&.nextFloat(), org\&.jgap\&.impl\&.CauchyRandomGenerator\&.nextInt(), and org\&.jgap\&.impl\&.CauchyRandomGenerator\&.nextLong()\&.
+.SS "double org\&.jgap\&.impl\&.CauchyRandomGenerator\&.nextDouble ()\fC [inline]\fP"
+Returns the next pseudorandom, uniformly distributed double value between 0\&.0 and 1\&.0 from this random number generator's sequence\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a psuedorandom double value GREATER/EQUAL 0 AND LESS THAN 1
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.RandomGenerator\fP\&.
+.PP
+Definition at line 72 of file CauchyRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CauchyRandomGenerator\&.nextCauchy()\&.
+.SS "float org\&.jgap\&.impl\&.CauchyRandomGenerator\&.nextFloat ()\fC [inline]\fP"
+Returns the next pseudorandom, uniformly distributed float value between 0\&.0 and 1\&.0 from this random number generator's sequence\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a psuedorandom float value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.RandomGenerator\fP\&.
+.PP
+Definition at line 76 of file CauchyRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CauchyRandomGenerator\&.nextCauchy()\&.
+.SS "int org\&.jgap\&.impl\&.CauchyRandomGenerator\&.nextInt ()\fC [inline]\fP"
+Returns the next pseudorandom, uniformly distributed int value from this random number generator's sequence\&. The general contract of nextInt is that one int value is pseudorandomly generated and returned\&. All 2^32 possible int values are produced with (approximately) equal probability\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a pseudorandom integer value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.RandomGenerator\fP\&.
+.PP
+Definition at line 57 of file CauchyRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CauchyRandomGenerator\&.nextCauchy()\&.
+.SS "int org\&.jgap\&.impl\&.CauchyRandomGenerator\&.nextInt (final inta_ceiling)\fC [inline]\fP"
+
+.PP
+Definition at line 62 of file CauchyRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CauchyRandomGenerator\&.nextCauchy()\&.
+.SS "long org\&.jgap\&.impl\&.CauchyRandomGenerator\&.nextLong ()\fC [inline]\fP"
+Returns the next pseudorandom, uniformly distributed long value from this random number generator's sequence\&. The general contract of \fBnextLong()\fP is that one long value is pseudorandomly generated and returned\&. All 2^64 possible long values are produced with (approximately) equal probability\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a psuedorandom long value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.RandomGenerator\fP\&.
+.PP
+Definition at line 67 of file CauchyRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CauchyRandomGenerator\&.nextCauchy()\&.
+.SS "void org\&.jgap\&.impl\&.CauchyRandomGenerator\&.readObject (ObjectInputStreama_inputStream) throws IOException, ClassNotFoundException\fC [inline]\fP, \fC [private]\fP"
+When deserializing, initialize the seed because otherwise we could get duplicate evolution results when doing distributed computing!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_inputStream\fP the ObjectInputStream provided for deserialzation
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIOException\fP 
+.br
+\fIClassNotFoundException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 120 of file CauchyRandomGenerator\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.CauchyRandomGenerator\&.CVS_REVISION = '$Revision: 1\&.15 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file CauchyRandomGenerator\&.java\&.
+.SS "double org\&.jgap\&.impl\&.CauchyRandomGenerator\&.m_location\fC [private]\fP"
+
+.PP
+Definition at line 30 of file CauchyRandomGenerator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CauchyRandomGenerator\&.CauchyRandomGenerator(), and org\&.jgap\&.impl\&.CauchyRandomGenerator\&.nextCauchy()\&.
+.SS "Random org\&.jgap\&.impl\&.CauchyRandomGenerator\&.m_rn\fC [private]\fP"
+
+.PP
+Definition at line 32 of file CauchyRandomGenerator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CauchyRandomGenerator\&.CauchyRandomGenerator()\&.
+.SS "double org\&.jgap\&.impl\&.CauchyRandomGenerator\&.m_scale\fC [private]\fP"
+
+.PP
+Definition at line 28 of file CauchyRandomGenerator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CauchyRandomGenerator\&.CauchyRandomGenerator(), org\&.jgap\&.impl\&.CauchyRandomGenerator\&.getCauchyStandardDeviation(), and org\&.jgap\&.impl\&.CauchyRandomGenerator\&.nextCauchy()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

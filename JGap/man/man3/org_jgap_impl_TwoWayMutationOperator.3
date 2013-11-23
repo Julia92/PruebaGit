@@ -1,0 +1,408 @@
+.TH "org.jgap.impl.TwoWayMutationOperator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.TwoWayMutationOperator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.BaseGeneticOperator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTwoWayMutationOperator\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBTwoWayMutationOperator\fP (final \fBConfiguration\fP a_config)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBTwoWayMutationOperator\fP (final \fBConfiguration\fP a_config, final \fBIUniversalRateCalculator\fP a_mutationRateCalculator)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBTwoWayMutationOperator\fP (final \fBConfiguration\fP a_config, final int a_desiredMutationRate)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBoperate\fP (final \fBPopulation\fP a_population, final List a_candidateChromosomes)"
+.br
+.ti -1c
+.RI "\fBIUniversalRateCalculator\fP \fBgetMutationRateCalc\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMutationRateCalc\fP (final \fBIUniversalRateCalculator\fP a_mutationRateCalc)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (final Object a_other)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "int \fBgetMutationRate\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmutateGene\fP (final \fBGene\fP a_gene, final \fBRandomGenerator\fP a_generator)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBm_mutationRate\fP"
+.br
+.ti -1c
+.RI "\fBIUniversalRateCalculator\fP \fBm_mutationRateCalc\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.9 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Considers two levels of mutation\&. At first, this mutation operator assumes all genes within a chromosome to having a different impact on the result when mutated\&. For that, a gene with fewer impact is selected for mutation more likely than one with bigger impact\&. After a gene has been selected for mutation, it is indeed mutated in a traditional way\&. 
+.PP
+See class \fBexamples\&.dynamicMutation\&.DynamicMutationExample\fP for usage, currently this class only works with that example!
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 28 of file TwoWayMutationOperator\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.TwoWayMutationOperator\&.TwoWayMutationOperator () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this \fBMutationOperator\fP without a specified mutation rate, which results in dynamic mutation being turned on\&. This means that the mutation rate will be automatically determined by this operator based upon the number of genes present in the chromosomes\&.
+.PP
+Attention: The configuration used is the one set with the static method Genotype\&.setConfiguration\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 61 of file TwoWayMutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.getStaticConfiguration()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.TwoWayMutationOperator\&.compareTo()\&.
+.SS "org\&.jgap\&.impl\&.TwoWayMutationOperator\&.TwoWayMutationOperator (final \fBConfiguration\fPa_config) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this \fBMutationOperator\fP without a specified mutation rate, which results in dynamic mutation being turned on\&. This means that the mutation rate will be automatically determined by this operator based upon the number of genes present in the chromosomes\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 79 of file TwoWayMutationOperator\&.java\&.
+.SS "org\&.jgap\&.impl\&.TwoWayMutationOperator\&.TwoWayMutationOperator (final \fBConfiguration\fPa_config, final \fBIUniversalRateCalculator\fPa_mutationRateCalculator) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this \fBMutationOperator\fP with a specified mutation rate calculator, which results in dynamic mutation being turned on\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.br
+\fIa_mutationRateCalculator\fP calculator for dynamic mutation rate computation 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 97 of file TwoWayMutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.TwoWayMutationOperator\&.setMutationRateCalc()\&.
+.SS "org\&.jgap\&.impl\&.TwoWayMutationOperator\&.TwoWayMutationOperator (final \fBConfiguration\fPa_config, final inta_desiredMutationRate) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this \fBMutationOperator\fP with the given mutation rate\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.br
+\fIa_desiredMutationRate\fP desired rate of mutation, expressed as the denominator of the 1 / X fraction\&. For example, 1000 would result in 1/1000 genes being mutated on average\&. A mutation rate of zero disables mutation entirely 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 119 of file TwoWayMutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.TwoWayMutationOperator\&.m_mutationRate, and org\&.jgap\&.impl\&.TwoWayMutationOperator\&.setMutationRateCalc()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int org\&.jgap\&.impl\&.TwoWayMutationOperator\&.compareTo (Objecta_other)\fC [inline]\fP"
+Compares the given \fBGeneticOperator\fP to this \fBGeneticOperator\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the instance against which to compare this instance 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a negative number if this instance is 'less than' the given instance, zero if they are equal to each other, and a positive number if this is 'greater than' the given instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 352 of file TwoWayMutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.TwoWayMutationOperator\&.m_mutationRate, org\&.jgap\&.impl\&.TwoWayMutationOperator\&.m_mutationRateCalc, and org\&.jgap\&.impl\&.TwoWayMutationOperator\&.TwoWayMutationOperator()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.TwoWayMutationOperator\&.equals(), and org\&.jgap\&.impl\&.TwoWayMutationOperatorTest\&.testCompareTo_0()\&.
+.SS "boolean org\&.jgap\&.impl\&.TwoWayMutationOperator\&.equals (final Objecta_other)\fC [inline]\fP"
+Compares this \fBGeneticOperator\fP against the specified object\&. The result is true if and the argument is an instance of this class and is equal wrt the data\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the object to compare against 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: if the objects are the same, false otherwise
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 332 of file TwoWayMutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.TwoWayMutationOperator\&.compareTo()\&.
+.SS "int org\&.jgap\&.impl\&.TwoWayMutationOperator\&.getMutationRate ()\fC [inline]\fP"
+
+.PP
+Definition at line 382 of file TwoWayMutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.TwoWayMutationOperator\&.m_mutationRate\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.TwoWayMutationOperatorTest\&.testConstruct_0(), org\&.jgap\&.impl\&.TwoWayMutationOperatorTest\&.testConstruct_2(), and org\&.jgap\&.impl\&.TwoWayMutationOperatorTest\&.testConstruct_3()\&.
+.SS "\fBIUniversalRateCalculator\fP org\&.jgap\&.impl\&.TwoWayMutationOperator\&.getMutationRateCalc ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the MutationRateCalculator used
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 301 of file TwoWayMutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.TwoWayMutationOperator\&.m_mutationRateCalc\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.TwoWayMutationOperatorTest\&.testConstruct_0(), org\&.jgap\&.impl\&.TwoWayMutationOperatorTest\&.testConstruct_2(), and org\&.jgap\&.impl\&.TwoWayMutationOperatorTest\&.testConstruct_3()\&.
+.SS "void org\&.jgap\&.impl\&.TwoWayMutationOperator\&.mutateGene (final \fBGene\fPa_gene, final \fBRandomGenerator\fPa_generator)\fC [inline]\fP, \fC [private]\fP"
+Helper: mutate all atomic elements of a gene 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_gene\fP the gene to be mutated 
+.br
+\fIa_generator\fP the generator delivering amount of mutation
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 279 of file TwoWayMutationOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.TwoWayMutationOperator\&.operate()\&.
+.SS "void org\&.jgap\&.impl\&.TwoWayMutationOperator\&.operate (final \fBPopulation\fPa_population, final Lista_candidateChromosomes)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_population\fP see interface 
+.br
+\fIa_candidateChromosomes\fP see interface
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+make this configurable, it is a first test, see example DynamicMutationExample 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+move to base class, refactor 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.GeneticOperator\fP\&.
+.PP
+Definition at line 134 of file TwoWayMutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.util\&.ICloneable\&.clone(), org\&.jgap\&.ICompositeGene\&.geneAt(), org\&.jgap\&.BaseGeneticOperator\&.getConfiguration(), org\&.jgap\&.BaseGeneticOperator\&.m_monitorActive, org\&.jgap\&.impl\&.TwoWayMutationOperator\&.m_mutationRate, org\&.jgap\&.impl\&.TwoWayMutationOperator\&.m_mutationRateCalc, org\&.jgap\&.impl\&.TwoWayMutationOperator\&.mutateGene(), and org\&.jgap\&.Population\&.size()\&.
+.SS "void org\&.jgap\&.impl\&.TwoWayMutationOperator\&.setMutationRateCalc (final \fBIUniversalRateCalculator\fPa_mutationRateCalc)\fC [inline]\fP"
+Sets the MutationRateCalculator to be used for determining the strength of mutation\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_mutationRateCalc\fP MutationRateCalculator
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 313 of file TwoWayMutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.TwoWayMutationOperator\&.m_mutationRate, and org\&.jgap\&.impl\&.TwoWayMutationOperator\&.m_mutationRateCalc\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.TwoWayMutationOperator\&.TwoWayMutationOperator()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.TwoWayMutationOperator\&.CVS_REVISION = '$Revision: 1\&.9 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 31 of file TwoWayMutationOperator\&.java\&.
+.SS "int org\&.jgap\&.impl\&.TwoWayMutationOperator\&.m_mutationRate\fC [private]\fP"
+The current mutation rate used by this \fBMutationOperator\fP, expressed as the denominator in the 1 / X ratio\&. For example, X = 1000 would mean that, on average, 1 / 1000 genes would be mutated\&. A value of zero disables mutation entirely\&. 
+.PP
+Definition at line 39 of file TwoWayMutationOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.TwoWayMutationOperator\&.compareTo(), org\&.jgap\&.impl\&.TwoWayMutationOperator\&.getMutationRate(), org\&.jgap\&.impl\&.TwoWayMutationOperator\&.operate(), org\&.jgap\&.impl\&.TwoWayMutationOperator\&.setMutationRateCalc(), and org\&.jgap\&.impl\&.TwoWayMutationOperator\&.TwoWayMutationOperator()\&.
+.SS "\fBIUniversalRateCalculator\fP org\&.jgap\&.impl\&.TwoWayMutationOperator\&.m_mutationRateCalc\fC [private]\fP"
+Calculator for dynamically determining the mutation rate\&. If set to null the value of m_mutationRate will be used\&. Replaces the previously used boolean m_dynamicMutationRate\&. 
+.PP
+Definition at line 46 of file TwoWayMutationOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.TwoWayMutationOperator\&.compareTo(), org\&.jgap\&.impl\&.TwoWayMutationOperator\&.getMutationRateCalc(), org\&.jgap\&.impl\&.TwoWayMutationOperator\&.operate(), and org\&.jgap\&.impl\&.TwoWayMutationOperator\&.setMutationRateCalc()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

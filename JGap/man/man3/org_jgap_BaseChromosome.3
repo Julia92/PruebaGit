@@ -1,0 +1,911 @@
+.TH "org.jgap.BaseChromosome" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.BaseChromosome \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.IChromosome\fP, \fBorg\&.jgap\&.IInitializer\fP, \fBorg\&.jgap\&.IPersistentRepresentation\fP, and \fBorg\&.jgap\&.IBusinessKey\fP\&.
+.PP
+Inherited by \fBorg\&.jgap\&.Chromosome\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBaseChromosome\fP (\fBConfiguration\fP a_configuration)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBgetUniqueID\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetUniqueIDTemplate\fP (String a_templateID, int a_index)"
+.br
+.ti -1c
+.RI "String \fBgetUniqueIDTemplate\fP (int a_index)"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBgetConfiguration\fP ()"
+.br
+.ti -1c
+.RI "abstract Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "void \fBincreaseAge\fP ()"
+.br
+.ti -1c
+.RI "void \fBresetAge\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetAge\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetAge\fP (int a_age)"
+.br
+.ti -1c
+.RI "void \fBincreaseOperatedOn\fP ()"
+.br
+.ti -1c
+.RI "void \fBresetOperatedOn\fP ()"
+.br
+.ti -1c
+.RI "int \fBoperatedOn\fP ()"
+.br
+.ti -1c
+.RI "synchronized \fBGene\fP[] \fBgetGenes\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetGenes\fP (\fBGene\fP[] a_genes)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "synchronized \fBGene\fP \fBgetGene\fP (int a_desiredLocus)"
+.br
+.ti -1c
+.RI "void \fBsetGene\fP (int a_index, \fBGene\fP a_gene)"
+.br
+.ti -1c
+.RI "int \fBsize\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetPersistentRepresentation\fP ()"
+.br
+.ti -1c
+.RI "StringBuffer \fBgetGenesPersistentRepresentation\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetBusinessKey\fP ()"
+.br
+.ti -1c
+.RI "void \fBgetGenesPersistentRepresentation\fP (StringBuffer a_buffer)"
+.br
+.ti -1c
+.RI "void \fBsetValueFromPersistentRepresentation\fP (String a_representation)  throws UnsupportedRepresentationException "
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBGENE_DELIMITER\fP = '#'"
+.br
+.ti -1c
+.RI "static final String \fBGENE_DELIMITER_HEADING\fP = '<'"
+.br
+.ti -1c
+.RI "static final String \fBGENE_DELIMITER_CLOSING\fP = '>'"
+.br
+.ti -1c
+.RI "static final String \fBCHROM_DELIMITER\fP = '#'"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "String \fBencode\fP (String a_string)"
+.br
+.ti -1c
+.RI "String \fBdecode\fP (String a_string)  throws UnsupportedEncodingException "
+.br
+.ti -1c
+.RI "\fBGene\fP \fBcreateGene\fP (String a_geneClassName, String a_persistentRepresentation)  throws Exception "
+.br
+.in -1c
+.SS "Static Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static final List \fBsplit\fP (String a_string)  throws UnsupportedRepresentationException "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBConfiguration\fP \fBm_configuration\fP"
+.br
+.ti -1c
+.RI "\fBGene\fP[] \fBm_genes\fP"
+.br
+.ti -1c
+.RI "int \fBm_age\fP"
+.br
+.ti -1c
+.RI "int \fBm_operatedOn\fP"
+.br
+.ti -1c
+.RI "String \fBm_uniqueID\fP"
+.br
+.ti -1c
+.RI "Map< Integer, String > \fBm_uniqueIDTemplates\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.15 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Base class for any implementation of interface \fBIChromosome\fP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file BaseChromosome\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.BaseChromosome\&.BaseChromosome (\fBConfiguration\fPa_configuration) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+The only constructor in this class\&. Sets the immutable configuration\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to set 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP if configuration is null
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 88 of file BaseChromosome\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.getJGAPFactory(), org\&.jgap\&.Configuration\&.isUniqueKeysActive(), org\&.jgap\&.BaseChromosome\&.m_configuration, org\&.jgap\&.BaseChromosome\&.m_uniqueID, and org\&.jgap\&.BaseChromosome\&.m_uniqueIDTemplates\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "abstract Object org\&.jgap\&.BaseChromosome\&.clone ()\fC [pure virtual]\fP"
+Creates and returns a copy of this object\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a clone of this instance 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIllegalStateException\fP instead of CloneNotSupportedException
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Implemented in \fBorg\&.jgap\&.Chromosome\fP, and \fBorg\&.jgap\&.ChromosomeForTesting\fP\&.
+.SS "\fBGene\fP org\&.jgap\&.BaseChromosome\&.createGene (Stringa_geneClassName, Stringa_persistentRepresentation) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Creates a new \fBGene\fP instance\&.
+.PP
+Taken from CompositeGene\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_geneClassName\fP name of the gene class 
+.br
+\fIa_persistentRepresentation\fP persistent representation of the gene to create (could be obtained via getPersistentRepresentation)
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+newly created gene 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 457 of file BaseChromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.getConfiguration()\&.
+.PP
+Referenced by org\&.jgap\&.BaseChromosome\&.setValueFromPersistentRepresentation()\&.
+.SS "String org\&.jgap\&.BaseChromosome\&.decode (Stringa_string) throws UnsupportedEncodingException\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 385 of file BaseChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.BaseChromosome\&.setValueFromPersistentRepresentation()\&.
+.SS "String org\&.jgap\&.BaseChromosome\&.encode (Stringa_string)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 381 of file BaseChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.BaseChromosome\&.getGenesPersistentRepresentation()\&.
+.SS "int org\&.jgap\&.BaseChromosome\&.getAge ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+0: \fBChromosome\fP newly created in this generation\&. This means it does not need being crossed over with another newly created one
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 193 of file BaseChromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.m_age\&.
+.SS "String org\&.jgap\&.BaseChromosome\&.getBusinessKey ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+business key of the chromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IBusinessKey\fP\&.
+.PP
+Definition at line 356 of file BaseChromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.getGenesPersistentRepresentation()\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.BaseChromosome\&.getConfiguration ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the configuration used
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 150 of file BaseChromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.m_configuration\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.calcFitnessValue(), org\&.jgap\&.Chromosome\&.cleanup(), org\&.jgap\&.ChromosomeForTesting\&.clone(), org\&.jgap\&.Chromosome\&.clone(), org\&.jgap\&.Chromosome\&.cloneObject(), org\&.jgap\&.Chromosome\&.compareTo(), org\&.jgap\&.BaseChromosome\&.createGene(), org\&.jgap\&.Chromosome\&.perform(), and org\&.jgap\&.ChromosomeForTesting\&.randomInitialChromosome2()\&.
+.SS "synchronized \fBGene\fP org\&.jgap\&.BaseChromosome\&.getGene (inta_desiredLocus)\fC [inline]\fP"
+Returns the \fBGene\fP at the given index (locus) within the \fBChromosome\fP\&. The first gene is at index zero and the last gene is at the index equal to the size of this \fBChromosome\fP - 1\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_desiredLocus\fP index of the gene value to be returned 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBGene\fP at the given index
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 283 of file BaseChromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.m_genes\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.cleanup(), org\&.jgap\&.Chromosome\&.clone(), org\&.jgap\&.Chromosome\&.compareTo(), org\&.jgap\&.BaseChromosome\&.getGenesPersistentRepresentation(), org\&.jgap\&.Chromosome\&.hashCode(), org\&.jgap\&.ChromosomeTest\&.testConstruct_10(), org\&.jgap\&.ChromosomeTest\&.testConstruct_7_3(), org\&.jgap\&.impl\&.MutationOperatorTest\&.testOperate_3_1(), org\&.jgap\&.impl\&.TwoWayMutationOperatorTest\&.testOperate_3_1(), org\&.jgap\&.Chromosome\&.toString(), and org\&.jgap\&.Chromosome\&.verify()\&.
+.SS "synchronized \fBGene\fP [] org\&.jgap\&.BaseChromosome\&.getGenes ()\fC [inline]\fP"
+Retrieves the set of genes that make up this \fBChromosome\fP\&. This method exists primarily for the benefit of GeneticOperators that require the ability to manipulate Chromosomes at a low level\&.
+.PP
+\fBReturns:\fP
+.RS 4
+an array of the Genes contained within this \fBChromosome\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 252 of file BaseChromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.m_genes\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.hashCode(), org\&.jgap\&.ChromosomeTest\&.testClone_1(), org\&.jgap\&.ChromosomeTest\&.testConstruct_7_3(), and org\&.jgap\&.Chromosome\&.verify()\&.
+.SS "StringBuffer org\&.jgap\&.BaseChromosome\&.getGenesPersistentRepresentation ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the persistent representation of the chromosome by considering its genes\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Definition at line 344 of file BaseChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.BaseChromosome\&.getBusinessKey(), and org\&.jgap\&.BaseChromosome\&.getPersistentRepresentation()\&.
+.SS "void org\&.jgap\&.BaseChromosome\&.getGenesPersistentRepresentation (StringBuffera_buffer)\fC [inline]\fP"
+Retrieves the persistent representation of the chromosome by considering its genes\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_buffer\fP the variable to store the persistent representation in
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Definition at line 368 of file BaseChromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.encode(), org\&.jgap\&.BaseChromosome\&.GENE_DELIMITER, org\&.jgap\&.BaseChromosome\&.GENE_DELIMITER_CLOSING, org\&.jgap\&.BaseChromosome\&.GENE_DELIMITER_HEADING, org\&.jgap\&.BaseChromosome\&.getGene(), org\&.jgap\&.Gene\&.getPersistentRepresentation(), and org\&.jgap\&.BaseChromosome\&.size()\&.
+.SS "String org\&.jgap\&.BaseChromosome\&.getPersistentRepresentation ()\fC [inline]\fP"
+Returns a persistent representation of this chromosome, see interface \fBGene\fP for description\&. Similar to CompositeGene's routine\&. But does not include all information of the chromosome (yet)\&.
+.PP
+\fBReturns:\fP
+.RS 4
+string representation of this \fBChromosome\fP's relevant parts of its current state 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.PP
+Definition at line 324 of file BaseChromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.CHROM_DELIMITER, org\&.jgap\&.IChromosome\&.getFitnessValueDirectly(), org\&.jgap\&.BaseChromosome\&.getGenesPersistentRepresentation(), and org\&.jgap\&.BaseChromosome\&.size()\&.
+.PP
+Referenced by org\&.jgap\&.ChromosomeTest\&.testConstruct_9(), org\&.jgap\&.ChromosomeTest\&.testPersistentRepresentation_0(), org\&.jgap\&.ChromosomeTest\&.testPersistentRepresentation_1(), and org\&.jgap\&.ChromosomeTest\&.testPersistentRepresentation_7()\&.
+.SS "String org\&.jgap\&.BaseChromosome\&.getUniqueID ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+unique ID of the chromosome, which allows to distinct this instance from others, in the best case worldwide
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IUniqueKey\fP\&.
+.PP
+Definition at line 112 of file BaseChromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.m_uniqueID\&.
+.SS "String org\&.jgap\&.BaseChromosome\&.getUniqueIDTemplate (inta_index)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the index of the template to retrieve the key for 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IUniqueKey\fP\&.
+.PP
+Definition at line 140 of file BaseChromosome\&.java\&.
+.SS "void org\&.jgap\&.BaseChromosome\&.increaseAge ()\fC [inline]\fP"
+Increases the number of evolutionary rounds of chromosome in which it has not been changed by one\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 172 of file BaseChromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.m_age\&.
+.SS "void org\&.jgap\&.BaseChromosome\&.increaseOperatedOn ()\fC [inline]\fP"
+Increase information of number of genetic operations performed on chromosome in current evolution round\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 215 of file BaseChromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.m_operatedOn\&.
+.SS "int org\&.jgap\&.BaseChromosome\&.operatedOn ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+number of genetic operations performed on chromosome in current evolution round
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 238 of file BaseChromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.m_operatedOn\&.
+.SS "void org\&.jgap\&.BaseChromosome\&.resetAge ()\fC [inline]\fP"
+Reset age of chromosome because it has been changed\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 182 of file BaseChromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.m_age\&.
+.SS "void org\&.jgap\&.BaseChromosome\&.resetOperatedOn ()\fC [inline]\fP"
+Resets the information of how many genetic operators have been performed on the chromosome in the current round of evolution\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 227 of file BaseChromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.m_operatedOn\&.
+.SS "void org\&.jgap\&.BaseChromosome\&.setAge (inta_age)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_age\fP set the age of the chromosome, see BestChromosomesSelector for a use-case
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 204 of file BaseChromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.m_age\&.
+.SS "void org\&.jgap\&.BaseChromosome\&.setGene (inta_index, \fBGene\fPa_gene)\fC [inline]\fP"
+
+.PP
+Definition at line 287 of file BaseChromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.m_genes\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.initFromGene(), and org\&.jgap\&.BaseChromosome\&.setValueFromPersistentRepresentation()\&.
+.SS "void org\&.jgap\&.BaseChromosome\&.setGenes (\fBGene\fP[]a_genes) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Sets the genes for the chromosome\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_genes\fP the genes to set for the chromosome
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP in case constraint checker is provided
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 (previously in class \fBChromosome\fP) 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 267 of file BaseChromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.m_genes\&.
+.PP
+Referenced by org\&.jgap\&.BaseChromosome\&.setValueFromPersistentRepresentation()\&.
+.SS "void org\&.jgap\&.BaseChromosome\&.setUniqueIDTemplate (Stringa_templateID, inta_index)\fC [inline]\fP"
+A template is a chromosome that is the logical predecessor of the current chromosome\&. A template can occur in mutation or crossing over\&. In the latter case can be at least two template chromosomes\&. This is why in this setter method the parameter a_index exists\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_templateID\fP the unique ID of the template 
+.br
+\fIa_index\fP the index of the template, e\&.g\&. in crossing over for the second candidate chromosome this is 2
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IUniqueKey\fP\&.
+.PP
+Definition at line 129 of file BaseChromosome\&.java\&.
+.SS "void org\&.jgap\&.BaseChromosome\&.setValueFromPersistentRepresentation (Stringa_representation) throws \fBUnsupportedRepresentationException\fP\fC [inline]\fP"
+Counterpart of getPersistentRepresentation\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_representation\fP the string representation retrieved from a prior call to the \fBgetPersistentRepresentation()\fP method
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBUnsupportedRepresentationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+we can do this faster! 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+we can do this faster! 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.PP
+Definition at line 400 of file BaseChromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.createGene(), org\&.jgap\&.BaseChromosome\&.decode(), org\&.jgap\&.BaseChromosome\&.GENE_DELIMITER, org\&.jgap\&.IChromosome\&.setFitnessValue(), org\&.jgap\&.BaseChromosome\&.setGene(), org\&.jgap\&.BaseChromosome\&.setGenes(), and org\&.jgap\&.BaseChromosome\&.split()\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.Chromosome()\&.
+.SS "int org\&.jgap\&.BaseChromosome\&.size ()\fC [inline]\fP"
+Returns the size of this \fBChromosome\fP (the number of genes it contains)\&. A \fBChromosome\fP's size is constant and will not change, until setGenes(\&.\&.\&.) is used\&.
+.PP
+\fBReturns:\fP
+.RS 4
+number of genes contained within this \fBChromosome\fP instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 302 of file BaseChromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.m_genes\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.cleanup(), org\&.jgap\&.Chromosome\&.clone(), org\&.jgap\&.Chromosome\&.compareTo(), org\&.jgap\&.BaseChromosome\&.getGenesPersistentRepresentation(), org\&.jgap\&.BaseChromosome\&.getPersistentRepresentation(), org\&.jgap\&.Chromosome\&.hashCode(), org\&.jgap\&.Chromosome\&.initFromGene(), org\&.jgap\&.ChromosomeTest\&.testClone_6(), org\&.jgap\&.ChromosomeTest\&.testConstruct_10(), org\&.jgap\&.ChromosomeTest\&.testConstruct_3(), org\&.jgap\&.ChromosomeTest\&.testPersistentRepresentation_2(), org\&.jgap\&.ChromosomeTest\&.testPersistentRepresentation_5(), org\&.jgap\&.ChromosomeTest\&.testSize_0(), org\&.jgap\&.ChromosomeTest\&.testSize_1(), org\&.jgap\&.ChromosomeTest\&.testToString_0(), org\&.jgap\&.ChromosomeTest\&.testToString_2(), and org\&.jgap\&.Chromosome\&.toString()\&.
+.SS "static final List org\&.jgap\&.BaseChromosome\&.split (Stringa_string) throws \fBUnsupportedRepresentationException\fP\fC [inline]\fP, \fC [static]\fP, \fC [protected]\fP"
+Splits the input a_string into individual gene representations\&.
+.PP
+Taken and adapted from CompositeGene\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_string\fP the string to split 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the elements of the returned array are the persistent representation strings of the chromosome's components 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBUnsupportedRepresentationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 479 of file BaseChromosome\&.java\&.
+.PP
+References org\&.jgap\&.BaseChromosome\&.CHROM_DELIMITER, org\&.jgap\&.BaseChromosome\&.GENE_DELIMITER_CLOSING, and org\&.jgap\&.BaseChromosome\&.GENE_DELIMITER_HEADING\&.
+.PP
+Referenced by org\&.jgap\&.BaseChromosome\&.setValueFromPersistentRepresentation()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.BaseChromosome\&.CHROM_DELIMITER = '#'\fC [static]\fP"
+Separates chromosome-related information\&. 
+.PP
+Definition at line 51 of file BaseChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.BaseChromosome\&.getPersistentRepresentation(), org\&.jgap\&.BaseChromosome\&.split(), org\&.jgap\&.ChromosomeTest\&.testPersistentRepresentation_4(), org\&.jgap\&.PopulationTest\&.testPersistentRepresentation_5(), and org\&.jgap\&.PopulationTest\&.testPersistentRepresentation_6()\&.
+.SS "final String org\&.jgap\&.BaseChromosome\&.CVS_REVISION = '$Revision: 1\&.15 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 28 of file BaseChromosome\&.java\&.
+.SS "final String org\&.jgap\&.BaseChromosome\&.GENE_DELIMITER = '#'\fC [static]\fP"
+This field separates gene class name from the gene persistent representation string\&. '*' does not work properly with URLEncoder! 
+.PP
+Definition at line 34 of file BaseChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.BaseChromosome\&.getGenesPersistentRepresentation(), org\&.jgap\&.BaseChromosome\&.setValueFromPersistentRepresentation(), org\&.jgap\&.ChromosomeTest\&.testPersistentRepresentation_5(), and org\&.jgap\&.ChromosomeTest\&.testPersistentRepresentation_6()\&.
+.SS "final String org\&.jgap\&.BaseChromosome\&.GENE_DELIMITER_CLOSING = '>'\fC [static]\fP"
+Represents the closing delimiter that is used to separate genes in the persistent representation of \fBChromosome\fP instances\&. 
+.PP
+Definition at line 46 of file BaseChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.BaseChromosome\&.getGenesPersistentRepresentation(), and org\&.jgap\&.BaseChromosome\&.split()\&.
+.SS "final String org\&.jgap\&.BaseChromosome\&.GENE_DELIMITER_HEADING = '<'\fC [static]\fP"
+Represents the heading delimiter that is used to separate genes in the persistent representation of \fBChromosome\fP instances\&. 
+.PP
+Definition at line 40 of file BaseChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.BaseChromosome\&.getGenesPersistentRepresentation(), and org\&.jgap\&.BaseChromosome\&.split()\&.
+.SS "int org\&.jgap\&.BaseChromosome\&.m_age\fC [private]\fP"
+
+.PP
+Definition at line 63 of file BaseChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.BaseChromosome\&.getAge(), org\&.jgap\&.BaseChromosome\&.increaseAge(), org\&.jgap\&.BaseChromosome\&.resetAge(), and org\&.jgap\&.BaseChromosome\&.setAge()\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.BaseChromosome\&.m_configuration\fC [private]\fP"
+The configuration object to use 
+.PP
+Definition at line 56 of file BaseChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.BaseChromosome\&.BaseChromosome(), and org\&.jgap\&.BaseChromosome\&.getConfiguration()\&.
+.SS "\fBGene\fP [] org\&.jgap\&.BaseChromosome\&.m_genes\fC [private]\fP"
+The array of Genes contained in this \fBChromosome\fP\&. 
+.PP
+Definition at line 61 of file BaseChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.BaseChromosome\&.getGene(), org\&.jgap\&.BaseChromosome\&.getGenes(), org\&.jgap\&.BaseChromosome\&.setGene(), org\&.jgap\&.BaseChromosome\&.setGenes(), and org\&.jgap\&.BaseChromosome\&.size()\&.
+.SS "int org\&.jgap\&.BaseChromosome\&.m_operatedOn\fC [private]\fP"
+
+.PP
+Definition at line 65 of file BaseChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.BaseChromosome\&.increaseOperatedOn(), org\&.jgap\&.BaseChromosome\&.operatedOn(), and org\&.jgap\&.BaseChromosome\&.resetOperatedOn()\&.
+.SS "String org\&.jgap\&.BaseChromosome\&.m_uniqueID\fC [private]\fP"
+Unique ID of the chromosome that allows to distinct it from other chromosomes\&. In the best case, this ID is unique worldwide\&. 
+.PP
+Definition at line 71 of file BaseChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.BaseChromosome\&.BaseChromosome(), and org\&.jgap\&.BaseChromosome\&.getUniqueID()\&.
+.SS "Map<Integer,String> org\&.jgap\&.BaseChromosome\&.m_uniqueIDTemplates\fC [private]\fP"
+In case mutation, crossing over etc\&. happened, this sequence gives evidence about the parent(s) of the current chromosome\&. 
+.PP
+Definition at line 77 of file BaseChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.BaseChromosome\&.BaseChromosome()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

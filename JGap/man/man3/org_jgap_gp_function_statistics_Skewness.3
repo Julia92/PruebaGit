@@ -1,0 +1,116 @@
+.TH "org.jgap.gp.function.statistics.Skewness" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.function.statistics.Skewness \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandDynamicArity\fP, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSkewness\fP (final GPConfiguration a_conf, Class a_returnType, int a_arityInitial, int a_arityMin, int a_arityMax)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "double \fBexecute_double\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "float \fBexecute_float\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Computes the skewness of the available values\&. 
+.PP
+We use the following (unbiased) formula to define skewness:
+.PP
+skewness = [n / (n -1) (n - 2)] sum[(x_i - mean)^3] / std^3 
+.PP
+where n is the number of values, and std is the Standard Deviation 
+.PP
+\fBAuthor:\fP
+.RS 4
+Luis Garcia 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 30 of file Skewness\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.function\&.statistics\&.Skewness\&.Skewness (final GPConfigurationa_conf, Classa_returnType, inta_arityInitial, inta_arityMin, inta_arityMax) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 32 of file Skewness\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.statistics\&.Skewness\&.clone()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.gp\&.function\&.statistics\&.Skewness\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+clone of the current object instance 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 73 of file Skewness\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getArity(), org\&.jgap\&.gp\&.CommandGene\&.getArityMax(), org\&.jgap\&.gp\&.CommandGene\&.getArityMin(), org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.getReturnType(), and org\&.jgap\&.gp\&.function\&.statistics\&.Skewness\&.Skewness()\&.
+.SS "double org\&.jgap\&.gp\&.function\&.statistics\&.Skewness\&.execute_double (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 40 of file Skewness\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.size()\&.
+.SS "float org\&.jgap\&.gp\&.function\&.statistics\&.Skewness\&.execute_float (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 50 of file Skewness\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.size()\&.
+.SS "String org\&.jgap\&.gp\&.function\&.statistics\&.Skewness\&.getName ()\fC [inline]\fP"
+
+.PP
+Definition at line 84 of file Skewness\&.java\&.
+.SS "String org\&.jgap\&.gp\&.function\&.statistics\&.Skewness\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 60 of file Skewness\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.size()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

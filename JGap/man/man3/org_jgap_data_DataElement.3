@@ -1,0 +1,180 @@
+.TH "org.jgap.data.DataElement" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.data.DataElement \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.data\&.IDataElement\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDataElement\fP (final String a_tagName)"
+.br
+.ti -1c
+.RI "void \fBsetAttribute\fP (final String a_name, final String a_value)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBappendChild\fP (final \fBIDataElement\fP a_newChild)  throws Exception "
+.br
+.ti -1c
+.RI "String \fBgetTagName\fP ()"
+.br
+.ti -1c
+.RI "\fBIDataElementList\fP \fBgetElementsByTagName\fP (final String a_name)"
+.br
+.ti -1c
+.RI "short \fBgetNodeType\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetNodeValue\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "\fBIDataElementList\fP \fBgetChildNodes\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetAttribute\fP (final String a_name)"
+.br
+.ti -1c
+.RI "Map \fBgetAttributes\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBIDataElementList\fP \fBm_elements\fP"
+.br
+.ti -1c
+.RI "Map \fBm_attributes\fP"
+.br
+.ti -1c
+.RI "String \fBm_tagName\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.6 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Element owning a tag name and holding attributes\&. Used by the \fBDataTreeBuilder\fP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file DataElement\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.data\&.DataElement\&.DataElement (final Stringa_tagName)\fC [inline]\fP"
+
+.PP
+Definition at line 32 of file DataElement\&.java\&.
+.PP
+References org\&.jgap\&.data\&.DataElement\&.m_attributes, org\&.jgap\&.data\&.DataElement\&.m_elements, and org\&.jgap\&.data\&.DataElement\&.m_tagName\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.data\&.DataElement\&.appendChild (final \fBIDataElement\fPa_newChild) throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 43 of file DataElement\&.java\&.
+.SS "String org\&.jgap\&.data\&.DataElement\&.getAttribute (final Stringa_name)\fC [inline]\fP"
+
+.PP
+Definition at line 75 of file DataElement\&.java\&.
+.SS "Map org\&.jgap\&.data\&.DataElement\&.getAttributes ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.data\&.IDataElement\fP\&.
+.PP
+Definition at line 79 of file DataElement\&.java\&.
+.PP
+References org\&.jgap\&.data\&.DataElement\&.m_attributes\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataElementTest\&.testAttributes_0()\&.
+.SS "\fBIDataElementList\fP org\&.jgap\&.data\&.DataElement\&.getChildNodes ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.data\&.IDataElement\fP\&.
+.PP
+Definition at line 71 of file DataElement\&.java\&.
+.PP
+References org\&.jgap\&.data\&.DataElement\&.m_elements\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataElementTest\&.testAppendChild_0()\&.
+.SS "\fBIDataElementList\fP org\&.jgap\&.data\&.DataElement\&.getElementsByTagName (final Stringa_name)\fC [inline]\fP"
+
+.PP
+Definition at line 52 of file DataElement\&.java\&.
+.PP
+References org\&.jgap\&.data\&.IDataElementList\&.item(), and org\&.jgap\&.data\&.DataElement\&.m_elements\&.
+.SS "short org\&.jgap\&.data\&.DataElement\&.getNodeType ()\fC [inline]\fP"
+
+.PP
+Definition at line 62 of file DataElement\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataElementTest\&.testGetNodeType_0()\&.
+.SS "String org\&.jgap\&.data\&.DataElement\&.getNodeValue () throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 66 of file DataElement\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataElementTest\&.testAttributes_0(), and org\&.jgap\&.data\&.DataElementTest\&.testGetNodeType_0()\&.
+.SS "String org\&.jgap\&.data\&.DataElement\&.getTagName ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.data\&.IDataElement\fP\&.
+.PP
+Definition at line 48 of file DataElement\&.java\&.
+.PP
+References org\&.jgap\&.data\&.DataElement\&.m_tagName\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataElementTest\&.testGetElementsByTagName_0()\&.
+.SS "void org\&.jgap\&.data\&.DataElement\&.setAttribute (final Stringa_name, final Stringa_value) throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 38 of file DataElement\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.data\&.DataElement\&.CVS_REVISION = '$Revision: 1\&.6 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 24 of file DataElement\&.java\&.
+.SS "Map org\&.jgap\&.data\&.DataElement\&.m_attributes\fC [private]\fP"
+
+.PP
+Definition at line 28 of file DataElement\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataElement\&.DataElement(), and org\&.jgap\&.data\&.DataElement\&.getAttributes()\&.
+.SS "\fBIDataElementList\fP org\&.jgap\&.data\&.DataElement\&.m_elements\fC [private]\fP"
+
+.PP
+Definition at line 26 of file DataElement\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataElement\&.DataElement(), org\&.jgap\&.data\&.DataElement\&.getChildNodes(), and org\&.jgap\&.data\&.DataElement\&.getElementsByTagName()\&.
+.SS "String org\&.jgap\&.data\&.DataElement\&.m_tagName\fC [private]\fP"
+
+.PP
+Definition at line 30 of file DataElement\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.DataElement\&.DataElement(), and org\&.jgap\&.data\&.DataElement\&.getTagName()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

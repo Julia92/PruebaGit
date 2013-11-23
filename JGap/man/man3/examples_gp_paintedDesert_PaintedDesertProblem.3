@@ -1,0 +1,273 @@
+.TH "examples.gp.paintedDesert.PaintedDesertProblem" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.paintedDesert.PaintedDesertProblem \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.GPProblem\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBAntFitnessFunction\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPaintedDesertProblem\fP (\fBGPConfiguration\fP a_conf)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGPGenotype\fP \fBcreate\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBresetAnts\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "int[][] \fBreadMap\fP (String a_filename)  throws Exception "
+.br
+.ti -1c
+.RI "\fBGPFitnessFunction\fP \fBcreateFitFunc\fP ()"
+.br
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBdisplaySolution\fP (int[][] a_antmap, int[][] a_origMap)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int[][] \fBm_map\fP"
+.br
+.ti -1c
+.RI "\fBAnt\fP[] \fBm_ants\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.5 $'"
+.br
+.ti -1c
+.RI "static \fBAntMap\fP \fBm_antMap\fP"
+.br
+.ti -1c
+.RI "static int \fBm_maxx\fP"
+.br
+.ti -1c
+.RI "static int \fBm_maxy\fP"
+.br
+.ti -1c
+.RI "static int \fBm_popSize\fP"
+.br
+.ti -1c
+.RI "static int \fBm_maxMoves\fP = 300"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The Painted Desert problem from Koza's 'Evolution of Emergent Cooperative
+Behavior using Genetic Programming'\&. The problem is to create the same genetic program for a group of ants that will move three colors of sand into columns of like sand\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Scott Mueller 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 30 of file PaintedDesertProblem\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.PaintedDesertProblem (\fBGPConfiguration\fPa_conf) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Creates the Painted Desert Problem using the GPConfiguration\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the GP configuration 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIInvalidConfigurationException\fP 
+.RE
+.PP
+
+.PP
+Definition at line 75 of file PaintedDesertProblem\&.java\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.main()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBGPGenotype\fP examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.create () throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [virtual]\fP"
+Sets up the functions to use and other parameters\&. Then creates the initial genotype\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the genotype created 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIInvalidConfigurationException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Scott Mueller 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.GPProblem\fP\&.
+.PP
+Definition at line 89 of file PaintedDesertProblem\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProblem\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.IntegerClass, and org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.SS "\fBGPFitnessFunction\fP examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.createFitFunc ()\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 402 of file PaintedDesertProblem\&.java\&.
+.SS "static void examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.displaySolution (inta_antmap[][], inta_origMap[][])\fC [inline]\fP, \fC [static]\fP, \fC [private]\fP"
+Display ant map as found by GP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_antmap\fP the map containing the ants and grains of sand 
+.br
+\fIa_origMap\fP the original map 
+.RE
+.PP
+
+.PP
+Definition at line 350 of file PaintedDesertProblem\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.m_maxx, and examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.m_maxy\&.
+.SS "static void examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.main (String[]args)\fC [inline]\fP, \fC [static]\fP"
+Runs the Painted Desert Problem
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP The location of the ant map file is optional 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Scott Mueller 
+.RE
+.PP
+
+.PP
+Definition at line 232 of file PaintedDesertProblem\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.IGPProgram\&.getApplicationData(), examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.m_antMap, and examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.PaintedDesertProblem()\&.
+.SS "int [][] examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.readMap (Stringa_filename) throws Exception\fC [inline]\fP, \fC [private]\fP"
+Reads the map from a file\&. The first line contains the number of \fBX\fP and \fBY\fP locations and the number of Ants on the map\&. A 'b' at a location represents a Black grain of sand\&. A 's' represents a striped grain of sands\&. A 'g' represents a grey grain of sand\&. An 'A' represents an \fBAnt\fP\&. A 'B' represents an \fBAnt\fP and a black grain of sand at the same location\&. A 'S' represents an \fBAnt\fP and a striped grain of sand at the same location\&. A 'G' represents an \fBAnt\fP and a grey grain of sand at the same location\&.
+.PP
+A side effect of this function is setting the m_ants member variable\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_filename\fP The location of the file containing the map information\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+An array of the sand locations read in from the map\&. 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+
+.PP
+Definition at line 137 of file PaintedDesertProblem\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.AntMap\&.BLACK, examples\&.gp\&.paintedDesert\&.AntMap\&.EMPTY, examples\&.gp\&.paintedDesert\&.AntMap\&.GRAY, examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.m_ants, examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.m_maxx, examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.m_maxy, examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.m_popSize, and examples\&.gp\&.paintedDesert\&.AntMap\&.STRIPED\&.
+.SS "void examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.resetAnts ()\fC [inline]\fP"
+Resets the ants to initial positions\&. So they can be run with the next version of the program\&. 
+.PP
+Definition at line 449 of file PaintedDesertProblem\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.m_popSize\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.CVS_REVISION = '$Revision: 1\&.5 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 33 of file PaintedDesertProblem\&.java\&.
+.SS "\fBAntMap\fP examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.m_antMap\fC [static]\fP, \fC [private]\fP"
+Holds the \fBAntMap\fP object used to hold the initial and current map of sand and Ants\&. 
+.PP
+Definition at line 48 of file PaintedDesertProblem\&.java\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.main()\&.
+.SS "\fBAnt\fP [] examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.m_ants\fC [private]\fP"
+Set by readMap and passed to the \fBAntMap\fP constructor 
+.PP
+Definition at line 42 of file PaintedDesertProblem\&.java\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.readMap()\&.
+.SS "int [][] examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.m_map\fC [private]\fP"
+Local copy of the map read into from the file\&. 
+.PP
+Definition at line 37 of file PaintedDesertProblem\&.java\&.
+.SS "int examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.m_maxMoves = 300\fC [static]\fP, \fC [private]\fP"
+Maximum number of moves allowed\&. 
+.PP
+Definition at line 68 of file PaintedDesertProblem\&.java\&.
+.SS "int examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.m_maxx\fC [static]\fP, \fC [private]\fP"
+The maximum number of locations in the East or \fBX\fP direction\&. 
+.PP
+Definition at line 53 of file PaintedDesertProblem\&.java\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.displaySolution(), and examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.readMap()\&.
+.SS "int examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.m_maxy\fC [static]\fP, \fC [private]\fP"
+The maximum number of locaitons in the North or \fBY\fP direction\&. 
+.PP
+Definition at line 58 of file PaintedDesertProblem\&.java\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.displaySolution(), and examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.readMap()\&.
+.SS "int examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.m_popSize\fC [static]\fP, \fC [private]\fP"
+The number of ants in the map\&. 
+.PP
+Definition at line 63 of file PaintedDesertProblem\&.java\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.readMap(), and examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.resetAnts()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

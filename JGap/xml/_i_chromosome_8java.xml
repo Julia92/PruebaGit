@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="_i_chromosome_8java" kind="file">
+    <compoundname>IChromosome.java</compoundname>
+    <innerclass refid="interfaceorg_1_1jgap_1_1_i_chromosome" prot="public">org::jgap::IChromosome</innerclass>
+    <innernamespace refid="namespaceorg_1_1jgap">org::jgap</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>JGAP.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>JGAP<sp/>offers<sp/>a<sp/>dual<sp/>license<sp/>model<sp/>containing<sp/>the<sp/>LGPL<sp/>as<sp/>well<sp/>as<sp/>the<sp/>MPL.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>For<sp/>licensing<sp/>information<sp/>please<sp/>see<sp/>the<sp/>file<sp/>license.txt<sp/>included<sp/>with<sp/>JGAP</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>or<sp/>have<sp/>a<sp/>look<sp/>at<sp/>the<sp/>top<sp/>of<sp/>class<sp/>org.jgap.Chromosome<sp/>which<sp/>representatively</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>includes<sp/>the<sp/>JGAP<sp/>license<sp/>policy<sp/>applicable<sp/>for<sp/>any<sp/>file<sp/>delivered<sp/>with<sp/>JGAP.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">org.jgap;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.io.*;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.util.*;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="interfaceorg_1_1jgap_1_1_i_chromosome" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>Comparable,<sp/><ref refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable" kindref="compound">ICloneable</ref>,<sp/>Serializable,<sp/><ref refid="interfaceorg_1_1jgap_1_1_i_unique_key" kindref="compound">IUniqueKey</ref><sp/>{</highlight></codeline>
+<codeline lineno="26" refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a4e7381b89963f2ee6f69839b38ea8dab" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a4e7381b89963f2ee6f69839b38ea8dab" kindref="member">CVS_REVISION</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$Revision:<sp/>1.17<sp/>$&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a34c8c0933688a10837692d1c0024f663" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a34c8c0933688a10837692d1c0024f663" kindref="member">S_FITNESS_VALUE</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Fitness<sp/>value&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="interfaceorg_1_1jgap_1_1_i_chromosome_1ae93666d5923e449f45656ad5fed52f84" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1ae93666d5923e449f45656ad5fed52f84" kindref="member">S_ALLELES</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Alleles&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a03218ba49e2c53108005cd6290252284" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a03218ba49e2c53108005cd6290252284" kindref="member">S_APPLICATION_DATA</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Application<sp/>data&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a50371491243a21f494112bf66d2e1a26" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a50371491243a21f494112bf66d2e1a26" kindref="member">S_SIZE</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Size&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1ac84a3ec514b365e25f023d9e78bfa382" kindref="member">getGene</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_desiredLocus);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>[]<sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a995b4203af3bd22b8fd2028749736a03" kindref="member">getGenes</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a0ff42f1935dab73296301b29ad0a1716" kindref="member">setGenes</ref>(<ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>[]<sp/>a_genes)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a9b460ad665ea1ab4e789061233fc6fa3" kindref="member">size</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a56f82d43b102fc5da8e0a071e32dc13d" kindref="member">setFitnessValue</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a_newFitnessValue);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1ac2acf33157b233e8c5553fc62861fa23" kindref="member">setFitnessValueDirectly</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a_newFitnessValue);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a9b68991c832a2054176d522e49a19ebd" kindref="member">getFitnessValue</ref>();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a743303c75d2a001f88af579051862964" kindref="member">getFitnessValueDirectly</ref>();</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1afeeed3697d5f22154cab618432602ca6" kindref="member">setIsSelectedForNextGeneration</ref>(</highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>a_isSelected);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1af4aa1487bfa13ba0f038b628f44554be" kindref="member">isSelectedForNextGeneration</ref>();</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a05c61ae9fb2caf56455eb66405a164c4" kindref="member">setConstraintChecker</ref>(<ref refid="interfaceorg_1_1jgap_1_1_i_gene_constraint_checker" kindref="compound">IGeneConstraintChecker</ref><sp/>a_constraintChecker)</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref>;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a99da03ae9bca8f2ca884186aea82c771" kindref="member">setApplicationData</ref>(Object<sp/>a_newData);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/>Object<sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a1734f351c78c6d36bec48fdc8a334902" kindref="member">getApplicationData</ref>();</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a184e942f9b44185236492ee7261b2b14" kindref="member">cleanup</ref>();</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a4426723f5d26695fd80a0b28b3acb9eb" kindref="member">getConfiguration</ref>();</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a651016ea5a204fc14c7c146e32fd76cf" kindref="member">increaseAge</ref>();</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1aefc4884cc5bbbc511feb8d9ec827a31f" kindref="member">resetAge</ref>();</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a9146b114972d86aac3cfb32b249b166f" kindref="member">setAge</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_age);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a6186b5e6184d55dbc03adee6bacc8e9a" kindref="member">getAge</ref>();</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a8fda999d5a66640dd577bcff960b368b" kindref="member">increaseOperatedOn</ref>();</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a4fb2f78d39b20b7f5a9ff8d37402f7bd" kindref="member">resetOperatedOn</ref>();</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a47f09dd85e4f9f0e3908c85b63394a7d" kindref="member">operatedOn</ref>();</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IChromosome.java"/>
+  </compounddef>
+</doxygen>

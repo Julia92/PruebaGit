@@ -1,0 +1,192 @@
+.TH "examples.grid.evolutionDistributed.ClientEvolveStrategy" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.grid.evolutionDistributed.ClientEvolveStrategy \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits IClientEvolveStrategy\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBClientEvolveStrategy\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitialize\fP (GridClient a_gc, Configuration a_config, IClientFeedback a_clientFeedback)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBafterWorkRequestsSent\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "boolean \fBisEvolutionFinished\fP (int a_evolutionsDone)"
+.br
+.ti -1c
+.RI "void \fBonFinished\fP ()"
+.br
+.ti -1c
+.RI "void \fBevolve\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "JGAPRequest[] \fBgenerateWorkRequests\fP (JGAPRequest m_workReq, IRequestSplitStrategy m_splitStrategy, Object data)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBresultReceived\fP (JGAPResult a_result)  throws Exception "
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.3 $'"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Configuration \fBm_config\fP"
+.br
+.ti -1c
+.RI "IClientFeedback \fBm_clientFeedback\fP"
+.br
+.ti -1c
+.RI "final int \fBm_maxEvolutions\fP = 3"
+.br
+.ti -1c
+.RI "Population \fBm_pop\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Sample implementation of a strategy for evolving a generation on the client\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file ClientEvolveStrategy\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.ClientEvolveStrategy ()\fC [inline]\fP"
+Default constructor is necessary here as it will be called dynamically! Don't declare any other constructor as it will not be called! 
+.PP
+Definition at line 39 of file ClientEvolveStrategy\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.afterWorkRequestsSent () throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 65 of file ClientEvolveStrategy\&.java\&.
+.SS "void examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.evolve () throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 98 of file ClientEvolveStrategy\&.java\&.
+.SS "JGAPRequest [] examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.generateWorkRequests (JGAPRequestm_workReq, IRequestSplitStrategym_splitStrategy, Objectdata) throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 105 of file ClientEvolveStrategy\&.java\&.
+.PP
+References examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.m_config, and examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.m_pop\&.
+.SS "void examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.initialize (GridClienta_gc, Configurationa_config, IClientFeedbacka_clientFeedback) throws Exception\fC [inline]\fP"
+Called at the very beginning and only once before distributed evolution starts\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_gc\fP GridClient 
+.br
+\fIa_config\fP Configuration 
+.br
+\fIa_clientFeedback\fP IClientFeedback 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 55 of file ClientEvolveStrategy\&.java\&.
+.PP
+References examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.m_clientFeedback, examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.m_config, and examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.m_pop\&.
+.SS "boolean examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.isEvolutionFinished (inta_evolutionsDone)\fC [inline]\fP"
+
+.PP
+Definition at line 73 of file ClientEvolveStrategy\&.java\&.
+.PP
+References examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.m_maxEvolutions\&.
+.SS "void examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.onFinished ()\fC [inline]\fP"
+Called after evolution has finished\&. 
+.PP
+Definition at line 93 of file ClientEvolveStrategy\&.java\&.
+.SS "void examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.resultReceived (JGAPResulta_result) throws Exception\fC [inline]\fP"
+Merge the received results as a basis for the next evolution\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_result\fP JGAPResult 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+
+.PP
+Definition at line 121 of file ClientEvolveStrategy\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.CVS_REVISION = '$Revision: 1\&.3 $'\fC [static]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file ClientEvolveStrategy\&.java\&.
+.SS "IClientFeedback examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.m_clientFeedback\fC [private]\fP"
+
+.PP
+Definition at line 29 of file ClientEvolveStrategy\&.java\&.
+.PP
+Referenced by examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.initialize()\&.
+.SS "Configuration examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.m_config\fC [private]\fP"
+
+.PP
+Definition at line 27 of file ClientEvolveStrategy\&.java\&.
+.PP
+Referenced by examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.generateWorkRequests(), and examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.initialize()\&.
+.SS "final int examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.m_maxEvolutions = 3\fC [private]\fP"
+
+.PP
+Definition at line 31 of file ClientEvolveStrategy\&.java\&.
+.PP
+Referenced by examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.isEvolutionFinished()\&.
+.SS "Population examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.m_pop\fC [private]\fP"
+
+.PP
+Definition at line 33 of file ClientEvolveStrategy\&.java\&.
+.PP
+Referenced by examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.generateWorkRequests(), and examples\&.grid\&.evolutionDistributed\&.ClientEvolveStrategy\&.initialize()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

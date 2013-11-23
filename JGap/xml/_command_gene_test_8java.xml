@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="_command_gene_test_8java" kind="file">
+    <compoundname>CommandGeneTest.java</compoundname>
+    <innerclass refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test" prot="public">org::jgap::gp::CommandGeneTest</innerclass>
+    <innerclass refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1_1_command_gene_impl" prot="package">org::jgap::gp::CommandGeneTest::CommandGeneImpl</innerclass>
+    <innerclass refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1_1_app_data_for_testing" prot="package">org::jgap::gp::CommandGeneTest::AppDataForTesting</innerclass>
+    <innernamespace refid="namespaceorg_1_1jgap_1_1gp">org::jgap::gp</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>JGAP.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>JGAP<sp/>offers<sp/>a<sp/>dual<sp/>license<sp/>model<sp/>containing<sp/>the<sp/>LGPL<sp/>as<sp/>well<sp/>as<sp/>the<sp/>MPL.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>For<sp/>licensing<sp/>information<sp/>please<sp/>see<sp/>the<sp/>file<sp/>license.txt<sp/>included<sp/>with<sp/>JGAP</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>or<sp/>have<sp/>a<sp/>look<sp/>at<sp/>the<sp/>top<sp/>of<sp/>class<sp/>org.jgap.Chromosome<sp/>which<sp/>representatively</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>includes<sp/>the<sp/>JGAP<sp/>license<sp/>policy<sp/>applicable<sp/>for<sp/>any<sp/>file<sp/>delivered<sp/>with<sp/>JGAP.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">org.jgap.gp;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>junit.framework.*;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.*;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.gp.impl.*;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test" kindref="compound">CommandGeneTest</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_g_p_test_case" kindref="compound">GPTestCase</ref><sp/>{</highlight></codeline>
+<codeline lineno="25" refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1ad59edb3f84c045b44ab1fe19e71100ba" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1ad59edb3f84c045b44ab1fe19e71100ba" kindref="member">CVS_REVISION</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$Revision:<sp/>1.11<sp/>$&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1acc77013c13648d2ba98f9cb03b33034b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>Test<sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1acc77013c13648d2ba98f9cb03b33034b" kindref="member">suite</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>TestSuite<sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1acc77013c13648d2ba98f9cb03b33034b" kindref="member">suite</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TestSuite(<ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test" kindref="compound">CommandGeneTest</ref>.class);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1acc77013c13648d2ba98f9cb03b33034b" kindref="member">suite</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1a59742c60a1d496aa7516981a35126ceb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1a59742c60a1d496aa7516981a35126ceb" kindref="member">testConstruct_0</ref>()</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>assertNotNull(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CommandGeneImpl(<ref refid="classorg_1_1jgap_1_1gp_1_1_g_p_test_case_1a5c64d356cfbd17b5f87d789091061185" kindref="member">m_gpconf</ref>));</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1abe2c24c6b64fff282225cc281f4de641" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1abe2c24c6b64fff282225cc281f4de641" kindref="member">testToString_0</ref>()</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref><sp/>gene<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CommandGeneImpl(<ref refid="classorg_1_1jgap_1_1gp_1_1_g_p_test_case_1a5c64d356cfbd17b5f87d789091061185" kindref="member">m_gpconf</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1_j_g_a_p_test_case_1a55e45761cdd59a4489404bb7aa775b79" kindref="member">assertEquals</ref>(</highlight><highlight class="stringliteral">&quot;test&quot;</highlight><highlight class="normal">,<sp/>gene.<ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_1a236141d99059da808afe7a9217e411c7" kindref="member">toString</ref>());</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1ae26df00578f6aa0ec4c3eae05154eaa2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1ae26df00578f6aa0ec4c3eae05154eaa2" kindref="member">testSetAllele_0</ref>()</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref><sp/>gene<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CommandGeneImpl(<ref refid="classorg_1_1jgap_1_1gp_1_1_g_p_test_case_1a5c64d356cfbd17b5f87d789091061185" kindref="member">m_gpconf</ref>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>gene.setAllele(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Double(75));</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fail();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(UnsupportedOperationException<sp/>uex)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight><highlight class="comment">//this<sp/>is<sp/>OK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1af284bd7f014574b75c32886aa811b9fd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1af284bd7f014574b75c32886aa811b9fd" kindref="member">testSize_0</ref>()</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref><sp/>gene<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CommandGeneImpl(<ref refid="classorg_1_1jgap_1_1gp_1_1_g_p_test_case_1a5c64d356cfbd17b5f87d789091061185" kindref="member">m_gpconf</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1_j_g_a_p_test_case_1a55e45761cdd59a4489404bb7aa775b79" kindref="member">assertEquals</ref>(1,<sp/>gene.<ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_1abfcfdcce950bae1d2bbc6d7f5e3e788a" kindref="member">size</ref>());</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1_j_g_a_p_test_case_1a55e45761cdd59a4489404bb7aa775b79" kindref="member">assertEquals</ref>(1,<sp/>gene.<ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_1a2f2fd7c05e6e948e2fd1a7bd0df37ef1" kindref="member">getArity</ref>(null));</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1a139988fda1f0542462946f88754dd252" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1a139988fda1f0542462946f88754dd252" kindref="member">testEquals_0</ref>()</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>CommandGeneImpl<sp/>gene<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CommandGeneImpl(<ref refid="classorg_1_1jgap_1_1gp_1_1_g_p_test_case_1a5c64d356cfbd17b5f87d789091061185" kindref="member">m_gpconf</ref>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>assertFalse(gene.equals(null));</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>assertTrue(gene.equals(gene));</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>assertFalse(gene.equals(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Integer(2)));</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1af0d612ca5c1e13ec66f32bf60fbade6c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1af0d612ca5c1e13ec66f32bf60fbade6c" kindref="member">testEquals_1</ref>()</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>CommandGeneImpl<sp/>gene<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CommandGeneImpl(<ref refid="classorg_1_1jgap_1_1gp_1_1_g_p_test_case_1a5c64d356cfbd17b5f87d789091061185" kindref="member">m_gpconf</ref>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>assertFalse(gene.equals(null));</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>assertTrue(gene.equals(gene));</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>assertFalse(gene.equals(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Integer(2)));</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1ac2664619b811263bd5d6b65ba8c3b7ec" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1ac2664619b811263bd5d6b65ba8c3b7ec" kindref="member">testEquals_2</ref>()</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>CommandGeneImpl<sp/>gene<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CommandGeneImpl(<ref refid="classorg_1_1jgap_1_1gp_1_1_g_p_test_case_1a5c64d356cfbd17b5f87d789091061185" kindref="member">m_gpconf</ref>);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>assertFalse(gene.equals(null));</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>assertTrue(gene.equals(gene));</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>assertFalse(gene.equals(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Integer(2)));</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1a670aa7b5c2021f31a719ea32218d6671" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1a670aa7b5c2021f31a719ea32218d6671" kindref="member">testEquals_3</ref>()</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>CommandGeneImpl<sp/>gene<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CommandGeneImpl(<ref refid="classorg_1_1jgap_1_1gp_1_1_g_p_test_case_1a5c64d356cfbd17b5f87d789091061185" kindref="member">m_gpconf</ref>);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>gene.setApplicationData(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>AppDataForTesting());</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>CommandGeneImpl<sp/>gene2<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CommandGeneImpl(<ref refid="classorg_1_1jgap_1_1gp_1_1_g_p_test_case_1a5c64d356cfbd17b5f87d789091061185" kindref="member">m_gpconf</ref>);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>gene2.setApplicationData(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>AppDataForTesting());</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>gene.setCompareApplicationData(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>assertTrue(gene.equals(gene2));</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1a5516711a9ca6f41349793408dc64fd42" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1a5516711a9ca6f41349793408dc64fd42" kindref="member">testCleanup_0</ref>()</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref><sp/>gene<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CommandGeneImpl(<ref refid="classorg_1_1jgap_1_1gp_1_1_g_p_test_case_1a5c64d356cfbd17b5f87d789091061185" kindref="member">m_gpconf</ref>);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>gene.cleanup();</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1ab08d9ee8333848f7eb1718a3e731cd72" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1ab08d9ee8333848f7eb1718a3e731cd72" kindref="member">testHashCode_0</ref>()</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>CommandGeneImpl<sp/>gene<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CommandGeneImpl(<ref refid="classorg_1_1jgap_1_1gp_1_1_g_p_test_case_1a5c64d356cfbd17b5f87d789091061185" kindref="member">m_gpconf</ref>);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1_j_g_a_p_test_case_1a55e45761cdd59a4489404bb7aa775b79" kindref="member">assertEquals</ref>(<sp/>gene.getClass().getName().hashCode(),<sp/>gene.hashCode());</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1add62e5f08939c843d64f5649215c226a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1add62e5f08939c843d64f5649215c226a" kindref="member">testHashCode_1</ref>()</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>CommandGeneImpl<sp/>gene<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CommandGeneImpl(<ref refid="classorg_1_1jgap_1_1gp_1_1_g_p_test_case_1a5c64d356cfbd17b5f87d789091061185" kindref="member">m_gpconf</ref>);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO<sp/>implement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>gene.setAllele(new<sp/>Double(1.5d));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>assertEquals(new<sp/>Double(1.5d).hashCode(),<sp/>gene.hashCode());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196" refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1a1cd8a816588e2945ab7512cc20847d52" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1a1cd8a816588e2945ab7512cc20847d52" kindref="member">testSetEnergy_0</ref>()</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>CommandGeneImpl<sp/>gene<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CommandGeneImpl(<ref refid="classorg_1_1jgap_1_1gp_1_1_g_p_test_case_1a5c64d356cfbd17b5f87d789091061185" kindref="member">m_gpconf</ref>);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1_j_g_a_p_test_case_1a55e45761cdd59a4489404bb7aa775b79" kindref="member">assertEquals</ref>(0.0,<sp/>gene.getEnergy(),<sp/><ref refid="classorg_1_1jgap_1_1_j_g_a_p_test_case_1a9526215e5c49deb8f2811944f050d30b" kindref="member">DELTA</ref>);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>gene.setEnergy(2.3);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1_j_g_a_p_test_case_1a55e45761cdd59a4489404bb7aa775b79" kindref="member">assertEquals</ref>(2.3,<sp/>gene.getEnergy(),<sp/><ref refid="classorg_1_1jgap_1_1_j_g_a_p_test_case_1a9526215e5c49deb8f2811944f050d30b" kindref="member">DELTA</ref>);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210" refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1ab2f60328760e500ac79ca6454eeb076a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1ab2f60328760e500ac79ca6454eeb076a" kindref="member">testSetEnergy_1</ref>()</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>CommandGeneImpl<sp/>gene<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CommandGeneImpl(<ref refid="classorg_1_1jgap_1_1gp_1_1_g_p_test_case_1a5c64d356cfbd17b5f87d789091061185" kindref="member">m_gpconf</ref>);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>gene.setEnergy(2.3);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1_j_g_a_p_test_case_1a55e45761cdd59a4489404bb7aa775b79" kindref="member">assertEquals</ref>(2.3,<sp/>gene.getEnergy(),<sp/><ref refid="classorg_1_1jgap_1_1_j_g_a_p_test_case_1a9526215e5c49deb8f2811944f050d30b" kindref="member">DELTA</ref>);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>gene.setEnergy(<sp/>-55.8);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1_j_g_a_p_test_case_1a55e45761cdd59a4489404bb7aa775b79" kindref="member">assertEquals</ref>(<sp/>-55.8,<sp/>gene.getEnergy(),<sp/><ref refid="classorg_1_1jgap_1_1_j_g_a_p_test_case_1a9526215e5c49deb8f2811944f050d30b" kindref="member">DELTA</ref>);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>gene.setEnergy(0.5);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>gene.setEnergy(0.8);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1_j_g_a_p_test_case_1a55e45761cdd59a4489404bb7aa775b79" kindref="member">assertEquals</ref>(0.8,<sp/>gene.getEnergy(),<sp/><ref refid="classorg_1_1jgap_1_1_j_g_a_p_test_case_1a9526215e5c49deb8f2811944f050d30b" kindref="member">DELTA</ref>);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228" refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1aec0b7cbce381bb794310a6dd2bd5006a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1aec0b7cbce381bb794310a6dd2bd5006a" kindref="member">testSetApplicationData_0</ref>()</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>CommandGeneImpl<sp/>gene<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CommandGeneImpl(<ref refid="classorg_1_1jgap_1_1gp_1_1_g_p_test_case_1a5c64d356cfbd17b5f87d789091061185" kindref="member">m_gpconf</ref>);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>assertNull(gene.getApplicationData());</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>Integer<sp/>i<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Integer(23);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>gene.setApplicationData(i);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>assertSame(i,<sp/>gene.getApplicationData());</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>s<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Hallo&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>gene.setApplicationData(s);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>assertSame(s,<sp/>gene.getApplicationData());</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246" refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1a7464717c509df2beb429de0629ae23df" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_test_1a7464717c509df2beb429de0629ae23df" kindref="member">testIsCompareApplicationData_0</ref>()</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>CommandGeneImpl<sp/>gene<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CommandGeneImpl(<ref refid="classorg_1_1jgap_1_1gp_1_1_g_p_test_case_1a5c64d356cfbd17b5f87d789091061185" kindref="member">m_gpconf</ref>);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>assertFalse(gene.isCompareApplicationData());</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>gene.setCompareApplicationData(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>assertFalse(gene.isCompareApplicationData());</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>gene.setCompareApplicationData(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>assertTrue(gene.isCompareApplicationData());</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">CommandGeneImpl</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref><sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>CommandGeneImpl(</highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>GPConfiguration<sp/>a_config)</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref><sp/>{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>super(a_config,1,<ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref>.<ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene_1a45c853c890dbbba4a629bca1688ab16e" kindref="member">FloatClass</ref>);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref><sp/>newGeneInternal()<sp/>{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>null;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Class<sp/>getChildType(IGPProgram<sp/>a_ind,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_chromNum)<sp/>{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>null;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>String<sp/>toString()<sp/>{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;test&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AppDataForTesting</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">implements</highlight><highlight class="normal"><sp/>IApplicationData<sp/>{</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>compareTo(Object<sp/>o2)<sp/>{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>equals(Object<sp/>o2)<sp/>{</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Object<sp/>clone()</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>CloneNotSupportedException<sp/>{</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>null;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="298"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/tests/org/jgap/gp/CommandGeneTest.java"/>
+  </compounddef>
+</doxygen>

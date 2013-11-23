@@ -1,0 +1,136 @@
+\hypertarget{interfaceorg_1_1jgap_1_1_i_handler}{\section{org.\-jgap.\-I\-Handler Interface Reference}
+\label{interfaceorg_1_1jgap_1_1_i_handler}\index{org.\-jgap.\-I\-Handler@{org.\-jgap.\-I\-Handler}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-I\-Handler\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceorg_1_1jgap_1_1_i_handler__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+boolean \hyperlink{interfaceorg_1_1jgap_1_1_i_handler_a026d7a41944049a4f812ee0d1151d40e}{is\-Handler\-For} (Object a\-\_\-obj, Class a\-\_\-class)
+\item 
+Object \hyperlink{interfaceorg_1_1jgap_1_1_i_handler_a60199862000df04a4b2491d6d08f2f2c}{perform} (Object a\-\_\-obj, Class a\-\_\-class, Object a\-\_\-params)  throws Exception
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{interfaceorg_1_1jgap_1_1_i_handler_ac87eeb82b5fb4d6e5ba1f8850db52118}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-3 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for handlers capable of doing somethign specific.
+
+Such a handler acknowledges via is\-Handler\-For(\-Class) that the method perform(\-Object, Object) could be executed for the given class.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-6 
+\end{DoxySince}
+
+
+Definition at line 20 of file I\-Handler.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1_i_handler_a026d7a41944049a4f812ee0d1151d40e}{\index{org\-::jgap\-::\-I\-Handler@{org\-::jgap\-::\-I\-Handler}!is\-Handler\-For@{is\-Handler\-For}}
+\index{is\-Handler\-For@{is\-Handler\-For}!org::jgap::IHandler@{org\-::jgap\-::\-I\-Handler}}
+\subsubsection[{is\-Handler\-For}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-I\-Handler.\-is\-Handler\-For (
+\begin{DoxyParamCaption}
+\item[{Object}]{a\-\_\-obj, }
+\item[{Class}]{a\-\_\-class}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_i_handler_a026d7a41944049a4f812ee0d1151d40e}
+Determines whether the handler is suitable for the given object instance or class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-obj} & the object instance to check \\
+\hline
+{\em a\-\_\-class} & the class to check, alternatively if no object instance is available (some handlers could need to get an object and would always return false if only a class is provided) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true\-: handler suitable for given object or class
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-6 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1_chromosome_a45bc47533c183ecf3297d7507299cc85}{org.\-jgap.\-Chromosome}, and \hyperlink{classorg_1_1jgap_1_1_chromosome_for_testing_a05fb9ea1e9bcdb28eef5ab4ee7f22f94}{org.\-jgap.\-Chromosome\-For\-Testing}.
+
+
+
+Referenced by org.\-jgap.\-impl.\-J\-G\-A\-P\-Factory.\-find\-Handler\-For(), org.\-jgap.\-impl.\-Default\-Initializer\-Test.\-test\-Is\-Handler\-For\-\_\-0(), org.\-jgap.\-impl.\-Default\-Compare\-To\-Handler\-Test.\-test\-Is\-Handler\-For\-\_\-0(), org.\-jgap.\-impl.\-Default\-Clone\-Handler\-Test.\-test\-Is\-Handler\-For\-\_\-0(), org.\-jgap.\-impl.\-Default\-Compare\-To\-Handler\-Test.\-test\-Is\-Handler\-For\-\_\-1(), org.\-jgap.\-impl.\-Default\-Clone\-Handler\-Test.\-test\-Is\-Handler\-For\-\_\-1(), org.\-jgap.\-impl.\-Default\-Clone\-Handler\-Test.\-test\-Is\-Handler\-For\-\_\-2(), org.\-jgap.\-impl.\-Default\-Compare\-To\-Handler\-Test.\-test\-Is\-Handler\-For\-\_\-2(), org.\-jgap.\-impl.\-Default\-Compare\-To\-Handler\-Test.\-test\-Is\-Handler\-For\-\_\-3(), and org.\-jgap.\-impl.\-Default\-Clone\-Handler\-Test.\-test\-Is\-Handler\-For\-\_\-3().
+
+\hypertarget{interfaceorg_1_1jgap_1_1_i_handler_a60199862000df04a4b2491d6d08f2f2c}{\index{org\-::jgap\-::\-I\-Handler@{org\-::jgap\-::\-I\-Handler}!perform@{perform}}
+\index{perform@{perform}!org::jgap::IHandler@{org\-::jgap\-::\-I\-Handler}}
+\subsubsection[{perform}]{\setlength{\rightskip}{0pt plus 5cm}Object org.\-jgap.\-I\-Handler.\-perform (
+\begin{DoxyParamCaption}
+\item[{Object}]{a\-\_\-obj, }
+\item[{Class}]{a\-\_\-class, }
+\item[{Object}]{a\-\_\-params}
+\end{DoxyParamCaption}
+) throws Exception}}\label{interfaceorg_1_1jgap_1_1_i_handler_a60199862000df04a4b2491d6d08f2f2c}
+Performs a task for the given object or class. For some handlers, additional parameters are necessary, which could be provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-obj} & the object instance to perform the handler task for \\
+\hline
+{\em a\-\_\-class} & the class to perform the handler task for, in case no object instance is available (some handlers could need to get an object and would always throw an exception if only a class is provided) \\
+\hline
+{\em a\-\_\-params} & optional parameters needed for the handler to perform its task \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & in case of any error \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+Object
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-6 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1_genotype_test_1_1_chromosome_for_test2_a1bdbbfe0c132aa8096c909a7bfd7f7b8}{org.\-jgap.\-Genotype\-Test.\-Chromosome\-For\-Test2}, \hyperlink{classorg_1_1jgap_1_1_chromosome_abee38007a07ba7a1442dd96571ed7cc1}{org.\-jgap.\-Chromosome}, and \hyperlink{classorg_1_1jgap_1_1_chromosome_for_testing_a89f5971800a63faa175bed4d141aa932}{org.\-jgap.\-Chromosome\-For\-Testing}.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector.\-add(), org.\-jgap.\-gp.\-impl.\-G\-P\-Genotype.\-calc\-Fitness(), org.\-jgap.\-gp.\-impl.\-G\-P\-Genotype.\-clone\-Program(), org.\-jgap.\-gp.\-impl.\-G\-P\-Population.\-create(), org.\-jgap.\-gp.\-impl.\-G\-P\-Population.\-determine\-Fittest\-Program(), org.\-jgap.\-Natural\-Selector\-Ext.\-select\-Chromosome(), org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-select\-Chromosomes(), org.\-jgap.\-impl.\-Default\-Initializer\-Test.\-test\-Perform\-\_\-1(), org.\-jgap.\-impl.\-Default\-Compare\-To\-Handler\-Test.\-test\-Perform\-\_\-1(), org.\-jgap.\-impl.\-Default\-Clone\-Handler\-Test.\-test\-Perform\-\_\-1(), org.\-jgap.\-impl.\-Default\-Compare\-To\-Handler\-Test.\-test\-Perform\-\_\-2(), org.\-jgap.\-impl.\-Default\-Clone\-Handler\-Test.\-test\-Perform\-\_\-2(), org.\-jgap.\-impl.\-Default\-Clone\-Handler\-Test.\-test\-Perform\-\_\-3(), org.\-jgap.\-impl.\-Default\-Clone\-Handler\-Test.\-test\-Perform\-\_\-4(), org.\-jgap.\-impl.\-Default\-Clone\-Handler\-Test.\-test\-Perform\-\_\-5(), and org.\-jgap.\-impl.\-Default\-Clone\-Handler\-Test.\-test\-Perform\-\_\-6().
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1_i_handler_ac87eeb82b5fb4d6e5ba1f8850db52118}{\index{org\-::jgap\-::\-I\-Handler@{org\-::jgap\-::\-I\-Handler}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::IHandler@{org\-::jgap\-::\-I\-Handler}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-I\-Handler.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-3 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{interfaceorg_1_1jgap_1_1_i_handler_ac87eeb82b5fb4d6e5ba1f8850db52118}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 22 of file I\-Handler.\-java.
+
+
+
+The documentation for this interface was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/\hyperlink{_i_handler_8java}{I\-Handler.\-java}\end{DoxyCompactItemize}

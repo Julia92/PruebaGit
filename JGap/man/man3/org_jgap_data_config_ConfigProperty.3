@@ -1,0 +1,323 @@
+.TH "org.jgap.data.config.ConfigProperty" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.data.config.ConfigProperty \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConfigProperty\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetName\fP (final String a_name)"
+.br
+.ti -1c
+.RI "String \fBgetWidget\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetWidget\fP (final String a_widget)"
+.br
+.ti -1c
+.RI "String \fBgetLabel\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetLabel\fP (final String a_label)"
+.br
+.ti -1c
+.RI "void \fBaddValue\fP (final String a_value)"
+.br
+.ti -1c
+.RI "Iterator \fBgetValuesIter\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "String \fBm_name\fP"
+.br
+.ti -1c
+.RI "String \fBm_widget\fP"
+.br
+.ti -1c
+.RI "String \fBm_label\fP"
+.br
+.ti -1c
+.RI "List \fBm_values\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.5 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Represents a property to be shown on the configuration screen\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file ConfigProperty\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.data\&.config\&.ConfigProperty\&.ConfigProperty ()\fC [inline]\fP"
+Default Constructor for a \fBConfigProperty\fP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 42 of file ConfigProperty\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigProperty\&.m_label, org\&.jgap\&.data\&.config\&.ConfigProperty\&.m_name, org\&.jgap\&.data\&.config\&.ConfigProperty\&.m_values, and org\&.jgap\&.data\&.config\&.ConfigProperty\&.m_widget\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.data\&.config\&.ConfigProperty\&.addValue (final Stringa_value)\fC [inline]\fP"
+Add a value into the values ArrayList\&. These values are added in case the display component is a ListBox or ComboBox or something that can have multiple values\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_value\fP the value to add
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 130 of file ConfigProperty\&.java\&.
+.SS "String org\&.jgap\&.data\&.config\&.ConfigProperty\&.getLabel ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+label of the property
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 105 of file ConfigProperty\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigProperty\&.m_label\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.ConfigPropertyTest\&.testConstruct_0(), org\&.jgap\&.data\&.config\&.ConfigPropertyTest\&.testGetLabel_0(), and org\&.jgap\&.data\&.config\&.ConfigPropertyTest\&.testGetName_0()\&.
+.SS "String org\&.jgap\&.data\&.config\&.ConfigProperty\&.getName ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+name associated with this property
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 56 of file ConfigProperty\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigProperty\&.m_name\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.ConfigPropertyTest\&.testConstruct_0(), and org\&.jgap\&.data\&.config\&.ConfigPropertyTest\&.testGetName_0()\&.
+.SS "Iterator org\&.jgap\&.data\&.config\&.ConfigProperty\&.getValuesIter ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+iterator on the values ArrayList for this property
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 140 of file ConfigProperty\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.ConfigPropertyTest\&.testAddValue_0(), and org\&.jgap\&.data\&.config\&.ConfigPropertyTest\&.testConstruct_0()\&.
+.SS "String org\&.jgap\&.data\&.config\&.ConfigProperty\&.getWidget ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+name of the widget associated with this property
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 84 of file ConfigProperty\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigProperty\&.m_widget\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.ConfigPropertyTest\&.testConstruct_0(), and org\&.jgap\&.data\&.config\&.ConfigPropertyTest\&.testGetWidget_0()\&.
+.SS "void org\&.jgap\&.data\&.config\&.ConfigProperty\&.setLabel (final Stringa_label)\fC [inline]\fP"
+Sets the label\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_label\fP the label of this property, by default the same as the name of the property
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 117 of file ConfigProperty\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigProperty\&.m_label\&.
+.SS "void org\&.jgap\&.data\&.config\&.ConfigProperty\&.setName (final Stringa_name)\fC [inline]\fP"
+Setter for the name of this property\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP the name associated with this property\&. This name will be used as the key in the properties file for persisting configuration information
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 69 of file ConfigProperty\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigProperty\&.m_label, and org\&.jgap\&.data\&.config\&.ConfigProperty\&.m_name\&.
+.SS "void org\&.jgap\&.data\&.config\&.ConfigProperty\&.setWidget (final Stringa_widget)\fC [inline]\fP"
+Sets the widget\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_widget\fP either 'JList' or 'JTextField' for now
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 95 of file ConfigProperty\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigProperty\&.m_widget\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.data\&.config\&.ConfigProperty\&.CVS_REVISION = '$Revision: 1\&.5 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 22 of file ConfigProperty\&.java\&.
+.SS "String org\&.jgap\&.data\&.config\&.ConfigProperty\&.m_label\fC [private]\fP"
+
+.PP
+Definition at line 31 of file ConfigProperty\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.ConfigProperty\&.ConfigProperty(), org\&.jgap\&.data\&.config\&.ConfigProperty\&.getLabel(), org\&.jgap\&.data\&.config\&.ConfigProperty\&.setLabel(), and org\&.jgap\&.data\&.config\&.ConfigProperty\&.setName()\&.
+.SS "String org\&.jgap\&.data\&.config\&.ConfigProperty\&.m_name\fC [private]\fP"
+
+.PP
+Definition at line 25 of file ConfigProperty\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.ConfigProperty\&.ConfigProperty(), org\&.jgap\&.data\&.config\&.ConfigProperty\&.getName(), and org\&.jgap\&.data\&.config\&.ConfigProperty\&.setName()\&.
+.SS "List org\&.jgap\&.data\&.config\&.ConfigProperty\&.m_values\fC [private]\fP"
+
+.PP
+Definition at line 34 of file ConfigProperty\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.ConfigProperty\&.ConfigProperty()\&.
+.SS "String org\&.jgap\&.data\&.config\&.ConfigProperty\&.m_widget\fC [private]\fP"
+
+.PP
+Definition at line 28 of file ConfigProperty\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.ConfigProperty\&.ConfigProperty(), org\&.jgap\&.data\&.config\&.ConfigProperty\&.getWidget(), and org\&.jgap\&.data\&.config\&.ConfigProperty\&.setWidget()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

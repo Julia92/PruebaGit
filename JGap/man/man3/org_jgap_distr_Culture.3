@@ -1,0 +1,587 @@
+.TH "org.jgap.distr.Culture" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.Culture \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable, and Comparable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCulture\fP (final int a_size)"
+.br
+.ti -1c
+.RI "\fBCultureMemoryCell\fP \fBset\fP (final int a_index, final double a_value, final int a_historySize, final String a_name)"
+.br
+.ti -1c
+.RI "\fBCultureMemoryCell\fP \fBset\fP (final int a_index, final Object a_value, final int a_historySize, final String a_infotext)"
+.br
+.ti -1c
+.RI "\fBCultureMemoryCell\fP \fBset\fP (final String a_name, final Object a_value, final int a_historySize)"
+.br
+.ti -1c
+.RI "\fBCultureMemoryCell\fP \fBget\fP (final int a_index)"
+.br
+.ti -1c
+.RI "\fBCultureMemoryCell\fP \fBget\fP (final String a_name)"
+.br
+.ti -1c
+.RI "boolean \fBcontains\fP (final String a_name)"
+.br
+.ti -1c
+.RI "int \fBsize\fP ()"
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "List \fBgetMemoryNames\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "void \fBsetMatrixWidth\fP (int a_width)"
+.br
+.ti -1c
+.RI "\fBCultureMemoryCell\fP \fBsetMatrix\fP (int a_x, int a_y, Object a_value)"
+.br
+.ti -1c
+.RI "\fBCultureMemoryCell\fP \fBgetMatrix\fP (int a_x, int a_y)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBCultureMemoryCell\fP[] \fBm_memory\fP"
+.br
+.ti -1c
+.RI "List \fBm_memoryNames\fP = new Vector()"
+.br
+.ti -1c
+.RI "int \fBm_size\fP"
+.br
+.ti -1c
+.RI "int \fBm_width\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.16 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBCulture\fP is a memory not being bound to a generation, but possibly persistent during the whole history of a genotype (over all generations)\&. See GPConfiguration for current support of culture with Genetic Programming\&.
+.PP
+Also see http://cs.gmu.edu/~sean/papers/culture-gp96.pdf
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file Culture\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.distr\&.Culture\&.Culture (final inta_size)\fC [inline]\fP"
+Constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_size\fP the size of the memory in cells (\fBCultureMemoryCell\fP instances)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 60 of file Culture\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Culture\&.m_memory, org\&.jgap\&.distr\&.Culture\&.m_size, and org\&.jgap\&.distr\&.Culture\&.m_width\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Culture\&.compareTo()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.distr\&.Culture\&.clear ()\fC [inline]\fP"
+Clears the memory\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 246 of file Culture\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Culture\&.m_memory, and org\&.jgap\&.distr\&.Culture\&.m_size\&.
+.SS "int org\&.jgap\&.distr\&.Culture\&.compareTo (Objecta_other)\fC [inline]\fP"
+The compareTo-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+-1, 0, 1
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 287 of file Culture\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Culture\&.Culture(), org\&.jgap\&.distr\&.Culture\&.m_memory, org\&.jgap\&.distr\&.Culture\&.m_memoryNames, and org\&.jgap\&.distr\&.Culture\&.m_size\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Culture\&.equals()\&.
+.SS "boolean org\&.jgap\&.distr\&.Culture\&.contains (final Stringa_name)\fC [inline]\fP"
+Checks if a memory cell with the given name exists\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP the name of the cell to check 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: cell excists
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 195 of file Culture\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureTest\&.testContains_0(), org\&.jgap\&.distr\&.CultureTest\&.testContains_1(), org\&.jgap\&.distr\&.CultureTest\&.testContains_2(), and org\&.jgap\&.distr\&.CultureTest\&.testContains_3()\&.
+.SS "boolean org\&.jgap\&.distr\&.Culture\&.equals (Objecta_other)\fC [inline]\fP"
+The equals-method\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the objects are regarded as equal
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 269 of file Culture\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Culture\&.compareTo()\&.
+.SS "\fBCultureMemoryCell\fP org\&.jgap\&.distr\&.Culture\&.get (final inta_index)\fC [inline]\fP"
+Retrieves the memory cell at the given index\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP index of the memory cell to read out 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+stored memory cell at given index
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 159 of file Culture\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Culture\&.m_memory, and org\&.jgap\&.distr\&.Culture\&.size()\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureTest\&.testClear_0(), org\&.jgap\&.distr\&.CultureTest\&.testToString_0(), and org\&.jgap\&.distr\&.CultureTest\&.testToString_1()\&.
+.SS "\fBCultureMemoryCell\fP org\&.jgap\&.distr\&.Culture\&.get (final Stringa_name)\fC [inline]\fP"
+Retrieves the memory cell at the given index\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP name of the memory cell to read out 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+stored memory cell for given name, or null if name unknown
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 175 of file Culture\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Culture\&.m_memory\&.
+.SS "\fBCultureMemoryCell\fP org\&.jgap\&.distr\&.Culture\&.getMatrix (inta_x, inta_y)\fC [inline]\fP"
+Reads a value from the matrix memory that was previously stored with setMatrix(\&.\&.\&.)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_x\fP the first coordinate of the matrix (width) 
+.br
+\fIa_y\fP the second coordinate of the matrix (height) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+read value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 354 of file Culture\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Culture\&.m_width\&.
+.SS "List org\&.jgap\&.distr\&.Culture\&.getMemoryNames ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+cloned list of symbolic memory names
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 257 of file Culture\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Culture\&.m_memoryNames\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureTest\&.testClear_0()\&.
+.SS "\fBCultureMemoryCell\fP org\&.jgap\&.distr\&.Culture\&.set (final inta_index, final doublea_value, final inta_historySize, final Stringa_name)\fC [inline]\fP"
+Sets a memory cell with a given value\&. The memory cell will be newly created for that\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP index of the memory cell 
+.br
+\fIa_value\fP value to set in the memory 
+.br
+\fIa_historySize\fP size of history to use, or less than 1 for turning history off 
+.br
+\fIa_name\fP informative name of the memory cell 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+newly created memory cell set with the given value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 83 of file Culture\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Culture\&.m_memory, and org\&.jgap\&.distr\&.Culture\&.size()\&.
+.SS "\fBCultureMemoryCell\fP org\&.jgap\&.distr\&.Culture\&.set (final inta_index, final Objecta_value, final inta_historySize, final Stringa_infotext)\fC [inline]\fP"
+Sets a memory cell with a given value\&. The memory cell will be newly created for that\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP index of the memory cell 
+.br
+\fIa_value\fP value to set in the memory 
+.br
+\fIa_historySize\fP size of history to use, or less than 1 for turning history off 
+.br
+\fIa_infotext\fP informative name of the memory cell 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+newly created memory cell set with the given value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 108 of file Culture\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Culture\&.m_memory, and org\&.jgap\&.distr\&.Culture\&.size()\&.
+.SS "\fBCultureMemoryCell\fP org\&.jgap\&.distr\&.Culture\&.set (final Stringa_name, final Objecta_value, final inta_historySize)\fC [inline]\fP"
+Sets a memory cell with a given value\&. The memory cell will be newly created for that\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP named index of the memory cell 
+.br
+\fIa_value\fP value to set in the memory 
+.br
+\fIa_historySize\fP size of history to use, or less than 1 for turning history off 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+newly created memory cell set with the given value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 132 of file Culture\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Culture\&.m_memory\&.
+.SS "\fBCultureMemoryCell\fP org\&.jgap\&.distr\&.Culture\&.setMatrix (inta_x, inta_y, Objecta_value)\fC [inline]\fP"
+Stores a value in the matrix memory\&. Use \fBsetMatrixWidth(int)\fP beforehand!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_x\fP the first coordinate of the matrix (width) 
+.br
+\fIa_y\fP the second coordinate of the matrix (height) 
+.br
+\fIa_value\fP the value to store 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+created or used memory cell
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 332 of file Culture\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Culture\&.m_memory, and org\&.jgap\&.distr\&.Culture\&.m_width\&.
+.SS "void org\&.jgap\&.distr\&.Culture\&.setMatrixWidth (inta_width)\fC [inline]\fP"
+Sets the width of the matrix memory\&. Important to call before using setMatrix/getMatrix!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_width\fP the width the matrix should have
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 310 of file Culture\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Culture\&.m_width, and org\&.jgap\&.distr\&.Culture\&.size()\&.
+.SS "int org\&.jgap\&.distr\&.Culture\&.size ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+size of the memory
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 209 of file Culture\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Culture\&.get(), org\&.jgap\&.distr\&.Culture\&.set(), org\&.jgap\&.distr\&.Culture\&.setMatrixWidth(), and org\&.jgap\&.distr\&.CultureTest\&.testConstruct_2()\&.
+.SS "String org\&.jgap\&.distr\&.Culture\&.toString ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+String representation of the cultural memory
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 219 of file Culture\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Culture\&.m_memory\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.CultureTest\&.testToString_0(), and org\&.jgap\&.distr\&.CultureTest\&.testToString_1()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.Culture\&.CVS_REVISION = '$Revision: 1\&.16 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 28 of file Culture\&.java\&.
+.SS "\fBCultureMemoryCell\fP [] org\&.jgap\&.distr\&.Culture\&.m_memory\fC [private]\fP"
+The storage to use\&. 
+.PP
+Definition at line 33 of file Culture\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Culture\&.clear(), org\&.jgap\&.distr\&.Culture\&.compareTo(), org\&.jgap\&.distr\&.Culture\&.Culture(), org\&.jgap\&.distr\&.Culture\&.get(), org\&.jgap\&.distr\&.Culture\&.set(), org\&.jgap\&.distr\&.Culture\&.setMatrix(), and org\&.jgap\&.distr\&.Culture\&.toString()\&.
+.SS "List org\&.jgap\&.distr\&.Culture\&.m_memoryNames = new Vector()\fC [private]\fP"
+Storage for named indices\&. 
+.PP
+Definition at line 38 of file Culture\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Culture\&.compareTo(), and org\&.jgap\&.distr\&.Culture\&.getMemoryNames()\&.
+.SS "int org\&.jgap\&.distr\&.Culture\&.m_size\fC [private]\fP"
+Number of memory cells available\&. 
+.PP
+Definition at line 43 of file Culture\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Culture\&.clear(), org\&.jgap\&.distr\&.Culture\&.compareTo(), and org\&.jgap\&.distr\&.Culture\&.Culture()\&.
+.SS "int org\&.jgap\&.distr\&.Culture\&.m_width\fC [private]\fP"
+Width of a matrixed memory (optional, but necessary to set if you want to treat the memory as a matrix)\&. 
+.PP
+Definition at line 49 of file Culture\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Culture\&.Culture(), org\&.jgap\&.distr\&.Culture\&.getMatrix(), org\&.jgap\&.distr\&.Culture\&.setMatrix(), and org\&.jgap\&.distr\&.Culture\&.setMatrixWidth()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,214 @@
+.TH "examples.gp.island.IslandGPExample" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.island.IslandGPExample \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIslandGPExample\fP ()"
+.br
+.ti -1c
+.RI "void \fBstart\fP ()  throws Exception "
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)  throws Exception "
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmergePopulation\fP (GPPopulation original, GPPopulation toMerge, int offset, int count)"
+.br
+.ti -1c
+.RI "void \fBstopAllIslands\fP (Thread[] islandThreads)"
+.br
+.ti -1c
+.RI "Runnable \fBgetIsland\fP (int a_index, int a_popSize)  throws Exception "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBnextNumber\fP"
+.br
+.ti -1c
+.RI "\fBIslandGPThread\fP \fBm_firstIsland\fP = null"
+.br
+.ti -1c
+.RI "int \fBruns\fP = 0"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.6 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Simple example on how to build and run an GP island model with JGAP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file IslandGPExample\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.gp\&.island\&.IslandGPExample\&.IslandGPExample ()\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+Island config\&. einbauen, so dass Island model automatisch ausgeführt wird 
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+impl\&. MergeEvent, e\&.g\&.: merge islands when one island stucks 
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+jeweils beste lösung geht öfters verloren! Beeinflusst ein Island das andere oder ist die Lösung in einem Island nicht beständig? 
+.RE
+.PP
+
+.PP
+Definition at line 38 of file IslandGPExample\&.java\&.
+.PP
+Referenced by examples\&.gp\&.island\&.IslandGPExample\&.main()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Runnable examples\&.gp\&.island\&.IslandGPExample\&.getIsland (inta_index, inta_popSize) throws Exception\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP index of island to create 
+.br
+\fIa_popSize\fP the population size the island should have
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+new island instance 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 212 of file IslandGPExample\&.java\&.
+.PP
+References examples\&.gp\&.island\&.IslandGPExample\&.m_firstIsland\&.
+.PP
+Referenced by examples\&.gp\&.island\&.IslandGPExample\&.start()\&.
+.SS "static void examples\&.gp\&.island\&.IslandGPExample\&.main (String[]args) throws Exception\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 220 of file IslandGPExample\&.java\&.
+.PP
+References examples\&.gp\&.island\&.IslandGPExample\&.IslandGPExample()\&.
+.SS "void examples\&.gp\&.island\&.IslandGPExample\&.mergePopulation (GPPopulationoriginal, GPPopulationtoMerge, intoffset, intcount)\fC [inline]\fP, \fC [private]\fP"
+Merge two populations\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIoriginal\fP GPPopulation 
+.br
+\fItoMerge\fP GPPopulation 
+.br
+\fIoffset\fP offset in 'original' for programs to be merged in to 
+.br
+\fIcount\fP number of programs to merge from 'toMerge' to 'original'
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 187 of file IslandGPExample\&.java\&.
+.PP
+Referenced by examples\&.gp\&.island\&.IslandGPExample\&.start()\&.
+.SS "void examples\&.gp\&.island\&.IslandGPExample\&.start () throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 41 of file IslandGPExample\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.IGPProgram\&.getFitnessValue(), examples\&.gp\&.island\&.IslandGPExample\&.getIsland(), examples\&.gp\&.island\&.IslandGPThread\&.isFinished(), examples\&.gp\&.island\&.IslandGPThread\&.isLocked(), examples\&.gp\&.island\&.IslandGPExample\&.m_firstIsland, examples\&.gp\&.island\&.IslandGPExample\&.mergePopulation(), examples\&.gp\&.island\&.IslandGPExample\&.nextNumber, examples\&.gp\&.island\&.IslandGPExample\&.runs, examples\&.gp\&.island\&.IslandGPExample\&.stopAllIslands(), and org\&.jgap\&.gp\&.IGPProgram\&.toStringNorm()\&.
+.SS "void examples\&.gp\&.island\&.IslandGPExample\&.stopAllIslands (Thread[]islandThreads)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 195 of file IslandGPExample\&.java\&.
+.PP
+Referenced by examples\&.gp\&.island\&.IslandGPExample\&.start()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.gp\&.island\&.IslandGPExample\&.CVS_REVISION = '$Revision: 1\&.6 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 23 of file IslandGPExample\&.java\&.
+.SS "\fBIslandGPThread\fP examples\&.gp\&.island\&.IslandGPExample\&.m_firstIsland = null\fC [private]\fP"
+
+.PP
+Definition at line 27 of file IslandGPExample\&.java\&.
+.PP
+Referenced by examples\&.gp\&.island\&.IslandGPExample\&.getIsland(), and examples\&.gp\&.island\&.IslandGPExample\&.start()\&.
+.SS "int examples\&.gp\&.island\&.IslandGPExample\&.nextNumber\fC [private]\fP"
+
+.PP
+Definition at line 25 of file IslandGPExample\&.java\&.
+.PP
+Referenced by examples\&.gp\&.island\&.IslandGPExample\&.start()\&.
+.SS "int examples\&.gp\&.island\&.IslandGPExample\&.runs = 0\fC [private]\fP"
+
+.PP
+Definition at line 29 of file IslandGPExample\&.java\&.
+.PP
+Referenced by examples\&.gp\&.island\&.IslandGPExample\&.start()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

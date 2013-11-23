@@ -1,0 +1,135 @@
+.TH "org.jgap.distr.grid.wan.WANUtils" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.grid.wan.WANUtils \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWANUtils\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static String \fBoutputRequestInformation\fP (\fBReceivedPacket\fP a_packet)"
+.br
+.ti -1c
+.RI "static String \fBoutputRequestInformation\fP (\fBRequestInformation\fP a_info)"
+.br
+.ti -1c
+.RI "static String \fBoutputResultInformation\fP (\fBReceivedPacket\fP a_packet)"
+.br
+.ti -1c
+.RI "static String \fBoutputResultInformation\fP (\fBResultInformation\fP a_info)"
+.br
+.ti -1c
+.RI "static String \fBgetFitnessString\fP (JGAPResultGP res)"
+.br
+.ti -1c
+.RI "static String \fBoutputInformation\fP (\fBMasterInfo\fP worker, String postFix)"
+.br
+.ti -1c
+.RI "static \fBIGPProgram\fP \fBgetFittest\fP (JGAPResultGP a_res)"
+.br
+.ti -1c
+.RI "static double \fBgetFitnessValue\fP (\fBIGPProgram\fP a_prog)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.2 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+WAN Utilities\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file WANUtils\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.distr\&.grid\&.wan\&.WANUtils\&.WANUtils ()\fC [inline]\fP"
+
+.PP
+Definition at line 29 of file WANUtils\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static String org\&.jgap\&.distr\&.grid\&.wan\&.WANUtils\&.getFitnessString (JGAPResultGPres)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 131 of file WANUtils\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.wan\&.WANUtils\&.getFitnessValue()\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.wan\&.WANUtils\&.outputResultInformation()\&.
+.SS "static double org\&.jgap\&.distr\&.grid\&.wan\&.WANUtils\&.getFitnessValue (\fBIGPProgram\fPa_prog)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 171 of file WANUtils\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPFitnessFunction\&.NO_FITNESS_VALUE\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.wan\&.WANUtils\&.getFitnessString()\&.
+.SS "static \fBIGPProgram\fP org\&.jgap\&.distr\&.grid\&.wan\&.WANUtils\&.getFittest (JGAPResultGPa_res)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 158 of file WANUtils\&.java\&.
+.SS "static String org\&.jgap\&.distr\&.grid\&.wan\&.WANUtils\&.outputInformation (\fBMasterInfo\fPworker, StringpostFix)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 153 of file WANUtils\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.wan\&.WANUtils\&.outputRequestInformation(), and org\&.jgap\&.distr\&.grid\&.wan\&.WANUtils\&.outputResultInformation()\&.
+.SS "static String org\&.jgap\&.distr\&.grid\&.wan\&.WANUtils\&.outputRequestInformation (\fBReceivedPacket\fPa_packet)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 32 of file WANUtils\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.getData(), and org\&.jgap\&.distr\&.grid\&.wan\&.WANUtils\&.outputInformation()\&.
+.SS "static String org\&.jgap\&.distr\&.grid\&.wan\&.WANUtils\&.outputRequestInformation (\fBRequestInformation\fPa_info)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 47 of file WANUtils\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.wan\&.RequestInformation\&.getRequestDate()\&.
+.SS "static String org\&.jgap\&.distr\&.grid\&.wan\&.WANUtils\&.outputResultInformation (\fBReceivedPacket\fPa_packet)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 73 of file WANUtils\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.getData(), org\&.jgap\&.distr\&.grid\&.wan\&.WANUtils\&.getFitnessString(), and org\&.jgap\&.distr\&.grid\&.wan\&.WANUtils\&.outputInformation()\&.
+.SS "static String org\&.jgap\&.distr\&.grid\&.wan\&.WANUtils\&.outputResultInformation (\fBResultInformation\fPa_info)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 93 of file WANUtils\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.wan\&.ResultInformation\&.getResponseDate()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.grid\&.wan\&.WANUtils\&.CVS_REVISION = '$Revision: 1\&.2 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 27 of file WANUtils\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

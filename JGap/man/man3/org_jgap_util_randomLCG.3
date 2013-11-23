@@ -1,0 +1,109 @@
+.TH "org.jgap.util.randomLCG" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.util.randomLCG \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.util\&.randomX\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBrandomLCG\fP ()"
+.br
+.ti -1c
+.RI "\fBrandomLCG\fP (long seed)"
+.br
+.ti -1c
+.RI "void \fBsetSeed\fP (long seed)"
+.br
+.ti -1c
+.RI "byte \fBnextByte\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implementation of a \fB\fBrandomX\fP\fP-compliant class using the simple (and not very good) \fCrand()\fP linear congruential generator given as an example in the ANSI C specification\&. This is intended not for serious use, merely as an illustration of a simple software-based \fB\fBrandomX\fP\fP generator\&.
+.PP
+The generation algorithm is:
+.PP
+ \fII\*<j+1\*> \fP = (\fII\*<j\*> \fP × 1103515245 + 12345) & 0x7FFFFFFF 
+.PP
+Designed and implemented in July 1996 by \fCJohn Walker\fP, \fCkelvin@fourmilab\&.ch\fP\&. 
+.PP
+Definition at line 23 of file randomLCG\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.util\&.randomLCG\&.randomLCG ()\fC [inline]\fP"
+Creates a new pseudorandom number generator, seeded from the current time\&. 
+.PP
+Definition at line 31 of file randomLCG\&.java\&.
+.SS "org\&.jgap\&.util\&.randomLCG\&.randomLCG (longseed)\fC [inline]\fP"
+
+.PP
+.nf
+    Creates a new pseudorandom number generator with a
+    specified seed.
+
+.fi
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIseed\fP initial seed for the generator 
+.RE
+.PP
+
+.PP
+Definition at line 41 of file randomLCG\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "byte org\&.jgap\&.util\&.randomLCG\&.nextByte ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+.nf
+    Get next byte from generator.  Given how poor this generator
+    is, it's wise to make a separate call for each byte rather than
+    extract fields from a single call, which may be correlated.
+    Also, the higher-order bits of this generator are more
+    random than the low, so we extract the byte after discarding
+    the low-order 11 bits.
+
+.fi
+.PP
+.PP
+\fBReturns:\fP
+.RS 4
+the next byte from the generator\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.randomX\fP\&.
+.PP
+Definition at line 68 of file randomLCG\&.java\&.
+.SS "void org\&.jgap\&.util\&.randomLCG\&.setSeed (longseed)\fC [inline]\fP"
+
+.PP
+.nf
+    Set seed for generator.  Subsequent values will be based
+    on the given seed.
+
+.fi
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIseed\fP seed for the generator 
+.RE
+.PP
+
+.PP
+Definition at line 53 of file randomLCG\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

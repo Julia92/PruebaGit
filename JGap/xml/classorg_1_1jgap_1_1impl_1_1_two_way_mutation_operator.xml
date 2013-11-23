@@ -1,0 +1,660 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator" kind="class" prot="public">
+    <compoundname>org::jgap::impl::TwoWayMutationOperator</compoundname>
+    <basecompoundref refid="classorg_1_1jgap_1_1_base_genetic_operator" prot="public" virt="non-virtual">org.jgap.BaseGeneticOperator</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a73f3278e9f25c5ceaa6ec002c0c409bb" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.impl.TwoWayMutationOperator.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.9 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" line="31" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a9f751ed8c191fd900a05714a2f4e4d9b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int org.jgap.impl.TwoWayMutationOperator.m_mutationRate</definition>
+        <argsstring></argsstring>
+        <name>m_mutationRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current mutation rate used by this <ref refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator" kindref="compound">MutationOperator</ref>, expressed as the denominator in the 1 / X ratio. For example, X = 1000 would mean that, on average, 1 / 1000 genes would be mutated. A value of zero disables mutation entirely. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" line="39" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1acc8b23fbd0c3b2ba1dea9c266eea9fe2" compoundref="_two_way_mutation_operator_8java" startline="352" endline="380">org.jgap.impl.TwoWayMutationOperator.compareTo</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a929e74b0d9b86dfa7f0cb2ba88e347d3" compoundref="_two_way_mutation_operator_8java" startline="382" endline="384">org.jgap.impl.TwoWayMutationOperator.getMutationRate</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a53ac73cd4e6b197e6756d4efe02bd01e" compoundref="_two_way_mutation_operator_8java" startline="134" endline="269">org.jgap.impl.TwoWayMutationOperator.operate</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1af7720c96119b3e44c43664856d39e9fa" compoundref="_two_way_mutation_operator_8java" startline="313" endline="319">org.jgap.impl.TwoWayMutationOperator.setMutationRateCalc</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a5fb0b818973a6da4aa577fd7e0e7d132" compoundref="_two_way_mutation_operator_8java" startline="119" endline="125">org.jgap.impl.TwoWayMutationOperator.TwoWayMutationOperator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1aaf31fb0ac9dfd8b730fe260280ec34ef" prot="private" static="no" mutable="no">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_i_universal_rate_calculator" kindref="compound">IUniversalRateCalculator</ref></type>
+        <definition>IUniversalRateCalculator org.jgap.impl.TwoWayMutationOperator.m_mutationRateCalc</definition>
+        <argsstring></argsstring>
+        <name>m_mutationRateCalc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculator for dynamically determining the mutation rate. If set to null the value of m_mutationRate will be used. Replaces the previously used boolean m_dynamicMutationRate. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" line="46" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" bodystart="46" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1acc8b23fbd0c3b2ba1dea9c266eea9fe2" compoundref="_two_way_mutation_operator_8java" startline="352" endline="380">org.jgap.impl.TwoWayMutationOperator.compareTo</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a87ad794efe1b14c660330de4054d819f" compoundref="_two_way_mutation_operator_8java" startline="301" endline="303">org.jgap.impl.TwoWayMutationOperator.getMutationRateCalc</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a53ac73cd4e6b197e6756d4efe02bd01e" compoundref="_two_way_mutation_operator_8java" startline="134" endline="269">org.jgap.impl.TwoWayMutationOperator.operate</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1af7720c96119b3e44c43664856d39e9fa" compoundref="_two_way_mutation_operator_8java" startline="313" endline="319">org.jgap.impl.TwoWayMutationOperator.setMutationRateCalc</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a85c99216cb3541baba946663089c71b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.TwoWayMutationOperator.TwoWayMutationOperator</definition>
+        <argsstring>()</argsstring>
+        <name>TwoWayMutationOperator</name>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a new instance of this <ref refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator" kindref="compound">MutationOperator</ref> without a specified mutation rate, which results in dynamic mutation being turned on. This means that the mutation rate will be automatically determined by this operator based upon the number of genes present in the chromosomes.</para><para>Attention: The configuration used is the one set with the static method Genotype.setConfiguration.</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" line="61" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" bodystart="61" bodyend="65"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1aaf3d4bf0b470aa4655e85262289443eb" compoundref="_genotype_8java" startline="520" endline="522">org.jgap.Genotype.getStaticConfiguration</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1acc8b23fbd0c3b2ba1dea9c266eea9fe2" compoundref="_two_way_mutation_operator_8java" startline="352" endline="380">org.jgap.impl.TwoWayMutationOperator.compareTo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a14bff76bf6595e3565df9a4d64e840d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.TwoWayMutationOperator.TwoWayMutationOperator</definition>
+        <argsstring>(final Configuration a_config)</argsstring>
+        <name>TwoWayMutationOperator</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_config</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a new instance of this <ref refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator" kindref="compound">MutationOperator</ref> without a specified mutation rate, which results in dynamic mutation being turned on. This means that the mutation rate will be automatically determined by this operator based upon the number of genes present in the chromosomes.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" line="79" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a790708c53d128438af2e5b75cea9d267" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.TwoWayMutationOperator.TwoWayMutationOperator</definition>
+        <argsstring>(final Configuration a_config, final IUniversalRateCalculator a_mutationRateCalculator)</argsstring>
+        <name>TwoWayMutationOperator</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_config</declname>
+        </param>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_i_universal_rate_calculator" kindref="compound">IUniversalRateCalculator</ref></type>
+          <declname>a_mutationRateCalculator</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a new instance of this <ref refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator" kindref="compound">MutationOperator</ref> with a specified mutation rate calculator, which results in dynamic mutation being turned on.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_mutationRateCalculator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>calculator for dynamic mutation rate computation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" line="97" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" bodystart="97" bodyend="103"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1af7720c96119b3e44c43664856d39e9fa" compoundref="_two_way_mutation_operator_8java" startline="313" endline="319">org.jgap.impl.TwoWayMutationOperator.setMutationRateCalc</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a5fb0b818973a6da4aa577fd7e0e7d132" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.TwoWayMutationOperator.TwoWayMutationOperator</definition>
+        <argsstring>(final Configuration a_config, final int a_desiredMutationRate)</argsstring>
+        <name>TwoWayMutationOperator</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_config</declname>
+        </param>
+        <param>
+          <type>final int</type>
+          <declname>a_desiredMutationRate</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a new instance of this <ref refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator" kindref="compound">MutationOperator</ref> with the given mutation rate.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_desiredMutationRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>desired rate of mutation, expressed as the denominator of the 1 / X fraction. For example, 1000 would result in 1/1000 genes being mutated on average. A mutation rate of zero disables mutation entirely </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" line="119" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" bodystart="119" bodyend="125"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a9f751ed8c191fd900a05714a2f4e4d9b" compoundref="_two_way_mutation_operator_8java" startline="39">org.jgap.impl.TwoWayMutationOperator.m_mutationRate</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1af7720c96119b3e44c43664856d39e9fa" compoundref="_two_way_mutation_operator_8java" startline="313" endline="319">org.jgap.impl.TwoWayMutationOperator.setMutationRateCalc</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a53ac73cd4e6b197e6756d4efe02bd01e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.TwoWayMutationOperator.operate</definition>
+        <argsstring>(final Population a_population, final List a_candidateChromosomes)</argsstring>
+        <name>operate</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_genetic_operator_1a0f9dfe925c4c21e07522be67d6c5d084">operate</reimplements>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_population</declname>
+        </param>
+        <param>
+          <type>final List</type>
+          <declname>a_candidateChromosomes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_population</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>see interface </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_candidateChromosomes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>see interface</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000175"><xreftitle>Todo</xreftitle><xrefdescription><para>make this configurable, it is a first test, see example DynamicMutationExample </para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000176"><xreftitle>Todo</xreftitle><xrefdescription><para>move to base class, refactor </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" line="134" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" bodystart="134" bodyend="269"/>
+        <references refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable_1aa7e7d62077e6428ad7904932b1b4f7d5">org.jgap.util.ICloneable.clone</references>
+        <references refid="interfaceorg_1_1jgap_1_1_i_composite_gene_1adad062c4c8453eb4bfafd2d7c8abd1fb">org.jgap.ICompositeGene.geneAt</references>
+        <references refid="classorg_1_1jgap_1_1_base_genetic_operator_1addbc6b98f572331d47397227b7a49f6a" compoundref="_base_genetic_operator_8java" startline="57" endline="59">org.jgap.BaseGeneticOperator.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1_base_genetic_operator_1a5194e705ed206f99852bf158546646b5" compoundref="_base_genetic_operator_8java" startline="30">org.jgap.BaseGeneticOperator.m_monitorActive</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a9f751ed8c191fd900a05714a2f4e4d9b" compoundref="_two_way_mutation_operator_8java" startline="39">org.jgap.impl.TwoWayMutationOperator.m_mutationRate</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1aaf31fb0ac9dfd8b730fe260280ec34ef" compoundref="_two_way_mutation_operator_8java" startline="46">org.jgap.impl.TwoWayMutationOperator.m_mutationRateCalc</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a6043c8f3520437194e851b9a1b3cfc7c" compoundref="_two_way_mutation_operator_8java" startline="279" endline="293">org.jgap.impl.TwoWayMutationOperator.mutateGene</references>
+        <references refid="classorg_1_1jgap_1_1_population_1a2d09529f8e93d57a0546625362ca5bee" compoundref="_population_8java" startline="267" endline="269">org.jgap.Population.size</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a87ad794efe1b14c660330de4054d819f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_i_universal_rate_calculator" kindref="compound">IUniversalRateCalculator</ref></type>
+        <definition>IUniversalRateCalculator org.jgap.impl.TwoWayMutationOperator.getMutationRateCalc</definition>
+        <argsstring>()</argsstring>
+        <name>getMutationRateCalc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the MutationRateCalculator used</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" line="301" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" bodystart="301" bodyend="303"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1aaf31fb0ac9dfd8b730fe260280ec34ef" compoundref="_two_way_mutation_operator_8java" startline="46">org.jgap.impl.TwoWayMutationOperator.m_mutationRateCalc</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_test_1add6698cf3ff31ab61fd8d9ebc2098bf5" compoundref="_two_way_mutation_operator_test_8java" startline="45" endline="50">org.jgap.impl.TwoWayMutationOperatorTest.testConstruct_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_test_1a2d8517cf9d49e3caf9ccb8ad9968df7d" compoundref="_two_way_mutation_operator_test_8java" startline="73" endline="78">org.jgap.impl.TwoWayMutationOperatorTest.testConstruct_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_test_1a726dc47baf5840268b9be1c488928a00" compoundref="_two_way_mutation_operator_test_8java" startline="86" endline="92">org.jgap.impl.TwoWayMutationOperatorTest.testConstruct_3</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1af7720c96119b3e44c43664856d39e9fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.TwoWayMutationOperator.setMutationRateCalc</definition>
+        <argsstring>(final IUniversalRateCalculator a_mutationRateCalc)</argsstring>
+        <name>setMutationRateCalc</name>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_i_universal_rate_calculator" kindref="compound">IUniversalRateCalculator</ref></type>
+          <declname>a_mutationRateCalc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the MutationRateCalculator to be used for determining the strength of mutation. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_mutationRateCalc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MutationRateCalculator</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" line="313" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" bodystart="313" bodyend="319"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a9f751ed8c191fd900a05714a2f4e4d9b" compoundref="_two_way_mutation_operator_8java" startline="39">org.jgap.impl.TwoWayMutationOperator.m_mutationRate</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1aaf31fb0ac9dfd8b730fe260280ec34ef" compoundref="_two_way_mutation_operator_8java" startline="46">org.jgap.impl.TwoWayMutationOperator.m_mutationRateCalc</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a790708c53d128438af2e5b75cea9d267" compoundref="_two_way_mutation_operator_8java" startline="97" endline="103">org.jgap.impl.TwoWayMutationOperator.TwoWayMutationOperator</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1af484c629e25ec9aa3f873119793faf2d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.TwoWayMutationOperator.equals</definition>
+        <argsstring>(final Object a_other)</argsstring>
+        <name>equals</name>
+        <param>
+          <type>final Object</type>
+          <declname>a_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compares this <ref refid="interfaceorg_1_1jgap_1_1_genetic_operator" kindref="compound">GeneticOperator</ref> against the specified object. The result is true if and the argument is an instance of this class and is equal wrt the data.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the object to compare against </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true: if the objects are the same, false otherwise</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" line="332" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" bodystart="332" bodyend="339"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1acc8b23fbd0c3b2ba1dea9c266eea9fe2" compoundref="_two_way_mutation_operator_8java" startline="352" endline="380">org.jgap.impl.TwoWayMutationOperator.compareTo</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1acc8b23fbd0c3b2ba1dea9c266eea9fe2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.impl.TwoWayMutationOperator.compareTo</definition>
+        <argsstring>(Object a_other)</argsstring>
+        <name>compareTo</name>
+        <param>
+          <type>Object</type>
+          <declname>a_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compares the given <ref refid="interfaceorg_1_1jgap_1_1_genetic_operator" kindref="compound">GeneticOperator</ref> to this <ref refid="interfaceorg_1_1jgap_1_1_genetic_operator" kindref="compound">GeneticOperator</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the instance against which to compare this instance </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a negative number if this instance is &quot;less than&quot; the given instance, zero if they are equal to each other, and a positive number if this is &quot;greater than&quot; the given instance</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" line="352" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" bodystart="352" bodyend="380"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a9f751ed8c191fd900a05714a2f4e4d9b" compoundref="_two_way_mutation_operator_8java" startline="39">org.jgap.impl.TwoWayMutationOperator.m_mutationRate</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1aaf31fb0ac9dfd8b730fe260280ec34ef" compoundref="_two_way_mutation_operator_8java" startline="46">org.jgap.impl.TwoWayMutationOperator.m_mutationRateCalc</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a85c99216cb3541baba946663089c71b0" compoundref="_two_way_mutation_operator_8java" startline="61" endline="65">org.jgap.impl.TwoWayMutationOperator.TwoWayMutationOperator</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1af484c629e25ec9aa3f873119793faf2d" compoundref="_two_way_mutation_operator_8java" startline="332" endline="339">org.jgap.impl.TwoWayMutationOperator.equals</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_test_1a6c25d8783e8d7adb703d7e7e92b0c0aa" compoundref="_two_way_mutation_operator_test_8java" startline="564" endline="580">org.jgap.impl.TwoWayMutationOperatorTest.testCompareTo_0</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a929e74b0d9b86dfa7f0cb2ba88e347d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.impl.TwoWayMutationOperator.getMutationRate</definition>
+        <argsstring>()</argsstring>
+        <name>getMutationRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" line="382" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" bodystart="382" bodyend="384"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a9f751ed8c191fd900a05714a2f4e4d9b" compoundref="_two_way_mutation_operator_8java" startline="39">org.jgap.impl.TwoWayMutationOperator.m_mutationRate</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_test_1add6698cf3ff31ab61fd8d9ebc2098bf5" compoundref="_two_way_mutation_operator_test_8java" startline="45" endline="50">org.jgap.impl.TwoWayMutationOperatorTest.testConstruct_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_test_1a2d8517cf9d49e3caf9ccb8ad9968df7d" compoundref="_two_way_mutation_operator_test_8java" startline="73" endline="78">org.jgap.impl.TwoWayMutationOperatorTest.testConstruct_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_test_1a726dc47baf5840268b9be1c488928a00" compoundref="_two_way_mutation_operator_test_8java" startline="86" endline="92">org.jgap.impl.TwoWayMutationOperatorTest.testConstruct_3</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a6043c8f3520437194e851b9a1b3cfc7c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.TwoWayMutationOperator.mutateGene</definition>
+        <argsstring>(final Gene a_gene, final RandomGenerator a_generator)</argsstring>
+        <name>mutateGene</name>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+          <declname>a_gene</declname>
+        </param>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_random_generator" kindref="compound">RandomGenerator</ref></type>
+          <declname>a_generator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper: mutate all atomic elements of a gene <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_gene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the gene to be mutated </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_generator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the generator delivering amount of mutation</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" line="279" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" bodystart="279" bodyend="293"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a53ac73cd4e6b197e6756d4efe02bd01e" compoundref="_two_way_mutation_operator_8java" startline="134" endline="269">org.jgap.impl.TwoWayMutationOperator.operate</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Considers two levels of mutation. At first, this mutation operator assumes all genes within a chromosome to having a different impact on the result when mutated. For that, a gene with fewer impact is selected for mutation more likely than one with bigger impact. After a gene has been selected for mutation, it is indeed mutated in a traditional way. </para><para>See class <ref refid="classexamples_1_1dynamic_mutation_1_1_dynamic_mutation_example" kindref="compound">examples.dynamicMutation.DynamicMutationExample</ref> for usage, currently this class only works with that example!</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="18815">
+        <label>org.jgap.GeneticOperator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_genetic_operator"/>
+        <childnode refid="18816" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18816">
+        <label>Serializable</label>
+      </node>
+      <node id="18817">
+        <label>Comparable</label>
+      </node>
+      <node id="18814">
+        <label>org.jgap.BaseGeneticOperator</label>
+        <link refid="classorg_1_1jgap_1_1_base_genetic_operator"/>
+        <childnode refid="18815" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18817" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18813">
+        <label>org.jgap.impl.TwoWayMutationOperator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator"/>
+        <childnode refid="18814" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="18832">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="18837">
+        <label>List</label>
+      </node>
+      <node id="18836">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="18821" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18825" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18833">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="18821" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18820">
+        <label>org.jgap.GeneticOperator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_genetic_operator"/>
+        <childnode refid="18821" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18821">
+        <label>Serializable</label>
+      </node>
+      <node id="18838">
+        <label>org.jgap.IUniversalRateCalculator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_universal_rate_calculator"/>
+        <childnode refid="18821" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18822">
+        <label>Comparable</label>
+      </node>
+      <node id="18825">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="18826" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18819">
+        <label>org.jgap.BaseGeneticOperator</label>
+        <link refid="classorg_1_1jgap_1_1_base_genetic_operator"/>
+        <childnode refid="18820" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18822" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18823" relation="usage">
+          <edgelabel>m_configuration</edgelabel>
+        </childnode>
+      </node>
+      <node id="18830">
+        <label>org.jgap.FitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_fitness_evaluator"/>
+        <childnode refid="18821" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18834">
+        <label>org.jgap.BulkFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_bulk_fitness_function"/>
+        <childnode refid="18821" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18825" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18826">
+        <label>Cloneable</label>
+      </node>
+      <node id="18828">
+        <label>org.jgap.IJGAPFactory</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_j_g_a_p_factory"/>
+        <childnode refid="18821" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18835">
+        <label>org.jgap.Configuration.ConfigurationConfigurable</label>
+        <link refid="classorg_1_1jgap_1_1_configuration_1_1_configuration_configurable"/>
+        <childnode refid="18821" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18827">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="18825" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18821" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18822" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18831">
+        <label>org.jgap.IChromosome</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome"/>
+        <childnode refid="18822" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18825" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18821" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18832" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18818">
+        <label>org.jgap.impl.TwoWayMutationOperator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator"/>
+        <childnode refid="18819" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18838" relation="usage">
+          <edgelabel>m_mutationRateCalc</edgelabel>
+        </childnode>
+      </node>
+      <node id="18823">
+        <label>org.jgap.Configuration</label>
+        <link refid="classorg_1_1jgap_1_1_configuration"/>
+        <childnode refid="18824" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18821" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18825" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18822" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18827" relation="usage">
+          <edgelabel>m_breeder</edgelabel>
+        </childnode>
+        <childnode refid="18828" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="18829" relation="usage">
+          <edgelabel>m_chromosomePool</edgelabel>
+        </childnode>
+        <childnode refid="18830" relation="usage">
+          <edgelabel>m_fitnessEvaluator</edgelabel>
+        </childnode>
+        <childnode refid="18831" relation="usage">
+          <edgelabel>m_sampleChromosome</edgelabel>
+        </childnode>
+        <childnode refid="18833" relation="usage">
+          <edgelabel>m_randomGenerator</edgelabel>
+        </childnode>
+        <childnode refid="18834" relation="usage">
+          <edgelabel>m_bulkObjectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="18835" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="18836" relation="usage">
+          <edgelabel>m_objectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="18837" relation="usage">
+          <edgelabel>m_geneticOperators</edgelabel>
+        </childnode>
+      </node>
+      <node id="18829">
+        <label>org.jgap.IChromosomePool</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool"/>
+      </node>
+      <node id="18824">
+        <label>Configurable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" line="29" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/TwoWayMutationOperator.java" bodystart="28" bodyend="385"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1_base_genetic_operator_1a061b47c0f891c0041d5ece5bc6e052f8" prot="public" virt="non-virtual"><scope>org::jgap::impl::TwoWayMutationOperator</scope><name>BaseGeneticOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1acc8b23fbd0c3b2ba1dea9c266eea9fe2" prot="public" virt="non-virtual"><scope>org::jgap::impl::TwoWayMutationOperator</scope><name>compareTo</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a73f3278e9f25c5ceaa6ec002c0c409bb" prot="private" virt="non-virtual"><scope>org::jgap::impl::TwoWayMutationOperator</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1af484c629e25ec9aa3f873119793faf2d" prot="public" virt="non-virtual"><scope>org::jgap::impl::TwoWayMutationOperator</scope><name>equals</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_genetic_operator_1addbc6b98f572331d47397227b7a49f6a" prot="public" virt="non-virtual"><scope>org::jgap::impl::TwoWayMutationOperator</scope><name>getConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a929e74b0d9b86dfa7f0cb2ba88e347d3" prot="public" virt="non-virtual"><scope>org::jgap::impl::TwoWayMutationOperator</scope><name>getMutationRate</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a87ad794efe1b14c660330de4054d819f" prot="public" virt="non-virtual"><scope>org::jgap::impl::TwoWayMutationOperator</scope><name>getMutationRateCalc</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_genetic_operator_1a516d89e8f56eb2e58768218c7f9cf3de" prot="protected" virt="non-virtual"><scope>org::jgap::impl::TwoWayMutationOperator</scope><name>m_monitor</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_genetic_operator_1a5194e705ed206f99852bf158546646b5" prot="protected" virt="non-virtual"><scope>org::jgap::impl::TwoWayMutationOperator</scope><name>m_monitorActive</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a9f751ed8c191fd900a05714a2f4e4d9b" prot="private" virt="non-virtual"><scope>org::jgap::impl::TwoWayMutationOperator</scope><name>m_mutationRate</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1aaf31fb0ac9dfd8b730fe260280ec34ef" prot="private" virt="non-virtual"><scope>org::jgap::impl::TwoWayMutationOperator</scope><name>m_mutationRateCalc</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a6043c8f3520437194e851b9a1b3cfc7c" prot="private" virt="non-virtual"><scope>org::jgap::impl::TwoWayMutationOperator</scope><name>mutateGene</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a53ac73cd4e6b197e6756d4efe02bd01e" prot="public" virt="non-virtual"><scope>org::jgap::impl::TwoWayMutationOperator</scope><name>operate</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1af7720c96119b3e44c43664856d39e9fa" prot="public" virt="non-virtual"><scope>org::jgap::impl::TwoWayMutationOperator</scope><name>setMutationRateCalc</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a85c99216cb3541baba946663089c71b0" prot="public" virt="non-virtual"><scope>org::jgap::impl::TwoWayMutationOperator</scope><name>TwoWayMutationOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a14bff76bf6595e3565df9a4d64e840d1" prot="public" virt="non-virtual"><scope>org::jgap::impl::TwoWayMutationOperator</scope><name>TwoWayMutationOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a790708c53d128438af2e5b75cea9d267" prot="public" virt="non-virtual"><scope>org::jgap::impl::TwoWayMutationOperator</scope><name>TwoWayMutationOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a5fb0b818973a6da4aa577fd7e0e7d132" prot="public" virt="non-virtual"><scope>org::jgap::impl::TwoWayMutationOperator</scope><name>TwoWayMutationOperator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

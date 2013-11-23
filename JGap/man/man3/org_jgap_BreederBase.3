@@ -1,0 +1,226 @@
+.TH "org.jgap.BreederBase" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.BreederBase \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.IBreeder\fP\&.
+.PP
+Inherited by \fBorg\&.jgap\&.impl\&.GABreeder\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBreederBase\fP ()"
+.br
+.ti -1c
+.RI "abstract Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBselect\fP"
+.br
+.ti -1c
+.RI "int \fBmerge\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPopulation\fP \fBapplyNaturalSelectors\fP (\fBConfiguration\fP a_config, \fBPopulation\fP a_pop, boolean a_processBeforeGeneticOperators)"
+.br
+.ti -1c
+.RI "void \fBapplyGeneticOperators\fP (\fBConfiguration\fP a_config, \fBPopulation\fP a_pop)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.10 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Abstract base class for breeders\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file BreederBase\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.BreederBase\&.BreederBase ()\fC [inline]\fP"
+
+.PP
+Definition at line 33 of file BreederBase\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.BreederBase\&.applyGeneticOperators (\fBConfiguration\fPa_config, \fBPopulation\fPa_pop)\fC [inline]\fP, \fC [protected]\fP"
+Applies all GeneticOperators registered with the \fBConfiguration\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.br
+\fIa_pop\fP the population to use as input
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+utilize jobs: integrate job into \fBGeneticOperator\fP 
+.RE
+.PP
+
+.PP
+Definition at line 126 of file BreederBase\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.getGenerationNr()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GABreeder\&.evolve()\&.
+.SS "\fBPopulation\fP org\&.jgap\&.BreederBase\&.applyNaturalSelectors (\fBConfiguration\fPa_config, \fBPopulation\fPa_pop, booleana_processBeforeGeneticOperators)\fC [inline]\fP, \fC [protected]\fP"
+Applies all NaturalSelectors registered with the \fBConfiguration\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.br
+\fIa_pop\fP the population to use as input 
+.br
+\fIa_processBeforeGeneticOperators\fP true apply NaturalSelectors applicable before GeneticOperators, false: apply the ones applicable after GeneticOperators 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+selected part of input population
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+optionally use working pool 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+utilize jobs: integrate job into NaturalSelector! 
+.RE
+.PP
+
+.PP
+Definition at line 49 of file BreederBase\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.getGenerationNr(), and org\&.jgap\&.Configuration\&.getSelectFromPrevGen()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GABreeder\&.evolve()\&.
+.SS "abstract Object org\&.jgap\&.BreederBase\&.clone ()\fC [pure virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+deep clone of this instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.GABreeder\fP\&.
+.SS "int org\&.jgap\&.BreederBase\&.compareTo (Objecta_other)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP object to compare to 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+as always
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 178 of file BreederBase\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.BreederBase\&.CVS_REVISION = '$Revision: 1\&.10 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file BreederBase\&.java\&.
+.SS "int org\&.jgap\&.BreederBase\&.merge"
+
+.PP
+Definition at line 30 of file BreederBase\&.java\&.
+.SS "int org\&.jgap\&.BreederBase\&.select"
+
+.PP
+Definition at line 28 of file BreederBase\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

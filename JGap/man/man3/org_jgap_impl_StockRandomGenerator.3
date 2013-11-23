@@ -1,0 +1,143 @@
+.TH "org.jgap.impl.StockRandomGenerator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.StockRandomGenerator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Random, \fBorg\&.jgap\&.RandomGenerator\fP, \fBorg\&.jgap\&.util\&.ICloneable\fP, and Comparable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBreadObject\fP (ObjectInputStream a_inputStream)  throws IOException, ClassNotFoundException "
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.8 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The stock random generator uses the java\&.util\&.Random class to provide a simple implementation of the \fBRandomGenerator\fP interface\&. No actual code is provided here\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file StockRandomGenerator\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.impl\&.StockRandomGenerator\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+deep clone of this instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 58 of file StockRandomGenerator\&.java\&.
+.SS "int org\&.jgap\&.impl\&.StockRandomGenerator\&.compareTo (Objecta_other)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP sic 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+as always
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 71 of file StockRandomGenerator\&.java\&.
+.SS "void org\&.jgap\&.impl\&.StockRandomGenerator\&.readObject (ObjectInputStreama_inputStream) throws IOException, ClassNotFoundException\fC [inline]\fP, \fC [private]\fP"
+When deserializing, initialize the seed because otherwise we could get duplicate evolution results when doing distributed computing!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_inputStream\fP the ObjectInputStream provided for deserialzation
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIOException\fP 
+.br
+\fIClassNotFoundException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 45 of file StockRandomGenerator\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.StockRandomGenerator\&.CVS_REVISION = '$Revision: 1\&.8 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 31 of file StockRandomGenerator\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

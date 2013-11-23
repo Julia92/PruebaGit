@@ -1,0 +1,850 @@
+.TH "org.jgap.gp.impl.GPProgram" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.impl.GPProgram \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.GPProgramBase\fP, Serializable, Comparable, \fBorg\&.jgap\&.util\&.ICloneable\fP, and \fBorg\&.jgap\&.IBusinessKey\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGPProgram\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "\fBGPProgram\fP (\fBGPConfiguration\fP a_conf, Class[] a_types, Class[][] a_argTypes, \fBCommandGene\fP[][] a_nodeSets, int[] a_minDepths, int[] a_maxDepths, int a_maxNodes)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGPProgram\fP (\fBIGPProgram\fP a_prog)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGPProgram\fP (\fBGPConfiguration\fP a_conf, int a_numChromosomes)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBProgramChromosome\fP \fBgetChromosome\fP (int a_index)"
+.br
+.ti -1c
+.RI "void \fBsetChromosome\fP (int a_index, \fBProgramChromosome\fP a_chrom)"
+.br
+.ti -1c
+.RI "void \fBgrowOrFull\fP (int a_depth, boolean a_grow, int a_maxNodes, boolean[] a_fullModeAllowed, int a_tries)"
+.br
+.ti -1c
+.RI "void \fBgrowOrFull\fP (Class[][] a_argTypes, \fBCommandGene\fP[][] a_nodeSets)"
+.br
+.ti -1c
+.RI "int \fBsize\fP ()"
+.br
+.ti -1c
+.RI "String \fBtoString\fP (int a_startNode)"
+.br
+.ti -1c
+.RI "String \fBtoStringNorm\fP (int a_startNode)"
+.br
+.ti -1c
+.RI "String \fBtoStringDebug\fP ()"
+.br
+.ti -1c
+.RI "int \fBexecute_int\fP (int a_chromosomeNum, Object[] a_args)"
+.br
+.ti -1c
+.RI "float \fBexecute_float\fP (int a_chromosomeNum, Object[] a_args)"
+.br
+.ti -1c
+.RI "double \fBexecute_double\fP (int a_chromosomeNum, Object[] a_args)"
+.br
+.ti -1c
+.RI "boolean \fBexecute_boolean\fP (int a_chromosomeNum, Object[] a_args)"
+.br
+.ti -1c
+.RI "Object \fBexecute_object\fP (int a_chromosomeNum, Object[] a_args)"
+.br
+.ti -1c
+.RI "void \fBexecute_void\fP (int a_chromosomeNum, Object[] a_args)"
+.br
+.ti -1c
+.RI "int \fBgetCommandOfClass\fP (int a_chromosomeNum, Class a_class)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetPersistentRepresentation\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetBusinessKey\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGPProgramInfo\fP \fBputToCache\fP (\fBGPProgram\fP a_program)"
+.br
+.ti -1c
+.RI "String \fBencode\fP (String a_string)"
+.br
+.ti -1c
+.RI "String \fBdecode\fP (String a_string)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBProgramChromosome\fP[] \fBm_chromosomes\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.24 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A GP program contains 1\&.\&.n \fBProgramChromosome\fP's\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file GPProgram\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.impl\&.GPProgram\&.GPProgram () throws Exception\fC [inline]\fP"
+Default constructor, only for dynamic instantiation\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file GPProgram\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.clone(), and org\&.jgap\&.gp\&.impl\&.GPProgram\&.compareTo()\&.
+.SS "org\&.jgap\&.gp\&.impl\&.GPProgram\&.GPProgram (\fBGPConfiguration\fPa_conf, Class[]a_types, Classa_argTypes[][], \fBCommandGene\fPa_nodeSets[][], int[]a_minDepths, int[]a_maxDepths, inta_maxNodes) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Master constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_types\fP the type of each chromosome, the length is the number of chromosomes 
+.br
+\fIa_argTypes\fP the types of the arguments to each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of arguments to the chromosome 
+.br
+\fIa_nodeSets\fP the nodes which are allowed to be used by each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of nodes 
+.br
+\fIa_minDepths\fP contains the minimum depth allowed for each chromosome 
+.br
+\fIa_maxDepths\fP contains the maximum depth allowed for each chromosome 
+.br
+\fIa_maxNodes\fP reserve space for a_maxNodes number of nodes 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 76 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPProgram\&.m_chromosomes, org\&.jgap\&.gp\&.GPProgramBase\&.setArgTypes(), org\&.jgap\&.gp\&.GPProgramBase\&.setMaxDepths(), org\&.jgap\&.gp\&.GPProgramBase\&.setMaxNodes(), org\&.jgap\&.gp\&.GPProgramBase\&.setMinDepths(), org\&.jgap\&.gp\&.GPProgramBase\&.setNodeSets(), and org\&.jgap\&.gp\&.GPProgramBase\&.setTypes()\&.
+.SS "org\&.jgap\&.gp\&.impl\&.GPProgram\&.GPProgram (\fBIGPProgram\fPa_prog) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructor to initialize a \fBGPProgram\fP with values of another \fBGPProgram\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_prog\fP the \fBGPProgram\fP to read the initialization values from 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 99 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.getTypes(), and org\&.jgap\&.gp\&.impl\&.GPProgram\&.m_chromosomes\&.
+.SS "org\&.jgap\&.gp\&.impl\&.GPProgram\&.GPProgram (\fBGPConfiguration\fPa_conf, inta_numChromosomes) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Sort of minimalistic constructor\&. Use only if you are aware of what you do\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_numChromosomes\fP the number of chromosomes to use with this program\&. 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 115 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPProgram\&.m_chromosomes\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.gp\&.impl\&.GPProgram\&.clone ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+deep clone of the object instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.GPProgramBase\fP\&.
+.PP
+Definition at line 538 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.getApplicationData(), org\&.jgap\&.gp\&.GPProgramBase\&.getArgTypes(), org\&.jgap\&.gp\&.GPProgramBase\&.getFitnessValueDirectly(), org\&.jgap\&.gp\&.GPProgramBase\&.getGPConfiguration(), org\&.jgap\&.gp\&.GPProgramBase\&.getMaxDepths(), org\&.jgap\&.gp\&.GPProgramBase\&.getMaxNodes(), org\&.jgap\&.gp\&.GPProgramBase\&.getMinDepths(), org\&.jgap\&.gp\&.GPProgramBase\&.getNodeSets(), org\&.jgap\&.gp\&.GPProgramBase\&.getTypes(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.GPProgram(), and org\&.jgap\&.gp\&.impl\&.GPProgram\&.m_chromosomes\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPProgram\&.compareTo (Objecta_other)\fC [inline]\fP"
+Compares the given program to this program\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the program against which to compare this program 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a negative number if this program is 'less than' the given program, zero if they are equal to each other, and a positive number if this program is 'greater than' the given program
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 499 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPProgram\&.GPProgram(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.m_chromosomes, and org\&.jgap\&.gp\&.impl\&.GPProgram\&.size()\&.
+.SS "String org\&.jgap\&.gp\&.impl\&.GPProgram\&.decode (Stringa_string)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 613 of file GPProgram\&.java\&.
+.SS "String org\&.jgap\&.gp\&.impl\&.GPProgram\&.encode (Stringa_string)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 609 of file GPProgram\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.getPersistentRepresentation()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.GPProgram\&.execute_boolean (inta_chromosomeNum, Object[]a_args)\fC [inline]\fP"
+Executes the given chromosome as a boolean function\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomeNum\fP the index of the chromosome to execute 
+.br
+\fIa_args\fP the arguments to use 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the boolean return value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 434 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPProgram\&.m_chromosomes\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.GPProgram\&.execute_double (inta_chromosomeNum, Object[]a_args)\fC [inline]\fP"
+Executes the given chromosome as a double function\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomeNum\fP the index of the chromosome to execute 
+.br
+\fIa_args\fP the arguments to use 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the double return value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 419 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPProgram\&.m_chromosomes\&.
+.SS "float org\&.jgap\&.gp\&.impl\&.GPProgram\&.execute_float (inta_chromosomeNum, Object[]a_args)\fC [inline]\fP"
+Executes the given chromosome as a float function\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomeNum\fP the index of the chromosome to execute 
+.br
+\fIa_args\fP the arguments to use 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the floar return value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 404 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPProgram\&.m_chromosomes\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPProgram\&.execute_int (inta_chromosomeNum, Object[]a_args)\fC [inline]\fP"
+Executes the given chromosome as an integer function\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomeNum\fP the index of the chromosome to execute 
+.br
+\fIa_args\fP the arguments to use 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the integer return value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 389 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPProgram\&.m_chromosomes\&.
+.SS "Object org\&.jgap\&.gp\&.impl\&.GPProgram\&.execute_object (inta_chromosomeNum, Object[]a_args)\fC [inline]\fP"
+Executes the given chromosome as an object function\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomeNum\fP the index of the chromosome to execute 
+.br
+\fIa_args\fP the arguments to use 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the object return value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 449 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPProgram\&.m_chromosomes\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPProgram\&.execute_void (inta_chromosomeNum, Object[]a_args)\fC [inline]\fP"
+Executes the given chromosome as an object function\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomeNum\fP the index of the chromosome to execute 
+.br
+\fIa_args\fP the arguments to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 463 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPProgram\&.m_chromosomes\&.
+.SS "String org\&.jgap\&.gp\&.impl\&.GPProgram\&.getBusinessKey ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+hopefully unique key representing the state of the \fBGPProgram\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IBusinessKey\fP\&.
+.PP
+Definition at line 623 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPProgram\&.toStringNorm()\&.
+.SS "\fBProgramChromosome\fP org\&.jgap\&.gp\&.impl\&.GPProgram\&.getChromosome (inta_index)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the chromosome to get 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the \fBProgramChromosome\fP with the given index
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 128 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPProgram\&.m_chromosomes\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPProgram\&.getCommandOfClass (inta_chromosomeNum, Classa_class)\fC [inline]\fP"
+Searches for a chromosome that has the given class and returns its index\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomeNum\fP the index of the chromosome to start the search with 
+.br
+\fIa_class\fP the class to find 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the index of the first chromosome found that is of a_class, or -1
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 478 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPProgram\&.m_chromosomes\&.
+.SS "String org\&.jgap\&.gp\&.impl\&.GPProgram\&.getPersistentRepresentation ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the persistent representation of the GP program, including all chromosomes
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 596 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPProgram\&.encode(), and org\&.jgap\&.gp\&.impl\&.GPProgram\&.m_chromosomes\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPProgram\&.growOrFull (inta_depth, booleana_grow, inta_maxNodes, boolean[]a_fullModeAllowed, inta_tries)\fC [inline]\fP"
+Initialize the chromosomes within this GP program using the grow or the full method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_depth\fP the maximum depth of the chromosome to create 
+.br
+\fIa_grow\fP true: use grow method; false: use full method 
+.br
+\fIa_maxNodes\fP maximum number of nodes allowed 
+.br
+\fIa_fullModeAllowed\fP for each chromosome: true means full mode allowed, otherwise use grow mode 
+.br
+\fIa_tries\fP maximum number of tries to create a valid program
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 163 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.getArgType(), org\&.jgap\&.gp\&.GPProgramBase\&.getArgTypes(), org\&.jgap\&.gp\&.impl\&.GPProgramInfo\&.getFitnessValue(), org\&.jgap\&.gp\&.GPProgramBase\&.getGPConfiguration(), org\&.jgap\&.gp\&.GPProgramBase\&.getMaxDepths(), org\&.jgap\&.gp\&.GPProgramBase\&.getMinDepths(), org\&.jgap\&.gp\&.GPProgramBase\&.getNodeSet(), org\&.jgap\&.gp\&.GPProgramBase\&.getNodeSets(), org\&.jgap\&.gp\&.GPProgramBase\&.getType(), org\&.jgap\&.gp\&.GPProgramBase\&.getTypes(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.m_chromosomes, org\&.jgap\&.gp\&.impl\&.GPProgram\&.putToCache(), org\&.jgap\&.gp\&.GPProgramBase\&.setFitnessValue(), and org\&.jgap\&.gp\&.impl\&.GPProgram\&.size()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPProgram\&.growOrFull (Classa_argTypes[][], \fBCommandGene\fPa_nodeSets[][])\fC [inline]\fP"
+Initialize this program by using given chromosomes\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_argTypes\fP the types of the arguments to each chromosome, must be an array of arrays, the first dimension of which is the number of chromosomes and the second dimension of which is the number of arguments to the chromosome 
+.br
+\fIa_nodeSets\fP the nodes which are allowed to be used by each chromosome,
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 255 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPProgramInfo\&.getFitnessValue(), org\&.jgap\&.gp\&.GPProgramBase\&.getGPConfiguration(), org\&.jgap\&.gp\&.GPProgramBase\&.getNodeSets(), org\&.jgap\&.gp\&.GPProgramBase\&.getTypes(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.m_chromosomes, org\&.jgap\&.gp\&.impl\&.GPProgram\&.putToCache(), org\&.jgap\&.gp\&.GPProgramBase\&.setFitnessValue(), and org\&.jgap\&.gp\&.impl\&.GPProgram\&.size()\&.
+.SS "\fBGPProgramInfo\fP org\&.jgap\&.gp\&.impl\&.GPProgram\&.putToCache (\fBGPProgram\fPa_program)\fC [inline]\fP, \fC [protected]\fP"
+Put program to cache\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_program\fP the program to put into the cache 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBGPProgramInfo\fP info about the program
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 239 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.GPProgramBase\&.getGPConfiguration()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.growOrFull()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.GPProgram\&.setChromosome (inta_index, \fBProgramChromosome\fPa_chrom)\fC [inline]\fP"
+Sets the given chromosome at the given index\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP sic 
+.br
+\fIa_chrom\fP sic
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 145 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPProgram\&.m_chromosomes\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.GPProgram\&.size ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the number of chromosomes in the program
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 307 of file GPProgram\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.compareTo(), and org\&.jgap\&.gp\&.impl\&.GPProgram\&.growOrFull()\&.
+.SS "String org\&.jgap\&.gp\&.impl\&.GPProgram\&.toString (inta_startNode)\fC [inline]\fP"
+Builds a string that represents the output of the \fBGPProgram\fP in left-hand-notion\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_startNode\fP the node to start with 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+output in left-hand notion
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 321 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPProgram\&.m_chromosomes\&.
+.SS "String org\&.jgap\&.gp\&.impl\&.GPProgram\&.toStringDebug ()\fC [inline]\fP"
+Builds a string that represents the debug output of the \fBGPProgram\fP\&.
+.PP
+\fBReturns:\fP
+.RS 4
+class names of all program chromosomes
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 367 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPProgram\&.m_chromosomes\&.
+.SS "String org\&.jgap\&.gp\&.impl\&.GPProgram\&.toStringNorm (inta_startNode)\fC [inline]\fP"
+Builds a string that represents the normalized output of the \fBGPProgram\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_startNode\fP the node to start with 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+output in normalized notion
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPProgram\fP\&.
+.PP
+Definition at line 344 of file GPProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.GPProgram\&.m_chromosomes\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.getBusinessKey()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.impl\&.GPProgram\&.CVS_REVISION = '$Revision: 1\&.24 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 30 of file GPProgram\&.java\&.
+.SS "\fBProgramChromosome\fP [] org\&.jgap\&.gp\&.impl\&.GPProgram\&.m_chromosomes\fC [private]\fP"
+Holds the chromosomes contained in this program\&. 
+.PP
+Definition at line 41 of file GPProgram\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPProgram\&.clone(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.compareTo(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.execute_boolean(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.execute_double(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.execute_float(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.execute_int(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.execute_object(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.execute_void(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.getChromosome(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.getCommandOfClass(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.getPersistentRepresentation(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.GPProgram(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.growOrFull(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.setChromosome(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.toString(), org\&.jgap\&.gp\&.impl\&.GPProgram\&.toStringDebug(), and org\&.jgap\&.gp\&.impl\&.GPProgram\&.toStringNorm()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

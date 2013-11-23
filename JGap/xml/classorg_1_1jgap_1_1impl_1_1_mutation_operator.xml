@@ -1,0 +1,733 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1impl_1_1_mutation_operator" kind="class" prot="public">
+    <compoundname>org::jgap::impl::MutationOperator</compoundname>
+    <basecompoundref refid="classorg_1_1jgap_1_1_base_genetic_operator" prot="public" virt="non-virtual">org.jgap.BaseGeneticOperator</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Configurable</basecompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1impl_1_1_ranged_swapping_mutation_operator" prot="public" virt="non-virtual">org.jgap.impl.RangedSwappingMutationOperator</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator" prot="public" virt="non-virtual">org.jgap.impl.SwappingMutationOperator</derivedcompoundref>
+    <innerclass refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1_1_mutation_operator_configurable" prot="package">org::jgap::impl::MutationOperator::MutationOperatorConfigurable</innerclass>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1ab837b187fad3cad5dd892f7e3a793847" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.impl.MutationOperator.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.49 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" line="36" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a7159d9d04d2eec98514a4756411b1699" prot="private" static="no" mutable="no">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_i_universal_rate_calculator" kindref="compound">IUniversalRateCalculator</ref></type>
+        <definition>IUniversalRateCalculator org.jgap.impl.MutationOperator.m_mutationRateCalc</definition>
+        <argsstring></argsstring>
+        <name>m_mutationRateCalc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculator for dynamically determining the mutation rate. If set to null the value of m_mutationRate will be used. Replaces the previously used boolean m_dynamicMutationRate. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" line="43" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" bodystart="43" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a0a45fadb8c98c2654220f42317286e43" compoundref="_mutation_operator_8java" startline="342" endline="370">org.jgap.impl.MutationOperator.compareTo</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a4e61256bfd2fd9db20cb7839970ce2b1" compoundref="_mutation_operator_8java" startline="276" endline="278">org.jgap.impl.MutationOperator.getMutationRateCalc</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_1a810eb9c5bd759b5e4a61f6a91963b7df" compoundref="_swapping_mutation_operator_8java" startline="117" endline="152">org.jgap.impl.SwappingMutationOperator.operate</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_ranged_swapping_mutation_operator_1a2dc5fd550c25cd9d648c0aa81e4052e9" compoundref="_ranged_swapping_mutation_operator_8java" startline="134" endline="169">org.jgap.impl.RangedSwappingMutationOperator.operate</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a4a1c852770559bba4ffa3e9718f4a0d8" compoundref="_mutation_operator_8java" startline="136" endline="247">org.jgap.impl.MutationOperator.operate</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a1ba32ba71ff16141bb7c9f6c3a0a8865" compoundref="_mutation_operator_8java" startline="289" endline="295">org.jgap.impl.MutationOperator.setMutationRateCalc</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a08cdb3d1a82a3fd66aa080043a20b0b2" prot="private" static="no" mutable="no">
+        <type>MutationOperatorConfigurable</type>
+        <definition>MutationOperatorConfigurable org.jgap.impl.MutationOperator.m_config</definition>
+        <argsstring></argsstring>
+        <name>m_config</name>
+        <initializer>= new
+      MutationOperatorConfigurable()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" line="45" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" bodystart="45" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a0a45fadb8c98c2654220f42317286e43" compoundref="_mutation_operator_8java" startline="342" endline="370">org.jgap.impl.MutationOperator.compareTo</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a4a1c852770559bba4ffa3e9718f4a0d8" compoundref="_mutation_operator_8java" startline="136" endline="247">org.jgap.impl.MutationOperator.operate</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a70ee0430f18e07c0cbdcdc3370da013a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.MutationOperator.MutationOperator</definition>
+        <argsstring>()</argsstring>
+        <name>MutationOperator</name>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a new instance of this <ref refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator" kindref="compound">MutationOperator</ref> without a specified mutation rate, which results in dynamic mutation being turned on. This means that the mutation rate will be automatically determined by this operator based upon the number of genes present in the chromosomes. </para><para>Attention: The configuration used is the one set with the static method Genotype.setConfiguration.</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" line="63" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" bodystart="63" bodyend="66"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a0a45fadb8c98c2654220f42317286e43" compoundref="_mutation_operator_8java" startline="342" endline="370">org.jgap.impl.MutationOperator.compareTo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1ab7a875f7a9c62a2fa4ba3ace00bbe0ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.MutationOperator.MutationOperator</definition>
+        <argsstring>(final Configuration a_conf)</argsstring>
+        <name>MutationOperator</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_conf</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_conf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" line="75" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" bodystart="75" bodyend="79"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a1ba32ba71ff16141bb7c9f6c3a0a8865" compoundref="_mutation_operator_8java" startline="289" endline="295">org.jgap.impl.MutationOperator.setMutationRateCalc</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1aefd976178a75cd5641929533c367d39c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.MutationOperator.MutationOperator</definition>
+        <argsstring>(final Configuration a_config, final IUniversalRateCalculator a_mutationRateCalculator)</argsstring>
+        <name>MutationOperator</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_config</declname>
+        </param>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_i_universal_rate_calculator" kindref="compound">IUniversalRateCalculator</ref></type>
+          <declname>a_mutationRateCalculator</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a new instance of this <ref refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator" kindref="compound">MutationOperator</ref> with a specified mutation rate calculator, which results in dynamic mutation being turned on. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_mutationRateCalculator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>calculator for dynamic mutation rate computation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" line="93" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" bodystart="93" bodyend="99"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a1ba32ba71ff16141bb7c9f6c3a0a8865" compoundref="_mutation_operator_8java" startline="289" endline="295">org.jgap.impl.MutationOperator.setMutationRateCalc</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1abdacf3ee2ef8a6f544af2424f9682ec8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.MutationOperator.MutationOperator</definition>
+        <argsstring>(final Configuration a_config, final int a_desiredMutationRate)</argsstring>
+        <name>MutationOperator</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_config</declname>
+        </param>
+        <param>
+          <type>final int</type>
+          <declname>a_desiredMutationRate</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a new instance of this <ref refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator" kindref="compound">MutationOperator</ref> with the given mutation rate.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_desiredMutationRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>desired rate of mutation, expressed as the denominator of the 1 / X fraction. For example, 1000 would result in 1/1000 genes being mutated on average. A mutation rate of zero disables mutation entirely </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" line="115" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" bodystart="115" bodyend="121"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a1ba32ba71ff16141bb7c9f6c3a0a8865" compoundref="_mutation_operator_8java" startline="289" endline="295">org.jgap.impl.MutationOperator.setMutationRateCalc</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a4a1c852770559bba4ffa3e9718f4a0d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.MutationOperator.operate</definition>
+        <argsstring>(final Population a_population, final List a_candidateChromosomes)</argsstring>
+        <name>operate</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_genetic_operator_1a0f9dfe925c4c21e07522be67d6c5d084">operate</reimplements>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_population</declname>
+        </param>
+        <param>
+          <type>final List</type>
+          <declname>a_candidateChromosomes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_population</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the population of chromosomes from the current evolution prior to exposure to any genetic operators. Chromosomes in this array should not be modified. Please notice, that the call in <ref refid="classorg_1_1jgap_1_1_genotype_1a54a6791fbb6e13920e79f4e2dd719eb4" kindref="member">Genotype.evolve()</ref> to the implementations of <ref refid="interfaceorg_1_1jgap_1_1_genetic_operator" kindref="compound">GeneticOperator</ref> overgoes this due to performance issues </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_candidateChromosomes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the pool of chromosomes that have been mutated</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000173"><xreftitle>Todo</xreftitle><xrefdescription><para>move to base class, refactor </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" line="136" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" bodystart="136" bodyend="247"/>
+        <references refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable_1aa7e7d62077e6428ad7904932b1b4f7d5">org.jgap.util.ICloneable.clone</references>
+        <references refid="interfaceorg_1_1jgap_1_1_i_composite_gene_1adad062c4c8453eb4bfafd2d7c8abd1fb">org.jgap.ICompositeGene.geneAt</references>
+        <references refid="classorg_1_1jgap_1_1_base_genetic_operator_1addbc6b98f572331d47397227b7a49f6a" compoundref="_base_genetic_operator_8java" startline="57" endline="59">org.jgap.BaseGeneticOperator.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a08cdb3d1a82a3fd66aa080043a20b0b2" compoundref="_mutation_operator_8java" startline="45">org.jgap.impl.MutationOperator.m_config</references>
+        <references refid="classorg_1_1jgap_1_1_base_genetic_operator_1a5194e705ed206f99852bf158546646b5" compoundref="_base_genetic_operator_8java" startline="30">org.jgap.BaseGeneticOperator.m_monitorActive</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a7159d9d04d2eec98514a4756411b1699" compoundref="_mutation_operator_8java" startline="43">org.jgap.impl.MutationOperator.m_mutationRateCalc</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a178169eac1a0fc4d9fa105567b4f7c5f" compoundref="_mutation_operator_8java" startline="258" endline="268">org.jgap.impl.MutationOperator.mutateGene</references>
+        <references refid="classorg_1_1jgap_1_1_population_1a2d09529f8e93d57a0546625362ca5bee" compoundref="_population_8java" startline="267" endline="269">org.jgap.Population.size</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a4e61256bfd2fd9db20cb7839970ce2b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_i_universal_rate_calculator" kindref="compound">IUniversalRateCalculator</ref></type>
+        <definition>IUniversalRateCalculator org.jgap.impl.MutationOperator.getMutationRateCalc</definition>
+        <argsstring>()</argsstring>
+        <name>getMutationRateCalc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the MutationRateCalculator used</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" line="276" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" bodystart="276" bodyend="278"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a7159d9d04d2eec98514a4756411b1699" compoundref="_mutation_operator_8java" startline="43">org.jgap.impl.MutationOperator.m_mutationRateCalc</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_1a810eb9c5bd759b5e4a61f6a91963b7df" compoundref="_swapping_mutation_operator_8java" startline="117" endline="152">org.jgap.impl.SwappingMutationOperator.operate</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_ranged_swapping_mutation_operator_1a2dc5fd550c25cd9d648c0aa81e4052e9" compoundref="_ranged_swapping_mutation_operator_8java" startline="134" endline="169">org.jgap.impl.RangedSwappingMutationOperator.operate</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_test_1a89343855ff3e8551f8c6e7d8e5188f61" compoundref="_mutation_operator_test_8java" startline="44" endline="49">org.jgap.impl.MutationOperatorTest.testConstruct_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_test_1afb9b6187d59991a85e0a69b6140ffa98" compoundref="_swapping_mutation_operator_test_8java" startline="46" endline="51">org.jgap.impl.SwappingMutationOperatorTest.testConstruct_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_test_1abb1385a3b221e523f24a0248338ff6ca" compoundref="_mutation_operator_test_8java" startline="56" endline="61">org.jgap.impl.MutationOperatorTest.testConstruct_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_test_1ab3d78dde7bca843fe6a9fd98aae50c03" compoundref="_swapping_mutation_operator_test_8java" startline="59" endline="64">org.jgap.impl.SwappingMutationOperatorTest.testConstruct_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_test_1a5a765f7c4640bd4e9ddb7a2603659755" compoundref="_mutation_operator_test_8java" startline="68" endline="73">org.jgap.impl.MutationOperatorTest.testConstruct_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_test_1ae273099634232cdbebc176638506f454" compoundref="_swapping_mutation_operator_test_8java" startline="72" endline="77">org.jgap.impl.SwappingMutationOperatorTest.testConstruct_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_test_1a4df357edd3c12138a9313ae89e13fad5" compoundref="_mutation_operator_test_8java" startline="80" endline="86">org.jgap.impl.MutationOperatorTest.testConstruct_3</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_test_1a7b6896b11e97d2e2fb3f62d590bdd2c2" compoundref="_swapping_mutation_operator_test_8java" startline="85" endline="91">org.jgap.impl.SwappingMutationOperatorTest.testConstruct_3</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a1ba32ba71ff16141bb7c9f6c3a0a8865" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.MutationOperator.setMutationRateCalc</definition>
+        <argsstring>(final IUniversalRateCalculator a_mutationRateCalc)</argsstring>
+        <name>setMutationRateCalc</name>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_i_universal_rate_calculator" kindref="compound">IUniversalRateCalculator</ref></type>
+          <declname>a_mutationRateCalc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the MutationRateCalculator to be used for determining the strength of mutation.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_mutationRateCalc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MutationRateCalculator</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" line="289" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" bodystart="289" bodyend="295"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a7159d9d04d2eec98514a4756411b1699" compoundref="_mutation_operator_8java" startline="43">org.jgap.impl.MutationOperator.m_mutationRateCalc</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1ab7a875f7a9c62a2fa4ba3ace00bbe0ee" compoundref="_mutation_operator_8java" startline="75" endline="79">org.jgap.impl.MutationOperator.MutationOperator</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a8aecc7650a9743a737dac2d5ed782f87" compoundref="_mutation_operator_8java" startline="307" endline="310">org.jgap.impl.MutationOperator.setMutationRate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a8aecc7650a9743a737dac2d5ed782f87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.MutationOperator.setMutationRate</definition>
+        <argsstring>(int a_mutationRate)</argsstring>
+        <name>setMutationRate</name>
+        <param>
+          <type>int</type>
+          <declname>a_mutationRate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_mutationRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new rate of mutation, expressed as the denominator of the 1 / X fraction. For example, 1000 would result in 1/1000 genes being mutated on average. A mutation rate of zero disables mutation entirely</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" line="307" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" bodystart="307" bodyend="310"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a1ba32ba71ff16141bb7c9f6c3a0a8865" compoundref="_mutation_operator_8java" startline="289" endline="295">org.jgap.impl.MutationOperator.setMutationRateCalc</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1abf3ab580f3f5755f8dfc0cdfabe18530" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.MutationOperator.equals</definition>
+        <argsstring>(final Object a_other)</argsstring>
+        <name>equals</name>
+        <param>
+          <type>final Object</type>
+          <declname>a_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compares this <ref refid="interfaceorg_1_1jgap_1_1_genetic_operator" kindref="compound">GeneticOperator</ref> against the specified object. The result is true if and the argument is an instance of this class and is equal wrt the data.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the object to compare against </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true: if the objects are the same, false otherwise</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" line="323" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" bodystart="323" bodyend="329"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a0a45fadb8c98c2654220f42317286e43" compoundref="_mutation_operator_8java" startline="342" endline="370">org.jgap.impl.MutationOperator.compareTo</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a0a45fadb8c98c2654220f42317286e43" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.impl.MutationOperator.compareTo</definition>
+        <argsstring>(Object a_other)</argsstring>
+        <name>compareTo</name>
+        <param>
+          <type>Object</type>
+          <declname>a_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compares the given <ref refid="interfaceorg_1_1jgap_1_1_genetic_operator" kindref="compound">GeneticOperator</ref> to this <ref refid="interfaceorg_1_1jgap_1_1_genetic_operator" kindref="compound">GeneticOperator</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the instance against which to compare this instance </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a negative number if this instance is &quot;less than&quot; the given instance, zero if they are equal to each other, and a positive number if this is &quot;greater than&quot; the given instance</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" line="342" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" bodystart="342" bodyend="370"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a08cdb3d1a82a3fd66aa080043a20b0b2" compoundref="_mutation_operator_8java" startline="45">org.jgap.impl.MutationOperator.m_config</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a7159d9d04d2eec98514a4756411b1699" compoundref="_mutation_operator_8java" startline="43">org.jgap.impl.MutationOperator.m_mutationRateCalc</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a70ee0430f18e07c0cbdcdc3370da013a" compoundref="_mutation_operator_8java" startline="63" endline="66">org.jgap.impl.MutationOperator.MutationOperator</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1abf3ab580f3f5755f8dfc0cdfabe18530" compoundref="_mutation_operator_8java" startline="323" endline="329">org.jgap.impl.MutationOperator.equals</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_test_1a246ff145aa18b78f2ec32e71d3fc9b14" compoundref="_mutation_operator_test_8java" startline="564" endline="579">org.jgap.impl.MutationOperatorTest.testCompareTo_0</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a4c2e6670fc376734386d37e918071410" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.impl.MutationOperator.getMutationRate</definition>
+        <argsstring>()</argsstring>
+        <name>getMutationRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" line="372" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" bodystart="372" bodyend="374"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_1a810eb9c5bd759b5e4a61f6a91963b7df" compoundref="_swapping_mutation_operator_8java" startline="117" endline="152">org.jgap.impl.SwappingMutationOperator.operate</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_ranged_swapping_mutation_operator_1a2dc5fd550c25cd9d648c0aa81e4052e9" compoundref="_ranged_swapping_mutation_operator_8java" startline="134" endline="169">org.jgap.impl.RangedSwappingMutationOperator.operate</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_test_1a89343855ff3e8551f8c6e7d8e5188f61" compoundref="_mutation_operator_test_8java" startline="44" endline="49">org.jgap.impl.MutationOperatorTest.testConstruct_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_test_1afb9b6187d59991a85e0a69b6140ffa98" compoundref="_swapping_mutation_operator_test_8java" startline="46" endline="51">org.jgap.impl.SwappingMutationOperatorTest.testConstruct_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_test_1abb1385a3b221e523f24a0248338ff6ca" compoundref="_mutation_operator_test_8java" startline="56" endline="61">org.jgap.impl.MutationOperatorTest.testConstruct_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_test_1ab3d78dde7bca843fe6a9fd98aae50c03" compoundref="_swapping_mutation_operator_test_8java" startline="59" endline="64">org.jgap.impl.SwappingMutationOperatorTest.testConstruct_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_test_1a5a765f7c4640bd4e9ddb7a2603659755" compoundref="_mutation_operator_test_8java" startline="68" endline="73">org.jgap.impl.MutationOperatorTest.testConstruct_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_test_1ae273099634232cdbebc176638506f454" compoundref="_swapping_mutation_operator_test_8java" startline="72" endline="77">org.jgap.impl.SwappingMutationOperatorTest.testConstruct_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_test_1a4df357edd3c12138a9313ae89e13fad5" compoundref="_mutation_operator_test_8java" startline="80" endline="86">org.jgap.impl.MutationOperatorTest.testConstruct_3</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator_test_1a7b6896b11e97d2e2fb3f62d590bdd2c2" compoundref="_swapping_mutation_operator_test_8java" startline="85" endline="91">org.jgap.impl.SwappingMutationOperatorTest.testConstruct_3</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a178169eac1a0fc4d9fa105567b4f7c5f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.MutationOperator.mutateGene</definition>
+        <argsstring>(final Gene a_gene, final RandomGenerator a_generator)</argsstring>
+        <name>mutateGene</name>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+          <declname>a_gene</declname>
+        </param>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_random_generator" kindref="compound">RandomGenerator</ref></type>
+          <declname>a_generator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper: mutate all atomic elements of a gene.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_gene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the gene to be mutated </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_generator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the generator delivering the amount of mutation</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" line="258" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" bodystart="258" bodyend="268"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a4a1c852770559bba4ffa3e9718f4a0d8" compoundref="_mutation_operator_8java" startline="136" endline="247">org.jgap.impl.MutationOperator.operate</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The mutation operator runs through the genes in each of the Chromosomes in the population and mutates them in statistical accordance to the given mutation rate. Mutated Chromosomes are then added to the list of candidate Chromosomes destined for the natural selection process.</para><para>This <ref refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator" kindref="compound">MutationOperator</ref> supports both fixed and dynamic mutation rates. A fixed rate is one specified at construction time by the user. A dynamic rate is determined by this class if no fixed rate is provided, and is calculated based on the size of the Chromosomes in the population. Details are specified in the <ref refid="classorg_1_1jgap_1_1impl_1_1_default_mutation_rate_calculator" kindref="compound">DefaultMutationRateCalculator</ref> class.</para><para><simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="16116">
+        <label>org.jgap.impl.SwappingMutationOperator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator"/>
+        <childnode refid="16109" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16111">
+        <label>org.jgap.GeneticOperator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_genetic_operator"/>
+        <childnode refid="16112" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16112">
+        <label>Serializable</label>
+      </node>
+      <node id="16113">
+        <label>Comparable</label>
+      </node>
+      <node id="16115">
+        <label>org.jgap.impl.RangedSwappingMutationOperator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_ranged_swapping_mutation_operator"/>
+        <childnode refid="16109" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16110">
+        <label>org.jgap.BaseGeneticOperator</label>
+        <link refid="classorg_1_1jgap_1_1_base_genetic_operator"/>
+        <childnode refid="16111" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16113" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16109">
+        <label>org.jgap.impl.MutationOperator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator"/>
+        <childnode refid="16110" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16114" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16114">
+        <label>Configurable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="16131">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="16136">
+        <label>List</label>
+      </node>
+      <node id="16135">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="16120" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16124" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16132">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="16120" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16119">
+        <label>org.jgap.GeneticOperator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_genetic_operator"/>
+        <childnode refid="16120" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16120">
+        <label>Serializable</label>
+      </node>
+      <node id="16138">
+        <label>org.jgap.IUniversalRateCalculator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_universal_rate_calculator"/>
+        <childnode refid="16120" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16121">
+        <label>Comparable</label>
+      </node>
+      <node id="16124">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="16125" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16118">
+        <label>org.jgap.BaseGeneticOperator</label>
+        <link refid="classorg_1_1jgap_1_1_base_genetic_operator"/>
+        <childnode refid="16119" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16121" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16122" relation="usage">
+          <edgelabel>m_configuration</edgelabel>
+        </childnode>
+      </node>
+      <node id="16129">
+        <label>org.jgap.FitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_fitness_evaluator"/>
+        <childnode refid="16120" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16133">
+        <label>org.jgap.BulkFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_bulk_fitness_function"/>
+        <childnode refid="16120" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16124" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16125">
+        <label>Cloneable</label>
+      </node>
+      <node id="16127">
+        <label>org.jgap.IJGAPFactory</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_j_g_a_p_factory"/>
+        <childnode refid="16120" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16134">
+        <label>org.jgap.Configuration.ConfigurationConfigurable</label>
+        <link refid="classorg_1_1jgap_1_1_configuration_1_1_configuration_configurable"/>
+        <childnode refid="16120" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16137">
+        <label>org.jgap.impl.MutationOperator.MutationOperatorConfigurable</label>
+        <childnode refid="16120" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16126">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="16124" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16120" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16121" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16130">
+        <label>org.jgap.IChromosome</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome"/>
+        <childnode refid="16121" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16124" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16120" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16131" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16117">
+        <label>org.jgap.impl.MutationOperator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator"/>
+        <childnode refid="16118" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16123" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16137" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="16138" relation="usage">
+          <edgelabel>m_mutationRateCalc</edgelabel>
+        </childnode>
+      </node>
+      <node id="16122">
+        <label>org.jgap.Configuration</label>
+        <link refid="classorg_1_1jgap_1_1_configuration"/>
+        <childnode refid="16123" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16120" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16124" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16121" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16126" relation="usage">
+          <edgelabel>m_breeder</edgelabel>
+        </childnode>
+        <childnode refid="16127" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="16128" relation="usage">
+          <edgelabel>m_chromosomePool</edgelabel>
+        </childnode>
+        <childnode refid="16129" relation="usage">
+          <edgelabel>m_fitnessEvaluator</edgelabel>
+        </childnode>
+        <childnode refid="16130" relation="usage">
+          <edgelabel>m_sampleChromosome</edgelabel>
+        </childnode>
+        <childnode refid="16132" relation="usage">
+          <edgelabel>m_randomGenerator</edgelabel>
+        </childnode>
+        <childnode refid="16133" relation="usage">
+          <edgelabel>m_bulkObjectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="16134" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="16135" relation="usage">
+          <edgelabel>m_objectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="16136" relation="usage">
+          <edgelabel>m_geneticOperators</edgelabel>
+        </childnode>
+      </node>
+      <node id="16128">
+        <label>org.jgap.IChromosomePool</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool"/>
+      </node>
+      <node id="16123">
+        <label>Configurable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" line="34" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/MutationOperator.java" bodystart="33" bodyend="386"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1_base_genetic_operator_1a061b47c0f891c0041d5ece5bc6e052f8" prot="public" virt="non-virtual"><scope>org::jgap::impl::MutationOperator</scope><name>BaseGeneticOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a0a45fadb8c98c2654220f42317286e43" prot="public" virt="non-virtual"><scope>org::jgap::impl::MutationOperator</scope><name>compareTo</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1ab837b187fad3cad5dd892f7e3a793847" prot="private" virt="non-virtual"><scope>org::jgap::impl::MutationOperator</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1abf3ab580f3f5755f8dfc0cdfabe18530" prot="public" virt="non-virtual"><scope>org::jgap::impl::MutationOperator</scope><name>equals</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_genetic_operator_1addbc6b98f572331d47397227b7a49f6a" prot="public" virt="non-virtual"><scope>org::jgap::impl::MutationOperator</scope><name>getConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a4c2e6670fc376734386d37e918071410" prot="public" virt="non-virtual"><scope>org::jgap::impl::MutationOperator</scope><name>getMutationRate</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a4e61256bfd2fd9db20cb7839970ce2b1" prot="public" virt="non-virtual"><scope>org::jgap::impl::MutationOperator</scope><name>getMutationRateCalc</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a08cdb3d1a82a3fd66aa080043a20b0b2" prot="private" virt="non-virtual"><scope>org::jgap::impl::MutationOperator</scope><name>m_config</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_genetic_operator_1a516d89e8f56eb2e58768218c7f9cf3de" prot="protected" virt="non-virtual"><scope>org::jgap::impl::MutationOperator</scope><name>m_monitor</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_genetic_operator_1a5194e705ed206f99852bf158546646b5" prot="protected" virt="non-virtual"><scope>org::jgap::impl::MutationOperator</scope><name>m_monitorActive</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a7159d9d04d2eec98514a4756411b1699" prot="private" virt="non-virtual"><scope>org::jgap::impl::MutationOperator</scope><name>m_mutationRateCalc</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a178169eac1a0fc4d9fa105567b4f7c5f" prot="private" virt="non-virtual"><scope>org::jgap::impl::MutationOperator</scope><name>mutateGene</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a70ee0430f18e07c0cbdcdc3370da013a" prot="public" virt="non-virtual"><scope>org::jgap::impl::MutationOperator</scope><name>MutationOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1ab7a875f7a9c62a2fa4ba3ace00bbe0ee" prot="public" virt="non-virtual"><scope>org::jgap::impl::MutationOperator</scope><name>MutationOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1aefd976178a75cd5641929533c367d39c" prot="public" virt="non-virtual"><scope>org::jgap::impl::MutationOperator</scope><name>MutationOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1abdacf3ee2ef8a6f544af2424f9682ec8" prot="public" virt="non-virtual"><scope>org::jgap::impl::MutationOperator</scope><name>MutationOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a4a1c852770559bba4ffa3e9718f4a0d8" prot="public" virt="non-virtual"><scope>org::jgap::impl::MutationOperator</scope><name>operate</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a8aecc7650a9743a737dac2d5ed782f87" prot="public" virt="non-virtual"><scope>org::jgap::impl::MutationOperator</scope><name>setMutationRate</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_mutation_operator_1a1ba32ba71ff16141bb7c9f6c3a0a8865" prot="public" virt="non-virtual"><scope>org::jgap::impl::MutationOperator</scope><name>setMutationRateCalc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

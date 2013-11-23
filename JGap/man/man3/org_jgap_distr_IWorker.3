@@ -1,0 +1,197 @@
+.TH "org.jgap.distr.IWorker" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.IWorker \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBorg\&.jgap\&.distr\&.Worker\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "String \fBgetDisplayName\fP ()"
+.br
+.ti -1c
+.RI "Object \fBgetStatus\fP ()"
+.br
+.ti -1c
+.RI "Object \fBpause\fP ()"
+.br
+.ti -1c
+.RI "Object \fBstop\fP ()"
+.br
+.ti -1c
+.RI "Object \fBresume\fP ()"
+.br
+.ti -1c
+.RI "Object \fBsendCommand\fP (\fBWorkerCommand\fP a_command)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.5 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Interface for workers processing requests from an IMaster instance\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 18 of file IWorker\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "String org\&.jgap\&.distr\&.IWorker\&.getDisplayName ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+display name of the worker
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.distr\&.Worker\fP\&.
+.SS "Object org\&.jgap\&.distr\&.IWorker\&.getStatus ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+current status of the entity
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.distr\&.Worker\fP\&.
+.SS "Object org\&.jgap\&.distr\&.IWorker\&.pause ()"
+Forces the worker to pause its work (can be resumed) 
+.PP
+\fBReturns:\fP
+.RS 4
+status message
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.distr\&.Worker\fP\&.
+.SS "Object org\&.jgap\&.distr\&.IWorker\&.resume ()"
+Forces the worker to resume a paused work 
+.PP
+\fBReturns:\fP
+.RS 4
+status message
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.distr\&.Worker\fP\&.
+.SS "Object org\&.jgap\&.distr\&.IWorker\&.sendCommand (\fBWorkerCommand\fPa_command)"
+Lets a server send a command to process to the worker 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_command\fP the command to process 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+status message
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.SS "Object org\&.jgap\&.distr\&.IWorker\&.stop ()"
+Forces the worker to stop its work (cannot be resumed) 
+.PP
+\fBReturns:\fP
+.RS 4
+status message
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.distr\&.Worker\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.IWorker\&.CVS_REVISION = '$Revision: 1\&.5 $'\fC [static]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 20 of file IWorker\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

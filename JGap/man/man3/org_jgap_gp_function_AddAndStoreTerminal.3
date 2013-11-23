@@ -1,0 +1,327 @@
+.TH "org.jgap.gp.function.AddAndStoreTerminal" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.function.AddAndStoreTerminal \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandGene\fP, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAddAndStoreTerminal\fP (final GPConfiguration a_conf, String a_storageName, Class a_childType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBAddAndStoreTerminal\fP (final GPConfiguration a_conf, String a_storageName, Class a_childType, int a_subReturnType, int a_subChildType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "void \fBexecute_void\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "boolean \fBisAffectGlobalState\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisValid\fP (ProgramChromosome a_program)"
+.br
+.ti -1c
+.RI "Class \fBgetChildType\fP (\fBIGPProgram\fP a_ind, int a_chromNum)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "String \fBm_storageName\fP"
+.br
+.ti -1c
+.RI "Class \fBm_type\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.4 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Stores a value in the internal memory but adds the value already stored in the target memory cell before storing it\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file AddAndStoreTerminal\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.AddAndStoreTerminal (final GPConfigurationa_conf, Stringa_storageName, Classa_childType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP GPConfiguration 
+.br
+\fIa_storageName\fP String 
+.br
+\fIa_childType\fP Class 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 50 of file AddAndStoreTerminal\&.java\&.
+.SS "org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.AddAndStoreTerminal (final GPConfigurationa_conf, Stringa_storageName, Classa_childType, inta_subReturnType, inta_subChildType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Allows setting a sub type and sub return type\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP GPConfiguration 
+.br
+\fIa_storageName\fP String 
+.br
+\fIa_childType\fP Class 
+.br
+\fIa_subChildType\fP int 
+.br
+\fIa_subReturnType\fP int 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 69 of file AddAndStoreTerminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+deep clone of this instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 212 of file AddAndStoreTerminal\&.java\&.
+.SS "int org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.compareTo (Objecta_other)\fC [inline]\fP"
+The compareTo-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+-1, 0, 1
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 173 of file AddAndStoreTerminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.m_type\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.equals (Objecta_other)\fC [inline]\fP"
+The equals-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the objects are seen as equal
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 194 of file AddAndStoreTerminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.m_type\&.
+.SS "void org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.execute_void (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 96 of file AddAndStoreTerminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.DoubleClass, org\&.jgap\&.gp\&.CommandGene\&.FloatClass, org\&.jgap\&.gp\&.CommandGene\&.IntegerClass, and org\&.jgap\&.gp\&.CommandGene\&.LongClass\&.
+.SS "Class org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.getChildType (\fBIGPProgram\fPa_ind, inta_chromNum)\fC [inline]\fP"
+Determines which type a specific child of this command has\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ind\fP ignored here 
+.br
+\fIa_chromNum\fP index of child 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+type of the a_chromNum'th child
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 160 of file AddAndStoreTerminal\&.java\&.
+.SS "String org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.getName ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+textual name of this command
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 92 of file AddAndStoreTerminal\&.java\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.isAffectGlobalState ()\fC [inline]\fP"
+
+.PP
+Definition at line 141 of file AddAndStoreTerminal\&.java\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.isValid (ProgramChromosomea_program)\fC [inline]\fP"
+
+.PP
+Definition at line 145 of file AddAndStoreTerminal\&.java\&.
+.SS "String org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 82 of file AddAndStoreTerminal\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.CVS_REVISION = '$Revision: 1\&.4 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 29 of file AddAndStoreTerminal\&.java\&.
+.SS "String org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.m_storageName\fC [private]\fP"
+Symbolic name of the storage\&. Must correspond with a chosen name for ReadTerminalCommand\&. 
+.PP
+Definition at line 35 of file AddAndStoreTerminal\&.java\&.
+.SS "Class org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.m_type\fC [private]\fP"
+
+.PP
+Definition at line 37 of file AddAndStoreTerminal\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.compareTo(), and org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.equals()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

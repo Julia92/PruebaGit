@@ -1,0 +1,336 @@
+.TH "org.jgap.gp.function.StoreTerminalIndexed" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.function.StoreTerminalIndexed \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandGene\fP, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStoreTerminalIndexed\fP (final GPConfiguration a_conf, int a_index, Class a_childType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBStoreTerminalIndexed\fP (final GPConfiguration a_conf, int a_index, Class a_childType, int a_subReturnType, int a_subChildType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "void \fBexecute_void\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "int \fBexecute_int\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "long \fBexecute_long\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "double \fBexecute_double\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "float \fBexecute_float\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "Object \fBexecute_object\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "boolean \fBisAffectGlobalState\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisValid\fP (ProgramChromosome a_program)"
+.br
+.ti -1c
+.RI "Class \fBgetChildType\fP (\fBIGPProgram\fP a_ind, int a_chromNum)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBm_index\fP"
+.br
+.ti -1c
+.RI "Class \fBm_type\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.4 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Stores a value in the internal indexed memory\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file StoreTerminalIndexed\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.StoreTerminalIndexed (final GPConfigurationa_conf, inta_index, Classa_childType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 33 of file StoreTerminalIndexed\&.java\&.
+.SS "org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.StoreTerminalIndexed (final GPConfigurationa_conf, inta_index, Classa_childType, inta_subReturnType, inta_subChildType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Allows setting a sub type and sub return type\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP GPConfiguration 
+.br
+\fIa_index\fP the index of the memory cell to use 
+.br
+\fIa_childType\fP Class 
+.br
+\fIa_subChildType\fP int 
+.br
+\fIa_subReturnType\fP int 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 52 of file StoreTerminalIndexed\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.clone ()\fC [inline]\fP"
+Clones the object\&. Simple and straight forward implementation here\&.
+.PP
+\fBReturns:\fP
+.RS 4
+cloned instance of this object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 210 of file StoreTerminalIndexed\&.java\&.
+.SS "int org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.compareTo (Objecta_other)\fC [inline]\fP"
+The compareTo-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+-1, 0, 1
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 169 of file StoreTerminalIndexed\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.m_type\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.equals (Objecta_other)\fC [inline]\fP"
+The equals-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the objects are seen as equal
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 190 of file StoreTerminalIndexed\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.m_type\&.
+.SS "double org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.execute_double (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 116 of file StoreTerminalIndexed\&.java\&.
+.SS "float org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.execute_float (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 123 of file StoreTerminalIndexed\&.java\&.
+.SS "int org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.execute_int (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 100 of file StoreTerminalIndexed\&.java\&.
+.SS "long org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.execute_long (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 109 of file StoreTerminalIndexed\&.java\&.
+.SS "Object org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.execute_object (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 130 of file StoreTerminalIndexed\&.java\&.
+.SS "void org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.execute_void (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 77 of file StoreTerminalIndexed\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.DoubleClass, org\&.jgap\&.gp\&.CommandGene\&.FloatClass, org\&.jgap\&.gp\&.CommandGene\&.IntegerClass, and org\&.jgap\&.gp\&.CommandGene\&.LongClass\&.
+.SS "Class org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.getChildType (\fBIGPProgram\fPa_ind, inta_chromNum)\fC [inline]\fP"
+Determines which type a specific child of this command has\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ind\fP ignored here 
+.br
+\fIa_chromNum\fP index of child 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+type of the a_chromNum'th child
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 156 of file StoreTerminalIndexed\&.java\&.
+.SS "String org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.getName ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+textual name of this command
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 73 of file StoreTerminalIndexed\&.java\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.isAffectGlobalState ()\fC [inline]\fP"
+
+.PP
+Definition at line 137 of file StoreTerminalIndexed\&.java\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.isValid (ProgramChromosomea_program)\fC [inline]\fP"
+
+.PP
+Definition at line 141 of file StoreTerminalIndexed\&.java\&.
+.SS "String org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 63 of file StoreTerminalIndexed\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.CVS_REVISION = '$Revision: 1\&.4 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 27 of file StoreTerminalIndexed\&.java\&.
+.SS "int org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.m_index\fC [private]\fP"
+
+.PP
+Definition at line 29 of file StoreTerminalIndexed\&.java\&.
+.SS "Class org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.m_type\fC [private]\fP"
+
+.PP
+Definition at line 31 of file StoreTerminalIndexed\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.compareTo(), and org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.equals()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

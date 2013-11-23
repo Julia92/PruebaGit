@@ -1,0 +1,312 @@
+.TH "org.jgap.audit.PermutingConfiguration" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.audit.PermutingConfiguration \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.Configuration\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPermutingConfiguration\fP ()"
+.br
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.ti -1c
+.RI "\fBPermutingConfiguration\fP (\fBConfiguration\fP a_conf)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBaddRandomGeneratorSlot\fP (\fBRandomGenerator\fP a_randomGenerator)"
+.br
+.ti -1c
+.RI "void \fBaddNaturalSelector\fP (\fBNaturalSelector\fP a_naturalSel, boolean a_egal)"
+.br
+.ti -1c
+.RI "void \fBaddNaturalSelectorSlot\fP (\fBNaturalSelector\fP a_naturalSelector)"
+.br
+.ti -1c
+.RI "synchronized void \fBaddGeneticOperator\fP (\fBGeneticOperator\fP a_geneticOp)"
+.br
+.ti -1c
+.RI "void \fBaddGeneticOperatorSlot\fP (\fBGeneticOperator\fP a_geneticOperator)"
+.br
+.ti -1c
+.RI "void \fBaddFitnessFunctionSlot\fP (\fBFitnessFunction\fP a_fitnessFunction)"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBnext\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "boolean \fBhasNext\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "List \fBnextList\fP (int index, List list)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "List \fBm_randomGeneratorSlots\fP"
+.br
+.ti -1c
+.RI "int \fBm_randomGeneratorIndex\fP"
+.br
+.ti -1c
+.RI "List \fBm_naturalSelectorSlots\fP"
+.br
+.ti -1c
+.RI "int \fBm_naturalSelectorIndex\fP"
+.br
+.ti -1c
+.RI "List \fBm_geneticOperatorSlots\fP"
+.br
+.ti -1c
+.RI "int \fBm_geneticOperatorIndex\fP"
+.br
+.ti -1c
+.RI "List \fBm_fitnessFunctionSlots\fP"
+.br
+.ti -1c
+.RI "int \fBm_fitnessFunctionIndex\fP"
+.br
+.ti -1c
+.RI "int \fBm_componentIndex\fP"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBm_configuration\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.9 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+\fBConfiguration\fP that allows for permutating several components of it for evaluation/auditing purposes\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file PermutingConfiguration\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.audit\&.PermutingConfiguration\&.PermutingConfiguration ()\fC [inline]\fP"
+
+.PP
+Definition at line 50 of file PermutingConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.PermutingConfiguration\&.init()\&.
+.SS "org\&.jgap\&.audit\&.PermutingConfiguration\&.PermutingConfiguration (\fBConfiguration\fPa_conf) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Initializes the configuration by preselecting important parameters from the input configuration object 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP \fBConfiguration\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 76 of file PermutingConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.setChromosomePool(), org\&.jgap\&.Configuration\&.setEventManager(), org\&.jgap\&.Configuration\&.setFitnessEvaluator(), org\&.jgap\&.Configuration\&.setFitnessFunction(), org\&.jgap\&.Configuration\&.setMinimumPopSizePercent(), org\&.jgap\&.Configuration\&.setPopulationSize(), org\&.jgap\&.Configuration\&.setRandomGenerator(), and org\&.jgap\&.Configuration\&.setSampleChromosome()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.audit\&.PermutingConfiguration\&.addFitnessFunctionSlot (\fBFitnessFunction\fPa_fitnessFunction)\fC [inline]\fP"
+
+.PP
+Definition at line 119 of file PermutingConfiguration\&.java\&.
+.SS "synchronized void org\&.jgap\&.audit\&.PermutingConfiguration\&.addGeneticOperator (\fBGeneticOperator\fPa_geneticOp)\fC [inline]\fP"
+
+.PP
+Definition at line 110 of file PermutingConfiguration\&.java\&.
+.SS "void org\&.jgap\&.audit\&.PermutingConfiguration\&.addGeneticOperatorSlot (\fBGeneticOperator\fPa_geneticOperator)\fC [inline]\fP"
+
+.PP
+Definition at line 115 of file PermutingConfiguration\&.java\&.
+.SS "void org\&.jgap\&.audit\&.PermutingConfiguration\&.addNaturalSelector (\fBNaturalSelector\fPa_naturalSel, booleana_egal)\fC [inline]\fP"
+
+.PP
+Definition at line 101 of file PermutingConfiguration\&.java\&.
+.SS "void org\&.jgap\&.audit\&.PermutingConfiguration\&.addNaturalSelectorSlot (\fBNaturalSelector\fPa_naturalSelector)\fC [inline]\fP"
+
+.PP
+Definition at line 106 of file PermutingConfiguration\&.java\&.
+.SS "void org\&.jgap\&.audit\&.PermutingConfiguration\&.addRandomGeneratorSlot (\fBRandomGenerator\fPa_randomGenerator)\fC [inline]\fP"
+
+.PP
+Definition at line 97 of file PermutingConfiguration\&.java\&.
+.SS "boolean org\&.jgap\&.audit\&.PermutingConfiguration\&.hasNext ()\fC [inline]\fP"
+
+.PP
+Definition at line 247 of file PermutingConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.PermutingConfiguration\&.m_componentIndex, and org\&.jgap\&.audit\&.PermutingConfiguration\&.m_geneticOperatorSlots\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvaluatorTest\&.testHasNext_0(), and org\&.jgap\&.audit\&.PermutingConfigurationTest\&.testPermute_0()\&.
+.SS "void org\&.jgap\&.audit\&.PermutingConfiguration\&.init ()\fC [inline]\fP"
+
+.PP
+Definition at line 55 of file PermutingConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.PermutingConfiguration\&.m_componentIndex, org\&.jgap\&.audit\&.PermutingConfiguration\&.m_fitnessFunctionIndex, org\&.jgap\&.audit\&.PermutingConfiguration\&.m_fitnessFunctionSlots, org\&.jgap\&.audit\&.PermutingConfiguration\&.m_geneticOperatorIndex, org\&.jgap\&.audit\&.PermutingConfiguration\&.m_geneticOperatorSlots, org\&.jgap\&.audit\&.PermutingConfiguration\&.m_naturalSelectorIndex, org\&.jgap\&.audit\&.PermutingConfiguration\&.m_naturalSelectorSlots, org\&.jgap\&.audit\&.PermutingConfiguration\&.m_randomGeneratorIndex, and org\&.jgap\&.audit\&.PermutingConfiguration\&.m_randomGeneratorSlots\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.PermutingConfiguration\&.PermutingConfiguration()\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.audit\&.PermutingConfiguration\&.next () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+make permutation below computed dynamic and not static 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+introduce new parameters: populationSize, setPreservFittestIndividual, MAX_ALLOWED_EVOLUTIONS 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+allow for 'false' 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+BulkFitnessOffsetRemover vs\&. \fBFitnessFunction\fP 
+.RE
+.PP
+
+.PP
+Definition at line 123 of file PermutingConfiguration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.Configuration(), org\&.jgap\&.Configuration\&.getChromosomePool(), org\&.jgap\&.Configuration\&.getEventManager(), org\&.jgap\&.Configuration\&.getFitnessEvaluator(), org\&.jgap\&.Configuration\&.getFitnessFunction(), org\&.jgap\&.Configuration\&.getMinimumPopSizePercent(), org\&.jgap\&.Configuration\&.getPopulationSize(), org\&.jgap\&.Configuration\&.getRandomGenerator(), org\&.jgap\&.Configuration\&.getSampleChromosome(), org\&.jgap\&.audit\&.PermutingConfiguration\&.m_componentIndex, org\&.jgap\&.audit\&.PermutingConfiguration\&.m_configuration, org\&.jgap\&.audit\&.PermutingConfiguration\&.m_fitnessFunctionIndex, org\&.jgap\&.audit\&.PermutingConfiguration\&.m_fitnessFunctionSlots, org\&.jgap\&.audit\&.PermutingConfiguration\&.m_geneticOperatorIndex, org\&.jgap\&.audit\&.PermutingConfiguration\&.m_geneticOperatorSlots, org\&.jgap\&.audit\&.PermutingConfiguration\&.m_naturalSelectorIndex, org\&.jgap\&.audit\&.PermutingConfiguration\&.m_naturalSelectorSlots, org\&.jgap\&.audit\&.PermutingConfiguration\&.m_randomGeneratorIndex, org\&.jgap\&.audit\&.PermutingConfiguration\&.m_randomGeneratorSlots, org\&.jgap\&.audit\&.PermutingConfiguration\&.nextList(), org\&.jgap\&.Configuration\&.PROPERTY_FITFUNC_INST, and org\&.jgap\&.Configuration\&.setFitnessFunction()\&.
+.SS "List org\&.jgap\&.audit\&.PermutingConfiguration\&.nextList (intindex, Listlist)\fC [inline]\fP, \fC [private]\fP"
+Returns a subset of a given list acording to the index given\&. If a bit in the binary number represented by the index is set then the element at this index in the list will be included in the result list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIindex\fP int 
+.br
+\fIlist\fP List 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+List 
+.RE
+.PP
+
+.PP
+Definition at line 227 of file PermutingConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.PermutingConfiguration\&.next()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.audit\&.PermutingConfiguration\&.CVS_REVISION = '$Revision: 1\&.9 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file PermutingConfiguration\&.java\&.
+.SS "int org\&.jgap\&.audit\&.PermutingConfiguration\&.m_componentIndex\fC [private]\fP"
+
+.PP
+Definition at line 43 of file PermutingConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.PermutingConfiguration\&.hasNext(), org\&.jgap\&.audit\&.PermutingConfiguration\&.init(), and org\&.jgap\&.audit\&.PermutingConfiguration\&.next()\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.audit\&.PermutingConfiguration\&.m_configuration\fC [private]\fP"
+The resulting configuration as determined by permutation\&. 
+.PP
+Definition at line 48 of file PermutingConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.PermutingConfiguration\&.next()\&.
+.SS "int org\&.jgap\&.audit\&.PermutingConfiguration\&.m_fitnessFunctionIndex\fC [private]\fP"
+
+.PP
+Definition at line 41 of file PermutingConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.PermutingConfiguration\&.init(), and org\&.jgap\&.audit\&.PermutingConfiguration\&.next()\&.
+.SS "List org\&.jgap\&.audit\&.PermutingConfiguration\&.m_fitnessFunctionSlots\fC [private]\fP"
+
+.PP
+Definition at line 39 of file PermutingConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.PermutingConfiguration\&.init(), and org\&.jgap\&.audit\&.PermutingConfiguration\&.next()\&.
+.SS "int org\&.jgap\&.audit\&.PermutingConfiguration\&.m_geneticOperatorIndex\fC [private]\fP"
+
+.PP
+Definition at line 37 of file PermutingConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.PermutingConfiguration\&.init(), and org\&.jgap\&.audit\&.PermutingConfiguration\&.next()\&.
+.SS "List org\&.jgap\&.audit\&.PermutingConfiguration\&.m_geneticOperatorSlots\fC [private]\fP"
+
+.PP
+Definition at line 35 of file PermutingConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.PermutingConfiguration\&.hasNext(), org\&.jgap\&.audit\&.PermutingConfiguration\&.init(), and org\&.jgap\&.audit\&.PermutingConfiguration\&.next()\&.
+.SS "int org\&.jgap\&.audit\&.PermutingConfiguration\&.m_naturalSelectorIndex\fC [private]\fP"
+
+.PP
+Definition at line 33 of file PermutingConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.PermutingConfiguration\&.init(), and org\&.jgap\&.audit\&.PermutingConfiguration\&.next()\&.
+.SS "List org\&.jgap\&.audit\&.PermutingConfiguration\&.m_naturalSelectorSlots\fC [private]\fP"
+
+.PP
+Definition at line 31 of file PermutingConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.PermutingConfiguration\&.init(), and org\&.jgap\&.audit\&.PermutingConfiguration\&.next()\&.
+.SS "int org\&.jgap\&.audit\&.PermutingConfiguration\&.m_randomGeneratorIndex\fC [private]\fP"
+
+.PP
+Definition at line 29 of file PermutingConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.PermutingConfiguration\&.init(), and org\&.jgap\&.audit\&.PermutingConfiguration\&.next()\&.
+.SS "List org\&.jgap\&.audit\&.PermutingConfiguration\&.m_randomGeneratorSlots\fC [private]\fP"
+
+.PP
+Definition at line 27 of file PermutingConfiguration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.PermutingConfiguration\&.init(), and org\&.jgap\&.audit\&.PermutingConfiguration\&.next()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

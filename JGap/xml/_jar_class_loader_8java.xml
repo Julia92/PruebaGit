@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="_jar_class_loader_8java" kind="file">
+    <compoundname>JarClassLoader.java</compoundname>
+    <innerclass refid="classorg_1_1jgap_1_1util_1_1_jar_class_loader" prot="public">org::jgap::util::JarClassLoader</innerclass>
+    <innernamespace refid="namespaceorg_1_1jgap_1_1util">org::jgap::util</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>JGAP.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>JGAP<sp/>offers<sp/>a<sp/>dual<sp/>license<sp/>model<sp/>containing<sp/>the<sp/>LGPL<sp/>as<sp/>well<sp/>as<sp/>the<sp/>MPL.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>For<sp/>licensing<sp/>information<sp/>please<sp/>see<sp/>the<sp/>file<sp/>license.txt<sp/>included<sp/>with<sp/>JGAP</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>or<sp/>have<sp/>a<sp/>look<sp/>at<sp/>the<sp/>top<sp/>of<sp/>class<sp/>org.jgap.Chromosome<sp/>which<sp/>representatively</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>includes<sp/>the<sp/>JGAP<sp/>license<sp/>policy<sp/>applicable<sp/>for<sp/>any<sp/>file<sp/>delivered<sp/>with<sp/>JGAP.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">org.jgap.util;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classorg_1_1jgap_1_1util_1_1_jar_class_loader" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classorg_1_1jgap_1_1util_1_1_jar_class_loader" kindref="compound">JarClassLoader</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader" kindref="compound">MultiClassLoader</ref><sp/>{</highlight></codeline>
+<codeline lineno="22" refid="classorg_1_1jgap_1_1util_1_1_jar_class_loader_1a3de58256ce21ba05f55b2518a7f21031" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classorg_1_1jgap_1_1util_1_1_jar_class_loader_1a3de58256ce21ba05f55b2518a7f21031" kindref="member">CVS_REVISION</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$Revision:<sp/>1.6<sp/>$&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classorg_1_1jgap_1_1util_1_1_jar_class_loader_1a000e53524a68ae339edf16105977397b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1util_1_1_jar_resources" kindref="compound">JarResources</ref><sp/><ref refid="classorg_1_1jgap_1_1util_1_1_jar_class_loader_1a000e53524a68ae339edf16105977397b" kindref="member">m_jarResources</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classorg_1_1jgap_1_1util_1_1_jar_class_loader_1a9d966cb08ba19b2aded12e9ba1377218" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1util_1_1_jar_class_loader_1a9d966cb08ba19b2aded12e9ba1377218" kindref="member">JarClassLoader</ref>(</highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>String<sp/>a_jarName)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>the<sp/>JarResource<sp/>and<sp/>suck<sp/>in<sp/>the<sp/>.jar<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1util_1_1_jar_class_loader_1a000e53524a68ae339edf16105977397b" kindref="member">m_jarResources</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1util_1_1_jar_resources" kindref="compound">JarResources</ref>(a_jarName);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classorg_1_1jgap_1_1util_1_1_jar_class_loader_1aa3a789fc7b8816981a82be84e93dea40" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/>byte[]<sp/><ref refid="classorg_1_1jgap_1_1util_1_1_jar_class_loader_1aa3a789fc7b8816981a82be84e93dea40" kindref="member">loadClassBytes</ref>(</highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>String<sp/>a_className)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Support<sp/>the<sp/>MultiClassLoader&apos;s<sp/>class<sp/>name<sp/>munging<sp/>facility.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>className<sp/>=<sp/><ref refid="classorg_1_1jgap_1_1util_1_1_multi_class_loader_1af7689792a86ef761cf69e874460969e9" kindref="member">formatClassName</ref>(a_className);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Attempt<sp/>to<sp/>get<sp/>the<sp/>class<sp/>data<sp/>from<sp/>the<sp/>JarResource.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="classorg_1_1jgap_1_1util_1_1_jar_class_loader_1a000e53524a68ae339edf16105977397b" kindref="member">m_jarResources</ref>.<ref refid="classorg_1_1jgap_1_1util_1_1_jar_resources_1a0bc2aafef5ea7008210ca9b8d062f8f6" kindref="member">getResource</ref>(className));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/JarClassLoader.java"/>
+  </compounddef>
+</doxygen>

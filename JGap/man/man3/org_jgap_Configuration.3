@@ -1,0 +1,2890 @@
+.TH "org.jgap.Configuration" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.Configuration \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Configurable, Serializable, \fBorg\&.jgap\&.util\&.ICloneable\fP, and Comparable\&.
+.PP
+Inherited by \fBorg\&.jgap\&.audit\&.PermutingConfiguration\fP, \fBorg\&.jgap\&.ConfigurationForTesting\fP, org\&.jgap\&.GenotypeTest\&.TestConfiguration, \fBorg\&.jgap\&.gp\&.impl\&.GPConfiguration\fP, and \fBorg\&.jgap\&.impl\&.DefaultConfiguration\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBConfigurationConfigurable\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConfiguration\fP ()"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP (String a_id, String a_name)"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP (final String a_name)"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP (final String a_configFileName, boolean a_ignore)  throws ConfigException, InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBsetName\fP (final String a_name)"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "synchronized void \fBsetFitnessFunction\fP (final \fBFitnessFunction\fP a_functionToSet)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "synchronized \fBFitnessFunction\fP \fBgetFitnessFunction\fP ()"
+.br
+.ti -1c
+.RI "synchronized void \fBsetBulkFitnessFunction\fP (final \fBBulkFitnessFunction\fP a_functionToSet)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "synchronized \fBBulkFitnessFunction\fP \fBgetBulkFitnessFunction\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetSampleChromosome\fP (final \fBIChromosome\fP a_sampleChromosomeToSet)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBIChromosome\fP \fBgetSampleChromosome\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetChromosomeSize\fP ()"
+.br
+.ti -1c
+.RI "synchronized void \fBsetNaturalSelector\fP (final \fBNaturalSelector\fP a_selectorToSet)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "synchronized \fBNaturalSelector\fP \fBgetNaturalSelector\fP ()"
+.br
+.ti -1c
+.RI "synchronized \fBNaturalSelector\fP \fBgetNaturalSelector\fP (final boolean a_processBeforeGeneticOperators, final int a_index)"
+.br
+.ti -1c
+.RI "ChainOfSelectors \fBgetNaturalSelectors\fP (final boolean a_processBeforeGeneticOperators)"
+.br
+.ti -1c
+.RI "int \fBgetNaturalSelectorsSize\fP (final boolean a_processBeforeGeneticOperators)"
+.br
+.ti -1c
+.RI "void \fBremoveNaturalSelectors\fP (final boolean a_processBeforeGeneticOperators)"
+.br
+.ti -1c
+.RI "synchronized void \fBsetRandomGenerator\fP (final \fBRandomGenerator\fP a_generatorToSet)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "synchronized \fBRandomGenerator\fP \fBgetRandomGenerator\fP ()"
+.br
+.ti -1c
+.RI "synchronized void \fBaddGeneticOperator\fP (final \fBGeneticOperator\fP a_operatorToAdd)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "List \fBgetGeneticOperators\fP ()"
+.br
+.ti -1c
+.RI "synchronized void \fBsetPopulationSize\fP (final int a_sizeOfPopulation)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "synchronized int \fBgetPopulationSize\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetEventManager\fP (final IEventManager a_eventManagerToSet)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "IEventManager \fBgetEventManager\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetChromosomePool\fP (final \fBIChromosomePool\fP a_chromosomePoolToSet)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBIChromosomePool\fP \fBgetChromosomePool\fP ()"
+.br
+.ti -1c
+.RI "synchronized void \fBlockSettings\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "boolean \fBisLocked\fP ()"
+.br
+.ti -1c
+.RI "synchronized void \fBverifyStateIsValid\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBaddNaturalSelector\fP (\fBNaturalSelector\fP a_selector, boolean a_processBeforeGeneticOperators)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBsetMinimumPopSizePercent\fP (int a_minimumSizeGuaranteedPercent)"
+.br
+.ti -1c
+.RI "int \fBgetMinimumPopSizePercent\fP ()"
+.br
+.ti -1c
+.RI "\fBFitnessEvaluator\fP \fBgetFitnessEvaluator\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetFitnessEvaluator\fP (\fBFitnessEvaluator\fP a_fitnessEvaluator)"
+.br
+.ti -1c
+.RI "boolean \fBisPreserveFittestIndividual\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPreservFittestIndividual\fP (boolean a_preserveFittest)"
+.br
+.ti -1c
+.RI "void \fBincrementGenerationNr\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetGenerationNr\fP ()"
+.br
+.ti -1c
+.RI "ConfigurationHandler \fBgetConfigurationHandler\fP ()"
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisKeepPopulationSizeConstant\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetKeepPopulationSizeConstant\fP (boolean a_keepPopSizeConstant)"
+.br
+.ti -1c
+.RI "void \fBsetSelectFromPrevGen\fP (double a_percentage)"
+.br
+.ti -1c
+.RI "double \fBgetSelectFromPrevGen\fP ()"
+.br
+.ti -1c
+.RI "\fBIJGAPFactory\fP \fBgetJGAPFactory\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetJGAPFactory\fP (\fBIJGAPFactory\fP a_factory)"
+.br
+.ti -1c
+.RI "void \fBsetBreeder\fP (\fBIBreeder\fP a_breeder)"
+.br
+.ti -1c
+.RI "\fBIBreeder\fP \fBgetBreeder\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetAlwaysCaculateFitness\fP (boolean a_alwaysCalculate)"
+.br
+.ti -1c
+.RI "boolean \fBisAlwaysCalculateFitness\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetId\fP ()"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBnewInstance\fP (String a_id, String a_name)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "void \fBsetMonitor\fP (IEvolutionMonitor a_monitor)"
+.br
+.ti -1c
+.RI "IEvolutionMonitor \fBgetMonitor\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetUniqueKeysActive\fP (boolean a_active)"
+.br
+.ti -1c
+.RI "boolean \fBisUniqueKeysActive\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBreset\fP ()"
+.br
+.ti -1c
+.RI "static void \fBreset\fP (final String a_id)"
+.br
+.ti -1c
+.RI "static void \fBresetProperty\fP (final String a_propName)"
+.br
+.ti -1c
+.RI "static void \fBresetProperty\fP (final String a_propName, final String a_id)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBPROPERTY_JGAPFACTORY_CLASS\fP = 'JGAPFACTORYCLASS'"
+.br
+.ti -1c
+.RI "static final String \fBPROPERTY_FITFUNC_INST\fP = 'JGAPFITFUNCINST'"
+.br
+.ti -1c
+.RI "static final String \fBPROPERTY_BFITFNC_INST\fP = 'JGAPBFITFNCINST'"
+.br
+.ti -1c
+.RI "static final String \fBPROPERTY_FITEVAL_INST\fP = 'JGAPFITEVALINST'"
+.br
+.ti -1c
+.RI "static final String \fBPROPERTY_SAMPLE_CHROM_INST\fP = 'JGAPSAMPLECHRMINST'"
+.br
+.ti -1c
+.RI "static final String \fBPROPERTY_EVENT_MGR_INST\fP = 'JGAPEVNTMGRINST'"
+.br
+.ti -1c
+.RI "static final String \fBS_CONFIGURATION\fP = 'Configuration'"
+.br
+.ti -1c
+.RI "static final String \fBS_CONFIGURATION_NAME\fP = 'Configuration name'"
+.br
+.ti -1c
+.RI "static final String \fBS_POPULATION_SIZE\fP = 'Population size'"
+.br
+.ti -1c
+.RI "static final String \fBS_MINPOPSIZE\fP = 'Minimum pop\&. size [%]'"
+.br
+.ti -1c
+.RI "static final String \fBS_CHROMOSOME_SIZE\fP = 'Chromosome size'"
+.br
+.ti -1c
+.RI "static final String \fBS_SAMPLE_CHROM\fP = 'Sample \fBChromosome\fP'"
+.br
+.ti -1c
+.RI "static final String \fBS_SIZE\fP = 'Size'"
+.br
+.ti -1c
+.RI "static final String \fBS_TOSTRING\fP = 'toString'"
+.br
+.ti -1c
+.RI "static final String \fBS_RANDOM_GENERATOR\fP = 'Random generator'"
+.br
+.ti -1c
+.RI "static final String \fBS_EVENT_MANAGER\fP = 'Event manager'"
+.br
+.ti -1c
+.RI "static final String \fBS_NONE\fP = 'none'"
+.br
+.ti -1c
+.RI "static final String \fBS_CONFIGURATION_HANDLER\fP = 'Configuration handler'"
+.br
+.ti -1c
+.RI "static final String \fBS_FITNESS_FUNCTION\fP = 'Fitness function'"
+.br
+.ti -1c
+.RI "static final String \fBS_FITNESS_EVALUATOR\fP = 'Fitness evaluator'"
+.br
+.ti -1c
+.RI "static final String \fBS_GENETIC_OPERATORS\fP = 'Genetic operators'"
+.br
+.ti -1c
+.RI "static final String \fBS_NATURAL_SELECTORS\fP = 'Natural Selectors'"
+.br
+.ti -1c
+.RI "static final String \fBS_PRE\fP = 'pre'"
+.br
+.ti -1c
+.RI "static final String \fBS_POST\fP = 'post'"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcheckProperty\fP (final String a_propname, final Object a_obj, final Object a_oldObj, final String a_errmsg)"
+.br
+.ti -1c
+.RI "String \fBmakeKey\fP (final Object a_obj)"
+.br
+.ti -1c
+.RI "void \fBverifyChangesAllowed\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBmakeThreadKey\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetId\fP (String a_id)"
+.br
+.ti -1c
+.RI "Object \fBdoClone\fP (Object a_objToClone)  throws Exception "
+.br
+.in -1c
+.SS "Static Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static String \fBgetThreadKey\fP (Thread current, String a_id)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBreadObject\fP (ObjectInputStream a_inputStream)  throws ClassNotFoundException, IOException "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBConfigurationConfigurable\fP \fBm_config\fP = new \fBConfigurationConfigurable\fP()"
+.br
+.ti -1c
+.RI "\fBFitnessFunction\fP \fBm_objectiveFunction\fP"
+.br
+.ti -1c
+.RI "\fBFitnessEvaluator\fP \fBm_fitnessEvaluator\fP"
+.br
+.ti -1c
+.RI "\fBIBreeder\fP \fBm_breeder\fP"
+.br
+.ti -1c
+.RI "int \fBm_minPercentageSizePopulation\fP"
+.br
+.ti -1c
+.RI "\fBBulkFitnessFunction\fP \fBm_bulkObjectiveFunction\fP"
+.br
+.ti -1c
+.RI "\fBIChromosome\fP \fBm_sampleChromosome\fP"
+.br
+.ti -1c
+.RI "\fBRandomGenerator\fP \fBm_randomGenerator\fP"
+.br
+.ti -1c
+.RI "IEventManager \fBm_eventManager\fP"
+.br
+.ti -1c
+.RI "transient \fBIChromosomePool\fP \fBm_chromosomePool\fP"
+.br
+.ti -1c
+.RI "List \fBm_geneticOperators\fP"
+.br
+.ti -1c
+.RI "int \fBm_chromosomeSize\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_settingsLocked\fP"
+.br
+.ti -1c
+.RI "ChainOfSelectors \fBm_preSelectors\fP"
+.br
+.ti -1c
+.RI "ChainOfSelectors \fBm_postSelectors\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_preserveFittestIndividual\fP"
+.br
+.ti -1c
+.RI "double \fBm_selectFromPrevGen\fP"
+.br
+.ti -1c
+.RI "int \fBm_generationNr\fP"
+.br
+.ti -1c
+.RI "transient RootConfigurationHandler \fBm_conHandler\fP"
+.br
+.ti -1c
+.RI "String \fBm_name\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_keepPopulationSizeConstant\fP"
+.br
+.ti -1c
+.RI "\fBIJGAPFactory\fP \fBm_factory\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_alwaysCalculateFitness\fP"
+.br
+.ti -1c
+.RI "transient String \fBthreadKey\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_uniqueKeysActive\fP"
+.br
+.ti -1c
+.RI "String \fBm_id\fP"
+.br
+.ti -1c
+.RI "IEvolutionMonitor \fBm_monitor\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.102 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBConfiguration\fP class represents the current configuration of plugins and parameters necessary to execute the genetic algorithm (such as fitness function, natural selector, genetic operators, and so on)\&. 
+.PP
+Note that, while during setup, the settings, flags, and other values may be set multiple times\&. But once the \fBlockSettings()\fP method is invoked, they cannot be changed\&. The default behavior of the \fBGenotype\fP constructor is to invoke this method, meaning that once a \fBConfiguration\fP object is passed to a \fBGenotype\fP, it cannot be subsequently modified\&. There is no mechanism for unlocking the settings once they are locked\&. 
+.PP
+Not all configuration options are required\&. See the documentation for each of the respective mutator methods to determine whether it is required to provide a value for that setting, and what the setting will default to if not\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 44 of file Configuration\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.Configuration\&.Configuration ()\fC [inline]\fP"
+
+.PP
+Definition at line 342 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.compareTo(), org\&.jgap\&.Configuration\&.newInstance(), and org\&.jgap\&.audit\&.PermutingConfiguration\&.next()\&.
+.SS "org\&.jgap\&.Configuration\&.Configuration (Stringa_id, Stringa_name)\fC [inline]\fP"
+Initialize with default values\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_id\fP unique id for the configuration within the current thread 
+.br
+\fIa_name\fP informative name of the configuration, may be null
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 356 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_alwaysCalculateFitness, org\&.jgap\&.Configuration\&.m_conHandler, org\&.jgap\&.Configuration\&.m_factory, org\&.jgap\&.Configuration\&.m_geneticOperators, org\&.jgap\&.Configuration\&.m_id, org\&.jgap\&.Configuration\&.m_keepPopulationSizeConstant, org\&.jgap\&.Configuration\&.m_postSelectors, org\&.jgap\&.Configuration\&.m_preSelectors, org\&.jgap\&.Configuration\&.m_selectFromPrevGen, org\&.jgap\&.Configuration\&.makeThreadKey(), org\&.jgap\&.Configuration\&.PROPERTY_JGAPFACTORY_CLASS, and org\&.jgap\&.Configuration\&.setName()\&.
+.SS "org\&.jgap\&.Configuration\&.Configuration (final Stringa_name)\fC [inline]\fP"
+Constructs a configuration with an informative name but without a unique ID\&. This practically prevents more than one configurations to be instantiated within the same thread\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP informative name of the configuration, may be null
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Definition at line 398 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.setName()\&.
+.SS "org\&.jgap\&.Configuration\&.Configuration (final Stringa_configFileName, booleana_ignore) throws ConfigException, \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Reads in the configuration from the given file\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configFileName\fP the config file from which to load the configuration 
+.br
+\fIa_ignore\fP just there to create distinct signatures :-(
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIConfigException\fP 
+.br
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 416 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.getConfigurationHandler()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "synchronized void org\&.jgap\&.Configuration\&.addGeneticOperator (final \fBGeneticOperator\fPa_operatorToAdd) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Adds a genetic operator for use in this algorithm\&. Genetic operators represent evolutionary steps that, when combined, make up the evolutionary process\&. Examples of genetic operators are reproduction, crossover, and mutation\&. During the evolution process, all of the genetic operators added via this method are invoked in the order they were added\&. At least one genetic operator must be provided\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_operatorToAdd\fP the genetic operator to add\&.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP if the genetic operator is null or if this \fBConfiguration\fP object is locked
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 904 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.verifyChangesAllowed()\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationForTesting\&.ConfigurationForTesting(), and org\&.jgap\&.impl\&.DefaultConfiguration\&.DefaultConfiguration()\&.
+.SS "void org\&.jgap\&.Configuration\&.addNaturalSelector (\fBNaturalSelector\fPa_selector, booleana_processBeforeGeneticOperators) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Adds a \fBNaturalSelector\fP to the ordered chain of registered \fBNaturalSelector\fP's\&. It's possible to execute the \fBNaturalSelector\fP before or after (registered) genetic operations have been applied\&. Normally, you would add a selector that is applied after the genetic operators are processed (a_processBeforeGeneticOperators = false)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_selector\fP the selector to be added to the chain 
+.br
+\fIa_processBeforeGeneticOperators\fP true: execute \fBNaturalSelector\fP before any genetic operator will be applied, false: \&.\&. after\&.\&. 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 1219 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.verifyChangesAllowed()\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationForTesting\&.ConfigurationForTesting(), org\&.jgap\&.impl\&.DefaultConfiguration\&.DefaultConfiguration(), and org\&.jgap\&.Configuration\&.setNaturalSelector()\&.
+.SS "void org\&.jgap\&.Configuration\&.checkProperty (final Stringa_propname, final Objecta_obj, final Objecta_oldObj, final Stringa_errmsg)\fC [inline]\fP, \fC [protected]\fP"
+Verifies that a property is not set\&. If not set, set it, otherwise throw a RuntimeException with a_errmsg as text\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_propname\fP the property to check (the current thread will be considered as a part of the property's name, too) 
+.br
+\fIa_obj\fP the object that should be set in charge of the property 
+.br
+\fIa_oldObj\fP the old object that is set until now\&. Not used yet 
+.br
+\fIa_errmsg\fP the error message to throw in case the property is already set for the current thread
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 558 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.makeKey(), and org\&.jgap\&.Configuration\&.threadKey\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.setBulkFitnessFunction(), org\&.jgap\&.Configuration\&.setEventManager(), org\&.jgap\&.Configuration\&.setFitnessEvaluator(), org\&.jgap\&.Configuration\&.setFitnessFunction(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setFitnessFunction(), and org\&.jgap\&.Configuration\&.setSampleChromosome()\&.
+.SS "Object org\&.jgap\&.Configuration\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+deep clone of this instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 1705 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_id, org\&.jgap\&.Configuration\&.m_name, and org\&.jgap\&.Configuration\&.newInstance()\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.newInstance(), org\&.jgap\&.impl\&.DefaultConfigurationTest\&.testClone_0(), org\&.jgap\&.ConfigurationTest\&.testClone_0(), org\&.jgap\&.ConfigurationTest\&.testClone_1(), and org\&.jgap\&.ConfigurationTest\&.testClone_2()\&.
+.SS "int org\&.jgap\&.Configuration\&.compareTo (Objecta_other)\fC [inline]\fP"
+The compareTo-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+-1, 0, 1
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 1823 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.Configuration(), org\&.jgap\&.Configuration\&.m_alwaysCalculateFitness, org\&.jgap\&.Configuration\&.m_breeder, org\&.jgap\&.Configuration\&.m_bulkObjectiveFunction, org\&.jgap\&.Configuration\&.m_chromosomeSize, org\&.jgap\&.Configuration\&.m_factory, org\&.jgap\&.Configuration\&.m_fitnessEvaluator, org\&.jgap\&.Configuration\&.m_generationNr, org\&.jgap\&.Configuration\&.m_geneticOperators, org\&.jgap\&.Configuration\&.m_keepPopulationSizeConstant, org\&.jgap\&.Configuration\&.m_minPercentageSizePopulation, org\&.jgap\&.Configuration\&.m_name, org\&.jgap\&.Configuration\&.m_objectiveFunction, org\&.jgap\&.Configuration\&.m_postSelectors, org\&.jgap\&.Configuration\&.m_preSelectors, org\&.jgap\&.Configuration\&.m_preserveFittestIndividual, org\&.jgap\&.Configuration\&.m_randomGenerator, org\&.jgap\&.Configuration\&.m_sampleChromosome, org\&.jgap\&.Configuration\&.m_selectFromPrevGen, org\&.jgap\&.Configuration\&.m_settingsLocked, and org\&.jgap\&.Configuration\&.threadKey\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.equals()\&.
+.SS "Object org\&.jgap\&.Configuration\&.doClone (Objecta_objToClone) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Helper called from clone\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_objToClone\fP the object to clone 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+cloned object or null, if cloning not possible 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+try cloning in a standard way 
+.RE
+.PP
+
+.PP
+Definition at line 1787 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.getJGAPFactory()\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.newInstance(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP()\&.
+.SS "boolean org\&.jgap\&.Configuration\&.equals (Objecta_other)\fC [inline]\fP"
+The equals-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if seen as equal
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 1810 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.compareTo()\&.
+.SS "\fBIBreeder\fP org\&.jgap\&.Configuration\&.getBreeder ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the breeder set or new standard breeder instance in case no breeder was set before\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 1555 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_breeder\&.
+.SS "synchronized \fBBulkFitnessFunction\fP org\&.jgap\&.Configuration\&.getBulkFitnessFunction ()\fC [inline]\fP"
+Retrieves the bulk fitness function previously setup in this \fBConfiguration\fP object\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the bulk fitness function
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 659 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_bulkObjectiveFunction\&.
+.SS "\fBIChromosomePool\fP org\&.jgap\&.Configuration\&.getChromosomePool ()\fC [inline]\fP"
+Retrieves the ChromosomePool instance, if any, that is associated with this configuration\&. The ChromosomePool is used to pool discarded \fBChromosome\fP instances so that they may be recycled later, thereby saving memory and the time to construct them from scratch\&. The presence of a ChromosomePool instance is optional\&. If none exists, then new Chromosomes should be constructed each time one is needed\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the ChromosomePool instance associated this configuration, or null if none has been provided
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1045 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_chromosomePool\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.PermutingConfiguration\&.next(), and org\&.jgap\&.impl\&.DefaultConfigurationTest\&.testConstruct_0()\&.
+.SS "int org\&.jgap\&.Configuration\&.getChromosomeSize ()\fC [inline]\fP"
+Retrieves the chromosome size being used by this genetic algorithm\&. This value is set automatically when the sample chromosome is provided\&.
+.PP
+\fBReturns:\fP
+.RS 4
+chromosome size used in this configuration
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 724 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_chromosomeSize\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.DefaultCrossoverRateCalculatorTest\&.testCalculateCurrentRate_0(), org\&.jgap\&.impl\&.DefaultMutationRateCalculatorTest\&.testCalculateCurrentRate_0(), org\&.jgap\&.impl\&.DefaultCrossoverRateCalculatorTest\&.testCalculateCurrentRate_01(), org\&.jgap\&.impl\&.DefaultMutationRateCalculatorTest\&.testCalculateCurrentRate_1(), org\&.jgap\&.ConfigurationTest\&.testGetChromosomeSize_0(), and org\&.jgap\&.Configuration\&.toString()\&.
+.SS "ConfigurationHandler org\&.jgap\&.Configuration\&.getConfigurationHandler ()\fC [inline]\fP"
+Implementation of the Configurable interface\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+ConfigurationHandler 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIConfigException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+
+.PP
+Definition at line 1317 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_conHandler\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.Configuration(), and org\&.jgap\&.Configuration\&.toString()\&.
+.SS "IEventManager org\&.jgap\&.Configuration\&.getEventManager ()\fC [inline]\fP"
+Retrieves the event manager associated with this configuration\&. The event manager is responsible for the management of event subscribers and event notifications\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the actively configured event manager instance
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1007 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_eventManager\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.PermutingConfiguration\&.next(), org\&.jgap\&.impl\&.DefaultConfigurationTest\&.testConstruct_0(), org\&.jgap\&.ConfigurationTest\&.testGetter_0(), org\&.jgap\&.ConfigurationTest\&.testToString_0(), and org\&.jgap\&.Configuration\&.toString()\&.
+.SS "\fBFitnessEvaluator\fP org\&.jgap\&.Configuration\&.getFitnessEvaluator ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the assigned \fBFitnessEvaluator\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1254 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_fitnessEvaluator\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.PermutingConfiguration\&.next(), org\&.jgap\&.impl\&.DefaultConfigurationTest\&.testConstruct_0(), org\&.jgap\&.ConfigurationTest\&.testToString_0(), and org\&.jgap\&.Configuration\&.toString()\&.
+.SS "synchronized \fBFitnessFunction\fP org\&.jgap\&.Configuration\&.getFitnessFunction ()\fC [inline]\fP"
+Retrieves the fitness function previously setup in this \fBConfiguration\fP object\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the fitness function
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 598 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_objectiveFunction\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.PermutingConfiguration\&.next(), org\&.jgap\&.ConfigurationTest\&.testGetter_0(), and org\&.jgap\&.Configuration\&.toString()\&.
+.SS "int org\&.jgap\&.Configuration\&.getGenerationNr ()\fC [inline]\fP"
+
+.PP
+Definition at line 1306 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_generationNr\&.
+.PP
+Referenced by org\&.jgap\&.BreederBase\&.applyGeneticOperators(), org\&.jgap\&.BreederBase\&.applyNaturalSelectors(), org\&.jgap\&.impl\&.GABreeder\&.evolve(), org\&.jgap\&.impl\&.GABreeder\&.fillPopulationRandomlyToOriginalSize(), and org\&.jgap\&.ConfigurationTest\&.testGenerationNr_0()\&.
+.SS "List org\&.jgap\&.Configuration\&.getGeneticOperators ()\fC [inline]\fP"
+Retrieves the genetic operators setup in this \fBConfiguration\fP instance\&. Note that once this \fBConfiguration\fP instance is locked, a new, immutable list of operators is used and any lists previously retrieved with this method will no longer reflect the actual list in use\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the list of genetic operators
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 928 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_geneticOperators\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationTest\&.testAddGeneticOperator_2(), org\&.jgap\&.impl\&.DefaultConfigurationTest\&.testConstruct_0(), org\&.jgap\&.ConfigurationTest\&.testGetter_0(), org\&.jgap\&.ConfigurationTest\&.testToString_0(), and org\&.jgap\&.Configuration\&.toString()\&.
+.SS "String org\&.jgap\&.Configuration\&.getId ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the id of the configuration set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 1683 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_id\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.clone(), and org\&.jgap\&.ConfigurationTest\&.testConstruct_3()\&.
+.SS "\fBIJGAPFactory\fP org\&.jgap\&.Configuration\&.getJGAPFactory ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the JGAP factory registered
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Definition at line 1500 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_factory\&.
+.PP
+Referenced by org\&.jgap\&.BaseChromosome\&.BaseChromosome(), org\&.jgap\&.BaseGene\&.BaseGene(), org\&.jgap\&.Configuration\&.doClone(), and org\&.jgap\&.ConfigurationTest\&.testKeepPopSizeConstant_0()\&.
+.SS "int org\&.jgap\&.Configuration\&.getMinimumPopSizePercent ()\fC [inline]\fP"
+
+.PP
+Definition at line 1244 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_minPercentageSizePopulation\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GABreeder\&.fillPopulationRandomlyToOriginalSize(), org\&.jgap\&.audit\&.PermutingConfiguration\&.next(), org\&.jgap\&.ConfigurationTest\&.testToString_0(), and org\&.jgap\&.Configuration\&.toString()\&.
+.SS "IEvolutionMonitor org\&.jgap\&.Configuration\&.getMonitor ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the monitor uses for auditing the evolution progress\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 1891 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_monitor\&.
+.SS "String org\&.jgap\&.Configuration\&.getName ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+informative name of the configuration
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 495 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_name\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.clone(), org\&.jgap\&.distr\&.grid\&.gp\&.JGAPWorkerGP\&.doWork(), org\&.jgap\&.Configuration\&.makeKey(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP(), org\&.jgap\&.ConfigurationTest\&.testGetName_0(), org\&.jgap\&.ConfigurationTest\&.testGetName_1(), org\&.jgap\&.ConfigurationTest\&.testGetName_2(), org\&.jgap\&.ConfigurationTest\&.testToString_0(), and org\&.jgap\&.Configuration\&.toString()\&.
+.SS "synchronized \fBNaturalSelector\fP org\&.jgap\&.Configuration\&.getNaturalSelector ()\fC [inline]\fP"
+Retrieves the natural selector setup in this \fBConfiguration\fP instance\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the natural selector
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBDeprecated\fP
+.RS 4
+use getNaturalSelectors(true) or getNaturalSelectors(false) to obtain the relevant chain of \fBNaturalSelector\fP's and then call the chain's get(index) method 
+.RE
+.PP
+
+.PP
+Definition at line 761 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.getNaturalSelectors()\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationTest\&.testGetNaturalSelector_1(), and org\&.jgap\&.ConfigurationTest\&.testGetNaturalSelector_4()\&.
+.SS "synchronized \fBNaturalSelector\fP org\&.jgap\&.Configuration\&.getNaturalSelector (final booleana_processBeforeGeneticOperators, final inta_index)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_processBeforeGeneticOperators\fP true: retrieve selector that is registered to be executed before genetic operators, false: get the one that is registered to be executed after genetic operators 
+.br
+\fIa_index\fP index of the selector to get 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBNaturalSelector\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 778 of file Configuration\&.java\&.
+.SS "ChainOfSelectors org\&.jgap\&.Configuration\&.getNaturalSelectors (final booleana_processBeforeGeneticOperators)\fC [inline]\fP"
+Only use for read-only access! Especially don't call clear() for the returned ChainOfSelectors object!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_processBeforeGeneticOperators\fP true: retrieve selector that is registered to be executed before genetic operators, false: get the one that is registered to be executed after genetic operators 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+ChainOfSelectors
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 800 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_postSelectors, and org\&.jgap\&.Configuration\&.m_preSelectors\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.getNaturalSelector(), org\&.jgap\&.Configuration\&.removeNaturalSelectors(), org\&.jgap\&.ConfigurationTest\&.testAddNaturalSelector_0(), org\&.jgap\&.ConfigurationTest\&.testAddNaturalSelector_1(), org\&.jgap\&.ConfigurationTest\&.testAddNaturalSelector_2(), org\&.jgap\&.impl\&.DefaultConfigurationTest\&.testConstruct_0(), org\&.jgap\&.ConfigurationTest\&.testGetter_0(), org\&.jgap\&.ConfigurationTest\&.testRemoveNaturalSelector_0(), org\&.jgap\&.ConfigurationTest\&.testRemoveNaturalSelector_1(), org\&.jgap\&.ConfigurationTest\&.testRemoveNaturalSelector_2(), org\&.jgap\&.ConfigurationTest\&.testRemoveNaturalSelector_3(), org\&.jgap\&.ConfigurationTest\&.testSetNaturalSelector_0(), and org\&.jgap\&.Configuration\&.toString()\&.
+.SS "int org\&.jgap\&.Configuration\&.getNaturalSelectorsSize (final booleana_processBeforeGeneticOperators)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_processBeforeGeneticOperators\fP true: retrieve selector that is registered to be executed before genetic operators, false: get the one that is registered to be executed after genetic operators 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+size of selector list (distinct by a_processBeforeGeneticOperators)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 819 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationTest\&.testRemoveNaturalSelector_0(), org\&.jgap\&.ConfigurationTest\&.testRemoveNaturalSelector_1(), org\&.jgap\&.ConfigurationTest\&.testRemoveNaturalSelector_2(), and org\&.jgap\&.ConfigurationTest\&.testRemoveNaturalSelector_3()\&.
+.SS "synchronized int org\&.jgap\&.Configuration\&.getPopulationSize ()\fC [inline]\fP"
+Retrieves the population size setup in this \fBConfiguration\fP instance\&.
+.PP
+\fBReturns:\fP
+.RS 4
+population size 
+.RE
+.PP
+
+.PP
+Definition at line 963 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Genotype\&.evolve(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.newInstanceGP(), org\&.jgap\&.audit\&.PermutingConfiguration\&.next(), examples\&.grid\&.mathProblemDistributed\&.MyGenotypeInitializer\&.setupGenotype(), org\&.jgap\&.ConfigurationTest\&.testGetPopulationSize_0(), org\&.jgap\&.ConfigurationTest\&.testGetter_0(), and org\&.jgap\&.Configuration\&.toString()\&.
+.SS "synchronized \fBRandomGenerator\fP org\&.jgap\&.Configuration\&.getRandomGenerator ()\fC [inline]\fP"
+Retrieves the random generator setup in this \fBConfiguration\fP instance\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the random generator
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 884 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_randomGenerator\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.PermutingConfiguration\&.next(), org\&.jgap\&.impl\&.DefaultConfigurationTest\&.testConstruct_0(), org\&.jgap\&.ConfigurationTest\&.testGetter_0(), org\&.jgap\&.ConfigurationTest\&.testToString_0(), and org\&.jgap\&.Configuration\&.toString()\&.
+.SS "\fBIChromosome\fP org\&.jgap\&.Configuration\&.getSampleChromosome ()\fC [inline]\fP"
+Retrieves the sample \fBChromosome\fP that contains the desired \fBGene\fP setup for each respective gene position (locus)\&.
+.PP
+\fBReturns:\fP
+.RS 4
+sample \fBChromosome\fP instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 710 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_sampleChromosome\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.PermutingConfiguration\&.next(), org\&.jgap\&.GenotypeTest\&.testEvolve_0(), org\&.jgap\&.ConfigurationTest\&.testGetter_0(), org\&.jgap\&.ConfigurationTest\&.testToString_0(), and org\&.jgap\&.Configuration\&.toString()\&.
+.SS "double org\&.jgap\&.Configuration\&.getSelectFromPrevGen ()\fC [inline]\fP"
+
+.PP
+Definition at line 1491 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_selectFromPrevGen\&.
+.PP
+Referenced by org\&.jgap\&.BreederBase\&.applyNaturalSelectors(), and org\&.jgap\&.GenotypeTest\&.testEvolve_2_3()\&.
+.SS "static String org\&.jgap\&.Configuration\&.getThreadKey (Threadcurrent, Stringa_id)\fC [inline]\fP, \fC [static]\fP, \fC [protected]\fP"
+Builds a string considering the current thread and the given id\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcurrent\fP the current Thread 
+.br
+\fIa_id\fP a hopefully unique id of the configuration
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+string built up
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 1523 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.makeThreadKey(), org\&.jgap\&.Configuration\&.reset(), and org\&.jgap\&.Configuration\&.resetProperty()\&.
+.SS "void org\&.jgap\&.Configuration\&.incrementGenerationNr ()\fC [inline]\fP"
+
+.PP
+Definition at line 1302 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_generationNr\&.
+.SS "boolean org\&.jgap\&.Configuration\&.isAlwaysCalculateFitness ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+true: \fBChromosome\&.getFitnessValue()\fP will always (re-)calculate the fitness value\&. This may be necessary in case of environments where the state changes without the chromosome to notice\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 1616 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_alwaysCalculateFitness\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationTest\&.testSetAlwaysCalculateFitness_0()\&.
+.SS "boolean org\&.jgap\&.Configuration\&.isKeepPopulationSizeConstant ()\fC [inline]\fP"
+See setKeepPopulationSizeConstant and GABreeder::evolve(Population, Configuration) for detailled explanation\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true: population size will always be the same size (as given with Configuration\&.setPopulationSize(int)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 1462 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_keepPopulationSizeConstant\&.
+.PP
+Referenced by org\&.jgap\&.Genotype\&.evolve(), org\&.jgap\&.impl\&.GABreeder\&.keepPopSizeConstant(), and org\&.jgap\&.ConfigurationTest\&.testKeepPopSizeConstant_0()\&.
+.SS "boolean org\&.jgap\&.Configuration\&.isLocked ()\fC [inline]\fP"
+Retrieves the lock status of this object\&.
+.PP
+\fBReturns:\fP
+.RS 4
+true if this object has been locked by a previous successful call to the \fBlockSettings()\fP method, false otherwise
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1091 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_settingsLocked\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationTest\&.testGetter_0(), org\&.jgap\&.ConfigurationTest\&.testIsLocked_0(), org\&.jgap\&.ConfigurationTest\&.testLock_1(), org\&.jgap\&.ConfigurationTest\&.testVerifyStateIsValid_0(), org\&.jgap\&.ConfigurationTest\&.testVerifyStateIsValid_1(), org\&.jgap\&.ConfigurationTest\&.testVerifyStateIsValid_2(), org\&.jgap\&.ConfigurationTest\&.testVerifyStateIsValid_3(), org\&.jgap\&.ConfigurationTest\&.testVerifyStateIsValid_4(), org\&.jgap\&.ConfigurationTest\&.testVerifyStateIsValid_5(), org\&.jgap\&.ConfigurationTest\&.testVerifyStateIsValid_6(), and org\&.jgap\&.ConfigurationTest\&.testVerifyStateIsValid_7()\&.
+.SS "boolean org\&.jgap\&.Configuration\&.isPreserveFittestIndividual ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+true: fittest chromosome should always be transferred to next generation
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 1286 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_preserveFittestIndividual\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GABreeder\&.evolve(), and org\&.jgap\&.ConfigurationTest\&.testSetPreserveFittestIndividual_0()\&.
+.SS "boolean org\&.jgap\&.Configuration\&.isUniqueKeysActive ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+true: use unique keys to allow tracking and monitoring
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 1911 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_uniqueKeysActive\&.
+.PP
+Referenced by org\&.jgap\&.BaseChromosome\&.BaseChromosome(), and org\&.jgap\&.BaseGene\&.BaseGene()\&.
+.SS "synchronized void org\&.jgap\&.Configuration\&.lockSettings () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Locks all of the settings in this configuration object\&. Once this method is successfully invoked, none of the settings may be changed\&. There is no way to unlock this object once it is locked\&. 
+.PP
+Prior to returning successfully, this method will first invoke the \fBverifyStateIsValid()\fP method to make sure that any required configuration options have been properly set\&. If it detects a problem, it will throw an \fBInvalidConfigurationException\fP and leave the object unlocked\&. 
+.PP
+It's possible to test whether this object is locked through the \fBisLocked()\fP method\&. 
+.PP
+It is ok to lock an object more than once\&. In that case, this method does nothing and simply returns\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP if this \fBConfiguration\fP object is in an invalid state at the time of invocation
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1071 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_settingsLocked, and org\&.jgap\&.Configuration\&.verifyStateIsValid()\&.
+.SS "String org\&.jgap\&.Configuration\&.makeKey (final Objecta_obj)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_obj\fP the object to make a key for, must not be null 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+key produced for the object (hashCode() is used, so it should be implemented properly!)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 583 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.getName()\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.checkProperty()\&.
+.SS "String org\&.jgap\&.Configuration\&.makeThreadKey ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 1621 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.getThreadKey(), org\&.jgap\&.Configuration\&.m_id, and org\&.jgap\&.Configuration\&.threadKey\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.Configuration(), and org\&.jgap\&.Configuration\&.readObject()\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.Configuration\&.newInstance (Stringa_id, Stringa_name)\fC [inline]\fP"
+Creates a new \fBConfiguration\fP instance by cloning\&. Allows to preset the ID and the name\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_id\fP new ID for clone 
+.br
+\fIa_name\fP new name for clone 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+deep clone of this instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 1720 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.util\&.ICloneable\&.clone(), org\&.jgap\&.Configuration\&.clone(), org\&.jgap\&.Configuration\&.Configuration(), org\&.jgap\&.Configuration\&.doClone(), org\&.jgap\&.Configuration\&.m_alwaysCalculateFitness, org\&.jgap\&.Configuration\&.m_breeder, org\&.jgap\&.Configuration\&.m_bulkObjectiveFunction, org\&.jgap\&.Configuration\&.m_chromosomeSize, org\&.jgap\&.Configuration\&.m_eventManager, org\&.jgap\&.Configuration\&.m_factory, org\&.jgap\&.Configuration\&.m_fitnessEvaluator, org\&.jgap\&.Configuration\&.m_geneticOperators, org\&.jgap\&.Configuration\&.m_keepPopulationSizeConstant, org\&.jgap\&.Configuration\&.m_minPercentageSizePopulation, org\&.jgap\&.Configuration\&.m_name, org\&.jgap\&.Configuration\&.m_objectiveFunction, org\&.jgap\&.Configuration\&.m_postSelectors, org\&.jgap\&.Configuration\&.m_preSelectors, org\&.jgap\&.Configuration\&.m_preserveFittestIndividual, org\&.jgap\&.Configuration\&.m_randomGenerator, org\&.jgap\&.Configuration\&.m_sampleChromosome, org\&.jgap\&.Configuration\&.m_selectFromPrevGen, and org\&.jgap\&.Configuration\&.m_settingsLocked\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.clone(), and examples\&.grid\&.mathProblemDistributed\&.MyRequestSplitStrategy\&.split()\&.
+.SS "void org\&.jgap\&.Configuration\&.readObject (ObjectInputStreama_inputStream) throws ClassNotFoundException, IOException\fC [inline]\fP, \fC [private]\fP"
+Sets a property in the bag\&.
+.PP
+Be aware that setting in unserializable value here leads to problems with distributed computing or other scenarios based on serialization!
+.PP
+Be aware that cloning may also lead to conflicts in case you use unsupported object types!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_propName\fP name of the property to se the value for 
+.br
+\fIa_value\fP value of the property
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.1
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_propName\fP name of the property to retrieve the value from 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+value of the property
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.1 Deserialize the object\&. Needed to provide a unique ID for each thread the object is used in\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_inputStream\fP the ObjectInputStream provided for deserialzation 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIClassNotFoundException\fP 
+.br
+\fIIOException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 1669 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.makeThreadKey()\&.
+.SS "void org\&.jgap\&.Configuration\&.removeNaturalSelectors (final booleana_processBeforeGeneticOperators)\fC [inline]\fP"
+Removes all natural selectors (either pre or post ones)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_processBeforeGeneticOperators\fP true: remove all selectors processed before genetic operators, false: remove the ones processed afterwards
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 839 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.getNaturalSelectors()\&.
+.SS "static void org\&.jgap\&.Configuration\&.reset ()\fC [inline]\fP, \fC [static]\fP"
+SHOULD NOT BE NECESSARY TO CALL UNDER NORMAL CIRCUMSTANCES\&. May be useful for unit tests\&.
+.PP
+Reset the configuration so that re-setting parameters such as fitness function is possible (without calling this method, an overwriting of a previously set fitness function results in a RuntimeException)\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 440 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationForTesting\&.ConfigurationForTesting()\&.
+.SS "static void org\&.jgap\&.Configuration\&.reset (final Stringa_id)\fC [inline]\fP, \fC [static]\fP"
+Reset the configuration so that re-setting parameters such as fitness function is possible (without calling this method, an overwriting of a previously set fitness function results in a RuntimeException)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_id\fP a hopefully unique id of the configuration
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 454 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.getThreadKey(), org\&.jgap\&.Configuration\&.PROPERTY_BFITFNC_INST, org\&.jgap\&.Configuration\&.PROPERTY_EVENT_MGR_INST, org\&.jgap\&.Configuration\&.PROPERTY_FITEVAL_INST, org\&.jgap\&.Configuration\&.PROPERTY_FITFUNC_INST, org\&.jgap\&.Configuration\&.PROPERTY_SAMPLE_CHROM_INST, and org\&.jgap\&.Configuration\&.threadKey\&.
+.SS "static void org\&.jgap\&.Configuration\&.resetProperty (final Stringa_propName)\fC [inline]\fP, \fC [static]\fP"
+See \fBConfiguration\&.reset()\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_propName\fP the property to reset
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 470 of file Configuration\&.java\&.
+.SS "static void org\&.jgap\&.Configuration\&.resetProperty (final Stringa_propName, final Stringa_id)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 474 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.getThreadKey(), and org\&.jgap\&.Configuration\&.threadKey\&.
+.SS "void org\&.jgap\&.Configuration\&.setAlwaysCaculateFitness (booleana_alwaysCalculate)\fC [inline]\fP"
+If population size should be kept constant then this selector determines which of the chromosomes to select into the next generation\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_popConstantSelector\fP the selector to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.2 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the registered selector to keep population size constant\&. If none is set, the NewestChromosomesSelector is instantiated, assigned and returned
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.2 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_alwaysCalculate\fP true: \fBChromosome\&.getFitnessValue()\fP will always (re-)calculate the fitness value\&. This may be necessary in case of environments where the state changes without the chromosome to notice\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 1604 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_alwaysCalculateFitness\&.
+.SS "void org\&.jgap\&.Configuration\&.setBreeder (\fBIBreeder\fPa_breeder)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_breeder\fP the breeder to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 1543 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_breeder\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.DefaultConfiguration\&.DefaultConfiguration()\&.
+.SS "synchronized void org\&.jgap\&.Configuration\&.setBulkFitnessFunction (final \fBBulkFitnessFunction\fPa_functionToSet) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Sets the bulk fitness function to be used for this genetic algorithm\&. The bulk fitness function may be used to evaluate and assign fitness values to the entire group of candidate Chromosomes in a single batch\&. This can be useful in cases where it's difficult to assign fitness values to a \fBChromosome\fP in isolation from the other candidate Chromosomes\&. 
+.PP
+Note that it is illegal to set both a bulk fitness function and a normal fitness function\&. Although one or the other is required, the two are mutually exclusive\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_functionToSet\fP bulk fitness function to be used
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP if the bulk fitness function is null, the normal fitness function has already been set, or if this \fBConfiguration\fP object is locked
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 624 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.checkProperty(), org\&.jgap\&.Configuration\&.m_bulkObjectiveFunction, org\&.jgap\&.Configuration\&.m_objectiveFunction, org\&.jgap\&.Configuration\&.PROPERTY_BFITFNC_INST, and org\&.jgap\&.Configuration\&.verifyChangesAllowed()\&.
+.SS "void org\&.jgap\&.Configuration\&.setChromosomePool (final \fBIChromosomePool\fPa_chromosomePoolToSet) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Sets the ChromosomePool that is to be associated with this configuration\&. The ChromosomePool is used to pool discarded \fBChromosome\fP instances so that they may be recycled later, thereby saving memory and the time to construct them from scratch\&. The presence of a ChromosomePool is optional\&. If none exists, then a new \fBChromosome\fP will be constructed each time one is needed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomePoolToSet\fP the ChromosomePool instance to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP if this object is locked
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1025 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_chromosomePool, and org\&.jgap\&.Configuration\&.verifyChangesAllowed()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.DefaultConfiguration\&.DefaultConfiguration(), and org\&.jgap\&.audit\&.PermutingConfiguration\&.PermutingConfiguration()\&.
+.SS "void org\&.jgap\&.Configuration\&.setEventManager (final IEventManagera_eventManagerToSet) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Sets the event manager that is to be associated with this configuration\&. The event manager is responsible for the management of event subscribers and event notifications\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_eventManagerToSet\fP the EventManager instance to use in this configuration
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP if the event manager is null or this \fBConfiguration\fP object is locked
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 981 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.checkProperty(), org\&.jgap\&.Configuration\&.m_eventManager, org\&.jgap\&.Configuration\&.PROPERTY_EVENT_MGR_INST, and org\&.jgap\&.Configuration\&.verifyChangesAllowed()\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationForTesting\&.ConfigurationForTesting(), org\&.jgap\&.impl\&.DefaultConfiguration\&.DefaultConfiguration(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.init(), and org\&.jgap\&.audit\&.PermutingConfiguration\&.PermutingConfiguration()\&.
+.SS "void org\&.jgap\&.Configuration\&.setFitnessEvaluator (\fBFitnessEvaluator\fPa_fitnessEvaluator)\fC [inline]\fP"
+Set the fitness evaluator (deciding if a given fitness value is better when it's higher or better when it's lower)\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_fitnessEvaluator\fP the \fBFitnessEvaluator\fP to be used
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1266 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.checkProperty(), org\&.jgap\&.Configuration\&.m_fitnessEvaluator, and org\&.jgap\&.Configuration\&.PROPERTY_FITEVAL_INST\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationForTesting\&.ConfigurationForTesting(), org\&.jgap\&.impl\&.DefaultConfiguration\&.DefaultConfiguration(), and org\&.jgap\&.audit\&.PermutingConfiguration\&.PermutingConfiguration()\&.
+.SS "synchronized void org\&.jgap\&.Configuration\&.setFitnessFunction (final \fBFitnessFunction\fPa_functionToSet) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Sets the fitness function to be used for this genetic algorithm\&. The fitness function is responsible for evaluating a given \fBChromosome\fP and returning a positive integer that represents its worth as a candidate solution\&. These values are used as a guide by the natural to determine which \fBChromosome\fP instances will be allowed to move on to the next round of evolution, and which will instead be eliminated\&.
+.PP
+Note that it is illegal to set both this fitness function and a bulk fitness function\&. Although one or the other must be set, the two are mutually exclusive\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_functionToSet\fP fitness function to be used
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP if the fitness function is null, a bulk fitness function has already been set, or if this \fBConfiguration\fP object is locked\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 520 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.checkProperty(), org\&.jgap\&.Configuration\&.m_bulkObjectiveFunction, org\&.jgap\&.Configuration\&.m_objectiveFunction, org\&.jgap\&.Configuration\&.PROPERTY_FITFUNC_INST, and org\&.jgap\&.Configuration\&.verifyChangesAllowed()\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationForTesting\&.ConfigurationForTesting(), org\&.jgap\&.audit\&.PermutingConfiguration\&.next(), and org\&.jgap\&.audit\&.PermutingConfiguration\&.PermutingConfiguration()\&.
+.SS "void org\&.jgap\&.Configuration\&.setId (Stringa_id)\fC [inline]\fP, \fC [protected]\fP"
+Only to be called by sub classes, such as GPConfiguration\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_id\fP the id to set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 1695 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_id\&.
+.SS "void org\&.jgap\&.Configuration\&.setJGAPFactory (\fBIJGAPFactory\fPa_factory)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_factory\fP the \fBIJGAPFactory\fP to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 1533 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_factory\&.
+.SS "void org\&.jgap\&.Configuration\&.setKeepPopulationSizeConstant (booleana_keepPopSizeConstant)\fC [inline]\fP"
+Allows to keep the population size constant during one evolution, even if there is no appropriate instance of \fBNaturalSelector\fP (such as WeightedRouletteSelector) registered with the \fBConfiguration\fP\&.
+.PP
+See setKeepPopulationSizeConstant and GABreeder::evolve(Population, Configuration) for detailled explanation\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_keepPopSizeConstant\fP true: population size will always be the same size (as given with Configuration\&.setPopulationSize(int)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 1480 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_keepPopulationSizeConstant\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.DefaultConfiguration\&.DefaultConfiguration()\&.
+.SS "void org\&.jgap\&.Configuration\&.setMinimumPopSizePercent (inta_minimumSizeGuaranteedPercent)\fC [inline]\fP"
+Minimum size guaranteed for population\&. This is significant during evolution as natural selectors could select fewer chromosomes for the next generation than the initial population size was\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_minimumSizeGuaranteedPercent\fP if zero or below then no ensurance for size given, see \fBGenotype\&.evolve()\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Definition at line 1240 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_minPercentageSizePopulation\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.DefaultConfiguration\&.DefaultConfiguration(), and org\&.jgap\&.audit\&.PermutingConfiguration\&.PermutingConfiguration()\&.
+.SS "void org\&.jgap\&.Configuration\&.setMonitor (IEvolutionMonitora_monitor)\fC [inline]\fP"
+Sets a monitor for auditing evolution progress\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_monitor\fP the monitor to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 1878 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_monitor, and org\&.jgap\&.Configuration\&.setUniqueKeysActive()\&.
+.SS "void org\&.jgap\&.Configuration\&.setName (final Stringa_name)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP informative name of the configuration
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 485 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_name\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.Configuration(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.GPConfiguration()\&.
+.SS "synchronized void org\&.jgap\&.Configuration\&.setNaturalSelector (final \fBNaturalSelector\fPa_selectorToSet) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Sets the natural selector to be used for this genetic algorithm\&. The natural selector is responsible for actually selecting which \fBChromosome\fP instances are allowed to move on to the next round of evolution (usually guided by the fitness values provided by the fitness function)\&. This setting is required\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_selectorToSet\fP the natural selector to be used
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP if the natural selector is null or this \fBConfiguration\fP object is locked
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBDeprecated\fP
+.RS 4
+use addNaturalSelector(false) instead 
+.RE
+.PP
+
+.PP
+Definition at line 744 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.addNaturalSelector()\&.
+.SS "synchronized void org\&.jgap\&.Configuration\&.setPopulationSize (final inta_sizeOfPopulation) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Sets the population size to be used for this genetic algorithm\&. The population size is a fixed value that represents the number of Chromosomes contained within the \fBGenotype\fP (population)\&. This setting is required\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_sizeOfPopulation\fP population size to be used
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP if the population size is not positive or this object is locked
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 946 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.verifyChangesAllowed()\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationForTesting\&.ConfigurationForTesting(), examples\&.gp\&.monalisa\&.core\&.DrawingGPConfiguration\&.DrawingGPConfiguration(), and org\&.jgap\&.audit\&.PermutingConfiguration\&.PermutingConfiguration()\&.
+.SS "void org\&.jgap\&.Configuration\&.setPreservFittestIndividual (booleana_preserveFittest)\fC [inline]\fP"
+Determines whether to save (keep) the fittest individual\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_preserveFittest\fP true: always transfer fittest chromosome to next generation
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 1298 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_preserveFittestIndividual\&.
+.SS "synchronized void org\&.jgap\&.Configuration\&.setRandomGenerator (final \fBRandomGenerator\fPa_generatorToSet) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Sets the random generator to be used for this genetic algorithm\&. The random generator is responsible for generating random numbers, which are used throughout the process of genetic evolution and selection\&. This setting is required\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_generatorToSet\fP random generator to be used
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP if the random generator is null or this object is locked
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 863 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_randomGenerator, and org\&.jgap\&.Configuration\&.verifyChangesAllowed()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.DefaultConfiguration\&.DefaultConfiguration(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.init(), and org\&.jgap\&.audit\&.PermutingConfiguration\&.PermutingConfiguration()\&.
+.SS "void org\&.jgap\&.Configuration\&.setSampleChromosome (final \fBIChromosome\fPa_sampleChromosomeToSet) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Sets the sample \fBChromosome\fP that is to be used as a guide for the construction of other Chromosomes\&. The \fBChromosome\fP should be setup with each gene represented by the desired concrete \fBGene\fP implementation for that gene position (locus)\&. Anytime a new \fBChromosome\fP is created, it will be constructed with the same \fBGene\fP setup as that provided in this sample \fBChromosome\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_sampleChromosomeToSet\fP \fBChromosome\fP to be used as the sample 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP if the given \fBChromosome\fP is null or this \fBConfiguration\fP object is locked
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 678 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.checkProperty(), org\&.jgap\&.Configuration\&.m_chromosomeSize, org\&.jgap\&.Configuration\&.m_sampleChromosome, org\&.jgap\&.Configuration\&.PROPERTY_SAMPLE_CHROM_INST, and org\&.jgap\&.Configuration\&.verifyChangesAllowed()\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationForTesting\&.ConfigurationForTesting(), and org\&.jgap\&.audit\&.PermutingConfiguration\&.PermutingConfiguration()\&.
+.SS "void org\&.jgap\&.Configuration\&.setSelectFromPrevGen (doublea_percentage)\fC [inline]\fP"
+
+.PP
+Definition at line 1484 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_selectFromPrevGen\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.DefaultConfiguration\&.DefaultConfiguration()\&.
+.SS "void org\&.jgap\&.Configuration\&.setUniqueKeysActive (booleana_active)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_active\fP true: use unique keys to allow tracking and monitoring
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 1901 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_uniqueKeysActive\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.setMonitor()\&.
+.SS "String org\&.jgap\&.Configuration\&.toString ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+string representation of the configuration containing all configurable elements
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 1328 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.getChromosomeSize(), org\&.jgap\&.Configuration\&.getConfigurationHandler(), org\&.jgap\&.Configuration\&.getEventManager(), org\&.jgap\&.Configuration\&.getFitnessEvaluator(), org\&.jgap\&.Configuration\&.getFitnessFunction(), org\&.jgap\&.Configuration\&.getGeneticOperators(), org\&.jgap\&.Configuration\&.getMinimumPopSizePercent(), org\&.jgap\&.Configuration\&.getName(), org\&.jgap\&.Configuration\&.getNaturalSelectors(), org\&.jgap\&.Configuration\&.getPopulationSize(), org\&.jgap\&.Configuration\&.getRandomGenerator(), org\&.jgap\&.Configuration\&.getSampleChromosome(), org\&.jgap\&.Configuration\&.S_CHROMOSOME_SIZE, org\&.jgap\&.Configuration\&.S_CONFIGURATION, org\&.jgap\&.Configuration\&.S_CONFIGURATION_HANDLER, org\&.jgap\&.Configuration\&.S_CONFIGURATION_NAME, org\&.jgap\&.Configuration\&.S_EVENT_MANAGER, org\&.jgap\&.Configuration\&.S_FITNESS_EVALUATOR, org\&.jgap\&.Configuration\&.S_FITNESS_FUNCTION, org\&.jgap\&.Configuration\&.S_GENETIC_OPERATORS, org\&.jgap\&.Configuration\&.S_MINPOPSIZE, org\&.jgap\&.Configuration\&.S_NATURAL_SELECTORS, org\&.jgap\&.Configuration\&.S_NONE, org\&.jgap\&.Configuration\&.S_POPULATION_SIZE, org\&.jgap\&.Configuration\&.S_POST, org\&.jgap\&.Configuration\&.S_PRE, org\&.jgap\&.Configuration\&.S_RANDOM_GENERATOR, org\&.jgap\&.Configuration\&.S_SAMPLE_CHROM, org\&.jgap\&.Configuration\&.S_SIZE, and org\&.jgap\&.Configuration\&.S_TOSTRING\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationTest\&.testToString_0()\&.
+.SS "void org\&.jgap\&.Configuration\&.verifyChangesAllowed () throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [protected]\fP"
+Makes sure that this \fBConfiguration\fP object isn't locked\&. If it is, then an exception is thrown with an appropriate message indicating that settings in this object may not be altered\&. This method should be invoked by any mutator method in this object prior to making any state alterations\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP if this \fBConfiguration\fP object is locked
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1195 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_settingsLocked\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.addGeneticOperator(), org\&.jgap\&.Configuration\&.addNaturalSelector(), org\&.jgap\&.Configuration\&.setBulkFitnessFunction(), org\&.jgap\&.Configuration\&.setChromosomePool(), org\&.jgap\&.Configuration\&.setEventManager(), org\&.jgap\&.Configuration\&.setFitnessFunction(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setFitnessFunction(), org\&.jgap\&.Configuration\&.setPopulationSize(), org\&.jgap\&.Configuration\&.setRandomGenerator(), and org\&.jgap\&.Configuration\&.setSampleChromosome()\&.
+.SS "synchronized void org\&.jgap\&.Configuration\&.verifyStateIsValid () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Tests the state of this \fBConfiguration\fP object to make sure it's valid\&. This generally consists of verifying that required settings have, in fact, been set\&. If this object is not in a valid state, then an exception will be thrown detailing the reason the state is not valid\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP if the state of this \fBConfiguration\fP is not valid\&. The error message in the exception will detail the reason for invalidity
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1108 of file Configuration\&.java\&.
+.PP
+References org\&.jgap\&.Configuration\&.m_bulkObjectiveFunction, org\&.jgap\&.Configuration\&.m_chromosomeSize, org\&.jgap\&.Configuration\&.m_config, org\&.jgap\&.Configuration\&.m_eventManager, org\&.jgap\&.Configuration\&.m_fitnessEvaluator, org\&.jgap\&.Configuration\&.m_geneticOperators, org\&.jgap\&.Configuration\&.m_objectiveFunction, org\&.jgap\&.Configuration\&.m_preSelectors, org\&.jgap\&.Configuration\&.m_randomGenerator, and org\&.jgap\&.Configuration\&.m_sampleChromosome\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.lockSettings()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.Configuration\&.CVS_REVISION = '$Revision: 1\&.102 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 47 of file Configuration\&.java\&.
+.SS "boolean org\&.jgap\&.Configuration\&.m_alwaysCalculateFitness\fC [private]\fP"
+See \fBChromosome\fP class, field m_alwaysCalculate, for description
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 313 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.compareTo(), org\&.jgap\&.Configuration\&.Configuration(), org\&.jgap\&.Configuration\&.isAlwaysCalculateFitness(), org\&.jgap\&.Configuration\&.newInstance(), and org\&.jgap\&.Configuration\&.setAlwaysCaculateFitness()\&.
+.SS "\fBIBreeder\fP org\&.jgap\&.Configuration\&.m_breeder\fC [private]\fP"
+Performs the evolution\&. 
+.PP
+Definition at line 138 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.compareTo(), org\&.jgap\&.Configuration\&.getBreeder(), org\&.jgap\&.Configuration\&.newInstance(), and org\&.jgap\&.Configuration\&.setBreeder()\&.
+.SS "\fBBulkFitnessFunction\fP org\&.jgap\&.Configuration\&.m_bulkObjectiveFunction\fC [private]\fP"
+References the current bulk fitness function that will be used to evaluate chromosomes (in bulk) during the natural selection process\&. Note that only this or the normal fitness function may be set - the two are mutually exclusive\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 156 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.compareTo(), org\&.jgap\&.Configuration\&.getBulkFitnessFunction(), org\&.jgap\&.Configuration\&.newInstance(), org\&.jgap\&.Configuration\&.setBulkFitnessFunction(), org\&.jgap\&.Configuration\&.setFitnessFunction(), and org\&.jgap\&.Configuration\&.verifyStateIsValid()\&.
+.SS "transient \fBIChromosomePool\fP org\&.jgap\&.Configuration\&.m_chromosomePool\fC [private]\fP"
+References the chromosome pool, if any, that is to be used to pool discarded \fBChromosome\fP instances so that they may be recycled later, thereby saving memory and the time to construct them from scratch\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 204 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.getChromosomePool(), and org\&.jgap\&.Configuration\&.setChromosomePool()\&.
+.SS "int org\&.jgap\&.Configuration\&.m_chromosomeSize\fC [private]\fP"
+The number of genes that will be stored in each chromosome in the population\&. 
+.PP
+Definition at line 221 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.compareTo(), org\&.jgap\&.Configuration\&.getChromosomeSize(), org\&.jgap\&.Configuration\&.newInstance(), org\&.jgap\&.Configuration\&.setSampleChromosome(), and org\&.jgap\&.Configuration\&.verifyStateIsValid()\&.
+.SS "\fBConfigurationConfigurable\fP org\&.jgap\&.Configuration\&.m_config = new \fBConfigurationConfigurable\fP()\fC [private]\fP"
+Contains a bag of custom properties\&. Can be empty\&. A custom property is such that is not included in the standard JGAP configuration\&.
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 116 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.verifyStateIsValid()\&.
+.SS "transient RootConfigurationHandler org\&.jgap\&.Configuration\&.m_conHandler\fC [private]\fP"
+The \fBConfiguration\fP handler for this Configurable\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 278 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.Configuration(), and org\&.jgap\&.Configuration\&.getConfigurationHandler()\&.
+.SS "IEventManager org\&.jgap\&.Configuration\&.m_eventManager\fC [private]\fP"
+References the event manager that is to be used for the notification of genetic events and the management of event subscribers\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 194 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.getEventManager(), org\&.jgap\&.Configuration\&.newInstance(), org\&.jgap\&.Configuration\&.setEventManager(), and org\&.jgap\&.Configuration\&.verifyStateIsValid()\&.
+.SS "\fBIJGAPFactory\fP org\&.jgap\&.Configuration\&.m_factory\fC [private]\fP"
+Holds the central configurable factory for creating default objects\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 305 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.compareTo(), org\&.jgap\&.Configuration\&.Configuration(), org\&.jgap\&.Configuration\&.getJGAPFactory(), org\&.jgap\&.Configuration\&.newInstance(), and org\&.jgap\&.Configuration\&.setJGAPFactory()\&.
+.SS "\fBFitnessEvaluator\fP org\&.jgap\&.Configuration\&.m_fitnessEvaluator\fC [private]\fP"
+The fitness evaluator\&. See interface class \fBFitnessEvaluator\fP for details\&.
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 (since 1\&.1 in class \fBGenotype\fP) 
+.RE
+.PP
+
+.PP
+Definition at line 133 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.compareTo(), org\&.jgap\&.Configuration\&.getFitnessEvaluator(), org\&.jgap\&.Configuration\&.newInstance(), org\&.jgap\&.Configuration\&.setFitnessEvaluator(), and org\&.jgap\&.Configuration\&.verifyStateIsValid()\&.
+.SS "int org\&.jgap\&.Configuration\&.m_generationNr\fC [private]\fP"
+Indicates how many times the evolve()-method in class \fBGenotype\fP has been called\&. Represents the number of the current population\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 270 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.compareTo(), org\&.jgap\&.Configuration\&.getGenerationNr(), and org\&.jgap\&.Configuration\&.incrementGenerationNr()\&.
+.SS "List org\&.jgap\&.Configuration\&.m_geneticOperators\fC [private]\fP"
+Stores all of the \fBGeneticOperator\fP implementations that are to be used to operate upon the chromosomes of a population prior to natural selection\&. Operators will be executed in the order that they are added to this list\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 215 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.compareTo(), org\&.jgap\&.Configuration\&.Configuration(), org\&.jgap\&.Configuration\&.getGeneticOperators(), org\&.jgap\&.Configuration\&.newInstance(), and org\&.jgap\&.Configuration\&.verifyStateIsValid()\&.
+.SS "String org\&.jgap\&.Configuration\&.m_id\fC [private]\fP"
+Unique ID for a configuration to distinguish it from other configurations instantiated within the same thread\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 333 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.clone(), org\&.jgap\&.Configuration\&.Configuration(), org\&.jgap\&.Configuration\&.getId(), org\&.jgap\&.Configuration\&.makeThreadKey(), and org\&.jgap\&.Configuration\&.setId()\&.
+.SS "boolean org\&.jgap\&.Configuration\&.m_keepPopulationSizeConstant\fC [private]\fP"
+True: population size will be kept constant at specified size in configuration\&. False: population size will grow dependently on used \fBNaturalSelector\fP's and \fBGeneticOperator\fP's\&. Default is TRUE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 297 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.compareTo(), org\&.jgap\&.Configuration\&.Configuration(), org\&.jgap\&.Configuration\&.isKeepPopulationSizeConstant(), org\&.jgap\&.Configuration\&.newInstance(), and org\&.jgap\&.Configuration\&.setKeepPopulationSizeConstant()\&.
+.SS "int org\&.jgap\&.Configuration\&.m_minPercentageSizePopulation\fC [private]\fP"
+Minimum size guaranteed for population\&. If zero or below then no ensurance\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Definition at line 145 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.compareTo(), org\&.jgap\&.Configuration\&.getMinimumPopSizePercent(), org\&.jgap\&.Configuration\&.newInstance(), and org\&.jgap\&.Configuration\&.setMinimumPopSizePercent()\&.
+.SS "IEvolutionMonitor org\&.jgap\&.Configuration\&.m_monitor\fC [private]\fP"
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 340 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.getMonitor(), and org\&.jgap\&.Configuration\&.setMonitor()\&.
+.SS "String org\&.jgap\&.Configuration\&.m_name\fC [private]\fP"
+Informative name for output\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 286 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.clone(), org\&.jgap\&.Configuration\&.compareTo(), org\&.jgap\&.Configuration\&.getName(), org\&.jgap\&.Configuration\&.newInstance(), and org\&.jgap\&.Configuration\&.setName()\&.
+.SS "\fBFitnessFunction\fP org\&.jgap\&.Configuration\&.m_objectiveFunction\fC [private]\fP"
+References the current fitness function that will be used to evaluate chromosomes during the natural selection process\&. Note that only this or the bulk fitness function may be set - the two are mutually exclusive\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 126 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.compareTo(), org\&.jgap\&.Configuration\&.getFitnessFunction(), org\&.jgap\&.Configuration\&.newInstance(), org\&.jgap\&.Configuration\&.setBulkFitnessFunction(), org\&.jgap\&.Configuration\&.setFitnessFunction(), and org\&.jgap\&.Configuration\&.verifyStateIsValid()\&.
+.SS "ChainOfSelectors org\&.jgap\&.Configuration\&.m_postSelectors\fC [private]\fP"
+Ordered chain of \fBNaturalSelector\fP's which will be executed after applying Genetic Operators\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 247 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.compareTo(), org\&.jgap\&.Configuration\&.Configuration(), org\&.jgap\&.Configuration\&.getNaturalSelectors(), and org\&.jgap\&.Configuration\&.newInstance()\&.
+.SS "ChainOfSelectors org\&.jgap\&.Configuration\&.m_preSelectors\fC [private]\fP"
+Ordered chain of \fBNaturalSelector\fP's which will be executed before applying Genetic Operators\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 238 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.compareTo(), org\&.jgap\&.Configuration\&.Configuration(), org\&.jgap\&.Configuration\&.getNaturalSelectors(), org\&.jgap\&.Configuration\&.newInstance(), and org\&.jgap\&.Configuration\&.verifyStateIsValid()\&.
+.SS "boolean org\&.jgap\&.Configuration\&.m_preserveFittestIndividual\fC [private]\fP"
+Should the fittest chromosome in the population be preserved to the next generation when evolving (in \fBGenotype\&.evolve()\fP) ? 
+.PP
+Definition at line 253 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.compareTo(), org\&.jgap\&.Configuration\&.isPreserveFittestIndividual(), org\&.jgap\&.Configuration\&.newInstance(), and org\&.jgap\&.Configuration\&.setPreservFittestIndividual()\&.
+.SS "\fBRandomGenerator\fP org\&.jgap\&.Configuration\&.m_randomGenerator\fC [private]\fP"
+References the random number generator implementation that is to be used for the generation of any random numbers during the various genetic operations and processes\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 185 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.compareTo(), org\&.jgap\&.Configuration\&.getRandomGenerator(), org\&.jgap\&.Configuration\&.newInstance(), org\&.jgap\&.Configuration\&.setRandomGenerator(), and org\&.jgap\&.Configuration\&.verifyStateIsValid()\&.
+.SS "\fBIChromosome\fP org\&.jgap\&.Configuration\&.m_sampleChromosome\fC [private]\fP"
+If population size should be kept constant then this selector determines which of the chromosomes to select into the next generation\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.2 References a \fBChromosome\fP that serves as a sample of the \fBGene\fP setup that is to be used\&. Each gene in the \fBChromosome\fP should be represented with the desired \fBGene\fP type\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 175 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.compareTo(), org\&.jgap\&.Configuration\&.getSampleChromosome(), org\&.jgap\&.Configuration\&.newInstance(), org\&.jgap\&.Configuration\&.setSampleChromosome(), and org\&.jgap\&.Configuration\&.verifyStateIsValid()\&.
+.SS "double org\&.jgap\&.Configuration\&.m_selectFromPrevGen\fC [private]\fP"
+How many chromosomes should be selected from previous generation? The missing chromosomes will be filled up with randomly created new ones\&. 1 = all 
+.PP
+Definition at line 261 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.compareTo(), org\&.jgap\&.Configuration\&.Configuration(), org\&.jgap\&.Configuration\&.getSelectFromPrevGen(), org\&.jgap\&.Configuration\&.newInstance(), and org\&.jgap\&.Configuration\&.setSelectFromPrevGen()\&.
+.SS "boolean org\&.jgap\&.Configuration\&.m_settingsLocked\fC [private]\fP"
+Indicates whether the settings of this \fBConfiguration\fP instance have been locked\&. Prior to locking, the settings may be set and reset as desired\&. Once this flag is set to true, no settings may be altered\&. 
+.PP
+Definition at line 229 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.compareTo(), org\&.jgap\&.Configuration\&.isLocked(), org\&.jgap\&.Configuration\&.lockSettings(), org\&.jgap\&.Configuration\&.newInstance(), and org\&.jgap\&.Configuration\&.verifyChangesAllowed()\&.
+.SS "boolean org\&.jgap\&.Configuration\&.m_uniqueKeysActive\fC [private]\fP"
+True: Use unique keys, especially in Chromosomes, to allow tracking and monitoring of evolution progress\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 324 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.isUniqueKeysActive(), and org\&.jgap\&.Configuration\&.setUniqueKeysActive()\&.
+.SS "final String org\&.jgap\&.Configuration\&.PROPERTY_BFITFNC_INST = 'JGAPBFITFNCINST'\fC [static]\fP"
+
+.PP
+Definition at line 58 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.reset(), and org\&.jgap\&.Configuration\&.setBulkFitnessFunction()\&.
+.SS "final String org\&.jgap\&.Configuration\&.PROPERTY_EVENT_MGR_INST = 'JGAPEVNTMGRINST'\fC [static]\fP"
+
+.PP
+Definition at line 64 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.reset(), and org\&.jgap\&.Configuration\&.setEventManager()\&.
+.SS "final String org\&.jgap\&.Configuration\&.PROPERTY_FITEVAL_INST = 'JGAPFITEVALINST'\fC [static]\fP"
+
+.PP
+Definition at line 60 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.reset(), org\&.jgap\&.Configuration\&.setFitnessEvaluator(), org\&.jgap\&.PopulationTest\&.testDetermineFittestChromosome_3(), and org\&.jgap\&.GenotypeTest\&.testEvolve_10()\&.
+.SS "final String org\&.jgap\&.Configuration\&.PROPERTY_FITFUNC_INST = 'JGAPFITFUNCINST'\fC [static]\fP"
+
+.PP
+Definition at line 56 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.PermutingConfiguration\&.next(), org\&.jgap\&.Configuration\&.reset(), org\&.jgap\&.Configuration\&.setFitnessFunction(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.setFitnessFunction()\&.
+.SS "final String org\&.jgap\&.Configuration\&.PROPERTY_JGAPFACTORY_CLASS = 'JGAPFACTORYCLASS'\fC [static]\fP"
+Constant for class name of JGAP Factory to use\&. Use as: System\&.setProperty(PROPERTY_JGAPFACTORY_CLASS, 'myJGAPFactory'); If none such property set, class JGAPFactory will be used\&. 
+.PP
+Definition at line 54 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.Configuration(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.init(), org\&.jgap\&.JGAPTestCase\&.setUp(), org\&.jgap\&.ConfigurationTest\&.testConstruct_0(), org\&.jgap\&.ConfigurationTest\&.testConstruct_1(), and org\&.jgap\&.ConfigurationTest\&.testConstruct_2()\&.
+.SS "final String org\&.jgap\&.Configuration\&.PROPERTY_SAMPLE_CHROM_INST = 'JGAPSAMPLECHRMINST'\fC [static]\fP"
+
+.PP
+Definition at line 62 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.reset(), org\&.jgap\&.Configuration\&.setSampleChromosome(), org\&.jgap\&.xml\&.XMLManagerTest\&.testChromosome_0(), org\&.jgap\&.GenotypeTest\&.testEvolve_5_1(), org\&.jgap\&.GenotypeTest\&.testEvolve_5_2(), org\&.jgap\&.GenotypeTest\&.testEvolve_5_3(), and org\&.jgap\&.xml\&.XMLManagerTest\&.testGenotype_0()\&.
+.SS "final String org\&.jgap\&.Configuration\&.S_CHROMOSOME_SIZE = 'Chromosome size'\fC [static]\fP"
+
+.PP
+Definition at line 77 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.toString()\&.
+.SS "final String org\&.jgap\&.Configuration\&.S_CONFIGURATION = 'Configuration'\fC [static]\fP"
+Constants for \fBtoString()\fP 
+.PP
+Definition at line 69 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationTest\&.testToString_0(), and org\&.jgap\&.Configuration\&.toString()\&.
+.SS "final String org\&.jgap\&.Configuration\&.S_CONFIGURATION_HANDLER = 'Configuration handler'\fC [static]\fP"
+
+.PP
+Definition at line 91 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.toString()\&.
+.SS "final String org\&.jgap\&.Configuration\&.S_CONFIGURATION_NAME = 'Configuration name'\fC [static]\fP"
+
+.PP
+Definition at line 71 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationTest\&.testToString_0(), and org\&.jgap\&.Configuration\&.toString()\&.
+.SS "final String org\&.jgap\&.Configuration\&.S_EVENT_MANAGER = 'Event manager'\fC [static]\fP"
+
+.PP
+Definition at line 87 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.toString()\&.
+.SS "final String org\&.jgap\&.Configuration\&.S_FITNESS_EVALUATOR = 'Fitness evaluator'\fC [static]\fP"
+
+.PP
+Definition at line 95 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationTest\&.testToString_0(), and org\&.jgap\&.Configuration\&.toString()\&.
+.SS "final String org\&.jgap\&.Configuration\&.S_FITNESS_FUNCTION = 'Fitness function'\fC [static]\fP"
+
+.PP
+Definition at line 93 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.toString()\&.
+.SS "final String org\&.jgap\&.Configuration\&.S_GENETIC_OPERATORS = 'Genetic operators'\fC [static]\fP"
+
+.PP
+Definition at line 99 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.toString()\&.
+.SS "final String org\&.jgap\&.Configuration\&.S_MINPOPSIZE = 'Minimum pop\&. size [%]'\fC [static]\fP"
+
+.PP
+Definition at line 75 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationTest\&.testToString_0(), and org\&.jgap\&.Configuration\&.toString()\&.
+.SS "final String org\&.jgap\&.Configuration\&.S_NATURAL_SELECTORS = 'Natural Selectors'\fC [static]\fP"
+
+.PP
+Definition at line 101 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.toString()\&.
+.SS "final String org\&.jgap\&.Configuration\&.S_NONE = 'none'\fC [static]\fP"
+
+.PP
+Definition at line 89 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.toString()\&.
+.SS "final String org\&.jgap\&.Configuration\&.S_POPULATION_SIZE = 'Population size'\fC [static]\fP"
+
+.PP
+Definition at line 73 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.toString()\&.
+.SS "final String org\&.jgap\&.Configuration\&.S_POST = 'post'\fC [static]\fP"
+
+.PP
+Definition at line 105 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.toString()\&.
+.SS "final String org\&.jgap\&.Configuration\&.S_PRE = 'pre'\fC [static]\fP"
+
+.PP
+Definition at line 103 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.toString()\&.
+.SS "final String org\&.jgap\&.Configuration\&.S_RANDOM_GENERATOR = 'Random generator'\fC [static]\fP"
+
+.PP
+Definition at line 85 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationTest\&.testToString_0(), and org\&.jgap\&.Configuration\&.toString()\&.
+.SS "final String org\&.jgap\&.Configuration\&.S_SAMPLE_CHROM = 'Sample \fBChromosome\fP'\fC [static]\fP"
+
+.PP
+Definition at line 79 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationTest\&.testToString_0(), and org\&.jgap\&.Configuration\&.toString()\&.
+.SS "final String org\&.jgap\&.Configuration\&.S_SIZE = 'Size'\fC [static]\fP"
+
+.PP
+Definition at line 81 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationTest\&.testToString_0(), and org\&.jgap\&.Configuration\&.toString()\&.
+.SS "final String org\&.jgap\&.Configuration\&.S_TOSTRING = 'toString'\fC [static]\fP"
+
+.PP
+Definition at line 83 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.ConfigurationTest\&.testToString_0(), and org\&.jgap\&.Configuration\&.toString()\&.
+.SS "transient String org\&.jgap\&.Configuration\&.threadKey\fC [private]\fP"
+
+.PP
+Definition at line 315 of file Configuration\&.java\&.
+.PP
+Referenced by org\&.jgap\&.Configuration\&.checkProperty(), org\&.jgap\&.Configuration\&.compareTo(), org\&.jgap\&.Configuration\&.makeThreadKey(), org\&.jgap\&.Configuration\&.reset(), and org\&.jgap\&.Configuration\&.resetProperty()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

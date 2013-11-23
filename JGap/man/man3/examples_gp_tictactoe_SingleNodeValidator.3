@@ -1,0 +1,88 @@
+.TH "examples.gp.tictactoe.SingleNodeValidator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.tictactoe.SingleNodeValidator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.ISingleNodeValidator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "boolean \fBisAllowed\fP (int a_chromIndex, \fBProgramChromosome\fP a_pc, \fBCommandGene\fP[] a_functionSet, \fBCommandGene\fP a_function, Class a_returnType, int a_subReturnTyp, int m_index)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Valides single nodes during GP program creation to make this process more efficient\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 14 of file SingleNodeValidator\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "boolean examples\&.gp\&.tictactoe\&.SingleNodeValidator\&.isAllowed (inta_chromIndex, \fBProgramChromosome\fPa_pc, \fBCommandGene\fP[]a_functionSet, \fBCommandGene\fPa_function, Classa_returnType, inta_subReturnTyp, intm_index)\fC [inline]\fP"
+Checks if the given a_function is allowed in the current context\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromIndex\fP index of the chromosome within the GP program 
+.br
+\fIa_pc\fP the instance of the ProgramChromosome 
+.br
+\fIa_functionSet\fP the current function set within the program chromosome (given as input parameter for convenience, could also be determined via a_pc\&.m_genes) 
+.br
+\fIa_function\fP the function that should be added, if allowed 
+.br
+\fIa_returnType\fP the class the return type is required to have 
+.br
+\fIa_subReturnTyp\fP the sub return type the return type is required to have 
+.br
+\fIm_index\fP the index of the up-to-date last command gene in the program chromosome 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if a_function's class exists within a_functionSet
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+provide convenient method setNonConsecutive(boolean) in CommandGene 
+.RE
+.PP
+
+.PP
+Definition at line 35 of file SingleNodeValidator\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.contains()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

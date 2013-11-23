@@ -1,0 +1,213 @@
+\hypertarget{classexamples_1_1_minimizing_make_change}{\section{examples.\-Minimizing\-Make\-Change Class Reference}
+\label{classexamples_1_1_minimizing_make_change}\index{examples.\-Minimizing\-Make\-Change@{examples.\-Minimizing\-Make\-Change}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classexamples_1_1_minimizing_make_change_afdb27e2502d878504a6fc01d09c2e46f}{make\-Change\-For\-Amount} (int a\-\_\-target\-Change\-Amount, boolean a\-\_\-do\-Monitor)  throws Exception 
+\item 
+static void \hyperlink{classexamples_1_1_minimizing_make_change_ae1370fb6d40b6403426fc0f715a295b1}{main} (String\mbox{[}$\,$\mbox{]} args)  throws Exception 
+\item 
+static boolean \hyperlink{classexamples_1_1_minimizing_make_change_ae1d908d7ed6d86e7bec37ff6172aa7b3}{unique\-Chromosomes} (Population a\-\_\-pop)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Evolution\-Monitor \hyperlink{classexamples_1_1_minimizing_make_change_ac2bd233483d61d35e663cdcde7fae07a}{m\-\_\-monitor}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classexamples_1_1_minimizing_make_change_a0de48783b67c152af30702448f6c02d0}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-27 \$\char`\"{}
+\item 
+static final int \hyperlink{classexamples_1_1_minimizing_make_change_ae2d2ac25bf02f1feff515e58a908557c}{M\-A\-X\-\_\-\-A\-L\-L\-O\-W\-E\-D\-\_\-\-E\-V\-O\-L\-U\-T\-I\-O\-N\-S} = 50
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class provides an implementation of the classic \char`\"{}\-Make change\char`\"{} problem using a genetic algorithm. The goal of the problem is to provide a specified amount of change (from a cash purchase) in the fewest coins possible. This example implementation uses American currency (quarters, dimes, nickels, and pennies). 
+
+This example may be seen as somewhat significant because it demonstrates the use of a genetic algorithm in a less-\/than-\/optimal problem space. The genetic algorithm does best when there is a smooth slope of fitness over the problem space towards the optimum solution. This problem exhibits a more choppy space with more local optima. However, as can be seen from running this example, the genetic algorithm still will get the correct (or a very close) answer virtually everytime.
+
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 40 of file Minimizing\-Make\-Change.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classexamples_1_1_minimizing_make_change_ae1370fb6d40b6403426fc0f715a295b1}{\index{examples\-::\-Minimizing\-Make\-Change@{examples\-::\-Minimizing\-Make\-Change}!main@{main}}
+\index{main@{main}!examples::MinimizingMakeChange@{examples\-::\-Minimizing\-Make\-Change}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void examples.\-Minimizing\-Make\-Change.\-main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classexamples_1_1_minimizing_make_change_ae1370fb6d40b6403426fc0f715a295b1}
+Main method. A single command-\/line argument is expected, which is the amount of change to create (in other words, 75 would be equal to 75 cents).
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & amount of change in cents to create \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 215 of file Minimizing\-Make\-Change.\-java.
+
+
+
+References examples.\-Minimizing\-Make\-Change.\-make\-Change\-For\-Amount(), and examples.\-Minimizing\-Make\-Change\-Fitness\-Function.\-M\-A\-X\-\_\-\-B\-O\-U\-N\-D.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1_minimizing_make_change_ae1370fb6d40b6403426fc0f715a295b1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classexamples_1_1_minimizing_make_change_afdb27e2502d878504a6fc01d09c2e46f}{\index{examples\-::\-Minimizing\-Make\-Change@{examples\-::\-Minimizing\-Make\-Change}!make\-Change\-For\-Amount@{make\-Change\-For\-Amount}}
+\index{make\-Change\-For\-Amount@{make\-Change\-For\-Amount}!examples::MinimizingMakeChange@{examples\-::\-Minimizing\-Make\-Change}}
+\subsubsection[{make\-Change\-For\-Amount}]{\setlength{\rightskip}{0pt plus 5cm}static void examples.\-Minimizing\-Make\-Change.\-make\-Change\-For\-Amount (
+\begin{DoxyParamCaption}
+\item[{int}]{a\-\_\-target\-Change\-Amount, }
+\item[{boolean}]{a\-\_\-do\-Monitor}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classexamples_1_1_minimizing_make_change_afdb27e2502d878504a6fc01d09c2e46f}
+Executes the genetic algorithm to determine the minimum number of coins necessary to make up the given target amount of change. The solution will then be written to System.\-out.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-target\-Change\-Amount} & the target amount of change for which this method is attempting to produce the minimum number of coins \\
+\hline
+{\em a\-\_\-do\-Monitor} & true\-: turn on monitoring for later evaluation of evolution progress\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 67 of file Minimizing\-Make\-Change.\-java.
+
+
+
+References examples.\-Minimizing\-Make\-Change.\-m\-\_\-monitor, examples.\-Minimizing\-Make\-Change.\-M\-A\-X\-\_\-\-A\-L\-L\-O\-W\-E\-D\-\_\-\-E\-V\-O\-L\-U\-T\-I\-O\-N\-S, and examples.\-Minimizing\-Make\-Change.\-unique\-Chromosomes().
+
+
+
+Referenced by examples.\-Minimizing\-Make\-Change.\-main().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classexamples_1_1_minimizing_make_change_afdb27e2502d878504a6fc01d09c2e46f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classexamples_1_1_minimizing_make_change_ae1d908d7ed6d86e7bec37ff6172aa7b3}{\index{examples\-::\-Minimizing\-Make\-Change@{examples\-::\-Minimizing\-Make\-Change}!unique\-Chromosomes@{unique\-Chromosomes}}
+\index{unique\-Chromosomes@{unique\-Chromosomes}!examples::MinimizingMakeChange@{examples\-::\-Minimizing\-Make\-Change}}
+\subsubsection[{unique\-Chromosomes}]{\setlength{\rightskip}{0pt plus 5cm}static boolean examples.\-Minimizing\-Make\-Change.\-unique\-Chromosomes (
+\begin{DoxyParamCaption}
+\item[{Population}]{a\-\_\-pop}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classexamples_1_1_minimizing_make_change_ae1d908d7ed6d86e7bec37ff6172aa7b3}
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-pop} & the population to verify \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all chromosomes in the populationa are unique
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-3.\-1 
+\end{DoxySince}
+
+
+Definition at line 257 of file Minimizing\-Make\-Change.\-java.
+
+
+
+Referenced by examples.\-Minimizing\-Make\-Change.\-make\-Change\-For\-Amount().
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classexamples_1_1_minimizing_make_change_a0de48783b67c152af30702448f6c02d0}{\index{examples\-::\-Minimizing\-Make\-Change@{examples\-::\-Minimizing\-Make\-Change}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!examples::MinimizingMakeChange@{examples\-::\-Minimizing\-Make\-Change}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String examples.\-Minimizing\-Make\-Change.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-27 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classexamples_1_1_minimizing_make_change_a0de48783b67c152af30702448f6c02d0}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 42 of file Minimizing\-Make\-Change.\-java.
+
+\hypertarget{classexamples_1_1_minimizing_make_change_ac2bd233483d61d35e663cdcde7fae07a}{\index{examples\-::\-Minimizing\-Make\-Change@{examples\-::\-Minimizing\-Make\-Change}!m\-\_\-monitor@{m\-\_\-monitor}}
+\index{m\-\_\-monitor@{m\-\_\-monitor}!examples::MinimizingMakeChange@{examples\-::\-Minimizing\-Make\-Change}}
+\subsubsection[{m\-\_\-monitor}]{\setlength{\rightskip}{0pt plus 5cm}Evolution\-Monitor examples.\-Minimizing\-Make\-Change.\-m\-\_\-monitor\hspace{0.3cm}{\ttfamily [static]}}}\label{classexamples_1_1_minimizing_make_change_ac2bd233483d61d35e663cdcde7fae07a}
+
+
+Definition at line 49 of file Minimizing\-Make\-Change.\-java.
+
+
+
+Referenced by examples.\-Minimizing\-Make\-Change.\-make\-Change\-For\-Amount().
+
+\hypertarget{classexamples_1_1_minimizing_make_change_ae2d2ac25bf02f1feff515e58a908557c}{\index{examples\-::\-Minimizing\-Make\-Change@{examples\-::\-Minimizing\-Make\-Change}!M\-A\-X\-\_\-\-A\-L\-L\-O\-W\-E\-D\-\_\-\-E\-V\-O\-L\-U\-T\-I\-O\-N\-S@{M\-A\-X\-\_\-\-A\-L\-L\-O\-W\-E\-D\-\_\-\-E\-V\-O\-L\-U\-T\-I\-O\-N\-S}}
+\index{M\-A\-X\-\_\-\-A\-L\-L\-O\-W\-E\-D\-\_\-\-E\-V\-O\-L\-U\-T\-I\-O\-N\-S@{M\-A\-X\-\_\-\-A\-L\-L\-O\-W\-E\-D\-\_\-\-E\-V\-O\-L\-U\-T\-I\-O\-N\-S}!examples::MinimizingMakeChange@{examples\-::\-Minimizing\-Make\-Change}}
+\subsubsection[{M\-A\-X\-\_\-\-A\-L\-L\-O\-W\-E\-D\-\_\-\-E\-V\-O\-L\-U\-T\-I\-O\-N\-S}]{\setlength{\rightskip}{0pt plus 5cm}final int examples.\-Minimizing\-Make\-Change.\-M\-A\-X\-\_\-\-A\-L\-L\-O\-W\-E\-D\-\_\-\-E\-V\-O\-L\-U\-T\-I\-O\-N\-S = 50\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classexamples_1_1_minimizing_make_change_ae2d2ac25bf02f1feff515e58a908557c}
+The total number of times we'll let the population evolve. 
+
+Definition at line 47 of file Minimizing\-Make\-Change.\-java.
+
+
+
+Referenced by examples.\-Minimizing\-Make\-Change.\-make\-Change\-For\-Amount().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/examples/src/examples/\hyperlink{_minimizing_make_change_8java}{Minimizing\-Make\-Change.\-java}\end{DoxyCompactItemize}

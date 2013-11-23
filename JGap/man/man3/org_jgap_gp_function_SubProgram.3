@@ -1,0 +1,504 @@
+.TH "org.jgap.gp.function.SubProgram" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.function.SubProgram \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandGene\fP, \fBorg\&.jgap\&.util\&.ICloneable\fP, and \fBorg\&.jgap\&.gp\&.IMutateable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSubProgram\fP (final GPConfiguration a_conf, Class[] a_types)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBSubProgram\fP (final GPConfiguration a_conf, int a_arity, Class a_types)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBSubProgram\fP (final GPConfiguration a_conf, int a_arity, Class a_types, boolean a_mutateable)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBSubProgram\fP (final GPConfiguration a_conf, int a_arity, Class a_types, int a_minArity, int a_maxArity, boolean a_mutateable)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBSubProgram\fP (final GPConfiguration a_conf, Class[] a_types, boolean a_mutateable)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBSubProgram\fP (final GPConfiguration a_conf, Class[] a_types, int a_subReturnType, int[] a_subChildTypes)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBSubProgram\fP (final GPConfiguration a_conf, Class[] a_types, int a_subReturnType, int[] a_subChildTypes, boolean a_mutateable)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "int \fBexecute_int\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "void \fBexecute_void\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "long \fBexecute_long\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "float \fBexecute_float\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "double \fBexecute_double\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "Object \fBexecute_object\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "boolean \fBisValid\fP (ProgramChromosome a_program)"
+.br
+.ti -1c
+.RI "Class \fBgetChildType\fP (\fBIGPProgram\fP a_ind, int a_chromNum)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP \fBapplyMutation\fP (int index, double a_percentage)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCommandGene\fP \fBapplyMutation\fP ()  throws InvalidConfigurationException "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBm_subtrees\fP"
+.br
+.ti -1c
+.RI "int \fBm_minArity\fP"
+.br
+.ti -1c
+.RI "int \fBm_maxArity\fP"
+.br
+.ti -1c
+.RI "Class[] \fBm_types\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_mutateable\fP"
+.br
+.ti -1c
+.RI "int \fBm_mode\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.18 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A connector for independent subprograms (subtrees)\&. Each subtree except the last one must have a memory- or stack-modifying command (such as push or store), otherwise there is no connection between the subtrees (which would be useless bloating)\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file SubProgram\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.function\&.SubProgram\&.SubProgram (final GPConfigurationa_conf, Class[]a_types) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 56 of file SubProgram\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.SubProgram\&.applyMutation(), org\&.jgap\&.gp\&.function\&.SubProgram\&.clone(), org\&.jgap\&.gp\&.function\&.SubProgram\&.compareTo(), and org\&.jgap\&.gp\&.function\&.SubProgram\&.equals()\&.
+.SS "org\&.jgap\&.gp\&.function\&.SubProgram\&.SubProgram (final GPConfigurationa_conf, inta_arity, Classa_types) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Collage constructor: Create a sub program that has a_arity elements of the same type a_types\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_arity\fP number of children in the collage 
+.br
+\fIa_types\fP uniform type of all children 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBorg\&.jgap\&.InvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 73 of file SubProgram\&.java\&.
+.SS "org\&.jgap\&.gp\&.function\&.SubProgram\&.SubProgram (final GPConfigurationa_conf, inta_arity, Classa_types, booleana_mutateable) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Collage constructor: Create a sub program that has a_arity elements of the same type a_types\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_arity\fP number of children in the collage 
+.br
+\fIa_types\fP uniform type of all children 
+.br
+\fIa_mutateable\fP true: allow mutation of the sub program, i\&.e\&., the number of children (=arity) may be varied automatically during evolution 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBorg\&.jgap\&.InvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 92 of file SubProgram\&.java\&.
+.SS "org\&.jgap\&.gp\&.function\&.SubProgram\&.SubProgram (final GPConfigurationa_conf, inta_arity, Classa_types, inta_minArity, inta_maxArity, booleana_mutateable) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 98 of file SubProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.SubProgram\&.m_maxArity, org\&.jgap\&.gp\&.function\&.SubProgram\&.m_minArity, org\&.jgap\&.gp\&.function\&.SubProgram\&.m_mode, org\&.jgap\&.gp\&.function\&.SubProgram\&.m_mutateable, org\&.jgap\&.gp\&.function\&.SubProgram\&.m_subtrees, and org\&.jgap\&.gp\&.function\&.SubProgram\&.m_types\&.
+.SS "org\&.jgap\&.gp\&.function\&.SubProgram\&.SubProgram (final GPConfigurationa_conf, Class[]a_types, booleana_mutateable) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 124 of file SubProgram\&.java\&.
+.SS "org\&.jgap\&.gp\&.function\&.SubProgram\&.SubProgram (final GPConfigurationa_conf, Class[]a_types, inta_subReturnType, int[]a_subChildTypes) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 130 of file SubProgram\&.java\&.
+.SS "org\&.jgap\&.gp\&.function\&.SubProgram\&.SubProgram (final GPConfigurationa_conf, Class[]a_types, inta_subReturnType, int[]a_subChildTypes, booleana_mutateable) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 136 of file SubProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.SubProgram\&.m_maxArity, org\&.jgap\&.gp\&.function\&.SubProgram\&.m_minArity, org\&.jgap\&.gp\&.function\&.SubProgram\&.m_mode, org\&.jgap\&.gp\&.function\&.SubProgram\&.m_mutateable, org\&.jgap\&.gp\&.function\&.SubProgram\&.m_subtrees, and org\&.jgap\&.gp\&.function\&.SubProgram\&.m_types\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBCommandGene\fP org\&.jgap\&.gp\&.function\&.SubProgram\&.applyMutation (inta_index, doublea_percentage) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Mutates a \fBCommandGene\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP references the part of a multipart object, normally not relevant 
+.br
+\fIa_percentage\fP the mutation rate (0\&.0 to 1\&.0) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the mutant 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IMutateable\fP\&.
+.PP
+Definition at line 329 of file SubProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.SubProgram\&.applyMutation(), org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), and org\&.jgap\&.gp\&.function\&.SubProgram\&.m_mutateable\&.
+.SS "\fBCommandGene\fP org\&.jgap\&.gp\&.function\&.SubProgram\&.applyMutation () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+use dynamizeArity instead! 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+mutated command gene 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+
+.PP
+Definition at line 349 of file SubProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.getSubChildTypes(), org\&.jgap\&.gp\&.CommandGene\&.getSubReturnType(), org\&.jgap\&.gp\&.function\&.SubProgram\&.m_maxArity, org\&.jgap\&.gp\&.function\&.SubProgram\&.m_minArity, org\&.jgap\&.gp\&.function\&.SubProgram\&.m_mode, org\&.jgap\&.gp\&.function\&.SubProgram\&.m_mutateable, org\&.jgap\&.gp\&.function\&.SubProgram\&.m_types, org\&.jgap\&.gp\&.CommandGene\&.size(), and org\&.jgap\&.gp\&.function\&.SubProgram\&.SubProgram()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.SubProgram\&.applyMutation()\&.
+.SS "Object org\&.jgap\&.gp\&.function\&.SubProgram\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+deep clone of this instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 291 of file SubProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.getSubChildTypes(), org\&.jgap\&.gp\&.CommandGene\&.getSubReturnType(), org\&.jgap\&.gp\&.function\&.SubProgram\&.m_maxArity, org\&.jgap\&.gp\&.function\&.SubProgram\&.m_minArity, org\&.jgap\&.gp\&.function\&.SubProgram\&.m_mode, org\&.jgap\&.gp\&.function\&.SubProgram\&.m_mutateable, org\&.jgap\&.gp\&.function\&.SubProgram\&.m_subtrees, org\&.jgap\&.gp\&.function\&.SubProgram\&.m_types, and org\&.jgap\&.gp\&.function\&.SubProgram\&.SubProgram()\&.
+.SS "int org\&.jgap\&.gp\&.function\&.SubProgram\&.compareTo (Objecta_other)\fC [inline]\fP"
+The compareTo-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+-1, 0, 1
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 254 of file SubProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.SubProgram\&.m_types, and org\&.jgap\&.gp\&.function\&.SubProgram\&.SubProgram()\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.SubProgram\&.equals (Objecta_other)\fC [inline]\fP"
+The equals-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the objects are seen as equal
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 274 of file SubProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.SubProgram\&.m_types, and org\&.jgap\&.gp\&.function\&.SubProgram\&.SubProgram()\&.
+.SS "double org\&.jgap\&.gp\&.function\&.SubProgram\&.execute_double (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 215 of file SubProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), and org\&.jgap\&.gp\&.function\&.SubProgram\&.m_subtrees\&.
+.SS "float org\&.jgap\&.gp\&.function\&.SubProgram\&.execute_float (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 206 of file SubProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), and org\&.jgap\&.gp\&.function\&.SubProgram\&.m_subtrees\&.
+.SS "int org\&.jgap\&.gp\&.function\&.SubProgram\&.execute_int (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+evaluate m_types 
+.RE
+.PP
+
+.PP
+Definition at line 172 of file SubProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), and org\&.jgap\&.gp\&.function\&.SubProgram\&.m_subtrees\&.
+.SS "long org\&.jgap\&.gp\&.function\&.SubProgram\&.execute_long (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 197 of file SubProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), and org\&.jgap\&.gp\&.function\&.SubProgram\&.m_subtrees\&.
+.SS "Object org\&.jgap\&.gp\&.function\&.SubProgram\&.execute_object (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 224 of file SubProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), and org\&.jgap\&.gp\&.function\&.SubProgram\&.m_subtrees\&.
+.SS "void org\&.jgap\&.gp\&.function\&.SubProgram\&.execute_void (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+evaluate m_types 
+.RE
+.PP
+
+.PP
+Definition at line 190 of file SubProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), and org\&.jgap\&.gp\&.function\&.SubProgram\&.m_subtrees\&.
+.SS "Class org\&.jgap\&.gp\&.function\&.SubProgram\&.getChildType (\fBIGPProgram\fPa_ind, inta_chromNum)\fC [inline]\fP"
+
+.PP
+Definition at line 237 of file SubProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.SubProgram\&.m_types\&.
+.SS "String org\&.jgap\&.gp\&.function\&.SubProgram\&.getName ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+textual name of this command
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 168 of file SubProgram\&.java\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.SubProgram\&.isValid (ProgramChromosomea_program)\fC [inline]\fP"
+
+.PP
+Definition at line 233 of file SubProgram\&.java\&.
+.SS "String org\&.jgap\&.gp\&.function\&.SubProgram\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 153 of file SubProgram\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.SubProgram\&.m_subtrees\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.function\&.SubProgram\&.CVS_REVISION = '$Revision: 1\&.18 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 30 of file SubProgram\&.java\&.
+.SS "int org\&.jgap\&.gp\&.function\&.SubProgram\&.m_maxArity\fC [private]\fP"
+Maximum arity allowed during mutation of arity\&. 
+.PP
+Definition at line 45 of file SubProgram\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.SubProgram\&.applyMutation(), org\&.jgap\&.gp\&.function\&.SubProgram\&.clone(), and org\&.jgap\&.gp\&.function\&.SubProgram\&.SubProgram()\&.
+.SS "int org\&.jgap\&.gp\&.function\&.SubProgram\&.m_minArity\fC [private]\fP"
+Minimum arity allowed during mutation of arity\&. 
+.PP
+Definition at line 40 of file SubProgram\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.SubProgram\&.applyMutation(), org\&.jgap\&.gp\&.function\&.SubProgram\&.clone(), and org\&.jgap\&.gp\&.function\&.SubProgram\&.SubProgram()\&.
+.SS "int org\&.jgap\&.gp\&.function\&.SubProgram\&.m_mode\fC [private]\fP"
+
+.PP
+Definition at line 54 of file SubProgram\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.SubProgram\&.applyMutation(), org\&.jgap\&.gp\&.function\&.SubProgram\&.clone(), and org\&.jgap\&.gp\&.function\&.SubProgram\&.SubProgram()\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.SubProgram\&.m_mutateable\fC [private]\fP"
+
+.PP
+Definition at line 52 of file SubProgram\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.SubProgram\&.applyMutation(), org\&.jgap\&.gp\&.function\&.SubProgram\&.clone(), and org\&.jgap\&.gp\&.function\&.SubProgram\&.SubProgram()\&.
+.SS "int org\&.jgap\&.gp\&.function\&.SubProgram\&.m_subtrees\fC [private]\fP"
+Number of subprograms\&. Redundant, because equal to m_types\&.length\&. 
+.PP
+Definition at line 35 of file SubProgram\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.SubProgram\&.clone(), org\&.jgap\&.gp\&.function\&.SubProgram\&.execute_double(), org\&.jgap\&.gp\&.function\&.SubProgram\&.execute_float(), org\&.jgap\&.gp\&.function\&.SubProgram\&.execute_int(), org\&.jgap\&.gp\&.function\&.SubProgram\&.execute_long(), org\&.jgap\&.gp\&.function\&.SubProgram\&.execute_object(), org\&.jgap\&.gp\&.function\&.SubProgram\&.execute_void(), org\&.jgap\&.gp\&.function\&.SubProgram\&.SubProgram(), and org\&.jgap\&.gp\&.function\&.SubProgram\&.toString()\&.
+.SS "Class [] org\&.jgap\&.gp\&.function\&.SubProgram\&.m_types\fC [private]\fP"
+Return types of the subprograms to excecute\&. 
+.PP
+Definition at line 50 of file SubProgram\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.SubProgram\&.applyMutation(), org\&.jgap\&.gp\&.function\&.SubProgram\&.clone(), org\&.jgap\&.gp\&.function\&.SubProgram\&.compareTo(), org\&.jgap\&.gp\&.function\&.SubProgram\&.equals(), org\&.jgap\&.gp\&.function\&.SubProgram\&.getChildType(), and org\&.jgap\&.gp\&.function\&.SubProgram\&.SubProgram()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

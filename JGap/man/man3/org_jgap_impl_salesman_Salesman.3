@@ -1,0 +1,424 @@
+.TH "org.jgap.impl.salesman.Salesman" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.salesman.Salesman \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable\&.
+.PP
+Inherited by \fBorg\&.jgap\&.impl\&.salesman\&.TravellingSalesmanTest\&.TravellingSalesmanForTesting\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "abstract double \fBdistance\fP (\fBGene\fP a_from, \fBGene\fP a_to)"
+.br
+.ti -1c
+.RI "abstract \fBIChromosome\fP \fBcreateSampleChromosome\fP (Object a_initial_data)"
+.br
+.ti -1c
+.RI "\fBFitnessFunction\fP \fBcreateFitnessFunction\fP (final Object a_initial_data)"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBcreateConfiguration\fP (final Object a_initial_data)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "int \fBgetMaxEvolution\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMaxEvolution\fP (final int a_maxEvolution)"
+.br
+.ti -1c
+.RI "int \fBgetPopulationSize\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPopulationSize\fP (final int a_populationSize)"
+.br
+.ti -1c
+.RI "\fBIChromosome\fP \fBfindOptimalPath\fP (final Object a_initial_data)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBsetStartOffset\fP (final int a_offset)"
+.br
+.ti -1c
+.RI "int \fBgetStartOffset\fP ()"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBgetConfiguration\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBConfiguration\fP \fBm_config\fP"
+.br
+.ti -1c
+.RI "int \fBm_maxEvolution\fP = 128"
+.br
+.ti -1c
+.RI "int \fBm_populationSize\fP = 512"
+.br
+.ti -1c
+.RI "int \fBm_startOffset\fP = 1"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.22 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The class solves the travelling salesman problem\&. The traveling salesman problem, or TSP for short, is this: given a finite number of 'cities' along with the cost of travel between each pair of them, find the cheapest way of visiting all the cities and returning to your starting point\&.)
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.PP
+Neil Rotstan, Klaus Meffert (reused code fragments) 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+.PD 0
+.IP "\(bu" 2
+J\&. Grefenstette, R\&. Gopal, R\&. Rosmaita, and D\&. Gucht\&. \fIGenetic algorithms for the traveling \fBsalesman\fP problem\fP\&. In Proceedings of the Second International Conference on Genetic Algorithms\&. Lawrence Eribaum Associates, Mahwah, NJ, 1985\&.  
+.IP "\(bu" 2
+\fCSushil J\&. Louis & Gong Li\fP (explanatory material)  
+.IP "\(bu" 2
+\fCTPS web site\fP  
+.PP
+.RE
+.PP
+
+.PP
+Definition at line 45 of file Salesman\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBConfiguration\fP org\&.jgap\&.impl\&.salesman\&.Salesman\&.createConfiguration (final Objecta_initial_data) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Create a configuration\&. The configuration should not contain operators for odrinary crossover and mutations, as they make chromosoms invalid in this task\&. The special operators \fBSwappingMutationOperator\fP and GreedyCrossober should be used instead\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_initial_data\fP the same object as was passed to findOptimalPath\&. It can be used to specify the task more precisely if the class is used for solving multiple tasks
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+created configuration
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 121 of file Salesman\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.salesman\&.Salesman\&.findOptimalPath()\&.
+.SS "\fBFitnessFunction\fP org\&.jgap\&.impl\&.salesman\&.Salesman\&.createFitnessFunction (final Objecta_initial_data)\fC [inline]\fP"
+Return the fitness function to use\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_initial_data\fP the same object as was passed to findOptimalPath\&. It can be used to specify the task more precisely if the class is used for solving multiple tasks 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+an applicable fitness function
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 100 of file Salesman\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.salesman\&.Salesman\&.findOptimalPath()\&.
+.SS "abstract \fBIChromosome\fP org\&.jgap\&.impl\&.salesman\&.Salesman\&.createSampleChromosome (Objecta_initial_data)\fC [pure virtual]\fP"
+Override this method to create a single sample chromosome, representing a list of 'cities'\&. Each gene corresponds a single 'city' and can appear only once\&. By default, the first gene corresponds a 'city' where the salesman starts the journey\&. It never changes its position\&. This can be changed by setting other start offset with \fBsetStartOffset( )\fP\&. Other genes will be shuffled to create the initial random population\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_initial_data\fP the same object as was passed to findOptimalPath\&. It can be used to specify the task more precisely if the class is used for solving multiple tasks 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a sample chromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.salesman\&.TravellingSalesmanTest\&.TravellingSalesmanForTesting\fP\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.salesman\&.Salesman\&.findOptimalPath()\&.
+.SS "abstract double org\&.jgap\&.impl\&.salesman\&.Salesman\&.distance (\fBGene\fPa_from, \fBGene\fPa_to)\fC [pure virtual]\fP"
+Override this method to compute the distance between 'cities', indicated by these two given genes\&. The algorithm is not dependent on the used type of genes\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_from\fP first gene, representing a city 
+.br
+\fIa_to\fP second gene, representing a city 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the distance between two cities represented as genes
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.salesman\&.TravellingSalesmanTest\&.TravellingSalesmanForTesting\fP\&.
+.SS "\fBIChromosome\fP org\&.jgap\&.impl\&.salesman\&.Salesman\&.findOptimalPath (final Objecta_initial_data) throws Exception\fC [inline]\fP"
+Executes the genetic algorithm to determine the optimal path between the cities\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_initial_data\fP can be a record with fields, specifying the task more precisely if the class is used to solve multiple tasks\&. It is passed to createFitnessFunction, createSampleChromosome and createConfiguration
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+chromosome representing the optimal path between cities
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 198 of file Salesman\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.salesman\&.Salesman\&.createConfiguration(), org\&.jgap\&.impl\&.salesman\&.Salesman\&.createFitnessFunction(), org\&.jgap\&.impl\&.salesman\&.Salesman\&.createSampleChromosome(), org\&.jgap\&.impl\&.salesman\&.Salesman\&.getMaxEvolution(), org\&.jgap\&.impl\&.salesman\&.Salesman\&.getPopulationSize(), and org\&.jgap\&.impl\&.salesman\&.Salesman\&.m_config\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.impl\&.salesman\&.Salesman\&.getConfiguration ()\fC [inline]\fP"
+
+.PP
+Definition at line 285 of file Salesman\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.salesman\&.Salesman\&.m_config\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.salesman\&.TravellingSalesmanTest\&.TravellingSalesmanForTesting\&.createSampleChromosome()\&.
+.SS "int org\&.jgap\&.impl\&.salesman\&.Salesman\&.getMaxEvolution ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+maximal number of iterations for population to evolve
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 148 of file Salesman\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.salesman\&.Salesman\&.m_maxEvolution\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.salesman\&.Salesman\&.findOptimalPath()\&.
+.SS "int org\&.jgap\&.impl\&.salesman\&.Salesman\&.getPopulationSize ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+population size for this solution
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 168 of file Salesman\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.salesman\&.Salesman\&.m_populationSize\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.salesman\&.Salesman\&.findOptimalPath()\&.
+.SS "int org\&.jgap\&.impl\&.salesman\&.Salesman\&.getStartOffset ()\fC [inline]\fP"
+Gets a number of genes at the start of chromosome, that are excluded from the swapping\&. In the \fBSalesman\fP task, the first city in the list should (where the salesman leaves from) probably should not change as it is part of the list\&. The default value is 1\&.
+.PP
+\fBReturns:\fP
+.RS 4
+start offset for chromosome
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 281 of file Salesman\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.salesman\&.Salesman\&.m_startOffset\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.salesman\&.TravellingSalesmanTest\&.testSetStartOffset_0()\&.
+.SS "void org\&.jgap\&.impl\&.salesman\&.Salesman\&.setMaxEvolution (final inta_maxEvolution)\fC [inline]\fP"
+Set the maximal number of iterations for population to evolve (default 512)\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_maxEvolution\fP sic
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 159 of file Salesman\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.salesman\&.Salesman\&.m_maxEvolution\&.
+.SS "void org\&.jgap\&.impl\&.salesman\&.Salesman\&.setPopulationSize (final inta_populationSize)\fC [inline]\fP"
+Set an population size for this solution (default 512)
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_populationSize\fP sic
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 179 of file Salesman\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.salesman\&.Salesman\&.m_populationSize\&.
+.SS "void org\&.jgap\&.impl\&.salesman\&.Salesman\&.setStartOffset (final inta_offset)\fC [inline]\fP"
+Sets a number of genes at the start of chromosome, that are excluded from the swapping\&. In the \fBSalesman\fP task, the first city in the list should (where the salesman leaves from) probably should not change as it is part of the list\&. The default value is 1\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_offset\fP start offset for chromosome
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 267 of file Salesman\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.salesman\&.Salesman\&.m_startOffset\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.salesman\&.Salesman\&.CVS_REVISION = '$Revision: 1\&.22 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 48 of file Salesman\&.java\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.impl\&.salesman\&.Salesman\&.m_config\fC [private]\fP"
+
+.PP
+Definition at line 50 of file Salesman\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.salesman\&.Salesman\&.findOptimalPath(), and org\&.jgap\&.impl\&.salesman\&.Salesman\&.getConfiguration()\&.
+.SS "int org\&.jgap\&.impl\&.salesman\&.Salesman\&.m_maxEvolution = 128\fC [private]\fP"
+
+.PP
+Definition at line 52 of file Salesman\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.salesman\&.Salesman\&.getMaxEvolution(), and org\&.jgap\&.impl\&.salesman\&.Salesman\&.setMaxEvolution()\&.
+.SS "int org\&.jgap\&.impl\&.salesman\&.Salesman\&.m_populationSize = 512\fC [private]\fP"
+
+.PP
+Definition at line 54 of file Salesman\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.salesman\&.Salesman\&.getPopulationSize(), and org\&.jgap\&.impl\&.salesman\&.Salesman\&.setPopulationSize()\&.
+.SS "int org\&.jgap\&.impl\&.salesman\&.Salesman\&.m_startOffset = 1\fC [private]\fP"
+
+.PP
+Definition at line 255 of file Salesman\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.salesman\&.Salesman\&.getStartOffset(), and org\&.jgap\&.impl\&.salesman\&.Salesman\&.setStartOffset()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

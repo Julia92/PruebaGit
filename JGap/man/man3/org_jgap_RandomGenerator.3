@@ -1,0 +1,213 @@
+.TH "org.jgap.RandomGenerator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.RandomGenerator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable\&.
+.PP
+Inherited by \fBorg\&.jgap\&.impl\&.CauchyRandomGenerator\fP, \fBorg\&.jgap\&.impl\&.GaussianRandomGenerator\fP, \fBorg\&.jgap\&.impl\&.HotBitsRandomGenerator\fP, \fBorg\&.jgap\&.impl\&.RandomGeneratorForTesting\fP, \fBorg\&.jgap\&.impl\&.SeededRandomGenerator\fP, and \fBorg\&.jgap\&.impl\&.StockRandomGenerator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBnextInt\fP ()"
+.br
+.ti -1c
+.RI "int \fBnextInt\fP (int a_ceiling)"
+.br
+.ti -1c
+.RI "long \fBnextLong\fP ()"
+.br
+.ti -1c
+.RI "double \fBnextDouble\fP ()"
+.br
+.ti -1c
+.RI "float \fBnextFloat\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBnextBoolean\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.8 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBRandomGenerator\fP interface provides an abstraction for the random number implementation so that more rigorous or alternative implementations can be provided as desired\&. 
+.PP
+ATTENTION: nextDouble should only return values betwen 0 (inclusive) and 1 (exclusive!)\&. The same holds for nextFloat\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file RandomGenerator\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "boolean org\&.jgap\&.RandomGenerator\&.nextBoolean ()"
+Returns the next pseudorandom, uniformly distributed boolean value from this random number generator's sequence\&. The general contract of nextBoolean is that one boolean value is pseudorandomly generated and returned\&. The values true and false are produced with (approximately) equal probability\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a pseudorandom boolean value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.GaussianRandomGenerator\fP, \fBorg\&.jgap\&.impl\&.RandomGeneratorForTesting\fP, \fBorg\&.jgap\&.impl\&.CauchyRandomGenerator\fP, and \fBorg\&.jgap\&.impl\&.HotBitsRandomGenerator\fP\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BooleanGene\&.setToRandomValue(), and org\&.jgap\&.impl\&.FixedBinaryGene\&.setToRandomValue()\&.
+.SS "double org\&.jgap\&.RandomGenerator\&.nextDouble ()"
+Returns the next pseudorandom, uniformly distributed double value between 0\&.0 and 1\&.0 from this random number generator's sequence\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a psuedorandom double value GREATER/EQUAL 0 AND LESS THAN 1
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.GaussianRandomGenerator\fP, \fBorg\&.jgap\&.impl\&.RandomGeneratorForTesting\fP, \fBorg\&.jgap\&.impl\&.CauchyRandomGenerator\fP, and \fBorg\&.jgap\&.impl\&.HotBitsRandomGenerator\fP\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.doCross(), org\&.jgap\&.impl\&.MutipleIntegerGene\&.getRandomValue(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFullNode(), org\&.jgap\&.impl\&.DoubleGene\&.mapValueToWithinBounds(), org\&.jgap\&.distr\&.grid\&.gp\&.JGAPClientGP\&.presetPopulation(), org\&.jgap\&.gp\&.impl\&.TournamentSelector\&.select(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue(), org\&.jgap\&.impl\&.DoubleGene\&.setToRandomValue(), and org\&.jgap\&.impl\&.IntegerGene\&.setToRandomValue()\&.
+.SS "float org\&.jgap\&.RandomGenerator\&.nextFloat ()"
+Returns the next pseudorandom, uniformly distributed float value between 0\&.0 and 1\&.0 from this random number generator's sequence\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a psuedorandom float value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.GaussianRandomGenerator\fP, \fBorg\&.jgap\&.impl\&.RandomGeneratorForTesting\fP, \fBorg\&.jgap\&.impl\&.CauchyRandomGenerator\fP, and \fBorg\&.jgap\&.impl\&.HotBitsRandomGenerator\fP\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.doCross(), and org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue()\&.
+.SS "int org\&.jgap\&.RandomGenerator\&.nextInt ()"
+Returns the next pseudorandom, uniformly distributed int value from this random number generator's sequence\&. The general contract of nextInt is that one int value is pseudorandomly generated and returned\&. All 2^32 possible int values are produced with (approximately) equal probability\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a pseudorandom integer value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.GaussianRandomGenerator\fP, \fBorg\&.jgap\&.impl\&.RandomGeneratorForTesting\fP, \fBorg\&.jgap\&.impl\&.CauchyRandomGenerator\fP, and \fBorg\&.jgap\&.impl\&.HotBitsRandomGenerator\fP\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.evolve(), org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.getLocus(), org\&.jgap\&.impl\&.SwappingMutationOperator\&.operate(), org\&.jgap\&.impl\&.RangedSwappingMutationOperator\&.operate(), org\&.jgap\&.impl\&.SetGene\&.setToRandomValue(), org\&.jgap\&.impl\&.MapGene\&.setToRandomValue(), and org\&.jgap\&.impl\&.DefaultMutationRateCalculator\&.toBePermutated()\&.
+.SS "int org\&.jgap\&.RandomGenerator\&.nextInt (inta_ceiling)"
+Returns a pseudorandom, uniformly distributed int value between 0 (inclusive) and the specified value (exclusive), drawn from this random number generator's sequence\&. The general contract of nextInt is that one int value in the specified range is pseudorandomly generated and returned\&. All n possible int values are produced with (approximately) equal probability\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ceiling\fP the upper boundary excluded
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a pseudorandom integer value between 0 and the given ceiling - 1, inclusive
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.RandomGeneratorForTesting\fP, and \fBorg\&.jgap\&.impl\&.HotBitsRandomGenerator\fP\&.
+.SS "long org\&.jgap\&.RandomGenerator\&.nextLong ()"
+Returns the next pseudorandom, uniformly distributed long value from this random number generator's sequence\&. The general contract of \fBnextLong()\fP is that one long value is pseudorandomly generated and returned\&. All 2^64 possible long values are produced with (approximately) equal probability\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a psuedorandom long value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.GaussianRandomGenerator\fP, \fBorg\&.jgap\&.impl\&.RandomGeneratorForTesting\fP, \fBorg\&.jgap\&.impl\&.CauchyRandomGenerator\fP, and \fBorg\&.jgap\&.impl\&.HotBitsRandomGenerator\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.RandomGenerator\&.CVS_REVISION = '$Revision: 1\&.8 $'\fC [static]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 29 of file RandomGenerator\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

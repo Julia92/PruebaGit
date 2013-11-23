@@ -1,0 +1,1821 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1_chromosome" kind="class" prot="public">
+    <compoundname>org::jgap::Chromosome</compoundname>
+    <basecompoundref refid="classorg_1_1jgap_1_1_base_chromosome" prot="public" virt="non-virtual">org.jgap.BaseChromosome</basecompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1_chromosome_for_testing" prot="public" virt="non-virtual">org.jgap.ChromosomeForTesting</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1_chromosome_for_testing2" prot="public" virt="non-virtual">org.jgap.ChromosomeForTesting2</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1_chromosome_test_1_1_my_chromosome" prot="public" virt="non-virtual">org.jgap.ChromosomeTest.MyChromosome</derivedcompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1_chromosome_1aa8e104e9bc3f5f2bfdfe67b604c10d9c" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.Chromosome.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.105 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="68" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1_chromosome_1af2b4e1abcdf5995b45fb7d5cf93a559c" prot="private" static="no" mutable="no">
+        <type>Object</type>
+        <definition>Object org.jgap.Chromosome.m_applicationData</definition>
+        <argsstring></argsstring>
+        <name>m_applicationData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Application-specific data that is attached to this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>. This data may assist the application in evaluating this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> in the fitness function. JGAP does not operate on the data, aside from allowing it to be set and retrieved, and considering it with comparations (if user opted in to do so). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="77" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="77" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1aae49bf34668621de1d691cd759ff50b9" compoundref="_chromosome_8java" startline="993" endline="995">org.jgap.Chromosome.getApplicationData</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a03e0d17b0df1765a442f76645aa4e5b8" compoundref="_chromosome_8java" startline="977" endline="979">org.jgap.Chromosome.setApplicationData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1_chromosome_1a6d73c5e40fce0219e80021211d4a2d57" prot="private" static="no" mutable="no">
+        <type>List</type>
+        <definition>List org.jgap.Chromosome.m_multiObjective</definition>
+        <argsstring></argsstring>
+        <name>m_multiObjective</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Holds multiobjective values.</para><para><simplesect kind="since"><para>2.6 </para></simplesect>
+<xrefsect id="todo_1_todo000048"><xreftitle>Todo</xreftitle><xrefdescription><para>move to new subclass of <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> (and introduce new interface IMultiObjective with that) </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="86" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="86" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a9f590d55a34d8b99c2a9a1b4aedd568b" compoundref="_chromosome_8java" startline="334" endline="465">org.jgap.Chromosome.clone</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a6129d035292cd1d271b5ef5dbc3e3161" compoundref="_chromosome_8java" startline="1121" endline="1123">org.jgap.Chromosome.getMultiObjectives</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1aaeae2078063f38074853b06d5c913fa6" compoundref="_chromosome_8java" startline="1113" endline="1119">org.jgap.Chromosome.setMultiObjectives</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1_chromosome_1ad8bb6734b245d112a8e6d66fb38914c9" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean org.jgap.Chromosome.m_isSelectedForNextGeneration</definition>
+        <argsstring></argsstring>
+        <name>m_isSelectedForNextGeneration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Keeps track of whether or not this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> has been selected by the natural selector to move on to the next generation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="92" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="92" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1ab608acb21ff95b3fe2ff9667a207fd72" compoundref="_chromosome_8java" startline="928" endline="962">org.jgap.Chromosome.cleanup</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a61d28f792a1389214f06a88dba42260d" compoundref="_chromosome_8java" startline="916" endline="918">org.jgap.Chromosome.isSelectedForNextGeneration</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a1249d045c9830c9dc76e14e4dbe20f5f" compoundref="_chromosome_8java" startline="903" endline="905">org.jgap.Chromosome.setIsSelectedForNextGeneration</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1_chromosome_1a7c696f550a4f4458ed4115833abf02fb" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean org.jgap.Chromosome.m_compareAppData</definition>
+        <argsstring></argsstring>
+        <name>m_compareAppData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method <ref refid="classorg_1_1jgap_1_1_chromosome_1a2be0507944e2ca98bef8372402b33e13" kindref="member">compareTo()</ref>: Should we also consider the application data when comparing? Default is &quot;false&quot;, as &quot;true&quot; means a <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>&apos;s losing its identity when application data is set differently!</para><para><simplesect kind="since"><para>2.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="111" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="111" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a2be0507944e2ca98bef8372402b33e13" compoundref="_chromosome_8java" startline="816" endline="891">org.jgap.Chromosome.compareTo</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a284d75bb2919718325b376e2c91870d0" compoundref="_chromosome_8java" startline="1032" endline="1034">org.jgap.Chromosome.isCompareApplicationData</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1aa82fc94cbbfeb5b6b5b89a97f9089e9e" compoundref="_chromosome_8java" startline="1022" endline="1024">org.jgap.Chromosome.setCompareApplicationData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1_chromosome_1af890b1160c9b97defdf107e6a4e53329" prot="private" static="no" mutable="no">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_i_gene_constraint_checker" kindref="compound">IGeneConstraintChecker</ref></type>
+        <definition>IGeneConstraintChecker org.jgap.Chromosome.m_geneAlleleChecker</definition>
+        <argsstring></argsstring>
+        <name>m_geneAlleleChecker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional helper class for checking if a given allele value to be set for a given gene is valid. If not, the allele value may not be set for the gene or the gene type (e.g. IntegerGene) is not allowed in general!</para><para><simplesect kind="since"><para>2.5 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="120" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="120" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a6c56caed7a052c678daa6af668cad388" compoundref="_chromosome_8java" startline="1059" endline="1061">org.jgap.Chromosome.getConstraintChecker</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1ae99251567d68bd079e8c4dfaf15dc513" compoundref="_chromosome_8java" startline="1046" endline="1050">org.jgap.Chromosome.setConstraintChecker</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1_chromosome_1a678ed92a2a1a47343638de24f40b66e3" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean org.jgap.Chromosome.m_alwaysCalculate</definition>
+        <argsstring></argsstring>
+        <name>m_alwaysCalculate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If set to true the method <ref refid="classorg_1_1jgap_1_1_chromosome_1a9ccc6c05aa9c785d1cbae40acc90c80c" kindref="member">getFitnessValue()</ref> will always (re-)calculate the fitness value. This may be necessary in case of environments where the state changes without the chromosome to notice</para><para><simplesect kind="since"><para>3.2.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="129" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="129" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a62510703fe45c4a8c453801eaa148bb7" compoundref="_chromosome_8java" startline="155" endline="159">org.jgap.Chromosome.Chromosome</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a9ccc6c05aa9c785d1cbae40acc90c80c" compoundref="_chromosome_8java" startline="534" endline="541">org.jgap.Chromosome.getFitnessValue</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1_chromosome_1a905236819a9904ca3d096fa1c325aa1b" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double org.jgap.Chromosome.m_fitnessValue</definition>
+        <argsstring></argsstring>
+        <name>m_fitnessValue</name>
+        <initializer>= <ref refid="classorg_1_1jgap_1_1_fitness_function_1a5f1f23e6f8a0f9606aee5d52fac6a06b" kindref="member">FitnessFunction.NO_FITNESS_VALUE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stores the fitness value of this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> as determined by the active fitness function. A value of -1 indicates that this field has not yet been set with this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>&apos;s fitness values (valid fitness values are always positive).</para><para><simplesect kind="since"><para>2.0 (until 1.1: type int) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="102" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="102" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1aea063618aebe23aa8579baf20063db24" compoundref="_chromosome_8java" startline="560" endline="572">org.jgap.Chromosome.calcFitnessValue</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1ab608acb21ff95b3fe2ff9667a207fd72" compoundref="_chromosome_8java" startline="928" endline="962">org.jgap.Chromosome.cleanup</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a9f590d55a34d8b99c2a9a1b4aedd568b" compoundref="_chromosome_8java" startline="334" endline="465">org.jgap.Chromosome.clone</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a2be0507944e2ca98bef8372402b33e13" compoundref="_chromosome_8java" startline="816" endline="891">org.jgap.Chromosome.compareTo</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_for_testing_1af25dacbcb89fed18007d55f1fde951b4" compoundref="_chromosome_for_testing_8java" startline="46" endline="52">org.jgap.ChromosomeForTesting.getFitnessValue</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a9ccc6c05aa9c785d1cbae40acc90c80c" compoundref="_chromosome_8java" startline="534" endline="541">org.jgap.Chromosome.getFitnessValue</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1ad0c53486ddb583ddbee2bede065ae068" compoundref="_chromosome_8java" startline="549" endline="551">org.jgap.Chromosome.getFitnessValueDirectly</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a3715ce380f59756a954566a315514ed0" compoundref="_chromosome_8java" startline="585" endline="590">org.jgap.Chromosome.setFitnessValue</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a4fb0934f7919084f0b5e9ca132e6aaa6" compoundref="_chromosome_8java" startline="602" endline="604">org.jgap.Chromosome.setFitnessValueDirectly</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a9cedcb4abe7b9e5f5cfd6cfea0cd949d" compoundref="_chromosome_8java" startline="614" endline="647">org.jgap.Chromosome.toString</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a14c96eb2e38fe28b05526633e4677ec6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.Chromosome.Chromosome</definition>
+        <argsstring>()</argsstring>
+        <name>Chromosome</name>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor, only provided for dynamic instantiation.</para><para>Attention: The configuration used is the one set with the static method Genotype.setConfiguration.</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="141" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="141" bodyend="144"/>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a9f590d55a34d8b99c2a9a1b4aedd568b" compoundref="_chromosome_8java" startline="334" endline="465">org.jgap.Chromosome.clone</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a6b6fb5c7c5b532813a4661de5dbd9ab3" compoundref="_chromosome_8java" startline="668" endline="737">org.jgap.Chromosome.randomInitialChromosome</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a62510703fe45c4a8c453801eaa148bb7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.Chromosome.Chromosome</definition>
+        <argsstring>(final Configuration a_configuration)</argsstring>
+        <name>Chromosome</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor, provided for dynamic or minimal instantiation.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="155" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="155" bodyend="159"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a678ed92a2a1a47343638de24f40b66e3" compoundref="_chromosome_8java" startline="129">org.jgap.Chromosome.m_alwaysCalculate</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a7290755db8269b79ebdb00b0cd0a9935" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.Chromosome.Chromosome</definition>
+        <argsstring>(final Configuration a_configuration, String a_persistentRepresentatuion)</argsstring>
+        <name>Chromosome</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>a_persistentRepresentatuion</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref>, <ref refid="classorg_1_1jgap_1_1_unsupported_representation_exception" kindref="compound">UnsupportedRepresentationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor, provided for instantiation via persistent representation.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_persistentRepresentatuion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>valid persistent representation that was most likely obtained via <ref refid="classorg_1_1jgap_1_1_base_chromosome_1ab4a4ad55945458548488f87940aa852e" kindref="member">getPersistentRepresentation()</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_unsupported_representation_exception" kindref="compound">UnsupportedRepresentationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="173" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="173" bodyend="178"/>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1a30276dc8afb0bd632c288bf7d2e18b55" compoundref="_base_chromosome_8java" startline="400" endline="441">org.jgap.BaseChromosome.setValueFromPersistentRepresentation</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a6e5e72f40a4e2f2b7b72ce6678235f40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.Chromosome.Chromosome</definition>
+        <argsstring>(final Configuration a_configuration, final int a_desiredSize)</argsstring>
+        <name>Chromosome</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <param>
+          <type>final int</type>
+          <declname>a_desiredSize</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor for specifying the number of genes.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_desiredSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of genes the chromosome contains of </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="190" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="190" bodyend="199"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a96692e7942a035e9b661360ca758c7cb" compoundref="_chromosome_8java" startline="1006" endline="1010">org.jgap.Chromosome.setGenes</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a2872ac725d9182b66352057850f89176" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.Chromosome.Chromosome</definition>
+        <argsstring>(final Configuration a_configuration, final Gene a_sampleGene, final int a_desiredSize)</argsstring>
+        <name>Chromosome</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+          <declname>a_sampleGene</declname>
+        </param>
+        <param>
+          <type>final int</type>
+          <declname>a_desiredSize</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> of the given size separate from any specific <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref>. This constructor will use the given sample <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> to construct a new <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> instance containing genes all of the same type as the sample <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>. This can be useful for constructing sample chromosomes that use the same <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> type for all of their genes and that are to be used to setup a <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_sampleGene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a concrete sampleGene instance that will be used as a template for all of the genes in this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_desiredSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the desired size (number of genes) of this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="219" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="219" bodyend="224"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1aa6b7f021f64700b1926d5819f5fde5aa" compoundref="_chromosome_8java" startline="235" endline="250">org.jgap.Chromosome.initFromGene</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a4f6e9e1bf122719fe420c3bc034fb4b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.Chromosome.Chromosome</definition>
+        <argsstring>(final Configuration a_configuration, Gene a_sampleGene, int a_desiredSize, IGeneConstraintChecker a_constraintChecker)</argsstring>
+        <name>Chromosome</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+          <declname>a_sampleGene</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_desiredSize</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_i_gene_constraint_checker" kindref="compound">IGeneConstraintChecker</ref></type>
+          <declname>a_constraintChecker</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="226" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="226" bodyend="233"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1aa6b7f021f64700b1926d5819f5fde5aa" compoundref="_chromosome_8java" startline="235" endline="250">org.jgap.Chromosome.initFromGene</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1ae99251567d68bd079e8c4dfaf15dc513" compoundref="_chromosome_8java" startline="1046" endline="1050">org.jgap.Chromosome.setConstraintChecker</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a9156d92adcdf9c918bb37c771805b497" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.Chromosome.Chromosome</definition>
+        <argsstring>(final Configuration a_configuration, Gene[] a_initialGenes)</argsstring>
+        <name>Chromosome</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>[]</type>
+          <declname>a_initialGenes</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> separate from any specific <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref>. This can be useful for constructing sample chromosomes that are to be used to setup a <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_initialGenes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the initial genes of this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="264" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="264" bodyend="269"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a74df7a8e7986a3ed2a18c9715fae7b90" compoundref="_chromosome_8java" startline="304" endline="317">org.jgap.Chromosome.checkGenes</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a96692e7942a035e9b661360ca758c7cb" compoundref="_chromosome_8java" startline="1006" endline="1010">org.jgap.Chromosome.setGenes</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1ab836c132fb64477cad4d0a2e3b997d6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.Chromosome.Chromosome</definition>
+        <argsstring>(final Configuration a_configuration, Gene[] a_initialGenes, IGeneConstraintChecker a_constraintChecker)</argsstring>
+        <name>Chromosome</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>[]</type>
+          <declname>a_initialGenes</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_i_gene_constraint_checker" kindref="compound">IGeneConstraintChecker</ref></type>
+          <declname>a_constraintChecker</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> separate from any specific <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref>. This can be useful for constructing sample chromosomes that are to be used to setup a <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> object. Additionally, a constraint checker can be specified. It is used right here to verify the validity of the gene types supplied.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_initialGenes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the initial genes of this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_constraintChecker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>constraint checker to use </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in case the constraint checker reports a configuration error</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.5 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="287" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="287" bodyend="294"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a74df7a8e7986a3ed2a18c9715fae7b90" compoundref="_chromosome_8java" startline="304" endline="317">org.jgap.Chromosome.checkGenes</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1ae99251567d68bd079e8c4dfaf15dc513" compoundref="_chromosome_8java" startline="1046" endline="1050">org.jgap.Chromosome.setConstraintChecker</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a96692e7942a035e9b661360ca758c7cb" compoundref="_chromosome_8java" startline="1006" endline="1010">org.jgap.Chromosome.setGenes</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a9f590d55a34d8b99c2a9a1b4aedd568b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>synchronized Object</type>
+        <definition>synchronized Object org.jgap.Chromosome.clone</definition>
+        <argsstring>()</argsstring>
+        <name>clone</name>
+        <reimplements refid="classorg_1_1jgap_1_1_base_chromosome_1a97071ef6dba552c1c1f2b2780d27eec3">clone</reimplements>
+        <reimplementedby refid="classorg_1_1jgap_1_1_chromosome_for_testing_1acfcef639c3443fde7d324164050e3e19">clone</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a copy of this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>. The returned instance can evolve independently of this instance. Note that, if possible, this method will first attempt to acquire a <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> instance from the active ChromosomePool (if any) and set its value appropriately before returning it. If that is not possible, then a new <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> instance will be constructed and its value set appropriately before returning.</para><para><simplesect kind="return"><para>copy of this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IllegalStateException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>instead of CloneNotSupportedException</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000049"><xreftitle>Todo</xreftitle><xrefdescription><para>once output a warning: allele should be cloneable! </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="334" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="334" bodyend="465"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a14c96eb2e38fe28b05526633e4677ec6" compoundref="_chromosome_8java" startline="141" endline="144">org.jgap.Chromosome.Chromosome</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1adf4d7c5113d0c70283ffb2323b7e0cda" compoundref="_chromosome_8java" startline="478" endline="481">org.jgap.Chromosome.cloneObject</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1aae49bf34668621de1d691cd759ff50b9" compoundref="_chromosome_8java" startline="993" endline="995">org.jgap.Chromosome.getApplicationData</references>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1a104b33f29941ba6ba405889964fc2bf5" compoundref="_base_chromosome_8java" startline="150" endline="152">org.jgap.BaseChromosome.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a6c56caed7a052c678daa6af668cad388" compoundref="_chromosome_8java" startline="1059" endline="1061">org.jgap.Chromosome.getConstraintChecker</references>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1aef0e40ec9b5956389365f5c3144ab207" compoundref="_base_chromosome_8java" startline="283" endline="285">org.jgap.BaseChromosome.getGene</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a905236819a9904ca3d096fa1c325aa1b" compoundref="_chromosome_8java" startline="102">org.jgap.Chromosome.m_fitnessValue</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a6d73c5e40fce0219e80021211d4a2d57" compoundref="_chromosome_8java" startline="86">org.jgap.Chromosome.m_multiObjective</references>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1a78c8ae0471973855e19a9b79496f2bec" compoundref="_base_chromosome_8java" startline="302" endline="310">org.jgap.BaseChromosome.size</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_g_a_breeder_1ae2fbd377bce110b40fd5f1190f172b7e" compoundref="_g_a_breeder_8java" startline="349" endline="405">org.jgap.impl.GABreeder.bulkFunctionEvaluation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_test_1aa4a82aaa3663f9f872b9dee934d48837" compoundref="_chromosome_test_8java" startline="476" endline="501">org.jgap.ChromosomeTest.testClone_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_test_1abab66cfa25fa59aae7ea0f3d99c33225" compoundref="_chromosome_test_8java" startline="514" endline="529">org.jgap.ChromosomeTest.testClone_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_test_1a58e371a9c93a7023b32851fe820ffe09" compoundref="_chromosome_test_8java" startline="567" endline="584">org.jgap.ChromosomeTest.testClone_4</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_test_1aeb81539a86d39d9ce8e96c67ca116ab2" compoundref="_chromosome_test_8java" startline="431" endline="443">org.jgap.ChromosomeTest.testClone_5</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_test_1ad673b6e23e17b215ec5fdbcf8dc68580" compoundref="_chromosome_test_8java" startline="453" endline="467">org.jgap.ChromosomeTest.testClone_6</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_averaging_crossover_operator_test_1aa2df872526cbc34c707f0597b55171d0" compoundref="_averaging_crossover_operator_test_8java" startline="93" endline="133">org.jgap.impl.AveragingCrossoverOperatorTest.testOperate_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_test_1a046e6bf1c9541c2a728d457db08f29be" compoundref="_gaussian_mutation_operator_test_8java" startline="94" endline="134">org.jgap.impl.GaussianMutationOperatorTest.testOperate_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_inversion_operator_test_1a36a0419f1877033047bb97d70de9ba03" compoundref="_inversion_operator_test_8java" startline="124" endline="164">org.jgap.impl.InversionOperatorTest.testOperate_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_test_1a568a7b05bdcaee46722fa2d2caab2ba0" compoundref="_crossover_operator_test_8java" startline="306" endline="347">org.jgap.impl.CrossoverOperatorTest.testOperate_1</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a9ccc6c05aa9c785d1cbae40acc90c80c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double org.jgap.Chromosome.getFitnessValue</definition>
+        <argsstring>()</argsstring>
+        <name>getFitnessValue</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a9b68991c832a2054176d522e49a19ebd">getFitnessValue</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the fitness value of this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>, as determined by the active fitness function. If a bulk fitness function is in use and has not yet assigned a fitness value to this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>, then -1 is returned.</para><para>Attention: should not be called from <ref refid="classorg_1_1jgap_1_1_chromosome_1a9cedcb4abe7b9e5f5cfd6cfea0cd949d" kindref="member">toString()</ref> as the fitness value would be computed if it was initial!</para><para><simplesect kind="return"><para>a positive double value representing the fitness of this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>, or -1 if a bulk fitness function is in use and has not yet assigned a fitness value to this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref></para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="534" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="534" bodyend="541"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1aea063618aebe23aa8579baf20063db24" compoundref="_chromosome_8java" startline="560" endline="572">org.jgap.Chromosome.calcFitnessValue</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a678ed92a2a1a47343638de24f40b66e3" compoundref="_chromosome_8java" startline="129">org.jgap.Chromosome.m_alwaysCalculate</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a905236819a9904ca3d096fa1c325aa1b" compoundref="_chromosome_8java" startline="102">org.jgap.Chromosome.m_fitnessValue</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_test_1a589f0d4caf7e50048437528c2eb93bdd" compoundref="_bulk_fitness_offset_remover_test_8java" startline="229" endline="276">org.jgap.impl.BulkFitnessOffsetRemoverTest.testEvaluate_3</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_test_1aa92a14a7d2ec8c15dc845a02ab56ad70" compoundref="_bulk_fitness_offset_remover_test_8java" startline="284" endline="306">org.jgap.impl.BulkFitnessOffsetRemoverTest.testGetAbsoluteFitness_0</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1ad0c53486ddb583ddbee2bede065ae068" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double org.jgap.Chromosome.getFitnessValueDirectly</definition>
+        <argsstring>()</argsstring>
+        <name>getFitnessValueDirectly</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a743303c75d2a001f88af579051862964">getFitnessValueDirectly</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the lastly computed fitness value, or <ref refid="classorg_1_1jgap_1_1_fitness_function_1a5f1f23e6f8a0f9606aee5d52fac6a06b" kindref="member">FitnessFunction.NO_FITNESS_VALUE</ref> in case no value has been computed yet.</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="549" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="549" bodyend="551"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a905236819a9904ca3d096fa1c325aa1b" compoundref="_chromosome_8java" startline="102">org.jgap.Chromosome.m_fitnessValue</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a3715ce380f59756a954566a315514ed0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Chromosome.setFitnessValue</definition>
+        <argsstring>(double a_newFitnessValue)</argsstring>
+        <name>setFitnessValue</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a56f82d43b102fc5da8e0a071e32dc13d">setFitnessValue</reimplements>
+        <param>
+          <type>double</type>
+          <declname>a_newFitnessValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the fitness value of this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>. This method is for use by bulk fitness functions and should not be invoked from anything else (except test cases).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_newFitnessValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a positive integer representing the fitness of this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="585" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="585" bodyend="590"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a905236819a9904ca3d096fa1c325aa1b" compoundref="_chromosome_8java" startline="102">org.jgap.Chromosome.m_fitnessValue</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a4fb0934f7919084f0b5e9ca132e6aaa6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Chromosome.setFitnessValueDirectly</definition>
+        <argsstring>(double a_newFitnessValue)</argsstring>
+        <name>setFitnessValueDirectly</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_chromosome_1ac2acf33157b233e8c5553fc62861fa23">setFitnessValueDirectly</reimplements>
+        <param>
+          <type>double</type>
+          <declname>a_newFitnessValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the fitness value of this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> directly without any constraint checks, conversions or checks. Only use if you know what you do.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_newFitnessValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a positive integer representing the fitness of this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="602" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="602" bodyend="604"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a905236819a9904ca3d096fa1c325aa1b" compoundref="_chromosome_8java" startline="102">org.jgap.Chromosome.m_fitnessValue</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a9cedcb4abe7b9e5f5cfd6cfea0cd949d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String org.jgap.Chromosome.toString</definition>
+        <argsstring>()</argsstring>
+        <name>toString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a string representation of this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>, useful for display purposes</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="614" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="614" bodyend="647"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1aae49bf34668621de1d691cd759ff50b9" compoundref="_chromosome_8java" startline="993" endline="995">org.jgap.Chromosome.getApplicationData</references>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1aef0e40ec9b5956389365f5c3144ab207" compoundref="_base_chromosome_8java" startline="283" endline="285">org.jgap.BaseChromosome.getGene</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a905236819a9904ca3d096fa1c325aa1b" compoundref="_chromosome_8java" startline="102">org.jgap.Chromosome.m_fitnessValue</references>
+        <references refid="interfaceorg_1_1jgap_1_1_i_chromosome_1ae93666d5923e449f45656ad5fed52f84" compoundref="_i_chromosome_8java" startline="33">org.jgap.IChromosome.S_ALLELES</references>
+        <references refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a03218ba49e2c53108005cd6290252284" compoundref="_i_chromosome_8java" startline="35">org.jgap.IChromosome.S_APPLICATION_DATA</references>
+        <references refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a34c8c0933688a10837692d1c0024f663" compoundref="_i_chromosome_8java" startline="31">org.jgap.IChromosome.S_FITNESS_VALUE</references>
+        <references refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a50371491243a21f494112bf66d2e1a26" compoundref="_i_chromosome_8java" startline="37">org.jgap.IChromosome.S_SIZE</references>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1a78c8ae0471973855e19a9b79496f2bec" compoundref="_base_chromosome_8java" startline="302" endline="310">org.jgap.BaseChromosome.size</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1ac75a21fd23483ff275422e0791289ac8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.Chromosome.equals</definition>
+        <argsstring>(Object other)</argsstring>
+        <name>equals</name>
+        <param>
+          <type>Object</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compares this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> against the specified object. The result is true if and the argument is an instance of the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> class and has a set of genes equal to this one.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the object to compare against </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true: if the objects are the same, false otherwise</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="751" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="751" bodyend="768"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a2be0507944e2ca98bef8372402b33e13" compoundref="_chromosome_8java" startline="816" endline="891">org.jgap.Chromosome.compareTo</references>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_test_1ad5bdf2fdda9844d57ccf06fb47c1fb8f" compoundref="_chromosome_test_8java" startline="731" endline="740">org.jgap.ChromosomeTest.testEquals_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_test_1adfdf4c81333c8b63c82fa5167b8c5ab6" compoundref="_chromosome_test_8java" startline="748" endline="760">org.jgap.ChromosomeTest.testEquals_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_test_1a4751a3bdfcbbd6971ce08de638d728ad" compoundref="_chromosome_test_8java" startline="768" endline="794">org.jgap.ChromosomeTest.testEquals_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_test_1af8b451a1da200ab905e01a15e9153d57" compoundref="_chromosome_test_8java" startline="802" endline="812">org.jgap.ChromosomeTest.testEquals_3</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1xml_1_1_x_m_l_manager_test_1a86ea5d61eb6d4772e5e2c6b967cceec3" compoundref="_x_m_l_manager_test_8java" startline="96" endline="101">org.jgap.xml.XMLManagerTest.testGetChromosomeFromDocument_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_population_test_1afab0e7965759f0fbfff5a5b81415e683" compoundref="_population_test_8java" startline="126" endline="137">org.jgap.PopulationTest.testSetChromosome_1</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a9f3e1fc14f84b25f09386a2dd1fc69d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.Chromosome.hashCode</definition>
+        <argsstring>()</argsstring>
+        <name>hashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve a hash code for this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>. Does not considers the order of the Genes for all cases (especially when gene is empty).</para><para><simplesect kind="return"><para>the hash code of this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref></para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="780" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="780" bodyend="799"/>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1aef0e40ec9b5956389365f5c3144ab207" compoundref="_base_chromosome_8java" startline="283" endline="285">org.jgap.BaseChromosome.getGene</references>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1a1f9e4971a34546a0d77fa24061e753a0" compoundref="_base_chromosome_8java" startline="252" endline="254">org.jgap.BaseChromosome.getGenes</references>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1a78c8ae0471973855e19a9b79496f2bec" compoundref="_base_chromosome_8java" startline="302" endline="310">org.jgap.BaseChromosome.size</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a2be0507944e2ca98bef8372402b33e13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.Chromosome.compareTo</definition>
+        <argsstring>(Object other)</argsstring>
+        <name>compareTo</name>
+        <param>
+          <type>Object</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compares the given <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> to this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>. This chromosome is considered to be &quot;less than&quot; the given chromosome if it has a fewer number of genes or if any of its gene values (alleles) are less than their corresponding gene values in the other chromosome.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> against which to compare this chromosome </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a negative number if this chromosome is &quot;less than&quot; the given chromosome, zero if they are equal to each other, and a positive number if this chromosome is &quot;greater than&quot; the given chromosome</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000052"><xreftitle>Todo</xreftitle><xrefdescription><para>improve </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="816" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="816" bodyend="891"/>
+        <references refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a1734f351c78c6d36bec48fdc8a334902">org.jgap.IChromosome.getApplicationData</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1aae49bf34668621de1d691cd759ff50b9" compoundref="_chromosome_8java" startline="993" endline="995">org.jgap.Chromosome.getApplicationData</references>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1a104b33f29941ba6ba405889964fc2bf5" compoundref="_base_chromosome_8java" startline="150" endline="152">org.jgap.BaseChromosome.getConfiguration</references>
+        <references refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a743303c75d2a001f88af579051862964">org.jgap.IChromosome.getFitnessValueDirectly</references>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1aef0e40ec9b5956389365f5c3144ab207" compoundref="_base_chromosome_8java" startline="283" endline="285">org.jgap.BaseChromosome.getGene</references>
+        <references refid="interfaceorg_1_1jgap_1_1_fitness_evaluator_1aad9309b75a437b32641480be173550eb">org.jgap.FitnessEvaluator.isFitter</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a7c696f550a4f4458ed4115833abf02fb" compoundref="_chromosome_8java" startline="111">org.jgap.Chromosome.m_compareAppData</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a905236819a9904ca3d096fa1c325aa1b" compoundref="_chromosome_8java" startline="102">org.jgap.Chromosome.m_fitnessValue</references>
+        <references refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a9b460ad665ea1ab4e789061233fc6fa3">org.jgap.IChromosome.size</references>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1a78c8ae0471973855e19a9b79496f2bec" compoundref="_base_chromosome_8java" startline="302" endline="310">org.jgap.BaseChromosome.size</references>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1ac75a21fd23483ff275422e0791289ac8" compoundref="_chromosome_8java" startline="751" endline="768">org.jgap.Chromosome.equals</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_test_1aa22713b950dfcaefd5425a31588d1844" compoundref="_chromosome_test_8java" startline="1009" endline="1030">org.jgap.ChromosomeTest.testCompareTo_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_test_1a8285fca5ffecd0c73859898eccd327a7" compoundref="_chromosome_test_8java" startline="1038" endline="1055">org.jgap.ChromosomeTest.testCompareTo_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_test_1ae03b562582a0fa6ebc4fde8e012d3598" compoundref="_chromosome_test_8java" startline="1063" endline="1069">org.jgap.ChromosomeTest.testCompareTo_3</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_test_1a8d96875942f57764a14925106b791950" compoundref="_chromosome_test_8java" startline="1077" endline="1098">org.jgap.ChromosomeTest.testCompareTo_4</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a1249d045c9830c9dc76e14e4dbe20f5f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Chromosome.setIsSelectedForNextGeneration</definition>
+        <argsstring>(boolean a_isSelected)</argsstring>
+        <name>setIsSelectedForNextGeneration</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_chromosome_1afeeed3697d5f22154cab618432602ca6">setIsSelectedForNextGeneration</reimplements>
+        <param>
+          <type>boolean</type>
+          <declname>a_isSelected</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets whether this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> has been selected by the natural selector to continue to the next generation or manually (e.g. via an add-method).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_isSelected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> has been selected, false otherwise</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="903" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="903" bodyend="905"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1ad8bb6734b245d112a8e6d66fb38914c9" compoundref="_chromosome_8java" startline="92">org.jgap.Chromosome.m_isSelectedForNextGeneration</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a61d28f792a1389214f06a88dba42260d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.Chromosome.isSelectedForNextGeneration</definition>
+        <argsstring>()</argsstring>
+        <name>isSelectedForNextGeneration</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_chromosome_1af4aa1487bfa13ba0f038b628f44554be">isSelectedForNextGeneration</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves whether this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> has been selected by the natural selector to continue to the next generation.</para><para><simplesect kind="return"><para>true if this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> has been selected, false otherwise</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="916" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="916" bodyend="918"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1ad8bb6734b245d112a8e6d66fb38914c9" compoundref="_chromosome_8java" startline="92">org.jgap.Chromosome.m_isSelectedForNextGeneration</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1ab608acb21ff95b3fe2ff9667a207fd72" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Chromosome.cleanup</definition>
+        <argsstring>()</argsstring>
+        <name>cleanup</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a184e942f9b44185236492ee7261b2b14">cleanup</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Invoked when this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> is no longer needed and should perform any necessary cleanup. Note that this method will attempt to release this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> instance to the active ChromosomePool, if any.</para><para><simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="928" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="928" bodyend="962"/>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1a104b33f29941ba6ba405889964fc2bf5" compoundref="_base_chromosome_8java" startline="150" endline="152">org.jgap.BaseChromosome.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1aef0e40ec9b5956389365f5c3144ab207" compoundref="_base_chromosome_8java" startline="283" endline="285">org.jgap.BaseChromosome.getGene</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a905236819a9904ca3d096fa1c325aa1b" compoundref="_chromosome_8java" startline="102">org.jgap.Chromosome.m_fitnessValue</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1ad8bb6734b245d112a8e6d66fb38914c9" compoundref="_chromosome_8java" startline="92">org.jgap.Chromosome.m_isSelectedForNextGeneration</references>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1a78c8ae0471973855e19a9b79496f2bec" compoundref="_base_chromosome_8java" startline="302" endline="310">org.jgap.BaseChromosome.size</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a03e0d17b0df1765a442f76645aa4e5b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Chromosome.setApplicationData</definition>
+        <argsstring>(Object a_newData)</argsstring>
+        <name>setApplicationData</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a99da03ae9bca8f2ca884186aea82c771">setApplicationData</reimplements>
+        <param>
+          <type>Object</type>
+          <declname>a_newData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This sets the application-specific data that is attached to this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>. Attaching application-specific data may be useful for some applications when it comes time to evaluate this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> in the fitness function. JGAP ignores this data, except for cloning and comparison (latter only if opted in via setCompareApplicationData(..))</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_newData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new application-specific data to attach to this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>. Should be an instance of <ref refid="interfaceorg_1_1jgap_1_1_i_application_data" kindref="compound">IApplicationData</ref></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="977" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="977" bodyend="979"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1af2b4e1abcdf5995b45fb7d5cf93a559c" compoundref="_chromosome_8java" startline="77">org.jgap.Chromosome.m_applicationData</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1aae49bf34668621de1d691cd759ff50b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.Chromosome.getApplicationData</definition>
+        <argsstring>()</argsstring>
+        <name>getApplicationData</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a1734f351c78c6d36bec48fdc8a334902">getApplicationData</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the application-specific data that is attached to this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>. Attaching application-specific data may be useful for some applications when it comes time to evaluate this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> in the fitness function. JGAP ignores this data functionally.</para><para><simplesect kind="return"><para>the application-specific data previously attached to this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>, or null if there is no data attached</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="993" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="993" bodyend="995"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1af2b4e1abcdf5995b45fb7d5cf93a559c" compoundref="_chromosome_8java" startline="77">org.jgap.Chromosome.m_applicationData</references>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a9f590d55a34d8b99c2a9a1b4aedd568b" compoundref="_chromosome_8java" startline="334" endline="465">org.jgap.Chromosome.clone</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a2be0507944e2ca98bef8372402b33e13" compoundref="_chromosome_8java" startline="816" endline="891">org.jgap.Chromosome.compareTo</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a9cedcb4abe7b9e5f5cfd6cfea0cd949d" compoundref="_chromosome_8java" startline="614" endline="647">org.jgap.Chromosome.toString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a96692e7942a035e9b661360ca758c7cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Chromosome.setGenes</definition>
+        <argsstring>(Gene[] a_genes)</argsstring>
+        <name>setGenes</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a0ff42f1935dab73296301b29ad0a1716">setGenes</reimplements>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>[]</type>
+          <declname>a_genes</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the genes for the chromosome. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_genes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the genes to set for the chromosome</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in case constraint checker is provided</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="1006" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="1006" bodyend="1010"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a6c56caed7a052c678daa6af668cad388" compoundref="_chromosome_8java" startline="1059" endline="1061">org.jgap.Chromosome.getConstraintChecker</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1af472c1bacfaf6e5e5c1d5ac3af75ddef" compoundref="_chromosome_8java" startline="1073" endline="1088">org.jgap.Chromosome.verify</references>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a6e5e72f40a4e2f2b7b72ce6678235f40" compoundref="_chromosome_8java" startline="190" endline="199">org.jgap.Chromosome.Chromosome</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1aa82fc94cbbfeb5b6b5b89a97f9089e9e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Chromosome.setCompareApplicationData</definition>
+        <argsstring>(boolean a_doCompare)</argsstring>
+        <name>setCompareApplicationData</name>
+        <param>
+          <type>boolean</type>
+          <declname>a_doCompare</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Should we also consider the application data when comparing? Default is &quot;false&quot; as &quot;true&quot; means a <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> is losing its identity when application data is set differently!</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_doCompare</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true: consider application data in method compareTo</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="1022" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="1022" bodyend="1024"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a7c696f550a4f4458ed4115833abf02fb" compoundref="_chromosome_8java" startline="111">org.jgap.Chromosome.m_compareAppData</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a284d75bb2919718325b376e2c91870d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.Chromosome.isCompareApplicationData</definition>
+        <argsstring>()</argsstring>
+        <name>isCompareApplicationData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="1032" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="1032" bodyend="1034"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a7c696f550a4f4458ed4115833abf02fb" compoundref="_chromosome_8java" startline="111">org.jgap.Chromosome.m_compareAppData</references>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_test_1ab6ee639400035944f42a46b3ebae7cbf" compoundref="_chromosome_test_8java" startline="1284" endline="1291">org.jgap.ChromosomeTest.testSetCompareApplicationData_0</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1ae99251567d68bd079e8c4dfaf15dc513" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Chromosome.setConstraintChecker</definition>
+        <argsstring>(IGeneConstraintChecker a_constraintChecker)</argsstring>
+        <name>setConstraintChecker</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a05c61ae9fb2caf56455eb66405a164c4">setConstraintChecker</reimplements>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_i_gene_constraint_checker" kindref="compound">IGeneConstraintChecker</ref></type>
+          <declname>a_constraintChecker</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the constraint checker to be used for this gene whenever method setAllele(Object) is called.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_constraintChecker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the constraint checker to be set </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.5 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="1046" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="1046" bodyend="1050"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1af890b1160c9b97defdf107e6a4e53329" compoundref="_chromosome_8java" startline="120">org.jgap.Chromosome.m_geneAlleleChecker</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1af472c1bacfaf6e5e5c1d5ac3af75ddef" compoundref="_chromosome_8java" startline="1073" endline="1088">org.jgap.Chromosome.verify</references>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a4f6e9e1bf122719fe420c3bc034fb4b3" compoundref="_chromosome_8java" startline="226" endline="233">org.jgap.Chromosome.Chromosome</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a6c56caed7a052c678daa6af668cad388" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_i_gene_constraint_checker" kindref="compound">IGeneConstraintChecker</ref></type>
+        <definition>IGeneConstraintChecker org.jgap.Chromosome.getConstraintChecker</definition>
+        <argsstring>()</argsstring>
+        <name>getConstraintChecker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="interfaceorg_1_1jgap_1_1_i_gene_constraint_checker" kindref="compound">IGeneConstraintChecker</ref> the constraint checker to be used whenever method <ref refid="classorg_1_1jgap_1_1_chromosome_1a96692e7942a035e9b661360ca758c7cb" kindref="member">setGenes(Gene[])</ref> is called.</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.5 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="1059" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="1059" bodyend="1061"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1af890b1160c9b97defdf107e6a4e53329" compoundref="_chromosome_8java" startline="120">org.jgap.Chromosome.m_geneAlleleChecker</references>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a9f590d55a34d8b99c2a9a1b4aedd568b" compoundref="_chromosome_8java" startline="334" endline="465">org.jgap.Chromosome.clone</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a96692e7942a035e9b661360ca758c7cb" compoundref="_chromosome_8java" startline="1006" endline="1010">org.jgap.Chromosome.setGenes</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_test_1a6f6896fcdac1ebefd78f43486cefc7e6" compoundref="_chromosome_test_8java" startline="1370" endline="1379">org.jgap.ChromosomeTest.testSetConstraintChecker_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_test_1a43769965500bcf0a6cc6e4fad179642b" compoundref="_chromosome_test_8java" startline="1389" endline="1402">org.jgap.ChromosomeTest.testSetConstraintChecker_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_test_1a60e6166405faff97542095c89be9ad08" compoundref="_chromosome_test_8java" startline="1412" endline="1422">org.jgap.ChromosomeTest.testSetConstraintChecker_2</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a45bc47533c183ecf3297d7507299cc85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.Chromosome.isHandlerFor</definition>
+        <argsstring>(Object a_obj, Class a_class)</argsstring>
+        <name>isHandlerFor</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_handler_1a026d7a41944049a4f812ee0d1151d40e">isHandlerFor</reimplements>
+        <param>
+          <type>Object</type>
+          <declname>a_obj</declname>
+        </param>
+        <param>
+          <type>Class</type>
+          <declname>a_class</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><para>Determines whether the handler is suitable for the given object instance or class.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the object instance to check </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_class</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the class to check, alternatively if no object instance is available (some handlers could need to get an object and would always return false if only a class is provided) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true: handler suitable for given object or class</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6</para></simplesect>
+</para> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="1095" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="1095" bodyend="1102"/>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_test_1a32cb16cc2ddc2d6b6083206e7343a6e2" compoundref="_chromosome_test_8java" startline="1574" endline="1582">org.jgap.ChromosomeTest.testIsHandlerFor_0</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1abee38007a07ba7a1442dd96571ed7cc1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.Chromosome.perform</definition>
+        <argsstring>(Object a_obj, Class a_class, Object a_params)</argsstring>
+        <name>perform</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_handler_1a60199862000df04a4b2491d6d08f2f2c">perform</reimplements>
+        <param>
+          <type>Object</type>
+          <declname>a_obj</declname>
+        </param>
+        <param>
+          <type>Class</type>
+          <declname>a_class</declname>
+        </param>
+        <param>
+          <type>Object</type>
+          <declname>a_params</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><para>Performs a task for the given object or class. For some handlers, additional parameters are necessary, which could be provided.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the object instance to perform the handler task for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_class</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the class to perform the handler task for, in case no object instance is available (some handlers could need to get an object and would always throw an exception if only a class is provided) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>optional parameters needed for the handler to perform its task </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in case of any error </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Object</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6</para></simplesect>
+</para> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="1105" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="1105" bodyend="1108"/>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1a104b33f29941ba6ba405889964fc2bf5" compoundref="_base_chromosome_8java" startline="150" endline="152">org.jgap.BaseChromosome.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a6b6fb5c7c5b532813a4661de5dbd9ab3" compoundref="_chromosome_8java" startline="668" endline="737">org.jgap.Chromosome.randomInitialChromosome</references>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_test_1a32cb16cc2ddc2d6b6083206e7343a6e2" compoundref="_chromosome_test_8java" startline="1574" endline="1582">org.jgap.ChromosomeTest.testIsHandlerFor_0</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1aaeae2078063f38074853b06d5c913fa6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Chromosome.setMultiObjectives</definition>
+        <argsstring>(List a_values)</argsstring>
+        <name>setMultiObjectives</name>
+        <param>
+          <type>List</type>
+          <declname>a_values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="1113" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="1113" bodyend="1119"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a6d73c5e40fce0219e80021211d4a2d57" compoundref="_chromosome_8java" startline="86">org.jgap.Chromosome.m_multiObjective</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a6129d035292cd1d271b5ef5dbc3e3161" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List</type>
+        <definition>List org.jgap.Chromosome.getMultiObjectives</definition>
+        <argsstring>()</argsstring>
+        <name>getMultiObjectives</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="1121" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="1121" bodyend="1123"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a6d73c5e40fce0219e80021211d4a2d57" compoundref="_chromosome_8java" startline="86">org.jgap.Chromosome.m_multiObjective</references>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_test_1a3d1e272c18c97803d4c899db511eea2f" compoundref="_chromosome_test_8java" startline="1590" endline="1604">org.jgap.ChromosomeTest.testSetMultiObjectives_0</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1aa6b7f021f64700b1926d5819f5fde5aa" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Chromosome.initFromGene</definition>
+        <argsstring>(Gene a_sampleGene)</argsstring>
+        <name>initFromGene</name>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+          <declname>a_sampleGene</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="235" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="235" bodyend="250"/>
+        <references refid="interfaceorg_1_1jgap_1_1_gene_1ae4ddccb7bf569c0ed6cdc19def590964">org.jgap.Gene.newGene</references>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1a8177b71d092d3ce87909d827ec91492a" compoundref="_base_chromosome_8java" startline="287" endline="289">org.jgap.BaseChromosome.setGene</references>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1a78c8ae0471973855e19a9b79496f2bec" compoundref="_base_chromosome_8java" startline="302" endline="310">org.jgap.BaseChromosome.size</references>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a2872ac725d9182b66352057850f89176" compoundref="_chromosome_8java" startline="219" endline="224">org.jgap.Chromosome.Chromosome</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a74df7a8e7986a3ed2a18c9715fae7b90" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Chromosome.checkGenes</definition>
+        <argsstring>(Gene[] a_initialGenes)</argsstring>
+        <name>checkGenes</name>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>[]</type>
+          <declname>a_initialGenes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper: called by constructors only to verify the initial genes.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_initialGenes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the initial genes of this <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> to verify</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.5 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="304" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="304" bodyend="317"/>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a9156d92adcdf9c918bb37c771805b497" compoundref="_chromosome_8java" startline="264" endline="269">org.jgap.Chromosome.Chromosome</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1adf4d7c5113d0c70283ffb2323b7e0cda" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.Chromosome.cloneObject</definition>
+        <argsstring>(Object a_object)</argsstring>
+        <name>cloneObject</name>
+        <param>
+          <type>Object</type>
+          <declname>a_object</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clones an object by using clone handlers. If no deep cloning possible, then return the reference.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the object to clone </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the cloned object, or the object itself if no coning supported </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="478" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="478" bodyend="481"/>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1a104b33f29941ba6ba405889964fc2bf5" compoundref="_base_chromosome_8java" startline="150" endline="152">org.jgap.BaseChromosome.getConfiguration</references>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a9f590d55a34d8b99c2a9a1b4aedd568b" compoundref="_chromosome_8java" startline="334" endline="465">org.jgap.Chromosome.clone</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a6b6fb5c7c5b532813a4661de5dbd9ab3" compoundref="_chromosome_8java" startline="668" endline="737">org.jgap.Chromosome.randomInitialChromosome</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1aea063618aebe23aa8579baf20063db24" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double org.jgap.Chromosome.calcFitnessValue</definition>
+        <argsstring>()</argsstring>
+        <name>calcFitnessValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>fitness value of this chromosome determined via the registered fitness function</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="560" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="560" bodyend="572"/>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1a104b33f29941ba6ba405889964fc2bf5" compoundref="_base_chromosome_8java" startline="150" endline="152">org.jgap.BaseChromosome.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a905236819a9904ca3d096fa1c325aa1b" compoundref="_chromosome_8java" startline="102">org.jgap.Chromosome.m_fitnessValue</references>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a9ccc6c05aa9c785d1cbae40acc90c80c" compoundref="_chromosome_8java" startline="534" endline="541">org.jgap.Chromosome.getFitnessValue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1af472c1bacfaf6e5e5c1d5ac3af75ddef" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Chromosome.verify</definition>
+        <argsstring>(IGeneConstraintChecker a_constraintChecker)</argsstring>
+        <name>verify</name>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_i_gene_constraint_checker" kindref="compound">IGeneConstraintChecker</ref></type>
+          <declname>a_constraintChecker</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Verifies the state of the chromosome. Especially takes care of the given constraint checker. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_constraintChecker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the constraint checker to verify</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.5 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="1073" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="1073" bodyend="1088"/>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1aef0e40ec9b5956389365f5c3144ab207" compoundref="_base_chromosome_8java" startline="283" endline="285">org.jgap.BaseChromosome.getGene</references>
+        <references refid="classorg_1_1jgap_1_1_base_chromosome_1a1f9e4971a34546a0d77fa24061e753a0" compoundref="_base_chromosome_8java" startline="252" endline="254">org.jgap.BaseChromosome.getGenes</references>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1ae99251567d68bd079e8c4dfaf15dc513" compoundref="_chromosome_8java" startline="1046" endline="1050">org.jgap.Chromosome.setConstraintChecker</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1a96692e7942a035e9b661360ca758c7cb" compoundref="_chromosome_8java" startline="1006" endline="1010">org.jgap.Chromosome.setGenes</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1ab77c73b07816a5f3b99a3459fbe0208c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>static Object org.jgap.Chromosome.cloneObject</definition>
+        <argsstring>(Configuration a_config, Object a_object, Object a_master)</argsstring>
+        <name>cloneObject</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_config</declname>
+        </param>
+        <param>
+          <type>Object</type>
+          <declname>a_object</declname>
+        </param>
+        <param>
+          <type>Object</type>
+          <declname>a_master</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Static convenience method. Clones an object by using clone handlers. If no deep cloning possible, then return the reference.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a valid configuration to obtain the JGAPFactory from </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the object to clone </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_master</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the super object of a_object, e.g. a chromosome in case of application to be cloned </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the cloned object, or the object itself if no coning supported </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.5 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="498" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="498" bodyend="516"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_chromosome_1a6b6fb5c7c5b532813a4661de5dbd9ab3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+        <definition>static IChromosome org.jgap.Chromosome.randomInitialChromosome</definition>
+        <argsstring>(Configuration a_configuration)</argsstring>
+        <name>randomInitialChromosome</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convenience method that returns a new <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> instance with its genes values (alleles) randomized. Note that, if possible, this method will acquire a <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> instance from the active ChromosomePool (if any) and then randomize its gene values before returning it. If a <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> cannot be acquired from the pool, then a new instance will be constructed and its gene values randomized before returning it.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>randomly initialized <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the given <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> instance is invalid </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IllegalArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the given <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> instance is null</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000050"><xreftitle>Todo</xreftitle><xrefdescription><para>what about <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>&apos;s energy? </para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000051"><xreftitle>Todo</xreftitle><xrefdescription><para>what about <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>&apos;s energy? </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="668" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="668" bodyend="737"/>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1a14c96eb2e38fe28b05526633e4677ec6" compoundref="_chromosome_8java" startline="141" endline="144">org.jgap.Chromosome.Chromosome</references>
+        <references refid="classorg_1_1jgap_1_1_chromosome_1adf4d7c5113d0c70283ffb2323b7e0cda" compoundref="_chromosome_8java" startline="478" endline="481">org.jgap.Chromosome.cloneObject</references>
+        <references refid="classorg_1_1jgap_1_1_fitness_function_1a5f1f23e6f8a0f9606aee5d52fac6a06b" compoundref="_fitness_function_8java" startline="40">org.jgap.FitnessFunction.NO_FITNESS_VALUE</references>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_1abee38007a07ba7a1442dd96571ed7cc1" compoundref="_chromosome_8java" startline="1105" endline="1108">org.jgap.Chromosome.perform</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_test_1ab6ee639400035944f42a46b3ebae7cbf" compoundref="_chromosome_test_8java" startline="1284" endline="1291">org.jgap.ChromosomeTest.testSetCompareApplicationData_0</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Chromosomes represent potential solutions and consist of a fixed-length collection of genes. Each gene represents a discrete part of the solution. Each gene in the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> may be backed by a different concrete implementation of the <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> interface, but all genes in a respective position (locus) must share the same concrete implementation across Chromosomes within a single population (genotype). In other words, gene 1 in a chromosome must share the same concrete implementation as gene 1 in all other chromosomes in the population.</para><para><simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="10414">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="10422">
+        <label>org.jgap.ChromosomeTest.MyChromosome</label>
+        <childnode refid="10407" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10413">
+        <label>Serializable</label>
+      </node>
+      <node id="10410">
+        <label>Comparable</label>
+      </node>
+      <node id="10407">
+        <label>org.jgap.Chromosome</label>
+        <link refid="classorg_1_1jgap_1_1_chromosome"/>
+        <childnode refid="10408" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10416">
+        <label>org.jgap.IHandler</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_handler"/>
+      </node>
+      <node id="10419">
+        <label>org.jgap.ChromosomeForTesting</label>
+        <link refid="classorg_1_1jgap_1_1_chromosome_for_testing"/>
+        <childnode refid="10407" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10418">
+        <label>org.jgap.IBusinessKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_business_key"/>
+      </node>
+      <node id="10421">
+        <label>org.jgap.ChromosomeForTesting2</label>
+        <link refid="classorg_1_1jgap_1_1_chromosome_for_testing2"/>
+        <childnode refid="10407" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10411">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="10412" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10408">
+        <label>org.jgap.BaseChromosome</label>
+        <link refid="classorg_1_1jgap_1_1_base_chromosome"/>
+        <childnode refid="10409" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10415" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10417" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10418" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10412">
+        <label>Cloneable</label>
+      </node>
+      <node id="10417">
+        <label>org.jgap.IPersistentRepresentation</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_persistent_representation"/>
+      </node>
+      <node id="10415">
+        <label>org.jgap.IInitializer</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_initializer"/>
+        <childnode refid="10416" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10409">
+        <label>org.jgap.IChromosome</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome"/>
+        <childnode refid="10410" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10411" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10413" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10414" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10420">
+        <label>org.jgap.GenotypeTest.ChromosomeForTest2</label>
+        <link refid="classorg_1_1jgap_1_1_genotype_test_1_1_chromosome_for_test2"/>
+        <childnode refid="10419" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10430">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="10445">
+        <label>List</label>
+      </node>
+      <node id="10444">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="10429" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10427" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10441">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="10429" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10429">
+        <label>Serializable</label>
+      </node>
+      <node id="10426">
+        <label>Comparable</label>
+      </node>
+      <node id="10423">
+        <label>org.jgap.Chromosome</label>
+        <link refid="classorg_1_1jgap_1_1_chromosome"/>
+        <childnode refid="10424" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10447" relation="usage">
+          <edgelabel>m_geneAlleleChecker</edgelabel>
+        </childnode>
+        <childnode refid="10445" relation="usage">
+          <edgelabel>m_multiObjective</edgelabel>
+        </childnode>
+      </node>
+      <node id="10432">
+        <label>org.jgap.IHandler</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_handler"/>
+      </node>
+      <node id="10434">
+        <label>org.jgap.IBusinessKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_business_key"/>
+      </node>
+      <node id="10427">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="10428" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10440">
+        <label>org.jgap.FitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_fitness_evaluator"/>
+        <childnode refid="10429" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10424">
+        <label>org.jgap.BaseChromosome</label>
+        <link refid="classorg_1_1jgap_1_1_base_chromosome"/>
+        <childnode refid="10425" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10431" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10433" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10434" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10435" relation="usage">
+          <edgelabel>m_configuration</edgelabel>
+        </childnode>
+        <childnode refid="10446" relation="usage">
+          <edgelabel>m_genes</edgelabel>
+        </childnode>
+      </node>
+      <node id="10447">
+        <label>org.jgap.IGeneConstraintChecker</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_gene_constraint_checker"/>
+        <childnode refid="10429" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10442">
+        <label>org.jgap.BulkFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_bulk_fitness_function"/>
+        <childnode refid="10429" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10427" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10428">
+        <label>Cloneable</label>
+      </node>
+      <node id="10446">
+        <label>org.jgap.Gene</label>
+        <link refid="interfaceorg_1_1jgap_1_1_gene"/>
+        <childnode refid="10426" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10429" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10433">
+        <label>org.jgap.IPersistentRepresentation</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_persistent_representation"/>
+      </node>
+      <node id="10438">
+        <label>org.jgap.IJGAPFactory</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_j_g_a_p_factory"/>
+        <childnode refid="10429" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10443">
+        <label>org.jgap.Configuration.ConfigurationConfigurable</label>
+        <link refid="classorg_1_1jgap_1_1_configuration_1_1_configuration_configurable"/>
+        <childnode refid="10429" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10431">
+        <label>org.jgap.IInitializer</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_initializer"/>
+        <childnode refid="10432" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10437">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="10427" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10429" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10426" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10425">
+        <label>org.jgap.IChromosome</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome"/>
+        <childnode refid="10426" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10427" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10429" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10435">
+        <label>org.jgap.Configuration</label>
+        <link refid="classorg_1_1jgap_1_1_configuration"/>
+        <childnode refid="10436" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10429" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10427" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10426" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10437" relation="usage">
+          <edgelabel>m_breeder</edgelabel>
+        </childnode>
+        <childnode refid="10438" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="10439" relation="usage">
+          <edgelabel>m_chromosomePool</edgelabel>
+        </childnode>
+        <childnode refid="10440" relation="usage">
+          <edgelabel>m_fitnessEvaluator</edgelabel>
+        </childnode>
+        <childnode refid="10425" relation="usage">
+          <edgelabel>m_sampleChromosome</edgelabel>
+        </childnode>
+        <childnode refid="10441" relation="usage">
+          <edgelabel>m_randomGenerator</edgelabel>
+        </childnode>
+        <childnode refid="10442" relation="usage">
+          <edgelabel>m_bulkObjectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="10443" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="10444" relation="usage">
+          <edgelabel>m_objectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="10445" relation="usage">
+          <edgelabel>m_geneticOperators</edgelabel>
+        </childnode>
+      </node>
+      <node id="10439">
+        <label>org.jgap.IChromosomePool</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool"/>
+      </node>
+      <node id="10436">
+        <label>Configurable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" line="66" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Chromosome.java" bodystart="65" bodyend="1124"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a94e1af5ba804061833ed3883d42f9441" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>BaseChromosome</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1aea063618aebe23aa8579baf20063db24" prot="protected" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>calcFitnessValue</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a74df7a8e7986a3ed2a18c9715fae7b90" prot="protected" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>checkGenes</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a4efa73cb7ff2c5dcd0e16f1d7287dc78" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>CHROM_DELIMITER</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a14c96eb2e38fe28b05526633e4677ec6" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>Chromosome</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a62510703fe45c4a8c453801eaa148bb7" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>Chromosome</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a7290755db8269b79ebdb00b0cd0a9935" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>Chromosome</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a6e5e72f40a4e2f2b7b72ce6678235f40" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>Chromosome</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a2872ac725d9182b66352057850f89176" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>Chromosome</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a4f6e9e1bf122719fe420c3bc034fb4b3" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>Chromosome</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a9156d92adcdf9c918bb37c771805b497" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>Chromosome</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1ab836c132fb64477cad4d0a2e3b997d6f" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>Chromosome</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1ab608acb21ff95b3fe2ff9667a207fd72" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>cleanup</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a9f590d55a34d8b99c2a9a1b4aedd568b" prot="public" virt="virtual"><scope>org::jgap::Chromosome</scope><name>clone</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1adf4d7c5113d0c70283ffb2323b7e0cda" prot="protected" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>cloneObject</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1ab77c73b07816a5f3b99a3459fbe0208c" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>cloneObject</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a2be0507944e2ca98bef8372402b33e13" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>compareTo</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a61d504512312fdc761af87fe0f3ca36d" prot="protected" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>createGene</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1aa8e104e9bc3f5f2bfdfe67b604c10d9c" prot="private" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a0ccfa10730437df1a23322886a6949e7" prot="protected" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>decode</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a2c339c9c70184d1a911878e1be39dc82" prot="protected" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>encode</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1ac75a21fd23483ff275422e0791289ac8" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>equals</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a5cb3ac5d20e1fccb7eacdd0bb38bd650" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>GENE_DELIMITER</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a05f3c0c0caa0e1676345b2303c842be0" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>GENE_DELIMITER_CLOSING</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a52428dfc927129c8960a9d9ca3864346" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>GENE_DELIMITER_HEADING</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1af987f6a74486145a139985297c18ae80" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>getAge</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1aae49bf34668621de1d691cd759ff50b9" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>getApplicationData</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1aa35172e2b9535ace3b8fa31c1b2ef2fe" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>getBusinessKey</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a104b33f29941ba6ba405889964fc2bf5" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>getConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a6c56caed7a052c678daa6af668cad388" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>getConstraintChecker</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a9ccc6c05aa9c785d1cbae40acc90c80c" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>getFitnessValue</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1ad0c53486ddb583ddbee2bede065ae068" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>getFitnessValueDirectly</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1aef0e40ec9b5956389365f5c3144ab207" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>getGene</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a1f9e4971a34546a0d77fa24061e753a0" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>getGenes</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a124394f7e5c4651e59dd1475e0d2c3b0" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>getGenesPersistentRepresentation</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a2bef76845dd6e92c09037dae72e7ca15" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>getGenesPersistentRepresentation</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a6129d035292cd1d271b5ef5dbc3e3161" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>getMultiObjectives</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1ab4a4ad55945458548488f87940aa852e" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>getPersistentRepresentation</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a8cf998c46fddd9ee2f8bfcd2a7b6bffa" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>getUniqueID</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a2d23cfd243723be4d5eb775532e36a6e" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>getUniqueIDTemplate</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a9f3e1fc14f84b25f09386a2dd1fc69d9" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>hashCode</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a6dcae8b12cad267f6f91431281869e02" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>increaseAge</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a89c0c0959ca4af0152520a2d6c512edd" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>increaseOperatedOn</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1aa6b7f021f64700b1926d5819f5fde5aa" prot="protected" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>initFromGene</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a284d75bb2919718325b376e2c91870d0" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>isCompareApplicationData</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a45bc47533c183ecf3297d7507299cc85" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>isHandlerFor</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a61d28f792a1389214f06a88dba42260d" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>isSelectedForNextGeneration</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a678ed92a2a1a47343638de24f40b66e3" prot="private" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>m_alwaysCalculate</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1af2b4e1abcdf5995b45fb7d5cf93a559c" prot="private" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>m_applicationData</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a7c696f550a4f4458ed4115833abf02fb" prot="private" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>m_compareAppData</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a905236819a9904ca3d096fa1c325aa1b" prot="protected" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>m_fitnessValue</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1af890b1160c9b97defdf107e6a4e53329" prot="private" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>m_geneAlleleChecker</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1ad8bb6734b245d112a8e6d66fb38914c9" prot="private" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>m_isSelectedForNextGeneration</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a6d73c5e40fce0219e80021211d4a2d57" prot="private" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>m_multiObjective</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a86349c8e5dbe93c54580a283f70ea2d0" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>operatedOn</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1abee38007a07ba7a1442dd96571ed7cc1" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>perform</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a6b6fb5c7c5b532813a4661de5dbd9ab3" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>randomInitialChromosome</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a7d4483ef679d0e1eb335256b72ab0731" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>resetAge</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a93a541bdb76c316543a201e8718dd29c" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>resetOperatedOn</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_chromosome_1ae93666d5923e449f45656ad5fed52f84" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>S_ALLELES</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a03218ba49e2c53108005cd6290252284" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>S_APPLICATION_DATA</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a34c8c0933688a10837692d1c0024f663" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>S_FITNESS_VALUE</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_chromosome_1a50371491243a21f494112bf66d2e1a26" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>S_SIZE</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1aaf9e8ca50d99c27775ce186613320624" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>setAge</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a03e0d17b0df1765a442f76645aa4e5b8" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>setApplicationData</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1aa82fc94cbbfeb5b6b5b89a97f9089e9e" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>setCompareApplicationData</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1ae99251567d68bd079e8c4dfaf15dc513" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>setConstraintChecker</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a3715ce380f59756a954566a315514ed0" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>setFitnessValue</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a4fb0934f7919084f0b5e9ca132e6aaa6" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>setFitnessValueDirectly</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a8177b71d092d3ce87909d827ec91492a" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>setGene</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a96692e7942a035e9b661360ca758c7cb" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>setGenes</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a1249d045c9830c9dc76e14e4dbe20f5f" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>setIsSelectedForNextGeneration</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1aaeae2078063f38074853b06d5c913fa6" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>setMultiObjectives</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a06156bb0f2c8512ca6a7f7f0fee305b9" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>setUniqueIDTemplate</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a30276dc8afb0bd632c288bf7d2e18b55" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>setValueFromPersistentRepresentation</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a78c8ae0471973855e19a9b79496f2bec" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>size</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_chromosome_1a9237b2c8d40b9d466d5f68792ba04036" prot="protected" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>split</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1a9cedcb4abe7b9e5f5cfd6cfea0cd949d" prot="public" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>toString</name></member>
+      <member refid="classorg_1_1jgap_1_1_chromosome_1af472c1bacfaf6e5e5c1d5ac3af75ddef" prot="protected" virt="non-virtual"><scope>org::jgap::Chromosome</scope><name>verify</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

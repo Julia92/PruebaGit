@@ -1,0 +1,330 @@
+.TH "org.jgap.distr.grid.GridConfigurationBase" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.grid.GridConfigurationBase \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.distr\&.grid\&.IGridConfiguration\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGridConfigurationBase\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetPackageName\fP ()"
+.br
+.ti -1c
+.RI "\fBIClientFeedback\fP \fBgetClientFeedback\fP ()"
+.br
+.ti -1c
+.RI "\fBIClientEvolveStrategy\fP \fBgetClientEvolveStrategy\fP ()"
+.br
+.ti -1c
+.RI "\fBIRequestSplitStrategy\fP \fBgetRequestSplitStrategy\fP ()"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBgetConfiguration\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetConfiguration\fP (\fBConfiguration\fP a_config)"
+.br
+.ti -1c
+.RI "\fBIWorkerEvolveStrategy\fP \fBgetWorkerEvolveStrategy\fP ()"
+.br
+.ti -1c
+.RI "\fBIWorkerReturnStrategy\fP \fBgetWorkerReturnStrategy\fP ()"
+.br
+.ti -1c
+.RI "\fBIGenotypeInitializer\fP \fBgetGenotypeInitializer\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetGenotypeInitializer\fP (\fBIGenotypeInitializer\fP a_initializer)"
+.br
+.ti -1c
+.RI "void \fBsetWorkerReturnStrategy\fP (\fBIWorkerReturnStrategy\fP a_strategy)"
+.br
+.ti -1c
+.RI "void \fBsetWorkerEvolveStrategy\fP (\fBIWorkerEvolveStrategy\fP a_strategy)"
+.br
+.ti -1c
+.RI "abstract void \fBinitialize\fP (GridNodeClientConfig a_gridconfig)  throws Exception"
+.br
+.ti -1c
+.RI "abstract void \fBvalidate\fP ()  throws Exception"
+.br
+.ti -1c
+.RI "void \fBsetClientEvolveStrategy\fP (\fBIClientEvolveStrategy\fP a_strategy)"
+.br
+.ti -1c
+.RI "void \fBsetClientFeedback\fP (\fBIClientFeedback\fP a_clientFeedback)"
+.br
+.ti -1c
+.RI "void \fBsetRequestSplitStrategy\fP (\fBIRequestSplitStrategy\fP a_splitStrategy)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBIClientFeedback\fP \fBm_clientFeedback\fP"
+.br
+.ti -1c
+.RI "\fBIRequestSplitStrategy\fP \fBm_splitStrategy\fP"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBm_config\fP"
+.br
+.ti -1c
+.RI "\fBIClientEvolveStrategy\fP \fBm_clientEvolveStrategy\fP"
+.br
+.ti -1c
+.RI "\fBIWorkerEvolveStrategy\fP \fBm_workerEvolveStrategy\fP"
+.br
+.ti -1c
+.RI "\fBIWorkerReturnStrategy\fP \fBm_workerReturnStrategy\fP"
+.br
+.ti -1c
+.RI "\fBIGenotypeInitializer\fP \fBm_genotypeInitializer\fP"
+.br
+.ti -1c
+.RI "String \fBm_packageName\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.2 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Abstract base class for the important grid configuration\&. It holds any information necessary to describe a problem and the way it is solved distributedly\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file GridConfigurationBase\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.GridConfigurationBase ()\fC [inline]\fP"
+
+.PP
+Definition at line 43 of file GridConfigurationBase\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBIClientEvolveStrategy\fP org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.getClientEvolveStrategy ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridConfiguration\fP\&.
+.PP
+Definition at line 55 of file GridConfigurationBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_clientEvolveStrategy\&.
+.SS "\fBIClientFeedback\fP org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.getClientFeedback ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridConfiguration\fP\&.
+.PP
+Definition at line 51 of file GridConfigurationBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_clientFeedback\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.getConfiguration ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridConfiguration\fP\&.
+.PP
+Definition at line 63 of file GridConfigurationBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_config\&.
+.SS "\fBIGenotypeInitializer\fP org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.getGenotypeInitializer ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridConfiguration\fP\&.
+.PP
+Definition at line 79 of file GridConfigurationBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_genotypeInitializer\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.getPackageName ()\fC [inline]\fP"
+
+.PP
+Definition at line 47 of file GridConfigurationBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_packageName\&.
+.SS "\fBIRequestSplitStrategy\fP org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.getRequestSplitStrategy ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridConfiguration\fP\&.
+.PP
+Definition at line 59 of file GridConfigurationBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_splitStrategy\&.
+.SS "\fBIWorkerEvolveStrategy\fP org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.getWorkerEvolveStrategy ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridConfiguration\fP\&.
+.PP
+Definition at line 71 of file GridConfigurationBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_workerEvolveStrategy\&.
+.SS "\fBIWorkerReturnStrategy\fP org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.getWorkerReturnStrategy ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridConfiguration\fP\&.
+.PP
+Definition at line 75 of file GridConfigurationBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_workerReturnStrategy\&.
+.SS "abstract void org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.initialize (GridNodeClientConfiga_gridconfig) throws Exception\fC [pure virtual]\fP"
+Write your initialization of the private attributes here!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_gridconfig\fP current grid node client configuration (provided via the command line at startup) 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP in case of any error 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridConfiguration\fP\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.setClientEvolveStrategy (\fBIClientEvolveStrategy\fPa_strategy)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridConfiguration\fP\&.
+.PP
+Definition at line 115 of file GridConfigurationBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_clientEvolveStrategy\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.setClientFeedback (\fBIClientFeedback\fPa_clientFeedback)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridConfiguration\fP\&.
+.PP
+Definition at line 120 of file GridConfigurationBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_clientFeedback\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.setConfiguration (\fBConfiguration\fPa_config)\fC [inline]\fP"
+
+.PP
+Definition at line 67 of file GridConfigurationBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_config\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.setGenotypeInitializer (\fBIGenotypeInitializer\fPa_initializer)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridConfiguration\fP\&.
+.PP
+Definition at line 83 of file GridConfigurationBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_genotypeInitializer\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.setRequestSplitStrategy (\fBIRequestSplitStrategy\fPa_splitStrategy)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridConfiguration\fP\&.
+.PP
+Definition at line 124 of file GridConfigurationBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_splitStrategy\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.setWorkerEvolveStrategy (\fBIWorkerEvolveStrategy\fPa_strategy)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridConfiguration\fP\&.
+.PP
+Definition at line 91 of file GridConfigurationBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_workerEvolveStrategy\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.setWorkerReturnStrategy (\fBIWorkerReturnStrategy\fPa_strategy)\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridConfiguration\fP\&.
+.PP
+Definition at line 87 of file GridConfigurationBase\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_workerReturnStrategy\&.
+.SS "abstract void org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.validate () throws Exception\fC [pure virtual]\fP"
+Called immediately before starting the grid computation\&. Verify here, if your configuration is setup properly and all fields are initialized correctly\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IGridConfiguration\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.CVS_REVISION = '$Revision: 1\&.2 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file GridConfigurationBase\&.java\&.
+.SS "\fBIClientEvolveStrategy\fP org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_clientEvolveStrategy\fC [private]\fP"
+
+.PP
+Definition at line 34 of file GridConfigurationBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.getClientEvolveStrategy(), and org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.setClientEvolveStrategy()\&.
+.SS "\fBIClientFeedback\fP org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_clientFeedback\fC [private]\fP"
+
+.PP
+Definition at line 28 of file GridConfigurationBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.getClientFeedback(), and org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.setClientFeedback()\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_config\fC [private]\fP"
+
+.PP
+Definition at line 32 of file GridConfigurationBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.getConfiguration(), and org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.setConfiguration()\&.
+.SS "\fBIGenotypeInitializer\fP org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_genotypeInitializer\fC [private]\fP"
+
+.PP
+Definition at line 40 of file GridConfigurationBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.getGenotypeInitializer(), and org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.setGenotypeInitializer()\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_packageName\fC [private]\fP"
+
+.PP
+Definition at line 41 of file GridConfigurationBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.getPackageName()\&.
+.SS "\fBIRequestSplitStrategy\fP org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_splitStrategy\fC [private]\fP"
+
+.PP
+Definition at line 30 of file GridConfigurationBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.getRequestSplitStrategy(), and org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.setRequestSplitStrategy()\&.
+.SS "\fBIWorkerEvolveStrategy\fP org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_workerEvolveStrategy\fC [private]\fP"
+
+.PP
+Definition at line 36 of file GridConfigurationBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.getWorkerEvolveStrategy(), and org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.setWorkerEvolveStrategy()\&.
+.SS "\fBIWorkerReturnStrategy\fP org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.m_workerReturnStrategy\fC [private]\fP"
+
+.PP
+Definition at line 38 of file GridConfigurationBase\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.getWorkerReturnStrategy(), and org\&.jgap\&.distr\&.grid\&.GridConfigurationBase\&.setWorkerReturnStrategy()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

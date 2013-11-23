@@ -1,0 +1,202 @@
+.TH "org.jgap.event.EventManager" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.event.EventManager \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.event\&.IEventManager\fP, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Inherited by org\&.jgap\&.TestEventManager\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "synchronized void \fBaddEventListener\fP (final String a_eventName, final \fBGeneticEventListener\fP a_eventListenerToAdd)"
+.br
+.ti -1c
+.RI "synchronized void \fBremoveEventListener\fP (final String a_eventName, final \fBGeneticEventListener\fP a_eventListenerToRemove)"
+.br
+.ti -1c
+.RI "synchronized void \fBfireGeneticEvent\fP (final \fBGeneticEvent\fP a_eventToFire)"
+.br
+.ti -1c
+.RI "int \fBhashCode\fP ()"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "HashMap \fBm_listeners\fP = new HashMap()"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.9 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Manages event notification in the system\&. Observers that desire to be notified of genetic events should subscribe to this class via the \fBaddEventListener()\fP method\&. To unsubscribe, use the \fBremoveEventListener()\fP method\&. To generate a genetic event, use the \fBfireGeneticEvent()\fP method, which will take care of notifying the appropriate subscribers\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file EventManager\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "synchronized void org\&.jgap\&.event\&.EventManager\&.addEventListener (final Stringa_eventName, final \fBGeneticEventListener\fPa_eventListenerToAdd)\fC [inline]\fP"
+Adds a new listener that will be notified when the event represented by the given name is fired\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_eventName\fP the name of the event to which the given listener should be subscribed\&. Standard events are represented by constants in the \fBGeneticEvent\fP class 
+.br
+\fIa_eventListenerToAdd\fP the genetic listener to subscribe to notifications of the given event
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 50 of file EventManager\&.java\&.
+.PP
+References org\&.jgap\&.event\&.EventManager\&.m_listeners\&.
+.SS "Object org\&.jgap\&.event\&.EventManager\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+cloned instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 121 of file EventManager\&.java\&.
+.PP
+References org\&.jgap\&.event\&.EventManager\&.m_listeners\&.
+.SS "synchronized void org\&.jgap\&.event\&.EventManager\&.fireGeneticEvent (final \fBGeneticEvent\fPa_eventToFire)\fC [inline]\fP"
+Fires a genetic event\&. All subscribers of that particular event type (as determined by the name of the event) will be notified\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_eventToFire\fP the representation of the genetic event to fire
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 90 of file EventManager\&.java\&.
+.PP
+References org\&.jgap\&.event\&.GeneticEvent\&.getEventName(), and org\&.jgap\&.event\&.EventManager\&.m_listeners\&.
+.SS "int org\&.jgap\&.event\&.EventManager\&.hashCode ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+hashcode
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 110 of file EventManager\&.java\&.
+.SS "synchronized void org\&.jgap\&.event\&.EventManager\&.removeEventListener (final Stringa_eventName, final \fBGeneticEventListener\fPa_eventListenerToRemove)\fC [inline]\fP"
+Removes the given listener from subscription of the indicated event\&. The listener will no longer be notified when the given event occurs\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_eventName\fP the name of the event to which the given listener should be removed\&. Standard events are represented by constants in the \fBGeneticEvent\fP class 
+.br
+\fIa_eventListenerToRemove\fP the genetic listener to unsubscribe from notifications of the given event
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 73 of file EventManager\&.java\&.
+.PP
+References org\&.jgap\&.event\&.EventManager\&.m_listeners\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.event\&.EventManager\&.CVS_REVISION = '$Revision: 1\&.9 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 29 of file EventManager\&.java\&.
+.SS "HashMap org\&.jgap\&.event\&.EventManager\&.m_listeners = new HashMap()\fC [private]\fP"
+References a Map of subscribed event listeners\&. Each key is an event name, and each value is a List of listeners subscribed to that event\&. 
+.PP
+Definition at line 35 of file EventManager\&.java\&.
+.PP
+Referenced by org\&.jgap\&.event\&.EventManager\&.addEventListener(), org\&.jgap\&.event\&.EventManager\&.clone(), org\&.jgap\&.event\&.EventManager\&.fireGeneticEvent(), and org\&.jgap\&.event\&.EventManager\&.removeEventListener()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

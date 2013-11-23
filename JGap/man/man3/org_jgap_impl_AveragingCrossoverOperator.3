@@ -1,0 +1,422 @@
+.TH "org.jgap.impl.AveragingCrossoverOperator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.AveragingCrossoverOperator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.BaseGeneticOperator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAveragingCrossoverOperator\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBAveragingCrossoverOperator\fP (final \fBConfiguration\fP a_configuration)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBAveragingCrossoverOperator\fP (final \fBConfiguration\fP a_configuration, final \fBRandomGenerator\fP a_generatorForAveraging)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBAveragingCrossoverOperator\fP (final \fBConfiguration\fP a_configuration, final \fBIUniversalRateCalculator\fP a_crossoverRateCalculator)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBoperate\fP (final \fBPopulation\fP a_population, final List a_candidateChromosomes)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (final Object a_other)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (final Object a_other)"
+.br
+.ti -1c
+.RI "void \fBsetCrossoverRate\fP (int a_rate)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBgetLocus\fP (final \fBRandomGenerator\fP a_generator, final int a_index, final int a_max)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetCrossoverRateCalc\fP (final \fBIUniversalRateCalculator\fP a_crossoverRateCalculator)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBRandomGenerator\fP \fBm_crossoverGenerator\fP"
+.br
+.ti -1c
+.RI "int \fBm_crossoverRate\fP"
+.br
+.ti -1c
+.RI "Map \fBm_loci\fP"
+.br
+.ti -1c
+.RI "\fBIUniversalRateCalculator\fP \fBm_crossoverRateCalc\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.29 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The averaging crossover operator randomly selects two Chromosomes from the population and 'mates' them by randomly picking a gene and then swapping that gene and all subsequent genes between the two Chromosomes\&. The two modified Chromosomes are then added to the list of candidate Chromosomes\&. This operation is performed half as many times as there are Chromosomes in the population\&. Additionally, the loci of crossing over are cached for each index, i\&.e\&., after randomizing the loci for each index once, they don't change again\&.
+.PP
+If you work with \fBCompositeGene\fP's, this operator expects them to contain genes of the same type (e\&.g\&. \fBIntegerGene\fP)\&. If you have mixed types, please provide your own crossover operator\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 32 of file AveragingCrossoverOperator\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.AveragingCrossoverOperator () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Using the same random generator for randomizing the loci for crossing over as for selecting the genes to be crossed over\&.
+.PP
+Attention: The configuration used is the one set with the static method Genotype\&.setConfiguration\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 74 of file AveragingCrossoverOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.compareTo()\&.
+.SS "org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.AveragingCrossoverOperator (final \fBConfiguration\fPa_configuration) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Using the same random generator for randomizing the loci for crossing over as for selecting the genes to be crossed over\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 90 of file AveragingCrossoverOperator\&.java\&.
+.SS "org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.AveragingCrossoverOperator (final \fBConfiguration\fPa_configuration, final \fBRandomGenerator\fPa_generatorForAveraging) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Using a different random generator for randomizing the loci for crossing over than for selecting the genes to be crossed over 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.br
+\fIa_generatorForAveraging\fP \fBRandomGenerator\fP to use
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 (since 2\&.0 without a_configuration) 
+.RE
+.PP
+
+.PP
+Definition at line 106 of file AveragingCrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.init(), and org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.m_crossoverGenerator\&.
+.SS "org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.AveragingCrossoverOperator (final \fBConfiguration\fPa_configuration, final \fBIUniversalRateCalculator\fPa_crossoverRateCalculator) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this \fBCrossoverOperator\fP with a specified crossover rate calculator, which results in dynamic crossover being turned on\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.br
+\fIa_crossoverRateCalculator\fP calculator for dynamic crossover rate computation
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 (since 2\&.0 without a_configuration) 
+.RE
+.PP
+
+.PP
+Definition at line 128 of file AveragingCrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.init(), and org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.setCrossoverRateCalc()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.compareTo (final Objecta_other)\fC [inline]\fP"
+Compares the given object to this one\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the instance against which to compare this instance 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a negative number if this instance is 'less than' the given instance, zero if they are equal to each other, and a positive number if this is 'greater than' the given instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 297 of file AveragingCrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.AveragingCrossoverOperator(), org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.m_crossoverRate, and org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.m_crossoverRateCalc\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.equals(), org\&.jgap\&.impl\&.AveragingCrossoverOperatorTest\&.testCompareTo_0(), and org\&.jgap\&.impl\&.AveragingCrossoverOperatorTest\&.testCompareTo_1()\&.
+.SS "boolean org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.equals (final Objecta_other)\fC [inline]\fP"
+Compares this \fBGeneticOperator\fP against the specified object\&. The result is true if and the argument is an instance of this class and is equal wrt the data\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the object to compare against 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: if the objects are the same, false otherwise
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 277 of file AveragingCrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.compareTo()\&.
+.SS "int org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.getLocus (final \fBRandomGenerator\fPa_generator, final inta_index, final inta_max)\fC [inline]\fP, \fC [protected]\fP"
+Returns the crossover location for a given index\&. For each index the crossover locatio is the same, therefor it is cached!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_generator\fP to generate random values the first time 
+.br
+\fIa_index\fP the index of the crossover operation 
+.br
+\fIa_max\fP upper boundary for random generator
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+crossover location for a given index
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 256 of file AveragingCrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.m_loci, and org\&.jgap\&.RandomGenerator\&.nextInt()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.operate()\&.
+.SS "void org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.init ()\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 58 of file AveragingCrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.m_crossoverRate, and org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.m_loci\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.AveragingCrossoverOperator()\&.
+.SS "void org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.operate (final \fBPopulation\fPa_population, final Lista_candidateChromosomes)\fC [inline]\fP"
+Crossover that acts as a perturbed mean of two individuals\&. x_i = p*x1_i + (1-p)*x2_i p - uniform random value over [0,1]\&. Averaging over line means p is same for every i, averaging over space if different p is chosen for each i\&. See \fBCrossoverOperator\fP for general description, also see feature request 708774
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_population\fP \fBChromosome\fP[] 
+.br
+\fIa_candidateChromosomes\fP List
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.GeneticOperator\fP\&.
+.PP
+Definition at line 164 of file AveragingCrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.util\&.ICloneable\&.clone(), org\&.jgap\&.BaseGeneticOperator\&.getConfiguration(), org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.getLocus(), org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.m_crossoverGenerator, org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.m_crossoverRate, org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.m_crossoverRateCalc, org\&.jgap\&.BaseGeneticOperator\&.m_monitorActive, and org\&.jgap\&.Population\&.size()\&.
+.SS "void org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.setCrossoverRate (inta_rate)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_rate\fP crossover rate to use by this crossover operator 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 330 of file AveragingCrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.m_crossoverRate\&.
+.SS "void org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.setCrossoverRateCalc (final \fBIUniversalRateCalculator\fPa_crossoverRateCalculator)\fC [inline]\fP, \fC [private]\fP"
+Sets the crossover rate calculator 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_crossoverRateCalculator\fP the new calculator
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 144 of file AveragingCrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.m_crossoverRateCalc\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.AveragingCrossoverOperator()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.CVS_REVISION = '$Revision: 1\&.29 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 35 of file AveragingCrossoverOperator\&.java\&.
+.SS "\fBRandomGenerator\fP org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.m_crossoverGenerator\fC [private]\fP"
+Random generator for randomizing the loci for crossing over 
+.PP
+Definition at line 40 of file AveragingCrossoverOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.AveragingCrossoverOperator(), and org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.operate()\&.
+.SS "int org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.m_crossoverRate\fC [private]\fP"
+The current crossover rate used by this crossover operator\&. 
+.PP
+Definition at line 45 of file AveragingCrossoverOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.compareTo(), org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.init(), org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.operate(), and org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.setCrossoverRate()\&.
+.SS "\fBIUniversalRateCalculator\fP org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.m_crossoverRateCalc\fC [private]\fP"
+Calculator for dynamically determining the crossover rate\&. If set to null the value of m_crossoverRate will be used instead\&. 
+.PP
+Definition at line 56 of file AveragingCrossoverOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.compareTo(), org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.operate(), and org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.setCrossoverRateCalc()\&.
+.SS "Map org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.m_loci\fC [private]\fP"
+Cache for alreadycrandomized loci for crossing over 
+.PP
+Definition at line 50 of file AveragingCrossoverOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.getLocus(), and org\&.jgap\&.impl\&.AveragingCrossoverOperator\&.init()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

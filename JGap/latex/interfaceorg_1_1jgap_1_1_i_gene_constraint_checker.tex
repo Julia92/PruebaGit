@@ -1,0 +1,102 @@
+\hypertarget{interfaceorg_1_1jgap_1_1_i_gene_constraint_checker}{\section{org.\-jgap.\-I\-Gene\-Constraint\-Checker Interface Reference}
+\label{interfaceorg_1_1jgap_1_1_i_gene_constraint_checker}\index{org.\-jgap.\-I\-Gene\-Constraint\-Checker@{org.\-jgap.\-I\-Gene\-Constraint\-Checker}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-I\-Gene\-Constraint\-Checker\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceorg_1_1jgap_1_1_i_gene_constraint_checker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-I\-Gene\-Constraint\-Checker\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{interfaceorg_1_1jgap_1_1_i_gene_constraint_checker__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+boolean \hyperlink{interfaceorg_1_1jgap_1_1_i_gene_constraint_checker_abf34442f71a7a860d42b3efc8554efb4}{verify} (\hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} a\-\_\-gene, Object a\-\_\-allele\-Value, \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} a\-\_\-chromosome, int a\-\_\-gene\-Index)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{interfaceorg_1_1jgap_1_1_i_gene_constraint_checker_a78e823030e27800b44a2ad9faacc8ff3}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-8 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for checking whether a given allele value is valid to be set for a given gene instance. The contained validate()-\/method will be called in the set\-Allele(\-Object) method of \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} implementations.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 20 of file I\-Gene\-Constraint\-Checker.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1_i_gene_constraint_checker_abf34442f71a7a860d42b3efc8554efb4}{\index{org\-::jgap\-::\-I\-Gene\-Constraint\-Checker@{org\-::jgap\-::\-I\-Gene\-Constraint\-Checker}!verify@{verify}}
+\index{verify@{verify}!org::jgap::IGeneConstraintChecker@{org\-::jgap\-::\-I\-Gene\-Constraint\-Checker}}
+\subsubsection[{verify}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-I\-Gene\-Constraint\-Checker.\-verify (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene}}]{a\-\_\-gene, }
+\item[{Object}]{a\-\_\-allele\-Value, }
+\item[{{\bf I\-Chromosome}}]{a\-\_\-chromosome, }
+\item[{int}]{a\-\_\-gene\-Index}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_i_gene_constraint_checker_abf34442f71a7a860d42b3efc8554efb4}
+Check if a given allele value is valid for the given gene instance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-gene} & the gene the given allele is to be validated for \\
+\hline
+{\em a\-\_\-allele\-Value} & the allele value to be validated \\
+\hline
+{\em a\-\_\-chromosome} & the chromosome the gene is contained (or null, if unknown) \\
+\hline
+{\em a\-\_\-gene\-Index} & the index the gene is contained in the chromosome at, or -\/1 if unknown \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true\-: allele may be set for gene; false\-: validity check failed
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1impl_1_1_inversion_operator_test_1_1_test_constraint_checker_a6703ea3de4ce47ab66aba777f680877b}{org.\-jgap.\-impl.\-Inversion\-Operator\-Test.\-Test\-Constraint\-Checker}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1_i_gene_constraint_checker_a78e823030e27800b44a2ad9faacc8ff3}{\index{org\-::jgap\-::\-I\-Gene\-Constraint\-Checker@{org\-::jgap\-::\-I\-Gene\-Constraint\-Checker}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::IGeneConstraintChecker@{org\-::jgap\-::\-I\-Gene\-Constraint\-Checker}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-I\-Gene\-Constraint\-Checker.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-8 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{interfaceorg_1_1jgap_1_1_i_gene_constraint_checker_a78e823030e27800b44a2ad9faacc8ff3}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 23 of file I\-Gene\-Constraint\-Checker.\-java.
+
+
+
+The documentation for this interface was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/\hyperlink{_i_gene_constraint_checker_8java}{I\-Gene\-Constraint\-Checker.\-java}\end{DoxyCompactItemize}

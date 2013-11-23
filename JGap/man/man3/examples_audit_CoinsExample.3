@@ -1,0 +1,123 @@
+.TH "examples.audit.CoinsExample" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.audit.CoinsExample \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmakeChangeForAmount\fP (int a_targetChangeAmount)  throws Exception "
+.br
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.25 $'"
+.br
+.ti -1c
+.RI "static final int \fBMAX_ALLOWED_EVOLUTIONS\fP = 80"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Same logic as in \fBMinimizingMakeChange\fP except that we are using the new audit capabilities provided by JGAP 2\&.2
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 28 of file CoinsExample\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static void examples\&.audit\&.CoinsExample\&.main (String[]args)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 263 of file CoinsExample\&.java\&.
+.PP
+References examples\&.audit\&.CoinsExample\&.makeChangeForAmount(), and examples\&.audit\&.CoinsExampleFitnessFunction\&.MAX_BOUND\&.
+.SS "static void examples\&.audit\&.CoinsExample\&.makeChangeForAmount (inta_targetChangeAmount) throws Exception\fC [inline]\fP, \fC [static]\fP"
+Executes the genetic algorithm to determine the minimum number of coins necessary to make up the given target amount of change\&. The solution will then be written to System\&.out\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_targetChangeAmount\fP the target amount of change for which this method is attempting to produce the minimum number of coins 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+class Evaluator: input:
+.IP "\(bu" 2
+PermutingConfiguration
+.IP "\(bu" 2
+Number of evaluation runs pers config (to turn off randomness as much as possible)
+.IP "\(bu" 2
+output facility (data container)
+.IP "\(bu" 2
+optional: event subscribers output:
+.IP "\(bu" 2
+averaged curve of fitness value thru all generations
+.IP "\(bu" 2
+best fitness value accomplished
+.IP "\(bu" 2
+average number of performance improvements for all generations 
+.PP
+.RE
+.PP
+
+.PP
+Definition at line 50 of file CoinsExample\&.java\&.
+.PP
+References examples\&.audit\&.CoinsExample\&.MAX_ALLOWED_EVOLUTIONS\&.
+.PP
+Referenced by examples\&.audit\&.CoinsExample\&.main()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.audit\&.CoinsExample\&.CVS_REVISION = '$Revision: 1\&.25 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 30 of file CoinsExample\&.java\&.
+.SS "final int examples\&.audit\&.CoinsExample\&.MAX_ALLOWED_EVOLUTIONS = 80\fC [static]\fP, \fC [private]\fP"
+The total number of times we'll let the population evolve\&. 
+.PP
+Definition at line 35 of file CoinsExample\&.java\&.
+.PP
+Referenced by examples\&.audit\&.CoinsExample\&.makeChangeForAmount()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

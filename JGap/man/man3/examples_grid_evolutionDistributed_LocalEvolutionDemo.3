@@ -1,0 +1,135 @@
+.TH "examples.grid.evolutionDistributed.LocalEvolutionDemo" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.grid.evolutionDistributed.LocalEvolutionDemo \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLocalEvolutionDemo\fP ()  throws Exception "
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "MyRequest \fBassembleWorkRequest\fP ()"
+.br
+.ti -1c
+.RI "void \fBevolve\fP ()  throws Exception "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBGridConfiguration\fP \fBm_localconfig\fP"
+.br
+.ti -1c
+.RI "IClientEvolveStrategy \fBm_clientEvolver\fP"
+.br
+.ti -1c
+.RI "MyRequest \fBm_req\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.3 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Demonstrates how the grid configuration can be used to do the whole evolution locally (i\&.e\&. stand alone without server and workers)\&.
+.PP
+Our aim: We can recycle any code written for the grid\&. We don't have to rewrite or add a single line of code!
+.PP
+This class is still under development! It will evolve together with the framework\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file LocalEvolutionDemo\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.LocalEvolutionDemo () throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 37 of file LocalEvolutionDemo\&.java\&.
+.PP
+References examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.assembleWorkRequest(), examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.evolve(), examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.m_clientEvolver, examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.m_localconfig, and examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.m_req\&.
+.PP
+Referenced by examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.main()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "MyRequest examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.assembleWorkRequest ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 50 of file LocalEvolutionDemo\&.java\&.
+.PP
+References examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.m_localconfig\&.
+.PP
+Referenced by examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.LocalEvolutionDemo()\&.
+.SS "void examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.evolve () throws Exception\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 63 of file LocalEvolutionDemo\&.java\&.
+.PP
+References examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.m_localconfig, and examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.m_req\&.
+.PP
+Referenced by examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.LocalEvolutionDemo()\&.
+.SS "static void examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.main (String[]args)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 88 of file LocalEvolutionDemo\&.java\&.
+.PP
+References examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.LocalEvolutionDemo()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.CVS_REVISION = '$Revision: 1\&.3 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 29 of file LocalEvolutionDemo\&.java\&.
+.SS "IClientEvolveStrategy examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.m_clientEvolver\fC [private]\fP"
+
+.PP
+Definition at line 33 of file LocalEvolutionDemo\&.java\&.
+.PP
+Referenced by examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.LocalEvolutionDemo()\&.
+.SS "\fBGridConfiguration\fP examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.m_localconfig\fC [private]\fP"
+
+.PP
+Definition at line 31 of file LocalEvolutionDemo\&.java\&.
+.PP
+Referenced by examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.assembleWorkRequest(), examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.evolve(), and examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.LocalEvolutionDemo()\&.
+.SS "MyRequest examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.m_req\fC [private]\fP"
+
+.PP
+Definition at line 35 of file LocalEvolutionDemo\&.java\&.
+.PP
+Referenced by examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.evolve(), and examples\&.grid\&.evolutionDistributed\&.LocalEvolutionDemo\&.LocalEvolutionDemo()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

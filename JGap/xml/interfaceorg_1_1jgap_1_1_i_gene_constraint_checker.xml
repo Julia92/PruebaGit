@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="interfaceorg_1_1jgap_1_1_i_gene_constraint_checker" kind="interface" prot="public">
+    <compoundname>org::jgap::IGeneConstraintChecker</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1_chromosome_test_1_1_my_constraint_checker" prot="public" virt="non-virtual">org.jgap.ChromosomeTest.MyConstraintChecker</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1impl_1_1_composite_gene_test_1_1_gene_constraint_checker" prot="public" virt="non-virtual">org.jgap.impl.CompositeGeneTest.GeneConstraintChecker</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1impl_1_1_double_gene_test_1_1_gene_constraint_checker" prot="public" virt="non-virtual">org.jgap.impl.DoubleGeneTest.GeneConstraintChecker</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1impl_1_1_fixed_binary_gene_test_1_1_gene_constraint_checker" prot="public" virt="non-virtual">org.jgap.impl.FixedBinaryGeneTest.GeneConstraintChecker</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1impl_1_1_integer_gene_test_1_1_gene_constraint_checker" prot="public" virt="non-virtual">org.jgap.impl.IntegerGeneTest.GeneConstraintChecker</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1impl_1_1_inversion_operator_test_1_1_test_constraint_checker" prot="public" virt="non-virtual">org.jgap.impl.InversionOperatorTest.TestConstraintChecker</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1impl_1_1_string_gene_test_1_1_gene_constraint_checker" prot="public" virt="non-virtual">org.jgap.impl.StringGeneTest.GeneConstraintChecker</derivedcompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="interfaceorg_1_1jgap_1_1_i_gene_constraint_checker_1a78e823030e27800b44a2ad9faacc8ff3" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.IGeneConstraintChecker.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.8 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IGeneConstraintChecker.java" line="23" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IGeneConstraintChecker.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1_i_gene_constraint_checker_1abf34442f71a7a860d42b3efc8554efb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.IGeneConstraintChecker.verify</definition>
+        <argsstring>(Gene a_gene, Object a_alleleValue, IChromosome a_chromosome, int a_geneIndex)</argsstring>
+        <name>verify</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_inversion_operator_test_1_1_test_constraint_checker_1a6703ea3de4ce47ab66aba777f680877b">verify</reimplementedby>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+          <declname>a_gene</declname>
+        </param>
+        <param>
+          <type>Object</type>
+          <declname>a_alleleValue</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+          <declname>a_chromosome</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_geneIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if a given allele value is valid for the given gene instance.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_gene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the gene the given allele is to be validated for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_alleleValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the allele value to be validated </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_chromosome</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the chromosome the gene is contained (or null, if unknown) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_geneIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the index the gene is contained in the chromosome at, or -1 if unknown </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true: allele may be set for gene; false: validity check failed</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IGeneConstraintChecker.java" line="39" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Interface for checking whether a given allele value is valid to be set for a given gene instance. The contained validate()-method will be called in the setAllele(Object) method of <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref> implementations.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="14374">
+        <label>org.jgap.impl.DoubleGeneTest.GeneConstraintChecker</label>
+        <childnode refid="14370" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14371">
+        <label>Serializable</label>
+      </node>
+      <node id="14378">
+        <label>org.jgap.impl.StringGeneTest.GeneConstraintChecker</label>
+        <childnode refid="14370" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14375">
+        <label>org.jgap.impl.FixedBinaryGeneTest.GeneConstraintChecker</label>
+        <childnode refid="14370" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14370">
+        <label>org.jgap.IGeneConstraintChecker</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_gene_constraint_checker"/>
+        <childnode refid="14371" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14377">
+        <label>org.jgap.impl.InversionOperatorTest.TestConstraintChecker</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_inversion_operator_test_1_1_test_constraint_checker"/>
+        <childnode refid="14370" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14372">
+        <label>org.jgap.ChromosomeTest.MyConstraintChecker</label>
+        <childnode refid="14370" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14373">
+        <label>org.jgap.impl.CompositeGeneTest.GeneConstraintChecker</label>
+        <childnode refid="14370" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14376">
+        <label>org.jgap.impl.IntegerGeneTest.GeneConstraintChecker</label>
+        <childnode refid="14370" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="14380">
+        <label>Serializable</label>
+      </node>
+      <node id="14379">
+        <label>org.jgap.IGeneConstraintChecker</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_gene_constraint_checker"/>
+        <childnode refid="14380" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IGeneConstraintChecker.java" line="21" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IGeneConstraintChecker.java" bodystart="20" bodyend="41"/>
+    <listofallmembers>
+      <member refid="interfaceorg_1_1jgap_1_1_i_gene_constraint_checker_1a78e823030e27800b44a2ad9faacc8ff3" prot="public" virt="non-virtual"><scope>org::jgap::IGeneConstraintChecker</scope><name>CVS_REVISION</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_gene_constraint_checker_1abf34442f71a7a860d42b3efc8554efb4" prot="public" virt="non-virtual"><scope>org::jgap::IGeneConstraintChecker</scope><name>verify</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

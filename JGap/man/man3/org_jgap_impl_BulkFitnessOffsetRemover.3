@@ -1,0 +1,356 @@
+.TH "org.jgap.impl.BulkFitnessOffsetRemover" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.BulkFitnessOffsetRemover \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.BulkFitnessFunction\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBulkFitnessOffsetRemover\fP (final \fBFitnessFunction\fP a_ff)"
+.br
+.ti -1c
+.RI "void \fBevaluate\fP (final \fBPopulation\fP a_chromosomes)"
+.br
+.ti -1c
+.RI "double \fBgetAbsoluteFitness\fP (final \fBIChromosome\fP a_individuum)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBFitnessFunction\fP \fBm_ff\fP"
+.br
+.ti -1c
+.RI "double \fBm_previousOffset\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.12 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Takes away the fitness offset of the population to evolve\&. The fitness function values of the population of \fBorg\&.jgap\&.IChromosome\fP instances will start from a minimum of 1 afterwards\&. 
+.PP
+The removal of an offset in the fitness values of a population strengthens the 'survival of the fittest' effect of a selector that performs selection upon fitness values\&. A high offset in the fitness values of a population lowers the relative difference between the fitness values of the Chromosomes in a population\&. 
+.PP
+.SS "Example of applicability"
+.PP
+You are optimizing a black box with \fIn\fP parameters that are mapped to \fBorg\&.jgap\&.IChromosome\fP instances each having \fIn\fP \fBorg\&.jgap\&.Gene\fP instances\&.
+.br
+ You want to minimize the answer time of the black box and provide a \fBorg\&.jgap\&.FitnessFunction#evaluate(org\&.jgap\&.IChromosome)\fP that takes the genes out of the chromosome, put's it's \fBorg\&.jgap\&.Gene#getAllele()\fP values to the parameters and measures the answer time of the black box (by invoking it's service to optimize)\&. 
+.br
+ The longer the time takes, the worse it's fitness is, so you have to invert the measured times to fitness values:  
+.PP
+.nf
+
+<font color='#0011EE'>
+class BlackBoxOptimizer extends \fBorg\&.jgap\&.FitnessFunction\fP{
+  private BlackBox bbox;
+  <font color='#999999'>//Additional code: constructors</font>
+  <font color='#999999'>\&.\&.\&.</font>
+  public double evaluate(\fBorg\&.jgap\&.IChromosome\fP chromosome){
+    double fitness = 0;
+    <font color='#999999'>// get the \fBGene\fP[] & put the parameters into the box\&.
+    \&.\&.\&.
+    </font>
+    long duration = System\&.currentTimeMillis();
+<font color='#999999'>
+// You certainly will use an advanced StopWatch\&.\&.\&.</font>
+    this\&.bbox\&.service();
+<font color='#999999'>// The black boxes service to optimize\&.</font>
+    duration = System\&.currentTimeMillis()-duration;
+    <font color='#999999'>// transform the time into fitness value:</font>
+    fitness = double\&.MAX_VALUE - (double)duration;
+    return fitness;
+  }
+}
+</font>
+.fi
+.PP
+ 
+.PP
+.SS "We might get the following results (each row stands for a \fBChromosome\fP, the table is a population):"
+.PP
+duration  fitness  piece of fitness cake   2000  9218868437227403311  33\&.333333333333336949106088992532 %   3000  9218868437227402311  33\&.333333333333333333333333333333 %   4000  9218868437227401311  33\&.333333333333329717560577674135 %   
+.PP
+If any \fBorg\&.jgap\&.NaturalSelector\fP performs selection based upon the fitness values, it will have to put those values in relation to each other\&. As a fact, the probability to select the \fBChromosome\fP that contained the black box parameters that caused an answer time of 4000 ms is 'equal' to the probability to select the \fBChromosome\fP that caused a black box answer time to be 2000 ms! 
+.PP
+Of course one could work around that problem by replacing the \fCInteger\&.MAX_VALUE\fP transformation by a fixed maximum value the black box would need for the service\&. But what, if you have no guaranteed maximum answer time for the service of the black box ? Even if you have got one, it will be chosen sufficently high above the average answer time thus letting your fitness function return values with a high offset in the fitness\&. 
+.PP
+.SS "This is, what happens, if you use this instance for fitness evaluation:"
+.PP
+duration  fitness  piece of fitness cake   2000  2001  66\&.63 %   3000  1001  33\&.33 %   4000  1  0\&.03 %   
+.PP
+.SS "Example of usage"
+.PP
+This example shows how to use this instance for cutting fitness offsets\&. It is the same example as used \fCabove\fP\&. 
+.PP
+.nf
+
+<font color='#0011EE'>
+class BlackBoxOptimizer extends \fBorg\&.jgap\&.FitnessFunction\fP{
+  <font color='#999999'>// Additional code: constructors
+  \&.\&.\&.</font>
+  public double evaluate(\fBorg\&.jgap\&.IChromosome\fP chromosome){
+    <font color='#999999'>\&.\&.\&.\&. // As shown above\&.</font>
+  }
+.fi
+.PP
+.PP
+.PP
+.nf
+  public void startOptimization(\fBorg\&.jgap\&.Configuration\fP gaConf)
+      throws \fBInvalidConfigurationException\fP{
+    <font color='#999999'>
+    // The given \fBConfiguration\fP may be preconfigured with
+    // \fBNaturalSelector\fP & \fBGeneticOperator\fP instances,\&.
+    // But should not contain a \fBFitnessFunction\fP or BulkFitnessFunction!
+</font>
+    \fBgaConf\&.setBulkFitnessFunction(new BulkFitnessOffsetRemover(this));\fP
+    <font color='#999999'>// Why does it work? We implement FitnessFunction!
+    // Still to do here:
+    // - Create a sample chromosome according to your blackbox & set it to
+     //   the configuration\&.
+    // - Create a random inital \fBGenotype\fP\&.
+    // - loop over a desired amount of generations invoking
+     //   aGenotype\&.evolve()\&.\&.</font>
+  }
+}
+</font>
+.fi
+.PP
+ 
+.PP
+\fBAuthor:\fP
+.RS 4
+Achim Westermann 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 223 of file BulkFitnessOffsetRemover\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.BulkFitnessOffsetRemover\&.BulkFitnessOffsetRemover (final \fBFitnessFunction\fPa_ff)\fC [inline]\fP"
+
+.PP
+Definition at line 261 of file BulkFitnessOffsetRemover\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.BulkFitnessOffsetRemover\&.m_ff\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BulkFitnessOffsetRemover\&.clone()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.impl\&.BulkFitnessOffsetRemover\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+deep clone of current instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 461 of file BulkFitnessOffsetRemover\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.BulkFitnessOffsetRemover\&.BulkFitnessOffsetRemover(), org\&.jgap\&.FitnessFunction\&.clone(), and org\&.jgap\&.impl\&.BulkFitnessOffsetRemover\&.m_ff\&.
+.SS "void org\&.jgap\&.impl\&.BulkFitnessOffsetRemover\&.evaluate (final \fBPopulation\fPa_chromosomes)\fC [inline]\fP"
+
+.PP
+Definition at line 271 of file BulkFitnessOffsetRemover\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.BulkFitnessOffsetRemover\&.m_previousOffset\&.
+.SS "double org\&.jgap\&.impl\&.BulkFitnessOffsetRemover\&.getAbsoluteFitness (final \fBIChromosome\fPa_individuum)\fC [inline]\fP"
+Using this instance to remove the fitness offset in the populations brings the advantage of getting a selection more sensitive to the differences of fitness of the chromosomes\&. 
+.PP
+The disadvantage is, that the fitness values are modified\&. The modification is good for jgap's selection method but bad for the guys that want to see the success of your work, or need a proof that a GA improves over time: 
+.br
+ The value of \fBorg\&.jgap\&.Genotype#getFittestChromosome()\fP does not seem to increase over the generations\&. Most often it becomes worse\&. This is caused by the fact, that all Chromosomes are getting better over time (the fitness interval of all Chromosomes gets narrower) and the offset that may be cut becomes bigger\&. 
+.PP
+If you want to get an absolute value independant from the offset that is cut off from the chromosome's fitness value, this method has to be used\&. 
+.PP
+Stop reading here because a 
+.PP
+.SS "Mathematical Proof"
+.PP
+is following\&. How can it work to get the absolute value for all Chromosomes fitness values? Some Chromosomes may have lived for many generations and everytime their fitness was evaluated here, the old offset was added and a new one was calculated and subtracted from the fitness value\&. 
+.PP
+Each bulk fitness evaluation a \fBChromosome\fP experiences, it's fitness value \fIF\fP get's an addition of the old offset \fIO\*<(n-1)\*> \fP and a substraction by the new offset \fIO\*<n\*> \fP\&.
+.br
+ \fI\*<n\*> \fP is the generation index\&.
+.PP
+.PP
+.nf
+
+F\*<1\*>  = F\*<0\*>  + O\*<0\*>  - O\*<1\*> 
+F\*<2\*>  = F\*<1\*>  + O\*<1\*>  - O\*<2\*> 
+F\*<3\*>  = F\*<2\*>  + O\*<2\*>  - O\*<3\*> 
+.fi
+.PP
+.PP
+.PP
+.nf
+=>
+.fi
+.PP
+.PP
+.PP
+.nf
+1) F\*<n\*>  = \fBF\*<(n-1)\*> \fP
++ O\*<(n-1)\*>  - O\*<n\*> 
+.fi
+.PP
+.PP
+.PP
+.nf
+2) \fBF\*<(n-1)\*> \fP = F\*<(n-2)\*> 
++ O\*<(n-2)\*>  - O\*<(n-1)\*> 
+.fi
+.PP
+.PP
+.PP
+.nf
+2 in 1)
+   F\*<n\*>  = (F\*<(n-2)\*>  + O\*<(n-2)\*> 
+.IP "\(bu" 2
+O\*<(n-1)\*> ) + O\*<(n-1)\*>  - O\*<n\*> 
+   F\*<n\*>  = F\*<(n-2)\*>  + O\*<(n-2)\*>  - O\*<n\*> 
+.PP
+.fi
+.PP
+.PP
+.PP
+.nf
+We made a step over 2 generations: With the current offset and the
+fitness & offset of the
+'preprevious' generation we can calculate the current fitness\&.
+We can assume that this generation stepping works for farer steps
+\*<m\*>  (just continue step 2) until you have a generation step value
+high enough ;-))
+.fi
+.PP
+.PP
+.PP
+.nf
+=> F\*<n\*>  = F\*<(n-m)\*>  + O\*<(n-m)\*>  - O\*<n\*> 
+.fi
+.PP
+.PP
+.PP
+.nf
+We want to get the original absolute value of fitness:
+.fi
+.PP
+.PP
+.PP
+.nf
+3) m := n
+.fi
+.PP
+.PP
+.PP
+.nf
+=> F\*<n\*>  = F\*<0\*>  + O\*<0\*>  - O\*<n\*> 
+.fi
+.PP
+.PP
+.PP
+.nf
+solved to F\*<0\*>  our original value:
+.fi
+.PP
+.PP
+.PP
+.nf
+F\*<0\*>  = F\*<n\*>  + O\*<n\*>  - O\*<0\*> 
+.fi
+.PP
+.PP
+.PP
+.nf
+And our initial offset \fBO\*<0\*> \fP is zero!
+.fi
+.PP
+ 
+.PP
+This shows, that it is possible to compute the original fitness value of a \fBChromosome\fP from it's current fitness value and the \fBprevious offset\fP regardless of the amounts of generations between original evaluation and the current generation\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_individuum\fP any \fBChromosome\fP that is normally being evaluated by this \fC\fBBulkFitnessFunction\fP\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the original fitness value as returned by the registered \fBfitnessFunction\fP instance\&. 
+.RE
+.PP
+
+.PP
+Definition at line 434 of file BulkFitnessOffsetRemover\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.BulkFitnessOffsetRemover\&.m_previousOffset\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.BulkFitnessOffsetRemover\&.CVS_REVISION = '$Revision: 1\&.12 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 226 of file BulkFitnessOffsetRemover\&.java\&.
+.SS "\fBFitnessFunction\fP org\&.jgap\&.impl\&.BulkFitnessOffsetRemover\&.m_ff\fC [private]\fP"
+
+.PP
+Definition at line 232 of file BulkFitnessOffsetRemover\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BulkFitnessOffsetRemover\&.BulkFitnessOffsetRemover(), and org\&.jgap\&.impl\&.BulkFitnessOffsetRemover\&.clone()\&.
+.SS "double org\&.jgap\&.impl\&.BulkFitnessOffsetRemover\&.m_previousOffset\fC [private]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+This constructor is planned but not possible yet, as the \fBConfiguration\fP permits bulk fitness function and simple fitness function both existing in it at the same time\&. 
+.RE
+.PP
+.PP
+The last generations offset\&. This has to be stored because Chromosomes that were put into the new generation's candidate list already have the fitness value without offset from their previous evaluation\&. 
+.PP
+We try to avoid evaluations of the fitness function as it might be expensive, so we reuse fitness values\&. If a \fBChromosome\fP already has a fitness value >0 this previousOffset is added to it's fitness to allow comparing this \fBChromosome\fP's fitness with newly evaluated Chromosomes (which still have the offset from the evaluation)\&. 
+.PP
+Definition at line 259 of file BulkFitnessOffsetRemover\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BulkFitnessOffsetRemover\&.evaluate(), and org\&.jgap\&.impl\&.BulkFitnessOffsetRemover\&.getAbsoluteFitness()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

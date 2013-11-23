@@ -1,0 +1,217 @@
+.TH "org.jgap.gui.GUIManager" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gui.GUIManager \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBshowFrame\fP (final \fBConfigFrame\fP a_parent, final Configurable a_con)  throws Exception "
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBGUIManager\fP \fBgetInstance\fP ()"
+.br
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGUIManager\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBConfigFrame\fP \fBm_frame\fP"
+.br
+.ti -1c
+.RI "List \fBm_childFrames\fP"
+.br
+.ti -1c
+.RI "List \fBm_childCons\fP"
+.br
+.ti -1c
+.RI "Configurable \fBm_con\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.11 $'"
+.br
+.ti -1c
+.RI "static \fBGUIManager\fP \fBm_gm\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Singleton \fBGUIManager\fP for the JGAP Configurator\&. Creates a \fBConfigFrame\fP on request, for a Configurable\&. Currently it only creates a \fBConfigFrame\fP for the root object, that is a \fBConfiguration\fP itself\&. In the future it will do the same for objects on the Root \fBConfigFrame\fP that are in turn Configurable\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 30 of file GUIManager\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gui\&.GUIManager\&.GUIManager ()\fC [inline]\fP, \fC [private]\fP"
+Constructor for the frame\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 70 of file GUIManager\&.java\&.
+.PP
+References org\&.jgap\&.gui\&.GUIManager\&.m_childCons, org\&.jgap\&.gui\&.GUIManager\&.m_childFrames, and org\&.jgap\&.gui\&.GUIManager\&.m_frame\&.
+.PP
+Referenced by org\&.jgap\&.gui\&.GUIManager\&.getInstance()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBGUIManager\fP org\&.jgap\&.gui\&.GUIManager\&.getInstance ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+a singleton \fBGUIManager\fP instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 57 of file GUIManager\&.java\&.
+.PP
+References org\&.jgap\&.gui\&.GUIManager\&.GUIManager(), and org\&.jgap\&.gui\&.GUIManager\&.m_gm\&.
+.SS "static void org\&.jgap\&.gui\&.GUIManager\&.main (String[]args)\fC [inline]\fP, \fC [static]\fP"
+Main method for the GUI 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP not used 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 123 of file GUIManager\&.java\&.
+.PP
+References org\&.jgap\&.gui\&.GUIManager\&.showFrame()\&.
+.SS "void org\&.jgap\&.gui\&.GUIManager\&.showFrame (final \fBConfigFrame\fPa_parent, final Configurablea_con) throws Exception\fC [inline]\fP"
+Create and show a new frame for a Configurable\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_con\fP configurable to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 83 of file GUIManager\&.java\&.
+.PP
+References org\&.jgap\&.gui\&.GUIManager\&.m_con, and org\&.jgap\&.gui\&.GUIManager\&.m_frame\&.
+.PP
+Referenced by org\&.jgap\&.gui\&.GUIManager\&.main()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gui\&.GUIManager\&.CVS_REVISION = '$Revision: 1\&.11 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 32 of file GUIManager\&.java\&.
+.SS "List org\&.jgap\&.gui\&.GUIManager\&.m_childCons\fC [private]\fP"
+
+.PP
+Definition at line 41 of file GUIManager\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gui\&.GUIManager\&.GUIManager()\&.
+.SS "List org\&.jgap\&.gui\&.GUIManager\&.m_childFrames\fC [private]\fP"
+
+.PP
+Definition at line 38 of file GUIManager\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gui\&.GUIManager\&.GUIManager()\&.
+.SS "Configurable org\&.jgap\&.gui\&.GUIManager\&.m_con\fC [private]\fP"
+
+.PP
+Definition at line 44 of file GUIManager\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gui\&.GUIManager\&.showFrame()\&.
+.SS "\fBConfigFrame\fP org\&.jgap\&.gui\&.GUIManager\&.m_frame\fC [private]\fP"
+
+.PP
+Definition at line 35 of file GUIManager\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gui\&.GUIManager\&.GUIManager(), and org\&.jgap\&.gui\&.GUIManager\&.showFrame()\&.
+.SS "\fBGUIManager\fP org\&.jgap\&.gui\&.GUIManager\&.m_gm\fC [static]\fP, \fC [private]\fP"
+Singleton instance of \fBGUIManager\fP 
+.PP
+Definition at line 49 of file GUIManager\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gui\&.GUIManager\&.getInstance()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,132 @@
+.TH "examples.dynamicMutation.DynamicMutationExample" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.dynamicMutation.DynamicMutationExample \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBCoinsMutationRateCalc\fP"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmakeChangeForAmount\fP (int a_targetChangeAmount)  throws Exception "
+.br
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)  throws Exception "
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.6 $'"
+.br
+.ti -1c
+.RI "static final int \fBMAX_ALLOWED_EVOLUTIONS\fP = 200"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Experiment on how to dynamically adapt the mutation rate for different genes\&. This example works with coins (see \fBMinimizingMakeChange\fP for documentation)\&. The idea is that a quarter has more impact onto the solution than a penny, so a quarter should mutate less frequently, probably\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file DynamicMutationExample\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static void examples\&.dynamicMutation\&.DynamicMutationExample\&.main (String[]args) throws Exception\fC [inline]\fP, \fC [static]\fP"
+Main method\&. A single command-line argument is expected, which is the amount of change to create (in other words, 75 would be equal to 75 cents)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP amount of change in cents to create 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 150 of file DynamicMutationExample\&.java\&.
+.PP
+References examples\&.dynamicMutation\&.DynamicMutationExample\&.makeChangeForAmount(), and examples\&.dynamicMutation\&.DynamicMutationFitnessFunction\&.MAX_BOUND\&.
+.SS "static void examples\&.dynamicMutation\&.DynamicMutationExample\&.makeChangeForAmount (inta_targetChangeAmount) throws Exception\fC [inline]\fP, \fC [static]\fP"
+Executes the genetic algorithm to determine the minimum number of coins necessary to make up the given target amount of change\&. The solution will then be written to System\&.out\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_targetChangeAmount\fP the target amount of change for which this method is attempting to produce the minimum number of coins 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 46 of file DynamicMutationExample\&.java\&.
+.PP
+References examples\&.dynamicMutation\&.DynamicMutationExample\&.MAX_ALLOWED_EVOLUTIONS\&.
+.PP
+Referenced by examples\&.dynamicMutation\&.DynamicMutationExample\&.main()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.dynamicMutation\&.DynamicMutationExample\&.CVS_REVISION = '$Revision: 1\&.6 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file DynamicMutationExample\&.java\&.
+.SS "final int examples\&.dynamicMutation\&.DynamicMutationExample\&.MAX_ALLOWED_EVOLUTIONS = 200\fC [static]\fP, \fC [private]\fP"
+The total number of times we'll let the population evolve\&. 
+.PP
+Definition at line 31 of file DynamicMutationExample\&.java\&.
+.PP
+Referenced by examples\&.dynamicMutation\&.DynamicMutationExample\&.makeChangeForAmount()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

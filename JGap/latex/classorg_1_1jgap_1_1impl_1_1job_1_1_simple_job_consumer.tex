@@ -1,0 +1,171 @@
+\hypertarget{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer}{\section{org.\-jgap.\-impl.\-job.\-Simple\-Job\-Consumer Class Reference}
+\label{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer}\index{org.\-jgap.\-impl.\-job.\-Simple\-Job\-Consumer@{org.\-jgap.\-impl.\-job.\-Simple\-Job\-Consumer}}
+}
+
+
+Collaboration diagram for org.\-jgap.\-impl.\-job.\-Simple\-Job\-Consumer\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_a3b6c5abc8992d928c3529d2ce62f94a9}{push\-Job\-To\-Grid} (\hyperlink{interfaceorg_1_1jgap_1_1impl_1_1job_1_1_i_job}{I\-Job} a\-\_\-job)
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_a2d4216f5e3957b29d2d5dbd66a56561a}{wait\-For\-All\-Jobs} ()
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_result}{Evolve\-Result}\mbox{[}$\,$\mbox{]} \hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_a2dfddb2fdc57aa66770629cf481c4a6a}{get\-Results} ()
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_a2038d48af9ac2f782f7ddc3be05b3a5b}{init} ()  throws Exception 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_ad9302e2bc0385ee7d83561e15876a366}{main} (String\mbox{[}$\,$\mbox{]} args)  throws Exception 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List \hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_a37b72f0039fcfef98878a4118e1ba4ec}{m\-\_\-jobs} = new Vector()
+\item 
+List \hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_ace0170224c8d4aac738b5c737bd5e119}{m\-\_\-results} = new Vector()
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_a648c25b78d381e24952c7a1ce3e0e457}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-6 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sample implementation of a service that generates jobs, takes them, executes them, receives results from finished jobs and merges the results in order to start a new round of evolution.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-2 
+\end{DoxySince}
+
+
+Definition at line 25 of file Simple\-Job\-Consumer.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_a2dfddb2fdc57aa66770629cf481c4a6a}{\index{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer@{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer}!get\-Results@{get\-Results}}
+\index{get\-Results@{get\-Results}!org::jgap::impl::job::SimpleJobConsumer@{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer}}
+\subsubsection[{get\-Results}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Evolve\-Result} \mbox{[}$\,$\mbox{]} org.\-jgap.\-impl.\-job.\-Simple\-Job\-Consumer.\-get\-Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_a2dfddb2fdc57aa66770629cf481c4a6a}
+
+
+Definition at line 63 of file Simple\-Job\-Consumer.\-java.
+
+
+
+References org.\-jgap.\-impl.\-job.\-Simple\-Job\-Consumer.\-m\-\_\-results.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_a2038d48af9ac2f782f7ddc3be05b3a5b}{\index{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer@{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer}!init@{init}}
+\index{init@{init}!org::jgap::impl::job::SimpleJobConsumer@{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-job.\-Simple\-Job\-Consumer.\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_a2038d48af9ac2f782f7ddc3be05b3a5b}
+
+
+Definition at line 75 of file Simple\-Job\-Consumer.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_ad9302e2bc0385ee7d83561e15876a366}{\index{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer@{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer}!main@{main}}
+\index{main@{main}!org::jgap::impl::job::SimpleJobConsumer@{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void org.\-jgap.\-impl.\-job.\-Simple\-Job\-Consumer.\-main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_ad9302e2bc0385ee7d83561e15876a366}
+
+
+Definition at line 112 of file Simple\-Job\-Consumer.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_a3b6c5abc8992d928c3529d2ce62f94a9}{\index{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer@{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer}!push\-Job\-To\-Grid@{push\-Job\-To\-Grid}}
+\index{push\-Job\-To\-Grid@{push\-Job\-To\-Grid}!org::jgap::impl::job::SimpleJobConsumer@{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer}}
+\subsubsection[{push\-Job\-To\-Grid}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-job.\-Simple\-Job\-Consumer.\-push\-Job\-To\-Grid (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Job}}]{a\-\_\-job}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_a3b6c5abc8992d928c3529d2ce62f94a9}
+
+
+Definition at line 33 of file Simple\-Job\-Consumer.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_a2d4216f5e3957b29d2d5dbd66a56561a}{\index{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer@{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer}!wait\-For\-All\-Jobs@{wait\-For\-All\-Jobs}}
+\index{wait\-For\-All\-Jobs@{wait\-For\-All\-Jobs}!org::jgap::impl::job::SimpleJobConsumer@{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer}}
+\subsubsection[{wait\-For\-All\-Jobs}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-job.\-Simple\-Job\-Consumer.\-wait\-For\-All\-Jobs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_a2d4216f5e3957b29d2d5dbd66a56561a}
+
+
+Definition at line 40 of file Simple\-Job\-Consumer.\-java.
+
+
+
+References org.\-jgap.\-impl.\-job.\-I\-Job.\-is\-Finished(), and org.\-jgap.\-impl.\-job.\-Simple\-Job\-Consumer.\-m\-\_\-jobs.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_a2d4216f5e3957b29d2d5dbd66a56561a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_a648c25b78d381e24952c7a1ce3e0e457}{\index{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer@{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::impl::job::SimpleJobConsumer@{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-impl.\-job.\-Simple\-Job\-Consumer.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-6 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_a648c25b78d381e24952c7a1ce3e0e457}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 28 of file Simple\-Job\-Consumer.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_a37b72f0039fcfef98878a4118e1ba4ec}{\index{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer@{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer}!m\-\_\-jobs@{m\-\_\-jobs}}
+\index{m\-\_\-jobs@{m\-\_\-jobs}!org::jgap::impl::job::SimpleJobConsumer@{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer}}
+\subsubsection[{m\-\_\-jobs}]{\setlength{\rightskip}{0pt plus 5cm}List org.\-jgap.\-impl.\-job.\-Simple\-Job\-Consumer.\-m\-\_\-jobs = new Vector()\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_a37b72f0039fcfef98878a4118e1ba4ec}
+
+
+Definition at line 30 of file Simple\-Job\-Consumer.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-job.\-Simple\-Job\-Consumer.\-wait\-For\-All\-Jobs().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_ace0170224c8d4aac738b5c737bd5e119}{\index{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer@{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer}!m\-\_\-results@{m\-\_\-results}}
+\index{m\-\_\-results@{m\-\_\-results}!org::jgap::impl::job::SimpleJobConsumer@{org\-::jgap\-::impl\-::job\-::\-Simple\-Job\-Consumer}}
+\subsubsection[{m\-\_\-results}]{\setlength{\rightskip}{0pt plus 5cm}List org.\-jgap.\-impl.\-job.\-Simple\-Job\-Consumer.\-m\-\_\-results = new Vector()\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_ace0170224c8d4aac738b5c737bd5e119}
+
+
+Definition at line 31 of file Simple\-Job\-Consumer.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-job.\-Simple\-Job\-Consumer.\-get\-Results().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/impl/job/\hyperlink{_simple_job_consumer_8java}{Simple\-Job\-Consumer.\-java}\end{DoxyCompactItemize}

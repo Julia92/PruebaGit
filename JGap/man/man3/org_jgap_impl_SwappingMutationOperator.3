@@ -1,0 +1,344 @@
+.TH "org.jgap.impl.SwappingMutationOperator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.SwappingMutationOperator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.impl\&.MutationOperator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSwappingMutationOperator\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBSwappingMutationOperator\fP (final \fBConfiguration\fP a_config)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBSwappingMutationOperator\fP (final \fBConfiguration\fP a_config, final \fBIUniversalRateCalculator\fP a_mutationRateCalculator)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBSwappingMutationOperator\fP (final \fBConfiguration\fP a_config, final int a_desiredMutationRate)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBoperate\fP (final \fBPopulation\fP a_population, List a_candidateChromosomes)"
+.br
+.ti -1c
+.RI "void \fBsetStartOffset\fP (final int a_offset)"
+.br
+.ti -1c
+.RI "int \fBgetStartOffset\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIChromosome\fP \fBoperate\fP (final \fBIChromosome\fP a_chrom, final int a_rate, final \fBRandomGenerator\fP a_generator)"
+.br
+.ti -1c
+.RI "\fBGene\fP[] \fBoperate\fP (final \fBRandomGenerator\fP a_generator, final int a_target_gene, final \fBGene\fP[] a_genes)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBm_startOffset\fP = 1"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.21 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Swaps the genes instead of mutating them\&. This kind of operator is required by Traveling Salesman Problem\&.
+.PP
+See J\&. Grefenstette, R\&. Gopal, R\&. Rosmaita, and D\&. Gucht\&. \fIGenetic algorithms for the traveling salesman problem\fP\&. In Proceedings of the Second International Conference on Genetic Algorithms\&. Lawrence Eribaum Associates, Mahwah, NJ, 1985\&. and also \fCSushil J\&. Louis & Gong Li\fP }
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.PP
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 31 of file SwappingMutationOperator\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.SwappingMutationOperator\&.SwappingMutationOperator () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this operator\&.
+.PP
+Attention: The configuration used is the one set with the static method Genotype\&.setConfiguration\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Definition at line 47 of file SwappingMutationOperator\&.java\&.
+.SS "org\&.jgap\&.impl\&.SwappingMutationOperator\&.SwappingMutationOperator (final \fBConfiguration\fPa_config) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 59 of file SwappingMutationOperator\&.java\&.
+.SS "org\&.jgap\&.impl\&.SwappingMutationOperator\&.SwappingMutationOperator (final \fBConfiguration\fPa_config, final \fBIUniversalRateCalculator\fPa_mutationRateCalculator) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this operator with a specified mutation rate calculator, which results in dynamic mutation being turned on\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.br
+\fIa_mutationRateCalculator\fP calculator for dynamic mutation rate computation 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 (previously: without a_config) 
+.RE
+.PP
+
+.PP
+Definition at line 77 of file SwappingMutationOperator\&.java\&.
+.SS "org\&.jgap\&.impl\&.SwappingMutationOperator\&.SwappingMutationOperator (final \fBConfiguration\fPa_config, final inta_desiredMutationRate) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this \fBMutationOperator\fP with the given mutation rate\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.br
+\fIa_desiredMutationRate\fP desired rate of mutation, expressed as the denominator of the 1 / X fraction\&. For example, 1000 would result in 1/1000 genes being mutated on average\&. A mutation rate of zero disables mutation entirely 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 (previously: without a_config) 
+.RE
+.PP
+
+.PP
+Definition at line 98 of file SwappingMutationOperator\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int org\&.jgap\&.impl\&.SwappingMutationOperator\&.getStartOffset ()\fC [inline]\fP"
+Gets a number of genes at the start of chromosome, that are excluded from the swapping\&. In the Salesman task, the first city in the list should (where the salesman leaves from) probably should not change as it is part of the list\&. The default value is 1\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the start offset
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 254 of file SwappingMutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.SwappingMutationOperator\&.m_startOffset\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.SwappingMutationOperatorTest\&.testStartoffset_0()\&.
+.SS "void org\&.jgap\&.impl\&.SwappingMutationOperator\&.operate (final \fBPopulation\fPa_population, Lista_candidateChromosomes)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_population\fP the population of chromosomes from the current evolution prior to exposure to any genetic operators\&. Chromosomes in this array should not be modified\&. Please, notice, that the call in \fBGenotype\&.evolve()\fP to the implementations of \fBGeneticOperator\fP overgoes this due to performance issues 
+.br
+\fIa_candidateChromosomes\fP the pool of chromosomes that have been selected for the next evolved population
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 117 of file SwappingMutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.BaseGeneticOperator\&.getConfiguration(), org\&.jgap\&.impl\&.MutationOperator\&.getMutationRate(), org\&.jgap\&.impl\&.MutationOperator\&.getMutationRateCalc(), and org\&.jgap\&.impl\&.MutationOperator\&.m_mutationRateCalc\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.SwappingMutationOperator\&.operate()\&.
+.SS "\fBIChromosome\fP org\&.jgap\&.impl\&.SwappingMutationOperator\&.operate (final \fBIChromosome\fPa_chrom, final inta_rate, final \fBRandomGenerator\fPa_generator)\fC [inline]\fP, \fC [protected]\fP"
+Operate on the given chromosome with the given mutation rate\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chrom\fP chromosome to operate 
+.br
+\fIa_rate\fP mutation rate 
+.br
+\fIa_generator\fP random generator to use (must not be null) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+mutated chromosome of null if no mutation has occured\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 165 of file SwappingMutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.util\&.ICloneable\&.clone(), org\&.jgap\&.BaseGeneticOperator\&.m_monitorActive, org\&.jgap\&.impl\&.SwappingMutationOperator\&.m_startOffset, org\&.jgap\&.RandomGenerator\&.nextInt(), and org\&.jgap\&.impl\&.SwappingMutationOperator\&.operate()\&.
+.SS "\fBGene\fP [] org\&.jgap\&.impl\&.SwappingMutationOperator\&.operate (final \fBRandomGenerator\fPa_generator, final inta_target_gene, final \fBGene\fP[]a_genes)\fC [inline]\fP, \fC [protected]\fP"
+Operate on the given array of genes\&. This method is only called when it is already clear that the mutation must occur under the given mutation rate\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_generator\fP a random number generator that may be needed to perform a mutation 
+.br
+\fIa_target_gene\fP an index of gene in the chromosome that will mutate 
+.br
+\fIa_genes\fP the array of all genes in the chromosome 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the mutated gene array
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 211 of file SwappingMutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.BaseGeneticOperator\&.m_monitorActive, and org\&.jgap\&.impl\&.SwappingMutationOperator\&.m_startOffset\&.
+.SS "void org\&.jgap\&.impl\&.SwappingMutationOperator\&.setStartOffset (final inta_offset)\fC [inline]\fP"
+Sets a number of genes at the start of chromosome, that are excluded from the swapping\&. In the Salesman task, the first city in the list should (where the salesman leaves from) probably should not change as it is part of the list\&. The default value is 1\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_offset\fP the offset to set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 239 of file SwappingMutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.SwappingMutationOperator\&.m_startOffset\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.SwappingMutationOperator\&.CVS_REVISION = '$Revision: 1\&.21 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 34 of file SwappingMutationOperator\&.java\&.
+.SS "int org\&.jgap\&.impl\&.SwappingMutationOperator\&.m_startOffset = 1\fC [private]\fP"
+
+.PP
+Definition at line 36 of file SwappingMutationOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.SwappingMutationOperator\&.getStartOffset(), org\&.jgap\&.impl\&.SwappingMutationOperator\&.operate(), and org\&.jgap\&.impl\&.SwappingMutationOperator\&.setStartOffset()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

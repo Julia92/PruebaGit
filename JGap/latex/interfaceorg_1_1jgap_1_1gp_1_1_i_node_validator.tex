@@ -1,0 +1,124 @@
+\hypertarget{interfaceorg_1_1jgap_1_1gp_1_1_i_node_validator}{\section{org.\-jgap.\-gp.\-I\-Node\-Validator Interface Reference}
+\label{interfaceorg_1_1jgap_1_1gp_1_1_i_node_validator}\index{org.\-jgap.\-gp.\-I\-Node\-Validator@{org.\-jgap.\-gp.\-I\-Node\-Validator}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-gp.\-I\-Node\-Validator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{interfaceorg_1_1jgap_1_1gp_1_1_i_node_validator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-gp.\-I\-Node\-Validator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{interfaceorg_1_1jgap_1_1gp_1_1_i_node_validator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+boolean \hyperlink{interfaceorg_1_1jgap_1_1gp_1_1_i_node_validator_abee811a7be92e3cb4ed4f47370479f74}{validate} (Program\-Chromosome a\-\_\-chrom, \hyperlink{classorg_1_1jgap_1_1gp_1_1_command_gene}{Command\-Gene} a\-\_\-node, \hyperlink{classorg_1_1jgap_1_1gp_1_1_command_gene}{Command\-Gene} a\-\_\-root\-Node, int a\-\_\-tries, int a\-\_\-num, int a\-\_\-recurse\-Level, Class a\-\_\-type, \hyperlink{classorg_1_1jgap_1_1gp_1_1_command_gene}{Command\-Gene}\mbox{[}$\,$\mbox{]} a\-\_\-function\-Set, int a\-\_\-depth, boolean a\-\_\-grow, int a\-\_\-child\-Index, boolean a\-\_\-full\-Program)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{interfaceorg_1_1jgap_1_1gp_1_1_i_node_validator_a15abecd09c27a7c9cee7ed7e6d0f095e}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-7 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A node validator checks whether a certain node is valid for a given evolution. See Program\-Chromosome.\-grow\-Or\-Full\-Node(..).
+
+Purpose of this validator\-: If you have an idea of how the shape of your evolved program must look like regarding some spots (like the first node in the first chromosome to be evolved) then you can constrain your imaginations with this validator. But take care that constraining too much ( e.\-g., while not considering your available functions) may lead to an endless loop. The endless loop can be avoided by stopping after a number of tries (see method validate, parameter a\-\_\-tries).
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-0 
+\end{DoxySince}
+
+
+Definition at line 28 of file I\-Node\-Validator.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1gp_1_1_i_node_validator_abee811a7be92e3cb4ed4f47370479f74}{\index{org\-::jgap\-::gp\-::\-I\-Node\-Validator@{org\-::jgap\-::gp\-::\-I\-Node\-Validator}!validate@{validate}}
+\index{validate@{validate}!org::jgap::gp::INodeValidator@{org\-::jgap\-::gp\-::\-I\-Node\-Validator}}
+\subsubsection[{validate}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-gp.\-I\-Node\-Validator.\-validate (
+\begin{DoxyParamCaption}
+\item[{Program\-Chromosome}]{a\-\_\-chrom, }
+\item[{{\bf Command\-Gene}}]{a\-\_\-node, }
+\item[{{\bf Command\-Gene}}]{a\-\_\-root\-Node, }
+\item[{int}]{a\-\_\-tries, }
+\item[{int}]{a\-\_\-num, }
+\item[{int}]{a\-\_\-recurse\-Level, }
+\item[{Class}]{a\-\_\-type, }
+\item[{{\bf Command\-Gene}\mbox{[}$\,$\mbox{]}}]{a\-\_\-function\-Set, }
+\item[{int}]{a\-\_\-depth, }
+\item[{boolean}]{a\-\_\-grow, }
+\item[{int}]{a\-\_\-child\-Index, }
+\item[{boolean}]{a\-\_\-full\-Program}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1gp_1_1_i_node_validator_abee811a7be92e3cb4ed4f47370479f74}
+Validates a\-\_\-node in the context of a\-\_\-chrom. Considers the recursion level (a\-\_\-recurs\-Level), the type needed (a\-\_\-type) for the node, the functions available (a\-\_\-function\-Set) and the depth of the whole chromosome needed (a\-\_\-depth), and whether grow mode is used (a\-\_\-grow is true) or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-chrom} & the chromosome that will contain the node, if valid \\
+\hline
+{\em a\-\_\-node} & the selected node to be validated \\
+\hline
+{\em a\-\_\-root\-Node} & the root node of a\-\_\-node, may be null for top nodes \\
+\hline
+{\em a\-\_\-tries} & number of times the validator has been called, useful for stopping by returning true if the number exceeds a limit \\
+\hline
+{\em a\-\_\-num} & the chromosome's index in the individual of this chromosome \\
+\hline
+{\em a\-\_\-recurse\-Level} & level of recursion \\
+\hline
+{\em a\-\_\-type} & the return type of the node needed \\
+\hline
+{\em a\-\_\-function\-Set} & the array of available functions \\
+\hline
+{\em a\-\_\-depth} & the needed depth of the program chromosome \\
+\hline
+{\em a\-\_\-grow} & true\-: use grow mode, false\-: use full mode \\
+\hline
+{\em a\-\_\-child\-Index} & index of the child in the parent node to which it belongs (-\/1 if node is root node) \\
+\hline
+{\em a\-\_\-full\-Program} & true\-: whole program is available in a\-\_\-chrom \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true\-: node is valid; false\-: node is invalid
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-0 
+\end{DoxySince}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1gp_1_1_i_node_validator_a15abecd09c27a7c9cee7ed7e6d0f095e}{\index{org\-::jgap\-::gp\-::\-I\-Node\-Validator@{org\-::jgap\-::gp\-::\-I\-Node\-Validator}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::gp::INodeValidator@{org\-::jgap\-::gp\-::\-I\-Node\-Validator}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-gp.\-I\-Node\-Validator.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-7 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{interfaceorg_1_1jgap_1_1gp_1_1_i_node_validator_a15abecd09c27a7c9cee7ed7e6d0f095e}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 31 of file I\-Node\-Validator.\-java.
+
+
+
+The documentation for this interface was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/gp/\hyperlink{_i_node_validator_8java}{I\-Node\-Validator.\-java}\end{DoxyCompactItemize}

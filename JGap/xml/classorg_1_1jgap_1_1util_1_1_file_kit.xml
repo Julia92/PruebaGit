@@ -1,0 +1,996 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1util_1_1_file_kit" kind="class" prot="public">
+    <compoundname>org::jgap::util::FileKit</compoundname>
+    <innerclass refid="classorg_1_1jgap_1_1util_1_1_file_kit_1_1_my_file_name_filter" prot="package">org::jgap::util::FileKit::MyFileNameFilter</innerclass>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1util_1_1_file_kit_1a830187f5a48ba300aa2930d655cd3975" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.util.FileKit.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.12 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="25" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1util_1_1_file_kit_1a96b5f1e3321a4cf8bc43873ec55866d1" prot="public" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String org.jgap.util.FileKit.fileseparator</definition>
+        <argsstring></argsstring>
+        <name>fileseparator</name>
+        <initializer>= System.getProperty(&quot;file.separator&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="27" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a39df4332889cc4ad30237e420843f84a" compoundref="_file_kit_8java" startline="160" endline="167">org.jgap.util.FileKit.getConformPath</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a04427661b9434f2ebca8a7c496b024f8" compoundref="_file_kit_8java" startline="82" endline="84">org.jgap.util.FileKit.getFilename</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_file_kit_1ae300139f676867d422777b884f995c49" compoundref="_file_kit_8java" startline="222" endline="241">org.jgap.util.FileKit.removeDoubleSeparators</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_file_kit_test_1a2d7424ae56512e7911efc4aab639dcb7" compoundref="_file_kit_test_8java" startline="115" endline="127">org.jgap.util.FileKitTest.replaceSeparator</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1a6cec1f11600c7d36535fa15160c005d2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void org.jgap.util.FileKit.copyFile</definition>
+        <argsstring>(String source, String dest)</argsstring>
+        <name>copyFile</name>
+        <param>
+          <type>String</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>dest</declname>
+        </param>
+        <exceptions> throws FileNotFoundException, IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copies a complete file.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source file name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>destination file name or destination path (filename then taken from source) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>FileNotFoundException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="41" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1a4dd80302aee8844b8008b45319e5ac93" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void org.jgap.util.FileKit.copyFile</definition>
+        <argsstring>(String source, String dest, int a_offset)</argsstring>
+        <name>copyFile</name>
+        <param>
+          <type>String</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_offset</declname>
+        </param>
+        <exceptions> throws FileNotFoundException, IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copies a file.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source file name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>destination file name or destination path (filename then taken from source) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start offset of file to copy (0 is begin of file) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>FileNotFoundException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="59" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="59" bodyend="80"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a04427661b9434f2ebca8a7c496b024f8" compoundref="_file_kit_8java" startline="82" endline="84">org.jgap.util.FileKit.getFilename</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1a04427661b9434f2ebca8a7c496b024f8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String org.jgap.util.FileKit.getFilename</definition>
+        <argsstring>(String name_and_path)</argsstring>
+        <name>getFilename</name>
+        <param>
+          <type>String</type>
+          <declname>name_and_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="82" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="82" bodyend="84"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a96b5f1e3321a4cf8bc43873ec55866d1" compoundref="_file_kit_8java" startline="27">org.jgap.util.FileKit.fileseparator</references>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a4dd80302aee8844b8008b45319e5ac93" compoundref="_file_kit_8java" startline="59" endline="80">org.jgap.util.FileKit.copyFile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1af68540ad9faa606310ee8952ca57d894" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String org.jgap.util.FileKit.getFilename</definition>
+        <argsstring>(String name_and_path, String fileseparator)</argsstring>
+        <name>getFilename</name>
+        <param>
+          <type>String</type>
+          <declname>name_and_path</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>fileseparator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Extract file name from a given path+filename.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name_and_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fileseparator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Slash or Backslash </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>extracted file nmame</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000183"><xreftitle>Todo</xreftitle><xrefdescription><para>possibly use File.getName() instead? </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="96" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="96" bodyend="123"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a96b5f1e3321a4cf8bc43873ec55866d1" compoundref="_file_kit_8java" startline="27">org.jgap.util.FileKit.fileseparator</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1a4f54c43debcb49fff42ffdb3cdd7b9ce" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String org.jgap.util.FileKit.getCurrentDir</definition>
+        <argsstring>()</argsstring>
+        <name>getCurrentDir</name>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>current directory of the application </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="132" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="132" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1ad59565428f7a3ee8686f33c456634891" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String org.jgap.util.FileKit.addSubDir</definition>
+        <argsstring>(String dir, String subDir, boolean makeNice)</argsstring>
+        <name>addSubDir</name>
+        <param>
+          <type>String</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>subDir</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>makeNice</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a subdir to a given dir and returns the resulting dir.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the original dir </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subDir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the subdir to add </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>makeNice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true: call getNiceDir afterwards </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>dir with subdir added</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="149" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="149" bodyend="153"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a39df4332889cc4ad30237e420843f84a" compoundref="_file_kit_8java" startline="160" endline="167">org.jgap.util.FileKit.getConformPath</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1afb5ce479adc0602fde503431eb0efbb2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String org.jgap.util.FileKit.addFilename</definition>
+        <argsstring>(String dir, String a_filename)</argsstring>
+        <name>addFilename</name>
+        <param>
+          <type>String</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>a_filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="155" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="155" bodyend="158"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a39df4332889cc4ad30237e420843f84a" compoundref="_file_kit_8java" startline="160" endline="167">org.jgap.util.FileKit.getConformPath</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1a39df4332889cc4ad30237e420843f84a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String org.jgap.util.FileKit.getConformPath</definition>
+        <argsstring>(String path, boolean makeNice)</argsstring>
+        <name>getConformPath</name>
+        <param>
+          <type>String</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>makeNice</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="160" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="160" bodyend="167"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a96b5f1e3321a4cf8bc43873ec55866d1" compoundref="_file_kit_8java" startline="27">org.jgap.util.FileKit.fileseparator</references>
+        <references refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a01d978bc98e3c1ea2e568eaa3fedf311" compoundref="_file_kit_8java" startline="197" endline="211">org.jgap.util.FileKit.getNiceURL</references>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_file_kit_1afb5ce479adc0602fde503431eb0efbb2" compoundref="_file_kit_8java" startline="155" endline="158">org.jgap.util.FileKit.addFilename</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_file_kit_1ad59565428f7a3ee8686f33c456634891" compoundref="_file_kit_8java" startline="149" endline="153">org.jgap.util.FileKit.addSubDir</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a35bf5332916107e4d2301c72218d639a" compoundref="_file_kit_8java" startline="260" endline="263">org.jgap.util.FileKit.deleteFile</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a367f99852e55e235336e551b669fe372" compoundref="_file_kit_8java" startline="248" endline="251">org.jgap.util.FileKit.existsFile</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a3d433bbfb2bfa827d97dc1cf1a0a5027" compoundref="_file_kit_8java" startline="169" endline="171">org.jgap.util.FileKit.getConformPath</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1a3d433bbfb2bfa827d97dc1cf1a0a5027" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String org.jgap.util.FileKit.getConformPath</definition>
+        <argsstring>(String path)</argsstring>
+        <name>getConformPath</name>
+        <param>
+          <type>String</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="169" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="169" bodyend="171"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a96b5f1e3321a4cf8bc43873ec55866d1" compoundref="_file_kit_8java" startline="27">org.jgap.util.FileKit.fileseparator</references>
+        <references refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a39df4332889cc4ad30237e420843f84a" compoundref="_file_kit_8java" startline="160" endline="167">org.jgap.util.FileKit.getConformPath</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1a46f3a57d515b853ce2e24344d8c0eed5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String org.jgap.util.FileKit.getConformPath</definition>
+        <argsstring>(String path, String a_fileseparator)</argsstring>
+        <name>getConformPath</name>
+        <param>
+          <type>String</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>a_fileseparator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="173" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="173" bodyend="185"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_file_kit_1ae300139f676867d422777b884f995c49" compoundref="_file_kit_8java" startline="222" endline="241">org.jgap.util.FileKit.removeDoubleSeparators</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1a01d978bc98e3c1ea2e568eaa3fedf311" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String org.jgap.util.FileKit.getNiceURL</definition>
+        <argsstring>(String url, String separator)</argsstring>
+        <name>getNiceURL</name>
+        <param>
+          <type>String</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>separator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Makes an URL nice by bringing it into a normalized (i.e. convenient) form.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>any URL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>separator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the separator to remove duplicates of </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>prettified URL</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="197" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="197" bodyend="211"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_file_kit_1ae300139f676867d422777b884f995c49" compoundref="_file_kit_8java" startline="222" endline="241">org.jgap.util.FileKit.removeDoubleSeparators</references>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a39df4332889cc4ad30237e420843f84a" compoundref="_file_kit_8java" startline="160" endline="167">org.jgap.util.FileKit.getConformPath</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1ae300139f676867d422777b884f995c49" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String org.jgap.util.FileKit.removeDoubleSeparators</definition>
+        <argsstring>(String dir)</argsstring>
+        <name>removeDoubleSeparators</name>
+        <param>
+          <type>String</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes duplicate separators from an URL.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of directory including file name </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>prettified URL</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="222" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="222" bodyend="241"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a96b5f1e3321a4cf8bc43873ec55866d1" compoundref="_file_kit_8java" startline="27">org.jgap.util.FileKit.fileseparator</references>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a46f3a57d515b853ce2e24344d8c0eed5" compoundref="_file_kit_8java" startline="173" endline="185">org.jgap.util.FileKit.getConformPath</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a01d978bc98e3c1ea2e568eaa3fedf311" compoundref="_file_kit_8java" startline="197" endline="211">org.jgap.util.FileKit.getNiceURL</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1a0a4578fb4ffa6e6babfaf3e3342cd459" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>static boolean org.jgap.util.FileKit.directoryExists</definition>
+        <argsstring>(String a_dir)</argsstring>
+        <name>directoryExists</name>
+        <param>
+          <type>String</type>
+          <declname>a_dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="243" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="243" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1a367f99852e55e235336e551b669fe372" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>static boolean org.jgap.util.FileKit.existsFile</definition>
+        <argsstring>(String a_filename)</argsstring>
+        <name>existsFile</name>
+        <param>
+          <type>String</type>
+          <declname>a_filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="248" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="248" bodyend="251"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a39df4332889cc4ad30237e420843f84a" compoundref="_file_kit_8java" startline="160" endline="167">org.jgap.util.FileKit.getConformPath</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1a35bf5332916107e4d2301c72218d639a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>static boolean org.jgap.util.FileKit.deleteFile</definition>
+        <argsstring>(String a_filename)</argsstring>
+        <name>deleteFile</name>
+        <param>
+          <type>String</type>
+          <declname>a_filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deletes a file from disk.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of file to delete</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if deletion successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="260" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="260" bodyend="263"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a39df4332889cc4ad30237e420843f84a" compoundref="_file_kit_8java" startline="160" endline="167">org.jgap.util.FileKit.getConformPath</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1a25ce2d0a2883dc2cf8429d5892b89487" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>static boolean org.jgap.util.FileKit.deleteFile</definition>
+        <argsstring>(File a_file)</argsstring>
+        <name>deleteFile</name>
+        <param>
+          <type>File</type>
+          <declname>a_file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deletes a file from disk.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of file to delete</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if deletion successful</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.4.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="275" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="275" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1a93b7be77bdd14053d7a0a730183755b6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>static boolean org.jgap.util.FileKit.deleteDirectory</definition>
+        <argsstring>(File a_dir)</argsstring>
+        <name>deleteDirectory</name>
+        <param>
+          <type>File</type>
+          <declname>a_dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deletes a directory from disk, also if it is non-empty.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of file to delete</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if deletion successful</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.4.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="294" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="294" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1aeea41ab4c815f7b72e9d4b6423719634" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ClassLoader</type>
+        <definition>static ClassLoader org.jgap.util.FileKit.loadJar</definition>
+        <argsstring>(String a_filename)</argsstring>
+        <name>loadJar</name>
+        <param>
+          <type>String</type>
+          <declname>a_filename</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads a jar file and returns a class loader to access the jar&apos;s classes.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the full jar file name, e.g.: C:/jgap/lib/ext/ashcroft.jar </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ClassLoader the class loader with which to access the loaded classes, e.g. by &lt;classloader&gt;.loadClass(&lt;classname including package&gt;), e.g.: cl.loadClass(&quot;com.thoughtworks.ashcroft.runtime.JohnAshcroft&quot;);</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="320" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="320" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1aa6c68d790ceffa2014b4ac2ca32b5da4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Manifest</type>
+        <definition>static Manifest org.jgap.util.FileKit.getManifestOfJar</definition>
+        <argsstring>(String a_filename)</argsstring>
+        <name>getManifestOfJar</name>
+        <param>
+          <type>String</type>
+          <declname>a_filename</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the manifest included in the given jar.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>jar file name </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Manifest included in the given jar</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="338" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="338" bodyend="347"/>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_file_kit_1aaee89d9ba61e0c7f4c4970606e5e8e71" compoundref="_file_kit_8java" startline="405" endline="413">org.jgap.util.FileKit.getVersionOfJGAP</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_file_kit_1ae5aa2bfc7d1c83135b94d266516321c7" compoundref="_file_kit_8java" startline="384" endline="392">org.jgap.util.FileKit.getVersionOfModule</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1a8bb10bbdee9a0fc0223d8ebf5056d524" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String org.jgap.util.FileKit.getJGAPVersion</definition>
+        <argsstring>(Manifest a_JGAPManifest)</argsstring>
+        <name>getJGAPVersion</name>
+        <param>
+          <type>Manifest</type>
+          <declname>a_JGAPManifest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_JGAPManifest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>manifest with JGAP-specific information </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>version the jar file is working with (or version of the JGAP library in case the file <emphasis>is</emphasis> the JGAP library)</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="357" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="357" bodyend="360"/>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_file_kit_1aaee89d9ba61e0c7f4c4970606e5e8e71" compoundref="_file_kit_8java" startline="405" endline="413">org.jgap.util.FileKit.getVersionOfJGAP</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1ad337c025bd76665eb7f68f535f867193" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String org.jgap.util.FileKit.getModuleVersion</definition>
+        <argsstring>(Manifest a_JGAPManifest)</argsstring>
+        <name>getModuleVersion</name>
+        <param>
+          <type>Manifest</type>
+          <declname>a_JGAPManifest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_JGAPManifest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Manifest with JGAP-specific information </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>version of the module represented by the jar</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="369" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="369" bodyend="372"/>
+        <referencedby refid="classorg_1_1jgap_1_1util_1_1_file_kit_1ae5aa2bfc7d1c83135b94d266516321c7" compoundref="_file_kit_8java" startline="384" endline="392">org.jgap.util.FileKit.getVersionOfModule</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1ae5aa2bfc7d1c83135b94d266516321c7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String org.jgap.util.FileKit.getVersionOfModule</definition>
+        <argsstring>(String a_filename)</argsstring>
+        <name>getVersionOfModule</name>
+        <param>
+          <type>String</type>
+          <declname>a_filename</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>See getModuleVersion.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of a JGAP jar </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>version of the module represented by the jar </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="384" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="384" bodyend="392"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_file_kit_1aa6c68d790ceffa2014b4ac2ca32b5da4" compoundref="_file_kit_8java" startline="338" endline="347">org.jgap.util.FileKit.getManifestOfJar</references>
+        <references refid="classorg_1_1jgap_1_1util_1_1_file_kit_1ad337c025bd76665eb7f68f535f867193" compoundref="_file_kit_8java" startline="369" endline="372">org.jgap.util.FileKit.getModuleVersion</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1aaee89d9ba61e0c7f4c4970606e5e8e71" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String org.jgap.util.FileKit.getVersionOfJGAP</definition>
+        <argsstring>(String a_filename)</argsstring>
+        <name>getVersionOfJGAP</name>
+        <param>
+          <type>String</type>
+          <declname>a_filename</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>See getJGAPVersion.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of a JGAP jar </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>version the jar file is working wit (or version of the JGAP library in case the file <emphasis>is</emphasis> the JGAP library) </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="405" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="405" bodyend="413"/>
+        <references refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a8bb10bbdee9a0fc0223d8ebf5056d524" compoundref="_file_kit_8java" startline="357" endline="360">org.jgap.util.FileKit.getJGAPVersion</references>
+        <references refid="classorg_1_1jgap_1_1util_1_1_file_kit_1aa6c68d790ceffa2014b4ac2ca32b5da4" compoundref="_file_kit_8java" startline="338" endline="347">org.jgap.util.FileKit.getManifestOfJar</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1a0e1df1b352e7b8122d001a366dffb9ae" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String org.jgap.util.FileKit.toJarFileName</definition>
+        <argsstring>(String a_filename)</argsstring>
+        <name>toJarFileName</name>
+        <param>
+          <type>String</type>
+          <declname>a_filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Converts an ordinary file name into a jar filename that can be used with <ref refid="classorg_1_1jgap_1_1util_1_1_jar_class_loader" kindref="compound">JarClassLoader</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name to convert </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>converted name</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="425" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="425" bodyend="431"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1ac1fa4723653b4f0c12575c80c822c8ec" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void org.jgap.util.FileKit.createDirectory</definition>
+        <argsstring>(String a_dirname)</argsstring>
+        <name>createDirectory</name>
+        <param>
+          <type>String</type>
+          <declname>a_dirname</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a directory, and if necessary, any of its parent directories.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_dirname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the dir to create </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="442" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="442" bodyend="452"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1a700991efb0b5ace692c85f10cd260fa2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector</type>
+        <definition>static Vector org.jgap.util.FileKit.readFile</definition>
+        <argsstring>(String a_filename)</argsstring>
+        <name>readFile</name>
+        <param>
+          <type>String</type>
+          <declname>a_filename</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads a text file.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of text file </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>list of read text lines </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="464" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="464" bodyend="475"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1ac8c9537fe96eace57ea9d7b2e1c375e9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String org.jgap.util.FileKit.getTempDir</definition>
+        <argsstring>()</argsstring>
+        <name>getTempDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>temporary directory</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="483" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="483" bodyend="485"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1util_1_1_file_kit_1a0afe6a5e11024dc5b0bc7f5c9c168d6e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String[]</type>
+        <definition>static String [] org.jgap.util.FileKit.listFilesInDir</definition>
+        <argsstring>(String a_dir, String a_mask)</argsstring>
+        <name>listFilesInDir</name>
+        <param>
+          <type>String</type>
+          <declname>a_dir</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>a_mask</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the files within a directory that match a given pattern. No directories are returned.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String[] </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="499" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="499" bodyend="503"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Contains helper functions related to the file system.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+</para>    </detaileddescription>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" line="23" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/FileKit.java" bodystart="23" bodyend="533"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1afb5ce479adc0602fde503431eb0efbb2" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>addFilename</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1ad59565428f7a3ee8686f33c456634891" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>addSubDir</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a6cec1f11600c7d36535fa15160c005d2" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>copyFile</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a4dd80302aee8844b8008b45319e5ac93" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>copyFile</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1ac1fa4723653b4f0c12575c80c822c8ec" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>createDirectory</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a830187f5a48ba300aa2930d655cd3975" prot="private" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a93b7be77bdd14053d7a0a730183755b6" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>deleteDirectory</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a35bf5332916107e4d2301c72218d639a" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>deleteFile</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a25ce2d0a2883dc2cf8429d5892b89487" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>deleteFile</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a0a4578fb4ffa6e6babfaf3e3342cd459" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>directoryExists</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a367f99852e55e235336e551b669fe372" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>existsFile</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a96b5f1e3321a4cf8bc43873ec55866d1" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>fileseparator</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a39df4332889cc4ad30237e420843f84a" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>getConformPath</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a3d433bbfb2bfa827d97dc1cf1a0a5027" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>getConformPath</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a46f3a57d515b853ce2e24344d8c0eed5" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>getConformPath</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a4f54c43debcb49fff42ffdb3cdd7b9ce" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>getCurrentDir</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a04427661b9434f2ebca8a7c496b024f8" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>getFilename</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1af68540ad9faa606310ee8952ca57d894" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>getFilename</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a8bb10bbdee9a0fc0223d8ebf5056d524" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>getJGAPVersion</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1aa6c68d790ceffa2014b4ac2ca32b5da4" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>getManifestOfJar</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1ad337c025bd76665eb7f68f535f867193" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>getModuleVersion</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a01d978bc98e3c1ea2e568eaa3fedf311" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>getNiceURL</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1ac8c9537fe96eace57ea9d7b2e1c375e9" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>getTempDir</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1aaee89d9ba61e0c7f4c4970606e5e8e71" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>getVersionOfJGAP</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1ae5aa2bfc7d1c83135b94d266516321c7" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>getVersionOfModule</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a0afe6a5e11024dc5b0bc7f5c9c168d6e" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>listFilesInDir</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1aeea41ab4c815f7b72e9d4b6423719634" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>loadJar</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a700991efb0b5ace692c85f10cd260fa2" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>readFile</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1ae300139f676867d422777b884f995c49" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>removeDoubleSeparators</name></member>
+      <member refid="classorg_1_1jgap_1_1util_1_1_file_kit_1a0e1df1b352e7b8122d001a366dffb9ae" prot="public" virt="non-virtual"><scope>org::jgap::util::FileKit</scope><name>toJarFileName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

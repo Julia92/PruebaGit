@@ -1,0 +1,138 @@
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_l_c_g}{\section{org.\-jgap.\-util.\-random\-L\-C\-G Class Reference}
+\label{classorg_1_1jgap_1_1util_1_1random_l_c_g}\index{org.\-jgap.\-util.\-random\-L\-C\-G@{org.\-jgap.\-util.\-random\-L\-C\-G}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-util.\-random\-L\-C\-G\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classorg_1_1jgap_1_1util_1_1random_l_c_g__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-util.\-random\-L\-C\-G\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classorg_1_1jgap_1_1util_1_1random_l_c_g__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1util_1_1random_l_c_g_a3ef0a715da855114368f5909ebd0e372}{random\-L\-C\-G} ()
+\item 
+\hyperlink{classorg_1_1jgap_1_1util_1_1random_l_c_g_ab748f2cbb502efd8f193eef73d53cc33}{random\-L\-C\-G} (long seed)
+\item 
+void \hyperlink{classorg_1_1jgap_1_1util_1_1random_l_c_g_a533d1138a91fb5d9384c26dc0d20762b}{set\-Seed} (long seed)
+\item 
+byte \hyperlink{classorg_1_1jgap_1_1util_1_1random_l_c_g_ab3b28701764c40bed7a00c9096612304}{next\-Byte} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of a {\bfseries \hyperlink{classorg_1_1jgap_1_1util_1_1random_x}{random\-X}}-\/compliant class using the simple (and not very good) {\ttfamily rand()} linear congruential generator given as an example in the A\-N\-S\-I C specification. This is intended not for serious use, merely as an illustration of a simple software-\/based {\bfseries \hyperlink{classorg_1_1jgap_1_1util_1_1random_x}{random\-X}} generator.
+
+The generation algorithm is\-:
+
+\begin{center} {\itshape I$_{\mbox{j+1}}$ } = ({\itshape I$_{\mbox{j}}$ } × 1103515245 + 12345) \& 0x7\-F\-F\-F\-F\-F\-F\-F \end{center} 
+
+Designed and implemented in July 1996 by \href{http://www.fourmilab.ch/}{\tt John Walker}, \href{mailto:kelvin@fourmilab.ch}{\tt kelvin@fourmilab.\-ch}. 
+
+Definition at line 23 of file random\-L\-C\-G.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_l_c_g_a3ef0a715da855114368f5909ebd0e372}{\index{org\-::jgap\-::util\-::random\-L\-C\-G@{org\-::jgap\-::util\-::random\-L\-C\-G}!random\-L\-C\-G@{random\-L\-C\-G}}
+\index{random\-L\-C\-G@{random\-L\-C\-G}!org::jgap::util::randomLCG@{org\-::jgap\-::util\-::random\-L\-C\-G}}
+\subsubsection[{random\-L\-C\-G}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-util.\-random\-L\-C\-G.\-random\-L\-C\-G (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1random_l_c_g_a3ef0a715da855114368f5909ebd0e372}
+Creates a new pseudorandom number generator, seeded from the current time. 
+
+Definition at line 31 of file random\-L\-C\-G.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_l_c_g_ab748f2cbb502efd8f193eef73d53cc33}{\index{org\-::jgap\-::util\-::random\-L\-C\-G@{org\-::jgap\-::util\-::random\-L\-C\-G}!random\-L\-C\-G@{random\-L\-C\-G}}
+\index{random\-L\-C\-G@{random\-L\-C\-G}!org::jgap::util::randomLCG@{org\-::jgap\-::util\-::random\-L\-C\-G}}
+\subsubsection[{random\-L\-C\-G}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-util.\-random\-L\-C\-G.\-random\-L\-C\-G (
+\begin{DoxyParamCaption}
+\item[{long}]{seed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1random_l_c_g_ab748f2cbb502efd8f193eef73d53cc33}
+\begin{DoxyVerb}    Creates a new pseudorandom number generator with a
+    specified seed.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & initial seed for the generator \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 41 of file random\-L\-C\-G.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_l_c_g_ab3b28701764c40bed7a00c9096612304}{\index{org\-::jgap\-::util\-::random\-L\-C\-G@{org\-::jgap\-::util\-::random\-L\-C\-G}!next\-Byte@{next\-Byte}}
+\index{next\-Byte@{next\-Byte}!org::jgap::util::randomLCG@{org\-::jgap\-::util\-::random\-L\-C\-G}}
+\subsubsection[{next\-Byte}]{\setlength{\rightskip}{0pt plus 5cm}byte org.\-jgap.\-util.\-random\-L\-C\-G.\-next\-Byte (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classorg_1_1jgap_1_1util_1_1random_l_c_g_ab3b28701764c40bed7a00c9096612304}
+\begin{DoxyVerb}    Get next byte from generator.  Given how poor this generator
+    is, it's wise to make a separate call for each byte rather than
+    extract fields from a single call, which may be correlated.
+    Also, the higher-order bits of this generator are more
+    random than the low, so we extract the byte after discarding
+    the low-order 11 bits.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+the next byte from the generator. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classorg_1_1jgap_1_1util_1_1random_x_a3ef715392cb00b38bba43e5abc5ab845}{org.\-jgap.\-util.\-random\-X}.
+
+
+
+Definition at line 68 of file random\-L\-C\-G.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_l_c_g_a533d1138a91fb5d9384c26dc0d20762b}{\index{org\-::jgap\-::util\-::random\-L\-C\-G@{org\-::jgap\-::util\-::random\-L\-C\-G}!set\-Seed@{set\-Seed}}
+\index{set\-Seed@{set\-Seed}!org::jgap::util::randomLCG@{org\-::jgap\-::util\-::random\-L\-C\-G}}
+\subsubsection[{set\-Seed}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-util.\-random\-L\-C\-G.\-set\-Seed (
+\begin{DoxyParamCaption}
+\item[{long}]{seed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1random_l_c_g_a533d1138a91fb5d9384c26dc0d20762b}
+\begin{DoxyVerb}    Set seed for generator.  Subsequent values will be based
+    on the given seed.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & seed for the generator \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 53 of file random\-L\-C\-G.\-java.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/util/\hyperlink{random_l_c_g_8java}{random\-L\-C\-G.\-java}\end{DoxyCompactItemize}

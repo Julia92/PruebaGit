@@ -1,0 +1,562 @@
+.TH "examples.gp.paintedDesert.Ant" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.paintedDesert.Ant \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAnt\fP (int x, int y)"
+.br
+.ti -1c
+.RI "void \fBsetXpos\fP (int \fBm_xpos\fP)"
+.br
+.ti -1c
+.RI "int \fBgetXpos\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetYpos\fP (int \fBm_ypos\fP)"
+.br
+.ti -1c
+.RI "int \fBgetYpos\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetCarrying\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisCarrying\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPickedUpFromXLoc\fP (int pickedUpFromXLoc)"
+.br
+.ti -1c
+.RI "int \fBgetPickedUpFromXLoc\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPickedUpFromYLoc\fP (int pickedUpFromYLoc)"
+.br
+.ti -1c
+.RI "int \fBgetPickedUpFromYLoc\fP ()"
+.br
+.ti -1c
+.RI "int \fBdrop\fP (\fBAntMap\fP antmap)"
+.br
+.ti -1c
+.RI "int \fBpickup\fP (\fBAntMap\fP antmap)"
+.br
+.ti -1c
+.RI "int \fBmoveRandom\fP (\fBAntMap\fP map)"
+.br
+.ti -1c
+.RI "int \fBgoE\fP (\fBAntMap\fP map)"
+.br
+.ti -1c
+.RI "int \fBgoW\fP (\fBAntMap\fP map)"
+.br
+.ti -1c
+.RI "int \fBgoN\fP (\fBAntMap\fP map)"
+.br
+.ti -1c
+.RI "int \fBgoS\fP (\fBAntMap\fP map)"
+.br
+.ti -1c
+.RI "boolean \fBmayPickup\fP (\fBAntMap\fP map)"
+.br
+.ti -1c
+.RI "boolean \fBsandAtLocation\fP (\fBAntMap\fP map)"
+.br
+.ti -1c
+.RI "boolean \fBsandBelongsHere\fP (\fBAntMap\fP map)"
+.br
+.ti -1c
+.RI "int \fBsandColor\fP (\fBAntMap\fP map)"
+.br
+.ti -1c
+.RI "void \fBincrementMoveCounter\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetMoves\fP ()"
+.br
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBm_xpos\fP"
+.br
+.ti -1c
+.RI "int \fBm_ypos\fP"
+.br
+.ti -1c
+.RI "int \fBm_moves\fP"
+.br
+.ti -1c
+.RI "int \fBm_maxMoves\fP = 500"
+.br
+.ti -1c
+.RI "int \fBm_carrying\fP = \fBAntMap\&.EMPTY\fP"
+.br
+.ti -1c
+.RI "int \fBm_pickedUpFromXLoc\fP = -1"
+.br
+.ti -1c
+.RI "int \fBm_pickedUpFromYLoc\fP = -1"
+.br
+.ti -1c
+.RI "int \fBm_initX\fP"
+.br
+.ti -1c
+.RI "int \fBm_initY\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.2 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Represents the \fBAnt\fP\&. Contains the rules about how an \fBAnt\fP behaves\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Scott Mueller 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 18 of file Ant\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.gp\&.paintedDesert\&.Ant\&.Ant (intx, inty)\fC [inline]\fP"
+Constructs the \fBAnt\fP at an initial location\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP Initial x location 
+.br
+\fIy\fP Initial y locaiton 
+.RE
+.PP
+
+.PP
+Definition at line 74 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.Ant\&.m_initX, examples\&.gp\&.paintedDesert\&.Ant\&.m_initY, and examples\&.gp\&.paintedDesert\&.Ant\&.reset()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.drop (\fBAntMap\fPantmap)\fC [inline]\fP"
+Drops the sand at the current location if possible\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+the color of sand the ant is carrying whether or not it could be dropped at the current location\&. 
+.RE
+.PP
+
+.PP
+Definition at line 170 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.AntMap\&.atLocation(), examples\&.gp\&.paintedDesert\&.AntMap\&.EMPTY, and examples\&.gp\&.paintedDesert\&.Ant\&.m_carrying\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.getCarrying ()\fC [inline]\fP"
+Returns the grain of sand the ant is carrying\&. Returns EMPTY if no sand is being carried\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The color of sand 
+.RE
+.PP
+
+.PP
+Definition at line 117 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.Ant\&.m_carrying\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.getMoves ()\fC [inline]\fP"
+Identifies the number of moves the ant has performed 
+.PP
+\fBReturns:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definition at line 344 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.Ant\&.m_moves\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.getPickedUpFromXLoc ()\fC [inline]\fP"
+Returns the x location where the sand was picked up\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definition at line 145 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.Ant\&.m_pickedUpFromXLoc\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.getPickedUpFromYLoc ()\fC [inline]\fP"
+Returns the \fBY\fP locaiton where the sand was picked up\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The \fBY\fP location 
+.RE
+.PP
+
+.PP
+Definition at line 161 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.Ant\&.m_pickedUpFromYLoc\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.getXpos ()\fC [inline]\fP"
+Returns the x location of the ant\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The x location\&. 
+.RE
+.PP
+
+.PP
+Definition at line 92 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.Ant\&.m_xpos\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.Ant\&.goE(), examples\&.gp\&.paintedDesert\&.Ant\&.goW(), examples\&.gp\&.paintedDesert\&.Ant\&.sandBelongsHere(), and examples\&.gp\&.paintedDesert\&.Ant\&.sandColor()\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.getYpos ()\fC [inline]\fP"
+Returns the y location of the ant\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The y location 
+.RE
+.PP
+
+.PP
+Definition at line 108 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.Ant\&.m_ypos\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.Ant\&.goN(), examples\&.gp\&.paintedDesert\&.Ant\&.goS(), examples\&.gp\&.paintedDesert\&.Ant\&.pickup(), and examples\&.gp\&.paintedDesert\&.Ant\&.sandAtLocation()\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.goE (\fBAntMap\fPmap)\fC [inline]\fP"
+Instructs the ant to go east, if possible\&. 
+.PP
+Definition at line 246 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.AntMap\&.getWidth(), examples\&.gp\&.paintedDesert\&.Ant\&.getXpos(), examples\&.gp\&.paintedDesert\&.Ant\&.incrementMoveCounter(), and examples\&.gp\&.paintedDesert\&.Ant\&.sandColor()\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.goN (\fBAntMap\fPmap)\fC [inline]\fP"
+Instructs the ant to go north, if possible 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImap\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The color of the sand at the new location 
+.RE
+.PP
+
+.PP
+Definition at line 272 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.AntMap\&.getHeight(), examples\&.gp\&.paintedDesert\&.Ant\&.getYpos(), examples\&.gp\&.paintedDesert\&.Ant\&.incrementMoveCounter(), and examples\&.gp\&.paintedDesert\&.Ant\&.sandColor()\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.goS (\fBAntMap\fPmap)\fC [inline]\fP"
+Instructs the ant to go south, if possible 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImap\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The color of the sand at the new location 
+.RE
+.PP
+
+.PP
+Definition at line 285 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.Ant\&.getYpos(), examples\&.gp\&.paintedDesert\&.Ant\&.incrementMoveCounter(), and examples\&.gp\&.paintedDesert\&.Ant\&.sandColor()\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.goW (\fBAntMap\fPmap)\fC [inline]\fP"
+Instructs the ant to go west, if possible 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImap\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The color of the sand at the new location 
+.RE
+.PP
+
+.PP
+Definition at line 259 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.Ant\&.getXpos(), examples\&.gp\&.paintedDesert\&.Ant\&.incrementMoveCounter(), and examples\&.gp\&.paintedDesert\&.Ant\&.sandColor()\&.
+.SS "void examples\&.gp\&.paintedDesert\&.Ant\&.incrementMoveCounter ()\fC [inline]\fP"
+Increments the move counter for the ant 
+.PP
+Definition at line 333 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.Ant\&.m_maxMoves, and examples\&.gp\&.paintedDesert\&.Ant\&.m_moves\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.Ant\&.goE(), examples\&.gp\&.paintedDesert\&.Ant\&.goN(), examples\&.gp\&.paintedDesert\&.Ant\&.goS(), examples\&.gp\&.paintedDesert\&.Ant\&.goW(), and examples\&.gp\&.paintedDesert\&.Ant\&.moveRandom()\&.
+.SS "boolean examples\&.gp\&.paintedDesert\&.Ant\&.isCarrying ()\fC [inline]\fP"
+Identifies if the ant is carrying any sand\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The color of sand 
+.RE
+.PP
+
+.PP
+Definition at line 125 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.AntMap\&.EMPTY, and examples\&.gp\&.paintedDesert\&.Ant\&.m_carrying\&.
+.SS "boolean examples\&.gp\&.paintedDesert\&.Ant\&.mayPickup (\fBAntMap\fPmap)\fC [inline]\fP"
+Identifies whether the ant could pickup sand 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImap\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 298 of file Ant\&.java\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.moveRandom (\fBAntMap\fPmap)\fC [inline]\fP"
+Randomly moves the ant\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImap\fP The map of locations of sand 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The sand at the new location of the \fBAnt\fP\&. 
+.RE
+.PP
+
+.PP
+Definition at line 200 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.AntMap\&.ANT_AT_POSITION, examples\&.gp\&.paintedDesert\&.AntMap\&.getHeight(), examples\&.gp\&.paintedDesert\&.AntMap\&.getMap(), examples\&.gp\&.paintedDesert\&.Ant\&.incrementMoveCounter(), and examples\&.gp\&.paintedDesert\&.Ant\&.sandColor()\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.pickup (\fBAntMap\fPantmap)\fC [inline]\fP"
+Picks up the sand at the current location, if the ant is not carrying any sand and there is sand at the location 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIantmap\fP The map of locations of sand 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The sand color at the location whether or not the \fBAnt\fP could pick up the sand\&. 
+.RE
+.PP
+
+.PP
+Definition at line 185 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.AntMap\&.atLocation(), examples\&.gp\&.paintedDesert\&.AntMap\&.EMPTY, examples\&.gp\&.paintedDesert\&.Ant\&.getYpos(), examples\&.gp\&.paintedDesert\&.Ant\&.m_carrying, examples\&.gp\&.paintedDesert\&.Ant\&.m_pickedUpFromXLoc, and examples\&.gp\&.paintedDesert\&.Ant\&.m_pickedUpFromYLoc\&.
+.SS "void examples\&.gp\&.paintedDesert\&.Ant\&.reset ()\fC [inline]\fP"
+Resets the ant to its original location on the map\&. 
+.PP
+Definition at line 352 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.AntMap\&.EMPTY, examples\&.gp\&.paintedDesert\&.Ant\&.m_carrying, examples\&.gp\&.paintedDesert\&.Ant\&.m_initX, examples\&.gp\&.paintedDesert\&.Ant\&.m_initY, examples\&.gp\&.paintedDesert\&.Ant\&.m_moves, examples\&.gp\&.paintedDesert\&.Ant\&.m_pickedUpFromXLoc, examples\&.gp\&.paintedDesert\&.Ant\&.m_pickedUpFromYLoc, examples\&.gp\&.paintedDesert\&.Ant\&.m_xpos, and examples\&.gp\&.paintedDesert\&.Ant\&.m_ypos\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.Ant\&.Ant()\&.
+.SS "boolean examples\&.gp\&.paintedDesert\&.Ant\&.sandAtLocation (\fBAntMap\fPmap)\fC [inline]\fP"
+Identifies whether there is sand at the location 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImap\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if sand at location 
+.RE
+.PP
+
+.PP
+Definition at line 307 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.Ant\&.getYpos()\&.
+.SS "boolean examples\&.gp\&.paintedDesert\&.Ant\&.sandBelongsHere (\fBAntMap\fPmap)\fC [inline]\fP"
+Identifies that sand the ant is carrying, belongs in this column 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImap\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 316 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.Ant\&.getXpos()\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.sandColor (\fBAntMap\fPmap)\fC [inline]\fP"
+Identifies the color of the sand at the ant's location 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImap\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 325 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.Ant\&.getXpos()\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.Ant\&.goE(), examples\&.gp\&.paintedDesert\&.Ant\&.goN(), examples\&.gp\&.paintedDesert\&.Ant\&.goS(), examples\&.gp\&.paintedDesert\&.Ant\&.goW(), and examples\&.gp\&.paintedDesert\&.Ant\&.moveRandom()\&.
+.SS "void examples\&.gp\&.paintedDesert\&.Ant\&.setPickedUpFromXLoc (intpickedUpFromXLoc)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIm_lastMove\fP Stores the x location where the sand was picked up\&. 
+.RE
+.PP
+
+.PP
+Definition at line 137 of file Ant\&.java\&.
+.SS "void examples\&.gp\&.paintedDesert\&.Ant\&.setPickedUpFromYLoc (intpickedUpFromYLoc)\fC [inline]\fP"
+Sets the y location where the sand was picked up\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpickedUpFromYLoc\fP The y location 
+.RE
+.PP
+
+.PP
+Definition at line 153 of file Ant\&.java\&.
+.SS "void examples\&.gp\&.paintedDesert\&.Ant\&.setXpos (intm_xpos)\fC [inline]\fP"
+Sets the x location of the ant\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIm_xpos\fP 
+.RE
+.PP
+
+.PP
+Definition at line 84 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.Ant\&.m_xpos\&.
+.SS "void examples\&.gp\&.paintedDesert\&.Ant\&.setYpos (intm_ypos)\fC [inline]\fP"
+Sets the y location of the ant\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIm_ypos\fP The y location 
+.RE
+.PP
+
+.PP
+Definition at line 100 of file Ant\&.java\&.
+.PP
+References examples\&.gp\&.paintedDesert\&.Ant\&.m_ypos\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.gp\&.paintedDesert\&.Ant\&.CVS_REVISION = '$Revision: 1\&.2 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 20 of file Ant\&.java\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.m_carrying = \fBAntMap\&.EMPTY\fP\fC [private]\fP"
+The grain of sand, if any, that the \fBAnt\fP is carrying\&. 
+.PP
+Definition at line 45 of file Ant\&.java\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.Ant\&.drop(), examples\&.gp\&.paintedDesert\&.Ant\&.getCarrying(), examples\&.gp\&.paintedDesert\&.Ant\&.isCarrying(), examples\&.gp\&.paintedDesert\&.Ant\&.pickup(), and examples\&.gp\&.paintedDesert\&.Ant\&.reset()\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.m_initX\fC [private]\fP"
+The initial x location of the ant\&. This is used when the ant is reset back to it's original location\&. 
+.PP
+Definition at line 61 of file Ant\&.java\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.Ant\&.Ant(), and examples\&.gp\&.paintedDesert\&.Ant\&.reset()\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.m_initY\fC [private]\fP"
+The initial y locaiton of the \fBAnt\fP\&. This is used when the ant is reset back to it's original location\&. 
+.PP
+Definition at line 67 of file Ant\&.java\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.Ant\&.Ant(), and examples\&.gp\&.paintedDesert\&.Ant\&.reset()\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.m_maxMoves = 500\fC [private]\fP"
+The maximum number of moves an \fBAnt\fP is allowed to move in a particular program\&. 
+.PP
+Definition at line 40 of file Ant\&.java\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.Ant\&.incrementMoveCounter()\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.m_moves\fC [private]\fP"
+The number of moves the ant has made 
+.PP
+Definition at line 35 of file Ant\&.java\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.Ant\&.getMoves(), examples\&.gp\&.paintedDesert\&.Ant\&.incrementMoveCounter(), and examples\&.gp\&.paintedDesert\&.Ant\&.reset()\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.m_pickedUpFromXLoc = -1\fC [private]\fP"
+The x location the ant picked up the sand from\&. 
+.PP
+Definition at line 50 of file Ant\&.java\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.Ant\&.getPickedUpFromXLoc(), examples\&.gp\&.paintedDesert\&.Ant\&.pickup(), and examples\&.gp\&.paintedDesert\&.Ant\&.reset()\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.m_pickedUpFromYLoc = -1\fC [private]\fP"
+The y location the ant picked up the sand from\&. 
+.PP
+Definition at line 55 of file Ant\&.java\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.Ant\&.getPickedUpFromYLoc(), examples\&.gp\&.paintedDesert\&.Ant\&.pickup(), and examples\&.gp\&.paintedDesert\&.Ant\&.reset()\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.m_xpos\fC [private]\fP"
+The x position of the \fBAnt\fP 
+.PP
+Definition at line 25 of file Ant\&.java\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.Ant\&.getXpos(), examples\&.gp\&.paintedDesert\&.Ant\&.reset(), and examples\&.gp\&.paintedDesert\&.Ant\&.setXpos()\&.
+.SS "int examples\&.gp\&.paintedDesert\&.Ant\&.m_ypos\fC [private]\fP"
+The y position of the \fBAnt\fP 
+.PP
+Definition at line 30 of file Ant\&.java\&.
+.PP
+Referenced by examples\&.gp\&.paintedDesert\&.Ant\&.getYpos(), examples\&.gp\&.paintedDesert\&.Ant\&.reset(), and examples\&.gp\&.paintedDesert\&.Ant\&.setYpos()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

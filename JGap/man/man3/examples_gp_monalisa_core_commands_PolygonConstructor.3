@@ -1,0 +1,195 @@
+.TH "examples.gp.monalisa.core.commands.PolygonConstructor" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.monalisa.core.commands.PolygonConstructor \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandGene\fP, IMutateable, and ICloneable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPolygonConstructor\fP (\fBGPConfiguration\fP a_conf, int a_points)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBPolygonConstructor\fP (\fBGPConfiguration\fP a_conf, int a_points, int a_minPoints, int a_maxPoints)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBPolygonConstructor\fP (\fBGPConfiguration\fP a_conf, int a_points, boolean a_mutateable)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "Object \fBexecute_object\fP (ProgramChromosome a_chrom, int a_n, Object[] a_args)"
+.br
+.ti -1c
+.RI "Class \fBgetChildType\fP (\fBIGPProgram\fP a_ind, int a_chromNum)"
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP \fBapplyMutation\fP (int index, double a_percentage)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCommandGene\fP \fBapplyMutation\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "boolean \fBm_mutateable\fP"
+.br
+.ti -1c
+.RI "int \fBm_points\fP = 5"
+.br
+.ti -1c
+.RI "int \fBm_minPoints\fP"
+.br
+.ti -1c
+.RI "int \fBm_maxPoints\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.4 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A polygon consists of a series of points\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Yann N\&. Dauphin 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file PolygonConstructor\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.PolygonConstructor (\fBGPConfiguration\fPa_conf, inta_points) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 36 of file PolygonConstructor\&.java\&.
+.PP
+Referenced by examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.applyMutation(), and examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.clone()\&.
+.SS "examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.PolygonConstructor (\fBGPConfiguration\fPa_conf, inta_points, inta_minPoints, inta_maxPoints) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 41 of file PolygonConstructor\&.java\&.
+.PP
+References examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.m_maxPoints, and examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.m_minPoints\&.
+.SS "examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.PolygonConstructor (\fBGPConfiguration\fPa_conf, inta_points, booleana_mutateable) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 50 of file PolygonConstructor\&.java\&.
+.PP
+References examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.m_mutateable, and examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.m_points\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBCommandGene\fP examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.applyMutation (intindex, doublea_percentage) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 87 of file PolygonConstructor\&.java\&.
+.PP
+References examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.applyMutation(), org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), and examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.m_mutateable\&.
+.SS "\fBCommandGene\fP examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.applyMutation () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 100 of file PolygonConstructor\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.m_maxPoints, examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.m_minPoints, examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.m_mutateable, and examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.PolygonConstructor()\&.
+.PP
+Referenced by examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.applyMutation()\&.
+.SS "Object examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.clone ()\fC [inline]\fP"
+Clones the object\&. Simple and straight forward implementation here\&.
+.PP
+\fBReturns:\fP
+.RS 4
+cloned instance of this object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 124 of file PolygonConstructor\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.m_mutateable, examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.m_points, and examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.PolygonConstructor()\&.
+.SS "Object examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.execute_object (ProgramChromosomea_chrom, inta_n, Object[]a_args)\fC [inline]\fP"
+
+.PP
+Definition at line 59 of file PolygonConstructor\&.java\&.
+.PP
+References examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.m_points\&.
+.SS "Class examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.getChildType (\fBIGPProgram\fPa_ind, inta_chromNum)\fC [inline]\fP"
+
+.PP
+Definition at line 70 of file PolygonConstructor\&.java\&.
+.SS "String examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 75 of file PolygonConstructor\&.java\&.
+.PP
+References examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.m_points\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.CVS_REVISION = '$Revision: 1\&.4 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file PolygonConstructor\&.java\&.
+.SS "int examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.m_maxPoints\fC [private]\fP"
+
+.PP
+Definition at line 34 of file PolygonConstructor\&.java\&.
+.PP
+Referenced by examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.applyMutation(), and examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.PolygonConstructor()\&.
+.SS "int examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.m_minPoints\fC [private]\fP"
+
+.PP
+Definition at line 32 of file PolygonConstructor\&.java\&.
+.PP
+Referenced by examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.applyMutation(), and examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.PolygonConstructor()\&.
+.SS "boolean examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.m_mutateable\fC [private]\fP"
+
+.PP
+Definition at line 28 of file PolygonConstructor\&.java\&.
+.PP
+Referenced by examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.applyMutation(), examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.clone(), and examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.PolygonConstructor()\&.
+.SS "int examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.m_points = 5\fC [private]\fP"
+
+.PP
+Definition at line 30 of file PolygonConstructor\&.java\&.
+.PP
+Referenced by examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.clone(), examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.execute_object(), examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.PolygonConstructor(), and examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.toString()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

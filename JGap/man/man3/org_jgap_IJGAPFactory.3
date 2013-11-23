@@ -1,0 +1,255 @@
+.TH "org.jgap.IJGAPFactory" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.IJGAPFactory \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable\&.
+.PP
+Inherited by \fBorg\&.jgap\&.impl\&.JGAPFactory\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetParameters\fP (Collection a_parameters)"
+.br
+.ti -1c
+.RI "\fBRandomGenerator\fP \fBcreateRandomGenerator\fP ()"
+.br
+.ti -1c
+.RI "\fBICloneHandler\fP \fBgetCloneHandlerFor\fP (Object a_obj, Class a_classToClone)"
+.br
+.ti -1c
+.RI "int \fBregisterCloneHandler\fP (\fBICloneHandler\fP a_cloneHandler)"
+.br
+.ti -1c
+.RI "\fBIInitializer\fP \fBgetInitializerFor\fP (Object a_obj, Class a_objToInit)"
+.br
+.ti -1c
+.RI "int \fBregisterInitializer\fP (\fBIInitializer\fP a_chromIniter)"
+.br
+.ti -1c
+.RI "void \fBsetGeneticOperatorConstraint\fP (\fBIGeneticOperatorConstraint\fP a_constraint)"
+.br
+.ti -1c
+.RI "\fBIGeneticOperatorConstraint\fP \fBgetGeneticOperatorConstraint\fP ()"
+.br
+.ti -1c
+.RI "\fBICompareToHandler\fP \fBgetCompareToHandlerFor\fP (Object a_obj, Class a_classToCompareTo)"
+.br
+.ti -1c
+.RI "int \fBregisterCompareToHandler\fP (\fBICompareToHandler\fP a_compareToHandler)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.8 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Interface for central factory, see JGAPFactory\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file IJGAPFactory\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBRandomGenerator\fP org\&.jgap\&.IJGAPFactory\&.createRandomGenerator ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+newly created instance of a \fBRandomGenerator\fP 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.JGAPFactory\fP\&.
+.SS "\fBICloneHandler\fP org\&.jgap\&.IJGAPFactory\&.getCloneHandlerFor (Objecta_obj, Classa_classToClone)"
+Retrieves a clone handler capable of clone the given class\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_obj\fP the object to clone (maybe null) 
+.br
+\fIa_classToClone\fP the class to clone an object of 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the clone handler found capable of clone the given class, or null if none registered
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.SS "\fBICompareToHandler\fP org\&.jgap\&.IJGAPFactory\&.getCompareToHandlerFor (Objecta_obj, Classa_classToCompareTo)"
+Retrieves a handler capable of comparing two instances of the given class\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_obj\fP the object to compare (maybe null) 
+.br
+\fIa_classToCompareTo\fP the class instances to compare (maybe null) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the handler found capable of comparing instances of the given class, or null if none registered
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.JGAPFactory\fP\&.
+.SS "\fBIGeneticOperatorConstraint\fP org\&.jgap\&.IJGAPFactory\&.getGeneticOperatorConstraint ()"
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.JGAPFactory\fP\&.
+.SS "\fBIInitializer\fP org\&.jgap\&.IJGAPFactory\&.getInitializerFor (Objecta_obj, Classa_objToInit)"
+Retrieves an initializer capable of initializing the Object of the given class\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_obj\fP the object to init (maybe null) 
+.br
+\fIa_objToInit\fP the object class to init 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the initializer found capable of initializing an object of the given class, or null if none registered
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.SS "int org\&.jgap\&.IJGAPFactory\&.registerCloneHandler (\fBICloneHandler\fPa_cloneHandler)"
+Registers a clone handler that could be retrieved by getCloneHandlerFor(Class)\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_cloneHandler\fP the \fBICloneHandler\fP to register 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+index of the added clone handler, needed when removeCloneHandler will be called
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.SS "int org\&.jgap\&.IJGAPFactory\&.registerCompareToHandler (\fBICompareToHandler\fPa_compareToHandler)"
+Registers a compareTo-handler that could be retrieved by getCompareToHandlerFor(Class)\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_compareToHandler\fP the \fBICompareToHandler\fP to register 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+index of the added handler, needed when removeCompareToHandler will be called
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.JGAPFactory\fP\&.
+.SS "int org\&.jgap\&.IJGAPFactory\&.registerInitializer (\fBIInitializer\fPa_chromIniter)"
+Registers an initializer that could be retrieved by getInitializerFor(Class)\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromIniter\fP the IChromosomeInitializer to register 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+index of the added initializer, needed when removeChromosomeInitializer will be called
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.SS "void org\&.jgap\&.IJGAPFactory\&.setGeneticOperatorConstraint (\fBIGeneticOperatorConstraint\fPa_constraint)"
+
+.SS "void org\&.jgap\&.IJGAPFactory\&.setParameters (Collectiona_parameters)"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.IJGAPFactory\&.CVS_REVISION = '$Revision: 1\&.8 $'\fC [static]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 23 of file IJGAPFactory\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

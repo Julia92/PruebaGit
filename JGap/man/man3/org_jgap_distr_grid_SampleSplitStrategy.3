@@ -1,0 +1,124 @@
+.TH "org.jgap.distr.grid.SampleSplitStrategy" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.grid.SampleSplitStrategy \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.distr\&.grid\&.IRequestSplitStrategy\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSampleSplitStrategy\fP (\fBConfiguration\fP a_config)"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBgetConfiguration\fP ()"
+.br
+.ti -1c
+.RI "\fBJGAPRequest\fP[] \fBsplit\fP (\fBJGAPRequest\fP a_request)  throws Exception "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBConfiguration\fP \fBm_config\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.2 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Sample implementation of \fBIRequestSplitStrategy\fP\&. Here, a request is transformed into 20 single requests, each to be computed by a worker\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file SampleSplitStrategy\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.distr\&.grid\&.SampleSplitStrategy\&.SampleSplitStrategy (\fBConfiguration\fPa_config)\fC [inline]\fP"
+
+.PP
+Definition at line 28 of file SampleSplitStrategy\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.SampleSplitStrategy\&.m_config\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBConfiguration\fP org\&.jgap\&.distr\&.grid\&.SampleSplitStrategy\&.getConfiguration ()\fC [inline]\fP"
+
+.PP
+Definition at line 32 of file SampleSplitStrategy\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.SampleSplitStrategy\&.m_config\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.SampleSplitStrategy\&.split()\&.
+.SS "\fBJGAPRequest\fP [] org\&.jgap\&.distr\&.grid\&.SampleSplitStrategy\&.split (\fBJGAPRequest\fPa_request) throws Exception\fC [inline]\fP"
+Creates 20 single requests out of one\&. The single requests are each processed by one worker at a time\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_request\fP the request to split 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+single requests to be computed by workers 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.grid\&.IRequestSplitStrategy\fP\&.
+.PP
+Definition at line 47 of file SampleSplitStrategy\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.SampleSplitStrategy\&.getConfiguration(), and org\&.jgap\&.distr\&.grid\&.JGAPRequest\&.newInstance()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.grid\&.SampleSplitStrategy\&.CVS_REVISION = '$Revision: 1\&.2 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 24 of file SampleSplitStrategy\&.java\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.distr\&.grid\&.SampleSplitStrategy\&.m_config\fC [private]\fP"
+
+.PP
+Definition at line 26 of file SampleSplitStrategy\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.SampleSplitStrategy\&.getConfiguration(), and org\&.jgap\&.distr\&.grid\&.SampleSplitStrategy\&.SampleSplitStrategy()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

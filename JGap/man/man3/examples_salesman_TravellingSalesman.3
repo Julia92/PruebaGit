@@ -1,0 +1,189 @@
+.TH "examples.salesman.TravellingSalesman" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.salesman.TravellingSalesman \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Salesman\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "IChromosome \fBcreateSampleChromosome\fP (Object a_initial_data)"
+.br
+.ti -1c
+.RI "double \fBdistance\fP (Gene a_from, Gene a_to)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final int \fBCITIES\fP = 7"
+.br
+.ti -1c
+.RI "static final int[][] \fBCITYARRAY\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.14 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Explains how to use JGAP extensions, needed to solve the task group, known as the \fIProblem of the travelling salesman\fP\&. The extensions are defined in \fBorg\&.jgap\&.impl\&.salesman\fP
+.PP
+<font size='-1'>
+.PP
+The traveling salesman problem is the following: given a finite number of 'cities' along with the cost of travel between each pair of them, find the cheapest way of visiting all the cities and returning to your starting point\&. 
+.PP
+</font>
+.PP
+Also see 
+.PD 0
+
+.IP "\(bu" 2
+J\&. Grefenstette, R\&. Gopal, R\&. Rosmaita, and D\&. Gucht\&. \fIGenetic algorithms for the traveling salesman problem\fP\&. In Proceedings of the Second International Conference on Genetice Algorithms\&. Lawrence Eribaum Associates, Mahwah, NJ, 1985\&.  
+.IP "\(bu" 2
+\fCSushil J\&. Louis & Gong Li\fP (very clear explanatory material)  
+.IP "\(bu" 2
+\fC\fITravelling salesman\fP web site\fP  
+.PP
+.PP
+This simple test and example shows how to use the Salesman class\&. The distance between the cities is assumed to be equal to the difference of the assigned numbers\&. So, the optimal solution is obviously 1 2 3 4 \&.\&.\&. n or reverse, but the system does not know this\&. To get the useful application, you need to override at least the distance function\&. Also, it is recommended to define a new type of gene, corresponding the data about your 'city'\&. For example, it can contain the city X and Y co-ordinates, used by the distance function\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 57 of file TravellingSalesman\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "IChromosome examples\&.salesman\&.TravellingSalesman\&.createSampleChromosome (Objecta_initial_data)\fC [inline]\fP"
+Create an array of the given number of integer genes\&. The first gene is always 0, this is the city where the salesman starts the journey\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_initial_data\fP ignored 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Chromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 78 of file TravellingSalesman\&.java\&.
+.PP
+References examples\&.salesman\&.TravellingSalesman\&.CITIES\&.
+.SS "double examples\&.salesman\&.TravellingSalesman\&.distance (Genea_from, Genea_to)\fC [inline]\fP"
+Distance is equal to the difference between city numbers, except the distance between the last and first cities that is equal to 1\&. In this way, we ensure that the optimal solution is 0 1 2 3 \&.\&. n - easy to check\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_from\fP first gene, representing a city 
+.br
+\fIa_to\fP second gene, representing a city 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the distance between two cities represented as genes
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 105 of file TravellingSalesman\&.java\&.
+.PP
+References examples\&.salesman\&.TravellingSalesman\&.CITYARRAY\&.
+.SS "static void examples\&.salesman\&.TravellingSalesman\&.main (String[]args)\fC [inline]\fP, \fC [static]\fP"
+Solve a sample task with the number of cities, defined in a CITIES constant\&. Print the known optimal way, sample chromosome and found solution\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP not relevant here
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 133 of file TravellingSalesman\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final int examples\&.salesman\&.TravellingSalesman\&.CITIES = 7\fC [static]\fP"
+The number of cities to visit 
+.PP
+Definition at line 63 of file TravellingSalesman\&.java\&.
+.PP
+Referenced by examples\&.salesman\&.TravellingSalesman\&.createSampleChromosome()\&.
+.SS "final int [][] examples\&.salesman\&.TravellingSalesman\&.CITYARRAY\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= new int[][] { {2, 4}, {7, 5}, {7, 11},
+      {8, 1}, {1, 6}, {5, 9}, {0, 11}
+  }
+.fi
+.PP
+Definition at line 65 of file TravellingSalesman\&.java\&.
+.PP
+Referenced by examples\&.salesman\&.TravellingSalesman\&.distance()\&.
+.SS "final String examples\&.salesman\&.TravellingSalesman\&.CVS_REVISION = '$Revision: 1\&.14 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 60 of file TravellingSalesman\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

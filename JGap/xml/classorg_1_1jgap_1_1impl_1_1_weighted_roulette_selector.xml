@@ -1,0 +1,767 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector" kind="class" prot="public">
+    <compoundname>org::jgap::impl::WeightedRouletteSelector</compoundname>
+    <basecompoundref refid="classorg_1_1jgap_1_1_natural_selector_ext" prot="public" virt="non-virtual">org.jgap.NaturalSelectorExt</basecompoundref>
+    <basecompoundref refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable" prot="public" virt="non-virtual">org.jgap.util.ICloneable</basecompoundref>
+    <innerclass refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1_1_weighted_roulette_sel_config" prot="package">org::jgap::impl::WeightedRouletteSelector::WeightedRouletteSelConfig</innerclass>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1ab462052fe73bae7036fa4f8625d5a2fc" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.impl.WeightedRouletteSelector.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.44 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="36" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1aa0e65ef8a77636cbea4ece7a3bcacc71" prot="private" static="yes" mutable="no">
+        <type>final double</type>
+        <definition>final double org.jgap.impl.WeightedRouletteSelector.DELTA</definition>
+        <argsstring></argsstring>
+        <name>DELTA</name>
+        <initializer>= 0.000001d</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="39" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a7eabf165a70445ab131f7fcc6b4aa3fd" compoundref="_weighted_roulette_selector_8java" startline="252" endline="325">org.jgap.impl.WeightedRouletteSelector.spinWheel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a7ec7736a02e3288af740a2a129ab6386" prot="private" static="yes" mutable="no">
+        <type>final BigDecimal</type>
+        <definition>final BigDecimal org.jgap.impl.WeightedRouletteSelector.ZERO_BIG_DECIMAL</definition>
+        <argsstring></argsstring>
+        <name>ZERO_BIG_DECIMAL</name>
+        <initializer>= new BigDecimal(0.0d)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="41" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a8d866890cb4edf93557c733ebe426797" compoundref="_weighted_roulette_selector_8java" startline="344" endline="377">org.jgap.impl.WeightedRouletteSelector.scaleFitnessValues</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1aab723231155bb89882434f47f092a55a" prot="private" static="no" mutable="no">
+        <type>THashMap</type>
+        <definition>THashMap org.jgap.impl.WeightedRouletteSelector.m_wheel</definition>
+        <argsstring></argsstring>
+        <name>m_wheel</name>
+        <initializer>= new THashMap()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Represents the &quot;roulette wheel.&quot; Each key in the Map is a <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> and each value is an instance of the SlotCounter inner class, which keeps track of how many slots on the wheel each <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> is occupying. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="48" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="48" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a9159512255d11e69543387cd3a155a31" compoundref="_weighted_roulette_selector_8java" startline="106" endline="140">org.jgap.impl.WeightedRouletteSelector.add</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a6d11f3e1551fbee391ce80e3d643b14e" compoundref="_weighted_roulette_selector_8java" startline="419" endline="430">org.jgap.impl.WeightedRouletteSelector.clone</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a0274429675772b2b81fb162b2914a946" compoundref="_weighted_roulette_selector_8java" startline="432" endline="453">org.jgap.impl.WeightedRouletteSelector.equals</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a2e232452c43c7625bea03cb4799500d8" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double org.jgap.impl.WeightedRouletteSelector.m_totalNumberOfUsedSlots</definition>
+        <argsstring></argsstring>
+        <name>m_totalNumberOfUsedSlots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Keeps track of the total number of slots that are in use on the roulette wheel. This is equal to the combined fitness values of all <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> instances that have been added to this wheel. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="55" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="55" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a22f11caa1cdab23d1e61144bdcd70798" compoundref="_weighted_roulette_selector_8java" startline="333" endline="342">org.jgap.impl.WeightedRouletteSelector.empty</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a0274429675772b2b81fb162b2914a946" compoundref="_weighted_roulette_selector_8java" startline="432" endline="453">org.jgap.impl.WeightedRouletteSelector.equals</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a8d501289de36fcd27de2352ce8f6404a" compoundref="_weighted_roulette_selector_8java" startline="158" endline="231">org.jgap.impl.WeightedRouletteSelector.selectChromosomes</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a7eabf165a70445ab131f7fcc6b4aa3fd" compoundref="_weighted_roulette_selector_8java" startline="252" endline="325">org.jgap.impl.WeightedRouletteSelector.spinWheel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1ab3dc747b69b4d746dd6b0e1c8556dcdd" prot="private" static="no" mutable="no">
+        <type>transient <ref refid="classorg_1_1jgap_1_1impl_1_1_pool" kindref="compound">Pool</ref></type>
+        <definition>transient Pool org.jgap.impl.WeightedRouletteSelector.m_counterPool</definition>
+        <argsstring></argsstring>
+        <name>m_counterPool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An internal pool in which discarded SlotCounter instances can be stored so that they can be reused over and over again, thus saving memory and the overhead of constructing new ones each time. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="62" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="62" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a9159512255d11e69543387cd3a155a31" compoundref="_weighted_roulette_selector_8java" startline="106" endline="140">org.jgap.impl.WeightedRouletteSelector.add</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a0274429675772b2b81fb162b2914a946" compoundref="_weighted_roulette_selector_8java" startline="432" endline="453">org.jgap.impl.WeightedRouletteSelector.equals</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1af7ea72c2cd321272658318051d800d38" compoundref="_weighted_roulette_selector_8java" startline="90" endline="95">org.jgap.impl.WeightedRouletteSelector.WeightedRouletteSelector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1af9b7d0d34b65bf6e6a3841f9956f9cb5" prot="private" static="no" mutable="no">
+        <type>WeightedRouletteSelConfig</type>
+        <definition>WeightedRouletteSelConfig org.jgap.impl.WeightedRouletteSelector.m_config</definition>
+        <argsstring></argsstring>
+        <name>m_config</name>
+        <initializer>= new WeightedRouletteSelConfig()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="64" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="65" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a0274429675772b2b81fb162b2914a946" compoundref="_weighted_roulette_selector_8java" startline="432" endline="453">org.jgap.impl.WeightedRouletteSelector.equals</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1ad344e96dc51c77d065e55aebb0b93882" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.WeightedRouletteSelector.WeightedRouletteSelector</definition>
+        <argsstring>()</argsstring>
+        <name>WeightedRouletteSelector</name>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor.</para><para>Attention: The configuration used is the one set with the static method Genotype.setConfiguration.</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="77" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="77" bodyend="80"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a6d11f3e1551fbee391ce80e3d643b14e" compoundref="_weighted_roulette_selector_8java" startline="419" endline="430">org.jgap.impl.WeightedRouletteSelector.clone</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a0274429675772b2b81fb162b2914a946" compoundref="_weighted_roulette_selector_8java" startline="432" endline="453">org.jgap.impl.WeightedRouletteSelector.equals</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1af7ea72c2cd321272658318051d800d38" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.WeightedRouletteSelector.WeightedRouletteSelector</definition>
+        <argsstring>(Configuration a_config)</argsstring>
+        <name>WeightedRouletteSelector</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_config</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="90" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="90" bodyend="95"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1ab3dc747b69b4d746dd6b0e1c8556dcdd" compoundref="_weighted_roulette_selector_8java" startline="62">org.jgap.impl.WeightedRouletteSelector.m_counterPool</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a8d501289de36fcd27de2352ce8f6404a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized void</type>
+        <definition>synchronized void org.jgap.impl.WeightedRouletteSelector.selectChromosomes</definition>
+        <argsstring>(int a_howManyToSelect, Population a_to_pop)</argsstring>
+        <name>selectChromosomes</name>
+        <param>
+          <type>int</type>
+          <declname>a_howManyToSelect</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_to_pop</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Select a given number of Chromosomes from the pool that will move on to the next generation population. This selection should be guided by the fitness values, but fitness should be treated as a statistical probability of survival, not as the sole determining factor. In other words, Chromosomes with higher fitness values should be more likely to be selected than those with lower fitness values, but it should not be guaranteed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_howManyToSelect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of Chromosomes to select </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_to_pop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the population the Chromosomes will be added to</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="158" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="158" bodyend="231"/>
+        <references refid="classorg_1_1jgap_1_1_population_1a1c07a36de9973bee29421a44f99b8319" compoundref="_population_8java" startline="406" endline="408">org.jgap.Population.contains</references>
+        <references refid="classorg_1_1jgap_1_1_natural_selector_1a70fc78d093b52685eae39ffdb30b9ef4" compoundref="_natural_selector_8java" startline="68" endline="70">org.jgap.NaturalSelector.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1_natural_selector_1a97b709b2715d76b87b3e15da6a22d5f8" compoundref="_natural_selector_8java" startline="33">org.jgap.NaturalSelector.m_monitorActive</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a2e232452c43c7625bea03cb4799500d8" compoundref="_weighted_roulette_selector_8java" startline="55">org.jgap.impl.WeightedRouletteSelector.m_totalNumberOfUsedSlots</references>
+        <references refid="interfaceorg_1_1jgap_1_1_i_handler_1a60199862000df04a4b2491d6d08f2f2c">org.jgap.IHandler.perform</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a8d866890cb4edf93557c733ebe426797" compoundref="_weighted_roulette_selector_8java" startline="344" endline="377">org.jgap.impl.WeightedRouletteSelector.scaleFitnessValues</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a7eabf165a70445ab131f7fcc6b4aa3fd" compoundref="_weighted_roulette_selector_8java" startline="252" endline="325">org.jgap.impl.WeightedRouletteSelector.spinWheel</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a22f11caa1cdab23d1e61144bdcd70798" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized void</type>
+        <definition>synchronized void org.jgap.impl.WeightedRouletteSelector.empty</definition>
+        <argsstring>()</argsstring>
+        <name>empty</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_natural_selector_1a824307b8be94282a3dfd03aaa6531139">empty</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Empty out the working pool of Chromosomes.</para><para><simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="333" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="333" bodyend="342"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a2e232452c43c7625bea03cb4799500d8" compoundref="_weighted_roulette_selector_8java" startline="55">org.jgap.impl.WeightedRouletteSelector.m_totalNumberOfUsedSlots</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a077b4c36589db7f0a9eee47a0c281017" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.WeightedRouletteSelector.returnsUniqueChromosomes</definition>
+        <argsstring>()</argsstring>
+        <name>returnsUniqueChromosomes</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_natural_selector_1a7a6e97dab3548d73a829c9b998df377a">returnsUniqueChromosomes</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>always false as some <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>&apos;s could be returnd multiple times</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="385" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="385" bodyend="387"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a48b8de4edf53d90dcfb9cb11d6e6ded2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.WeightedRouletteSelector.setDoubletteChromosomesAllowed</definition>
+        <argsstring>(final boolean a_doublettesAllowed)</argsstring>
+        <name>setDoubletteChromosomesAllowed</name>
+        <param>
+          <type>final boolean</type>
+          <declname>a_doublettesAllowed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Not supported by this selector! Please do not use it.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_doublettesAllowed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>do not use</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="397" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="397" bodyend="401"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1af508701fcc8e9cce41f6f68b674dee65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.WeightedRouletteSelector.getDoubletteChromosomesAllowed</definition>
+        <argsstring>()</argsstring>
+        <name>getDoubletteChromosomesAllowed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>TRUE: doublette chromosomes allowed to be added by the selector</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="409" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="409" bodyend="411"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a7eabf165a70445ab131f7fcc6b4aa3fd" compoundref="_weighted_roulette_selector_8java" startline="252" endline="325">org.jgap.impl.WeightedRouletteSelector.spinWheel</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a6d11f3e1551fbee391ce80e3d643b14e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.impl.WeightedRouletteSelector.clone</definition>
+        <argsstring>()</argsstring>
+        <name>clone</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable_1aa7e7d62077e6428ad7904932b1b4f7d5">clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>deep clone of this instance</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="419" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="419" bodyend="430"/>
+        <references refid="classorg_1_1jgap_1_1_natural_selector_1a70fc78d093b52685eae39ffdb30b9ef4" compoundref="_natural_selector_8java" startline="68" endline="70">org.jgap.NaturalSelector.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1aab723231155bb89882434f47f092a55a" compoundref="_weighted_roulette_selector_8java" startline="48">org.jgap.impl.WeightedRouletteSelector.m_wheel</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1ad344e96dc51c77d065e55aebb0b93882" compoundref="_weighted_roulette_selector_8java" startline="77" endline="80">org.jgap.impl.WeightedRouletteSelector.WeightedRouletteSelector</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a0274429675772b2b81fb162b2914a946" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.WeightedRouletteSelector.equals</definition>
+        <argsstring>(Object o)</argsstring>
+        <name>equals</name>
+        <param>
+          <type>Object</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="432" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="432" bodyend="453"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1af9b7d0d34b65bf6e6a3841f9956f9cb5" compoundref="_weighted_roulette_selector_8java" startline="65">org.jgap.impl.WeightedRouletteSelector.m_config</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1ab3dc747b69b4d746dd6b0e1c8556dcdd" compoundref="_weighted_roulette_selector_8java" startline="62">org.jgap.impl.WeightedRouletteSelector.m_counterPool</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a2e232452c43c7625bea03cb4799500d8" compoundref="_weighted_roulette_selector_8java" startline="55">org.jgap.impl.WeightedRouletteSelector.m_totalNumberOfUsedSlots</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1aab723231155bb89882434f47f092a55a" compoundref="_weighted_roulette_selector_8java" startline="48">org.jgap.impl.WeightedRouletteSelector.m_wheel</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1ad344e96dc51c77d065e55aebb0b93882" compoundref="_weighted_roulette_selector_8java" startline="77" endline="80">org.jgap.impl.WeightedRouletteSelector.WeightedRouletteSelector</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a9159512255d11e69543387cd3a155a31" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>synchronized void</type>
+        <definition>synchronized void org.jgap.impl.WeightedRouletteSelector.add</definition>
+        <argsstring>(final IChromosome a_chromosomeToAdd)</argsstring>
+        <name>add</name>
+        <reimplements refid="classorg_1_1jgap_1_1_natural_selector_ext_1ab42019c92f31cc0c859202b0ae3b4e96">add</reimplements>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+          <declname>a_chromosomeToAdd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a chromosome instance to this selector&apos;s working pool of chromosomes.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_chromosomeToAdd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the chromosom to add to the pool</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="106" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="106" bodyend="140"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_pool_1a84ab7ce249536f638b0ec873f47cd72a" compoundref="_pool_8java" startline="64" endline="76">org.jgap.impl.Pool.acquirePooledObject</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1ab3dc747b69b4d746dd6b0e1c8556dcdd" compoundref="_weighted_roulette_selector_8java" startline="62">org.jgap.impl.WeightedRouletteSelector.m_counterPool</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1aab723231155bb89882434f47f092a55a" compoundref="_weighted_roulette_selector_8java" startline="48">org.jgap.impl.WeightedRouletteSelector.m_wheel</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a7eabf165a70445ab131f7fcc6b4aa3fd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+        <definition>IChromosome org.jgap.impl.WeightedRouletteSelector.spinWheel</definition>
+        <argsstring>(final RandomGenerator a_generator, final double[] a_fitnessValues, double[] a_counterValues, final IChromosome[] a_chromosomes)</argsstring>
+        <name>spinWheel</name>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_random_generator" kindref="compound">RandomGenerator</ref></type>
+          <declname>a_generator</declname>
+        </param>
+        <param>
+          <type>final double[]</type>
+          <declname>a_fitnessValues</declname>
+        </param>
+        <param>
+          <type>double[]</type>
+          <declname>a_counterValues</declname>
+        </param>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref>[]</type>
+          <declname>a_chromosomes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method &quot;spins&quot; the wheel and returns the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> that is &quot;landed upon.&quot; Each time a chromosome is selected, one instance of it is removed from the wheel so that it cannot be selected again.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_generator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the random number generator to be used during the spinning process </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_fitnessValues</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an array of fitness values of the respective Chromosomes </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_counterValues</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an array of total counter values of the respective Chromosomes </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_chromosomes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the respective <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> instances from which selection is to occur </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>selected <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> from the roulette wheel</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="252" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="252" bodyend="325"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1aa0e65ef8a77636cbea4ece7a3bcacc71" compoundref="_weighted_roulette_selector_8java" startline="39">org.jgap.impl.WeightedRouletteSelector.DELTA</references>
+        <references refid="classorg_1_1jgap_1_1_natural_selector_1a70fc78d093b52685eae39ffdb30b9ef4" compoundref="_natural_selector_8java" startline="68" endline="70">org.jgap.NaturalSelector.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1af508701fcc8e9cce41f6f68b674dee65" compoundref="_weighted_roulette_selector_8java" startline="409" endline="411">org.jgap.impl.WeightedRouletteSelector.getDoubletteChromosomesAllowed</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a2e232452c43c7625bea03cb4799500d8" compoundref="_weighted_roulette_selector_8java" startline="55">org.jgap.impl.WeightedRouletteSelector.m_totalNumberOfUsedSlots</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a8d501289de36fcd27de2352ce8f6404a" compoundref="_weighted_roulette_selector_8java" startline="158" endline="231">org.jgap.impl.WeightedRouletteSelector.selectChromosomes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a8d866890cb4edf93557c733ebe426797" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.WeightedRouletteSelector.scaleFitnessValues</definition>
+        <argsstring>()</argsstring>
+        <name>scaleFitnessValues</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="344" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="344" bodyend="377"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a7ec7736a02e3288af740a2a129ab6386" compoundref="_weighted_roulette_selector_8java" startline="41">org.jgap.impl.WeightedRouletteSelector.ZERO_BIG_DECIMAL</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a8d501289de36fcd27de2352ce8f6404a" compoundref="_weighted_roulette_selector_8java" startline="158" endline="231">org.jgap.impl.WeightedRouletteSelector.selectChromosomes</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A basic implementation of <ref refid="classorg_1_1jgap_1_1_natural_selector" kindref="compound">NaturalSelector</ref> that models a roulette wheel. When a <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> is added, it gets a number of &quot;slots&quot; on the wheel equal to its fitness value. When the select method is invoked, the wheel is &quot;spun&quot; and the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> occupying the spot on which it lands is selected. Then the wheel is spun again and again until the requested number of Chromosomes have been selected. Since Chromosomes with higher fitness values get more slots on the wheel, there&apos;s a higher statistical probability that they&apos;ll be chosen, but it&apos;s not guaranteed.</para><para><simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="18938">
+        <label>org.jgap.NaturalSelector</label>
+        <link refid="classorg_1_1jgap_1_1_natural_selector"/>
+        <childnode refid="18939" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18941" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18936">
+        <label>org.jgap.impl.WeightedRouletteSelector</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector"/>
+        <childnode refid="18937" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18942" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18940">
+        <label>Serializable</label>
+      </node>
+      <node id="18942">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="18943" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18939">
+        <label>org.jgap.INaturalSelector</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_natural_selector"/>
+        <childnode refid="18940" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18943">
+        <label>Cloneable</label>
+      </node>
+      <node id="18937">
+        <label>org.jgap.NaturalSelectorExt</label>
+        <link refid="classorg_1_1jgap_1_1_natural_selector_ext"/>
+        <childnode refid="18938" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18941">
+        <label>Configurable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="18959">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="18969">
+        <label>org.jgap.impl.Pool</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_pool"/>
+        <childnode refid="18964" relation="usage">
+          <edgelabel>m_pooledObjects</edgelabel>
+        </childnode>
+      </node>
+      <node id="18946">
+        <label>org.jgap.NaturalSelector</label>
+        <link refid="classorg_1_1jgap_1_1_natural_selector"/>
+        <childnode refid="18947" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18949" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18950" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+      </node>
+      <node id="18967">
+        <label>List&lt; org.jgap.IChromosome &gt;</label>
+      </node>
+      <node id="18964">
+        <label>List</label>
+      </node>
+      <node id="18963">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="18948" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18951" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18944">
+        <label>org.jgap.impl.WeightedRouletteSelector</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector"/>
+        <childnode refid="18945" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18951" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18968" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="18969" relation="usage">
+          <edgelabel>m_counterPool</edgelabel>
+        </childnode>
+      </node>
+      <node id="18960">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="18948" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18948">
+        <label>Serializable</label>
+      </node>
+      <node id="18953">
+        <label>Comparable</label>
+      </node>
+      <node id="18951">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="18952" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18957">
+        <label>org.jgap.FitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_fitness_evaluator"/>
+        <childnode refid="18948" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18947">
+        <label>org.jgap.INaturalSelector</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_natural_selector"/>
+        <childnode refid="18948" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18961">
+        <label>org.jgap.BulkFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_bulk_fitness_function"/>
+        <childnode refid="18948" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18951" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18952">
+        <label>Cloneable</label>
+      </node>
+      <node id="18966">
+        <label>org.jgap.IPersistentRepresentation</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_persistent_representation"/>
+      </node>
+      <node id="18955">
+        <label>org.jgap.IJGAPFactory</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_j_g_a_p_factory"/>
+        <childnode refid="18948" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18962">
+        <label>org.jgap.Configuration.ConfigurationConfigurable</label>
+        <link refid="classorg_1_1jgap_1_1_configuration_1_1_configuration_configurable"/>
+        <childnode refid="18948" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18965">
+        <label>org.jgap.Population</label>
+        <link refid="classorg_1_1jgap_1_1_population"/>
+        <childnode refid="18948" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18951" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18966" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18967" relation="usage">
+          <edgelabel>m_chromosomes</edgelabel>
+        </childnode>
+        <childnode refid="18950" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="18958" relation="usage">
+          <edgelabel>m_fittestChromosome</edgelabel>
+        </childnode>
+      </node>
+      <node id="18945">
+        <label>org.jgap.NaturalSelectorExt</label>
+        <link refid="classorg_1_1jgap_1_1_natural_selector_ext"/>
+        <childnode refid="18946" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18965" relation="usage">
+          <edgelabel>m_to_pop</edgelabel>
+        </childnode>
+      </node>
+      <node id="18954">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="18951" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18948" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18953" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18958">
+        <label>org.jgap.IChromosome</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome"/>
+        <childnode refid="18953" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18951" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18948" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18959" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18968">
+        <label>org.jgap.impl.WeightedRouletteSelector.WeightedRouletteSelConfig</label>
+        <childnode refid="18948" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18950">
+        <label>org.jgap.Configuration</label>
+        <link refid="classorg_1_1jgap_1_1_configuration"/>
+        <childnode refid="18949" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18948" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18951" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18953" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18954" relation="usage">
+          <edgelabel>m_breeder</edgelabel>
+        </childnode>
+        <childnode refid="18955" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="18956" relation="usage">
+          <edgelabel>m_chromosomePool</edgelabel>
+        </childnode>
+        <childnode refid="18957" relation="usage">
+          <edgelabel>m_fitnessEvaluator</edgelabel>
+        </childnode>
+        <childnode refid="18958" relation="usage">
+          <edgelabel>m_sampleChromosome</edgelabel>
+        </childnode>
+        <childnode refid="18960" relation="usage">
+          <edgelabel>m_randomGenerator</edgelabel>
+        </childnode>
+        <childnode refid="18961" relation="usage">
+          <edgelabel>m_bulkObjectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="18962" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="18963" relation="usage">
+          <edgelabel>m_objectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="18964" relation="usage">
+          <edgelabel>m_geneticOperators</edgelabel>
+        </childnode>
+      </node>
+      <node id="18956">
+        <label>org.jgap.IChromosomePool</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool"/>
+      </node>
+      <node id="18949">
+        <label>Configurable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="34" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="33" bodyend="462"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a9159512255d11e69543387cd3a155a31" prot="protected" virt="virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>add</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1a889f35e483ad2b7590a4af17771b7ffa" prot="protected" virt="pure-virtual" ambiguityscope="org::jgap::NaturalSelector."><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>add</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a6d11f3e1551fbee391ce80e3d643b14e" prot="public" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>clone</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1ab462052fe73bae7036fa4f8625d5a2fc" prot="private" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1aa0e65ef8a77636cbea4ece7a3bcacc71" prot="private" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>DELTA</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a22f11caa1cdab23d1e61144bdcd70798" prot="public" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>empty</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a0274429675772b2b81fb162b2914a946" prot="public" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>equals</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1a70fc78d093b52685eae39ffdb30b9ef4" prot="public" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>getConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1af508701fcc8e9cce41f6f68b674dee65" prot="public" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>getDoubletteChromosomesAllowed</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1a2463922ff619e3fdb7273afa25119cfa" prot="protected" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>init</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1af9b7d0d34b65bf6e6a3841f9956f9cb5" prot="private" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>m_config</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1ab3dc747b69b4d746dd6b0e1c8556dcdd" prot="private" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>m_counterPool</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1a0ecc4abad2b9f2235e686113913dec17" prot="protected" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>m_monitor</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1a97b709b2715d76b87b3e15da6a22d5f8" prot="protected" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>m_monitorActive</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a2e232452c43c7625bea03cb4799500d8" prot="private" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>m_totalNumberOfUsedSlots</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1aab723231155bb89882434f47f092a55a" prot="private" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>m_wheel</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1a3eb9d0041ece6e97945fa2a67cbef9a4" prot="public" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>NaturalSelector</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1abdf8ec5961eae78b4ab7c5e242a32d32" prot="public" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>NaturalSelector</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1a07fbce4646a51d8dbac653f85aa2dd07" prot="public" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>NaturalSelectorExt</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1ae56adaa72d97b09f44e29832db0913f8" prot="public" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>NaturalSelectorExt</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a077b4c36589db7f0a9eee47a0c281017" prot="public" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>returnsUniqueChromosomes</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a8d866890cb4edf93557c733ebe426797" prot="private" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>scaleFitnessValues</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1ab7eac27131f30abd83bd1eec964be8af" prot="public" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>select</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_natural_selector_1a621ca08e2f66866178214093ca4412fd" prot="public" virt="non-virtual" ambiguityscope="org::jgap::NaturalSelector."><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>select</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1ad330fe572e650caf3549d5896beb40a9" prot="protected" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>selectChromosome</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a8d501289de36fcd27de2352ce8f6404a" prot="public" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>selectChromosomes</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1a86725d343805cef081f381b51423ce2b" prot="protected" virt="pure-virtual" ambiguityscope="org::jgap::NaturalSelectorExt."><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>selectChromosomes</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a48b8de4edf53d90dcfb9cb11d6e6ded2" prot="public" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>setDoubletteChromosomesAllowed</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a7eabf165a70445ab131f7fcc6b4aa3fd" prot="private" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>spinWheel</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1ad344e96dc51c77d065e55aebb0b93882" prot="public" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>WeightedRouletteSelector</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1af7ea72c2cd321272658318051d800d38" prot="public" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>WeightedRouletteSelector</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a7ec7736a02e3288af740a2a129ab6386" prot="private" virt="non-virtual"><scope>org::jgap::impl::WeightedRouletteSelector</scope><name>ZERO_BIG_DECIMAL</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,173 @@
+.TH "org.jgap.distr.grid.JGAPWorkers" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.grid.JGAPWorkers \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBJGAPWorkers\fP (String[] args)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBgetNeededFiles\fP (GridNodeWorkerConfig a_config)"
+.br
+.ti -1c
+.RI "\fBJGAPWorkers\fP (GridNodeWorkerConfig a_config)  throws Exception "
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)  throws Exception "
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBstartWork\fP (GridNodeWorkerConfig a_config)  throws Exception "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Class \fBm_workerClass\fP"
+.br
+.ti -1c
+.RI "Class \fBm_workerFeedbackClaas\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.6 $'"
+.br
+.ti -1c
+.RI "static final String \fBclassName\fP = JGAPWorkers\&.class\&.getName()"
+.br
+.ti -1c
+.RI "static Logger \fBlog\fP = Logger\&.getLogger(\fBclassName\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A worker receives work units from a \fBJGAPServer\fP and sends back computed solutions to a \fBJGAPServer\fP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file JGAPWorkers\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.distr\&.grid\&.JGAPWorkers\&.JGAPWorkers (String[]args) throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 37 of file JGAPWorkers\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.JGAPWorkers\&.getNeededFiles(), and org\&.jgap\&.distr\&.grid\&.JGAPWorkers\&.startWork()\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.JGAPWorkers\&.main()\&.
+.SS "org\&.jgap\&.distr\&.grid\&.JGAPWorkers\&.JGAPWorkers (GridNodeWorkerConfiga_config) throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 66 of file JGAPWorkers\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.JGAPWorkers\&.startWork()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.distr\&.grid\&.JGAPWorkers\&.getNeededFiles (GridNodeWorkerConfiga_config)\fC [inline]\fP"
+Get jar and other files needed for computation from server \&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP GridNodeWorkerConfig 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definition at line 55 of file JGAPWorkers\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.JGAPWorkers\&.JGAPWorkers()\&.
+.SS "static void org\&.jgap\&.distr\&.grid\&.JGAPWorkers\&.main (String[]args) throws Exception\fC [inline]\fP, \fC [static]\fP"
+Convenience method to start a worker or multiple instances of it\&. For possible parameters see method parseCommonOptions in class org\&.homedns\&.dade\&.jcgrid\&.cmd\&.MainCmd\&. The most important parameters are: -n <session name='' without='' spaces>=''> -s <server ip='' address>=''> -d <working directory>=''> -c <number of='' workers='' to='' run>=''>
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP see above 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 119 of file JGAPWorkers\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.JGAPWorkers\&.JGAPWorkers()\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.JGAPWorkers\&.startWork (GridNodeWorkerConfiga_config) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 71 of file JGAPWorkers\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.JGAPWorkers\&.JGAPWorkers()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.grid\&.JGAPWorkers\&.className = JGAPWorkers\&.class\&.getName()\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 33 of file JGAPWorkers\&.java\&.
+.SS "final String org\&.jgap\&.distr\&.grid\&.JGAPWorkers\&.CVS_REVISION = '$Revision: 1\&.6 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 27 of file JGAPWorkers\&.java\&.
+.SS "Logger org\&.jgap\&.distr\&.grid\&.JGAPWorkers\&.log = Logger\&.getLogger(\fBclassName\fP)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 35 of file JGAPWorkers\&.java\&.
+.SS "Class org\&.jgap\&.distr\&.grid\&.JGAPWorkers\&.m_workerClass\fC [private]\fP"
+
+.PP
+Definition at line 29 of file JGAPWorkers\&.java\&.
+.SS "Class org\&.jgap\&.distr\&.grid\&.JGAPWorkers\&.m_workerFeedbackClaas\fC [private]\fP"
+
+.PP
+Definition at line 31 of file JGAPWorkers\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

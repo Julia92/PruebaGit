@@ -1,0 +1,83 @@
+.TH "examples.simpleBoolean.MaxFunction" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.simpleBoolean.MaxFunction \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits FitnessFunction\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "double \fBevaluate\fP (IChromosome a_subject)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.6 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Fitness function for our example\&. See evaluate(\&.\&.\&.) method for details\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file MaxFunction\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "double examples\&.simpleBoolean\&.MaxFunction\&.evaluate (IChromosomea_subject)\fC [inline]\fP"
+This example implementation calculates the fitness value of Chromosomes using BooleanAllele implementations\&. It simply returns a fitness value equal to the numeric binary value of the bits\&. In other words, it optimizes the numeric value of the genes interpreted as bits\&. It should be noted that, for clarity, this function literally returns the binary value of the Chromosome's genes interpreted as bits\&. However, it would be better to return the value raised to a fixed power to exaggerate the difference between the higher values\&. For example, the difference between 254 and 255 is only about \&.04%, which isn't much incentive for the selector to choose 255 over 254\&. However, if you square the values, you then get 64516 and 65025, which is a difference of 0\&.8% -- twice as much and, therefore, twice the incentive to select the higher value\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_subject\fP the Chromosome to be evaluated 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+defect rate of our problem
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 49 of file MaxFunction\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.simpleBoolean\&.MaxFunction\&.CVS_REVISION = '$Revision: 1\&.6 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file MaxFunction\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

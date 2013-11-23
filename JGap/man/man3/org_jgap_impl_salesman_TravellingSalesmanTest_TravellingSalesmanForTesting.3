@@ -1,0 +1,119 @@
+.TH "org.jgap.impl.salesman.TravellingSalesmanTest.TravellingSalesmanForTesting" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.salesman.TravellingSalesmanTest.TravellingSalesmanForTesting \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.impl\&.salesman\&.Salesman\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIChromosome\fP \fBcreateSampleChromosome\fP (Object a_initial_data)"
+.br
+.ti -1c
+.RI "double \fBdistance\fP (\fBGene\fP a_from, \fBGene\fP a_to)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final int \fBCITIES\fP = 7"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Explains how to use JGap extensions, needed to solve the task group, known as the \fIProblem of the travelling salesman\fP\&. The extensions are defined in \fBorg\&.jgap\&.impl\&.salesman\fP
+.PP
+<font size='-1'>
+.PP
+The traveling salesman problem is the following: given a finite number of 'cities' along with the cost of travel between each pair of them, find the cheapest way of visiting all the cities and returning to your starting point\&. 
+.PP
+</font>
+.PP
+See 
+.PD 0
+
+.IP "\(bu" 2
+J\&. Grefenstette, R\&. Gopal, R\&. Rosmaita, and D\&. Gucht\&. \fIGenetic algorithms for the traveling salesman problem\fP\&. In Proceedings of the Second International Conference on Genetic Algorithms\&. Lawrence Eribaum Associates, Mahwah, NJ, 1985\&.  
+.IP "\(bu" 2
+\fCSushil J\&. Louis & Gong Li\fP (very clear explanatory material)  
+.IP "\(bu" 2
+\fC\fITravelling salesman\fP web site\fP  
+.PP
+.PP
+This simple test and example shows how to use the \fBSalesman\fP class\&. The distance between the cities is assumed to be equal to the difference of the assigned numbers\&. So, the optimal solution is obviously 1 2 3 4 \&.\&.\&. n or reverse, but the system does not know this\&. To get the useful application, you need to override at least the distance function\&. Also, it is recommended to define a new type of gene, corresponding the data about your 'city'\&. For example, it can contain the city X and Y co-ordinates, used by the distance function\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+\fBVersion:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 123 of file TravellingSalesmanTest\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBIChromosome\fP org\&.jgap\&.impl\&.salesman\&.TravellingSalesmanTest\&.TravellingSalesmanForTesting\&.createSampleChromosome (Objecta_initial_data)\fC [inline]\fP, \fC [virtual]\fP"
+Create an array of the given number of integer genes\&. The first gene is always 0, this is a city where the salesman starts the journey\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_initial_data\fP not needed here 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+new chromosome 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.impl\&.salesman\&.Salesman\fP\&.
+.PP
+Definition at line 135 of file TravellingSalesmanTest\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.salesman\&.TravellingSalesmanTest\&.TravellingSalesmanForTesting\&.CITIES, and org\&.jgap\&.impl\&.salesman\&.Salesman\&.getConfiguration()\&.
+.SS "double org\&.jgap\&.impl\&.salesman\&.TravellingSalesmanTest\&.TravellingSalesmanForTesting\&.distance (\fBGene\fPa_from, \fBGene\fPa_to)\fC [inline]\fP, \fC [virtual]\fP"
+Distance is equal to the difference between city numbers, except the distance between the last and first cities that is equal to 1\&. In this way, we ensure that the optimal soultion is 0 1 2 3 \&.\&. n - easy to check\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_from\fP \fBGene\fP 
+.br
+\fIa_to\fP \fBGene\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+distance betwen cities 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.impl\&.salesman\&.Salesman\fP\&.
+.PP
+Definition at line 158 of file TravellingSalesmanTest\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.salesman\&.TravellingSalesmanTest\&.TravellingSalesmanForTesting\&.CITIES\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final int org\&.jgap\&.impl\&.salesman\&.TravellingSalesmanTest\&.TravellingSalesmanForTesting\&.CITIES = 7\fC [static]\fP"
+The number of cities to visit, 7 by default\&. 
+.PP
+Definition at line 126 of file TravellingSalesmanTest\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.salesman\&.TravellingSalesmanTest\&.TravellingSalesmanForTesting\&.createSampleChromosome(), and org\&.jgap\&.impl\&.salesman\&.TravellingSalesmanTest\&.TravellingSalesmanForTesting\&.distance()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

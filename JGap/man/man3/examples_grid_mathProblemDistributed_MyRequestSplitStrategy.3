@@ -1,0 +1,121 @@
+.TH "examples.grid.mathProblemDistributed.MyRequestSplitStrategy" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.grid.mathProblemDistributed.MyRequestSplitStrategy \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits IRequestSplitStrategyGP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMyRequestSplitStrategy\fP (\fBGPConfiguration\fP a_config)"
+.br
+.ti -1c
+.RI "\fBGPConfiguration\fP \fBgetConfiguration\fP ()"
+.br
+.ti -1c
+.RI "JGAPRequestGP[] \fBsplit\fP (JGAPRequestGP a_request)  throws Exception "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBGPConfiguration\fP \fBm_config\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.7 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Sample implementation of IRequestSplitStrategy to split a single request into multiple requests for workers\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file MyRequestSplitStrategy\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.grid\&.mathProblemDistributed\&.MyRequestSplitStrategy\&.MyRequestSplitStrategy (\fBGPConfiguration\fPa_config)\fC [inline]\fP"
+
+.PP
+Definition at line 31 of file MyRequestSplitStrategy\&.java\&.
+.PP
+References examples\&.grid\&.mathProblemDistributed\&.MyRequestSplitStrategy\&.m_config\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBGPConfiguration\fP examples\&.grid\&.mathProblemDistributed\&.MyRequestSplitStrategy\&.getConfiguration ()\fC [inline]\fP"
+
+.PP
+Definition at line 35 of file MyRequestSplitStrategy\&.java\&.
+.PP
+References examples\&.grid\&.mathProblemDistributed\&.MyRequestSplitStrategy\&.m_config\&.
+.PP
+Referenced by examples\&.grid\&.mathProblemDistributed\&.MyRequestSplitStrategy\&.split()\&.
+.SS "JGAPRequestGP [] examples\&.grid\&.mathProblemDistributed\&.MyRequestSplitStrategy\&.split (JGAPRequestGPa_request) throws Exception\fC [inline]\fP"
+Creates single requests to be sent to workers\&. Here, each request consists of a number of chromosome from the original population (determined here) plus the rest of the chromosomes to be initialized randomly at each worker\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_request\fP the request to split 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+single requests to be computed by workers 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file MyRequestSplitStrategy\&.java\&.
+.PP
+References examples\&.grid\&.mathProblemDistributed\&.MyRequestSplitStrategy\&.getConfiguration(), and org\&.jgap\&.Configuration\&.newInstance()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.grid\&.mathProblemDistributed\&.MyRequestSplitStrategy\&.CVS_REVISION = '$Revision: 1\&.7 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 27 of file MyRequestSplitStrategy\&.java\&.
+.SS "\fBGPConfiguration\fP examples\&.grid\&.mathProblemDistributed\&.MyRequestSplitStrategy\&.m_config\fC [private]\fP"
+
+.PP
+Definition at line 29 of file MyRequestSplitStrategy\&.java\&.
+.PP
+Referenced by examples\&.grid\&.mathProblemDistributed\&.MyRequestSplitStrategy\&.getConfiguration(), and examples\&.grid\&.mathProblemDistributed\&.MyRequestSplitStrategy\&.MyRequestSplitStrategy()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

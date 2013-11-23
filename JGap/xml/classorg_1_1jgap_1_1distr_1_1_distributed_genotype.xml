@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1distr_1_1_distributed_genotype" kind="class" prot="public">
+    <compoundname>org::jgap::distr::DistributedGenotype</compoundname>
+    <basecompoundref refid="classorg_1_1jgap_1_1_genotype" prot="public" virt="non-virtual">org.jgap.Genotype</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1distr_1_1_distributed_genotype_1ad5f5a98fd1cf2cf2eade3cbe12dacff6" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.distr.DistributedGenotype.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.8 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/DistributedGenotype.java" line="25" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/DistributedGenotype.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1distr_1_1_distributed_genotype_1a285d8e6c7a4bbd04dc240dadd36fb474" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.distr.DistributedGenotype.DistributedGenotype</definition>
+        <argsstring>(Configuration a_activeConfiguration, Population a_population)</argsstring>
+        <name>DistributedGenotype</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_activeConfiguration</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_population</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/DistributedGenotype.java" line="27" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/DistributedGenotype.java" bodystart="27" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> that is running on one of many servers computing a population. This type of <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> knows his companions (other servers to contact for distributed calculating of populations).</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="12045">
+        <label>org.jgap.Genotype</label>
+        <link refid="classorg_1_1jgap_1_1_genotype"/>
+        <childnode refid="12046" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12046">
+        <label>Serializable</label>
+      </node>
+      <node id="12044">
+        <label>org.jgap.distr.DistributedGenotype</label>
+        <link refid="classorg_1_1jgap_1_1distr_1_1_distributed_genotype"/>
+        <childnode refid="12045" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12047">
+        <label>Runnable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12062">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="12049">
+        <label>org.jgap.Genotype</label>
+        <link refid="classorg_1_1jgap_1_1_genotype"/>
+        <childnode refid="12050" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12051" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12052" relation="usage">
+          <edgelabel>m_activeConfiguration</edgelabel>
+          <edgelabel>m_staticConfiguration</edgelabel>
+        </childnode>
+        <childnode refid="12068" relation="usage">
+          <edgelabel>m_population</edgelabel>
+        </childnode>
+      </node>
+      <node id="12070">
+        <label>List&lt; org.jgap.IChromosome &gt;</label>
+      </node>
+      <node id="12067">
+        <label>List</label>
+      </node>
+      <node id="12066">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="12050" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12054" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12063">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="12050" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12050">
+        <label>Serializable</label>
+      </node>
+      <node id="12056">
+        <label>Comparable</label>
+      </node>
+      <node id="12048">
+        <label>org.jgap.distr.DistributedGenotype</label>
+        <link refid="classorg_1_1jgap_1_1distr_1_1_distributed_genotype"/>
+        <childnode refid="12049" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12054">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="12055" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12060">
+        <label>org.jgap.FitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_fitness_evaluator"/>
+        <childnode refid="12050" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12064">
+        <label>org.jgap.BulkFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_bulk_fitness_function"/>
+        <childnode refid="12050" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12054" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12055">
+        <label>Cloneable</label>
+      </node>
+      <node id="12069">
+        <label>org.jgap.IPersistentRepresentation</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_persistent_representation"/>
+      </node>
+      <node id="12058">
+        <label>org.jgap.IJGAPFactory</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_j_g_a_p_factory"/>
+        <childnode refid="12050" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12065">
+        <label>org.jgap.Configuration.ConfigurationConfigurable</label>
+        <link refid="classorg_1_1jgap_1_1_configuration_1_1_configuration_configurable"/>
+        <childnode refid="12050" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12068">
+        <label>org.jgap.Population</label>
+        <link refid="classorg_1_1jgap_1_1_population"/>
+        <childnode refid="12050" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12054" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12069" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12070" relation="usage">
+          <edgelabel>m_chromosomes</edgelabel>
+        </childnode>
+        <childnode refid="12052" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="12061" relation="usage">
+          <edgelabel>m_fittestChromosome</edgelabel>
+        </childnode>
+      </node>
+      <node id="12051">
+        <label>Runnable</label>
+      </node>
+      <node id="12057">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="12054" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12050" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12056" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12061">
+        <label>org.jgap.IChromosome</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome"/>
+        <childnode refid="12056" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12054" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12050" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12062" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12052">
+        <label>org.jgap.Configuration</label>
+        <link refid="classorg_1_1jgap_1_1_configuration"/>
+        <childnode refid="12053" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12050" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12054" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12056" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12057" relation="usage">
+          <edgelabel>m_breeder</edgelabel>
+        </childnode>
+        <childnode refid="12058" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="12059" relation="usage">
+          <edgelabel>m_chromosomePool</edgelabel>
+        </childnode>
+        <childnode refid="12060" relation="usage">
+          <edgelabel>m_fitnessEvaluator</edgelabel>
+        </childnode>
+        <childnode refid="12061" relation="usage">
+          <edgelabel>m_sampleChromosome</edgelabel>
+        </childnode>
+        <childnode refid="12063" relation="usage">
+          <edgelabel>m_randomGenerator</edgelabel>
+        </childnode>
+        <childnode refid="12064" relation="usage">
+          <edgelabel>m_bulkObjectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="12065" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="12066" relation="usage">
+          <edgelabel>m_objectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="12067" relation="usage">
+          <edgelabel>m_geneticOperators</edgelabel>
+        </childnode>
+      </node>
+      <node id="12059">
+        <label>org.jgap.IChromosomePool</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool"/>
+      </node>
+      <node id="12053">
+        <label>Configurable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/DistributedGenotype.java" line="23" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/DistributedGenotype.java" bodystart="22" bodyend="34"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a554d1eaf21a0a9437cdbc5b0fbeedef4" prot="protected" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>applyGeneticOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1adf2dbe6d60d6c74592cb1e6398cece2c" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>applyGeneticOperators</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a6c14c3a36aa8e4291840f0b9c0facb35" prot="protected" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>applyNaturalSelectors</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1_distributed_genotype_1ad5f5a98fd1cf2cf2eade3cbe12dacff6" prot="private" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1distr_1_1_distributed_genotype_1a285d8e6c7a4bbd04dc240dadd36fb474" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>DistributedGenotype</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1ab9bba698920b358bb53131338c9d130a" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>equals</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a54a6791fbb6e13920e79f4e2dd719eb4" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>evolve</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1ab15d88cf1a6084f9efea2dc935968471" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>evolve</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1aa740dd753d31620166979199a38d5a50" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>evolve</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1ac622bbf487c0ab7344d46ca669607cef" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>fillPopulation</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a00b11af9a68e9d84bbc52afbf661607f" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>Genotype</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a7b08ffd2154cd3ccc8636b795666c996" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>Genotype</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1afc52d6b649eea1eefd92e376ea3762ff" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>Genotype</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1ad6795433da5538c6f520253ff9d2382e" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>getChromosomes</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a786848d2da4fd3d87f9f4caa8f9dd58b" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>getConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a84fd1b399188ea10c0af4b7c1152e0c2" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>getEvolves</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a05380af4c0737841c09d3a5533f9f942" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>getFittestChromosome</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a6c40835533352287db8d34e5fae6875f" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>getFittestChromosome</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a602d6b1413007ef28880cf88ccd2f912" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>getFittestChromosomes</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a8241b2d89d32b283abe5c9b42974d64d" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>getPopulation</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1aaf3d4bf0b470aa4655e85262289443eb" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>getStaticConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1abe044a5473e935c2093ee3c6c18775f7" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>hashCode</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1af5e224c5b7c05dbe02b3324d5ec16f2a" prot="protected" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>keepPopSizeConstant</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1aa2b0341edc420ad61e797508b8bf4dd5" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>mergeResults</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a930184e2920b4642f20d0b8bc8412005" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>randomInitialGenotype</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a0d14c5400197e3c43f9d1f0666309a85" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>run</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1af3f49ba90cc8515817366792b7bce320" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>setMonitor</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1ac56a4d112334db07ba333602c4a24706" prot="protected" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>setPopulation</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a2f44a7709eca83cddd6d794ee59e663c" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>setStaticConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1abba6c68b3e8388be6884a35f5600e8cb" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>setUseMonitor</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a658a541940e9be8ef474375091ff31ae" prot="public" virt="non-virtual"><scope>org::jgap::distr::DistributedGenotype</scope><name>toString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

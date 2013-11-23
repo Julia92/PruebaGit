@@ -1,0 +1,161 @@
+.TH "examples.multiobjective.MultiObjectiveFitnessFunction" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.multiobjective.MultiObjectiveFitnessFunction \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits BulkFitnessFunction\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBevaluate\fP (Population a_subject)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static Vector< Double > \fBgetVector\fP (IChromosome a_chrom)"
+.br
+.ti -1c
+.RI "static double \fBformula\fP (int a_index, double a_x)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final int \fBMAX_BOUND\fP = 4000"
+.br
+.ti -1c
+.RI "static final double \fBMIN_X\fP = -10"
+.br
+.ti -1c
+.RI "static final double \fBMAX_X\fP = 10"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.5 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Sample fitness function for the multiobjective problem\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file MultiObjectiveFitnessFunction\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object examples\&.multiobjective\&.MultiObjectiveFitnessFunction\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+deep clone of the current instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 105 of file MultiObjectiveFitnessFunction\&.java\&.
+.SS "void examples\&.multiobjective\&.MultiObjectiveFitnessFunction\&.evaluate (Populationa_subject)\fC [inline]\fP"
+Determine the fitness of the given Chromosome instance\&. The higher the returned value, the fitter the instance\&. This method should always return the same fitness value for two equivalent Chromosome instances\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_subject\fP the population of chromosomes to evaluate
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 43 of file MultiObjectiveFitnessFunction\&.java\&.
+.PP
+References examples\&.multiobjective\&.MultiObjectiveFitnessFunction\&.formula()\&.
+.SS "static double examples\&.multiobjective\&.MultiObjectiveFitnessFunction\&.formula (inta_index, doublea_x)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 86 of file MultiObjectiveFitnessFunction\&.java\&.
+.PP
+Referenced by examples\&.multiobjective\&.MultiObjectiveFitnessFunction\&.evaluate()\&.
+.SS "static Vector<Double> examples\&.multiobjective\&.MultiObjectiveFitnessFunction\&.getVector (IChromosomea_chrom)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chrom\fP the chromosome for which to obtain the result it represents
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+vector of data for output 
+.RE
+.PP
+
+.PP
+Definition at line 66 of file MultiObjectiveFitnessFunction\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.multiobjective\&.MultiObjectiveFitnessFunction\&.CVS_REVISION = '$Revision: 1\&.5 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file MultiObjectiveFitnessFunction\&.java\&.
+.SS "final int examples\&.multiobjective\&.MultiObjectiveFitnessFunction\&.MAX_BOUND = 4000\fC [static]\fP"
+
+.PP
+Definition at line 27 of file MultiObjectiveFitnessFunction\&.java\&.
+.SS "final double examples\&.multiobjective\&.MultiObjectiveFitnessFunction\&.MAX_X = 10\fC [static]\fP"
+
+.PP
+Definition at line 31 of file MultiObjectiveFitnessFunction\&.java\&.
+.PP
+Referenced by examples\&.multiobjective\&.MultiObjectiveExample\&.execute()\&.
+.SS "final double examples\&.multiobjective\&.MultiObjectiveFitnessFunction\&.MIN_X = -10\fC [static]\fP"
+
+.PP
+Definition at line 29 of file MultiObjectiveFitnessFunction\&.java\&.
+.PP
+Referenced by examples\&.multiobjective\&.MultiObjectiveExample\&.execute()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

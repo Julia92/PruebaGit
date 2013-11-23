@@ -1,0 +1,197 @@
+.TH "org.jgap.util.DateKit" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.util.DateKit \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static String \fBgetNowAsString\fP ()"
+.br
+.ti -1c
+.RI "static String \fBgetTodayAsString\fP ()"
+.br
+.ti -1c
+.RI "static String \fBdateToString\fP (Date a_date, String a_dateFormat)"
+.br
+.ti -1c
+.RI "static Date \fBnow\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBDATEFORMAT_FULL_0\fP = 'yyyyMMddHHmmssSSS'"
+.br
+.ti -1c
+.RI "static final String \fBDATEFORMAT_FULL_1\fP = 'yyyy/MM/dd HH:mm:ss:SSS'"
+.br
+.ti -1c
+.RI "static final String \fBDATEFORMAT_NORMAL\fP = 'yyyy/MM/dd'"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.4 $'"
+.br
+.ti -1c
+.RI "static Calendar \fBm_cal\fP = Calendar\&.getInstance()"
+.br
+.ti -1c
+.RI "static SimpleDateFormat \fBm_sdfNow\fP = new SimpleDateFormat(\fBDATEFORMAT_FULL_0\fP)"
+.br
+.ti -1c
+.RI "static SimpleDateFormat \fBm_sdfToday\fP = new SimpleDateFormat('yyyyMMdd')"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Utility functions related to date and time\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file DateKit\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static String org\&.jgap\&.util\&.DateKit\&.dateToString (Datea_date, Stringa_dateFormat)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_date\fP the date to be returned in a specific format 
+.br
+\fIa_dateFormat\fP the desired format of the date
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+date in given format
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 65 of file DateKit\&.java\&.
+.SS "static String org\&.jgap\&.util\&.DateKit\&.getNowAsString ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+now as a string, including milliseconds
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 42 of file DateKit\&.java\&.
+.SS "static String org\&.jgap\&.util\&.DateKit\&.getTodayAsString ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+today as a string
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 52 of file DateKit\&.java\&.
+.SS "static Date org\&.jgap\&.util\&.DateKit\&.now ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+now
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 76 of file DateKit\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.util\&.DateKit\&.CVS_REVISION = '$Revision: 1\&.4 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 23 of file DateKit\&.java\&.
+.SS "final String org\&.jgap\&.util\&.DateKit\&.DATEFORMAT_FULL_0 = 'yyyyMMddHHmmssSSS'\fC [static]\fP"
+
+.PP
+Definition at line 27 of file DateKit\&.java\&.
+.SS "final String org\&.jgap\&.util\&.DateKit\&.DATEFORMAT_FULL_1 = 'yyyy/MM/dd HH:mm:ss:SSS'\fC [static]\fP"
+
+.PP
+Definition at line 28 of file DateKit\&.java\&.
+.SS "final String org\&.jgap\&.util\&.DateKit\&.DATEFORMAT_NORMAL = 'yyyy/MM/dd'\fC [static]\fP"
+
+.PP
+Definition at line 29 of file DateKit\&.java\&.
+.SS "Calendar org\&.jgap\&.util\&.DateKit\&.m_cal = Calendar\&.getInstance()\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 25 of file DateKit\&.java\&.
+.SS "SimpleDateFormat org\&.jgap\&.util\&.DateKit\&.m_sdfNow = new SimpleDateFormat(\fBDATEFORMAT_FULL_0\fP)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 31 of file DateKit\&.java\&.
+.SS "SimpleDateFormat org\&.jgap\&.util\&.DateKit\&.m_sdfToday = new SimpleDateFormat('yyyyMMdd')\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 34 of file DateKit\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

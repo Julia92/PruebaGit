@@ -1,0 +1,435 @@
+.TH "org.jgap.impl.WeightedRouletteSelector" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.WeightedRouletteSelector \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.NaturalSelectorExt\fP, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBWeightedRouletteSelConfig\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWeightedRouletteSelector\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBWeightedRouletteSelector\fP (\fBConfiguration\fP a_config)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "synchronized void \fBselectChromosomes\fP (int a_howManyToSelect, \fBPopulation\fP a_to_pop)"
+.br
+.ti -1c
+.RI "synchronized void \fBempty\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBreturnsUniqueChromosomes\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDoubletteChromosomesAllowed\fP (final boolean a_doublettesAllowed)"
+.br
+.ti -1c
+.RI "boolean \fBgetDoubletteChromosomesAllowed\fP ()"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object o)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "synchronized void \fBadd\fP (final \fBIChromosome\fP a_chromosomeToAdd)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIChromosome\fP \fBspinWheel\fP (final \fBRandomGenerator\fP a_generator, final double[] a_fitnessValues, double[] a_counterValues, final \fBIChromosome\fP[] a_chromosomes)"
+.br
+.ti -1c
+.RI "void \fBscaleFitnessValues\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "THashMap \fBm_wheel\fP = new THashMap()"
+.br
+.ti -1c
+.RI "double \fBm_totalNumberOfUsedSlots\fP"
+.br
+.ti -1c
+.RI "transient \fBPool\fP \fBm_counterPool\fP"
+.br
+.ti -1c
+.RI "WeightedRouletteSelConfig \fBm_config\fP = new WeightedRouletteSelConfig()"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.44 $'"
+.br
+.ti -1c
+.RI "static final double \fBDELTA\fP = 0\&.000001d"
+.br
+.ti -1c
+.RI "static final BigDecimal \fBZERO_BIG_DECIMAL\fP = new BigDecimal(0\&.0d)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A basic implementation of \fBNaturalSelector\fP that models a roulette wheel\&. When a \fBChromosome\fP is added, it gets a number of 'slots' on the wheel equal to its fitness value\&. When the select method is invoked, the wheel is 'spun' and the \fBChromosome\fP occupying the spot on which it lands is selected\&. Then the wheel is spun again and again until the requested number of Chromosomes have been selected\&. Since Chromosomes with higher fitness values get more slots on the wheel, there's a higher statistical probability that they'll be chosen, but it's not guaranteed\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 33 of file WeightedRouletteSelector\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.WeightedRouletteSelector\&.WeightedRouletteSelector () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Default constructor\&.
+.PP
+Attention: The configuration used is the one set with the static method Genotype\&.setConfiguration\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 77 of file WeightedRouletteSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.WeightedRouletteSelector\&.clone(), and org\&.jgap\&.impl\&.WeightedRouletteSelector\&.equals()\&.
+.SS "org\&.jgap\&.impl\&.WeightedRouletteSelector\&.WeightedRouletteSelector (\fBConfiguration\fPa_config) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 90 of file WeightedRouletteSelector\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.WeightedRouletteSelector\&.m_counterPool\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "synchronized void org\&.jgap\&.impl\&.WeightedRouletteSelector\&.add (final \fBIChromosome\fPa_chromosomeToAdd)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Add a chromosome instance to this selector's working pool of chromosomes\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomeToAdd\fP the chromosom to add to the pool
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.NaturalSelectorExt\fP\&.
+.PP
+Definition at line 106 of file WeightedRouletteSelector\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.Pool\&.acquirePooledObject(), org\&.jgap\&.impl\&.WeightedRouletteSelector\&.m_counterPool, and org\&.jgap\&.impl\&.WeightedRouletteSelector\&.m_wheel\&.
+.SS "Object org\&.jgap\&.impl\&.WeightedRouletteSelector\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+deep clone of this instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 419 of file WeightedRouletteSelector\&.java\&.
+.PP
+References org\&.jgap\&.NaturalSelector\&.getConfiguration(), org\&.jgap\&.impl\&.WeightedRouletteSelector\&.m_wheel, and org\&.jgap\&.impl\&.WeightedRouletteSelector\&.WeightedRouletteSelector()\&.
+.SS "synchronized void org\&.jgap\&.impl\&.WeightedRouletteSelector\&.empty ()\fC [inline]\fP"
+Empty out the working pool of Chromosomes\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.INaturalSelector\fP\&.
+.PP
+Definition at line 333 of file WeightedRouletteSelector\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.WeightedRouletteSelector\&.m_totalNumberOfUsedSlots\&.
+.SS "boolean org\&.jgap\&.impl\&.WeightedRouletteSelector\&.equals (Objecto)\fC [inline]\fP"
+
+.PP
+Definition at line 432 of file WeightedRouletteSelector\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.WeightedRouletteSelector\&.m_config, org\&.jgap\&.impl\&.WeightedRouletteSelector\&.m_counterPool, org\&.jgap\&.impl\&.WeightedRouletteSelector\&.m_totalNumberOfUsedSlots, org\&.jgap\&.impl\&.WeightedRouletteSelector\&.m_wheel, and org\&.jgap\&.impl\&.WeightedRouletteSelector\&.WeightedRouletteSelector()\&.
+.SS "boolean org\&.jgap\&.impl\&.WeightedRouletteSelector\&.getDoubletteChromosomesAllowed ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+TRUE: doublette chromosomes allowed to be added by the selector
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 409 of file WeightedRouletteSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.WeightedRouletteSelector\&.spinWheel()\&.
+.SS "boolean org\&.jgap\&.impl\&.WeightedRouletteSelector\&.returnsUniqueChromosomes ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+always false as some \fBChromosome\fP's could be returnd multiple times
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.INaturalSelector\fP\&.
+.PP
+Definition at line 385 of file WeightedRouletteSelector\&.java\&.
+.SS "void org\&.jgap\&.impl\&.WeightedRouletteSelector\&.scaleFitnessValues ()\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 344 of file WeightedRouletteSelector\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.WeightedRouletteSelector\&.ZERO_BIG_DECIMAL\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.WeightedRouletteSelector\&.selectChromosomes()\&.
+.SS "synchronized void org\&.jgap\&.impl\&.WeightedRouletteSelector\&.selectChromosomes (inta_howManyToSelect, \fBPopulation\fPa_to_pop)\fC [inline]\fP"
+Select a given number of Chromosomes from the pool that will move on to the next generation population\&. This selection should be guided by the fitness values, but fitness should be treated as a statistical probability of survival, not as the sole determining factor\&. In other words, Chromosomes with higher fitness values should be more likely to be selected than those with lower fitness values, but it should not be guaranteed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_howManyToSelect\fP the number of Chromosomes to select 
+.br
+\fIa_to_pop\fP the population the Chromosomes will be added to
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 158 of file WeightedRouletteSelector\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.contains(), org\&.jgap\&.NaturalSelector\&.getConfiguration(), org\&.jgap\&.NaturalSelector\&.m_monitorActive, org\&.jgap\&.impl\&.WeightedRouletteSelector\&.m_totalNumberOfUsedSlots, org\&.jgap\&.IHandler\&.perform(), org\&.jgap\&.impl\&.WeightedRouletteSelector\&.scaleFitnessValues(), and org\&.jgap\&.impl\&.WeightedRouletteSelector\&.spinWheel()\&.
+.SS "void org\&.jgap\&.impl\&.WeightedRouletteSelector\&.setDoubletteChromosomesAllowed (final booleana_doublettesAllowed)\fC [inline]\fP"
+Not supported by this selector! Please do not use it\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_doublettesAllowed\fP do not use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 397 of file WeightedRouletteSelector\&.java\&.
+.SS "\fBIChromosome\fP org\&.jgap\&.impl\&.WeightedRouletteSelector\&.spinWheel (final \fBRandomGenerator\fPa_generator, final double[]a_fitnessValues, double[]a_counterValues, final \fBIChromosome\fP[]a_chromosomes)\fC [inline]\fP, \fC [private]\fP"
+This method 'spins' the wheel and returns the \fBChromosome\fP that is 'landed upon\&.' Each time a chromosome is selected, one instance of it is removed from the wheel so that it cannot be selected again\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_generator\fP the random number generator to be used during the spinning process 
+.br
+\fIa_fitnessValues\fP an array of fitness values of the respective Chromosomes 
+.br
+\fIa_counterValues\fP an array of total counter values of the respective Chromosomes 
+.br
+\fIa_chromosomes\fP the respective \fBChromosome\fP instances from which selection is to occur 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+selected \fBChromosome\fP from the roulette wheel
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 252 of file WeightedRouletteSelector\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.WeightedRouletteSelector\&.DELTA, org\&.jgap\&.NaturalSelector\&.getConfiguration(), org\&.jgap\&.impl\&.WeightedRouletteSelector\&.getDoubletteChromosomesAllowed(), and org\&.jgap\&.impl\&.WeightedRouletteSelector\&.m_totalNumberOfUsedSlots\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.WeightedRouletteSelector\&.selectChromosomes()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.WeightedRouletteSelector\&.CVS_REVISION = '$Revision: 1\&.44 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 36 of file WeightedRouletteSelector\&.java\&.
+.SS "final double org\&.jgap\&.impl\&.WeightedRouletteSelector\&.DELTA = 0\&.000001d\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 39 of file WeightedRouletteSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.WeightedRouletteSelector\&.spinWheel()\&.
+.SS "WeightedRouletteSelConfig org\&.jgap\&.impl\&.WeightedRouletteSelector\&.m_config = new WeightedRouletteSelConfig()\fC [private]\fP"
+
+.PP
+Definition at line 65 of file WeightedRouletteSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.WeightedRouletteSelector\&.equals()\&.
+.SS "transient \fBPool\fP org\&.jgap\&.impl\&.WeightedRouletteSelector\&.m_counterPool\fC [private]\fP"
+An internal pool in which discarded SlotCounter instances can be stored so that they can be reused over and over again, thus saving memory and the overhead of constructing new ones each time\&. 
+.PP
+Definition at line 62 of file WeightedRouletteSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.WeightedRouletteSelector\&.add(), org\&.jgap\&.impl\&.WeightedRouletteSelector\&.equals(), and org\&.jgap\&.impl\&.WeightedRouletteSelector\&.WeightedRouletteSelector()\&.
+.SS "double org\&.jgap\&.impl\&.WeightedRouletteSelector\&.m_totalNumberOfUsedSlots\fC [private]\fP"
+Keeps track of the total number of slots that are in use on the roulette wheel\&. This is equal to the combined fitness values of all \fBChromosome\fP instances that have been added to this wheel\&. 
+.PP
+Definition at line 55 of file WeightedRouletteSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.WeightedRouletteSelector\&.empty(), org\&.jgap\&.impl\&.WeightedRouletteSelector\&.equals(), org\&.jgap\&.impl\&.WeightedRouletteSelector\&.selectChromosomes(), and org\&.jgap\&.impl\&.WeightedRouletteSelector\&.spinWheel()\&.
+.SS "THashMap org\&.jgap\&.impl\&.WeightedRouletteSelector\&.m_wheel = new THashMap()\fC [private]\fP"
+Represents the 'roulette wheel\&.' Each key in the Map is a \fBChromosome\fP and each value is an instance of the SlotCounter inner class, which keeps track of how many slots on the wheel each \fBChromosome\fP is occupying\&. 
+.PP
+Definition at line 48 of file WeightedRouletteSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.WeightedRouletteSelector\&.add(), org\&.jgap\&.impl\&.WeightedRouletteSelector\&.clone(), and org\&.jgap\&.impl\&.WeightedRouletteSelector\&.equals()\&.
+.SS "final BigDecimal org\&.jgap\&.impl\&.WeightedRouletteSelector\&.ZERO_BIG_DECIMAL = new BigDecimal(0\&.0d)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 41 of file WeightedRouletteSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.WeightedRouletteSelector\&.scaleFitnessValues()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

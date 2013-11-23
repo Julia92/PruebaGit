@@ -1,0 +1,215 @@
+.TH "examples.gp.tictactoe.CountStones" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.tictactoe.CountStones \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandGene\fP, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCountStones\fP (final \fBGPConfiguration\fP a_conf, \fBBoard\fP a_board, int a_color, String a_memoryNameBase)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCountStones\fP (final \fBGPConfiguration\fP a_conf, \fBBoard\fP a_board, int a_color, String a_memoryNameBase, int a_subReturnType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "void \fBexecute_void\fP (\fBProgramChromosome\fP c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBreadRow\fP (int i, String a_baseName)"
+.br
+.ti -1c
+.RI "void \fBreadCol\fP (int i, String a_baseName)"
+.br
+.ti -1c
+.RI "void \fBreadDia\fP (int index, String a_baseName)"
+.br
+.ti -1c
+.RI "void \fBstore\fP (String memoryName, int a_count)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBBoard\fP \fBm_board\fP"
+.br
+.ti -1c
+.RI "String \fBm_memoryNameBase\fP"
+.br
+.ti -1c
+.RI "int \fBm_color\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.4 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Definition at line 18 of file CountStones\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.gp\&.tictactoe\&.CountStones\&.CountStones (final \fBGPConfiguration\fPa_conf, \fBBoard\fPa_board, inta_color, Stringa_memoryNameBase) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 29 of file CountStones\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.CountStones\&.clone()\&.
+.SS "examples\&.gp\&.tictactoe\&.CountStones\&.CountStones (final \fBGPConfiguration\fPa_conf, \fBBoard\fPa_board, inta_color, Stringa_memoryNameBase, inta_subReturnType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 35 of file CountStones\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.CountStones\&.m_board, examples\&.gp\&.tictactoe\&.CountStones\&.m_color, examples\&.gp\&.tictactoe\&.CountStones\&.m_memoryNameBase, and org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object examples\&.gp\&.tictactoe\&.CountStones\&.clone ()\fC [inline]\fP"
+Clones the object\&. Simple and straight forward implementation here\&.
+.PP
+\fBReturns:\fP
+.RS 4
+cloned instance of this object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 133 of file CountStones\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.CountStones\&.CountStones(), org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.getSubReturnType(), examples\&.gp\&.tictactoe\&.CountStones\&.m_board, examples\&.gp\&.tictactoe\&.CountStones\&.m_color, and examples\&.gp\&.tictactoe\&.CountStones\&.m_memoryNameBase\&.
+.SS "void examples\&.gp\&.tictactoe\&.CountStones\&.execute_void (\fBProgramChromosome\fPc, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 58 of file CountStones\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), examples\&.gp\&.tictactoe\&.Board\&.HEIGHT, examples\&.gp\&.tictactoe\&.CountStones\&.m_memoryNameBase, examples\&.gp\&.tictactoe\&.CountStones\&.readCol(), examples\&.gp\&.tictactoe\&.CountStones\&.readDia(), examples\&.gp\&.tictactoe\&.CountStones\&.readRow(), and examples\&.gp\&.tictactoe\&.Board\&.WIDTH\&.
+.SS "String examples\&.gp\&.tictactoe\&.CountStones\&.getName ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+textual name of this command
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 54 of file CountStones\&.java\&.
+.SS "void examples\&.gp\&.tictactoe\&.CountStones\&.readCol (inti, Stringa_baseName)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 84 of file CountStones\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.Board\&.HEIGHT, examples\&.gp\&.tictactoe\&.CountStones\&.m_board, examples\&.gp\&.tictactoe\&.CountStones\&.m_color, examples\&.gp\&.tictactoe\&.Board\&.readField(), and examples\&.gp\&.tictactoe\&.CountStones\&.store()\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.CountStones\&.execute_void()\&.
+.SS "void examples\&.gp\&.tictactoe\&.CountStones\&.readDia (intindex, Stringa_baseName)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 95 of file CountStones\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.Board\&.HEIGHT, examples\&.gp\&.tictactoe\&.CountStones\&.m_board, examples\&.gp\&.tictactoe\&.CountStones\&.m_color, examples\&.gp\&.tictactoe\&.Board\&.readField(), examples\&.gp\&.tictactoe\&.CountStones\&.store(), and examples\&.gp\&.tictactoe\&.Board\&.WIDTH\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.CountStones\&.execute_void()\&.
+.SS "void examples\&.gp\&.tictactoe\&.CountStones\&.readRow (inti, Stringa_baseName)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 73 of file CountStones\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.CountStones\&.m_board, examples\&.gp\&.tictactoe\&.CountStones\&.m_color, examples\&.gp\&.tictactoe\&.Board\&.readField(), examples\&.gp\&.tictactoe\&.CountStones\&.store(), and examples\&.gp\&.tictactoe\&.Board\&.WIDTH\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.CountStones\&.execute_void()\&.
+.SS "void examples\&.gp\&.tictactoe\&.CountStones\&.store (StringmemoryName, inta_count)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 121 of file CountStones\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration()\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.CountStones\&.readCol(), examples\&.gp\&.tictactoe\&.CountStones\&.readDia(), and examples\&.gp\&.tictactoe\&.CountStones\&.readRow()\&.
+.SS "String examples\&.gp\&.tictactoe\&.CountStones\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 44 of file CountStones\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.CountStones\&.m_color, and examples\&.gp\&.tictactoe\&.CountStones\&.m_memoryNameBase\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.gp\&.tictactoe\&.CountStones\&.CVS_REVISION = '$Revision: 1\&.4 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 21 of file CountStones\&.java\&.
+.SS "\fBBoard\fP examples\&.gp\&.tictactoe\&.CountStones\&.m_board\fC [private]\fP"
+
+.PP
+Definition at line 23 of file CountStones\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.CountStones\&.clone(), examples\&.gp\&.tictactoe\&.CountStones\&.CountStones(), examples\&.gp\&.tictactoe\&.CountStones\&.readCol(), examples\&.gp\&.tictactoe\&.CountStones\&.readDia(), and examples\&.gp\&.tictactoe\&.CountStones\&.readRow()\&.
+.SS "int examples\&.gp\&.tictactoe\&.CountStones\&.m_color\fC [private]\fP"
+
+.PP
+Definition at line 27 of file CountStones\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.CountStones\&.clone(), examples\&.gp\&.tictactoe\&.CountStones\&.CountStones(), examples\&.gp\&.tictactoe\&.CountStones\&.readCol(), examples\&.gp\&.tictactoe\&.CountStones\&.readDia(), examples\&.gp\&.tictactoe\&.CountStones\&.readRow(), and examples\&.gp\&.tictactoe\&.CountStones\&.toString()\&.
+.SS "String examples\&.gp\&.tictactoe\&.CountStones\&.m_memoryNameBase\fC [private]\fP"
+
+.PP
+Definition at line 25 of file CountStones\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.CountStones\&.clone(), examples\&.gp\&.tictactoe\&.CountStones\&.CountStones(), examples\&.gp\&.tictactoe\&.CountStones\&.execute_void(), and examples\&.gp\&.tictactoe\&.CountStones\&.toString()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,654 @@
+.TH "org.jgap.xml.XMLManager" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.xml.XMLManager \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static Document \fBrepresentChromosomeAsDocument\fP (final \fBIChromosome\fP a_subject)"
+.br
+.ti -1c
+.RI "static Document \fBrepresentGenotypeAsDocument\fP (final \fBGenotype\fP a_subject)"
+.br
+.ti -1c
+.RI "static Element \fBrepresentGenesAsElement\fP (final \fBGene\fP[] a_geneValues, final Document a_xmlDocument)"
+.br
+.ti -1c
+.RI "static Element \fBrepresentChromosomeAsElement\fP (final \fBIChromosome\fP a_subject, final Document a_xmlDocument)"
+.br
+.ti -1c
+.RI "static Element \fBrepresentGenotypeAsElement\fP (final \fBGenotype\fP a_subject, final Document a_xmlDocument)"
+.br
+.ti -1c
+.RI "static \fBGene\fP[] \fBgetGenesFromElement\fP (\fBConfiguration\fP a_activeConfiguration, Element a_xmlElement)  throws ImproperXMLException, UnsupportedRepresentationException,       GeneCreationException "
+.br
+.ti -1c
+.RI "static \fBChromosome\fP \fBgetChromosomeFromElement\fP (\fBConfiguration\fP a_activeConfiguration, Element a_xmlElement)  throws ImproperXMLException, InvalidConfigurationException,       UnsupportedRepresentationException, GeneCreationException "
+.br
+.ti -1c
+.RI "static \fBGenotype\fP \fBgetGenotypeFromElement\fP (\fBConfiguration\fP a_activeConfiguration, Element a_xmlElement)  throws ImproperXMLException, InvalidConfigurationException,       UnsupportedRepresentationException, GeneCreationException "
+.br
+.ti -1c
+.RI "static \fBGenotype\fP \fBgetGenotypeFromDocument\fP (\fBConfiguration\fP a_activeConfiguration, Document a_xmlDocument)  throws ImproperXMLException, InvalidConfigurationException,       UnsupportedRepresentationException, GeneCreationException "
+.br
+.ti -1c
+.RI "static \fBChromosome\fP \fBgetChromosomeFromDocument\fP (\fBConfiguration\fP a_activeConfiguration, Document a_xmlDocument)  throws ImproperXMLException, InvalidConfigurationException,       UnsupportedRepresentationException, GeneCreationException "
+.br
+.ti -1c
+.RI "static Document \fBreadFile\fP (File file)  throws IOException, org\&.xml\&.sax\&.SAXException "
+.br
+.ti -1c
+.RI "static void \fBwriteFile\fP (Document doc, File file)  throws IOException "
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXMLManager\fP ()"
+.br
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static Element \fBrepresentAlleleAsElement\fP (final \fBGene\fP a_gene, final Document a_xmlDocument)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.21 $'"
+.br
+.ti -1c
+.RI "static final String \fBGENOTYPE_TAG\fP = 'genotype'"
+.br
+.ti -1c
+.RI "static final String \fBCHROMOSOME_TAG\fP = 'chromosome'"
+.br
+.ti -1c
+.RI "static final String \fBGENES_TAG\fP = 'genes'"
+.br
+.ti -1c
+.RI "static final String \fBGENE_TAG\fP = 'gene'"
+.br
+.ti -1c
+.RI "static final String \fBALLELE_TAG\fP = 'allele'"
+.br
+.ti -1c
+.RI "static final String \fBSIZE_ATTRIBUTE\fP = 'size'"
+.br
+.ti -1c
+.RI "static final String \fBCLASS_ATTRIBUTE\fP = 'class'"
+.br
+.ti -1c
+.RI "static final DocumentBuilder \fBm_documentCreator\fP"
+.br
+.ti -1c
+.RI "static final Object \fBm_lock\fP = new Object()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBXMLManager\fP performs marshalling of genetic entity instances (such as Chromosomes and Genotypes) to XML representations of those entities, as well as unmarshalling\&. All of the methods in this class are static, so no construction is required (or allowed)\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 33 of file XMLManager\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.xml\&.XMLManager\&.XMLManager ()\fC [inline]\fP, \fC [private]\fP"
+Private constructor\&. All methods in this class are static, so no construction is allowed\&. 
+.PP
+Definition at line 101 of file XMLManager\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBChromosome\fP org\&.jgap\&.xml\&.XMLManager\&.getChromosomeFromDocument (\fBConfiguration\fPa_activeConfiguration, Documenta_xmlDocument) throws \fBImproperXMLException\fP, \fBInvalidConfigurationException\fP,       \fBUnsupportedRepresentationException\fP, \fBGeneCreationException\fP\fC [inline]\fP, \fC [static]\fP"
+Unmarshall a \fBChromosome\fP instance from a given XML Document representation\&. Its genes will be unmarshalled from the gene sub-elements\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_activeConfiguration\fP the current active \fBConfiguration\fP object that is to be used during construction of the \fBChromosome\fP instances 
+.br
+\fIa_xmlDocument\fP the XML Document representation of the \fBChromosome\fP
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a new \fBChromosome\fP instance setup with the data from the XML Document representation
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBImproperXMLException\fP\fP if the given Document is improperly structured or missing data 
+.br
+\fI\fBInvalidConfigurationException\fP\fP if the given \fBConfiguration\fP is in an inconsistent state 
+.br
+\fI\fBUnsupportedRepresentationException\fP\fP if the actively configured \fBGene\fP implementation does not support the string representation of the alleles used in the given XML document 
+.br
+\fI\fBGeneCreationException\fP\fP if there is a problem creating or populating a \fBGene\fP instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 594 of file XMLManager\&.java\&.
+.SS "static \fBChromosome\fP org\&.jgap\&.xml\&.XMLManager\&.getChromosomeFromElement (\fBConfiguration\fPa_activeConfiguration, Elementa_xmlElement) throws \fBImproperXMLException\fP, \fBInvalidConfigurationException\fP,       \fBUnsupportedRepresentationException\fP, \fBGeneCreationException\fP\fC [inline]\fP, \fC [static]\fP"
+Unmarshall a \fBChromosome\fP instance from a given XML Element representation\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_activeConfiguration\fP the current active \fBConfiguration\fP object that is to be used during construction of the \fBChromosome\fP 
+.br
+\fIa_xmlElement\fP the XML Element representation of the \fBChromosome\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a new \fBChromosome\fP instance setup with the data from the XML Element representation
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBImproperXMLException\fP\fP if the given Element is improperly structured or missing data 
+.br
+\fI\fBInvalidConfigurationException\fP\fP if the given \fBConfiguration\fP is in an inconsistent state 
+.br
+\fI\fBUnsupportedRepresentationException\fP\fP if the actively configured \fBGene\fP implementation does not support the string representation of the alleles used in the given XML document 
+.br
+\fI\fBGeneCreationException\fP\fP if there is a problem creating or populating a \fBGene\fP instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 439 of file XMLManager\&.java\&.
+.SS "static \fBGene\fP [] org\&.jgap\&.xml\&.XMLManager\&.getGenesFromElement (\fBConfiguration\fPa_activeConfiguration, Elementa_xmlElement) throws \fBImproperXMLException\fP, \fBUnsupportedRepresentationException\fP,       \fBGeneCreationException\fP\fC [inline]\fP, \fC [static]\fP"
+Unmarshall a \fBChromosome\fP instance from a given XML Element representation\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_activeConfiguration\fP current \fBConfiguration\fP object 
+.br
+\fIa_xmlElement\fP the XML Element representation of the \fBChromosome\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a new \fBChromosome\fP instance setup with the data from the XML Element representation
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBImproperXMLException\fP\fP if the given Element is improperly structured or missing data 
+.br
+\fI\fBUnsupportedRepresentationException\fP\fP if the actively configured \fBGene\fP implementation does not support the string representation of the alleles used in the given XML document 
+.br
+\fI\fBGeneCreationException\fP\fP if there is a problem creating or populating a \fBGene\fP instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 316 of file XMLManager\&.java\&.
+.PP
+References org\&.jgap\&.xml\&.XMLManager\&.CLASS_ATTRIBUTE, org\&.jgap\&.xml\&.XMLManager\&.GENE_TAG, and org\&.jgap\&.xml\&.XMLManager\&.GENES_TAG\&.
+.SS "static \fBGenotype\fP org\&.jgap\&.xml\&.XMLManager\&.getGenotypeFromDocument (\fBConfiguration\fPa_activeConfiguration, Documenta_xmlDocument) throws \fBImproperXMLException\fP, \fBInvalidConfigurationException\fP,       \fBUnsupportedRepresentationException\fP, \fBGeneCreationException\fP\fC [inline]\fP, \fC [static]\fP"
+Unmarshall a \fBGenotype\fP instance from a given XML Document representation\&. Its population of Chromosomes will be unmarshalled from the \fBChromosome\fP sub-elements\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_activeConfiguration\fP the current active \fBConfiguration\fP object that is to be used during construction of the \fBGenotype\fP and \fBChromosome\fP instances 
+.br
+\fIa_xmlDocument\fP the XML Document representation of the \fBGenotype\fP
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A new \fBGenotype\fP instance, complete with a population of Chromosomes, setup with the data from the XML Document representation
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBImproperXMLException\fP\fP if the given Document is improperly structured or missing data 
+.br
+\fI\fBInvalidConfigurationException\fP\fP if the given \fBConfiguration\fP is in an inconsistent state 
+.br
+\fI\fBUnsupportedRepresentationException\fP\fP if the actively configured \fBGene\fP implementation does not support the string representation of the alleles used in the given XML document 
+.br
+\fI\fBGeneCreationException\fP\fP if there is a problem creating or populating a \fBGene\fP instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 550 of file XMLManager\&.java\&.
+.SS "static \fBGenotype\fP org\&.jgap\&.xml\&.XMLManager\&.getGenotypeFromElement (\fBConfiguration\fPa_activeConfiguration, Elementa_xmlElement) throws \fBImproperXMLException\fP, \fBInvalidConfigurationException\fP,       \fBUnsupportedRepresentationException\fP, \fBGeneCreationException\fP\fC [inline]\fP, \fC [static]\fP"
+Unmarshall a \fBGenotype\fP instance from a given XML Element representation\&. Its population of Chromosomes will be unmarshalled from the \fBChromosome\fP sub-elements\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_activeConfiguration\fP the current active \fBConfiguration\fP object that is to be used during construction of the \fBGenotype\fP and \fBChromosome\fP instances 
+.br
+\fIa_xmlElement\fP the XML Element representation of the \fBGenotype\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a new \fBGenotype\fP instance, complete with a population of Chromosomes, setup with the data from the XML Element representation
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBImproperXMLException\fP\fP if the given Element is improperly structured or missing data 
+.br
+\fI\fBInvalidConfigurationException\fP\fP if the given \fBConfiguration\fP is in an inconsistent state 
+.br
+\fI\fBUnsupportedRepresentationException\fP\fP if the actively configured \fBGene\fP implementation does not support the string representation of the alleles used in the given XML document 
+.br
+\fI\fBGeneCreationException\fP\fP if there is a problem creating or populating a \fBGene\fP instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 496 of file XMLManager\&.java\&.
+.SS "static Document org\&.jgap\&.xml\&.XMLManager\&.readFile (Filefile) throws IOException, org\&.xml\&.sax\&.SAXException\fC [inline]\fP, \fC [static]\fP"
+Reads in an XML file and returns a Document object\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfile\fP the file to be read in 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIOException\fP 
+.br
+\fISAXException\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Document
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 624 of file XMLManager\&.java\&.
+.SS "static Element org\&.jgap\&.xml\&.XMLManager\&.representAlleleAsElement (final \fBGene\fPa_gene, final Documenta_xmlDocument)\fC [inline]\fP, \fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_gene\fP \fBGene\fP 
+.br
+\fIa_xmlDocument\fP Document 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Element
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 209 of file XMLManager\&.java\&.
+.PP
+References org\&.jgap\&.xml\&.XMLManager\&.ALLELE_TAG\&.
+.PP
+Referenced by org\&.jgap\&.xml\&.XMLManager\&.representGenesAsElement()\&.
+.SS "static Document org\&.jgap\&.xml\&.XMLManager\&.representChromosomeAsDocument (final \fBIChromosome\fPa_subject)\fC [inline]\fP, \fC [static]\fP"
+Marshall a \fBChromosome\fP instance to an XML Document representation, including its contained \fBGene\fP instances\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_subject\fP the chromosome to represent as an XML document 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a Document object representing the given \fBChromosome\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBDeprecated\fP
+.RS 4
+use \fBXMLDocumentBuilder\fP instead 
+.RE
+.PP
+
+.PP
+Definition at line 115 of file XMLManager\&.java\&.
+.PP
+References org\&.jgap\&.xml\&.XMLManager\&.m_lock, and org\&.jgap\&.xml\&.XMLManager\&.representChromosomeAsElement()\&.
+.SS "static Element org\&.jgap\&.xml\&.XMLManager\&.representChromosomeAsElement (final \fBIChromosome\fPa_subject, final Documenta_xmlDocument)\fC [inline]\fP, \fC [static]\fP"
+Marshall a \fBChromosome\fP instance to an XML Element representation, including its contained Genes as sub-elements\&. This may be useful in scenarios where representation as an entire Document is undesirable, such as when the representation of this \fBChromosome\fP is to be combined with other elements in a single Document\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_subject\fP the chromosome to represent as an XML element 
+.br
+\fIa_xmlDocument\fP a Document instance that will be used to create the Element instance\&. Note that the element will NOT be added to the document by this method 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+an Element object representing the given \fBChromosome\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBDeprecated\fP
+.RS 4
+use \fBXMLDocumentBuilder\fP instead 
+.RE
+.PP
+
+.PP
+Definition at line 234 of file XMLManager\&.java\&.
+.PP
+References org\&.jgap\&.xml\&.XMLManager\&.CHROMOSOME_TAG, org\&.jgap\&.IChromosome\&.getGenes(), org\&.jgap\&.xml\&.XMLManager\&.representGenesAsElement(), and org\&.jgap\&.xml\&.XMLManager\&.SIZE_ATTRIBUTE\&.
+.PP
+Referenced by org\&.jgap\&.xml\&.XMLManager\&.representChromosomeAsDocument(), and org\&.jgap\&.xml\&.XMLManager\&.representGenotypeAsElement()\&.
+.SS "static Element org\&.jgap\&.xml\&.XMLManager\&.representGenesAsElement (final \fBGene\fP[]a_geneValues, final Documenta_xmlDocument)\fC [inline]\fP, \fC [static]\fP"
+Marshall an array of Genes to an XML Element representation\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_geneValues\fP the genes to represent as an XML element 
+.br
+\fIa_xmlDocument\fP a Document instance that will be used to create the Element instance\&. Note that the element will NOT be added to the document by this method 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+an Element object representing the given genes
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBDeprecated\fP
+.RS 4
+use \fBXMLDocumentBuilder\fP instead 
+.RE
+.PP
+
+.PP
+Definition at line 169 of file XMLManager\&.java\&.
+.PP
+References org\&.jgap\&.xml\&.XMLManager\&.CLASS_ATTRIBUTE, org\&.jgap\&.xml\&.XMLManager\&.GENE_TAG, org\&.jgap\&.xml\&.XMLManager\&.GENES_TAG, and org\&.jgap\&.xml\&.XMLManager\&.representAlleleAsElement()\&.
+.PP
+Referenced by org\&.jgap\&.xml\&.XMLManager\&.representChromosomeAsElement()\&.
+.SS "static Document org\&.jgap\&.xml\&.XMLManager\&.representGenotypeAsDocument (final \fBGenotype\fPa_subject)\fC [inline]\fP, \fC [static]\fP"
+Marshall a \fBGenotype\fP to an XML Document representation, including its population of \fBChromosome\fP instances\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_subject\fP the genotype to represent as an XML document 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a Document object representing the given \fBGenotype\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBDeprecated\fP
+.RS 4
+use \fBXMLDocumentBuilder\fP instead 
+.RE
+.PP
+
+.PP
+Definition at line 141 of file XMLManager\&.java\&.
+.PP
+References org\&.jgap\&.xml\&.XMLManager\&.m_lock, and org\&.jgap\&.xml\&.XMLManager\&.representGenotypeAsElement()\&.
+.SS "static Element org\&.jgap\&.xml\&.XMLManager\&.representGenotypeAsElement (final \fBGenotype\fPa_subject, final Documenta_xmlDocument)\fC [inline]\fP, \fC [static]\fP"
+Marshall a \fBGenotype\fP instance into an XML Element representation, including its population of \fBChromosome\fP instances as sub-elements\&. This may be useful in scenarios where representation as an entire Document is undesirable, such as when the representation of this \fBGenotype\fP is to be combined with other elements in a single Document\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_subject\fP the genotype to represent as an XML element 
+.br
+\fIa_xmlDocument\fP a Document instance that will be used to create the Element instance\&. Note that the element will NOT be added to the document by this method 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+an Element object representing the given \fBGenotype\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBDeprecated\fP
+.RS 4
+use \fBXMLDocumentBuilder\fP instead 
+.RE
+.PP
+
+.PP
+Definition at line 274 of file XMLManager\&.java\&.
+.PP
+References org\&.jgap\&.xml\&.XMLManager\&.GENOTYPE_TAG, org\&.jgap\&.Population\&.getChromosome(), org\&.jgap\&.xml\&.XMLManager\&.representChromosomeAsElement(), and org\&.jgap\&.xml\&.XMLManager\&.SIZE_ATTRIBUTE\&.
+.PP
+Referenced by org\&.jgap\&.xml\&.XMLManager\&.representGenotypeAsDocument()\&.
+.SS "static void org\&.jgap\&.xml\&.XMLManager\&.writeFile (Documentdoc, Filefile) throws IOException\fC [inline]\fP, \fC [static]\fP"
+Writes an XML file from a Document object\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdoc\fP the Document object to be written to file 
+.br
+\fIfile\fP the file to be written 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIOException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 639 of file XMLManager\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.xml\&.XMLManager\&.ALLELE_TAG = 'allele'\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 57 of file XMLManager\&.java\&.
+.PP
+Referenced by org\&.jgap\&.xml\&.XMLManager\&.representAlleleAsElement()\&.
+.SS "final String org\&.jgap\&.xml\&.XMLManager\&.CHROMOSOME_TAG = 'chromosome'\fC [static]\fP, \fC [private]\fP"
+Constant representing the name of the chromosome XML element tag\&. 
+.PP
+Definition at line 45 of file XMLManager\&.java\&.
+.PP
+Referenced by org\&.jgap\&.xml\&.XMLManager\&.representChromosomeAsElement()\&.
+.SS "final String org\&.jgap\&.xml\&.XMLManager\&.CLASS_ATTRIBUTE = 'class'\fC [static]\fP, \fC [private]\fP"
+Constant representing the fully-qualified name of the concrete \fBGene\fP class that was marshalled\&. 
+.PP
+Definition at line 69 of file XMLManager\&.java\&.
+.PP
+Referenced by org\&.jgap\&.xml\&.XMLManager\&.getGenesFromElement(), and org\&.jgap\&.xml\&.XMLManager\&.representGenesAsElement()\&.
+.SS "final String org\&.jgap\&.xml\&.XMLManager\&.CVS_REVISION = '$Revision: 1\&.21 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 35 of file XMLManager\&.java\&.
+.SS "final String org\&.jgap\&.xml\&.XMLManager\&.GENE_TAG = 'gene'\fC [static]\fP, \fC [private]\fP"
+Constant representing the name of the gene XML element tag\&. 
+.PP
+Definition at line 55 of file XMLManager\&.java\&.
+.PP
+Referenced by org\&.jgap\&.xml\&.XMLManager\&.getGenesFromElement(), and org\&.jgap\&.xml\&.XMLManager\&.representGenesAsElement()\&.
+.SS "final String org\&.jgap\&.xml\&.XMLManager\&.GENES_TAG = 'genes'\fC [static]\fP, \fC [private]\fP"
+Constant representing the name of the gene XML element tag\&. 
+.PP
+Definition at line 50 of file XMLManager\&.java\&.
+.PP
+Referenced by org\&.jgap\&.xml\&.XMLManager\&.getGenesFromElement(), and org\&.jgap\&.xml\&.XMLManager\&.representGenesAsElement()\&.
+.SS "final String org\&.jgap\&.xml\&.XMLManager\&.GENOTYPE_TAG = 'genotype'\fC [static]\fP, \fC [private]\fP"
+Constant representing the name of the genotype XML element tag\&. 
+.PP
+Definition at line 40 of file XMLManager\&.java\&.
+.PP
+Referenced by org\&.jgap\&.xml\&.XMLManager\&.representGenotypeAsElement()\&.
+.SS "final DocumentBuilder org\&.jgap\&.xml\&.XMLManager\&.m_documentCreator\fC [static]\fP, \fC [private]\fP"
+Shared DocumentBuilder, which is used to create new DOM Document instances\&. 
+.PP
+Definition at line 75 of file XMLManager\&.java\&.
+.SS "final Object org\&.jgap\&.xml\&.XMLManager\&.m_lock = new Object()\fC [static]\fP, \fC [private]\fP"
+Shared lock object used for synchronization purposes\&. 
+.PP
+Definition at line 80 of file XMLManager\&.java\&.
+.PP
+Referenced by org\&.jgap\&.xml\&.XMLManager\&.representChromosomeAsDocument(), and org\&.jgap\&.xml\&.XMLManager\&.representGenotypeAsDocument()\&.
+.SS "final String org\&.jgap\&.xml\&.XMLManager\&.SIZE_ATTRIBUTE = 'size'\fC [static]\fP, \fC [private]\fP"
+Constant representing the name of the size XML attribute that is added to genotype and chromosome elements to describe their size\&. 
+.PP
+Definition at line 63 of file XMLManager\&.java\&.
+.PP
+Referenced by org\&.jgap\&.xml\&.XMLManager\&.representChromosomeAsElement(), and org\&.jgap\&.xml\&.XMLManager\&.representGenotypeAsElement()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

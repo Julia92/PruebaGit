@@ -1,0 +1,392 @@
+.TH "org.jgap.gp.function.ReplaceInMatrix" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.function.ReplaceInMatrix \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandGene\fP, \fBorg\&.jgap\&.util\&.ICloneable\fP, and \fBorg\&.jgap\&.gp\&.IMutateable\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "enum \fBReplacementMode\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBReplaceInMatrix\fP (final GPConfiguration a_conf, String a_matrixName, \fBReplacementMode\fP a_mode, String a_targetCharacters, char a_replacement)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBReplaceInMatrix\fP (final GPConfiguration a_conf, String a_matrixName, \fBReplacementMode\fP a_mode, String a_targetCharacters, char a_replacement, int a_subChildType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "Class \fBgetChildType\fP (\fBIGPProgram\fP a_ind, int a_chromNum)"
+.br
+.ti -1c
+.RI "int \fBexecute_int\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "void \fBexecute_void\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP \fBapplyMutation\fP (int index, double a_percentage)  throws InvalidConfigurationException "
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "char \fBreplace\fP (char a_char)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "String \fBm_matrixName\fP"
+.br
+.ti -1c
+.RI "String \fBm_targetCharacters\fP"
+.br
+.ti -1c
+.RI "char \fBm_replacement\fP"
+.br
+.ti -1c
+.RI "\fBReplacementMode\fP \fBm_mode\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.6 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Replaces occurrences of specified characters in a two-dimensional matrix with a given other character\&. Returns the number of replacements\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file ReplaceInMatrix\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.ReplaceInMatrix (final GPConfigurationa_conf, Stringa_matrixName, \fBReplacementMode\fPa_mode, Stringa_targetCharacters, chara_replacement) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 39 of file ReplaceInMatrix\&.java\&.
+.SS "org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.ReplaceInMatrix (final GPConfigurationa_conf, Stringa_matrixName, \fBReplacementMode\fPa_mode, Stringa_targetCharacters, chara_replacement, inta_subChildType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Allows setting a sub child type\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_matrixName\fP name of the matrix 
+.br
+\fIa_mode\fP how to replace characters in the matrix 
+.br
+\fIa_targetCharacters\fP the characters to be replaced 
+.br
+\fIa_replacement\fP the character to replace others with 
+.br
+\fIa_subChildType\fP int 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 61 of file ReplaceInMatrix\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.IntegerClass\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBCommandGene\fP org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.applyMutation (inta_index, doublea_percentage) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Mutates a \fBCommandGene\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP references the part of a multipart object, normally not relevant 
+.br
+\fIa_percentage\fP the mutation rate (0\&.0 to 1\&.0) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the mutant 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IMutateable\fP\&.
+.PP
+Definition at line 251 of file ReplaceInMatrix\&.java\&.
+.SS "Object org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.clone ()\fC [inline]\fP"
+Clones the object\&. Simple and straight forward implementation here\&.
+.PP
+\fBReturns:\fP
+.RS 4
+cloned instance of this object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 240 of file ReplaceInMatrix\&.java\&.
+.SS "int org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.compareTo (Objecta_other)\fC [inline]\fP"
+The compareTo-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+-1, 0, 1
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 197 of file ReplaceInMatrix\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.m_mode, and org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.m_replacement\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.equals (Objecta_other)\fC [inline]\fP"
+The equals-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the objects are seen as equal
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 219 of file ReplaceInMatrix\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.m_mode, and org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.m_replacement\&.
+.SS "int org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.execute_int (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 105 of file ReplaceInMatrix\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.ReplacementMode\&.MATRIX\&.
+.SS "void org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.execute_void (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 168 of file ReplaceInMatrix\&.java\&.
+.SS "Class org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.getChildType (\fBIGPProgram\fPa_ind, inta_chromNum)\fC [inline]\fP"
+Determines which type a specific child of this command has\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ind\fP ignored here 
+.br
+\fIa_chromNum\fP index of child 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+type of the a_chromNum'th child
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 100 of file ReplaceInMatrix\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.IntegerClass\&.
+.SS "String org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.getName ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+textual name of this command
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 86 of file ReplaceInMatrix\&.java\&.
+.SS "char org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.replace (chara_char)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_char\fP the character to replace 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+replaced character, in case of no replacement the input character is returned\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 180 of file ReplaceInMatrix\&.java\&.
+.SS "String org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 75 of file ReplaceInMatrix\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.CVS_REVISION = '$Revision: 1\&.6 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 29 of file ReplaceInMatrix\&.java\&.
+.SS "String org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.m_matrixName\fC [private]\fP"
+Symbolic name of the matrix\&. Must correspond with a chosen name for \fBReadFromMatrix\fP\&. 
+.PP
+Definition at line 34 of file ReplaceInMatrix\&.java\&.
+.SS "\fBReplacementMode\fP org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.m_mode\fC [private]\fP"
+
+.PP
+Definition at line 37 of file ReplaceInMatrix\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.compareTo(), and org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.equals()\&.
+.SS "char org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.m_replacement\fC [private]\fP"
+
+.PP
+Definition at line 36 of file ReplaceInMatrix\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.compareTo(), and org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.equals()\&.
+.SS "String org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.m_targetCharacters\fC [private]\fP"
+
+.PP
+Definition at line 35 of file ReplaceInMatrix\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

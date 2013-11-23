@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="_l_r_u_cache_8java" kind="file">
+    <compoundname>LRUCache.java</compoundname>
+    <innerclass refid="classorg_1_1jgap_1_1util_1_1_l_r_u_cache" prot="public">org::jgap::util::LRUCache</innerclass>
+    <innernamespace refid="namespaceorg_1_1jgap_1_1util">org::jgap::util</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">org.jgap.util;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.*;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="classorg_1_1jgap_1_1util_1_1_l_r_u_cache" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classorg_1_1jgap_1_1util_1_1_l_r_u_cache" kindref="compound">LRUCache</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>LinkedHashMap<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>cache</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="classorg_1_1jgap_1_1util_1_1_l_r_u_cache_1a89b5359cb2211a7c967123972f7311ae" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1util_1_1_l_r_u_cache_1a89b5359cb2211a7c967123972f7311ae" kindref="member">m_maxEntries</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classorg_1_1jgap_1_1util_1_1_l_r_u_cache_1a6be253518097710d97b2d3fbd9d14f20" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1util_1_1_l_r_u_cache_1a6be253518097710d97b2d3fbd9d14f20" kindref="member">LRUCache</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_maxExtries)<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>super(a_maxExtries+1,<sp/>0.75F,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1util_1_1_l_r_u_cache_1a89b5359cb2211a7c967123972f7311ae" kindref="member">m_maxEntries</ref><sp/>=<sp/>a_maxExtries;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>method<sp/>is<sp/>called<sp/>just<sp/>after<sp/>a<sp/>new<sp/>entry<sp/>has<sp/>been<sp/>added</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="classorg_1_1jgap_1_1util_1_1_l_r_u_cache_1a42b41b117997d2619e71e26474cf84d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1util_1_1_l_r_u_cache_1a42b41b117997d2619e71e26474cf84d8" kindref="member">removeEldestEntry</ref>(Map.Entry<sp/>eldest)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>size()<sp/>&gt;<sp/><ref refid="classorg_1_1jgap_1_1util_1_1_l_r_u_cache_1a89b5359cb2211a7c967123972f7311ae" kindref="member">m_maxEntries</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>cache<sp/>is<sp/>to<sp/>be<sp/>used<sp/>by<sp/>multiple<sp/>threads,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>cache<sp/>must<sp/>be<sp/>wrapped<sp/>with<sp/>code<sp/>to<sp/>synchronize<sp/>the<sp/>methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>cache<sp/>=<sp/>(Map)<sp/>Collections.synchronizedMap(cache);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/util/LRUCache.java"/>
+  </compounddef>
+</doxygen>

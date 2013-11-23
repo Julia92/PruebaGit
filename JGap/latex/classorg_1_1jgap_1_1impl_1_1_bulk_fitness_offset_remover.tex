@@ -1,0 +1,389 @@
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover}{\section{org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover Class Reference}
+\label{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover}\index{org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover@{org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_a3cb4232935702ce5db82a3e8bb378f71}{Bulk\-Fitness\-Offset\-Remover} (final \hyperlink{classorg_1_1jgap_1_1_fitness_function}{Fitness\-Function} a\-\_\-ff)
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_a5ffd62bd47b23dfa534a5f4e775d3a0e}{evaluate} (final \hyperlink{classorg_1_1jgap_1_1_population}{Population} a\-\_\-chromosomes)
+\item 
+double \hyperlink{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_ab0c11462e990be4138a99d0a6e4611e2}{get\-Absolute\-Fitness} (final \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} a\-\_\-individuum)
+\item 
+Object \hyperlink{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_ab7f936892509f88c709361f5356d2195}{clone} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1_fitness_function}{Fitness\-Function} \hyperlink{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_a146b2858f31e684e3bec61818a32f730}{m\-\_\-ff}
+\item 
+double \hyperlink{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_a6741e29abe529b43b2e61d3301a1ce3c}{m\-\_\-previous\-Offset}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_a5a306d0059b248c4b2282b633e49f878}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-12 \$\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Takes away the fitness offset of the population to evolve. The fitness function values of the population of \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{org.\-jgap.\-I\-Chromosome} instances will start from a minimum of 1 afterwards. 
+
+The removal of an offset in the fitness values of a population strengthens the \char`\"{}survival of the fittest\char`\"{} effect of a selector that performs selection upon fitness values. A high offset in the fitness values of a population lowers the relative difference between the fitness values of the Chromosomes in a population. 
+
+\paragraph*{Example of applicability}
+
+You are optimizing a black box with {\itshape n} parameters that are mapped to \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{org.\-jgap.\-I\-Chromosome} instances each having {\itshape n} \hyperlink{interfaceorg_1_1jgap_1_1_gene}{org.\-jgap.\-Gene} instances.\par
+ You want to minimize the answer time of the black box and provide a \hyperlink{classorg_1_1jgap_1_1_fitness_function_a0078e42480eac93729f906ac4dc185d9}{org.\-jgap.\-Fitness\-Function\#evaluate(org.\-jgap.\-I\-Chromosome)} that takes the genes out of the chromosome, put's it's \hyperlink{interfaceorg_1_1jgap_1_1_gene_aa06c80639659ddbcfa1cfe7b7bb109f9}{org.\-jgap.\-Gene\#get\-Allele()} values to the parameters and measures the answer time of the black box (by invoking it's service to optimize). \par
+ The longer the time takes, the worse it's fitness is, so you have to invert the measured times to fitness values\-: \label{_bboptimizer}%
+ 
+\begin{DoxyPre}
+<font color="#0011EE">
+class BlackBoxOptimizer extends \hyperlink{classorg_1_1jgap_1_1_fitness_function}{org.jgap.FitnessFunction}\{
+  private BlackBox bbox;
+  <font color="#999999">//Additional code: constructors</font>
+  <font color="#999999">...</font>
+  public double evaluate(\hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{org.jgap.IChromosome} chromosome)\{
+    double fitness = 0;
+    <font color="#999999">// get the \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}[] \& put the parameters into the box.
+    ...
+    </font>
+    long duration = System.currentTimeMillis();
+<font color="#999999">
+// You certainly will use an advanced StopWatch...</font>
+    this.bbox.service();
+<font color="#999999">// The black boxes service to optimize.</font>
+    duration = System.currentTimeMillis()-duration;
+    <font color="#999999">// transform the time into fitness value:</font>
+    fitness = double.MAX\_VALUE - (double)duration;
+    return fitness;
+  \}
+\}
+</font>
+\end{DoxyPre}
+ 
+
+\subparagraph*{We might get the following results (each row stands for a \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome}, the table is a population)\-:}
+
+\begin{TabularC}{3}
+\hline
+\rowcolor{lightgray}{\bf duration  }&{\bf fitness  }&{\bf piece of fitness cake   }\\\cline{1-3}
+2000  &9218868437227403311  &33.\-333333333333336949106088992532 \%   \\\cline{1-3}
+3000  &9218868437227402311  &33.\-333333333333333333333333333333 \%   \\\cline{1-3}
+4000  &9218868437227401311  &33.\-333333333333329717560577674135 \%   \\\cline{1-3}
+\end{TabularC}
+
+
+If any \hyperlink{classorg_1_1jgap_1_1_natural_selector}{org.\-jgap.\-Natural\-Selector} performs selection based upon the fitness values, it will have to put those values in relation to each other. As a fact, the probability to select the \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} that contained the black box parameters that caused an answer time of 4000 ms is \char`\"{}equal\char`\"{} to the probability to select the \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} that caused a black box answer time to be 2000 ms! 
+
+Of course one could work around that problem by replacing the {\ttfamily Integer.\-M\-A\-X\-\_\-\-V\-A\-L\-U\-E} transformation by a fixed maximum value the black box would need for the service. But what, if you have no guaranteed maximum answer time for the service of the black box ? Even if you have got one, it will be chosen sufficently high above the average answer time thus letting your fitness function return values with a high offset in the fitness. 
+
+\subparagraph*{This is, what happens, if you use this instance for fitness evaluation\-:}
+
+\begin{TabularC}{3}
+\hline
+\rowcolor{lightgray}{\bf duration  }&{\bf fitness  }&{\bf piece of fitness cake   }\\\cline{1-3}
+2000  &2001  &66.\-63 \%   \\\cline{1-3}
+3000  &1001  &33.\-33 \%   \\\cline{1-3}
+4000  &1  &0.\-03 \%   \\\cline{1-3}
+\end{TabularC}
+
+
+\paragraph*{Example of usage}
+
+This example shows how to use this instance for cutting fitness offsets. It is the same example as used \href{#bboptimizer}{\tt above}. 
+\begin{DoxyPre}
+<font color="#0011EE">
+class BlackBoxOptimizer extends \hyperlink{classorg_1_1jgap_1_1_fitness_function}{org.jgap.FitnessFunction}\{
+  <font color="#999999">// Additional code: constructors
+  ...</font>
+  public double evaluate(\hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{org.jgap.IChromosome} chromosome)\{
+    <font color="#999999">.... // As shown above.</font>
+  \}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}  public void startOptimization(\hyperlink{classorg_1_1jgap_1_1_configuration}{org.jgap.Configuration} gaConf)
+      throws \hyperlink{classorg_1_1jgap_1_1_invalid_configuration_exception}{InvalidConfigurationException}\{
+    <font color="#999999">
+    // The given \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} may be preconfigured with
+    // \hyperlink{classorg_1_1jgap_1_1_natural_selector}{NaturalSelector} \& \hyperlink{interfaceorg_1_1jgap_1_1_genetic_operator}{GeneticOperator} instances,.
+    // But should not contain a \hyperlink{classorg_1_1jgap_1_1_fitness_function}{FitnessFunction} or BulkFitnessFunction!
+</font>
+    {\bfseries gaConf.setBulkFitnessFunction(new BulkFitnessOffsetRemover(this));}
+    <font color="#999999">// Why does it work? We implement FitnessFunction!
+    // Still to do here:
+    // - Create a sample chromosome according to your blackbox \& set it to
+     //   the configuration.
+    // - Create a random inital \hyperlink{classorg_1_1jgap_1_1_genotype}{Genotype}.
+    // - loop over a desired amount of generations invoking
+     //   aGenotype.evolve()..</font>
+  \}
+\}
+</font>
+\end{DoxyPre}
+ 
+
+\begin{DoxyAuthor}{Author}
+Achim Westermann 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-2 
+\end{DoxySince}
+
+
+Definition at line 223 of file Bulk\-Fitness\-Offset\-Remover.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_a3cb4232935702ce5db82a3e8bb378f71}{\index{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover@{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover}!Bulk\-Fitness\-Offset\-Remover@{Bulk\-Fitness\-Offset\-Remover}}
+\index{Bulk\-Fitness\-Offset\-Remover@{Bulk\-Fitness\-Offset\-Remover}!org::jgap::impl::BulkFitnessOffsetRemover@{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover}}
+\subsubsection[{Bulk\-Fitness\-Offset\-Remover}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover.\-Bulk\-Fitness\-Offset\-Remover (
+\begin{DoxyParamCaption}
+\item[{final {\bf Fitness\-Function}}]{a\-\_\-ff}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_a3cb4232935702ce5db82a3e8bb378f71}
+
+
+Definition at line 261 of file Bulk\-Fitness\-Offset\-Remover.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover.\-m\-\_\-ff.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover.\-clone().
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_ab7f936892509f88c709361f5356d2195}{\index{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover@{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover}!clone@{clone}}
+\index{clone@{clone}!org::jgap::impl::BulkFitnessOffsetRemover@{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}Object org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover.\-clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_ab7f936892509f88c709361f5356d2195}
+\begin{DoxyReturn}{Returns}
+deep clone of current instance
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-2 
+\end{DoxySince}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1util_1_1_i_cloneable_aa7e7d62077e6428ad7904932b1b4f7d5}{org.\-jgap.\-util.\-I\-Cloneable}.
+
+
+
+Definition at line 461 of file Bulk\-Fitness\-Offset\-Remover.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover.\-Bulk\-Fitness\-Offset\-Remover(), org.\-jgap.\-Fitness\-Function.\-clone(), and org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover.\-m\-\_\-ff.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_ab7f936892509f88c709361f5356d2195_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_a5ffd62bd47b23dfa534a5f4e775d3a0e}{\index{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover@{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!org::jgap::impl::BulkFitnessOffsetRemover@{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover}}
+\subsubsection[{evaluate}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover.\-evaluate (
+\begin{DoxyParamCaption}
+\item[{final {\bf Population}}]{a\-\_\-chromosomes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_a5ffd62bd47b23dfa534a5f4e775d3a0e}
+
+
+Definition at line 271 of file Bulk\-Fitness\-Offset\-Remover.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover.\-m\-\_\-previous\-Offset.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_ab0c11462e990be4138a99d0a6e4611e2}{\index{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover@{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover}!get\-Absolute\-Fitness@{get\-Absolute\-Fitness}}
+\index{get\-Absolute\-Fitness@{get\-Absolute\-Fitness}!org::jgap::impl::BulkFitnessOffsetRemover@{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover}}
+\subsubsection[{get\-Absolute\-Fitness}]{\setlength{\rightskip}{0pt plus 5cm}double org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover.\-get\-Absolute\-Fitness (
+\begin{DoxyParamCaption}
+\item[{final {\bf I\-Chromosome}}]{a\-\_\-individuum}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_ab0c11462e990be4138a99d0a6e4611e2}
+Using this instance to remove the fitness offset in the populations brings the advantage of getting a selection more sensitive to the differences of fitness of the chromosomes. 
+
+The disadvantage is, that the fitness values are modified. The modification is good for jgap's selection method but bad for the guys that want to see the success of your work, or need a proof that a G\-A improves over time\-: \par
+ The value of \hyperlink{classorg_1_1jgap_1_1_genotype_a05380af4c0737841c09d3a5533f9f942}{org.\-jgap.\-Genotype\#get\-Fittest\-Chromosome()} does not seem to increase over the generations. Most often it becomes worse. This is caused by the fact, that all Chromosomes are getting better over time (the fitness interval of all Chromosomes gets narrower) and the offset that may be cut becomes bigger. 
+
+If you want to get an absolute value independant from the offset that is cut off from the chromosome's fitness value, this method has to be used. 
+
+Stop reading here because a 
+
+\subparagraph*{Mathematical Proof}
+
+is following. How can it work to get the absolute value for all Chromosomes fitness values? Some Chromosomes may have lived for many generations and everytime their fitness was evaluated here, the old offset was added and a new one was calculated and subtracted from the fitness value. 
+
+Each bulk fitness evaluation a \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} experiences, it's fitness value {\itshape F} get's an addition of the old offset {\itshape O$_{\mbox{(n-\/1)}}$ } and a substraction by the new offset {\itshape O$_{\mbox{n}}$ }.\par
+ {\itshape $_{\mbox{n}}$ } is the generation index.
+
+
+\begin{DoxyPre}
+F$_{\mbox{1}}$  = F$_{\mbox{0}}$  + O$_{\mbox{0}}$  - O$_{\mbox{1}}$ 
+F$_{\mbox{2}}$  = F$_{\mbox{1}}$  + O$_{\mbox{1}}$  - O$_{\mbox{2}}$ 
+F$_{\mbox{3}}$  = F$_{\mbox{2}}$  + O$_{\mbox{2}}$  - O$_{\mbox{3}}$ \end{DoxyPre}
+
+
+
+\begin{DoxyPre}=>\end{DoxyPre}
+
+
+
+\begin{DoxyPre}1) F$_{\mbox{n}}$  = {\bfseries F$_{\mbox{(n-1)}}$ }
++ O$_{\mbox{(n-1)}}$  - O$_{\mbox{n}}$ \end{DoxyPre}
+
+
+
+\begin{DoxyPre}2) {\bfseries F$_{\mbox{(n-1)}}$ } = F$_{\mbox{(n-2)}}$ 
++ O$_{\mbox{(n-2)}}$  - O$_{\mbox{(n-1)}}$ \end{DoxyPre}
+
+
+
+\begin{DoxyPre}2 in 1)
+   F$_{\mbox{n}}$  = (F$_{\mbox{(n-2)}}$  + O$_{\mbox{(n-2)}}$ 
+\begin{DoxyItemize}
+\item O$_{\mbox{(n-1)}}$ ) + O$_{\mbox{(n-1)}}$  - O$_{\mbox{n}}$ 
+   F$_{\mbox{n}}$  = F$_{\mbox{(n-2)}}$  + O$_{\mbox{(n-2)}}$  - O$_{\mbox{n}}$ 
+\end{DoxyItemize}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}We made a step over 2 generations: With the current offset and the
+fitness \& offset of the
+"preprevious" generation we can calculate the current fitness.
+We can assume that this generation stepping works for farer steps
+$_{\mbox{m}}$  (just continue step 2) until you have a generation step value
+high enough ;-))\end{DoxyPre}
+
+
+
+\begin{DoxyPre}=> F$_{\mbox{n}}$  = F$_{\mbox{(n-m)}}$  + O$_{\mbox{(n-m)}}$  - O$_{\mbox{n}}$ \end{DoxyPre}
+
+
+
+\begin{DoxyPre}We want to get the original absolute value of fitness:\end{DoxyPre}
+
+
+
+\begin{DoxyPre}3) m := n\end{DoxyPre}
+
+
+
+\begin{DoxyPre}=> F$_{\mbox{n}}$  = F$_{\mbox{0}}$  + O$_{\mbox{0}}$  - O$_{\mbox{n}}$ \end{DoxyPre}
+
+
+
+\begin{DoxyPre}solved to F$_{\mbox{0}}$  our original value:\end{DoxyPre}
+
+
+
+\begin{DoxyPre}F$_{\mbox{0}}$  = F$_{\mbox{n}}$  + O$_{\mbox{n}}$  - O$_{\mbox{0}}$ \end{DoxyPre}
+
+
+
+\begin{DoxyPre}And our initial offset \hyperlink{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_a6741e29abe529b43b2e61d3301a1ce3c}{O$_{\mbox{0}}$ } is zero!
+\end{DoxyPre}
+ 
+
+This shows, that it is possible to compute the original fitness value of a \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} from it's current fitness value and the \hyperlink{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_a6741e29abe529b43b2e61d3301a1ce3c}{previous offset} regardless of the amounts of generations between original evaluation and the current generation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-individuum} & any \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} that is normally being evaluated by this {\ttfamily \hyperlink{classorg_1_1jgap_1_1_bulk_fitness_function}{Bulk\-Fitness\-Function}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the original fitness value as returned by the registered \hyperlink{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_a146b2858f31e684e3bec61818a32f730}{fitness\-Function} instance. 
+\end{DoxyReturn}
+
+
+Definition at line 434 of file Bulk\-Fitness\-Offset\-Remover.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover.\-m\-\_\-previous\-Offset.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_a5a306d0059b248c4b2282b633e49f878}{\index{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover@{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::impl::BulkFitnessOffsetRemover@{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-12 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_a5a306d0059b248c4b2282b633e49f878}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 226 of file Bulk\-Fitness\-Offset\-Remover.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_a146b2858f31e684e3bec61818a32f730}{\index{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover@{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover}!m\-\_\-ff@{m\-\_\-ff}}
+\index{m\-\_\-ff@{m\-\_\-ff}!org::jgap::impl::BulkFitnessOffsetRemover@{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover}}
+\subsubsection[{m\-\_\-ff}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Fitness\-Function} org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover.\-m\-\_\-ff\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_a146b2858f31e684e3bec61818a32f730}
+
+
+Definition at line 232 of file Bulk\-Fitness\-Offset\-Remover.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover.\-Bulk\-Fitness\-Offset\-Remover(), and org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover.\-clone().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_a6741e29abe529b43b2e61d3301a1ce3c}{\index{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover@{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover}!m\-\_\-previous\-Offset@{m\-\_\-previous\-Offset}}
+\index{m\-\_\-previous\-Offset@{m\-\_\-previous\-Offset}!org::jgap::impl::BulkFitnessOffsetRemover@{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover}}
+\subsubsection[{m\-\_\-previous\-Offset}]{\setlength{\rightskip}{0pt plus 5cm}double org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover.\-m\-\_\-previous\-Offset\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_a6741e29abe529b43b2e61d3301a1ce3c}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000160}{Todo}]This constructor is planned but not possible yet, as the \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} permits bulk fitness function and simple fitness function both existing in it at the same time. \end{DoxyRefDesc}
+
+
+The last generations offset. This has to be stored because Chromosomes that were put into the new generation's candidate list already have the fitness value without offset from their previous evaluation. 
+
+We try to avoid evaluations of the fitness function as it might be expensive, so we reuse fitness values. If a \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} already has a fitness value $>$0 this previous\-Offset is added to it's fitness to allow comparing this \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome}'s fitness with newly evaluated Chromosomes (which still have the offset from the evaluation). 
+
+Definition at line 259 of file Bulk\-Fitness\-Offset\-Remover.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover.\-evaluate(), and org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover.\-get\-Absolute\-Fitness().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/impl/\hyperlink{_bulk_fitness_offset_remover_8java}{Bulk\-Fitness\-Offset\-Remover.\-java}\end{DoxyCompactItemize}

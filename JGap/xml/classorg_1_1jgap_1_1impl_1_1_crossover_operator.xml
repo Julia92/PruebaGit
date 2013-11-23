@@ -1,0 +1,1194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1impl_1_1_crossover_operator" kind="class" prot="public">
+    <compoundname>org::jgap::impl::CrossoverOperator</compoundname>
+    <basecompoundref refid="classorg_1_1jgap_1_1_base_genetic_operator" prot="public" virt="non-virtual">org.jgap.BaseGeneticOperator</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Comparable</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aa73ddc68b26dbdc664092f82f5e2b25b" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.impl.CrossoverOperator.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.48 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="42" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aa52cbe6354a3465bccfed04dae06ee1a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int org.jgap.impl.CrossoverOperator.m_crossoverRate</definition>
+        <argsstring></argsstring>
+        <name>m_crossoverRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current crossover rate used by this crossover operator (mutual exclusive to m_crossoverRatePercent and m_crossoverRateCalc). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="48" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="48" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a13ba59ced7b3bfd8b7f9433756664726" compoundref="_crossover_operator_8java" startline="466" endline="509">org.jgap.impl.CrossoverOperator.compareTo</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aca102ac7c7649f8cff5066c4e48b6d8f" compoundref="_crossover_operator_8java" startline="223" endline="237">org.jgap.impl.CrossoverOperator.CrossoverOperator</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a4152e74d59787d7f2a892b9f90e8340d" compoundref="_crossover_operator_8java" startline="537" endline="539">org.jgap.impl.CrossoverOperator.getCrossOverRate</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aa912b24ed525835736758d64e373207d" compoundref="_crossover_operator_8java" startline="114" endline="122">org.jgap.impl.CrossoverOperator.init</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a271b82e98b398a42b576c956350d905e" compoundref="_crossover_operator_8java" startline="323" endline="388">org.jgap.impl.CrossoverOperator.operate</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1ac91121e8161678732d4b8c74cf793913" compoundref="_crossover_operator_8java" startline="446" endline="453">org.jgap.impl.CrossoverOperator.setCrossoverRateCalc</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a90f409ea79fa88fabab8dcbdbbc8a00d" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double org.jgap.impl.CrossoverOperator.m_crossoverRatePercent</definition>
+        <argsstring></argsstring>
+        <name>m_crossoverRatePercent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Crossover rate in percentage of population size (mutual exclusive to m_crossoverRate and m_crossoverRateCalc). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="54" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="54" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aca102ac7c7649f8cff5066c4e48b6d8f" compoundref="_crossover_operator_8java" startline="223" endline="237">org.jgap.impl.CrossoverOperator.CrossoverOperator</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a3a23b88eca25371ff8429d0fedf1c8b8" compoundref="_crossover_operator_8java" startline="547" endline="549">org.jgap.impl.CrossoverOperator.getCrossOverRatePercent</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aa912b24ed525835736758d64e373207d" compoundref="_crossover_operator_8java" startline="114" endline="122">org.jgap.impl.CrossoverOperator.init</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a271b82e98b398a42b576c956350d905e" compoundref="_crossover_operator_8java" startline="323" endline="388">org.jgap.impl.CrossoverOperator.operate</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1ac91121e8161678732d4b8c74cf793913" compoundref="_crossover_operator_8java" startline="446" endline="453">org.jgap.impl.CrossoverOperator.setCrossoverRateCalc</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a61a6063cd362c344fd4d394657d81976" prot="private" static="no" mutable="no">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_i_universal_rate_calculator" kindref="compound">IUniversalRateCalculator</ref></type>
+        <definition>IUniversalRateCalculator org.jgap.impl.CrossoverOperator.m_crossoverRateCalc</definition>
+        <argsstring></argsstring>
+        <name>m_crossoverRateCalc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculator for dynamically determining the crossover rate (mutual exclusive to m_crossoverRate and m_crossoverRatePercent) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="60" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="60" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a13ba59ced7b3bfd8b7f9433756664726" compoundref="_crossover_operator_8java" startline="466" endline="509">org.jgap.impl.CrossoverOperator.compareTo</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a271b82e98b398a42b576c956350d905e" compoundref="_crossover_operator_8java" startline="323" endline="388">org.jgap.impl.CrossoverOperator.operate</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1ac91121e8161678732d4b8c74cf793913" compoundref="_crossover_operator_8java" startline="446" endline="453">org.jgap.impl.CrossoverOperator.setCrossoverRateCalc</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1abe148b3654e3083ae0136f95c3fc0a22" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.CrossoverOperator.m_allowFullCrossOver</definition>
+        <argsstring></argsstring>
+        <name>m_allowFullCrossOver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>true: x-over before and after a randomly chosen x-over point false: only x-over after the chosen point. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="66" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="66" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a13ba59ced7b3bfd8b7f9433756664726" compoundref="_crossover_operator_8java" startline="466" endline="509">org.jgap.impl.CrossoverOperator.compareTo</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a51faa8e8996095443a18c617768cd01f" compoundref="_crossover_operator_8java" startline="527" endline="529">org.jgap.impl.CrossoverOperator.isAllowFullCrossOver</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aefa1ab099925469046f4a3777f9fe61f" compoundref="_crossover_operator_8java" startline="517" endline="519">org.jgap.impl.CrossoverOperator.setAllowFullCrossOver</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a3fd77bb9d65f47999fd875cb58d52099" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.CrossoverOperator.m_xoverNewAge</definition>
+        <argsstring></argsstring>
+        <name>m_xoverNewAge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>true: also x-over chromosomes with age of zero (newly created chromosomes) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="71" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="71" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a13ba59ced7b3bfd8b7f9433756664726" compoundref="_crossover_operator_8java" startline="466" endline="509">org.jgap.impl.CrossoverOperator.compareTo</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1af27944540a7f2bc7beef78da63445f10" compoundref="_crossover_operator_8java" startline="569" endline="571">org.jgap.impl.CrossoverOperator.isXoverNewAge</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1af5444671de9ac65f400d401d5b649170" compoundref="_crossover_operator_8java" startline="558" endline="560">org.jgap.impl.CrossoverOperator.setXoverNewAge</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a1f75f1e7fbc8d7b9332f92f67f72f0c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.CrossoverOperator.CrossoverOperator</definition>
+        <argsstring>()</argsstring>
+        <name>CrossoverOperator</name>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a new instance of this <ref refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator" kindref="compound">CrossoverOperator</ref> without a specified crossover rate, this results in dynamic crossover rate being turned off. This means that the crossover rate will be fixed at populationsize/2.</para><para>Attention: The configuration used is the one set with the static method Genotype.setConfiguration.</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Chris Knowles </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="85" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="85" bodyend="89"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1aaf3d4bf0b470aa4655e85262289443eb" compoundref="_genotype_8java" startline="520" endline="522">org.jgap.Genotype.getStaticConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aa912b24ed525835736758d64e373207d" compoundref="_crossover_operator_8java" startline="114" endline="122">org.jgap.impl.CrossoverOperator.init</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a13ba59ced7b3bfd8b7f9433756664726" compoundref="_crossover_operator_8java" startline="466" endline="509">org.jgap.impl.CrossoverOperator.compareTo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1ab5689ffd5b3f6e2d06c8d05f6bc5e8bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.CrossoverOperator.CrossoverOperator</definition>
+        <argsstring>(final Configuration a_configuration)</argsstring>
+        <name>CrossoverOperator</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a new instance of this <ref refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator" kindref="compound">CrossoverOperator</ref> without a specified crossover rate, this results in dynamic crossover rate being turned off. This means that the crossover rate will be fixed at populationsize/2.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="102" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="102" bodyend="106"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aa912b24ed525835736758d64e373207d" compoundref="_crossover_operator_8java" startline="114" endline="122">org.jgap.impl.CrossoverOperator.init</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a609bfb00afea32f4b32b7ae3c1889858" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.CrossoverOperator.CrossoverOperator</definition>
+        <argsstring>(final Configuration a_configuration, final IUniversalRateCalculator a_crossoverRateCalculator)</argsstring>
+        <name>CrossoverOperator</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_i_universal_rate_calculator" kindref="compound">IUniversalRateCalculator</ref></type>
+          <declname>a_crossoverRateCalculator</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a new instance of this <ref refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator" kindref="compound">CrossoverOperator</ref> with a specified crossover rate calculator, which results in dynamic crossover being turned on.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_crossoverRateCalculator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>calculator for dynamic crossover rate computation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Chris Knowles </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 (since 2.0 without a_configuration) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="138" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="138" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a55030a95f4c442d19fb0db2f7f949439" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.CrossoverOperator.CrossoverOperator</definition>
+        <argsstring>(final Configuration a_configuration, final IUniversalRateCalculator a_crossoverRateCalculator, boolean a_allowFullCrossOver)</argsstring>
+        <name>CrossoverOperator</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_i_universal_rate_calculator" kindref="compound">IUniversalRateCalculator</ref></type>
+          <declname>a_crossoverRateCalculator</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_allowFullCrossOver</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a new instance of this <ref refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator" kindref="compound">CrossoverOperator</ref> with a specified crossover rate calculator, which results in dynamic crossover being turned on.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_crossoverRateCalculator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>calculator for dynamic crossover rate computation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_allowFullCrossOver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true: x-over before AND after x-over point, false: only x-over after x-over point </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="160" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="160" bodyend="168"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aefa1ab099925469046f4a3777f9fe61f" compoundref="_crossover_operator_8java" startline="517" endline="519">org.jgap.impl.CrossoverOperator.setAllowFullCrossOver</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1ac91121e8161678732d4b8c74cf793913" compoundref="_crossover_operator_8java" startline="446" endline="453">org.jgap.impl.CrossoverOperator.setCrossoverRateCalc</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a104345e6601aee5183d9e6411a73522d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.CrossoverOperator.CrossoverOperator</definition>
+        <argsstring>(final Configuration a_configuration, final int a_desiredCrossoverRate)</argsstring>
+        <name>CrossoverOperator</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <param>
+          <type>final int</type>
+          <declname>a_desiredCrossoverRate</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a new instance of this <ref refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator" kindref="compound">CrossoverOperator</ref> with the given crossover rate.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_desiredCrossoverRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the desired rate of crossover </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Chris Knowles </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 (since 2.0 without a_configuration) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="182" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="182" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a442b1e27d3066fa2463bd193f047aa06" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.CrossoverOperator.CrossoverOperator</definition>
+        <argsstring>(final Configuration a_configuration, final int a_desiredCrossoverRate, boolean a_allowFullCrossOver)</argsstring>
+        <name>CrossoverOperator</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <param>
+          <type>final int</type>
+          <declname>a_desiredCrossoverRate</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_allowFullCrossOver</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a new instance of this <ref refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator" kindref="compound">CrossoverOperator</ref> with the given crossover rate. No new chromosomes are x-overed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_desiredCrossoverRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the desired rate of crossover </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_allowFullCrossOver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true: x-over before AND after x-over point, false: only x-over after x-over point </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="201" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="201" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aca102ac7c7649f8cff5066c4e48b6d8f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.CrossoverOperator.CrossoverOperator</definition>
+        <argsstring>(final Configuration a_configuration, final int a_desiredCrossoverRate, final boolean a_allowFullCrossOver, final boolean a_xoverNewAge)</argsstring>
+        <name>CrossoverOperator</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <param>
+          <type>final int</type>
+          <declname>a_desiredCrossoverRate</declname>
+        </param>
+        <param>
+          <type>final boolean</type>
+          <declname>a_allowFullCrossOver</declname>
+        </param>
+        <param>
+          <type>final boolean</type>
+          <declname>a_xoverNewAge</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a new instance of this <ref refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator" kindref="compound">CrossoverOperator</ref> with the given crossover rate.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_desiredCrossoverRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the desired rate of crossover </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_allowFullCrossOver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true: x-over before AND after x-over point, false: only x-over after x-over point </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_xoverNewAge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true: also x-over chromosomes with age of zero (newly created chromosomes)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="223" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="223" bodyend="237"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aa52cbe6354a3465bccfed04dae06ee1a" compoundref="_crossover_operator_8java" startline="48">org.jgap.impl.CrossoverOperator.m_crossoverRate</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a90f409ea79fa88fabab8dcbdbbc8a00d" compoundref="_crossover_operator_8java" startline="54">org.jgap.impl.CrossoverOperator.m_crossoverRatePercent</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aefa1ab099925469046f4a3777f9fe61f" compoundref="_crossover_operator_8java" startline="517" endline="519">org.jgap.impl.CrossoverOperator.setAllowFullCrossOver</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1ac91121e8161678732d4b8c74cf793913" compoundref="_crossover_operator_8java" startline="446" endline="453">org.jgap.impl.CrossoverOperator.setCrossoverRateCalc</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1af5444671de9ac65f400d401d5b649170" compoundref="_crossover_operator_8java" startline="558" endline="560">org.jgap.impl.CrossoverOperator.setXoverNewAge</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a4affbff4c1ad04ca1b2b9b8d276949c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.CrossoverOperator.CrossoverOperator</definition>
+        <argsstring>(final Configuration a_configuration, final double a_crossoverRatePercentage)</argsstring>
+        <name>CrossoverOperator</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <param>
+          <type>final double</type>
+          <declname>a_crossoverRatePercentage</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a new instance of this <ref refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator" kindref="compound">CrossoverOperator</ref> with the given crossover rate. No new chromosomes are x-overed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_crossoverRatePercentage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the desired rate of crossover in percentage of the population </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Chris Knowles </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 (since 2.0 without a_configuration) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="252" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="252" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a2216a6251f7bd64b1270ac55ed9d1256" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.CrossoverOperator.CrossoverOperator</definition>
+        <argsstring>(final Configuration a_configuration, final double a_crossoverRatePercentage, boolean a_allowFullCrossOver)</argsstring>
+        <name>CrossoverOperator</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <param>
+          <type>final double</type>
+          <declname>a_crossoverRatePercentage</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_allowFullCrossOver</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a new instance of this <ref refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator" kindref="compound">CrossoverOperator</ref> with the given crossover rate. No new chromosomes are x-overed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_crossoverRatePercentage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the desired rate of crossover in percentage of the population </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_allowFullCrossOver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true: x-over before AND after x-over point, false: only x-over after x-over point </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.2. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="272" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="272" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a7ca6733e4e742ee2e3f5f7628beb7614" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.CrossoverOperator.CrossoverOperator</definition>
+        <argsstring>(final Configuration a_configuration, final double a_crossoverRatePercentage, final boolean a_allowFullCrossOver, final boolean a_xoverNewAge)</argsstring>
+        <name>CrossoverOperator</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <param>
+          <type>final double</type>
+          <declname>a_crossoverRatePercentage</declname>
+        </param>
+        <param>
+          <type>final boolean</type>
+          <declname>a_allowFullCrossOver</declname>
+        </param>
+        <param>
+          <type>final boolean</type>
+          <declname>a_xoverNewAge</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a new instance of this <ref refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator" kindref="compound">CrossoverOperator</ref> with the given crossover rate.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_crossoverRatePercentage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the desired rate of crossover in percentage of the population </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_allowFullCrossOver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true: x-over before AND after x-over point, false: only x-over after x-over point </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_xoverNewAge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true: also x-over chromosomes with age of zero (newly created chromosomes) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.2. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="295" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="295" bodyend="309"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aa52cbe6354a3465bccfed04dae06ee1a" compoundref="_crossover_operator_8java" startline="48">org.jgap.impl.CrossoverOperator.m_crossoverRate</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a90f409ea79fa88fabab8dcbdbbc8a00d" compoundref="_crossover_operator_8java" startline="54">org.jgap.impl.CrossoverOperator.m_crossoverRatePercent</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aefa1ab099925469046f4a3777f9fe61f" compoundref="_crossover_operator_8java" startline="517" endline="519">org.jgap.impl.CrossoverOperator.setAllowFullCrossOver</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1ac91121e8161678732d4b8c74cf793913" compoundref="_crossover_operator_8java" startline="446" endline="453">org.jgap.impl.CrossoverOperator.setCrossoverRateCalc</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1af5444671de9ac65f400d401d5b649170" compoundref="_crossover_operator_8java" startline="558" endline="560">org.jgap.impl.CrossoverOperator.setXoverNewAge</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a271b82e98b398a42b576c956350d905e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.CrossoverOperator.operate</definition>
+        <argsstring>(final Population a_population, final List a_candidateChromosomes)</argsstring>
+        <name>operate</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_genetic_operator_1a0f9dfe925c4c21e07522be67d6c5d084">operate</reimplements>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_population</declname>
+        </param>
+        <param>
+          <type>final List</type>
+          <declname>a_candidateChromosomes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Does the crossing over.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_population</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the population of chromosomes from the current evolution prior to exposure to crossing over </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_candidateChromosomes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the pool of chromosomes that have been selected for the next evolved population</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="323" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="323" bodyend="388"/>
+        <references refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable_1aa7e7d62077e6428ad7904932b1b4f7d5">org.jgap.util.ICloneable.clone</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a4e72f9a7da7293b0efd6c227ce496f22" compoundref="_crossover_operator_8java" startline="390" endline="436">org.jgap.impl.CrossoverOperator.doCrossover</references>
+        <references refid="classorg_1_1jgap_1_1_base_genetic_operator_1addbc6b98f572331d47397227b7a49f6a" compoundref="_base_genetic_operator_8java" startline="57" endline="59">org.jgap.BaseGeneticOperator.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1af27944540a7f2bc7beef78da63445f10" compoundref="_crossover_operator_8java" startline="569" endline="571">org.jgap.impl.CrossoverOperator.isXoverNewAge</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aa52cbe6354a3465bccfed04dae06ee1a" compoundref="_crossover_operator_8java" startline="48">org.jgap.impl.CrossoverOperator.m_crossoverRate</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a61a6063cd362c344fd4d394657d81976" compoundref="_crossover_operator_8java" startline="60">org.jgap.impl.CrossoverOperator.m_crossoverRateCalc</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a90f409ea79fa88fabab8dcbdbbc8a00d" compoundref="_crossover_operator_8java" startline="54">org.jgap.impl.CrossoverOperator.m_crossoverRatePercent</references>
+        <references refid="classorg_1_1jgap_1_1_base_genetic_operator_1a5194e705ed206f99852bf158546646b5" compoundref="_base_genetic_operator_8java" startline="30">org.jgap.BaseGeneticOperator.m_monitorActive</references>
+        <references refid="classorg_1_1jgap_1_1_population_1a2d09529f8e93d57a0546625362ca5bee" compoundref="_population_8java" startline="267" endline="269">org.jgap.Population.size</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a13ba59ced7b3bfd8b7f9433756664726" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.impl.CrossoverOperator.compareTo</definition>
+        <argsstring>(final Object a_other)</argsstring>
+        <name>compareTo</name>
+        <param>
+          <type>final Object</type>
+          <declname>a_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compares the given object to this one.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the instance against which to compare this instance </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a negative number if this instance is &quot;less than&quot; the given instance, zero if they are equal to each other, and a positive number if this is &quot;greater than&quot; the given instance</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000161"><xreftitle>Todo</xreftitle><xrefdescription><para>consider <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="466" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="466" bodyend="509"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a1f75f1e7fbc8d7b9332f92f67f72f0c6" compoundref="_crossover_operator_8java" startline="85" endline="89">org.jgap.impl.CrossoverOperator.CrossoverOperator</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1abe148b3654e3083ae0136f95c3fc0a22" compoundref="_crossover_operator_8java" startline="66">org.jgap.impl.CrossoverOperator.m_allowFullCrossOver</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aa52cbe6354a3465bccfed04dae06ee1a" compoundref="_crossover_operator_8java" startline="48">org.jgap.impl.CrossoverOperator.m_crossoverRate</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a61a6063cd362c344fd4d394657d81976" compoundref="_crossover_operator_8java" startline="60">org.jgap.impl.CrossoverOperator.m_crossoverRateCalc</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a3fd77bb9d65f47999fd875cb58d52099" compoundref="_crossover_operator_8java" startline="71">org.jgap.impl.CrossoverOperator.m_xoverNewAge</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_test_1ae6d7cab1227e4a66387f65012a16850b" compoundref="_crossover_operator_test_8java" startline="557" endline="571">org.jgap.impl.CrossoverOperatorTest.testCompareTo_0</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aefa1ab099925469046f4a3777f9fe61f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.CrossoverOperator.setAllowFullCrossOver</definition>
+        <argsstring>(boolean a_allowFullXOver)</argsstring>
+        <name>setAllowFullCrossOver</name>
+        <param>
+          <type>boolean</type>
+          <declname>a_allowFullXOver</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_allowFullXOver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x-over before and after a randomly chosen point</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="517" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="517" bodyend="519"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1abe148b3654e3083ae0136f95c3fc0a22" compoundref="_crossover_operator_8java" startline="66">org.jgap.impl.CrossoverOperator.m_allowFullCrossOver</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a55030a95f4c442d19fb0db2f7f949439" compoundref="_crossover_operator_8java" startline="160" endline="168">org.jgap.impl.CrossoverOperator.CrossoverOperator</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aa912b24ed525835736758d64e373207d" compoundref="_crossover_operator_8java" startline="114" endline="122">org.jgap.impl.CrossoverOperator.init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a51faa8e8996095443a18c617768cd01f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.CrossoverOperator.isAllowFullCrossOver</definition>
+        <argsstring>()</argsstring>
+        <name>isAllowFullCrossOver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>x-over before and after a randomly chosen x-over point</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="527" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="527" bodyend="529"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1abe148b3654e3083ae0136f95c3fc0a22" compoundref="_crossover_operator_8java" startline="66">org.jgap.impl.CrossoverOperator.m_allowFullCrossOver</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_test_1a27ad387292e289724dfea705c28cd5b1" compoundref="_crossover_operator_test_8java" startline="88" endline="94">org.jgap.impl.CrossoverOperatorTest.testConstruct_4</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_test_1ac554ffe6c1b5eb38ed6a5e9f0528b556" compoundref="_crossover_operator_test_8java" startline="102" endline="108">org.jgap.impl.CrossoverOperatorTest.testConstruct_5</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_test_1acd61e3a089ee1c208e43d4222fdd6794" compoundref="_crossover_operator_test_8java" startline="116" endline="122">org.jgap.impl.CrossoverOperatorTest.testConstruct_6</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_test_1a0513af93be7e58a3ee600e3890906948" compoundref="_crossover_operator_test_8java" startline="130" endline="136">org.jgap.impl.CrossoverOperatorTest.testConstruct_7</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_test_1a3cf866a28ee8385b0f5514432f2cfb34" compoundref="_crossover_operator_test_8java" startline="144" endline="150">org.jgap.impl.CrossoverOperatorTest.testConstruct_8</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_test_1aee4b6ccb946ca1c408c4e24406a23ba8" compoundref="_crossover_operator_test_8java" startline="158" endline="164">org.jgap.impl.CrossoverOperatorTest.testConstruct_9</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a4152e74d59787d7f2a892b9f90e8340d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.impl.CrossoverOperator.getCrossOverRate</definition>
+        <argsstring>()</argsstring>
+        <name>getCrossOverRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the crossover rate set</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="537" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="537" bodyend="539"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aa52cbe6354a3465bccfed04dae06ee1a" compoundref="_crossover_operator_8java" startline="48">org.jgap.impl.CrossoverOperator.m_crossoverRate</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_test_1a27ad387292e289724dfea705c28cd5b1" compoundref="_crossover_operator_test_8java" startline="88" endline="94">org.jgap.impl.CrossoverOperatorTest.testConstruct_4</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_test_1ac554ffe6c1b5eb38ed6a5e9f0528b556" compoundref="_crossover_operator_test_8java" startline="102" endline="108">org.jgap.impl.CrossoverOperatorTest.testConstruct_5</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_test_1acd61e3a089ee1c208e43d4222fdd6794" compoundref="_crossover_operator_test_8java" startline="116" endline="122">org.jgap.impl.CrossoverOperatorTest.testConstruct_6</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a3a23b88eca25371ff8429d0fedf1c8b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double org.jgap.impl.CrossoverOperator.getCrossOverRatePercent</definition>
+        <argsstring>()</argsstring>
+        <name>getCrossOverRatePercent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the crossover rate set</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="547" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="547" bodyend="549"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a90f409ea79fa88fabab8dcbdbbc8a00d" compoundref="_crossover_operator_8java" startline="54">org.jgap.impl.CrossoverOperator.m_crossoverRatePercent</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_test_1a0513af93be7e58a3ee600e3890906948" compoundref="_crossover_operator_test_8java" startline="130" endline="136">org.jgap.impl.CrossoverOperatorTest.testConstruct_7</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_test_1a3cf866a28ee8385b0f5514432f2cfb34" compoundref="_crossover_operator_test_8java" startline="144" endline="150">org.jgap.impl.CrossoverOperatorTest.testConstruct_8</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_test_1aee4b6ccb946ca1c408c4e24406a23ba8" compoundref="_crossover_operator_test_8java" startline="158" endline="164">org.jgap.impl.CrossoverOperatorTest.testConstruct_9</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1af5444671de9ac65f400d401d5b649170" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.CrossoverOperator.setXoverNewAge</definition>
+        <argsstring>(boolean a_xoverNewAge)</argsstring>
+        <name>setXoverNewAge</name>
+        <param>
+          <type>boolean</type>
+          <declname>a_xoverNewAge</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_xoverNewAge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true: also x-over chromosomes with age of zero (newly created chromosomes)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="558" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="558" bodyend="560"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a3fd77bb9d65f47999fd875cb58d52099" compoundref="_crossover_operator_8java" startline="71">org.jgap.impl.CrossoverOperator.m_xoverNewAge</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aca102ac7c7649f8cff5066c4e48b6d8f" compoundref="_crossover_operator_8java" startline="223" endline="237">org.jgap.impl.CrossoverOperator.CrossoverOperator</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aa912b24ed525835736758d64e373207d" compoundref="_crossover_operator_8java" startline="114" endline="122">org.jgap.impl.CrossoverOperator.init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1af27944540a7f2bc7beef78da63445f10" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.CrossoverOperator.isXoverNewAge</definition>
+        <argsstring>()</argsstring>
+        <name>isXoverNewAge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a_xoverNewAge true: also x-over chromosomes with age of zero (newly created chromosomes)</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="569" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="569" bodyend="571"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a3fd77bb9d65f47999fd875cb58d52099" compoundref="_crossover_operator_8java" startline="71">org.jgap.impl.CrossoverOperator.m_xoverNewAge</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a271b82e98b398a42b576c956350d905e" compoundref="_crossover_operator_8java" startline="323" endline="388">org.jgap.impl.CrossoverOperator.operate</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aa912b24ed525835736758d64e373207d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.CrossoverOperator.init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes certain parameters.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="114" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="114" bodyend="122"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aa52cbe6354a3465bccfed04dae06ee1a" compoundref="_crossover_operator_8java" startline="48">org.jgap.impl.CrossoverOperator.m_crossoverRate</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a90f409ea79fa88fabab8dcbdbbc8a00d" compoundref="_crossover_operator_8java" startline="54">org.jgap.impl.CrossoverOperator.m_crossoverRatePercent</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aefa1ab099925469046f4a3777f9fe61f" compoundref="_crossover_operator_8java" startline="517" endline="519">org.jgap.impl.CrossoverOperator.setAllowFullCrossOver</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1ac91121e8161678732d4b8c74cf793913" compoundref="_crossover_operator_8java" startline="446" endline="453">org.jgap.impl.CrossoverOperator.setCrossoverRateCalc</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1af5444671de9ac65f400d401d5b649170" compoundref="_crossover_operator_8java" startline="558" endline="560">org.jgap.impl.CrossoverOperator.setXoverNewAge</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a1f75f1e7fbc8d7b9332f92f67f72f0c6" compoundref="_crossover_operator_8java" startline="85" endline="89">org.jgap.impl.CrossoverOperator.CrossoverOperator</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a4e72f9a7da7293b0efd6c227ce496f22" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.CrossoverOperator.doCrossover</definition>
+        <argsstring>(IChromosome firstMate, IChromosome secondMate, List a_candidateChromosomes, RandomGenerator generator)</argsstring>
+        <name>doCrossover</name>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+          <declname>firstMate</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+          <declname>secondMate</declname>
+        </param>
+        <param>
+          <type>List</type>
+          <declname>a_candidateChromosomes</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_random_generator" kindref="compound">RandomGenerator</ref></type>
+          <declname>generator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="390" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="390" bodyend="436"/>
+        <references refid="classorg_1_1jgap_1_1_base_genetic_operator_1a5194e705ed206f99852bf158546646b5" compoundref="_base_genetic_operator_8java" startline="30">org.jgap.BaseGeneticOperator.m_monitorActive</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a271b82e98b398a42b576c956350d905e" compoundref="_crossover_operator_8java" startline="323" endline="388">org.jgap.impl.CrossoverOperator.operate</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1ac91121e8161678732d4b8c74cf793913" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.CrossoverOperator.setCrossoverRateCalc</definition>
+        <argsstring>(final IUniversalRateCalculator a_crossoverRateCalculator)</argsstring>
+        <name>setCrossoverRateCalc</name>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_i_universal_rate_calculator" kindref="compound">IUniversalRateCalculator</ref></type>
+          <declname>a_crossoverRateCalculator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the crossover rate calculator.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_crossoverRateCalculator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new calculator</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Chris Knowles </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="446" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="446" bodyend="453"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aa52cbe6354a3465bccfed04dae06ee1a" compoundref="_crossover_operator_8java" startline="48">org.jgap.impl.CrossoverOperator.m_crossoverRate</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a61a6063cd362c344fd4d394657d81976" compoundref="_crossover_operator_8java" startline="60">org.jgap.impl.CrossoverOperator.m_crossoverRateCalc</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a90f409ea79fa88fabab8dcbdbbc8a00d" compoundref="_crossover_operator_8java" startline="54">org.jgap.impl.CrossoverOperator.m_crossoverRatePercent</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a55030a95f4c442d19fb0db2f7f949439" compoundref="_crossover_operator_8java" startline="160" endline="168">org.jgap.impl.CrossoverOperator.CrossoverOperator</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aa912b24ed525835736758d64e373207d" compoundref="_crossover_operator_8java" startline="114" endline="122">org.jgap.impl.CrossoverOperator.init</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The crossover operator randomly selects two Chromosomes from the population and &quot;mates&quot; them by randomly picking a gene and then swapping that gene and all subsequent genes between the two Chromosomes. The two modified Chromosomes are then added to the list of candidate Chromosomes.</para><para>If you work with CompositeGenes, this operator expects them to contain genes of the same type (e.g. <ref refid="classorg_1_1jgap_1_1impl_1_1_integer_gene" kindref="compound">IntegerGene</ref>). If you have mixed types, please provide your own crossover operator.</para><para>This <ref refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator" kindref="compound">CrossoverOperator</ref> supports both fixed and dynamic crossover rates. A fixed rate is one specified at construction time by the user. This operation is performed 1/m_crossoverRate as many times as there are Chromosomes in the population. Another possibility is giving the crossover rate as a percentage. A dynamic rate is determined by this class on the fly if no fixed rate is provided.</para><para><simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para><simplesectsep/><para>Chris Knowles </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="11339">
+        <label>org.jgap.GeneticOperator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_genetic_operator"/>
+        <childnode refid="11340" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11340">
+        <label>Serializable</label>
+      </node>
+      <node id="11341">
+        <label>Comparable</label>
+      </node>
+      <node id="11337">
+        <label>org.jgap.impl.CrossoverOperator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator"/>
+        <childnode refid="11338" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11341" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11338">
+        <label>org.jgap.BaseGeneticOperator</label>
+        <link refid="classorg_1_1jgap_1_1_base_genetic_operator"/>
+        <childnode refid="11339" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11341" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11356">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="11361">
+        <label>List</label>
+      </node>
+      <node id="11360">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="11345" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11349" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11357">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="11345" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11344">
+        <label>org.jgap.GeneticOperator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_genetic_operator"/>
+        <childnode refid="11345" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11345">
+        <label>Serializable</label>
+      </node>
+      <node id="11362">
+        <label>org.jgap.IUniversalRateCalculator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_universal_rate_calculator"/>
+        <childnode refid="11345" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11346">
+        <label>Comparable</label>
+      </node>
+      <node id="11342">
+        <label>org.jgap.impl.CrossoverOperator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator"/>
+        <childnode refid="11343" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11346" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11362" relation="usage">
+          <edgelabel>m_crossoverRateCalc</edgelabel>
+        </childnode>
+      </node>
+      <node id="11349">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="11350" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11343">
+        <label>org.jgap.BaseGeneticOperator</label>
+        <link refid="classorg_1_1jgap_1_1_base_genetic_operator"/>
+        <childnode refid="11344" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11346" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11347" relation="usage">
+          <edgelabel>m_configuration</edgelabel>
+        </childnode>
+      </node>
+      <node id="11354">
+        <label>org.jgap.FitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_fitness_evaluator"/>
+        <childnode refid="11345" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11358">
+        <label>org.jgap.BulkFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_bulk_fitness_function"/>
+        <childnode refid="11345" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11349" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11350">
+        <label>Cloneable</label>
+      </node>
+      <node id="11352">
+        <label>org.jgap.IJGAPFactory</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_j_g_a_p_factory"/>
+        <childnode refid="11345" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11359">
+        <label>org.jgap.Configuration.ConfigurationConfigurable</label>
+        <link refid="classorg_1_1jgap_1_1_configuration_1_1_configuration_configurable"/>
+        <childnode refid="11345" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11351">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="11349" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11345" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11346" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11355">
+        <label>org.jgap.IChromosome</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome"/>
+        <childnode refid="11346" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11349" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11345" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11356" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11347">
+        <label>org.jgap.Configuration</label>
+        <link refid="classorg_1_1jgap_1_1_configuration"/>
+        <childnode refid="11348" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11345" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11349" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11346" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11351" relation="usage">
+          <edgelabel>m_breeder</edgelabel>
+        </childnode>
+        <childnode refid="11352" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="11353" relation="usage">
+          <edgelabel>m_chromosomePool</edgelabel>
+        </childnode>
+        <childnode refid="11354" relation="usage">
+          <edgelabel>m_fitnessEvaluator</edgelabel>
+        </childnode>
+        <childnode refid="11355" relation="usage">
+          <edgelabel>m_sampleChromosome</edgelabel>
+        </childnode>
+        <childnode refid="11357" relation="usage">
+          <edgelabel>m_randomGenerator</edgelabel>
+        </childnode>
+        <childnode refid="11358" relation="usage">
+          <edgelabel>m_bulkObjectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="11359" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="11360" relation="usage">
+          <edgelabel>m_objectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="11361" relation="usage">
+          <edgelabel>m_geneticOperators</edgelabel>
+        </childnode>
+      </node>
+      <node id="11353">
+        <label>org.jgap.IChromosomePool</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool"/>
+      </node>
+      <node id="11348">
+        <label>Configurable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" line="40" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/CrossoverOperator.java" bodystart="39" bodyend="572"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1_base_genetic_operator_1a061b47c0f891c0041d5ece5bc6e052f8" prot="public" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>BaseGeneticOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a13ba59ced7b3bfd8b7f9433756664726" prot="public" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>compareTo</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a1f75f1e7fbc8d7b9332f92f67f72f0c6" prot="public" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>CrossoverOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1ab5689ffd5b3f6e2d06c8d05f6bc5e8bb" prot="public" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>CrossoverOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a609bfb00afea32f4b32b7ae3c1889858" prot="public" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>CrossoverOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a55030a95f4c442d19fb0db2f7f949439" prot="public" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>CrossoverOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a104345e6601aee5183d9e6411a73522d" prot="public" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>CrossoverOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a442b1e27d3066fa2463bd193f047aa06" prot="public" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>CrossoverOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aca102ac7c7649f8cff5066c4e48b6d8f" prot="public" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>CrossoverOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a4affbff4c1ad04ca1b2b9b8d276949c1" prot="public" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>CrossoverOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a2216a6251f7bd64b1270ac55ed9d1256" prot="public" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>CrossoverOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a7ca6733e4e742ee2e3f5f7628beb7614" prot="public" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>CrossoverOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aa73ddc68b26dbdc664092f82f5e2b25b" prot="private" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a4e72f9a7da7293b0efd6c227ce496f22" prot="protected" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>doCrossover</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_genetic_operator_1a4db6fa1a99177114c0f19f02cd4a87ec" prot="public" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>equals</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_genetic_operator_1addbc6b98f572331d47397227b7a49f6a" prot="public" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>getConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a4152e74d59787d7f2a892b9f90e8340d" prot="public" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>getCrossOverRate</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a3a23b88eca25371ff8429d0fedf1c8b8" prot="public" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>getCrossOverRatePercent</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aa912b24ed525835736758d64e373207d" prot="protected" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>init</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a51faa8e8996095443a18c617768cd01f" prot="public" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>isAllowFullCrossOver</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1af27944540a7f2bc7beef78da63445f10" prot="public" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>isXoverNewAge</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1abe148b3654e3083ae0136f95c3fc0a22" prot="private" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>m_allowFullCrossOver</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aa52cbe6354a3465bccfed04dae06ee1a" prot="private" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>m_crossoverRate</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a61a6063cd362c344fd4d394657d81976" prot="private" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>m_crossoverRateCalc</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a90f409ea79fa88fabab8dcbdbbc8a00d" prot="private" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>m_crossoverRatePercent</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_genetic_operator_1a516d89e8f56eb2e58768218c7f9cf3de" prot="protected" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>m_monitor</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_genetic_operator_1a5194e705ed206f99852bf158546646b5" prot="protected" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>m_monitorActive</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a3fd77bb9d65f47999fd875cb58d52099" prot="private" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>m_xoverNewAge</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a271b82e98b398a42b576c956350d905e" prot="public" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>operate</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1aefa1ab099925469046f4a3777f9fe61f" prot="public" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>setAllowFullCrossOver</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1ac91121e8161678732d4b8c74cf793913" prot="private" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>setCrossoverRateCalc</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1af5444671de9ac65f400d401d5b649170" prot="public" virt="non-virtual"><scope>org::jgap::impl::CrossoverOperator</scope><name>setXoverNewAge</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

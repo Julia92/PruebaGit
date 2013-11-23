@@ -1,0 +1,748 @@
+.TH "org.jgap.GenotypeTest.MyChromosome" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.GenotypeTest.MyChromosome \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.IChromosome\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMyChromosome\fP (\fBConfiguration\fP a_conf)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGene\fP \fBgetGene\fP (int a_desiredLocus)"
+.br
+.ti -1c
+.RI "String \fBgetUniqueID\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetUniqueIDTemplate\fP (String a_templateID, int a_index)"
+.br
+.ti -1c
+.RI "String \fBgetUniqueIDTemplate\fP (int a_index)"
+.br
+.ti -1c
+.RI "\fBGene\fP[] \fBgetGenes\fP ()"
+.br
+.ti -1c
+.RI "int \fBsize\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetFitnessValue\fP (double a_newFitnessValue)"
+.br
+.ti -1c
+.RI "double \fBgetFitnessValue\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetFitnessValueDirectly\fP (double a_newFitnessValue)"
+.br
+.ti -1c
+.RI "double \fBgetFitnessValueDirectly\fP ()"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object other)"
+.br
+.ti -1c
+.RI "void \fBsetGenes\fP (\fBGene\fP[] a_genes)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBsetIsSelectedForNextGeneration\fP (boolean a_isSelected)"
+.br
+.ti -1c
+.RI "boolean \fBisSelectedForNextGeneration\fP ()"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetConstraintChecker\fP (\fBIGeneConstraintChecker\fP a_constraintChecker)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBsetApplicationData\fP (Object a_newData)"
+.br
+.ti -1c
+.RI "Object \fBgetApplicationData\fP ()"
+.br
+.ti -1c
+.RI "void \fBcleanup\fP ()"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBgetConfiguration\fP ()"
+.br
+.ti -1c
+.RI "void \fBincreaseAge\fP ()"
+.br
+.ti -1c
+.RI "void \fBresetAge\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetAge\fP (int a_age)"
+.br
+.ti -1c
+.RI "int \fBgetAge\fP ()"
+.br
+.ti -1c
+.RI "void \fBincreaseOperatedOn\fP ()"
+.br
+.ti -1c
+.RI "void \fBresetOperatedOn\fP ()"
+.br
+.ti -1c
+.RI "int \fBoperatedOn\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "transient \fBConfiguration\fP \fBm_conf\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Definition at line 1355 of file GenotypeTest\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.GenotypeTest\&.MyChromosome\&.MyChromosome (\fBConfiguration\fPa_conf) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 1359 of file GenotypeTest\&.java\&.
+.PP
+References org\&.jgap\&.GenotypeTest\&.MyChromosome\&.m_conf\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.GenotypeTest\&.MyChromosome\&.cleanup ()\fC [inline]\fP"
+Invoked when this \fBChromosome\fP is no longer needed and should perform any necessary cleanup\&. Note that this method will attempt to release this \fBChromosome\fP instance to the active ChromosomePool, if any\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1435 of file GenotypeTest\&.java\&.
+.SS "Object org\&.jgap\&.GenotypeTest\&.MyChromosome\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+clone of the current object instance 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 1420 of file GenotypeTest\&.java\&.
+.SS "int org\&.jgap\&.GenotypeTest\&.MyChromosome\&.compareTo (Objectother)\fC [inline]\fP"
+
+.PP
+Definition at line 1405 of file GenotypeTest\&.java\&.
+.SS "int org\&.jgap\&.GenotypeTest\&.MyChromosome\&.getAge ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+0: \fBChromosome\fP newly created in this generation\&. This means it does not need being crossed over with another newly created one
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1451 of file GenotypeTest\&.java\&.
+.SS "Object org\&.jgap\&.GenotypeTest\&.MyChromosome\&.getApplicationData ()\fC [inline]\fP"
+Retrieves the application-specific data that is attached to this \fBChromosome\fP\&. Attaching application-specific data may be useful for some applications when it comes time to evaluate this \fBChromosome\fP in the fitness function\&. JGAP ignores this data functionally\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the application-specific data previously attached to this \fBChromosome\fP, or null if there is no data attached
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1431 of file GenotypeTest\&.java\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.GenotypeTest\&.MyChromosome\&.getConfiguration ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the configuration set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1438 of file GenotypeTest\&.java\&.
+.PP
+References org\&.jgap\&.GenotypeTest\&.MyChromosome\&.m_conf\&.
+.SS "double org\&.jgap\&.GenotypeTest\&.MyChromosome\&.getFitnessValue ()\fC [inline]\fP"
+Retrieves the fitness value of this \fBChromosome\fP, as determined by the active fitness function\&. If a bulk fitness function is in use and has not yet assigned a fitness value to this \fBChromosome\fP, then -1 is returned\&.
+.PP
+Attention: should not be called from toString() as the fitness value would be computed if it was initial!
+.PP
+\fBReturns:\fP
+.RS 4
+a positive double value representing the fitness of this \fBChromosome\fP, or -1 if a bulk fitness function is in use and has not yet assigned a fitness value to this \fBChromosome\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1394 of file GenotypeTest\&.java\&.
+.PP
+Referenced by org\&.jgap\&.GenotypeTest\&.MyChromosome\&.getFitnessValueDirectly()\&.
+.SS "double org\&.jgap\&.GenotypeTest\&.MyChromosome\&.getFitnessValueDirectly ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the lastly computed fitness value, or \fBFitnessFunction\&.NO_FITNESS_VALUE\fP in case no value has been computed yet\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1401 of file GenotypeTest\&.java\&.
+.PP
+References org\&.jgap\&.GenotypeTest\&.MyChromosome\&.getFitnessValue()\&.
+.SS "\fBGene\fP org\&.jgap\&.GenotypeTest\&.MyChromosome\&.getGene (inta_desiredLocus)\fC [inline]\fP"
+Returns the \fBGene\fP at the given index (locus) within the \fBChromosome\fP\&. The first gene is at index zero and the last gene is at the index equal to the size of this \fBChromosome\fP - 1\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_desiredLocus\fP index of the gene value to be returned 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBGene\fP at the given index
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1364 of file GenotypeTest\&.java\&.
+.PP
+References org\&.jgap\&.GenotypeTest\&.MyChromosome\&.m_conf\&.
+.SS "\fBGene\fP [] org\&.jgap\&.GenotypeTest\&.MyChromosome\&.getGenes ()\fC [inline]\fP"
+Retrieves the set of genes that make up this \fBChromosome\fP\&. This method exists primarily for the benefit of GeneticOperators that require the ability to manipulate Chromosomes at a low level\&.
+.PP
+\fBReturns:\fP
+.RS 4
+an array of the Genes contained within this \fBChromosome\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1383 of file GenotypeTest\&.java\&.
+.SS "String org\&.jgap\&.GenotypeTest\&.MyChromosome\&.getUniqueID ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+String
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IUniqueKey\fP\&.
+.PP
+Definition at line 1372 of file GenotypeTest\&.java\&.
+.SS "String org\&.jgap\&.GenotypeTest\&.MyChromosome\&.getUniqueIDTemplate (inta_index)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP int 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IUniqueKey\fP\&.
+.PP
+Definition at line 1379 of file GenotypeTest\&.java\&.
+.SS "void org\&.jgap\&.GenotypeTest\&.MyChromosome\&.increaseAge ()\fC [inline]\fP"
+Increases the number of evolutionary rounds of chromosome in which it has not been changed by one\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1442 of file GenotypeTest\&.java\&.
+.SS "void org\&.jgap\&.GenotypeTest\&.MyChromosome\&.increaseOperatedOn ()\fC [inline]\fP"
+Increase information of number of genetic operations performed on chromosome in current evolution round\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1455 of file GenotypeTest\&.java\&.
+.SS "boolean org\&.jgap\&.GenotypeTest\&.MyChromosome\&.isSelectedForNextGeneration ()\fC [inline]\fP"
+Retrieves whether this \fBChromosome\fP has been selected by the natural selector to continue to the next generation\&.
+.PP
+\fBReturns:\fP
+.RS 4
+true if this \fBChromosome\fP has been selected, false otherwise
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1416 of file GenotypeTest\&.java\&.
+.SS "int org\&.jgap\&.GenotypeTest\&.MyChromosome\&.operatedOn ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+number of genetic operations performed on chromosome in current evolution round
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1460 of file GenotypeTest\&.java\&.
+.SS "void org\&.jgap\&.GenotypeTest\&.MyChromosome\&.resetAge ()\fC [inline]\fP"
+Reset age of chromosome because it has been changed\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1445 of file GenotypeTest\&.java\&.
+.SS "void org\&.jgap\&.GenotypeTest\&.MyChromosome\&.resetOperatedOn ()\fC [inline]\fP"
+Resets the information of how many genetic operators have been performed on the chromosome in the current round of evolution\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1458 of file GenotypeTest\&.java\&.
+.SS "void org\&.jgap\&.GenotypeTest\&.MyChromosome\&.setAge (inta_age)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_age\fP set the age of the chromosome, see BestChromosomesSelector for a use-case
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1448 of file GenotypeTest\&.java\&.
+.SS "void org\&.jgap\&.GenotypeTest\&.MyChromosome\&.setApplicationData (Objecta_newData)\fC [inline]\fP"
+This sets the application-specific data that is attached to this \fBChromosome\fP\&. Attaching application-specific data may be useful for some applications when it comes time to evaluate this \fBChromosome\fP in the fitness function\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_newData\fP the new application-specific data to attach to this \fBChromosome\fP\&. Should be an instance of \fBIApplicationData\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1428 of file GenotypeTest\&.java\&.
+.SS "void org\&.jgap\&.GenotypeTest\&.MyChromosome\&.setConstraintChecker (\fBIGeneConstraintChecker\fPa_constraintChecker) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Sets the constraint checker to be used for this gene whenever method setAllele(Object) is called\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_constraintChecker\fP the constraint checker to be set 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1424 of file GenotypeTest\&.java\&.
+.SS "void org\&.jgap\&.GenotypeTest\&.MyChromosome\&.setFitnessValue (doublea_newFitnessValue)\fC [inline]\fP"
+Sets the fitness value of this \fBChromosome\fP\&. This method is for use by bulk fitness functions and should not be invokved from anything else (except test cases)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_newFitnessValue\fP a positive integer representing the fitness of this \fBChromosome\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1391 of file GenotypeTest\&.java\&.
+.SS "void org\&.jgap\&.GenotypeTest\&.MyChromosome\&.setFitnessValueDirectly (doublea_newFitnessValue)\fC [inline]\fP"
+Sets the fitness value of this \fBChromosome\fP directly without any constraint checks, conversions or checks\&. Only use if you know what you do\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_newFitnessValue\fP a positive integer representing the fitness of this \fBChromosome\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1398 of file GenotypeTest\&.java\&.
+.SS "void org\&.jgap\&.GenotypeTest\&.MyChromosome\&.setGenes (\fBGene\fP[]a_genes) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Sets the genes for the chromosome\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_genes\fP the genes to set for the chromosome
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP in case constraint checker is provided
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1409 of file GenotypeTest\&.java\&.
+.SS "void org\&.jgap\&.GenotypeTest\&.MyChromosome\&.setIsSelectedForNextGeneration (booleana_isSelected)\fC [inline]\fP"
+Sets whether this \fBChromosome\fP has been selected by the natural selector to continue to the next generation or manually (e\&.g\&. via an add-method)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_isSelected\fP true if this \fBChromosome\fP has been selected, false otherwise
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1413 of file GenotypeTest\&.java\&.
+.SS "void org\&.jgap\&.GenotypeTest\&.MyChromosome\&.setUniqueIDTemplate (Stringa_templateID, inta_index)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_templateID\fP String 
+.br
+\fIa_index\fP int
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IUniqueKey\fP\&.
+.PP
+Definition at line 1376 of file GenotypeTest\&.java\&.
+.SS "int org\&.jgap\&.GenotypeTest\&.MyChromosome\&.size ()\fC [inline]\fP"
+Returns the size of this \fBChromosome\fP (the number of genes it contains)\&. A \fBChromosome\fP's size is constant and will not change, until setGenes(\&.\&.\&.) is used\&.
+.PP
+\fBReturns:\fP
+.RS 4
+number of genes contained within this \fBChromosome\fP instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.PP
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IChromosome\fP\&.
+.PP
+Definition at line 1387 of file GenotypeTest\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "transient \fBConfiguration\fP org\&.jgap\&.GenotypeTest\&.MyChromosome\&.m_conf\fC [private]\fP"
+
+.PP
+Definition at line 1357 of file GenotypeTest\&.java\&.
+.PP
+Referenced by org\&.jgap\&.GenotypeTest\&.MyChromosome\&.getConfiguration(), org\&.jgap\&.GenotypeTest\&.MyChromosome\&.getGene(), and org\&.jgap\&.GenotypeTest\&.MyChromosome\&.MyChromosome()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

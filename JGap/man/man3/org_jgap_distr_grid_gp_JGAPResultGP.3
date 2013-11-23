@@ -1,0 +1,591 @@
+.TH "org.jgap.distr.grid.gp.JGAPResultGP" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.grid.gp.JGAPResultGP \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits WorkResult\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBJGAPResultGP\fP (String a_sessionName, String a_id, int a_chunk, IGPProgram a_fittestProg, long a_unitdone)"
+.br
+.ti -1c
+.RI "\fBJGAPResultGP\fP (String a_sessionName, String a_id, int a_chunk, GPPopulation a_programs, long a_unitdone)"
+.br
+.ti -1c
+.RI "IGPProgram \fBgetFittest\fP ()"
+.br
+.ti -1c
+.RI "GPPopulation \fBgetPopulation\fP ()"
+.br
+.ti -1c
+.RI "long \fBgetUnitDone\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetGenericData\fP (Object a_genericData)"
+.br
+.ti -1c
+.RI "Object \fBgetGenericData\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetChunk\fP ()"
+.br
+.ti -1c
+.RI "\fBMasterInfo\fP \fBgetWorkerInfo\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetWorkerInfo\fP (\fBMasterInfo\fP a_workerInfo)"
+.br
+.ti -1c
+.RI "String \fBgetID\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetResponseDate\fP (Date a_date)"
+.br
+.ti -1c
+.RI "Date \fBgetResponseDate\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDescription\fP (String a_descr)"
+.br
+.ti -1c
+.RI "String \fBgetDescription\fP ()"
+.br
+.ti -1c
+.RI "long \fBgetDurationComputation\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDurationComputation\fP (long a_durationComputation)"
+.br
+.ti -1c
+.RI "void \fBsetTitle\fP (String a_title)"
+.br
+.ti -1c
+.RI "String \fBgetTitle\fP ()"
+.br
+.ti -1c
+.RI "void \fBclearFittest\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "IGPProgram \fBm_fittest\fP"
+.br
+.ti -1c
+.RI "GPPopulation \fBm_pop\fP"
+.br
+.ti -1c
+.RI "\fBMasterInfo\fP \fBm_workerInfo\fP"
+.br
+.ti -1c
+.RI "Object \fBm_genericData\fP"
+.br
+.ti -1c
+.RI "long \fBm_unitDone\fP"
+.br
+.ti -1c
+.RI "int \fBm_chunk\fP"
+.br
+.ti -1c
+.RI "String \fBm_id\fP"
+.br
+.ti -1c
+.RI "String \fBm_title\fP"
+.br
+.ti -1c
+.RI "Date \fBm_responseDate\fP"
+.br
+.ti -1c
+.RI "String \fBm_description\fP"
+.br
+.ti -1c
+.RI "long \fBm_durationComputation\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.10 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Holds the result of a worker\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file JGAPResultGP\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.JGAPResultGP (Stringa_sessionName, Stringa_id, inta_chunk, IGPPrograma_fittestProg, longa_unitdone)\fC [inline]\fP"
+Constructor: Takes the fittest program determined as result of a worker's computation\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_sessionName\fP arbitrary session name to distinct from other results 
+.br
+\fIa_id\fP ID of the result, should be unique 
+.br
+\fIa_chunk\fP running index of request chunk, should be unique within an identification 
+.br
+\fIa_fittestProg\fP the fittest program determined 
+.br
+\fIa_unitdone\fP number of units done 
+.RE
+.PP
+\fBDeprecated\fP
+.RS 4
+use other constructor with GPPopulation parameter instead 
+.RE
+.PP
+
+.PP
+Definition at line 70 of file JGAPResultGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_chunk, org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_fittest, org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_id, and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_unitDone\&.
+.SS "org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.JGAPResultGP (Stringa_sessionName, Stringa_id, inta_chunk, GPPopulationa_programs, longa_unitdone)\fC [inline]\fP"
+Constructor: Takes a population as result of a worker's computation\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_sessionName\fP arbitrary session name to distinct from other results 
+.br
+\fIa_id\fP ID of the result, should be unique 
+.br
+\fIa_chunk\fP running index of request chunk, should be unique within an identification 
+.br
+\fIa_programs\fP the result of a worker's computation 
+.br
+\fIa_unitdone\fP number of units done
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 92 of file JGAPResultGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_chunk, org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_fittest, org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_id, org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_pop, and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_unitDone\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.clearFittest ()\fC [inline]\fP"
+Clear the fittes program\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 249 of file JGAPResultGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_fittest\&.
+.SS "int org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getChunk ()\fC [inline]\fP"
+
+.PP
+Definition at line 146 of file JGAPResultGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_chunk\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getDescription ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+arbitrary description of the result
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 211 of file JGAPResultGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_description\&.
+.SS "long org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getDurationComputation ()\fC [inline]\fP"
+
+.PP
+Definition at line 215 of file JGAPResultGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_durationComputation\&.
+.SS "IGPProgram org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getFittest ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+IGPProgram the fittest program known 
+.RE
+.PP
+\fBDeprecated\fP
+.RS 4
+use getPopulation instead 
+.RE
+.PP
+
+.PP
+Definition at line 106 of file JGAPResultGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_fittest\&.
+.SS "Object org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getGenericData ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+generic data contained in the result\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 142 of file JGAPResultGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_genericData\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getID ()\fC [inline]\fP"
+
+.PP
+Definition at line 171 of file JGAPResultGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_id\&.
+.SS "GPPopulation org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getPopulation ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the GPPopulation as a result from a worker's computation
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 116 of file JGAPResultGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_pop\&.
+.SS "Date org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getResponseDate ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the date the response was computed
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 191 of file JGAPResultGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_responseDate\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getTitle ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the title set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 239 of file JGAPResultGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_title\&.
+.SS "long org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getUnitDone ()\fC [inline]\fP"
+
+.PP
+Definition at line 120 of file JGAPResultGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_unitDone\&.
+.SS "\fBMasterInfo\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getWorkerInfo ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+information about the worker
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 156 of file JGAPResultGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_workerInfo\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.setDescription (Stringa_descr)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_descr\fP arbitrary description of the result
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 201 of file JGAPResultGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_description\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.setDurationComputation (longa_durationComputation)\fC [inline]\fP"
+
+.PP
+Definition at line 219 of file JGAPResultGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_durationComputation\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.setGenericData (Objecta_genericData)\fC [inline]\fP"
+Adds arbitrary generic data to the result\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_genericData\fP arbitrary generic data
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 132 of file JGAPResultGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_genericData\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.setResponseDate (Datea_date)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_date\fP date the response was computed
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 181 of file JGAPResultGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_responseDate\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.setTitle (Stringa_title)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_title\fP the title to set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 229 of file JGAPResultGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_title\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.setWorkerInfo (\fBMasterInfo\fPa_workerInfo)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_workerInfo\fP set information about the worker
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 167 of file JGAPResultGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_workerInfo\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.CVS_REVISION = '$Revision: 1\&.10 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 28 of file JGAPResultGP\&.java\&.
+.SS "int org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_chunk\fC [private]\fP"
+
+.PP
+Definition at line 43 of file JGAPResultGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getChunk(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.JGAPResultGP()\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_description\fC [private]\fP"
+
+.PP
+Definition at line 51 of file JGAPResultGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getDescription(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.setDescription()\&.
+.SS "long org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_durationComputation\fC [private]\fP"
+Duration of computation 
+.PP
+Definition at line 56 of file JGAPResultGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getDurationComputation(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.setDurationComputation()\&.
+.SS "IGPProgram org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_fittest\fC [private]\fP"
+
+.PP
+Definition at line 30 of file JGAPResultGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.clearFittest(), org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getFittest(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.JGAPResultGP()\&.
+.SS "Object org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_genericData\fC [private]\fP"
+Arbitrary extra data 
+.PP
+Definition at line 39 of file JGAPResultGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getGenericData(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.setGenericData()\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_id\fC [private]\fP"
+
+.PP
+Definition at line 45 of file JGAPResultGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getID(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.JGAPResultGP()\&.
+.SS "GPPopulation org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_pop\fC [private]\fP"
+
+.PP
+Definition at line 32 of file JGAPResultGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getPopulation(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.JGAPResultGP()\&.
+.SS "Date org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_responseDate\fC [private]\fP"
+
+.PP
+Definition at line 49 of file JGAPResultGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getResponseDate(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.setResponseDate()\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_title\fC [private]\fP"
+
+.PP
+Definition at line 47 of file JGAPResultGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getTitle(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.setTitle()\&.
+.SS "long org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_unitDone\fC [private]\fP"
+
+.PP
+Definition at line 41 of file JGAPResultGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getUnitDone(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.JGAPResultGP()\&.
+.SS "\fBMasterInfo\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.m_workerInfo\fC [private]\fP"
+
+.PP
+Definition at line 34 of file JGAPResultGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.getWorkerInfo(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPResultGP\&.setWorkerInfo()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

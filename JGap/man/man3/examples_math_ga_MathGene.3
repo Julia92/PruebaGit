@@ -1,0 +1,232 @@
+.TH "examples.math.ga.MathGene" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.math.ga.MathGene \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits BaseGene, Gene, and Serializable\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBGetValueOperandVisitor\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMathGene\fP (Configuration theConfiguration)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBsetAllele\fP (Object o)"
+.br
+.ti -1c
+.RI "String \fBgetPersistentRepresentation\fP ()  throws UnsupportedOperationException "
+.br
+.ti -1c
+.RI "void \fBsetValueFromPersistentRepresentation\fP (String s)  throws UnsupportedOperationException, UnsupportedRepresentationException "
+.br
+.ti -1c
+.RI "void \fBsetToRandomValue\fP (RandomGenerator theRandomGenerator)"
+.br
+.ti -1c
+.RI "void \fBapplyMutation\fP (int i, double v)"
+.br
+.ti -1c
+.RI "int \fBhashCode\fP ()"
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object theObj)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object o)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Object \fBgetInternalValue\fP ()"
+.br
+.ti -1c
+.RI "Gene \fBnewGeneInternal\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Operand \fBgenerateRandomOperand\fP (RandomGenerator theRand)"
+.br
+.ti -1c
+.RI "ValueOperand \fBgenerateRandomValueOperand\fP (RandomGenerator theRand)"
+.br
+.ti -1c
+.RI "MathOperator \fBgenerateRandomMathOperator\fP (RandomGenerator theRand)"
+.br
+.ti -1c
+.RI "Operand \fBmutateOperand\fP (Operand theOp, double theRate)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Operand \fBmOperand\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.1 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A gene for mathematical expressions\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Michael Grove 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file MathGene\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.math\&.ga\&.MathGene\&.MathGene (ConfigurationtheConfiguration) throws InvalidConfigurationException\fC [inline]\fP"
+
+.PP
+Definition at line 30 of file MathGene\&.java\&.
+.PP
+References examples\&.math\&.ga\&.MathGene\&.mOperand\&.
+.PP
+Referenced by examples\&.math\&.ga\&.MathGene\&.compareTo(), examples\&.math\&.ga\&.MathGene\&.equals(), and examples\&.math\&.ga\&.MathGene\&.newGeneInternal()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void examples\&.math\&.ga\&.MathGene\&.applyMutation (inti, doublev)\fC [inline]\fP"
+
+.PP
+Definition at line 104 of file MathGene\&.java\&.
+.PP
+References examples\&.math\&.ga\&.MathGene\&.mOperand, examples\&.math\&.ga\&.MathGene\&.mutateOperand(), and examples\&.math\&.ga\&.MathGene\&.setAllele()\&.
+.SS "int examples\&.math\&.ga\&.MathGene\&.compareTo (Objecto)\fC [inline]\fP"
+
+.PP
+Definition at line 187 of file MathGene\&.java\&.
+.PP
+References examples\&.math\&.ga\&.MathGene\&.MathGene(), and examples\&.math\&.ga\&.MathGene\&.mOperand\&.
+.SS "boolean examples\&.math\&.ga\&.MathGene\&.equals (ObjecttheObj)\fC [inline]\fP"
+
+.PP
+Definition at line 177 of file MathGene\&.java\&.
+.PP
+References examples\&.math\&.ga\&.MathGene\&.MathGene(), and examples\&.math\&.ga\&.MathGene\&.toString()\&.
+.SS "MathOperator examples\&.math\&.ga\&.MathGene\&.generateRandomMathOperator (RandomGeneratortheRand)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 84 of file MathGene\&.java\&.
+.PP
+References examples\&.math\&.ga\&.MathGene\&.generateRandomValueOperand()\&.
+.PP
+Referenced by examples\&.math\&.ga\&.MathGene\&.generateRandomOperand(), and examples\&.math\&.ga\&.MathGene\&.mutateOperand()\&.
+.SS "Operand examples\&.math\&.ga\&.MathGene\&.generateRandomOperand (RandomGeneratortheRand)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 68 of file MathGene\&.java\&.
+.PP
+References examples\&.math\&.ga\&.MathGene\&.generateRandomMathOperator(), and examples\&.math\&.ga\&.MathGene\&.generateRandomValueOperand()\&.
+.PP
+Referenced by examples\&.math\&.ga\&.MathGene\&.mutateOperand(), and examples\&.math\&.ga\&.MathGene\&.setToRandomValue()\&.
+.SS "ValueOperand examples\&.math\&.ga\&.MathGene\&.generateRandomValueOperand (RandomGeneratortheRand)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 77 of file MathGene\&.java\&.
+.PP
+Referenced by examples\&.math\&.ga\&.MathGene\&.generateRandomMathOperator(), examples\&.math\&.ga\&.MathGene\&.generateRandomOperand(), and examples\&.math\&.ga\&.MathGene\&.mutateOperand()\&.
+.SS "Object examples\&.math\&.ga\&.MathGene\&.getInternalValue ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 36 of file MathGene\&.java\&.
+.PP
+References examples\&.math\&.ga\&.MathGene\&.mOperand\&.
+.SS "String examples\&.math\&.ga\&.MathGene\&.getPersistentRepresentation () throws UnsupportedOperationException\fC [inline]\fP"
+
+.PP
+Definition at line 54 of file MathGene\&.java\&.
+.SS "int examples\&.math\&.ga\&.MathGene\&.hashCode ()\fC [inline]\fP"
+
+.PP
+Definition at line 167 of file MathGene\&.java\&.
+.PP
+References examples\&.math\&.ga\&.MathGene\&.toString()\&.
+.SS "Operand examples\&.math\&.ga\&.MathGene\&.mutateOperand (OperandtheOp, doubletheRate)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 109 of file MathGene\&.java\&.
+.PP
+References examples\&.math\&.ga\&.MathGene\&.generateRandomMathOperator(), examples\&.math\&.ga\&.MathGene\&.generateRandomOperand(), and examples\&.math\&.ga\&.MathGene\&.generateRandomValueOperand()\&.
+.PP
+Referenced by examples\&.math\&.ga\&.MathGene\&.applyMutation()\&.
+.SS "Gene examples\&.math\&.ga\&.MathGene\&.newGeneInternal ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 40 of file MathGene\&.java\&.
+.PP
+References examples\&.math\&.ga\&.MathGene\&.MathGene()\&.
+.SS "void examples\&.math\&.ga\&.MathGene\&.setAllele (Objecto)\fC [inline]\fP"
+
+.PP
+Definition at line 48 of file MathGene\&.java\&.
+.PP
+References examples\&.math\&.ga\&.MathGene\&.mOperand\&.
+.PP
+Referenced by examples\&.math\&.ga\&.MathGene\&.applyMutation(), and examples\&.math\&.ga\&.MathGene\&.setToRandomValue()\&.
+.SS "void examples\&.math\&.ga\&.MathGene\&.setToRandomValue (RandomGeneratortheRandomGenerator)\fC [inline]\fP"
+
+.PP
+Definition at line 64 of file MathGene\&.java\&.
+.PP
+References examples\&.math\&.ga\&.MathGene\&.generateRandomOperand(), and examples\&.math\&.ga\&.MathGene\&.setAllele()\&.
+.SS "void examples\&.math\&.ga\&.MathGene\&.setValueFromPersistentRepresentation (Strings) throws UnsupportedOperationException, UnsupportedRepresentationException\fC [inline]\fP"
+
+.PP
+Definition at line 59 of file MathGene\&.java\&.
+.SS "String examples\&.math\&.ga\&.MathGene\&.toString ()\fC [inline]\fP"
+
+.PP
+Definition at line 172 of file MathGene\&.java\&.
+.PP
+References examples\&.math\&.ga\&.MathGene\&.mOperand\&.
+.PP
+Referenced by examples\&.math\&.ga\&.MathGene\&.equals(), and examples\&.math\&.ga\&.MathGene\&.hashCode()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.math\&.ga\&.MathGene\&.CVS_REVISION = '$Revision: 1\&.1 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file MathGene\&.java\&.
+.SS "Operand examples\&.math\&.ga\&.MathGene\&.mOperand\fC [private]\fP"
+
+.PP
+Definition at line 28 of file MathGene\&.java\&.
+.PP
+Referenced by examples\&.math\&.ga\&.MathGene\&.applyMutation(), examples\&.math\&.ga\&.MathGene\&.compareTo(), examples\&.math\&.ga\&.MathGene\&.getInternalValue(), examples\&.math\&.ga\&.MathGene\&.MathGene(), examples\&.math\&.ga\&.MathGene\&.setAllele(), and examples\&.math\&.ga\&.MathGene\&.toString()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

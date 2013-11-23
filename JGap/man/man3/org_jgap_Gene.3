@@ -1,0 +1,442 @@
+.TH "org.jgap.Gene" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.Gene \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Comparable, Serializable, and \fBorg\&.jgap\&.IUniqueKey\fP\&.
+.PP
+Inherited by \fBorg\&.jgap\&.BaseGene\fP, \fBorg\&.jgap\&.ICompositeGene\fP, and \fBorg\&.jgap\&.supergenes\&.Supergene\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGene\fP \fBnewGene\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetAllele\fP (Object a_newValue)"
+.br
+.ti -1c
+.RI "Object \fBgetAllele\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetPersistentRepresentation\fP ()  throws UnsupportedOperationException"
+.br
+.ti -1c
+.RI "void \fBsetValueFromPersistentRepresentation\fP (String a_representation)  throws UnsupportedOperationException, UnsupportedRepresentationException"
+.br
+.ti -1c
+.RI "void \fBsetToRandomValue\fP (\fBRandomGenerator\fP a_numberGenerator)"
+.br
+.ti -1c
+.RI "void \fBcleanup\fP ()"
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "int \fBsize\fP ()"
+.br
+.ti -1c
+.RI "void \fBapplyMutation\fP (int index, double a_percentage)"
+.br
+.ti -1c
+.RI "void \fBsetApplicationData\fP (Object a_newData)"
+.br
+.ti -1c
+.RI "Object \fBgetApplicationData\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetCompareApplicationData\fP (boolean a_doCompare)"
+.br
+.ti -1c
+.RI "boolean \fBisCompareApplicationData\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetEnergy\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetEnergy\fP (double a_energy)"
+.br
+.ti -1c
+.RI "void \fBsetConstraintChecker\fP (final \fBIGeneConstraintChecker\fP a_constraintChecker)"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBgetConfiguration\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.26 $'"
+.br
+.ti -1c
+.RI "static final String \fBPERSISTENT_FIELD_DELIMITER\fP = ':'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Genes represent the discrete components of a potential solution (the \fBChromosome\fP)\&. This interface exists so that custom gene implementations can be easily plugged-in, which can add a great deal of flexibility and convenience for many applications\&. Note that it's very important that implementations of this interface also implement the equals() method\&. Without a proper implementation of equals(), some genetic operations will fail to work properly\&. 
+.PP
+When implementing a new \fBGene\fP type, extend it from \fBorg\&.jgap\&.BaseGene\fP!
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 29 of file Gene\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.Gene\&.applyMutation (intindex, doublea_percentage)"
+Applies a mutation of a given intensity (percentage) onto the atomic element at given index (NumberGenes only have one atomic element) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIindex\fP index of atomic element, between 0 and \fBsize()\fP-1 
+.br
+\fIa_percentage\fP percentage of mutation (greater than -1 and smaller than 1)\&.
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.CompositeGene\fP, \fBorg\&.jgap\&.impl\&.StringGene\fP, \fBorg\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\fP, \fBorg\&.jgap\&.impl\&.BooleanGene\fP, and \fBorg\&.jgap\&.impl\&.DoubleGene\fP\&.
+.SS "void org\&.jgap\&.Gene\&.cleanup ()"
+Executed by the genetic engine when this \fBGene\fP instance is no longer needed and should perform any necessary resource cleanup\&. 
+.PP
+Implemented in \fBorg\&.jgap\&.supergenes\&.AbstractSupergene\fP, \fBorg\&.jgap\&.impl\&.CompositeGene\fP, and \fBorg\&.jgap\&.BaseGene\fP\&.
+.SS "Object org\&.jgap\&.Gene\&.getAllele ()"
+Retrieves the value represented by this \fBGene\fP\&. The actual type of the value is implementation-dependent\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the value of this \fBGene\fP\&.
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.CompositeGene\fP, \fBorg\&.jgap\&.supergenes\&.AbstractSupergene\fP, \fBorg\&.jgap\&.impl\&.FixedBinaryGene\fP, and \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.StringGeneTest\&.testApplyMutation_4(), org\&.jgap\&.impl\&.StringGeneTest\&.testApplyMutation_5(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testCompareToNative_0(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testCompareToNative_0(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testCompareToNative_1(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testCompareToNative_1(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testCompareToNative_2(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testCompareToNative_2(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testCompareToNative_3(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testCompareToNative_3(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testCompareToNative_4(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testCompareToNative_4(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testGetAllele_0(), org\&.jgap\&.impl\&.NumberGeneTest\&.testGetAllele_0(), org\&.jgap\&.BaseGeneTest\&.testGetAllele_0(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testGetAllele_0(), org\&.jgap\&.impl\&.FixedBinaryGeneTest\&.testGetAllele_0(), org\&.jgap\&.impl\&.StringGeneTest\&.testGetAllele_0(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testGetAllele_1(), org\&.jgap\&.impl\&.NumberGeneTest\&.testGetAllele_1(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testGetAllele_1(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testGetAllele_2(), org\&.jgap\&.impl\&.NumberGeneTest\&.testGetAllele_2(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testGetAllele_2(), org\&.jgap\&.impl\&.FixedBinaryGeneTest\&.testGetAllele_2(), org\&.jgap\&.impl\&.FixedBinaryGeneTest\&.testHashCode_1(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testIntegerGeneSupportsFullIntegerRange(), org\&.jgap\&.impl\&.GaussianMutationOperatorTest\&.testOperate_2(), org\&.jgap\&.impl\&.MapGeneTest\&.testPersistentRepresentation_3(), org\&.jgap\&.impl\&.StringGeneTest\&.testPersistentRepresentation_6(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testSetToRandomValue_0(), org\&.jgap\&.impl\&.MapGeneTest\&.testSetToRandomValue_0(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testSetToRandomValue_0(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testSetToRandomValue_1(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testSetToRandomValue_1(), org\&.jgap\&.impl\&.StringGeneTest\&.testSetToRandomValue_1(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testSetToRandomValue_2(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testSetToRandomValue_2(), org\&.jgap\&.impl\&.StringGeneTest\&.testSetToRandomValue_2(), and org\&.jgap\&.impl\&.IntegerGeneTest\&.testSetToRandomValue_5()\&.
+.SS "Object org\&.jgap\&.Gene\&.getApplicationData ()"
+Retrieves the application-specific data that is attached to this \fBGene\fP\&. Attaching application-specific data may be useful for some applications when it comes time to distinguish a \fBGene\fP from another\&. JGAP ignores this data functionally\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the application-specific data previously attached to this \fBGene\fP, or null if there is no data attached
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Referenced by org\&.jgap\&.BaseGene\&.equals()\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.Gene\&.getConfiguration ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the configuration used
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.BaseGene\fP\&.
+.SS "double org\&.jgap\&.Gene\&.getEnergy ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+energy of the gene
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Referenced by org\&.jgap\&.GenotypeTest\&.testRandomInitialGenotype_2()\&.
+.SS "String org\&.jgap\&.Gene\&.getPersistentRepresentation () throws UnsupportedOperationException"
+Retrieves a string representation of the value of this \fBGene\fP instance that includes any information required to reconstruct it at a later time, such as its value and internal state\&. This string will be used to represent this \fBGene\fP instance in XML persistence\&. This is an optional method but, if not implemented, XML persistence and possibly other features will not be available\&. An UnsupportedOperationException should be thrown if no implementation is provided\&.
+.PP
+\fBReturns:\fP
+.RS 4
+string representation of this \fBGene\fP's current state 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP to indicate that no implementation is provided for this method
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\fP, \fBorg\&.jgap\&.supergenes\&.AbstractSupergene\fP, \fBorg\&.jgap\&.impl\&.MapGene\fP, \fBorg\&.jgap\&.impl\&.CompositeGene\fP, \fBorg\&.jgap\&.impl\&.StringGene\fP, \fBorg\&.jgap\&.impl\&.FixedBinaryGene\fP, \fBorg\&.jgap\&.impl\&.SetGene\fP, \fBorg\&.jgap\&.impl\&.BooleanGene\fP, \fBorg\&.jgap\&.impl\&.MutipleIntegerGene\fP, \fBorg\&.jgap\&.impl\&.IntegerGene\fP, and \fBorg\&.jgap\&.impl\&.DoubleGene\fP\&.
+.PP
+Referenced by org\&.jgap\&.BaseChromosome\&.getGenesPersistentRepresentation()\&.
+.SS "boolean org\&.jgap\&.Gene\&.isCompareApplicationData ()"
+
+.PP
+Implemented in \fBorg\&.jgap\&.BaseGene\fP\&.
+.SS "\fBGene\fP org\&.jgap\&.Gene\&.newGene ()"
+Provides an implementation-independent means for creating new \fBGene\fP instances\&. The new instance that is created and returned should be setup with any implementation-dependent configuration that this \fBGene\fP instance is setup with (aside from the actual value, of course)\&. For example, if this \fBGene\fP were setup with bounds on its value, then the \fBGene\fP instance returned from this method should also be setup with those same bounds\&. This is important, as the JGAP core will invoke this method on each \fBGene\fP in the sample \fBChromosome\fP in order to create each new \fBGene\fP in the same respective gene position for a new \fBChromosome\fP\&. 
+.PP
+It should be noted that nothing is guaranteed about the actual value of the returned \fBGene\fP and it should therefore be considered to be undefined\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a new \fBGene\fP instance of the same type and with the same setup as this concrete \fBGene\fP
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Referenced by org\&.jgap\&.Chromosome\&.initFromGene()\&.
+.SS "void org\&.jgap\&.Gene\&.setAllele (Objecta_newValue)"
+Sets the value of this \fBGene\fP to the new given value\&. The actual type of the value is implementation-dependent\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_newValue\fP the new value of this \fBGene\fP instance
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.CompositeGene\fP, \fBorg\&.jgap\&.impl\&.MapGene\fP, and \fBorg\&.jgap\&.impl\&.SetGene\fP\&.
+.SS "void org\&.jgap\&.Gene\&.setApplicationData (Objecta_newData)"
+This sets the application-specific data that is attached to this \fBGene\fP\&. Attaching application-specific data may be useful for some applications when it comes time to distinguish a \fBGene\fP from another\&. JGAP ignores this data functionally\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_newData\fP the new application-specific data to attach to this \fBGene\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.SS "void org\&.jgap\&.Gene\&.setCompareApplicationData (booleana_doCompare)"
+Should we also consider the application data when comparing? Default is 'false' as 'true' means a \fBGene\fP is losing its identity when application data is set differently!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_doCompare\fP true: consider application data in method compareTo
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.SS "void org\&.jgap\&.Gene\&.setConstraintChecker (final \fBIGeneConstraintChecker\fPa_constraintChecker)"
+Sets the constraint checker to be used for this gene whenever method \fBsetAllele(Object)\fP is called\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_constraintChecker\fP the constraint checker to be set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 (moved from CompositeGene, where it was since 2\&.0) 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.BaseGene\fP\&.
+.SS "void org\&.jgap\&.Gene\&.setEnergy (doublea_energy)"
+Sets the energy of the gene 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_energy\fP the energy to set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.SS "void org\&.jgap\&.Gene\&.setToRandomValue (\fBRandomGenerator\fPa_numberGenerator)"
+Sets the value of this \fBGene\fP to a random legal value for the implementation\&. This method exists for the benefit of mutation and other operations that simply desire to randomize the value of a gene\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_numberGenerator\fP The random number generator that should be used to create any random values\&. It's important to use this generator to maintain the user's flexibility to configure the genetic engine to use the random number generator of their choice
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\fP, \fBorg\&.jgap\&.impl\&.DoubleGene\fP, and \fBorg\&.jgap\&.impl\&.BooleanGene\fP\&.
+.SS "void org\&.jgap\&.Gene\&.setValueFromPersistentRepresentation (Stringa_representation) throws UnsupportedOperationException, \fBUnsupportedRepresentationException\fP"
+Sets the value and internal state of this \fBGene\fP from the string representation returned by a previous invocation of the \fBgetPersistentRepresentation()\fP method\&. This is an optional method but, if not implemented, XML persistence and possibly other features will not be available\&. An UnsupportedOperationException should be thrown if no implementation is provided\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_representation\fP the string representation retrieved from a prior call to the \fBgetPersistentRepresentation()\fP method
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP to indicate that no implementation is provided for this method 
+.br
+\fI\fBUnsupportedRepresentationException\fP\fP if this \fBGene\fP implementation does not support the given string representation
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\fP, \fBorg\&.jgap\&.supergenes\&.AbstractSupergene\fP, \fBorg\&.jgap\&.impl\&.FixedBinaryGene\fP, \fBorg\&.jgap\&.impl\&.CompositeGene\fP, \fBorg\&.jgap\&.impl\&.BooleanGene\fP, \fBorg\&.jgap\&.impl\&.DoubleGene\fP, and \fBorg\&.jgap\&.impl\&.SetGene\fP\&.
+.SS "int org\&.jgap\&.Gene\&.size ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the size of the gene, i\&.e the number of atomic elements\&. Always 1 for numbers
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.CompositeGene\fP, \fBorg\&.jgap\&.supergenes\&.AbstractSupergene\fP, \fBorg\&.jgap\&.impl\&.StringGene\fP, \fBorg\&.jgap\&.impl\&.FixedBinaryGene\fP, and \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Referenced by org\&.jgap\&.BaseGeneTest\&.testSize_0()\&.
+.SS "String org\&.jgap\&.Gene\&.toString ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+a string representation of the gene
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 (in the interface) 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.MapGene\fP, \fBorg\&.jgap\&.impl\&.CompositeGene\fP, \fBorg\&.jgap\&.supergenes\&.AbstractSupergene\fP, \fBorg\&.jgap\&.impl\&.StringGene\fP, \fBorg\&.jgap\&.impl\&.BooleanGene\fP, \fBorg\&.jgap\&.impl\&.MutipleIntegerGene\fP, \fBorg\&.jgap\&.impl\&.IntegerGene\fP, \fBorg\&.jgap\&.impl\&.DoubleGene\fP, \fBorg\&.jgap\&.impl\&.FixedBinaryGene\fP, and \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Referenced by org\&.jgap\&.BaseGeneTest\&.testToString_0(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testToString_0(), org\&.jgap\&.impl\&.NumberGeneTest\&.testToString_0(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testToString_0(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testToString_0(), org\&.jgap\&.impl\&.FixedBinaryGeneTest\&.testToString_0(), org\&.jgap\&.impl\&.StringGeneTest\&.testToString_0(), org\&.jgap\&.impl\&.IntegerGeneTest\&.testToString_1(), org\&.jgap\&.BaseGeneTest\&.testToString_1(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testToString_1(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testToString_1(), org\&.jgap\&.impl\&.FixedBinaryGeneTest\&.testToString_1(), org\&.jgap\&.BaseGeneTest\&.testToString_2(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testToString_2(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testToString_2(), org\&.jgap\&.impl\&.FixedBinaryGeneTest\&.testToString_2(), and org\&.jgap\&.supergenes\&.SupergenePersistentRepresentationTest\&.testToString_2()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.Gene\&.CVS_REVISION = '$Revision: 1\&.26 $'\fC [static]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 32 of file Gene\&.java\&.
+.SS "final String org\&.jgap\&.Gene\&.PERSISTENT_FIELD_DELIMITER = ':'\fC [static]\fP"
+Represents the delimiter that is used to separate fields in the persistent representation\&. 
+.PP
+Definition at line 38 of file Gene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.StringGene\&.getBusinessKey(), org\&.jgap\&.BaseGene\&.getBusinessKey(), org\&.jgap\&.impl\&.DoubleGene\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.IntegerGene\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.MutipleIntegerGene\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.SetGene\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.StringGene\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.MapGene\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.NumberGeneTest\&.NumberGeneImpl\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.SetGene\&.setValueFromPersistentRepresentation(), org\&.jgap\&.impl\&.DoubleGene\&.setValueFromPersistentRepresentation(), org\&.jgap\&.impl\&.IntegerGene\&.setValueFromPersistentRepresentation(), org\&.jgap\&.impl\&.MutipleIntegerGene\&.setValueFromPersistentRepresentation(), org\&.jgap\&.impl\&.StringGene\&.setValueFromPersistentRepresentation(), org\&.jgap\&.impl\&.MapGene\&.setValueFromPersistentRepresentation(), org\&.jgap\&.impl\&.StringGeneTest\&.testPersistentRepresentation_5_2(), and org\&.jgap\&.impl\&.IntegerGeneTest\&.testPersistentRepresentation_6()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

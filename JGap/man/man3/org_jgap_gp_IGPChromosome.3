@@ -1,0 +1,525 @@
+.TH "org.jgap.gp.IGPChromosome" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.IGPChromosome \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable\&.
+.PP
+Inherited by \fBorg\&.jgap\&.gp\&.BaseGPChromosome\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIGPProgram\fP \fBgetIndividual\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetIndividual\fP (\fBIGPProgram\fP a_ind)"
+.br
+.ti -1c
+.RI "void \fBcleanup\fP ()"
+.br
+.ti -1c
+.RI "String \fBtoStringNorm\fP (final int a_startNode)"
+.br
+.ti -1c
+.RI "void \fBredepth\fP ()"
+.br
+.ti -1c
+.RI "int \fBnumTerminals\fP ()"
+.br
+.ti -1c
+.RI "int \fBnumFunctions\fP ()"
+.br
+.ti -1c
+.RI "int \fBnumTerminals\fP (Class a_type, int a_subType)"
+.br
+.ti -1c
+.RI "int \fBnumFunctions\fP (Class a_type, int a_subType)"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP \fBgetNode\fP (int a_index)"
+.br
+.ti -1c
+.RI "int \fBgetChild\fP (int a_index, int a_child)"
+.br
+.ti -1c
+.RI "int \fBgetTerminal\fP (int a_index)"
+.br
+.ti -1c
+.RI "int \fBgetFunction\fP (int a_index)"
+.br
+.ti -1c
+.RI "int \fBgetTerminal\fP (int a_index, Class a_type, int a_subType)"
+.br
+.ti -1c
+.RI "int \fBgetFunction\fP (int a_index, Class a_type, int a_subType)"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP[] \fBgetFunctions\fP ()"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP[] \fBgetFunctionSet\fP ()"
+.br
+.ti -1c
+.RI "GPConfiguration \fBgetGPConfiguration\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetPersistentRepresentation\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.7 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Interface for GP chromosomes\&. See ProgramChromosome for an implementation\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file IGPChromosome\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.gp\&.IGPChromosome\&.cleanup ()"
+Clean up the chromosome\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.impl\&.ProgramChromosome\fP\&.
+.SS "int org\&.jgap\&.gp\&.IGPChromosome\&.getChild (inta_index, inta_child)"
+Gets the a_child'th child of the a_index'th node in this chromosome\&. This is the same as the a_child'th node whose depth is one more than the depth of the a_index'th node\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the node number of the parent 
+.br
+\fIa_child\fP the child number (starting from 0) of the parent 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the node number of the child, or -1 if not found
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.impl\&.ProgramChromosome\fP\&.
+.SS "int org\&.jgap\&.gp\&.IGPChromosome\&.getFunction (inta_index)"
+Gets the a_index'th function in this chromosome\&. The nodes are counted in a depth-first manner, with node 0 being the first function in this chromosome\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the a_index'th function to get 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the function
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.BaseGPChromosome\fP\&.
+.SS "int org\&.jgap\&.gp\&.IGPChromosome\&.getFunction (inta_index, Classa_type, inta_subType)"
+Gets the i'th function of the given type in this chromosome\&. The nodes are counted in a depth-first manner, with node 0 being the first function of the given type in this chromosome\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the i'th function to get 
+.br
+\fIa_type\fP the type of function to get 
+.br
+\fIa_subType\fP the subtype to consider 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the index of the function found, or -1 if no appropriate function was found
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.BaseGPChromosome\fP\&.
+.SS "\fBCommandGene\fP [] org\&.jgap\&.gp\&.IGPChromosome\&.getFunctions ()"
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.impl\&.ProgramChromosome\fP\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.BaseGPChromosome\&.getAssignableFromClass(), org\&.jgap\&.gp\&.BaseGPChromosome\&.getCommandOfClass(), org\&.jgap\&.gp\&.BaseGPChromosome\&.getFunction(), org\&.jgap\&.gp\&.BaseGPChromosome\&.getNode(), org\&.jgap\&.gp\&.BaseGPChromosome\&.getTerminal(), org\&.jgap\&.gp\&.BaseGPChromosome\&.getVariableWithReturnType(), org\&.jgap\&.gp\&.BaseGPChromosome\&.numFunctions(), and org\&.jgap\&.gp\&.BaseGPChromosome\&.numTerminals()\&.
+.SS "\fBCommandGene\fP [] org\&.jgap\&.gp\&.IGPChromosome\&.getFunctionSet ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+set of \fBCommandGene\fP instances allowed
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.1 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.impl\&.ProgramChromosome\fP\&.
+.SS "GPConfiguration org\&.jgap\&.gp\&.IGPChromosome\&.getGPConfiguration ()"
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.BaseGPChromosome\fP\&.
+.SS "\fBIGPProgram\fP org\&.jgap\&.gp\&.IGPChromosome\&.getIndividual ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the individual containing this chromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.BaseGPChromosome\fP\&.
+.SS "\fBCommandGene\fP org\&.jgap\&.gp\&.IGPChromosome\&.getNode (inta_index)"
+Gets the a_index'th node in this chromosome\&. The nodes are counted in a depth-first manner, with node 0 being the root of this chromosome\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the node number to get 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the node
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.BaseGPChromosome\fP\&.
+.SS "String org\&.jgap\&.gp\&.IGPChromosome\&.getPersistentRepresentation ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the persistent representation of the population, including all GP programs
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.impl\&.ProgramChromosome\fP\&.
+.SS "int org\&.jgap\&.gp\&.IGPChromosome\&.getTerminal (inta_index)"
+Gets the i'th terminal in this chromosome\&. The nodes are counted in a depth-first manner, with node 0 being the first terminal in this chromosome\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the i'th terminal to get 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the terminal
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.BaseGPChromosome\fP\&.
+.SS "int org\&.jgap\&.gp\&.IGPChromosome\&.getTerminal (inta_index, Classa_type, inta_subType)"
+Gets the a_index'th terminal of the given type in this chromosome\&. The nodes are counted in a depth-first manner, with node 0 being the first terminal of the given type in this chromosome\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the a_index'th terminal to get 
+.br
+\fIa_type\fP the type of terminal to get 
+.br
+\fIa_subType\fP the subtype to consider 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the index of the terminal found, or -1 if no appropriate terminal was found
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.BaseGPChromosome\fP\&.
+.SS "int org\&.jgap\&.gp\&.IGPChromosome\&.numFunctions ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the number of functions in this chromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.BaseGPChromosome\fP\&.
+.SS "int org\&.jgap\&.gp\&.IGPChromosome\&.numFunctions (Classa_type, inta_subType)"
+Counts the number of functions of the given type in this chromosome\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_type\fP the type of function to count 
+.br
+\fIa_subType\fP the subtype to consider 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of functions in this chromosome\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.BaseGPChromosome\fP\&.
+.SS "int org\&.jgap\&.gp\&.IGPChromosome\&.numTerminals ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the number of terminals in this chromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.BaseGPChromosome\fP\&.
+.SS "int org\&.jgap\&.gp\&.IGPChromosome\&.numTerminals (Classa_type, inta_subType)"
+Counts the number of terminals of the given type in this chromosome\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_type\fP the type of terminal to count 
+.br
+\fIa_subType\fP the subtype to consider 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of terminals in this chromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.BaseGPChromosome\fP\&.
+.SS "void org\&.jgap\&.gp\&.IGPChromosome\&.redepth ()"
+Recalculate the depths of each node\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.impl\&.ProgramChromosome\fP\&.
+.SS "void org\&.jgap\&.gp\&.IGPChromosome\&.setIndividual (\fBIGPProgram\fPa_ind)"
+Sets the individual the chromosome belongs to\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ind\fP the individual containing this chromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.BaseGPChromosome\fP\&.
+.SS "String org\&.jgap\&.gp\&.IGPChromosome\&.toStringNorm (final inta_startNode)"
+Output program in 'natural' notion (e\&.g\&.: 'X + Y' for 'X + Y') 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_startNode\fP the node to start with 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+output in normalized notion
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.impl\&.ProgramChromosome\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.IGPChromosome\&.CVS_REVISION = '$Revision: 1\&.7 $'\fC [static]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 24 of file IGPChromosome\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,208 @@
+.TH "org.jgap.util.JarResources" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.util.JarResources \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBJarResources\fP (String \fBjarFileName\fP)"
+.br
+.ti -1c
+.RI "byte[] \fBgetResource\fP (String name)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)  throws IOException "
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "boolean \fBdebugOn\fP = false"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.ti -1c
+.RI "String \fBdumpZipEntry\fP (ZipEntry a_ze)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Hashtable \fBhtSizes\fP = new Hashtable()"
+.br
+.ti -1c
+.RI "Hashtable \fBhtJarContents\fP = new Hashtable()"
+.br
+.ti -1c
+.RI "String \fBjarFileName\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.3 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBJarResources\fP maps all resources included in a zip or jar file\&. Additionaly, it provides a method to extract one as a blob\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+unknown 
+.PP
+Klaus Meffert (integrated into JGAP) 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file JarResources\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.util\&.JarResources\&.JarResources (StringjarFileName)\fC [inline]\fP"
+creates a \fBJarResources\fP\&. It extracts all resources from a Jar into an internal hashtable, keyed by resource names\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIjarFileName\fP a jar or zip file 
+.RE
+.PP
+
+.PP
+Definition at line 44 of file JarResources\&.java\&.
+.PP
+References org\&.jgap\&.util\&.JarResources\&.init(), and org\&.jgap\&.util\&.JarResources\&.jarFileName\&.
+.PP
+Referenced by org\&.jgap\&.util\&.JarResources\&.main()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "String org\&.jgap\&.util\&.JarResources\&.dumpZipEntry (ZipEntrya_ze)\fC [inline]\fP, \fC [private]\fP"
+Dumps a zip entry into a string\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ze\fP a ZipEntry 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+info about the zip entry 
+.RE
+.PP
+
+.PP
+Definition at line 129 of file JarResources\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.JarResources\&.init()\&.
+.SS "byte [] org\&.jgap\&.util\&.JarResources\&.getResource (Stringname)\fC [inline]\fP"
+Extracts a jar resource as a blob\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP a resource name 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+extracted blob 
+.RE
+.PP
+
+.PP
+Definition at line 55 of file JarResources\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.JarClassLoader\&.loadClassBytes()\&.
+.SS "void org\&.jgap\&.util\&.JarResources\&.init ()\fC [inline]\fP, \fC [private]\fP"
+initializes internal hash tables with Jar file resources\&. 
+.PP
+Definition at line 62 of file JarResources\&.java\&.
+.PP
+References org\&.jgap\&.util\&.JarResources\&.debugOn, org\&.jgap\&.util\&.JarResources\&.dumpZipEntry(), org\&.jgap\&.util\&.JarResources\&.htSizes, and org\&.jgap\&.util\&.JarResources\&.jarFileName\&.
+.PP
+Referenced by org\&.jgap\&.util\&.JarResources\&.JarResources()\&.
+.SS "static void org\&.jgap\&.util\&.JarResources\&.main (String[]args) throws IOException\fC [inline]\fP, \fC [static]\fP"
+Is a test driver\&. Given a jar file and a resource name, it trys to extract the resource and then tells us whether it could or not\&.
+.PP
+\fBExample\fP Let's say you have a JAR file which jarred up a bunch of gif image files\&. Now, by using \fBJarResources\fP, you could extract, create, and display those images on-the-fly\&. 
+.PP
+.nf
+
+    \&.\&.\&.
+    \fBJarResources\fP JR=new \fBJarResources\fP('GifBundle\&.jar');
+    Image image=Toolkit\&.createImage(JR\&.getResource('logo\&.gif');
+    Image logo=Toolkit\&.getDefaultToolkit()\&.createImage(
+                  JR\&.getResources('logo\&.gif')
+                  );
+    \&.\&.\&.
+.fi
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP arguments 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIOException\fP 
+.RE
+.PP
+
+.PP
+Definition at line 173 of file JarResources\&.java\&.
+.PP
+References org\&.jgap\&.util\&.JarResources\&.JarResources()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.util\&.JarResources\&.CVS_REVISION = '$Revision: 1\&.3 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file JarResources\&.java\&.
+.SS "boolean org\&.jgap\&.util\&.JarResources\&.debugOn = false"
+
+.PP
+Definition at line 29 of file JarResources\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.JarResources\&.init()\&.
+.SS "Hashtable org\&.jgap\&.util\&.JarResources\&.htJarContents = new Hashtable()\fC [private]\fP"
+
+.PP
+Definition at line 34 of file JarResources\&.java\&.
+.SS "Hashtable org\&.jgap\&.util\&.JarResources\&.htSizes = new Hashtable()\fC [private]\fP"
+
+.PP
+Definition at line 32 of file JarResources\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.JarResources\&.init()\&.
+.SS "String org\&.jgap\&.util\&.JarResources\&.jarFileName\fC [private]\fP"
+
+.PP
+Definition at line 37 of file JarResources\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.JarResources\&.init(), and org\&.jgap\&.util\&.JarResources\&.JarResources()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

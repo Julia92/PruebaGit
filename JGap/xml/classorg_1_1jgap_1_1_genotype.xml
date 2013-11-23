@@ -1,0 +1,1225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1_genotype" kind="class" prot="public">
+    <compoundname>org::jgap::Genotype</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Runnable</basecompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1distr_1_1_distributed_genotype" prot="public" virt="non-virtual">org.jgap.distr.DistributedGenotype</derivedcompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1_genotype_1ac9f8e9d203b7a4efdf8c2e32a08f84bb" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.Genotype.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.109 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="36" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1_genotype_1a8b93a0b2044e40520d4a966ef3ae0bbe" prot="private" static="yes" mutable="no">
+        <type>transient <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+        <definition>transient Configuration org.jgap.Genotype.m_staticConfiguration</definition>
+        <argsstring></argsstring>
+        <name>m_staticConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="44" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1aaf3d4bf0b470aa4655e85262289443eb" compoundref="_genotype_8java" startline="520" endline="522">org.jgap.Genotype.getStaticConfiguration</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1a2f44a7709eca83cddd6d794ee59e663c" compoundref="_genotype_8java" startline="531" endline="533">org.jgap.Genotype.setStaticConfiguration</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1_genotype_1aeb3fac2610b8ef8fa8599fcac1b6a199" prot="private" static="no" mutable="no">
+        <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+        <definition>Configuration org.jgap.Genotype.m_activeConfiguration</definition>
+        <argsstring></argsstring>
+        <name>m_activeConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> instance. <simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="42" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="42" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1a6c14c3a36aa8e4291840f0b9c0facb35" compoundref="_genotype_8java" startline="442" endline="493">org.jgap.Genotype.applyNaturalSelectors</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1ab15d88cf1a6084f9efea2dc935968471" compoundref="_genotype_8java" startline="248" endline="256">org.jgap.Genotype.evolve</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1a7b08ffd2154cd3ccc8636b795666c996" compoundref="_genotype_8java" startline="98" endline="125">org.jgap.Genotype.Genotype</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1a786848d2da4fd3d87f9f4caa8f9dd58b" compoundref="_genotype_8java" startline="535" endline="537">org.jgap.Genotype.getConfiguration</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1_genotype_1aa2ba4539110aaa8d853c808679f4f0e2" prot="private" static="no" mutable="no">
+        <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+        <definition>Population org.jgap.Genotype.m_population</definition>
+        <argsstring></argsstring>
+        <name>m_population</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The array of Chromosomes that make-up the <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref>&apos;s population. <simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="50" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="50" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1a7b08ffd2154cd3ccc8636b795666c996" compoundref="_genotype_8java" startline="98" endline="125">org.jgap.Genotype.Genotype</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1a8241b2d89d32b283abe5c9b42974d64d" compoundref="_genotype_8java" startline="167" endline="169">org.jgap.Genotype.getPopulation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1ac56a4d112334db07ba333602c4a24706" compoundref="_genotype_8java" startline="570" endline="572">org.jgap.Genotype.setPopulation</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1_genotype_1ab1b1b976deab7f2faea463d1b8d52abe" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean org.jgap.Genotype.m_useMonitor</definition>
+        <argsstring></argsstring>
+        <name>m_useMonitor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Use an enolution monitor <simplesect kind="since"><para>3.6 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="55" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="55" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1a0d14c5400197e3c43f9d1f0666309a85" compoundref="_genotype_8java" startline="624" endline="633">org.jgap.Genotype.run</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1abba6c68b3e8388be6884a35f5600e8cb" compoundref="_genotype_8java" startline="703" endline="705">org.jgap.Genotype.setUseMonitor</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1_genotype_1acac1218542ab91833483ebd42ac8636b" prot="private" static="no" mutable="no">
+        <type>IEvolutionMonitor</type>
+        <definition>IEvolutionMonitor org.jgap.Genotype.m_monitor</definition>
+        <argsstring></argsstring>
+        <name>m_monitor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="57" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="57" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1a0d14c5400197e3c43f9d1f0666309a85" compoundref="_genotype_8java" startline="624" endline="633">org.jgap.Genotype.run</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1af3f49ba90cc8515817366792b7bce320" compoundref="_genotype_8java" startline="716" endline="718">org.jgap.Genotype.setMonitor</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1a00b11af9a68e9d84bbc52afbf661607f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.Genotype.Genotype</definition>
+        <argsstring>(Configuration a_configuration, IChromosome[] a_initialChromosomes)</argsstring>
+        <name>Genotype</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref>[]</type>
+          <declname>a_initialChromosomes</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a new <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> instance with the given array of Chromosomes and the given active <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> instance. Note that the <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> object must be in a valid state when this method is invoked, or a <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> will be thrown.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> object to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_initialChromosomes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> population to be managed by this <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> instance </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the given <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> object is in an invalid state</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+<xrefsect id="deprecated_1_deprecated000007"><xreftitle>Deprecated</xreftitle><xrefdescription><para>use <ref refid="classorg_1_1jgap_1_1_genotype_1a7b08ffd2154cd3ccc8636b795666c996" kindref="member">Genotype(Configuration, Population)</ref> instead </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="76" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="76" bodyend="80"/>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1ab9bba698920b358bb53131338c9d130a" compoundref="_genotype_8java" startline="397" endline="430">org.jgap.Genotype.equals</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1a930184e2920b4642f20d0b8bc8412005" compoundref="_genotype_8java" startline="321" endline="343">org.jgap.Genotype.randomInitialGenotype</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1a7b08ffd2154cd3ccc8636b795666c996" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.Genotype.Genotype</definition>
+        <argsstring>(Configuration a_configuration, Population a_population)</argsstring>
+        <name>Genotype</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_population</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a new <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> instance with the given array of Chromosomes and the given active <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> instance. Note that the <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> object must be in a valid state when this method is invoked, or a InvalidconfigurationException will be thrown.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> object to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_population</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> population to be managed by this <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> instance </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="98" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="98" bodyend="125"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1aeb3fac2610b8ef8fa8599fcac1b6a199" compoundref="_genotype_8java" startline="42">org.jgap.Genotype.m_activeConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1_genotype_1aa2ba4539110aaa8d853c808679f4f0e2" compoundref="_genotype_8java" startline="50">org.jgap.Genotype.m_population</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1afc52d6b649eea1eefd92e376ea3762ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.Genotype.Genotype</definition>
+        <argsstring>(Configuration a_configuration)</argsstring>
+        <name>Genotype</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Don&apos;t use this constructor, it&apos;s only for internal use.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>not used here! </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="136" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="136" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1ad6795433da5538c6f520253ff9d2382e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized <ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref>[]</type>
+        <definition>synchronized IChromosome [] org.jgap.Genotype.getChromosomes</definition>
+        <argsstring>()</argsstring>
+        <name>getChromosomes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the array of Chromosomes that make up the population of this <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> instance.</para><para><simplesect kind="return"><para>the <ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref> of Chromosomes</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+<xrefsect id="deprecated_1_deprecated000008"><xreftitle>Deprecated</xreftitle><xrefdescription><para>uses <ref refid="classorg_1_1jgap_1_1_genotype_1a8241b2d89d32b283abe5c9b42974d64d" kindref="member">getPopulation()</ref> instead </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="151" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="151" bodyend="159"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a8241b2d89d32b283abe5c9b42974d64d" compoundref="_genotype_8java" startline="167" endline="169">org.jgap.Genotype.getPopulation</references>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1adf2dbe6d60d6c74592cb1e6398cece2c" compoundref="_genotype_8java" startline="501" endline="512">org.jgap.Genotype.applyGeneticOperators</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1ab9bba698920b358bb53131338c9d130a" compoundref="_genotype_8java" startline="397" endline="430">org.jgap.Genotype.equals</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1a8241b2d89d32b283abe5c9b42974d64d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+        <definition>Population org.jgap.Genotype.getPopulation</definition>
+        <argsstring>()</argsstring>
+        <name>getPopulation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the current population of chromosomes</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="167" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="167" bodyend="169"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1aa2ba4539110aaa8d853c808679f4f0e2" compoundref="_genotype_8java" startline="50">org.jgap.Genotype.m_population</references>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1adf2dbe6d60d6c74592cb1e6398cece2c" compoundref="_genotype_8java" startline="501" endline="512">org.jgap.Genotype.applyGeneticOperators</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1a6c14c3a36aa8e4291840f0b9c0facb35" compoundref="_genotype_8java" startline="442" endline="493">org.jgap.Genotype.applyNaturalSelectors</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_test_1a8066d3a563d87f0053623bf648a42443" compoundref="_genotype_test_8java" startline="730" endline="753">org.jgap.GenotypeTest.doTestEvolve_5</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1ab9bba698920b358bb53131338c9d130a" compoundref="_genotype_8java" startline="397" endline="430">org.jgap.Genotype.equals</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1a54a6791fbb6e13920e79f4e2dd719eb4" compoundref="_genotype_8java" startline="231" endline="235">org.jgap.Genotype.evolve</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1ac622bbf487c0ab7344d46ca669607cef" compoundref="_genotype_8java" startline="354" endline="380">org.jgap.Genotype.fillPopulation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1ad6795433da5538c6f520253ff9d2382e" compoundref="_genotype_8java" startline="151" endline="159">org.jgap.Genotype.getChromosomes</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1a84fd1b399188ea10c0af4b7c1152e0c2" compoundref="_genotype_8java" startline="644" endline="671">org.jgap.Genotype.getEvolves</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1a05380af4c0737841c09d3a5533f9f942" compoundref="_genotype_8java" startline="182" endline="184">org.jgap.Genotype.getFittestChromosome</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1a602d6b1413007ef28880cf88ccd2f912" compoundref="_genotype_8java" startline="214" endline="216">org.jgap.Genotype.getFittestChromosomes</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1abe044a5473e935c2093ee3c6c18775f7" compoundref="_genotype_8java" startline="555" endline="568">org.jgap.Genotype.hashCode</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a5279539edcf3b0cba17ca726072194f1" compoundref="_evaluator_8java" startline="293" endline="295">org.jgap.audit.Evaluator.storeGenotype</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_test_1a5ff34d5701b5d5406cf943adafa02345" compoundref="_genotype_test_8java" startline="383" endline="401">org.jgap.GenotypeTest.testEvolve_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1a658a541940e9be8ef474375091ff31ae" compoundref="_genotype_8java" startline="292" endline="301">org.jgap.Genotype.toString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1a05380af4c0737841c09d3a5533f9f942" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized <ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+        <definition>synchronized IChromosome org.jgap.Genotype.getFittestChromosome</definition>
+        <argsstring>()</argsstring>
+        <name>getFittestChromosome</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> in the <ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref> with the highest fitness value.</para><para><simplesect kind="return"><para>the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> with the highest fitness value, or null if there are no chromosomes in this <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref></para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="182" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="182" bodyend="184"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a8241b2d89d32b283abe5c9b42974d64d" compoundref="_genotype_8java" startline="167" endline="169">org.jgap.Genotype.getPopulation</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1a6c40835533352287db8d34e5fae6875f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized <ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+        <definition>synchronized IChromosome org.jgap.Genotype.getFittestChromosome</definition>
+        <argsstring>(int a_startIndex, int a_endIndex)</argsstring>
+        <name>getFittestChromosome</name>
+        <param>
+          <type>int</type>
+          <declname>a_startIndex</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_endIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> in the <ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref> with the highest fitness value within the given indices.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_startIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the index to start the determination with </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_endIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the index to end the determination with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> with the highest fitness value within the given indices, or null if there are no chromosomes in this <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref></para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="198" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="198" bodyend="201"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a8241b2d89d32b283abe5c9b42974d64d" compoundref="_genotype_8java" startline="167" endline="169">org.jgap.Genotype.getPopulation</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1a602d6b1413007ef28880cf88ccd2f912" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized List</type>
+        <definition>synchronized List org.jgap.Genotype.getFittestChromosomes</definition>
+        <argsstring>(int a_numberOfChromosomes)</argsstring>
+        <name>getFittestChromosomes</name>
+        <param>
+          <type>int</type>
+          <declname>a_numberOfChromosomes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the top n Chromsomes in the population (the ones with the best fitness values).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_numberOfChromosomes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of chromosomes desired </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the list of Chromosomes with the highest fitness values, or null if there are no chromosomes in this <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref></para></simplesect>
+<simplesect kind="author"><para>Charles Kevin Hill </para></simplesect>
+<simplesect kind="since"><para>2.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="214" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="214" bodyend="216"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a8241b2d89d32b283abe5c9b42974d64d" compoundref="_genotype_8java" startline="167" endline="169">org.jgap.Genotype.getPopulation</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1a54a6791fbb6e13920e79f4e2dd719eb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized void</type>
+        <definition>synchronized void org.jgap.Genotype.evolve</definition>
+        <argsstring>()</argsstring>
+        <name>evolve</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Evolves the population of Chromosomes within this <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref>. This will execute all of the genetic operators added to the present active configuration and then invoke the natural selector to choose which chromosomes will be included in the next generation population. Note that the population size not always remains constant (dependent on the NaturalSelectors used!). To consecutively call this method, use <ref refid="classorg_1_1jgap_1_1_genotype_1ab15d88cf1a6084f9efea2dc935968471" kindref="member">evolve(int)</ref>!!!</para><para><simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="231" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="231" bodyend="235"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a786848d2da4fd3d87f9f4caa8f9dd58b" compoundref="_genotype_8java" startline="535" endline="537">org.jgap.Genotype.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a8241b2d89d32b283abe5c9b42974d64d" compoundref="_genotype_8java" startline="167" endline="169">org.jgap.Genotype.getPopulation</references>
+        <references refid="classorg_1_1jgap_1_1_genotype_1ac56a4d112334db07ba333602c4a24706" compoundref="_genotype_8java" startline="570" endline="572">org.jgap.Genotype.setPopulation</references>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1ab15d88cf1a6084f9efea2dc935968471" compoundref="_genotype_8java" startline="248" endline="256">org.jgap.Genotype.evolve</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1a0d14c5400197e3c43f9d1f0666309a85" compoundref="_genotype_8java" startline="624" endline="633">org.jgap.Genotype.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1ab15d88cf1a6084f9efea2dc935968471" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Genotype.evolve</definition>
+        <argsstring>(int a_numberOfEvolutions)</argsstring>
+        <name>evolve</name>
+        <param>
+          <type>int</type>
+          <declname>a_numberOfEvolutions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Evolves this <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> the specified number of times. This is equivalent to invoking the standard <ref refid="classorg_1_1jgap_1_1_genotype_1a54a6791fbb6e13920e79f4e2dd719eb4" kindref="member">evolve()</ref> method the given number of times in a row.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_numberOfEvolutions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of times to evolve this <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> before returning</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="248" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="248" bodyend="256"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a54a6791fbb6e13920e79f4e2dd719eb4" compoundref="_genotype_8java" startline="231" endline="235">org.jgap.Genotype.evolve</references>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a8241b2d89d32b283abe5c9b42974d64d" compoundref="_genotype_8java" startline="167" endline="169">org.jgap.Genotype.getPopulation</references>
+        <references refid="classorg_1_1jgap_1_1_configuration_1a21cd64586b838743538195b6e8a42a11" compoundref="_configuration_8java" startline="963" endline="965">org.jgap.Configuration.getPopulationSize</references>
+        <references refid="classorg_1_1jgap_1_1_configuration_1ad41cca8a908a60f0e4575f02f59b780e" compoundref="_configuration_8java" startline="1462" endline="1464">org.jgap.Configuration.isKeepPopulationSizeConstant</references>
+        <references refid="classorg_1_1jgap_1_1_genotype_1af5e224c5b7c05dbe02b3324d5ec16f2a" compoundref="_genotype_8java" startline="602" endline="613">org.jgap.Genotype.keepPopSizeConstant</references>
+        <references refid="classorg_1_1jgap_1_1_genotype_1aeb3fac2610b8ef8fa8599fcac1b6a199" compoundref="_genotype_8java" startline="42">org.jgap.Genotype.m_activeConfiguration</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1aa740dd753d31620166979199a38d5a50" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; String &gt;</type>
+        <definition>List&lt;String&gt; org.jgap.Genotype.evolve</definition>
+        <argsstring>(IEvolutionMonitor a_monitor)</argsstring>
+        <name>evolve</name>
+        <param>
+          <type>IEvolutionMonitor</type>
+          <declname>a_monitor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Evolves this genotype until the given monitor asks to quit the evolution cycle.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_monitor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the monitor used to decide when to stop evolution</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>messages of the registered evolution monitor. May indicate why the evolution was asked to be stopped. May be empty, depending on the implementation of the used monitor</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.4.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="271" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="271" bodyend="283"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a54a6791fbb6e13920e79f4e2dd719eb4" compoundref="_genotype_8java" startline="231" endline="235">org.jgap.Genotype.evolve</references>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a786848d2da4fd3d87f9f4caa8f9dd58b" compoundref="_genotype_8java" startline="535" endline="537">org.jgap.Genotype.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a8241b2d89d32b283abe5c9b42974d64d" compoundref="_genotype_8java" startline="167" endline="169">org.jgap.Genotype.getPopulation</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1a658a541940e9be8ef474375091ff31ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String org.jgap.Genotype.toString</definition>
+        <argsstring>()</argsstring>
+        <name>toString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string representation of this <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> instance, useful for display or debug purposes</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="292" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="292" bodyend="301"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a8241b2d89d32b283abe5c9b42974d64d" compoundref="_genotype_8java" startline="167" endline="169">org.jgap.Genotype.getPopulation</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1ac622bbf487c0ab7344d46ca669607cef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Genotype.fillPopulation</definition>
+        <argsstring>(final int a_num)</argsstring>
+        <name>fillPopulation</name>
+        <param>
+          <type>final int</type>
+          <declname>a_num</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fills up the population with random chromosomes if necessary.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of chromosomes to add </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="354" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="354" bodyend="380"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a786848d2da4fd3d87f9f4caa8f9dd58b" compoundref="_genotype_8java" startline="535" endline="537">org.jgap.Genotype.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a8241b2d89d32b283abe5c9b42974d64d" compoundref="_genotype_8java" startline="167" endline="169">org.jgap.Genotype.getPopulation</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1ab9bba698920b358bb53131338c9d130a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.Genotype.equals</definition>
+        <argsstring>(Object a_other)</argsstring>
+        <name>equals</name>
+        <param>
+          <type>Object</type>
+          <declname>a_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compares this <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> against the specified object. The result is true if the argument is an instance of the <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> class, has exactly the same number of chromosomes as the given <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref>, and, for each <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> in this <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref>, there is an equal chromosome in the given <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref>. The chromosomes do not need to appear in the same order within the population.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the object to compare against </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the objects are the same, false otherwise</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="397" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="397" bodyend="430"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a00b11af9a68e9d84bbc52afbf661607f" compoundref="_genotype_8java" startline="76" endline="80">org.jgap.Genotype.Genotype</references>
+        <references refid="classorg_1_1jgap_1_1_genotype_1ad6795433da5538c6f520253ff9d2382e" compoundref="_genotype_8java" startline="151" endline="159">org.jgap.Genotype.getChromosomes</references>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a8241b2d89d32b283abe5c9b42974d64d" compoundref="_genotype_8java" startline="167" endline="169">org.jgap.Genotype.getPopulation</references>
+        <referencedby refid="classorg_1_1jgap_1_1xml_1_1_x_m_l_manager_test_1a100fec0620b0aa17daa436ea40b77309" compoundref="_x_m_l_manager_test_8java" startline="186" endline="192">org.jgap.xml.XMLManagerTest.testGetGenotypeFromDocument_1</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1adf2dbe6d60d6c74592cb1e6398cece2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Genotype.applyGeneticOperators</definition>
+        <argsstring>()</argsstring>
+        <name>applyGeneticOperators</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Applies all GeneticOperators registered with the <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref>.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="501" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="501" bodyend="512"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a554d1eaf21a0a9437cdbc5b0fbeedef4" compoundref="_genotype_8java" startline="587" endline="591">org.jgap.Genotype.applyGeneticOperator</references>
+        <references refid="classorg_1_1jgap_1_1_genotype_1ad6795433da5538c6f520253ff9d2382e" compoundref="_genotype_8java" startline="151" endline="159">org.jgap.Genotype.getChromosomes</references>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a8241b2d89d32b283abe5c9b42974d64d" compoundref="_genotype_8java" startline="167" endline="169">org.jgap.Genotype.getPopulation</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1a786848d2da4fd3d87f9f4caa8f9dd58b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+        <definition>Configuration org.jgap.Genotype.getConfiguration</definition>
+        <argsstring>()</argsstring>
+        <name>getConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="535" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="535" bodyend="537"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1aeb3fac2610b8ef8fa8599fcac1b6a199" compoundref="_genotype_8java" startline="42">org.jgap.Genotype.m_activeConfiguration</references>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1a6c14c3a36aa8e4291840f0b9c0facb35" compoundref="_genotype_8java" startline="442" endline="493">org.jgap.Genotype.applyNaturalSelectors</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1a54a6791fbb6e13920e79f4e2dd719eb4" compoundref="_genotype_8java" startline="231" endline="235">org.jgap.Genotype.evolve</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1ac622bbf487c0ab7344d46ca669607cef" compoundref="_genotype_8java" startline="354" endline="380">org.jgap.Genotype.fillPopulation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1a84fd1b399188ea10c0af4b7c1152e0c2" compoundref="_genotype_8java" startline="644" endline="671">org.jgap.Genotype.getEvolves</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1aa2b0341edc420ad61e797508b8bf4dd5" compoundref="_genotype_8java" startline="673" endline="692">org.jgap.Genotype.mergeResults</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1abe044a5473e935c2093ee3c6c18775f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.Genotype.hashCode</definition>
+        <argsstring>()</argsstring>
+        <name>hashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="555" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="555" bodyend="568"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a8241b2d89d32b283abe5c9b42974d64d" compoundref="_genotype_8java" startline="167" endline="169">org.jgap.Genotype.getPopulation</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1a0d14c5400197e3c43f9d1f0666309a85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Genotype.run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If used in a Thread: runs the evolution forever. You have to implement a listener to stop computation sometime. See <ref refid="namespaceexamples_1_1simple_boolean_threaded" kindref="compound">examples.simpleBooleanThreaded</ref> for a possible implementation of such a listener.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.01 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="624" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="624" bodyend="633"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a54a6791fbb6e13920e79f4e2dd719eb4" compoundref="_genotype_8java" startline="231" endline="235">org.jgap.Genotype.evolve</references>
+        <references refid="classorg_1_1jgap_1_1_genotype_1acac1218542ab91833483ebd42ac8636b" compoundref="_genotype_8java" startline="57">org.jgap.Genotype.m_monitor</references>
+        <references refid="classorg_1_1jgap_1_1_genotype_1ab1b1b976deab7f2faea463d1b8d52abe" compoundref="_genotype_8java" startline="55">org.jgap.Genotype.m_useMonitor</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1a84fd1b399188ea10c0af4b7c1152e0c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; IEvolveJob &gt;</type>
+        <definition>List&lt;IEvolveJob&gt; org.jgap.Genotype.getEvolves</definition>
+        <argsstring>(IPopulationSplitter a_splitter)</argsstring>
+        <name>getEvolves</name>
+        <param>
+          <type>IPopulationSplitter</type>
+          <declname>a_splitter</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Splits a population into pieces that can be evolved independently.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_splitter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>splits the population </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>list of IEvolveJob objects </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="644" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="644" bodyend="671"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a786848d2da4fd3d87f9f4caa8f9dd58b" compoundref="_genotype_8java" startline="535" endline="537">org.jgap.Genotype.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a8241b2d89d32b283abe5c9b42974d64d" compoundref="_genotype_8java" startline="167" endline="169">org.jgap.Genotype.getPopulation</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1aa2b0341edc420ad61e797508b8bf4dd5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Genotype.mergeResults</definition>
+        <argsstring>(IPopulationMerger a_merger, EvolveResult[] a_results)</argsstring>
+        <name>mergeResults</name>
+        <param>
+          <type>IPopulationMerger</type>
+          <declname>a_merger</declname>
+        </param>
+        <param>
+          <type>EvolveResult[]</type>
+          <declname>a_results</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000120"><xreftitle>Todo</xreftitle><xrefdescription><para>use/enhance IPopulationMerger </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="673" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="673" bodyend="692"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a786848d2da4fd3d87f9f4caa8f9dd58b" compoundref="_genotype_8java" startline="535" endline="537">org.jgap.Genotype.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1_genotype_1ac56a4d112334db07ba333602c4a24706" compoundref="_genotype_8java" startline="570" endline="572">org.jgap.Genotype.setPopulation</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1abba6c68b3e8388be6884a35f5600e8cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Genotype.setUseMonitor</definition>
+        <argsstring>(boolean a_useMonitor)</argsstring>
+        <name>setUseMonitor</name>
+        <param>
+          <type>boolean</type>
+          <declname>a_useMonitor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Use an evolution monitor, only to be used when running <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> as a thread. Otherwise use method <ref refid="classorg_1_1jgap_1_1_genotype_1aa740dd753d31620166979199a38d5a50" kindref="member">evolve(IEvolutionMonitor)</ref></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_useMonitor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true: use evolution monitor, set it via setMonitor</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.6 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="703" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="703" bodyend="705"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1ab1b1b976deab7f2faea463d1b8d52abe" compoundref="_genotype_8java" startline="55">org.jgap.Genotype.m_useMonitor</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1af3f49ba90cc8515817366792b7bce320" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Genotype.setMonitor</definition>
+        <argsstring>(IEvolutionMonitor a_monitor)</argsstring>
+        <name>setMonitor</name>
+        <param>
+          <type>IEvolutionMonitor</type>
+          <declname>a_monitor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the evolution monitor to use, activate it via setUseMonitor(true). Only to be used when running <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> as a thread.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_monitor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the IEvolutionMonitor to use</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.6 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="716" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="716" bodyend="718"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1acac1218542ab91833483ebd42ac8636b" compoundref="_genotype_8java" startline="57">org.jgap.Genotype.m_monitor</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1a930184e2920b4642f20d0b8bc8412005" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref></type>
+        <definition>static Genotype org.jgap.Genotype.randomInitialGenotype</definition>
+        <argsstring>(Configuration a_configuration)</argsstring>
+        <name>randomInitialGenotype</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convenience method that returns a newly constructed <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> instance configured according to the given <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> instance. The population of Chromosomes will be created according to the setup of the sample <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> in the <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> object, but the gene values (alleles) will be set to random legal values.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current active <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a newly constructed <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> instance</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IllegalArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the given <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> object is null </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the given <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> instance is not in a valid state</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.3 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="321" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="321" bodyend="343"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a00b11af9a68e9d84bbc52afbf661607f" compoundref="_genotype_8java" startline="76" endline="80">org.jgap.Genotype.Genotype</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1aaf3d4bf0b470aa4655e85262289443eb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+        <definition>static Configuration org.jgap.Genotype.getStaticConfiguration</definition>
+        <argsstring>()</argsstring>
+        <name>getStaticConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the configuration to use with the Genetic Algorithm</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="520" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="520" bodyend="522"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a8b93a0b2044e40520d4a966ef3ae0bbe" compoundref="_genotype_8java" startline="44">org.jgap.Genotype.m_staticConfiguration</references>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_for_testing_1aa30c6d1e2e69ce1978d97c2540aa9ed4" compoundref="_chromosome_for_testing_8java" startline="23" endline="26">org.jgap.ChromosomeForTesting.ChromosomeForTesting</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_chromosome_for_testing2_1a6d8476250d738933105dc7c1514214c6" compoundref="_chromosome_for_testing2_8java" startline="23" endline="26">org.jgap.ChromosomeForTesting2.ChromosomeForTesting2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator_1a1f75f1e7fbc8d7b9332f92f67f72f0c6" compoundref="_crossover_operator_8java" startline="85" endline="89">org.jgap.impl.CrossoverOperator.CrossoverOperator</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a5777f6e13508c61d2c1e43ee0900cbf3" compoundref="_greedy_crossover_8java" startline="76" endline="79">org.jgap.impl.GreedyCrossover.GreedyCrossover</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_natural_selector_ext_1a07fbce4646a51d8dbac653f85aa2dd07" compoundref="_natural_selector_ext_8java" startline="37" endline="41">org.jgap.NaturalSelectorExt.NaturalSelectorExt</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_tournament_selector_1aa8e74d4e462d2e1a646d7d307c2d7296" compoundref="impl_2_tournament_selector_8java" startline="51" endline="55">org.jgap.impl.TournamentSelector.TournamentSelector</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_1a85c99216cb3541baba946663089c71b0" compoundref="_two_way_mutation_operator_8java" startline="61" endline="65">org.jgap.impl.TwoWayMutationOperator.TwoWayMutationOperator</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1a2f44a7709eca83cddd6d794ee59e663c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void org.jgap.Genotype.setStaticConfiguration</definition>
+        <argsstring>(Configuration a_configuration)</argsstring>
+        <name>setStaticConfiguration</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the configuration to use with the Genetic Algorithm. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="531" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="531" bodyend="533"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a8b93a0b2044e40520d4a966ef3ae0bbe" compoundref="_genotype_8java" startline="44">org.jgap.Genotype.m_staticConfiguration</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1a6c14c3a36aa8e4291840f0b9c0facb35" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Genotype.applyNaturalSelectors</definition>
+        <argsstring>(boolean a_processBeforeGeneticOperators)</argsstring>
+        <name>applyNaturalSelectors</name>
+        <param>
+          <type>boolean</type>
+          <declname>a_processBeforeGeneticOperators</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Applies all NaturalSelectors registered with the <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_processBeforeGeneticOperators</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true apply NaturalSelectors applicable before GeneticOperators, false: apply the ones applicable after GeneticOperators</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000118"><xreftitle>Todo</xreftitle><xrefdescription><para>optionally use working pool </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="442" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="442" bodyend="493"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a786848d2da4fd3d87f9f4caa8f9dd58b" compoundref="_genotype_8java" startline="535" endline="537">org.jgap.Genotype.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a8241b2d89d32b283abe5c9b42974d64d" compoundref="_genotype_8java" startline="167" endline="169">org.jgap.Genotype.getPopulation</references>
+        <references refid="classorg_1_1jgap_1_1_genotype_1aeb3fac2610b8ef8fa8599fcac1b6a199" compoundref="_genotype_8java" startline="42">org.jgap.Genotype.m_activeConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1_genotype_1ac56a4d112334db07ba333602c4a24706" compoundref="_genotype_8java" startline="570" endline="572">org.jgap.Genotype.setPopulation</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1ac56a4d112334db07ba333602c4a24706" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Genotype.setPopulation</definition>
+        <argsstring>(Population a_pop)</argsstring>
+        <name>setPopulation</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_pop</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="570" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="570" bodyend="572"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1aa2ba4539110aaa8d853c808679f4f0e2" compoundref="_genotype_8java" startline="50">org.jgap.Genotype.m_population</references>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1a6c14c3a36aa8e4291840f0b9c0facb35" compoundref="_genotype_8java" startline="442" endline="493">org.jgap.Genotype.applyNaturalSelectors</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1a54a6791fbb6e13920e79f4e2dd719eb4" compoundref="_genotype_8java" startline="231" endline="235">org.jgap.Genotype.evolve</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1aa2b0341edc420ad61e797508b8bf4dd5" compoundref="_genotype_8java" startline="673" endline="692">org.jgap.Genotype.mergeResults</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1a554d1eaf21a0a9437cdbc5b0fbeedef4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Genotype.applyGeneticOperator</definition>
+        <argsstring>(GeneticOperator a_operator, Population a_population, List a_chromosomes)</argsstring>
+        <name>applyGeneticOperator</name>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_genetic_operator" kindref="compound">GeneticOperator</ref></type>
+          <declname>a_operator</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_population</declname>
+        </param>
+        <param>
+          <type>List</type>
+          <declname>a_chromosomes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Overwritable method that calls a <ref refid="interfaceorg_1_1jgap_1_1_genetic_operator" kindref="compound">GeneticOperator</ref> to operate on a given population and asks him to store the result in the list of chromosomes. Override this method if you want to ensure that a_chromosomes is not part of a_population resp. if you want to use a different list.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_operator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="interfaceorg_1_1jgap_1_1_genetic_operator" kindref="compound">GeneticOperator</ref> to call </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_population</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the population to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_chromosomes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the list of <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> objects to return</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="587" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="587" bodyend="591"/>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1adf2dbe6d60d6c74592cb1e6398cece2c" compoundref="_genotype_8java" startline="501" endline="512">org.jgap.Genotype.applyGeneticOperators</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_genotype_1af5e224c5b7c05dbe02b3324d5ec16f2a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.Genotype.keepPopSizeConstant</definition>
+        <argsstring>(Population a_pop, int a_maxSize)</argsstring>
+        <name>keepPopSizeConstant</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_pop</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_maxSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cares that the population size does not exceed the given maximum size.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_pop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the population to keep constant in size </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_maxSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the maximum size allowed for the population</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.5 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000119"><xreftitle>Todo</xreftitle><xrefdescription><para>use StandardPostSelector instead? </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="602" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="602" bodyend="613"/>
+        <referencedby refid="classorg_1_1jgap_1_1_genotype_1ab15d88cf1a6084f9efea2dc935968471" compoundref="_genotype_8java" startline="248" endline="256">org.jgap.Genotype.evolve</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Genotypes are fixed-length populations of chromosomes. As an instance of a <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> is evolved, all of its Chromosomes are also evolved. A <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> may be constructed normally via constructor, or the static <ref refid="classorg_1_1jgap_1_1_genotype_1a930184e2920b4642f20d0b8bc8412005" kindref="member">randomInitialGenotype()</ref> method can be used to generate a <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> with a randomized <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> population. </para><para>Please note that among all created <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> instances there may only be one configuration, used by all <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> instances.</para><para><simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="13273">
+        <label>org.jgap.Genotype</label>
+        <link refid="classorg_1_1jgap_1_1_genotype"/>
+        <childnode refid="13274" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13275" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13274">
+        <label>Serializable</label>
+      </node>
+      <node id="13276">
+        <label>org.jgap.distr.DistributedGenotype</label>
+        <link refid="classorg_1_1jgap_1_1distr_1_1_distributed_genotype"/>
+        <childnode refid="13273" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13275">
+        <label>Runnable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="13290">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="13277">
+        <label>org.jgap.Genotype</label>
+        <link refid="classorg_1_1jgap_1_1_genotype"/>
+        <childnode refid="13278" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13279" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13280" relation="usage">
+          <edgelabel>m_activeConfiguration</edgelabel>
+          <edgelabel>m_staticConfiguration</edgelabel>
+        </childnode>
+        <childnode refid="13296" relation="usage">
+          <edgelabel>m_population</edgelabel>
+        </childnode>
+      </node>
+      <node id="13298">
+        <label>List&lt; org.jgap.IChromosome &gt;</label>
+      </node>
+      <node id="13295">
+        <label>List</label>
+      </node>
+      <node id="13294">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="13278" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13282" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13291">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="13278" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13278">
+        <label>Serializable</label>
+      </node>
+      <node id="13284">
+        <label>Comparable</label>
+      </node>
+      <node id="13282">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="13283" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13288">
+        <label>org.jgap.FitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_fitness_evaluator"/>
+        <childnode refid="13278" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13292">
+        <label>org.jgap.BulkFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_bulk_fitness_function"/>
+        <childnode refid="13278" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13282" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13283">
+        <label>Cloneable</label>
+      </node>
+      <node id="13297">
+        <label>org.jgap.IPersistentRepresentation</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_persistent_representation"/>
+      </node>
+      <node id="13286">
+        <label>org.jgap.IJGAPFactory</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_j_g_a_p_factory"/>
+        <childnode refid="13278" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13293">
+        <label>org.jgap.Configuration.ConfigurationConfigurable</label>
+        <link refid="classorg_1_1jgap_1_1_configuration_1_1_configuration_configurable"/>
+        <childnode refid="13278" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13296">
+        <label>org.jgap.Population</label>
+        <link refid="classorg_1_1jgap_1_1_population"/>
+        <childnode refid="13278" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13282" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13297" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13298" relation="usage">
+          <edgelabel>m_chromosomes</edgelabel>
+        </childnode>
+        <childnode refid="13280" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="13289" relation="usage">
+          <edgelabel>m_fittestChromosome</edgelabel>
+        </childnode>
+      </node>
+      <node id="13279">
+        <label>Runnable</label>
+      </node>
+      <node id="13285">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="13282" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13278" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13284" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13289">
+        <label>org.jgap.IChromosome</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome"/>
+        <childnode refid="13284" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13282" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13278" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13290" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13280">
+        <label>org.jgap.Configuration</label>
+        <link refid="classorg_1_1jgap_1_1_configuration"/>
+        <childnode refid="13281" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13278" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13282" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13284" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13285" relation="usage">
+          <edgelabel>m_breeder</edgelabel>
+        </childnode>
+        <childnode refid="13286" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="13287" relation="usage">
+          <edgelabel>m_chromosomePool</edgelabel>
+        </childnode>
+        <childnode refid="13288" relation="usage">
+          <edgelabel>m_fitnessEvaluator</edgelabel>
+        </childnode>
+        <childnode refid="13289" relation="usage">
+          <edgelabel>m_sampleChromosome</edgelabel>
+        </childnode>
+        <childnode refid="13291" relation="usage">
+          <edgelabel>m_randomGenerator</edgelabel>
+        </childnode>
+        <childnode refid="13292" relation="usage">
+          <edgelabel>m_bulkObjectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="13293" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="13294" relation="usage">
+          <edgelabel>m_objectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="13295" relation="usage">
+          <edgelabel>m_geneticOperators</edgelabel>
+        </childnode>
+      </node>
+      <node id="13287">
+        <label>org.jgap.IChromosomePool</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool"/>
+      </node>
+      <node id="13281">
+        <label>Configurable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" line="34" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/Genotype.java" bodystart="33" bodyend="719"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a554d1eaf21a0a9437cdbc5b0fbeedef4" prot="protected" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>applyGeneticOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1adf2dbe6d60d6c74592cb1e6398cece2c" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>applyGeneticOperators</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a6c14c3a36aa8e4291840f0b9c0facb35" prot="protected" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>applyNaturalSelectors</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1ac9f8e9d203b7a4efdf8c2e32a08f84bb" prot="private" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1ab9bba698920b358bb53131338c9d130a" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>equals</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a54a6791fbb6e13920e79f4e2dd719eb4" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>evolve</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1ab15d88cf1a6084f9efea2dc935968471" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>evolve</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1aa740dd753d31620166979199a38d5a50" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>evolve</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1ac622bbf487c0ab7344d46ca669607cef" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>fillPopulation</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a00b11af9a68e9d84bbc52afbf661607f" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>Genotype</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a7b08ffd2154cd3ccc8636b795666c996" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>Genotype</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1afc52d6b649eea1eefd92e376ea3762ff" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>Genotype</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1ad6795433da5538c6f520253ff9d2382e" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>getChromosomes</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a786848d2da4fd3d87f9f4caa8f9dd58b" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>getConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a84fd1b399188ea10c0af4b7c1152e0c2" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>getEvolves</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a05380af4c0737841c09d3a5533f9f942" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>getFittestChromosome</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a6c40835533352287db8d34e5fae6875f" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>getFittestChromosome</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a602d6b1413007ef28880cf88ccd2f912" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>getFittestChromosomes</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a8241b2d89d32b283abe5c9b42974d64d" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>getPopulation</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1aaf3d4bf0b470aa4655e85262289443eb" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>getStaticConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1abe044a5473e935c2093ee3c6c18775f7" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>hashCode</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1af5e224c5b7c05dbe02b3324d5ec16f2a" prot="protected" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>keepPopSizeConstant</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1aeb3fac2610b8ef8fa8599fcac1b6a199" prot="private" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>m_activeConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1acac1218542ab91833483ebd42ac8636b" prot="private" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>m_monitor</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1aa2ba4539110aaa8d853c808679f4f0e2" prot="private" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>m_population</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a8b93a0b2044e40520d4a966ef3ae0bbe" prot="private" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>m_staticConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1ab1b1b976deab7f2faea463d1b8d52abe" prot="private" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>m_useMonitor</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1aa2b0341edc420ad61e797508b8bf4dd5" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>mergeResults</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a930184e2920b4642f20d0b8bc8412005" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>randomInitialGenotype</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a0d14c5400197e3c43f9d1f0666309a85" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>run</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1af3f49ba90cc8515817366792b7bce320" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>setMonitor</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1ac56a4d112334db07ba333602c4a24706" prot="protected" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>setPopulation</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a2f44a7709eca83cddd6d794ee59e663c" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>setStaticConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1abba6c68b3e8388be6884a35f5600e8cb" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>setUseMonitor</name></member>
+      <member refid="classorg_1_1jgap_1_1_genotype_1a658a541940e9be8ef474375091ff31ae" prot="public" virt="non-virtual"><scope>org::jgap::Genotype</scope><name>toString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1impl_1_1_slot_counter" kind="class" prot="package">
+    <compoundname>org::jgap::impl::SlotCounter</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_slot_counter_1a17e46911022902028a2f28dc9f6b7e12" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double org.jgap.impl.SlotCounter.m_fitnessValue</definition>
+        <argsstring></argsstring>
+        <name>m_fitnessValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The fitness value of the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> for which we are keeping count of roulette wheel slots. Although this value is constant for a <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>, it&apos;s not declared final here so that the slots can be reset and later reused for other Chromosomes, thus saving some memory and the overhead of constructing them from scratch. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="484" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="484" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_slot_counter_1a9ebfbd407b51ac9c6d37d84dfa1093a8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int org.jgap.impl.SlotCounter.m_count</definition>
+        <argsstring></argsstring>
+        <name>m_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current number of Chromosomes represented by this counter. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="489" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="489" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_slot_counter_1a439e87df5386f0ba36768a2a587da1d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.SlotCounter.reset</definition>
+        <argsstring>(final double a_initialFitness)</argsstring>
+        <name>reset</name>
+        <param>
+          <type>final double</type>
+          <declname>a_initialFitness</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resets the internal state of this SlotCounter instance so that it can be used to count slots for a new <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_initialFitness</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the fitness value of the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> for which this instance is acting as a counter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="501" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="501" bodyend="504"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_slot_counter_1a0f54953ab2daa090ebd346bcda250790" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double org.jgap.impl.SlotCounter.getFitnessValue</definition>
+        <argsstring>()</argsstring>
+        <name>getFitnessValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the fitness value of the chromosome for which this instance is acting as a counter.</para><para><simplesect kind="return"><para>the fitness value that was passed in at reset time</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="515" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="515" bodyend="517"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_slot_counter_1ae0026df7f072927e18aa5bc339dd1001" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.SlotCounter.increment</definition>
+        <argsstring>()</argsstring>
+        <name>increment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Increments the value of this counter by the fitness value that was passed in at reset time.</para><para><simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="526" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="526" bodyend="528"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_slot_counter_1a4877d36385a150744a7ba3d6afc52830" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.impl.SlotCounter.getCounterValue</definition>
+        <argsstring>()</argsstring>
+        <name>getCounterValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the current value of this counter: ie, the number of slots on the roulette wheel that are currently occupied by the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> associated with this SlotCounter instance.</para><para><simplesect kind="return"><para>the current value of this counter </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="537" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="537" bodyend="539"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_slot_counter_1ad7c29da924773df0e5ae82e70a5a75ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.SlotCounter.scaleFitnessValue</definition>
+        <argsstring>(final double a_scalingFactor)</argsstring>
+        <name>scaleFitnessValue</name>
+        <param>
+          <type>final double</type>
+          <declname>a_scalingFactor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Scales this SlotCounter&apos;s fitness value by the given scaling factor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_scalingFactor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the factor by which the fitness value is to be scaled</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="550" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="550" bodyend="552"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Implements a counter that is used to keep track of the total number of slots that a single <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> is occupying in the roulette wheel. Since all equal copies of a chromosome have the same fitness value, the increment method always adds the fitness value of the chromosome. Following construction of this class, the reset() method must be invoked to provide the initial fitness value of the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> for which this SlotCounter is to be associated. The reset() method may be reinvoked to begin counting slots for a new <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>.</para><para><simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>    </detaileddescription>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" line="476" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/WeightedRouletteSelector.java" bodystart="476" bodyend="553"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_slot_counter_1a4877d36385a150744a7ba3d6afc52830" prot="public" virt="non-virtual"><scope>org::jgap::impl::SlotCounter</scope><name>getCounterValue</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_slot_counter_1a0f54953ab2daa090ebd346bcda250790" prot="public" virt="non-virtual"><scope>org::jgap::impl::SlotCounter</scope><name>getFitnessValue</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_slot_counter_1ae0026df7f072927e18aa5bc339dd1001" prot="public" virt="non-virtual"><scope>org::jgap::impl::SlotCounter</scope><name>increment</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_slot_counter_1a9ebfbd407b51ac9c6d37d84dfa1093a8" prot="private" virt="non-virtual"><scope>org::jgap::impl::SlotCounter</scope><name>m_count</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_slot_counter_1a17e46911022902028a2f28dc9f6b7e12" prot="private" virt="non-virtual"><scope>org::jgap::impl::SlotCounter</scope><name>m_fitnessValue</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_slot_counter_1a439e87df5386f0ba36768a2a587da1d0" prot="public" virt="non-virtual"><scope>org::jgap::impl::SlotCounter</scope><name>reset</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_slot_counter_1ad7c29da924773df0e5ae82e70a5a75ea" prot="public" virt="non-virtual"><scope>org::jgap::impl::SlotCounter</scope><name>scaleFitnessValue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

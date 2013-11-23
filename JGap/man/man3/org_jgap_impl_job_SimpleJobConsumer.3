@@ -1,0 +1,113 @@
+.TH "org.jgap.impl.job.SimpleJobConsumer" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.job.SimpleJobConsumer \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBpushJobToGrid\fP (\fBIJob\fP a_job)"
+.br
+.ti -1c
+.RI "void \fBwaitForAllJobs\fP ()"
+.br
+.ti -1c
+.RI "\fBEvolveResult\fP[] \fBgetResults\fP ()"
+.br
+.ti -1c
+.RI "void \fBinit\fP ()  throws Exception "
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)  throws Exception "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "List \fBm_jobs\fP = new Vector()"
+.br
+.ti -1c
+.RI "List \fBm_results\fP = new Vector()"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.6 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Sample implementation of a service that generates jobs, takes them, executes them, receives results from finished jobs and merges the results in order to start a new round of evolution\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file SimpleJobConsumer\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBEvolveResult\fP [] org\&.jgap\&.impl\&.job\&.SimpleJobConsumer\&.getResults ()\fC [inline]\fP"
+
+.PP
+Definition at line 63 of file SimpleJobConsumer\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.job\&.SimpleJobConsumer\&.m_results\&.
+.SS "void org\&.jgap\&.impl\&.job\&.SimpleJobConsumer\&.init () throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 75 of file SimpleJobConsumer\&.java\&.
+.SS "static void org\&.jgap\&.impl\&.job\&.SimpleJobConsumer\&.main (String[]args) throws Exception\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 112 of file SimpleJobConsumer\&.java\&.
+.SS "void org\&.jgap\&.impl\&.job\&.SimpleJobConsumer\&.pushJobToGrid (\fBIJob\fPa_job)\fC [inline]\fP"
+
+.PP
+Definition at line 33 of file SimpleJobConsumer\&.java\&.
+.SS "void org\&.jgap\&.impl\&.job\&.SimpleJobConsumer\&.waitForAllJobs ()\fC [inline]\fP"
+
+.PP
+Definition at line 40 of file SimpleJobConsumer\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.job\&.IJob\&.isFinished(), and org\&.jgap\&.impl\&.job\&.SimpleJobConsumer\&.m_jobs\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.job\&.SimpleJobConsumer\&.CVS_REVISION = '$Revision: 1\&.6 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 28 of file SimpleJobConsumer\&.java\&.
+.SS "List org\&.jgap\&.impl\&.job\&.SimpleJobConsumer\&.m_jobs = new Vector()\fC [private]\fP"
+
+.PP
+Definition at line 30 of file SimpleJobConsumer\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.job\&.SimpleJobConsumer\&.waitForAllJobs()\&.
+.SS "List org\&.jgap\&.impl\&.job\&.SimpleJobConsumer\&.m_results = new Vector()\fC [private]\fP"
+
+.PP
+Definition at line 31 of file SimpleJobConsumer\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.job\&.SimpleJobConsumer\&.getResults()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

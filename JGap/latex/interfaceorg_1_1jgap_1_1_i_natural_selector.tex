@@ -1,0 +1,139 @@
+\hypertarget{interfaceorg_1_1jgap_1_1_i_natural_selector}{\section{org.\-jgap.\-I\-Natural\-Selector Interface Reference}
+\label{interfaceorg_1_1jgap_1_1_i_natural_selector}\index{org.\-jgap.\-I\-Natural\-Selector@{org.\-jgap.\-I\-Natural\-Selector}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-I\-Natural\-Selector\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceorg_1_1jgap_1_1_i_natural_selector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-I\-Natural\-Selector\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{interfaceorg_1_1jgap_1_1_i_natural_selector__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1_i_natural_selector_a621ca08e2f66866178214093ca4412fd}{select} (int a\-\_\-how\-Many\-To\-Select, \hyperlink{classorg_1_1jgap_1_1_population}{Population} a\-\_\-from\-\_\-population, \hyperlink{classorg_1_1jgap_1_1_population}{Population} a\-\_\-to\-\_\-population)
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1_i_natural_selector_a824307b8be94282a3dfd03aaa6531139}{empty} ()
+\item 
+boolean \hyperlink{interfaceorg_1_1jgap_1_1_i_natural_selector_a7a6e97dab3548d73a829c9b998df377a}{returns\-Unique\-Chromosomes} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{interfaceorg_1_1jgap_1_1_i_natural_selector_ac66372e84a053edd10b5c4c52ef2d365}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-13 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Natural selectors are responsible for actually selecting a specified number of \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} specimens from a population, using the fitness values as a guide. Usually fitness is treated as a statistic probability of survival, not as the sole determining factor. Therefore, Chromosomes with higher fitness values are more likely to survive than those with lesser fitness values, but it's not guaranteed.
+
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 26 of file I\-Natural\-Selector.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1_i_natural_selector_a824307b8be94282a3dfd03aaa6531139}{\index{org\-::jgap\-::\-I\-Natural\-Selector@{org\-::jgap\-::\-I\-Natural\-Selector}!empty@{empty}}
+\index{empty@{empty}!org::jgap::INaturalSelector@{org\-::jgap\-::\-I\-Natural\-Selector}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-I\-Natural\-Selector.\-empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_i_natural_selector_a824307b8be94282a3dfd03aaa6531139}
+Empty out the working pool of Chromosomes. This will be invoked after each evolution cycle so that the natural selector can be reused for the next one.
+
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a22f11caa1cdab23d1e61144bdcd70798}{org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_a807b0148412ef68d5a5d4b660a515f80}{org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_standard_post_selector_a8d37e415c80d67021aa81a886bab3948}{org.\-jgap.\-impl.\-Standard\-Post\-Selector}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_tournament_selector_a2d31ee0259fe57f59ccbc9951c4c8eda}{org.\-jgap.\-impl.\-Tournament\-Selector}, and \hyperlink{classorg_1_1jgap_1_1impl_1_1_threshold_selector_ad39ffedc3c37177fea2475bf8c70cdfe}{org.\-jgap.\-impl.\-Threshold\-Selector}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1_i_natural_selector_a7a6e97dab3548d73a829c9b998df377a}{\index{org\-::jgap\-::\-I\-Natural\-Selector@{org\-::jgap\-::\-I\-Natural\-Selector}!returns\-Unique\-Chromosomes@{returns\-Unique\-Chromosomes}}
+\index{returns\-Unique\-Chromosomes@{returns\-Unique\-Chromosomes}!org::jgap::INaturalSelector@{org\-::jgap\-::\-I\-Natural\-Selector}}
+\subsubsection[{returns\-Unique\-Chromosomes}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-I\-Natural\-Selector.\-returns\-Unique\-Chromosomes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_i_natural_selector_a7a6e97dab3548d73a829c9b998df377a}
+\begin{DoxyReturn}{Returns}
+true\-: The implementation of the \hyperlink{classorg_1_1jgap_1_1_natural_selector}{Natural\-Selector} only returns unique \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome}'s (example\-: Best\-Chromosomes\-Selector). false\-: Also doublettes could be returned (example\-: Weighted\-Roulette\-Selector).
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a077b4c36589db7f0a9eee47a0c281017}{org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_ac1b16641fb070ed5039193e4f081d809}{org.\-jgap.\-impl.\-Best\-Chromosomes\-Selector}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_standard_post_selector_a0d6f463c584556eab66424315dd70b3f}{org.\-jgap.\-impl.\-Standard\-Post\-Selector}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_tournament_selector_a0254281e4830d7521643903e172296ec}{org.\-jgap.\-impl.\-Tournament\-Selector}, and \hyperlink{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a893b221b556725744ffa735e54df2eb0}{org.\-jgap.\-impl.\-Threshold\-Selector}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1_i_natural_selector_a621ca08e2f66866178214093ca4412fd}{\index{org\-::jgap\-::\-I\-Natural\-Selector@{org\-::jgap\-::\-I\-Natural\-Selector}!select@{select}}
+\index{select@{select}!org::jgap::INaturalSelector@{org\-::jgap\-::\-I\-Natural\-Selector}}
+\subsubsection[{select}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-I\-Natural\-Selector.\-select (
+\begin{DoxyParamCaption}
+\item[{int}]{a\-\_\-how\-Many\-To\-Select, }
+\item[{{\bf Population}}]{a\-\_\-from\-\_\-population, }
+\item[{{\bf Population}}]{a\-\_\-to\-\_\-population}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_i_natural_selector_a621ca08e2f66866178214093ca4412fd}
+Select a given number of Chromosomes from the pool that will move on to the next generation population. This selection should be guided by the fitness values, but fitness should be treated as a statistical probability of survival, not as the sole determining factor. In other words, Chromosomes with higher fitness values should be more likely to be selected than those with lower fitness values, but it should not be guaranteed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-how\-Many\-To\-Select} & the number of Chromosomes to select \\
+\hline
+{\em a\-\_\-from\-\_\-population} & the population the Chromosomes will be selected from \\
+\hline
+{\em a\-\_\-to\-\_\-population} & the population the Chromosomes will be added to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 (since 1.\-0 with different return type) 
+\end{DoxySince}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1_i_natural_selector_ac66372e84a053edd10b5c4c52ef2d365}{\index{org\-::jgap\-::\-I\-Natural\-Selector@{org\-::jgap\-::\-I\-Natural\-Selector}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::INaturalSelector@{org\-::jgap\-::\-I\-Natural\-Selector}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-I\-Natural\-Selector.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-13 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{interfaceorg_1_1jgap_1_1_i_natural_selector_ac66372e84a053edd10b5c4c52ef2d365}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 29 of file I\-Natural\-Selector.\-java.
+
+
+
+The documentation for this interface was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/\hyperlink{_i_natural_selector_8java}{I\-Natural\-Selector.\-java}\end{DoxyCompactItemize}

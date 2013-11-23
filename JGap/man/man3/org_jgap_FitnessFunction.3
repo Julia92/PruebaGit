@@ -1,0 +1,219 @@
+.TH "org.jgap.FitnessFunction" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.FitnessFunction \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Inherited by \fBorg\&.jgap\&.CachedFitnessFunction\fP, \fBorg\&.jgap\&.FitnessFunctionTest\&.FitnessFunctionImpl\fP, \fBorg\&.jgap\&.GenotypeTest\&.Test2Function\fP, \fBorg\&.jgap\&.impl\&.BulkFitnessOffsetRemoverTest\&.DummyFitnessFunction\fP, \fBorg\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\fP, \fBorg\&.jgap\&.impl\&.job\&.MaxFunction\fP, \fBorg\&.jgap\&.impl\&.RandomFitnessFunction\fP, \fBorg\&.jgap\&.impl\&.salesman\&.SalesmanFitnessFunction\fP, \fBorg\&.jgap\&.impl\&.StaticFitnessFunction\fP, \fBorg\&.jgap\&.JGAPTestCase\&.TestFitnessFunction\fP, and \fBorg\&.jgap\&.perf\&.TestOverallPerformanceFitnessFunc\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "double \fBgetFitnessValue\fP (final \fBIChromosome\fP a_subject)"
+.br
+.ti -1c
+.RI "double \fBgetLastComputedFitnessValue\fP ()"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final double \fBNO_FITNESS_VALUE\fP = -1\&.0000000d"
+.br
+.ti -1c
+.RI "static final double \fBDELTA\fP = 0\&.0000001d"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "abstract double \fBevaluate\fP (\fBIChromosome\fP a_subject)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBm_lastComputedFitnessValue\fP = \fBNO_FITNESS_VALUE\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.22 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Fitness functions are used to determine how optimal a particular solution is relative to other solutions\&. This abstract class should be extended and the \fBevaluate()\fP method implemented\&. The fitness function is given a \fBChromosome\fP to evaluate and should return a positive double that reflects its fitness value\&. The higher the value, the more fit the \fBChromosome\fP\&. The actual range of fitness values isn't important (other than the fact that they must be positive doubles): it's the relative difference as a percentage that tends to determine the success or failure of a \fBChromosome\fP\&. So in other words, two Chromosomes with respective fitness values of 1 and 100 have the same relative fitness to each other as two Chromosomes with respective fitness values of 10 and 1000 (in each case, the first is 1% as fit as the second)\&. 
+.PP
+Note: Two Chromosomes with equivalent sets of genes should always be assigned the same fitness value by any implementation of this interface\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 35 of file FitnessFunction\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.FitnessFunction\&.clone ()\fC [inline]\fP"
+Please override in your implementations!
+.PP
+\fBReturns:\fP
+.RS 4
+deep clone of the current instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 113 of file FitnessFunction\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BulkFitnessOffsetRemover\&.clone()\&.
+.SS "abstract double org\&.jgap\&.FitnessFunction\&.evaluate (\fBIChromosome\fPa_subject)\fC [protected]\fP, \fC [pure virtual]\fP"
+Determine the fitness of the given \fBChromosome\fP instance\&. The higher the return value, the more fit the instance\&. This method should always return the same fitness value for two equivalent \fBChromosome\fP instances\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_subject\fP the \fBChromosome\fP instance to evaluate
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+positive double reflecting the fitness rating of the given \fBChromosome\fP\&. Note that if a non-positive double is returned, a RuntimeException should be generated
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 (until 1\&.1: return type int) 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.GenotypeTest\&.Test2Function\fP, \fBorg\&.jgap\&.impl\&.BulkFitnessOffsetRemoverTest\&.DummyFitnessFunction\fP, \fBorg\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunctionTest\&.TruthTableFitnessFunctionImpl\fP, \fBorg\&.jgap\&.impl\&.fitness\&.TruthTableFitnessFunction\fP, \fBorg\&.jgap\&.JGAPTestCase\&.TestFitnessFunction\fP, \fBorg\&.jgap\&.FitnessFunctionTest\&.FitnessFunctionImpl\fP, \fBorg\&.jgap\&.impl\&.StaticFitnessFunction\fP, \fBorg\&.jgap\&.perf\&.TestOverallPerformanceFitnessFunc\fP, \fBorg\&.jgap\&.impl\&.RandomFitnessFunction\fP, and \fBorg\&.jgap\&.impl\&.job\&.MaxFunction\fP\&.
+.PP
+Referenced by org\&.jgap\&.FitnessFunction\&.getFitnessValue()\&.
+.SS "double org\&.jgap\&.FitnessFunction\&.getFitnessValue (final \fBIChromosome\fPa_subject)\fC [inline]\fP"
+Retrieves the fitness value of the given \fBChromosome\fP\&. The fitness value will be a positive double\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_subject\fP the \fBChromosome\fP for which to compute and return the fitness value 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the fitness value of the given \fBChromosome\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 (until 1\&.1: return type int) 
+.RE
+.PP
+
+.PP
+Definition at line 61 of file FitnessFunction\&.java\&.
+.PP
+References org\&.jgap\&.FitnessFunction\&.evaluate(), and org\&.jgap\&.FitnessFunction\&.m_lastComputedFitnessValue\&.
+.PP
+Referenced by org\&.jgap\&.FitnessFunctionTest\&.testGetFitnessValue_0()\&.
+.SS "double org\&.jgap\&.FitnessFunction\&.getLastComputedFitnessValue ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the last fitness value computed via method getFitnessValue( \fBChromosome\fP), or NO_FITNES_VALUE if the former method has not been called yet
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 84 of file FitnessFunction\&.java\&.
+.PP
+References org\&.jgap\&.FitnessFunction\&.m_lastComputedFitnessValue\&.
+.PP
+Referenced by org\&.jgap\&.FitnessFunctionTest\&.testLastComputedValue_0()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.FitnessFunction\&.CVS_REVISION = '$Revision: 1\&.22 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 38 of file FitnessFunction\&.java\&.
+.SS "final double org\&.jgap\&.FitnessFunction\&.DELTA = 0\&.0000001d\fC [static]\fP"
+
+.PP
+Definition at line 42 of file FitnessFunction\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPPopulation\&.determineFittestProgramComputed(), org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.nextCycle(), and org\&.jgap\&.impl\&.StandardPostSelector\&.select()\&.
+.SS "double org\&.jgap\&.FitnessFunction\&.m_lastComputedFitnessValue = \fBNO_FITNESS_VALUE\fP\fC [private]\fP"
+The fitness value computed during the previous run 
+.PP
+Definition at line 47 of file FitnessFunction\&.java\&.
+.PP
+Referenced by org\&.jgap\&.FitnessFunction\&.getFitnessValue(), and org\&.jgap\&.FitnessFunction\&.getLastComputedFitnessValue()\&.
+.SS "final double org\&.jgap\&.FitnessFunction\&.NO_FITNESS_VALUE = -1\&.0000000d\fC [static]\fP"
+
+.PP
+Definition at line 40 of file FitnessFunction\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GABreeder\&.bulkFunctionEvaluation(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.calcFitness(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.determineFittestProgramComputed(), org\&.jgap\&.impl\&.GABreeder\&.evolve(), org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.FitnessImprovementMonitor(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getFittestProgram(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.GPGenotype(), org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.nextCycle(), org\&.jgap\&.Chromosome\&.randomInitialChromosome(), org\&.jgap\&.ChromosomeForTesting\&.randomInitialChromosome2(), org\&.jgap\&.impl\&.GABreeder\&.removeChromosomesWithoutFitnessValue(), org\&.jgap\&.impl\&.GABreeder\&.removeEvaluatedChromosomes(), org\&.jgap\&.impl\&.StandardPostSelector\&.select(), org\&.jgap\&.FitnessFunctionTest\&.testLastComputedValue_0(), org\&.jgap\&.ChromosomeTest\&.testRandomInitialChromosome_3(), and org\&.jgap\&.GenotypeTest\&.testToString_0()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

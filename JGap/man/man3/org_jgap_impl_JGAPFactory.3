@@ -1,0 +1,741 @@
+.TH "org.jgap.impl.JGAPFactory" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.JGAPFactory \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.IJGAPFactory\fP, Serializable, \fBorg\&.jgap\&.util\&.ICloneable\fP, and Comparable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBJGAPFactory\fP (boolean a_useCaching)"
+.br
+.ti -1c
+.RI "void \fBsetParameters\fP (final Collection a_parameters)"
+.br
+.ti -1c
+.RI "Collection \fBgetParameters\fP ()"
+.br
+.ti -1c
+.RI "\fBRandomGenerator\fP \fBcreateRandomGenerator\fP ()"
+.br
+.ti -1c
+.RI "int \fBregisterCloneHandler\fP (final \fBICloneHandler\fP a_cloneHandler)"
+.br
+.ti -1c
+.RI "\fBICloneHandler\fP \fBremoveCloneHandler\fP (final int a_index)"
+.br
+.ti -1c
+.RI "\fBICloneHandler\fP \fBgetCloneHandlerFor\fP (final Object a_obj, final Class a_classToClone)"
+.br
+.ti -1c
+.RI "int \fBregisterInitializer\fP (final \fBIInitializer\fP a_chromIniter)"
+.br
+.ti -1c
+.RI "\fBIInitializer\fP \fBremoveInitializer\fP (final int a_index)"
+.br
+.ti -1c
+.RI "\fBIInitializer\fP \fBgetInitializerFor\fP (final Object a_obj, final Class a_class)"
+.br
+.ti -1c
+.RI "void \fBsetGeneticOperatorConstraint\fP (final \fBIGeneticOperatorConstraint\fP a_constraint)"
+.br
+.ti -1c
+.RI "\fBIGeneticOperatorConstraint\fP \fBgetGeneticOperatorConstraint\fP ()"
+.br
+.ti -1c
+.RI "\fBICompareToHandler\fP \fBgetCompareToHandlerFor\fP (Object a_obj, Class a_classToCompareTo)"
+.br
+.ti -1c
+.RI "int \fBregisterCompareToHandler\fP (\fBICompareToHandler\fP a_compareToHandler)"
+.br
+.ti -1c
+.RI "\fBICompareToHandler\fP \fBremoveCompareToHandler\fP (final int a_index)"
+.br
+.ti -1c
+.RI "boolean \fBisUseCaching\fP ()"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "String \fBgetUniqueKey\fP (String a_context)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIHandler\fP \fBfindHandlerFor\fP (final Object a_obj, final Class a_class, final List a_list, final \fBIHandler\fP a_default, final String a_listID)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "List \fBm_parameters\fP"
+.br
+.ti -1c
+.RI "List \fBm_cloneHandlers\fP"
+.br
+.ti -1c
+.RI "List \fBm_initer\fP"
+.br
+.ti -1c
+.RI "List \fBm_compareHandlers\fP"
+.br
+.ti -1c
+.RI "\fBICloneHandler\fP \fBm_defaultCloneHandler\fP"
+.br
+.ti -1c
+.RI "\fBIInitializer\fP \fBm_defaultIniter\fP"
+.br
+.ti -1c
+.RI "\fBICompareToHandler\fP \fBm_defaultComparer\fP"
+.br
+.ti -1c
+.RI "\fBIGeneticOperatorConstraint\fP \fBm_geneticOpConstraint\fP"
+.br
+.ti -1c
+.RI "transient LRUCache \fBm_cache\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_useCaching\fP"
+.br
+.ti -1c
+.RI "Map< String, Long > \fBm_lastKeys\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.19 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Central factory for creating default objects to use, e\&.g\&. random generators\&. Could be made configurable\&. An instance of \fBJGAPFactory\fP can be accessed via
+.PP
+\fC\fBGenotype\&.getConfiguration()\fP\&.getJGAPFactory();\fP
+.PP
+To use your own factory class instead, use:
+.PP
+\fC System\&.setProperty(\fBConfiguration\&.PROPERTY_JGAPFACTORY_CLASS\fP, 'myFactory');\fP
+.PP
+\fC \fP with 'myFactory' representing the name of your class to use\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 31 of file JGAPFactory\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.JGAPFactory\&.JGAPFactory (booleana_useCaching)\fC [inline]\fP"
+
+.PP
+Definition at line 58 of file JGAPFactory\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.JGAPFactory\&.m_cache, org\&.jgap\&.impl\&.JGAPFactory\&.m_cloneHandlers, org\&.jgap\&.impl\&.JGAPFactory\&.m_compareHandlers, org\&.jgap\&.impl\&.JGAPFactory\&.m_defaultCloneHandler, org\&.jgap\&.impl\&.JGAPFactory\&.m_defaultComparer, org\&.jgap\&.impl\&.JGAPFactory\&.m_defaultIniter, org\&.jgap\&.impl\&.JGAPFactory\&.m_initer, org\&.jgap\&.impl\&.JGAPFactory\&.m_lastKeys, and org\&.jgap\&.impl\&.JGAPFactory\&.m_useCaching\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactory\&.compareTo()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.impl\&.JGAPFactory\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+clone of the current object instance 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+check if it works this way 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 339 of file JGAPFactory\&.java\&.
+.SS "int org\&.jgap\&.impl\&.JGAPFactory\&.compareTo (Objecta_other)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+as always
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 371 of file JGAPFactory\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.JGAPFactory\&.JGAPFactory(), org\&.jgap\&.impl\&.JGAPFactory\&.m_cloneHandlers, org\&.jgap\&.impl\&.JGAPFactory\&.m_compareHandlers, org\&.jgap\&.impl\&.JGAPFactory\&.m_defaultCloneHandler, org\&.jgap\&.impl\&.JGAPFactory\&.m_defaultComparer, org\&.jgap\&.impl\&.JGAPFactory\&.m_geneticOpConstraint, and org\&.jgap\&.impl\&.JGAPFactory\&.m_initer\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactory\&.equals()\&.
+.SS "\fBRandomGenerator\fP org\&.jgap\&.impl\&.JGAPFactory\&.createRandomGenerator ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+newly created instance of a \fBRandomGenerator\fP 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IJGAPFactory\fP\&.
+.PP
+Definition at line 94 of file JGAPFactory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactoryTest\&.testCreateRandomGenerator_0()\&.
+.SS "boolean org\&.jgap\&.impl\&.JGAPFactory\&.equals (Objecta_other)\fC [inline]\fP"
+The equals-method 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP sic 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+sic
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 356 of file JGAPFactory\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.JGAPFactory\&.compareTo()\&.
+.SS "\fBIHandler\fP org\&.jgap\&.impl\&.JGAPFactory\&.findHandlerFor (final Objecta_obj, final Classa_class, final Lista_list, final \fBIHandler\fPa_default, final Stringa_listID)\fC [inline]\fP, \fC [protected]\fP"
+Helper: Finds a handler for a given Object or Class, returns the default handler, if one is provided\&. Uses an LRU cache to speedup things!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_obj\fP the object to find a handler for (maybe null) 
+.br
+\fIa_class\fP the class to find a handler for (maybe null) 
+.br
+\fIa_list\fP list of available handlers 
+.br
+\fIa_default\fP a default handler to return in none other is found 
+.br
+\fIa_listID\fP arbitrary unique string for accessing the cache 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the handler found, or null if none registered
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 268 of file JGAPFactory\&.java\&.
+.PP
+References org\&.jgap\&.IHandler\&.isHandlerFor(), and org\&.jgap\&.impl\&.JGAPFactory\&.m_useCaching\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactory\&.getCloneHandlerFor(), org\&.jgap\&.impl\&.JGAPFactory\&.getCompareToHandlerFor(), and org\&.jgap\&.impl\&.JGAPFactory\&.getInitializerFor()\&.
+.SS "\fBICloneHandler\fP org\&.jgap\&.impl\&.JGAPFactory\&.getCloneHandlerFor (final Objecta_obj, final Classa_classToClone)\fC [inline]\fP"
+Retrieves a clone handler capable of clone the given class\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_obj\fP the object to clone (maybe null) 
+.br
+\fIa_classToClone\fP the class to clone an object of (maybe null) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the clone handler found capable of clone the given class, or null if none registered
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 139 of file JGAPFactory\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.JGAPFactory\&.findHandlerFor(), org\&.jgap\&.impl\&.JGAPFactory\&.m_cloneHandlers, and org\&.jgap\&.impl\&.JGAPFactory\&.m_defaultCloneHandler\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactoryTest\&.testGetCloneHandlerFor_0(), org\&.jgap\&.impl\&.JGAPFactoryTest\&.testGetCloneHandlerFor_1(), org\&.jgap\&.impl\&.JGAPFactoryTest\&.testGetCloneHandlerFor_2(), org\&.jgap\&.impl\&.JGAPFactoryTest\&.testGetCloneHandlerFor_3(), org\&.jgap\&.impl\&.JGAPFactoryTest\&.testGetCloneHandlerFor_4(), org\&.jgap\&.impl\&.JGAPFactoryTest\&.testGetCloneHandlerFor_5(), org\&.jgap\&.impl\&.JGAPFactoryTest\&.testGetCloneHandlerFor_6(), and org\&.jgap\&.impl\&.JGAPFactoryTest\&.testGetCloneHandlerFor_7()\&.
+.SS "\fBICompareToHandler\fP org\&.jgap\&.impl\&.JGAPFactory\&.getCompareToHandlerFor (Objecta_obj, Classa_classToCompareTo)\fC [inline]\fP"
+Retrieves a handler capable of comparing two instances of the given class\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_obj\fP the object to compare (maybe null) 
+.br
+\fIa_classToCompareTo\fP the class instances to compare (maybe null) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the handler found capable of comparing instances of the given class, or null if none registered
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IJGAPFactory\fP\&.
+.PP
+Definition at line 216 of file JGAPFactory\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.JGAPFactory\&.findHandlerFor(), org\&.jgap\&.impl\&.JGAPFactory\&.m_compareHandlers, and org\&.jgap\&.impl\&.JGAPFactory\&.m_defaultComparer\&.
+.SS "\fBIGeneticOperatorConstraint\fP org\&.jgap\&.impl\&.JGAPFactory\&.getGeneticOperatorConstraint ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.IJGAPFactory\fP\&.
+.PP
+Definition at line 201 of file JGAPFactory\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.JGAPFactory\&.m_geneticOpConstraint\&.
+.SS "\fBIInitializer\fP org\&.jgap\&.impl\&.JGAPFactory\&.getInitializerFor (final Objecta_obj, final Classa_class)\fC [inline]\fP"
+Retrieves an initializer capable of initializing the Object of the given class\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_obj\fP the object to init (maybe null) 
+.br
+\fIa_class\fP the object class to init (maybe null) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+new instance (should be!) of initialized object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 188 of file JGAPFactory\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.JGAPFactory\&.findHandlerFor(), org\&.jgap\&.impl\&.JGAPFactory\&.m_defaultIniter, and org\&.jgap\&.impl\&.JGAPFactory\&.m_initer\&.
+.SS "Collection org\&.jgap\&.impl\&.JGAPFactory\&.getParameters ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+Collection of generic parameters
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 90 of file JGAPFactory\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.JGAPFactory\&.m_parameters\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactoryTest\&.testSetParameters_0()\&.
+.SS "String org\&.jgap\&.impl\&.JGAPFactory\&.getUniqueKey (Stringa_context)\fC [inline]\fP"
+Returns a unique key for the given context\&. The key uses the current date and time and a GUID\&. Thus it is quite probable, that the key is unique worldwide\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_context\fP the context to get the next key for, like 'Chromosome'\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the unique key for the given context
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 401 of file JGAPFactory\&.java\&.
+.SS "boolean org\&.jgap\&.impl\&.JGAPFactory\&.isUseCaching ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+true: caching used, false: no caching used
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 335 of file JGAPFactory\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.JGAPFactory\&.m_useCaching\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactoryTest\&.testConstruct_0(), and org\&.jgap\&.impl\&.JGAPFactoryTest\&.testConstruct_1()\&.
+.SS "int org\&.jgap\&.impl\&.JGAPFactory\&.registerCloneHandler (final \fBICloneHandler\fPa_cloneHandler)\fC [inline]\fP"
+Registers a clone handler that could be retrieved by getCloneHandlerFor(Class)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_cloneHandler\fP the \fBICloneHandler\fP to register 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+index of the added clone handler, needed when removeCloneHandler will be called
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 109 of file JGAPFactory\&.java\&.
+.SS "int org\&.jgap\&.impl\&.JGAPFactory\&.registerCompareToHandler (\fBICompareToHandler\fPa_compareToHandler)\fC [inline]\fP"
+Registers a compareTo-handler that could be retrieved by getCompareToHandlerFor(Class)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_compareToHandler\fP the \fBICompareToHandler\fP to register 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+index of the added handler, needed when removeCompareToHandler will be called
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IJGAPFactory\fP\&.
+.PP
+Definition at line 235 of file JGAPFactory\&.java\&.
+.SS "int org\&.jgap\&.impl\&.JGAPFactory\&.registerInitializer (final \fBIInitializer\fPa_chromIniter)\fC [inline]\fP"
+Registers an initializer that could be retrieved by getInitializerFor(Class)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromIniter\fP the IChromosomeInitializer to register 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+index of the added initializer, needed when removeChromosomeInitializer will be called
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 158 of file JGAPFactory\&.java\&.
+.SS "\fBICloneHandler\fP org\&.jgap\&.impl\&.JGAPFactory\&.removeCloneHandler (final inta_index)\fC [inline]\fP"
+Removes a clone handler at a given index (which is obtained from registerCloneHandler)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the index of the clone handler to remove 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the removed \fBICloneHandler\fP, or Exception if not successfull
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 124 of file JGAPFactory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactoryTest\&.testRegisterCloneHandler_0()\&.
+.SS "\fBICompareToHandler\fP org\&.jgap\&.impl\&.JGAPFactory\&.removeCompareToHandler (final inta_index)\fC [inline]\fP"
+Removes a compareTo-handler at a given index (which is obtained from registerCompareToHandler)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the index of the handler to remove 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the removed handler, or Exception if not successfull
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 250 of file JGAPFactory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactoryTest\&.testRegisterCompareToHandler_0()\&.
+.SS "\fBIInitializer\fP org\&.jgap\&.impl\&.JGAPFactory\&.removeInitializer (final inta_index)\fC [inline]\fP"
+Removes an initializer at a given index (which is obtained from registerInitializer)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the index of the initializer to remove 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the removed \fBIInitializer\fP, or null if not successfull
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 173 of file JGAPFactory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactoryTest\&.testRegisterInitializer_0()\&.
+.SS "void org\&.jgap\&.impl\&.JGAPFactory\&.setGeneticOperatorConstraint (final \fBIGeneticOperatorConstraint\fPa_constraint)\fC [inline]\fP"
+
+.PP
+Definition at line 196 of file JGAPFactory\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.JGAPFactory\&.m_geneticOpConstraint\&.
+.SS "void org\&.jgap\&.impl\&.JGAPFactory\&.setParameters (final Collectiona_parameters)\fC [inline]\fP"
+Allows setting (generic because unknown) parameters for creating objects\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_parameters\fP Collection of generic parameters
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 80 of file JGAPFactory\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.JGAPFactory\&.m_parameters\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.JGAPFactory\&.CVS_REVISION = '$Revision: 1\&.19 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 34 of file JGAPFactory\&.java\&.
+.SS "transient LRUCache org\&.jgap\&.impl\&.JGAPFactory\&.m_cache\fC [private]\fP"
+
+.PP
+Definition at line 52 of file JGAPFactory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactory\&.JGAPFactory()\&.
+.SS "List org\&.jgap\&.impl\&.JGAPFactory\&.m_cloneHandlers\fC [private]\fP"
+
+.PP
+Definition at line 38 of file JGAPFactory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactory\&.compareTo(), org\&.jgap\&.impl\&.JGAPFactory\&.getCloneHandlerFor(), and org\&.jgap\&.impl\&.JGAPFactory\&.JGAPFactory()\&.
+.SS "List org\&.jgap\&.impl\&.JGAPFactory\&.m_compareHandlers\fC [private]\fP"
+
+.PP
+Definition at line 42 of file JGAPFactory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactory\&.compareTo(), org\&.jgap\&.impl\&.JGAPFactory\&.getCompareToHandlerFor(), and org\&.jgap\&.impl\&.JGAPFactory\&.JGAPFactory()\&.
+.SS "\fBICloneHandler\fP org\&.jgap\&.impl\&.JGAPFactory\&.m_defaultCloneHandler\fC [private]\fP"
+
+.PP
+Definition at line 44 of file JGAPFactory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactory\&.compareTo(), org\&.jgap\&.impl\&.JGAPFactory\&.getCloneHandlerFor(), and org\&.jgap\&.impl\&.JGAPFactory\&.JGAPFactory()\&.
+.SS "\fBICompareToHandler\fP org\&.jgap\&.impl\&.JGAPFactory\&.m_defaultComparer\fC [private]\fP"
+
+.PP
+Definition at line 48 of file JGAPFactory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactory\&.compareTo(), org\&.jgap\&.impl\&.JGAPFactory\&.getCompareToHandlerFor(), and org\&.jgap\&.impl\&.JGAPFactory\&.JGAPFactory()\&.
+.SS "\fBIInitializer\fP org\&.jgap\&.impl\&.JGAPFactory\&.m_defaultIniter\fC [private]\fP"
+
+.PP
+Definition at line 46 of file JGAPFactory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactory\&.getInitializerFor(), and org\&.jgap\&.impl\&.JGAPFactory\&.JGAPFactory()\&.
+.SS "\fBIGeneticOperatorConstraint\fP org\&.jgap\&.impl\&.JGAPFactory\&.m_geneticOpConstraint\fC [private]\fP"
+
+.PP
+Definition at line 50 of file JGAPFactory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactory\&.compareTo(), org\&.jgap\&.impl\&.JGAPFactory\&.getGeneticOperatorConstraint(), and org\&.jgap\&.impl\&.JGAPFactory\&.setGeneticOperatorConstraint()\&.
+.SS "List org\&.jgap\&.impl\&.JGAPFactory\&.m_initer\fC [private]\fP"
+
+.PP
+Definition at line 40 of file JGAPFactory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactory\&.compareTo(), org\&.jgap\&.impl\&.JGAPFactory\&.getInitializerFor(), and org\&.jgap\&.impl\&.JGAPFactory\&.JGAPFactory()\&.
+.SS "Map<String,Long> org\&.jgap\&.impl\&.JGAPFactory\&.m_lastKeys\fC [private]\fP"
+
+.PP
+Definition at line 56 of file JGAPFactory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactory\&.JGAPFactory()\&.
+.SS "List org\&.jgap\&.impl\&.JGAPFactory\&.m_parameters\fC [private]\fP"
+
+.PP
+Definition at line 36 of file JGAPFactory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactory\&.getParameters(), and org\&.jgap\&.impl\&.JGAPFactory\&.setParameters()\&.
+.SS "boolean org\&.jgap\&.impl\&.JGAPFactory\&.m_useCaching\fC [private]\fP"
+
+.PP
+Definition at line 54 of file JGAPFactory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.JGAPFactory\&.findHandlerFor(), org\&.jgap\&.impl\&.JGAPFactory\&.isUseCaching(), and org\&.jgap\&.impl\&.JGAPFactory\&.JGAPFactory()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

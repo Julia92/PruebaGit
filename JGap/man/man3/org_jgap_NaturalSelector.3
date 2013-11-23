@@ -1,0 +1,200 @@
+.TH "org.jgap.NaturalSelector" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.NaturalSelector \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.INaturalSelector\fP, and Configurable\&.
+.PP
+Inherited by \fBorg\&.jgap\&.impl\&.StandardPostSelector\fP, and \fBorg\&.jgap\&.NaturalSelectorExt\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBAgeFitnessValueComparator\fP"
+.br
+.ti -1c
+.RI "class \fBFitnessAgeValueComparator\fP"
+.br
+.ti -1c
+.RI "class \fBFitnessValueComparator\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNaturalSelector\fP ()"
+.br
+.ti -1c
+.RI "\fBNaturalSelector\fP (\fBConfiguration\fP a_config)"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBgetConfiguration\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "abstract void \fBadd\fP (\fBIChromosome\fP a_chromosomeToAdd)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBConfiguration\fP \fBm_config\fP"
+.br
+.ti -1c
+.RI "IEvolutionMonitor \fBm_monitor\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_monitorActive\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.32 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Abstract base implementation of interface \fBINaturalSelector\fP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file NaturalSelector\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.NaturalSelector\&.NaturalSelector ()\fC [inline]\fP"
+Default constructor
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 41 of file NaturalSelector\&.java\&.
+.SS "org\&.jgap\&.NaturalSelector\&.NaturalSelector (\fBConfiguration\fPa_config)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file NaturalSelector\&.java\&.
+.PP
+References org\&.jgap\&.NaturalSelector\&.getConfiguration(), org\&.jgap\&.NaturalSelector\&.m_config, org\&.jgap\&.NaturalSelector\&.m_monitor, and org\&.jgap\&.NaturalSelector\&.m_monitorActive\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "abstract void org\&.jgap\&.NaturalSelector\&.add (\fBIChromosome\fPa_chromosomeToAdd)\fC [protected]\fP, \fC [pure virtual]\fP"
+Add a \fBChromosome\fP instance to this selector's working pool of Chromosomes\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomeToAdd\fP the specimen to add to the pool
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.SS "\fBConfiguration\fP org\&.jgap\&.NaturalSelector\&.getConfiguration ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the (immutable) configuration to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 68 of file NaturalSelector\&.java\&.
+.PP
+References org\&.jgap\&.NaturalSelector\&.m_config\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BestChromosomesSelector\&.add(), org\&.jgap\&.impl\&.StandardPostSelector\&.clone(), org\&.jgap\&.impl\&.BestChromosomesSelector\&.clone(), org\&.jgap\&.impl\&.WeightedRouletteSelector\&.clone(), org\&.jgap\&.NaturalSelector\&.FitnessValueComparator\&.compare(), org\&.jgap\&.NaturalSelector\&.AgeFitnessValueComparator\&.compare(), org\&.jgap\&.NaturalSelector\&.FitnessAgeValueComparator\&.compare(), org\&.jgap\&.impl\&.ThresholdSelector\&.FitnessValueComparator\&.compare(), org\&.jgap\&.impl\&.TournamentSelector\&.FitnessValueComparator\&.compare(), org\&.jgap\&.NaturalSelector\&.NaturalSelector(), org\&.jgap\&.NaturalSelectorExt\&.selectChromosome(), org\&.jgap\&.impl\&.ThresholdSelector\&.selectChromosomes(), org\&.jgap\&.impl\&.TournamentSelector\&.selectChromosomes(), org\&.jgap\&.impl\&.BestChromosomesSelector\&.selectChromosomes(), org\&.jgap\&.impl\&.WeightedRouletteSelector\&.selectChromosomes(), and org\&.jgap\&.impl\&.WeightedRouletteSelector\&.spinWheel()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.NaturalSelector\&.CVS_REVISION = '$Revision: 1\&.32 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 27 of file NaturalSelector\&.java\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.NaturalSelector\&.m_config\fC [protected]\fP"
+
+.PP
+Definition at line 29 of file NaturalSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.NaturalSelector\&.getConfiguration(), and org\&.jgap\&.NaturalSelector\&.NaturalSelector()\&.
+.SS "IEvolutionMonitor org\&.jgap\&.NaturalSelector\&.m_monitor\fC [protected]\fP"
+
+.PP
+Definition at line 31 of file NaturalSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.NaturalSelector\&.NaturalSelector()\&.
+.SS "boolean org\&.jgap\&.NaturalSelector\&.m_monitorActive\fC [protected]\fP"
+
+.PP
+Definition at line 33 of file NaturalSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.NaturalSelector\&.NaturalSelector(), org\&.jgap\&.NaturalSelectorExt\&.selectChromosome(), org\&.jgap\&.impl\&.BestChromosomesSelector\&.selectChromosomes(), and org\&.jgap\&.impl\&.WeightedRouletteSelector\&.selectChromosomes()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

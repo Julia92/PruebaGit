@@ -1,0 +1,102 @@
+.TH "org.jgap.util.randomLEcuyer" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.util.randomLEcuyer \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.util\&.randomX\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBrandomLEcuyer\fP ()"
+.br
+.ti -1c
+.RI "\fBrandomLEcuyer\fP (long seed)  throws IllegalArgumentException "
+.br
+.ti -1c
+.RI "void \fBsetSeed\fP (long seed)  throws IllegalArgumentException "
+.br
+.ti -1c
+.RI "byte \fBnextByte\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implementation of a \fB\fBrandomX\fP\fP-compliant class using L'Ecuyer's two-sequence generator with a Bays-Durham shuffle, as described on page 282 of Press et al\&., <cite>Numerical Recipes in C</cite>, 2nd edition\&. Their implementation was constrained by the absence of a 64-bit integer data type\&. Since Java guarantees a \fClong\fP to be 64 bit, we can use L'Ecuyer's multiplier and modulus directly, rather than flailing around with Schrage's algorithm\&. Further, 64-bit \fClong\fP arithmetic allows us to directly combine the results from the two generators by adding and taking the modulus of one of them, bypassing the subtract and test for negative gimmick used in <cite>Numerical Recipes</cite>\&.
+.PP
+For additional details, see L'Ecuyer's original 1968 paper at page 742 of <cite>Communications of the ACM</cite>, Vol\&. 31\&.
+.PP
+Designed and implemented in July 1996 by \fCJohn Walker\fP, \fCkelvin@fourmilab\&.ch\fP\&. 
+.PP
+Definition at line 27 of file randomLEcuyer\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.util\&.randomLEcuyer\&.randomLEcuyer ()\fC [inline]\fP"
+Creates a new pseudorandom number generator, seeded from the current time\&. 
+.PP
+Definition at line 51 of file randomLEcuyer\&.java\&.
+.SS "org\&.jgap\&.util\&.randomLEcuyer\&.randomLEcuyer (longseed) throws IllegalArgumentException\fC [inline]\fP"
+
+.PP
+.nf
+    Creates a new pseudorandom number generator with a
+    specified nonzero seed.
+
+.fi
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIseed\fP initial seed for the generator 
+.RE
+.PP
+
+.PP
+Definition at line 62 of file randomLEcuyer\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "byte org\&.jgap\&.util\&.randomLEcuyer\&.nextByte ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+.nf
+    Get next byte from generator.
+
+.fi
+.PP
+.PP
+\fBReturns:\fP
+.RS 4
+the next byte from the generator\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.randomX\fP\&.
+.PP
+Definition at line 104 of file randomLEcuyer\&.java\&.
+.SS "void org\&.jgap\&.util\&.randomLEcuyer\&.setSeed (longseed) throws IllegalArgumentException\fC [inline]\fP"
+
+.PP
+.nf
+    Set seed for generator.  Subsequent values will be based
+    on the given nonzero seed.
+
+.fi
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIseed\fP seed for the generator 
+.RE
+.PP
+
+.PP
+Definition at line 75 of file randomLEcuyer\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

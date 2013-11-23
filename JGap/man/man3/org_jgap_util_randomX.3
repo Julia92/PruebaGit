@@ -1,0 +1,283 @@
+.TH "org.jgap.util.randomX" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.util.randomX \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBorg\&.jgap\&.util\&.randomHotBits\fP, \fBorg\&.jgap\&.util\&.randomJava\fP, \fBorg\&.jgap\&.util\&.randomLCG\fP, \fBorg\&.jgap\&.util\&.randomLEcuyer\fP, and \fBorg\&.jgap\&.util\&.randomMCG\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetSeed\fP ()"
+.br
+.ti -1c
+.RI "abstract byte \fBnextByte\fP ()"
+.br
+.ti -1c
+.RI "int \fBnextInt\fP ()"
+.br
+.ti -1c
+.RI "long \fBnextLong\fP ()"
+.br
+.ti -1c
+.RI "float \fBnextFloat\fP ()"
+.br
+.ti -1c
+.RI "double \fBnextDouble\fP ()"
+.br
+.ti -1c
+.RI "double \fBnextGaussian\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBnextBit\fP ()"
+.br
+.ti -1c
+.RI "void \fBnextByte\fP (byte buf[], int buflen)"
+.br
+.ti -1c
+.RI "void \fBnextByte\fP (byte buf[])"
+.br
+.ti -1c
+.RI "short \fBnextShort\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBnbits\fP = 0"
+.br
+.ti -1c
+.RI "boolean \fBiset\fP = false"
+.br
+.ti -1c
+.RI "double \fBgset\fP"
+.br
+.ti -1c
+.RI "byte \fBb\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Abstract superclass for emulations of java.util.Random with
+various underlying generators.  These generators provide a
+superset of the methods of the built-in Java generator, and
+allow easy replacement of the low-level byte-stream random
+generator without the need to reimplement the higher-level
+calls.
+
+.fi
+.PP
+ 
+.PP
+The nature of the data returned by the functions in this class depends upon the generator provided by the class derived from it\&. If the generator is algorithmic, the data are pseudorandom; if a hardware generator is employed, genuine random data may be obtained\&. For brevity, in this document, we use \fIrandom\fP to refer to the data returned, whatever its actual source\&. 
+.PP
+Designed and implemented in July 1996 by \fCJohn Walker\fP, \fCkelvin@fourmilab\&.ch\fP\&.
+.PP
+\fBSee Also:\fP
+.RS 4
+java\&.util\&.Random 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file randomX\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "boolean org\&.jgap\&.util\&.randomX\&.nextBit ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the next random bit, as a \fCboolean\fP\&. 
+.RE
+.PP
+
+.PP
+Definition at line 130 of file randomX\&.java\&.
+.PP
+References org\&.jgap\&.util\&.randomX\&.b, org\&.jgap\&.util\&.randomX\&.nbits, and org\&.jgap\&.util\&.randomX\&.nextByte()\&.
+.SS "abstract byte org\&.jgap\&.util\&.randomX\&.nextByte ()\fC [pure virtual]\fP"
+Return next [pseudo]random byte from low level generator\&. All generators derived from this class must implement \fC\fBnextByte()\fP\fP\&. 
+.PP
+Implemented in \fBorg\&.jgap\&.util\&.randomLEcuyer\fP, \fBorg\&.jgap\&.util\&.randomMCG\fP, \fBorg\&.jgap\&.util\&.randomJava\fP, \fBorg\&.jgap\&.util\&.randomLCG\fP, and \fBorg\&.jgap\&.util\&.randomHotBits\fP\&.
+.PP
+Referenced by org\&.jgap\&.util\&.randomX\&.nextBit(), org\&.jgap\&.util\&.randomX\&.nextByte(), and org\&.jgap\&.util\&.randomX\&.nextShort()\&.
+.SS "void org\&.jgap\&.util\&.randomX\&.nextByte (bytebuf[], intbuflen)\fC [inline]\fP"
+
+.PP
+.nf
+    Fill a portion of an array of bytes with random data.
+
+.fi
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuf\fP array of \fCbyte\fP to fill\&.
+.br
+\fIbuflen\fP number of bytes to store\&. 
+.RE
+.PP
+
+.PP
+Definition at line 150 of file randomX\&.java\&.
+.PP
+References org\&.jgap\&.util\&.randomX\&.nextByte()\&.
+.SS "void org\&.jgap\&.util\&.randomX\&.nextByte (bytebuf[])\fC [inline]\fP"
+
+.PP
+.nf
+    Fill an array of bytes with random data.
+
+.fi
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuf\fP array of \fCbyte\fPs to fill\&. 
+.RE
+.PP
+
+.PP
+Definition at line 163 of file randomX\&.java\&.
+.PP
+References org\&.jgap\&.util\&.randomX\&.nextByte()\&.
+.SS "double org\&.jgap\&.util\&.randomX\&.nextDouble ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the next random, uniformly distributed, \fCdouble\fP value, greater than or equal to 0 and less than 1\&. 
+.RE
+.PP
+
+.PP
+Definition at line 94 of file randomX\&.java\&.
+.PP
+References org\&.jgap\&.util\&.randomX\&.nextLong()\&.
+.PP
+Referenced by org\&.jgap\&.util\&.randomX\&.nextGaussian()\&.
+.SS "float org\&.jgap\&.util\&.randomX\&.nextFloat ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the next random, uniformly distributed, \fCfloat\fP value, greater than or equal to 0 and less than 1\&. 
+.RE
+.PP
+
+.PP
+Definition at line 87 of file randomX\&.java\&.
+.PP
+References org\&.jgap\&.util\&.randomX\&.nextInt()\&.
+.SS "double org\&.jgap\&.util\&.randomX\&.nextGaussian ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the next Gaussian (normal, or bell-curve) distributed random value, with mean of 0\&.0 and standard deviation 1\&.0\&. 
+.RE
+.PP
+
+.PP
+Definition at line 105 of file randomX\&.java\&.
+.PP
+References org\&.jgap\&.util\&.randomX\&.gset, org\&.jgap\&.util\&.randomX\&.iset, and org\&.jgap\&.util\&.randomX\&.nextDouble()\&.
+.SS "int org\&.jgap\&.util\&.randomX\&.nextInt ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the next random, uniformly distributed, \fCint\fP value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 73 of file randomX\&.java\&.
+.PP
+References org\&.jgap\&.util\&.randomX\&.nextShort()\&.
+.PP
+Referenced by org\&.jgap\&.util\&.randomX\&.nextFloat(), and org\&.jgap\&.util\&.randomX\&.nextLong()\&.
+.SS "long org\&.jgap\&.util\&.randomX\&.nextLong ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the next random, uniformly distributed, \fClong\fP value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 80 of file randomX\&.java\&.
+.PP
+References org\&.jgap\&.util\&.randomX\&.nextInt()\&.
+.PP
+Referenced by org\&.jgap\&.util\&.randomX\&.nextDouble()\&.
+.SS "short org\&.jgap\&.util\&.randomX\&.nextShort ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the next random, uniformly distributed, \fCshort\fP value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 170 of file randomX\&.java\&.
+.PP
+References org\&.jgap\&.util\&.randomX\&.nextByte()\&.
+.PP
+Referenced by org\&.jgap\&.util\&.randomX\&.nextInt()\&.
+.SS "void org\&.jgap\&.util\&.randomX\&.setSeed ()\fC [inline]\fP"
+Reset when seed changes\&. A generator which supports seed must call this method by \fCsuper\&.setSeed()\fP when its own \fCsetSeed(\fP\fIlong\fP\fC)\fP method is called\&. This allows \fBrandomX\fP to discard any buffered data in the \fC\fBnextBit()\fP\fP and \fC\fBnextGaussian()\fP\fP methods so that subsequent calls will immediately reflect the new seed\&.
+.PP
+If a derived class does not permit specification of a seed (hardware-based generators, for example), it should declare:
+.PP
+.RS 4
+\fCprivate void setSeed(long seed) { }\fP 
+.RE
+.PP
+.PP
+which will hide the setSeed method from its users and cause a compile-time error if a program attempts to specify a seed\&. 
+.PP
+Definition at line 49 of file randomX\&.java\&.
+.PP
+References org\&.jgap\&.util\&.randomX\&.iset, and org\&.jgap\&.util\&.randomX\&.nbits\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "byte org\&.jgap\&.util\&.randomX\&.b\fC [private]\fP"
+
+.PP
+Definition at line 126 of file randomX\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.randomX\&.nextBit()\&.
+.SS "double org\&.jgap\&.util\&.randomX\&.gset\fC [private]\fP"
+
+.PP
+Definition at line 99 of file randomX\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.randomX\&.nextGaussian()\&.
+.SS "boolean org\&.jgap\&.util\&.randomX\&.iset = false\fC [private]\fP"
+
+.PP
+Definition at line 28 of file randomX\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.randomX\&.nextGaussian(), and org\&.jgap\&.util\&.randomX\&.setSeed()\&.
+.SS "int org\&.jgap\&.util\&.randomX\&.nbits = 0\fC [private]\fP"
+
+.PP
+Definition at line 27 of file randomX\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.randomX\&.nextBit(), and org\&.jgap\&.util\&.randomX\&.setSeed()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

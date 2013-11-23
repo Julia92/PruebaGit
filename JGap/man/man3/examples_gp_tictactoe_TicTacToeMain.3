@@ -1,0 +1,264 @@
+.TH "examples.gp.tictactoe.TicTacToeMain" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.tictactoe.TicTacToeMain \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.GPProblem\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBGameFitnessFunction\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTicTacToeMain\fP (\fBGPConfiguration\fP a_conf)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBBoard\fP \fBgetBoard\fP ()"
+.br
+.ti -1c
+.RI "\fBGPGenotype\fP \fBcreate\fP (\fBGPConfiguration\fP a_conf, int a_color, \fBGPGenotype\fP a_other, int a_otherColor)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGPGenotype\fP \fBcreate\fP ()  throws InvalidConfigurationException "
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static transient Logger \fBLOGGER\fP = Logger\&.getLogger(TicTacToeMain\&.class)"
+.br
+.ti -1c
+.RI "static \fBCommandGene\fP \fBLOOP\fP"
+.br
+.ti -1c
+.RI "static \fBCommandGene\fP \fBSUBPROGRAM1\fP"
+.br
+.ti -1c
+.RI "static \fBCommandGene\fP \fBSUBPROGRAM2\fP"
+.br
+.ti -1c
+.RI "static \fBCommandGene\fP \fBPUTSTONE1\fP"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBBoard\fP \fBm_board\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.9 $'"
+.br
+.ti -1c
+.RI "static \fBVariable\fP \fBvb\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Example demonstrating Genetic Programming (GP) capabilities of JGAP\&.
+.PP
+Here, a strategy for playing Noughts and Crosses (Tic Tac Toe) is evolved\&.
+.PP
+THIS PROGRAM IS STILL UNDER DEVELOPMENT AND IS NOT FINISHED YET! ANY COMMENTS AND EXTENSIONS ARE VERY WELCOME!
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 31 of file TicTacToeMain\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.gp\&.tictactoe\&.TicTacToeMain\&.TicTacToeMain (\fBGPConfiguration\fPa_conf) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 47 of file TicTacToeMain\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.TicTacToeMain\&.m_board\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBGPGenotype\fP examples\&.gp\&.tictactoe\&.TicTacToeMain\&.create (\fBGPConfiguration\fPa_conf, inta_color, \fBGPGenotype\fPa_other, inta_otherColor) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Sets up the functions to use and other parameters\&. Then creates the initial genotype\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_color\fP the color to create a program for 
+.br
+\fIa_other\fP an optional opponent, may be null 
+.br
+\fIa_otherColor\fP color of the opponent
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the genotype created
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIInvalidConfigurationException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+evaluate board to matrix 
+.RE
+.PP
+
+.PP
+Definition at line 73 of file TicTacToeMain\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.BooleanClass, examples\&.gp\&.tictactoe\&.Board\&.HEIGHT, org\&.jgap\&.gp\&.CommandGene\&.IntegerClass, examples\&.gp\&.tictactoe\&.TicTacToeMain\&.LOOP, examples\&.gp\&.tictactoe\&.TicTacToeMain\&.m_board, examples\&.gp\&.tictactoe\&.TicTacToeMain\&.PUTSTONE1, examples\&.gp\&.tictactoe\&.TicTacToeMain\&.SUBPROGRAM1, examples\&.gp\&.tictactoe\&.TicTacToeMain\&.SUBPROGRAM2, examples\&.gp\&.tictactoe\&.TicTacToeMain\&.vb, org\&.jgap\&.gp\&.CommandGene\&.VoidClass, and examples\&.gp\&.tictactoe\&.Board\&.WIDTH\&.
+.SS "\fBGPGenotype\fP examples\&.gp\&.tictactoe\&.TicTacToeMain\&.create () throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+newly created GPGenotype 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIInvalidConfigurationException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.GPProblem\fP\&.
+.PP
+Definition at line 283 of file TicTacToeMain\&.java\&.
+.SS "\fBBoard\fP examples\&.gp\&.tictactoe\&.TicTacToeMain\&.getBoard ()\fC [inline]\fP"
+
+.PP
+Definition at line 53 of file TicTacToeMain\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.TicTacToeMain\&.m_board\&.
+.SS "static void examples\&.gp\&.tictactoe\&.TicTacToeMain\&.main (String[]args)\fC [inline]\fP, \fC [static]\fP"
+Starts the example\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP ignored 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 298 of file TicTacToeMain\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.gp\&.tictactoe\&.TicTacToeMain\&.CVS_REVISION = '$Revision: 1\&.9 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 34 of file TicTacToeMain\&.java\&.
+.SS "transient Logger examples\&.gp\&.tictactoe\&.TicTacToeMain\&.LOGGER = Logger\&.getLogger(TicTacToeMain\&.class)\fC [static]\fP"
+
+.PP
+Definition at line 36 of file TicTacToeMain\&.java\&.
+.SS "\fBCommandGene\fP examples\&.gp\&.tictactoe\&.TicTacToeMain\&.LOOP\fC [static]\fP"
+
+.PP
+Definition at line 42 of file TicTacToeMain\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.TicTacToeMain\&.create(), and examples\&.gp\&.tictactoe\&.InitStrategy\&.init()\&.
+.SS "\fBBoard\fP examples\&.gp\&.tictactoe\&.TicTacToeMain\&.m_board\fC [private]\fP"
+
+.PP
+Definition at line 40 of file TicTacToeMain\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.TicTacToeMain\&.create(), examples\&.gp\&.tictactoe\&.TicTacToeMain\&.getBoard(), and examples\&.gp\&.tictactoe\&.TicTacToeMain\&.TicTacToeMain()\&.
+.SS "\fBCommandGene\fP examples\&.gp\&.tictactoe\&.TicTacToeMain\&.PUTSTONE1\fC [static]\fP"
+
+.PP
+Definition at line 45 of file TicTacToeMain\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.TicTacToeMain\&.create(), and examples\&.gp\&.tictactoe\&.InitStrategy\&.init()\&.
+.SS "\fBCommandGene\fP examples\&.gp\&.tictactoe\&.TicTacToeMain\&.SUBPROGRAM1\fC [static]\fP"
+
+.PP
+Definition at line 43 of file TicTacToeMain\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.TicTacToeMain\&.create(), and examples\&.gp\&.tictactoe\&.InitStrategy\&.init()\&.
+.SS "\fBCommandGene\fP examples\&.gp\&.tictactoe\&.TicTacToeMain\&.SUBPROGRAM2\fC [static]\fP"
+
+.PP
+Definition at line 44 of file TicTacToeMain\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.TicTacToeMain\&.create()\&.
+.SS "\fBVariable\fP examples\&.gp\&.tictactoe\&.TicTacToeMain\&.vb\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 38 of file TicTacToeMain\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.TicTacToeMain\&.create()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

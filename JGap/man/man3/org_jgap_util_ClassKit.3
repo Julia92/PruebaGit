@@ -1,0 +1,233 @@
+.TH "org.jgap.util.ClassKit" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.util.ClassKit \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBExtensionsFilter\fP"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)  throws Exception "
+.br
+.ti -1c
+.RI "static List \fBfind\fP (final String a_tosubclassname)"
+.br
+.ti -1c
+.RI "static List \fBfind\fP (final String a_pckname, final String a_tosubclassname)  throws ClassNotFoundException "
+.br
+.ti -1c
+.RI "static List \fBfind\fP (final String a_pckgname, final Class a_tosubclass)"
+.br
+.ti -1c
+.RI "static List \fBfind\fP (final URL a_url, final String a_pckgname, final Class a_tosubclass)"
+.br
+.ti -1c
+.RI "static void \fBfindInJar\fP (final List a_result, final URL a_url, Class a_tosubclass)"
+.br
+.ti -1c
+.RI "static boolean \fBimplementsInterface\fP (final Class a_o, final Class a_clazz)"
+.br
+.ti -1c
+.RI "static boolean \fBextendsClass\fP (final Class a_o, final Class a_clazz)"
+.br
+.ti -1c
+.RI "static void \fBgetPlugins\fP (final String a_directory)"
+.br
+.ti -1c
+.RI "static void \fBaddClasses\fP (final Vector a_v, final File a_path, final String a_name)"
+.br
+.ti -1c
+.RI "static void \fBaddClassesJar\fP (final Vector a_v, final File a_path)"
+.br
+.ti -1c
+.RI "static void \fBaddClassesFile\fP (Vector a_v, final File a_path, final String a_name)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.10 $'"
+.br
+.ti -1c
+.RI "static transient Logger \fBLOGGER\fP = Logger\&.getLogger(ClassKit\&.class)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 19 of file ClassKit\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static void org\&.jgap\&.util\&.ClassKit\&.addClasses (final Vectora_v, final Filea_path, final Stringa_name)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 272 of file ClassKit\&.java\&.
+.PP
+References org\&.jgap\&.util\&.ClassKit\&.addClassesFile(), and org\&.jgap\&.util\&.ClassKit\&.addClassesJar()\&.
+.PP
+Referenced by org\&.jgap\&.util\&.ClassKit\&.getPlugins()\&.
+.SS "static void org\&.jgap\&.util\&.ClassKit\&.addClassesFile (Vectora_v, final Filea_path, final Stringa_name)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 299 of file ClassKit\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.ClassKit\&.addClasses()\&.
+.SS "static void org\&.jgap\&.util\&.ClassKit\&.addClassesJar (final Vectora_v, final Filea_path)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 278 of file ClassKit\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.ClassKit\&.addClasses()\&.
+.SS "static boolean org\&.jgap\&.util\&.ClassKit\&.extendsClass (final Classa_o, final Classa_clazz)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 217 of file ClassKit\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.ClassKit\&.find(), and org\&.jgap\&.util\&.ClassKit\&.findInJar()\&.
+.SS "static List org\&.jgap\&.util\&.ClassKit\&.find (final Stringa_tosubclassname)\fC [inline]\fP, \fC [static]\fP"
+Retrieves all the classes inheriting or implementing a given class in the currently loaded packages\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_tosubclassname\fP the name of the class to inherit from 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+classes inheriting or implementing a given class in the currently loaded packages 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+http//www\&.javaworld\&.com/javaworld/javatips/jw-javatip113\&.html 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+take care of abstract classes --> introduce parameter for that 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file ClassKit\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.ClassKit\&.find(), and org\&.jgap\&.util\&.ClassKit\&.main()\&.
+.SS "static List org\&.jgap\&.util\&.ClassKit\&.find (final Stringa_pckname, final Stringa_tosubclassname) throws ClassNotFoundException\fC [inline]\fP, \fC [static]\fP"
+Display all the classes inheriting or implementing a given class in a given package\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pckname\fP the fully qualified name of the package 
+.br
+\fIa_tosubclassname\fP the name of the class to inherit from 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+classes inheriting or implementing a given class in a given package 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIClassNotFoundException\fP 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+http//www\&.javaworld\&.com/javaworld/javatips/jw-javatip113\&.html 
+.RE
+.PP
+
+.PP
+Definition at line 82 of file ClassKit\&.java\&.
+.PP
+References org\&.jgap\&.util\&.ClassKit\&.find()\&.
+.SS "static List org\&.jgap\&.util\&.ClassKit\&.find (final Stringa_pckgname, final Classa_tosubclass)\fC [inline]\fP, \fC [static]\fP"
+Display all the classes inheriting or implementing a given class in a given package\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pckgname\fP the fully qualified name of the package 
+.br
+\fIa_tosubclass\fP the Class object to inherit from See http//www\&.javaworld\&.com/javaworld/javatips/jw-javatip113\&.html 
+.RE
+.PP
+
+.PP
+Definition at line 95 of file ClassKit\&.java\&.
+.PP
+References org\&.jgap\&.util\&.ClassKit\&.find()\&.
+.SS "static List org\&.jgap\&.util\&.ClassKit\&.find (final URLa_url, final Stringa_pckgname, final Classa_tosubclass)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 125 of file ClassKit\&.java\&.
+.PP
+References org\&.jgap\&.util\&.ClassKit\&.extendsClass(), org\&.jgap\&.util\&.ClassKit\&.findInJar(), and org\&.jgap\&.util\&.ClassKit\&.implementsInterface()\&.
+.SS "static void org\&.jgap\&.util\&.ClassKit\&.findInJar (final Lista_result, final URLa_url, Classa_tosubclass)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 164 of file ClassKit\&.java\&.
+.PP
+References org\&.jgap\&.util\&.ClassKit\&.extendsClass(), and org\&.jgap\&.util\&.ClassKit\&.implementsInterface()\&.
+.PP
+Referenced by org\&.jgap\&.util\&.ClassKit\&.find(), and org\&.jgap\&.util\&.ClassKit\&.main()\&.
+.SS "static void org\&.jgap\&.util\&.ClassKit\&.getPlugins (final Stringa_directory)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+add input param: type (or list of types) to look for 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+check if class assignable from given type 
+.RE
+.PP
+
+.PP
+Definition at line 230 of file ClassKit\&.java\&.
+.PP
+References org\&.jgap\&.util\&.ClassKit\&.addClasses()\&.
+.PP
+Referenced by org\&.jgap\&.util\&.ClassKit\&.main()\&.
+.SS "static boolean org\&.jgap\&.util\&.ClassKit\&.implementsInterface (final Classa_o, final Classa_clazz)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 205 of file ClassKit\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.ClassKit\&.find(), and org\&.jgap\&.util\&.ClassKit\&.findInJar()\&.
+.SS "static void org\&.jgap\&.util\&.ClassKit\&.main (String[]args) throws Exception\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 25 of file ClassKit\&.java\&.
+.PP
+References org\&.jgap\&.util\&.ClassKit\&.find(), org\&.jgap\&.util\&.ClassKit\&.findInJar(), and org\&.jgap\&.util\&.ClassKit\&.getPlugins()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.util\&.ClassKit\&.CVS_REVISION = '$Revision: 1\&.10 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 21 of file ClassKit\&.java\&.
+.SS "transient Logger org\&.jgap\&.util\&.ClassKit\&.LOGGER = Logger\&.getLogger(ClassKit\&.class)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 23 of file ClassKit\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

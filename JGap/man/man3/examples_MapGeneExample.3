@@ -1,0 +1,158 @@
+.TH "examples.MapGeneExample" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.MapGeneExample \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmakeChangeForAmount\fP (int a_targetChangeAmount)  throws Exception "
+.br
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)  throws Exception "
+.br
+.ti -1c
+.RI "static boolean \fBuniqueChromosomes\fP (Population a_pop)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.1 $'"
+.br
+.ti -1c
+.RI "static final int \fBMAX_ALLOWED_EVOLUTIONS\fP = 200"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class provides an implementation of the classic 'Make change' problem using a genetic algorithm\&. It is equivalent to the example in class \fBMinimizingMakeChange\fP in the same package, except that it uses a MapGene\&.
+.PP
+A MapGene allows to specify discrete values for possible solutions\&. Instead, an IntegerGene (used in the original example) uses a range of values\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 28 of file MapGeneExample\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static void examples\&.MapGeneExample\&.main (String[]args) throws Exception\fC [inline]\fP, \fC [static]\fP"
+Main method\&. A single command-line argument is expected, which is the amount of change to create (in other words, 75 would be equal to 75 cents)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP amount of change in cents to create 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 174 of file MapGeneExample\&.java\&.
+.PP
+References examples\&.MapGeneExample\&.makeChangeForAmount(), and examples\&.MinimizingMakeChangeFitnessFunction\&.MAX_BOUND\&.
+.SS "static void examples\&.MapGeneExample\&.makeChangeForAmount (inta_targetChangeAmount) throws Exception\fC [inline]\fP, \fC [static]\fP"
+Executes the genetic algorithm to determine the minimum number of coins necessary to make up the given target amount of change\&. The solution will then be written to System\&.out\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_targetChangeAmount\fP the target amount of change for which this method is attempting to produce the minimum number of coins
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file MapGeneExample\&.java\&.
+.PP
+References examples\&.MapGeneExample\&.MAX_ALLOWED_EVOLUTIONS, and examples\&.MapGeneExample\&.uniqueChromosomes()\&.
+.PP
+Referenced by examples\&.MapGeneExample\&.main()\&.
+.SS "static boolean examples\&.MapGeneExample\&.uniqueChromosomes (Populationa_pop)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pop\fP the population to verify 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if all chromosomes in the populationa are unique
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 209 of file MapGeneExample\&.java\&.
+.PP
+Referenced by examples\&.MapGeneExample\&.makeChangeForAmount()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.MapGeneExample\&.CVS_REVISION = '$Revision: 1\&.1 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 30 of file MapGeneExample\&.java\&.
+.SS "final int examples\&.MapGeneExample\&.MAX_ALLOWED_EVOLUTIONS = 200\fC [static]\fP, \fC [private]\fP"
+The total number of times we'll let the population evolve\&. 
+.PP
+Definition at line 35 of file MapGeneExample\&.java\&.
+.PP
+Referenced by examples\&.MapGeneExample\&.makeChangeForAmount()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

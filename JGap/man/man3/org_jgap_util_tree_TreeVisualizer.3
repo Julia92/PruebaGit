@@ -1,0 +1,444 @@
+.TH "org.jgap.util.tree.TreeVisualizer" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.util.tree.TreeVisualizer \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTreeVisualizer\fP ()"
+.br
+.ti -1c
+.RI "BufferedImage \fBrenderTree\fP (TreeNode tn)"
+.br
+.ti -1c
+.RI "void \fBwriteImageFile\fP (RenderedImage ri, File f)"
+.br
+.ti -1c
+.RI "void \fBsetSide\fP (int s)"
+.br
+.ti -1c
+.RI "int \fBgetSide\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetCircleDiminishFactor\fP (double c)"
+.br
+.ti -1c
+.RI "double \fBgetCircleDiminishFactor\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetBranchStartWidth\fP (double b)"
+.br
+.ti -1c
+.RI "double \fBgetBranchStartWidth\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetBranchDiminishFactor\fP (double s)"
+.br
+.ti -1c
+.RI "double \fBgetBranchDiminshFactor\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetBkgndColor\fP (Color c)"
+.br
+.ti -1c
+.RI "Color \fBgetBkgndColor\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetArenaColor\fP (Color c)"
+.br
+.ti -1c
+.RI "Color \fBgetArenaColor\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetBranchColor\fP (Color c)"
+.br
+.ti -1c
+.RI "Color \fBgetBranchColor\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetNodeColor\fP (Color c)"
+.br
+.ti -1c
+.RI "Color \fBgetNodeColor\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetTreeBranchRenderer\fP (\fBTreeBranchRenderer\fP ntbr)"
+.br
+.ti -1c
+.RI "\fBTreeBranchRenderer\fP \fBgetTreeBranchRenderer\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetTreeNodeRenderer\fP (\fBTreeNodeRenderer\fP ntnr)"
+.br
+.ti -1c
+.RI "\fBTreeNodeRenderer\fP \fBgetTreeNodeRenderer\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetRenderNodes\fP (boolean r)"
+.br
+.ti -1c
+.RI "boolean \fBgetRenderNodes\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetIgnorePastLevel\fP (int i)"
+.br
+.ti -1c
+.RI "int \fBgetIgnorePastLevel\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Point \fBdrawBranches\fP (Graphics2D g, TreeNode tn, int level, double start, double finish)"
+.br
+.ti -1c
+.RI "void \fBdrawNodes\fP (Graphics2D g, TreeNode tn, int level, double start, double finish)"
+.br
+.ti -1c
+.RI "Stroke \fBgetStroke\fP (int level)"
+.br
+.ti -1c
+.RI "Point \fBradToCart\fP (double r, double theta, int x, int y)"
+.br
+.ti -1c
+.RI "double \fBgetR\fP (int level)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBside\fP = 512"
+.br
+.ti -1c
+.RI "double \fBcircleDiminishFactor\fP = 0\&.875"
+.br
+.ti -1c
+.RI "double \fBbranchStartWidth\fP = 16\&.0"
+.br
+.ti -1c
+.RI "double \fBbranchDiminshFactor\fP = 0\&.6666"
+.br
+.ti -1c
+.RI "\fBTreeBranchRenderer\fP \fBtbr\fP = null"
+.br
+.ti -1c
+.RI "\fBTreeNodeRenderer\fP \fBtnr\fP = null"
+.br
+.ti -1c
+.RI "Color \fBbkgndColor\fP = Color\&.white"
+.br
+.ti -1c
+.RI "Color \fBarenaColor\fP = Color\&.black"
+.br
+.ti -1c
+.RI "Color \fBbranchColor\fP = Color\&.white"
+.br
+.ti -1c
+.RI "Color \fBnodeColor\fP = Color\&.red"
+.br
+.ti -1c
+.RI "boolean \fBrenderNodes\fP = true"
+.br
+.ti -1c
+.RI "int \fBignorePastLevel\fP = -1"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.2 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 29 of file TreeVisualizer\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.TreeVisualizer ()\fC [inline]\fP"
+
+.PP
+Definition at line 57 of file TreeVisualizer\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Point org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.drawBranches (Graphics2Dg, TreeNodetn, intlevel, doublestart, doublefinish)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 91 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getR(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getStroke(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.ignorePastLevel, org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.radToCart(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.side, and org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.tbr\&.
+.PP
+Referenced by org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.renderTree()\&.
+.SS "void org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.drawNodes (Graphics2Dg, TreeNodetn, intlevel, doublestart, doublefinish)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 125 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.branchDiminshFactor, org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.branchStartWidth, org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getR(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.ignorePastLevel, org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.radToCart(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.side, and org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.tnr\&.
+.PP
+Referenced by org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.renderTree()\&.
+.SS "Color org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getArenaColor ()\fC [inline]\fP"
+
+.PP
+Definition at line 226 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.arenaColor\&.
+.SS "Color org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getBkgndColor ()\fC [inline]\fP"
+
+.PP
+Definition at line 218 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.bkgndColor\&.
+.SS "Color org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getBranchColor ()\fC [inline]\fP"
+
+.PP
+Definition at line 234 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.branchColor\&.
+.SS "double org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getBranchDiminshFactor ()\fC [inline]\fP"
+
+.PP
+Definition at line 210 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.branchDiminshFactor\&.
+.SS "double org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getBranchStartWidth ()\fC [inline]\fP"
+
+.PP
+Definition at line 202 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.branchStartWidth\&.
+.SS "double org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getCircleDiminishFactor ()\fC [inline]\fP"
+
+.PP
+Definition at line 194 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.circleDiminishFactor\&.
+.SS "int org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getIgnorePastLevel ()\fC [inline]\fP"
+
+.PP
+Definition at line 274 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.ignorePastLevel\&.
+.SS "Color org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getNodeColor ()\fC [inline]\fP"
+
+.PP
+Definition at line 242 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.nodeColor\&.
+.SS "double org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getR (intlevel)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 175 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.circleDiminishFactor, and org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.side\&.
+.PP
+Referenced by org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.drawBranches(), and org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.drawNodes()\&.
+.SS "boolean org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getRenderNodes ()\fC [inline]\fP"
+
+.PP
+Definition at line 266 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.renderNodes\&.
+.SS "int org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getSide ()\fC [inline]\fP"
+
+.PP
+Definition at line 186 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.side\&.
+.SS "Stroke org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getStroke (intlevel)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 161 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.branchDiminshFactor, and org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.branchStartWidth\&.
+.PP
+Referenced by org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.drawBranches()\&.
+.SS "\fBTreeBranchRenderer\fP org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getTreeBranchRenderer ()\fC [inline]\fP"
+
+.PP
+Definition at line 250 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.tbr\&.
+.SS "\fBTreeNodeRenderer\fP org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getTreeNodeRenderer ()\fC [inline]\fP"
+
+.PP
+Definition at line 258 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.tnr\&.
+.SS "Point org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.radToCart (doubler, doubletheta, intx, inty)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 168 of file TreeVisualizer\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.drawBranches(), and org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.drawNodes()\&.
+.SS "BufferedImage org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.renderTree (TreeNodetn)\fC [inline]\fP"
+
+.PP
+Definition at line 60 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.arenaColor, org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.bkgndColor, org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.branchColor, org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.drawBranches(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.drawNodes(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.nodeColor, org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.renderNodes, and org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.side\&.
+.SS "void org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setArenaColor (Colorc)\fC [inline]\fP"
+
+.PP
+Definition at line 222 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.arenaColor\&.
+.SS "void org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setBkgndColor (Colorc)\fC [inline]\fP"
+
+.PP
+Definition at line 214 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.bkgndColor\&.
+.SS "void org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setBranchColor (Colorc)\fC [inline]\fP"
+
+.PP
+Definition at line 230 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.branchColor\&.
+.SS "void org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setBranchDiminishFactor (doubles)\fC [inline]\fP"
+
+.PP
+Definition at line 206 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.branchDiminshFactor\&.
+.SS "void org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setBranchStartWidth (doubleb)\fC [inline]\fP"
+
+.PP
+Definition at line 198 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.branchStartWidth\&.
+.SS "void org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setCircleDiminishFactor (doublec)\fC [inline]\fP"
+
+.PP
+Definition at line 190 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.circleDiminishFactor\&.
+.SS "void org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setIgnorePastLevel (inti)\fC [inline]\fP"
+
+.PP
+Definition at line 270 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.ignorePastLevel\&.
+.SS "void org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setNodeColor (Colorc)\fC [inline]\fP"
+
+.PP
+Definition at line 238 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.nodeColor\&.
+.SS "void org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setRenderNodes (booleanr)\fC [inline]\fP"
+
+.PP
+Definition at line 262 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.renderNodes\&.
+.SS "void org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setSide (ints)\fC [inline]\fP"
+
+.PP
+Definition at line 182 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.side\&.
+.SS "void org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setTreeBranchRenderer (\fBTreeBranchRenderer\fPntbr)\fC [inline]\fP"
+
+.PP
+Definition at line 246 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.tbr\&.
+.SS "void org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setTreeNodeRenderer (\fBTreeNodeRenderer\fPntnr)\fC [inline]\fP"
+
+.PP
+Definition at line 254 of file TreeVisualizer\&.java\&.
+.PP
+References org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.tnr\&.
+.SS "void org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.writeImageFile (RenderedImageri, Filef)\fC [inline]\fP"
+
+.PP
+Definition at line 83 of file TreeVisualizer\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "Color org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.arenaColor = Color\&.black\fC [private]\fP"
+
+.PP
+Definition at line 47 of file TreeVisualizer\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getArenaColor(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.renderTree(), and org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setArenaColor()\&.
+.SS "Color org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.bkgndColor = Color\&.white\fC [private]\fP"
+
+.PP
+Definition at line 45 of file TreeVisualizer\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getBkgndColor(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.renderTree(), and org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setBkgndColor()\&.
+.SS "Color org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.branchColor = Color\&.white\fC [private]\fP"
+
+.PP
+Definition at line 49 of file TreeVisualizer\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getBranchColor(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.renderTree(), and org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setBranchColor()\&.
+.SS "double org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.branchDiminshFactor = 0\&.6666\fC [private]\fP"
+
+.PP
+Definition at line 39 of file TreeVisualizer\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.drawNodes(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getBranchDiminshFactor(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getStroke(), and org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setBranchDiminishFactor()\&.
+.SS "double org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.branchStartWidth = 16\&.0\fC [private]\fP"
+
+.PP
+Definition at line 37 of file TreeVisualizer\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.drawNodes(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getBranchStartWidth(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getStroke(), and org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setBranchStartWidth()\&.
+.SS "double org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.circleDiminishFactor = 0\&.875\fC [private]\fP"
+
+.PP
+Definition at line 35 of file TreeVisualizer\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getCircleDiminishFactor(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getR(), and org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setCircleDiminishFactor()\&.
+.SS "final String org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.CVS_REVISION = '$Revision: 1\&.2 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 31 of file TreeVisualizer\&.java\&.
+.SS "int org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.ignorePastLevel = -1\fC [private]\fP"
+
+.PP
+Definition at line 55 of file TreeVisualizer\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.drawBranches(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.drawNodes(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getIgnorePastLevel(), and org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setIgnorePastLevel()\&.
+.SS "Color org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.nodeColor = Color\&.red\fC [private]\fP"
+
+.PP
+Definition at line 51 of file TreeVisualizer\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getNodeColor(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.renderTree(), and org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setNodeColor()\&.
+.SS "boolean org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.renderNodes = true\fC [private]\fP"
+
+.PP
+Definition at line 53 of file TreeVisualizer\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getRenderNodes(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.renderTree(), and org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setRenderNodes()\&.
+.SS "int org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.side = 512\fC [private]\fP"
+
+.PP
+Definition at line 33 of file TreeVisualizer\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.drawBranches(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.drawNodes(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getR(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getSide(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.renderTree(), and org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setSide()\&.
+.SS "\fBTreeBranchRenderer\fP org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.tbr = null\fC [private]\fP"
+
+.PP
+Definition at line 41 of file TreeVisualizer\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.drawBranches(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getTreeBranchRenderer(), and org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setTreeBranchRenderer()\&.
+.SS "\fBTreeNodeRenderer\fP org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.tnr = null\fC [private]\fP"
+
+.PP
+Definition at line 43 of file TreeVisualizer\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.drawNodes(), org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.getTreeNodeRenderer(), and org\&.jgap\&.util\&.tree\&.TreeVisualizer\&.setTreeNodeRenderer()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

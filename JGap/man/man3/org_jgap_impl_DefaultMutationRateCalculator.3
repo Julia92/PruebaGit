@@ -1,0 +1,147 @@
+.TH "org.jgap.impl.DefaultMutationRateCalculator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.DefaultMutationRateCalculator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.BaseRateCalculator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDefaultMutationRateCalculator\fP (\fBConfiguration\fP a_config)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "int \fBcalculateCurrentRate\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBtoBePermutated\fP (\fBIChromosome\fP a_chrom, int a_geneIndex)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.17 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Default implementation of a mutation rate calculcator\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file DefaultMutationRateCalculator\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.DefaultMutationRateCalculator\&.DefaultMutationRateCalculator (\fBConfiguration\fPa_config) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 32 of file DefaultMutationRateCalculator\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int org\&.jgap\&.impl\&.DefaultMutationRateCalculator\&.calculateCurrentRate ()\fC [inline]\fP"
+Calculates the mutation rate\&.
+.PP
+\fBReturns:\fP
+.RS 4
+calculated divisor of mutation rate probability (dividend is 1)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 (same functionality as earlier, but not encapsulated) 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IUniversalRateCalculator\fP\&.
+.PP
+Definition at line 45 of file DefaultMutationRateCalculator\&.java\&.
+.PP
+References org\&.jgap\&.BaseRateCalculator\&.getConfiguration()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.DefaultMutationRateCalculator\&.toBePermutated()\&.
+.SS "boolean org\&.jgap\&.impl\&.DefaultMutationRateCalculator\&.toBePermutated (\fBIChromosome\fPa_chrom, inta_geneIndex)\fC [inline]\fP"
+Determines whether mutation is to be carried out\&. In this case the rate is the size of the chromosome\&. There is therefore a probability of 1/totalgenes that a particular gene mutates\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chrom\fP ignored 
+.br
+\fIa_geneIndex\fP ignored 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if gene should be mutated
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Knowles 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IUniversalRateCalculator\fP\&.
+.PP
+Definition at line 65 of file DefaultMutationRateCalculator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.DefaultMutationRateCalculator\&.calculateCurrentRate(), org\&.jgap\&.BaseRateCalculator\&.getConfiguration(), and org\&.jgap\&.RandomGenerator\&.nextInt()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.DefaultMutationRateCalculator\&.CVS_REVISION = '$Revision: 1\&.17 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 23 of file DefaultMutationRateCalculator\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

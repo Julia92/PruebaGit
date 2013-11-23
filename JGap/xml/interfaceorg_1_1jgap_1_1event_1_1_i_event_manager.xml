@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="interfaceorg_1_1jgap_1_1event_1_1_i_event_manager" kind="interface" prot="public">
+    <compoundname>org::jgap::event::IEventManager</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1event_1_1_event_manager" prot="public" virt="non-virtual">org.jgap.event.EventManager</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1event_1_1_i_event_manager_1accdd33f5b80727b26a0d1c75df73904c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.event.IEventManager.addEventListener</definition>
+        <argsstring>(String a_eventName, GeneticEventListener a_eventListenerToAdd)</argsstring>
+        <name>addEventListener</name>
+        <param>
+          <type>String</type>
+          <declname>a_eventName</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1event_1_1_genetic_event_listener" kindref="compound">GeneticEventListener</ref></type>
+          <declname>a_eventListenerToAdd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a new listener that will be notified when the event represented by the given name is fired.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_eventName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the event to which the given listener should be subscribed. Standard events are represented by constants in the <ref refid="classorg_1_1jgap_1_1event_1_1_genetic_event" kindref="compound">GeneticEvent</ref> class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_eventListenerToAdd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the genetic listener to subscribe to notifications of the given event</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>2.6 (since 1.0 in <ref refid="classorg_1_1jgap_1_1event_1_1_event_manager" kindref="compound">EventManager</ref>) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/event/IEventManager.java" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1event_1_1_i_event_manager_1a851c20e5ad81c1a000fe4ac8087077f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.event.IEventManager.removeEventListener</definition>
+        <argsstring>(String a_eventName, GeneticEventListener a_eventListenerToRemove)</argsstring>
+        <name>removeEventListener</name>
+        <param>
+          <type>String</type>
+          <declname>a_eventName</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1event_1_1_genetic_event_listener" kindref="compound">GeneticEventListener</ref></type>
+          <declname>a_eventListenerToRemove</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes the given listener from subscription of the indicated event. The listener will no longer be notified when the given event occurs.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_eventName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the event to which the given listener should be removed. Standard events are represented by constants in the <ref refid="classorg_1_1jgap_1_1event_1_1_genetic_event" kindref="compound">GeneticEvent</ref> class </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_eventListenerToRemove</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the genetic listener to unsubscribe from notifications of the given event</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>2.6 (since 1.0 in <ref refid="classorg_1_1jgap_1_1event_1_1_event_manager" kindref="compound">EventManager</ref>) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/event/IEventManager.java" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1event_1_1_i_event_manager_1addb26702fd3c1285e43d0774a023b017" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.event.IEventManager.fireGeneticEvent</definition>
+        <argsstring>(GeneticEvent a_eventToFire)</argsstring>
+        <name>fireGeneticEvent</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1event_1_1_genetic_event" kindref="compound">GeneticEvent</ref></type>
+          <declname>a_eventToFire</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fires a genetic event. All subscribers of that particular event type (as determined by the name of the event) will be notified of it having been fired.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_eventToFire</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the representation of the genetic event to fire</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>2.6 (since 1.0 in <ref refid="classorg_1_1jgap_1_1event_1_1_event_manager" kindref="compound">EventManager</ref>) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/event/IEventManager.java" line="65" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Interface for event managers (e.g., see class <ref refid="classorg_1_1jgap_1_1event_1_1_event_manager" kindref="compound">EventManager</ref>).</para><para><simplesect kind="author"><para>Klaus Meffert </para><simplesectsep/><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="14212">
+        <label>org.jgap.TestEventManager</label>
+        <childnode refid="14211" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14210">
+        <label>Serializable</label>
+      </node>
+      <node id="14209">
+        <label>org.jgap.event.IEventManager</label>
+        <link refid="interfaceorg_1_1jgap_1_1event_1_1_i_event_manager"/>
+        <childnode refid="14210" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14211">
+        <label>org.jgap.event.EventManager</label>
+        <link refid="classorg_1_1jgap_1_1event_1_1_event_manager"/>
+        <childnode refid="14209" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="14214">
+        <label>Serializable</label>
+      </node>
+      <node id="14213">
+        <label>org.jgap.event.IEventManager</label>
+        <link refid="interfaceorg_1_1jgap_1_1event_1_1_i_event_manager"/>
+        <childnode refid="14214" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/event/IEventManager.java" line="22" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/event/IEventManager.java" bodystart="21" bodyend="66"/>
+    <listofallmembers>
+      <member refid="interfaceorg_1_1jgap_1_1event_1_1_i_event_manager_1accdd33f5b80727b26a0d1c75df73904c" prot="public" virt="non-virtual"><scope>org::jgap::event::IEventManager</scope><name>addEventListener</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1event_1_1_i_event_manager_1addb26702fd3c1285e43d0774a023b017" prot="public" virt="non-virtual"><scope>org::jgap::event::IEventManager</scope><name>fireGeneticEvent</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1event_1_1_i_event_manager_1a851c20e5ad81c1a000fe4ac8087077f1" prot="public" virt="non-virtual"><scope>org::jgap::event::IEventManager</scope><name>removeEventListener</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,280 @@
+.TH "org.jgap.impl.ThresholdSelector" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.ThresholdSelector \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.NaturalSelectorExt\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBFitnessValueComparator\fP"
+.br
+.ti -1c
+.RI "class \fBThresholdSelectorConfigurable\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBThresholdSelector\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBThresholdSelector\fP (final \fBConfiguration\fP a_config, final double a_bestChromosomes_Percentage)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBselectChromosomes\fP (final int a_howManyToSelect, \fBPopulation\fP a_to_pop)"
+.br
+.ti -1c
+.RI "boolean \fBreturnsUniqueChromosomes\fP ()"
+.br
+.ti -1c
+.RI "void \fBempty\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBadd\fP (final \fBIChromosome\fP a_chromosomeToAdd)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "List \fBm_chromosomes\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_needsSorting\fP"
+.br
+.ti -1c
+.RI "\fBFitnessValueComparator\fP \fBm_fitnessValueComparator\fP"
+.br
+.ti -1c
+.RI "ThresholdSelectorConfigurable \fBm_config\fP = new ThresholdSelectorConfigurable()"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.19 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Implementation of a \fBNaturalSelector\fP that ensures a certain threshold of the best chromosomes are taken to the next generation\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file ThresholdSelector\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.ThresholdSelector\&.ThresholdSelector () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Default constructor\&. Uses threshold of 30 percent\&.
+.PP
+Attention: The configuration used is the one set with the static method Genotype\&.setConfiguration\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 55 of file ThresholdSelector\&.java\&.
+.SS "org\&.jgap\&.impl\&.ThresholdSelector\&.ThresholdSelector (final \fBConfiguration\fPa_config, final doublea_bestChromosomes_Percentage) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.br
+\fIa_bestChromosomes_Percentage\fP indicates the number of best chromosomes from the population to be selected for granted\&. All other chromosomes will be selected in a random fashion\&. The value must be in the range from 0\&.0 to 1\&.0\&. 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 71 of file ThresholdSelector\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.ThresholdSelector\&.m_chromosomes, org\&.jgap\&.impl\&.ThresholdSelector\&.m_fitnessValueComparator, and org\&.jgap\&.impl\&.ThresholdSelector\&.m_needsSorting\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.impl\&.ThresholdSelector\&.add (final \fBIChromosome\fPa_chromosomeToAdd)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomeToAdd\fP \fBChromosome\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.NaturalSelectorExt\fP\&.
+.PP
+Definition at line 155 of file ThresholdSelector\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.ThresholdSelector\&.m_needsSorting\&.
+.SS "void org\&.jgap\&.impl\&.ThresholdSelector\&.empty ()\fC [inline]\fP"
+Empty out the working pool of Chromosomes\&. This will be invoked after each evolution cycle so that the natural selector can be reused for the next one\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.INaturalSelector\fP\&.
+.PP
+Definition at line 143 of file ThresholdSelector\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.ThresholdSelector\&.m_needsSorting\&.
+.SS "boolean org\&.jgap\&.impl\&.ThresholdSelector\&.returnsUniqueChromosomes ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+false as we allow to return the same chromosome multiple times
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.INaturalSelector\fP\&.
+.PP
+Definition at line 139 of file ThresholdSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.ThresholdSelectorTest\&.testConstruct_2()\&.
+.SS "void org\&.jgap\&.impl\&.ThresholdSelector\&.selectChromosomes (final inta_howManyToSelect, \fBPopulation\fPa_to_pop)\fC [inline]\fP"
+Select a given number of Chromosomes from the pool that will move on to the next generation population\&. This selection will be guided by the fitness values\&. The chromosomes with the best fitness value win\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_howManyToSelect\fP the number of Chromosomes to select 
+.br
+\fIa_to_pop\fP the population the Chromosomes will be added to
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+replace this step by adding newly to create chromosomes 
+.RE
+.PP
+
+.PP
+Definition at line 97 of file ThresholdSelector\&.java\&.
+.PP
+References org\&.jgap\&.NaturalSelector\&.getConfiguration(), org\&.jgap\&.impl\&.ThresholdSelector\&.m_chromosomes, org\&.jgap\&.impl\&.ThresholdSelector\&.m_config, org\&.jgap\&.impl\&.ThresholdSelector\&.m_fitnessValueComparator, and org\&.jgap\&.impl\&.ThresholdSelector\&.m_needsSorting\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.ThresholdSelector\&.CVS_REVISION = '$Revision: 1\&.19 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file ThresholdSelector\&.java\&.
+.SS "List org\&.jgap\&.impl\&.ThresholdSelector\&.m_chromosomes\fC [private]\fP"
+Stores the chromosomes to be taken into account for selection 
+.PP
+Definition at line 30 of file ThresholdSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.ThresholdSelector\&.selectChromosomes(), and org\&.jgap\&.impl\&.ThresholdSelector\&.ThresholdSelector()\&.
+.SS "ThresholdSelectorConfigurable org\&.jgap\&.impl\&.ThresholdSelector\&.m_config = new ThresholdSelectorConfigurable()\fC [private]\fP"
+
+.PP
+Definition at line 43 of file ThresholdSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.ThresholdSelector\&.selectChromosomes()\&.
+.SS "\fBFitnessValueComparator\fP org\&.jgap\&.impl\&.ThresholdSelector\&.m_fitnessValueComparator\fC [private]\fP"
+Comparator that is only concerned about fitness values 
+.PP
+Definition at line 40 of file ThresholdSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.ThresholdSelector\&.selectChromosomes(), and org\&.jgap\&.impl\&.ThresholdSelector\&.ThresholdSelector()\&.
+.SS "boolean org\&.jgap\&.impl\&.ThresholdSelector\&.m_needsSorting\fC [private]\fP"
+Indicated whether the list of added chromosomes needs sorting 
+.PP
+Definition at line 35 of file ThresholdSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.ThresholdSelector\&.add(), org\&.jgap\&.impl\&.ThresholdSelector\&.empty(), org\&.jgap\&.impl\&.ThresholdSelector\&.selectChromosomes(), and org\&.jgap\&.impl\&.ThresholdSelector\&.ThresholdSelector()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,263 @@
+.TH "examples.gp.tictactoe.Board" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.tictactoe.Board \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBoard\fP ()"
+.br
+.ti -1c
+.RI "void \fBresetBoard\fP ()"
+.br
+.ti -1c
+.RI "void \fBstartNewRound\fP ()"
+.br
+.ti -1c
+.RI "void \fBbeginTurn\fP ()"
+.br
+.ti -1c
+.RI "void \fBendTurn\fP ()"
+.br
+.ti -1c
+.RI "void \fBendRound\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBputStone\fP (int x, int y, int a_color)  throws IllegalArgumentException "
+.br
+.ti -1c
+.RI "int \fBreadField\fP (int x, int y)  throws IllegalArgumentException "
+.br
+.ti -1c
+.RI "int \fBgetReadPositionCount\fP ()"
+.br
+.ti -1c
+.RI "int \fBreadField\fP (int a_index)  throws IllegalArgumentException "
+.br
+.ti -1c
+.RI "boolean \fBisEndOfGame\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetLastColor\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fBWIDTH\fP = 3"
+.br
+.ti -1c
+.RI "static int \fBHEIGHT\fP = \fBWIDTH\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "boolean \fBisWinner\fP (int a_firstX, int a_lastX, int a_firstY, int a_lastY)"
+.br
+.ti -1c
+.RI "boolean \fBisWinnerDiag\fP (int a_startX, int a_startY, int a_increment)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int[][] \fBm_board\fP"
+.br
+.ti -1c
+.RI "int \fBm_lastColor\fP"
+.br
+.ti -1c
+.RI "int \fBmovesInRound\fP"
+.br
+.ti -1c
+.RI "int \fBmovesInTurn\fP"
+.br
+.ti -1c
+.RI "Map \fBm_readPositions\fP"
+.br
+.ti -1c
+.RI "int \fBm_readPositionCount\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A Tic Tac Toe board (3x3)\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file Board\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.gp\&.tictactoe\&.Board\&.Board ()\fC [inline]\fP"
+
+.PP
+Definition at line 34 of file Board\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.Board\&.HEIGHT, examples\&.gp\&.tictactoe\&.Board\&.m_board, examples\&.gp\&.tictactoe\&.Board\&.m_readPositions, examples\&.gp\&.tictactoe\&.Board\&.startNewRound(), and examples\&.gp\&.tictactoe\&.Board\&.WIDTH\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void examples\&.gp\&.tictactoe\&.Board\&.beginTurn ()\fC [inline]\fP"
+
+.PP
+Definition at line 54 of file Board\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.Board\&.m_readPositionCount, and examples\&.gp\&.tictactoe\&.Board\&.movesInTurn\&.
+.SS "void examples\&.gp\&.tictactoe\&.Board\&.endRound ()\fC [inline]\fP"
+
+.PP
+Definition at line 66 of file Board\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.Board\&.m_lastColor, and examples\&.gp\&.tictactoe\&.Board\&.movesInRound\&.
+.SS "void examples\&.gp\&.tictactoe\&.Board\&.endTurn ()\fC [inline]\fP"
+
+.PP
+Definition at line 60 of file Board\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.Board\&.movesInTurn\&.
+.SS "int examples\&.gp\&.tictactoe\&.Board\&.getLastColor ()\fC [inline]\fP"
+
+.PP
+Definition at line 205 of file Board\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.Board\&.m_lastColor\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.PutStone1\&.check(), and examples\&.gp\&.tictactoe\&.PutStone\&.check()\&.
+.SS "int examples\&.gp\&.tictactoe\&.Board\&.getReadPositionCount ()\fC [inline]\fP"
+
+.PP
+Definition at line 116 of file Board\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.Board\&.m_readPositionCount\&.
+.SS "boolean examples\&.gp\&.tictactoe\&.Board\&.isEndOfGame ()\fC [inline]\fP"
+
+.PP
+Definition at line 131 of file Board\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.Board\&.HEIGHT, examples\&.gp\&.tictactoe\&.Board\&.isWinner(), examples\&.gp\&.tictactoe\&.Board\&.isWinnerDiag(), and examples\&.gp\&.tictactoe\&.Board\&.WIDTH\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.Board\&.putStone()\&.
+.SS "boolean examples\&.gp\&.tictactoe\&.Board\&.isWinner (inta_firstX, inta_lastX, inta_firstY, inta_lastY)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 151 of file Board\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.Board\&.m_board\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.Board\&.isEndOfGame()\&.
+.SS "boolean examples\&.gp\&.tictactoe\&.Board\&.isWinnerDiag (inta_startX, inta_startY, inta_increment)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 177 of file Board\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.Board\&.m_board, and examples\&.gp\&.tictactoe\&.Board\&.WIDTH\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.Board\&.isEndOfGame()\&.
+.SS "boolean examples\&.gp\&.tictactoe\&.Board\&.putStone (intx, inty, inta_color) throws IllegalArgumentException\fC [inline]\fP"
+
+.PP
+Definition at line 78 of file Board\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.Board\&.HEIGHT, examples\&.gp\&.tictactoe\&.Board\&.isEndOfGame(), examples\&.gp\&.tictactoe\&.Board\&.m_board, examples\&.gp\&.tictactoe\&.Board\&.m_lastColor, examples\&.gp\&.tictactoe\&.Board\&.movesInRound, examples\&.gp\&.tictactoe\&.Board\&.movesInTurn, and examples\&.gp\&.tictactoe\&.Board\&.WIDTH\&.
+.SS "int examples\&.gp\&.tictactoe\&.Board\&.readField (intx, inty) throws IllegalArgumentException\fC [inline]\fP"
+
+.PP
+Definition at line 103 of file Board\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.Board\&.HEIGHT, examples\&.gp\&.tictactoe\&.Board\&.m_board, examples\&.gp\&.tictactoe\&.Board\&.m_readPositionCount, examples\&.gp\&.tictactoe\&.Board\&.m_readPositions, and examples\&.gp\&.tictactoe\&.Board\&.WIDTH\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.CountStones\&.readCol(), examples\&.gp\&.tictactoe\&.CountStones\&.readDia(), and examples\&.gp\&.tictactoe\&.CountStones\&.readRow()\&.
+.SS "int examples\&.gp\&.tictactoe\&.Board\&.readField (inta_index) throws IllegalArgumentException\fC [inline]\fP"
+
+.PP
+Definition at line 120 of file Board\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.Board\&.HEIGHT, examples\&.gp\&.tictactoe\&.Board\&.m_board, and examples\&.gp\&.tictactoe\&.Board\&.WIDTH\&.
+.SS "void examples\&.gp\&.tictactoe\&.Board\&.resetBoard ()\fC [inline]\fP"
+
+.PP
+Definition at line 40 of file Board\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.Board\&.HEIGHT, examples\&.gp\&.tictactoe\&.Board\&.m_board, and examples\&.gp\&.tictactoe\&.Board\&.WIDTH\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.Board\&.startNewRound()\&.
+.SS "void examples\&.gp\&.tictactoe\&.Board\&.startNewRound ()\fC [inline]\fP"
+
+.PP
+Definition at line 48 of file Board\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.Board\&.m_lastColor, examples\&.gp\&.tictactoe\&.Board\&.movesInRound, and examples\&.gp\&.tictactoe\&.Board\&.resetBoard()\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.Board\&.Board()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int examples\&.gp\&.tictactoe\&.Board\&.HEIGHT = \fBWIDTH\fP\fC [static]\fP"
+
+.PP
+Definition at line 27 of file Board\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.Board\&.Board(), examples\&.gp\&.tictactoe\&.TicTacToeMain\&.GameFitnessFunction\&.computeRawFitness(), examples\&.gp\&.tictactoe\&.TicTacToeMain\&.create(), examples\&.gp\&.tictactoe\&.PutStone1\&.execute_void(), examples\&.gp\&.tictactoe\&.CountStones\&.execute_void(), examples\&.gp\&.tictactoe\&.IfIsFree\&.execute_void(), examples\&.gp\&.tictactoe\&.IfIsOccupied\&.execute_void(), examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.execute_void(), examples\&.gp\&.tictactoe\&.EvaluateBoard\&.execute_void(), examples\&.gp\&.tictactoe\&.Board\&.isEndOfGame(), examples\&.gp\&.tictactoe\&.Board\&.putStone(), examples\&.gp\&.tictactoe\&.CountStones\&.readCol(), examples\&.gp\&.tictactoe\&.CountStones\&.readDia(), examples\&.gp\&.tictactoe\&.Board\&.readField(), and examples\&.gp\&.tictactoe\&.Board\&.resetBoard()\&.
+.SS "int [][] examples\&.gp\&.tictactoe\&.Board\&.m_board\fC [private]\fP"
+
+.PP
+Definition at line 21 of file Board\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.Board\&.Board(), examples\&.gp\&.tictactoe\&.Board\&.isWinner(), examples\&.gp\&.tictactoe\&.Board\&.isWinnerDiag(), examples\&.gp\&.tictactoe\&.Board\&.putStone(), examples\&.gp\&.tictactoe\&.Board\&.readField(), and examples\&.gp\&.tictactoe\&.Board\&.resetBoard()\&.
+.SS "int examples\&.gp\&.tictactoe\&.Board\&.m_lastColor\fC [private]\fP"
+
+.PP
+Definition at line 23 of file Board\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.Board\&.endRound(), examples\&.gp\&.tictactoe\&.Board\&.getLastColor(), examples\&.gp\&.tictactoe\&.Board\&.putStone(), and examples\&.gp\&.tictactoe\&.Board\&.startNewRound()\&.
+.SS "int examples\&.gp\&.tictactoe\&.Board\&.m_readPositionCount\fC [private]\fP"
+
+.PP
+Definition at line 32 of file Board\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.Board\&.beginTurn(), examples\&.gp\&.tictactoe\&.Board\&.getReadPositionCount(), and examples\&.gp\&.tictactoe\&.Board\&.readField()\&.
+.SS "Map examples\&.gp\&.tictactoe\&.Board\&.m_readPositions\fC [private]\fP"
+
+.PP
+Definition at line 31 of file Board\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.Board\&.Board(), and examples\&.gp\&.tictactoe\&.Board\&.readField()\&.
+.SS "int examples\&.gp\&.tictactoe\&.Board\&.movesInRound\fC [private]\fP"
+
+.PP
+Definition at line 29 of file Board\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.Board\&.endRound(), examples\&.gp\&.tictactoe\&.Board\&.putStone(), and examples\&.gp\&.tictactoe\&.Board\&.startNewRound()\&.
+.SS "int examples\&.gp\&.tictactoe\&.Board\&.movesInTurn\fC [private]\fP"
+
+.PP
+Definition at line 30 of file Board\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.Board\&.beginTurn(), examples\&.gp\&.tictactoe\&.Board\&.endTurn(), and examples\&.gp\&.tictactoe\&.Board\&.putStone()\&.
+.SS "int examples\&.gp\&.tictactoe\&.Board\&.WIDTH = 3\fC [static]\fP"
+
+.PP
+Definition at line 25 of file Board\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.Board\&.Board(), examples\&.gp\&.tictactoe\&.TicTacToeMain\&.GameFitnessFunction\&.computeRawFitness(), examples\&.gp\&.tictactoe\&.TicTacToeMain\&.create(), examples\&.gp\&.tictactoe\&.PutStone1\&.execute_void(), examples\&.gp\&.tictactoe\&.CountStones\&.execute_void(), examples\&.gp\&.tictactoe\&.IfIsFree\&.execute_void(), examples\&.gp\&.tictactoe\&.IfIsOccupied\&.execute_void(), examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.execute_void(), examples\&.gp\&.tictactoe\&.EvaluateBoard\&.execute_void(), examples\&.gp\&.tictactoe\&.Board\&.isEndOfGame(), examples\&.gp\&.tictactoe\&.Board\&.isWinnerDiag(), examples\&.gp\&.tictactoe\&.Board\&.putStone(), examples\&.gp\&.tictactoe\&.CountStones\&.readDia(), examples\&.gp\&.tictactoe\&.Board\&.readField(), examples\&.gp\&.tictactoe\&.CountStones\&.readRow(), and examples\&.gp\&.tictactoe\&.Board\&.resetBoard()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,758 @@
+.TH "org.jgap.impl.CrossoverOperator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.CrossoverOperator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.BaseGeneticOperator\fP, and Comparable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCrossoverOperator\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCrossoverOperator\fP (final \fBConfiguration\fP a_configuration)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCrossoverOperator\fP (final \fBConfiguration\fP a_configuration, final \fBIUniversalRateCalculator\fP a_crossoverRateCalculator)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCrossoverOperator\fP (final \fBConfiguration\fP a_configuration, final \fBIUniversalRateCalculator\fP a_crossoverRateCalculator, boolean a_allowFullCrossOver)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCrossoverOperator\fP (final \fBConfiguration\fP a_configuration, final int a_desiredCrossoverRate)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCrossoverOperator\fP (final \fBConfiguration\fP a_configuration, final int a_desiredCrossoverRate, boolean a_allowFullCrossOver)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCrossoverOperator\fP (final \fBConfiguration\fP a_configuration, final int a_desiredCrossoverRate, final boolean a_allowFullCrossOver, final boolean a_xoverNewAge)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCrossoverOperator\fP (final \fBConfiguration\fP a_configuration, final double a_crossoverRatePercentage)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCrossoverOperator\fP (final \fBConfiguration\fP a_configuration, final double a_crossoverRatePercentage, boolean a_allowFullCrossOver)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCrossoverOperator\fP (final \fBConfiguration\fP a_configuration, final double a_crossoverRatePercentage, final boolean a_allowFullCrossOver, final boolean a_xoverNewAge)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBoperate\fP (final \fBPopulation\fP a_population, final List a_candidateChromosomes)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (final Object a_other)"
+.br
+.ti -1c
+.RI "void \fBsetAllowFullCrossOver\fP (boolean a_allowFullXOver)"
+.br
+.ti -1c
+.RI "boolean \fBisAllowFullCrossOver\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetCrossOverRate\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetCrossOverRatePercent\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetXoverNewAge\fP (boolean a_xoverNewAge)"
+.br
+.ti -1c
+.RI "boolean \fBisXoverNewAge\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.ti -1c
+.RI "void \fBdoCrossover\fP (\fBIChromosome\fP firstMate, \fBIChromosome\fP secondMate, List a_candidateChromosomes, \fBRandomGenerator\fP generator)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetCrossoverRateCalc\fP (final \fBIUniversalRateCalculator\fP a_crossoverRateCalculator)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBm_crossoverRate\fP"
+.br
+.ti -1c
+.RI "double \fBm_crossoverRatePercent\fP"
+.br
+.ti -1c
+.RI "\fBIUniversalRateCalculator\fP \fBm_crossoverRateCalc\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_allowFullCrossOver\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_xoverNewAge\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.48 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The crossover operator randomly selects two Chromosomes from the population and 'mates' them by randomly picking a gene and then swapping that gene and all subsequent genes between the two Chromosomes\&. The two modified Chromosomes are then added to the list of candidate Chromosomes\&.
+.PP
+If you work with CompositeGenes, this operator expects them to contain genes of the same type (e\&.g\&. \fBIntegerGene\fP)\&. If you have mixed types, please provide your own crossover operator\&.
+.PP
+This \fBCrossoverOperator\fP supports both fixed and dynamic crossover rates\&. A fixed rate is one specified at construction time by the user\&. This operation is performed 1/m_crossoverRate as many times as there are Chromosomes in the population\&. Another possibility is giving the crossover rate as a percentage\&. A dynamic rate is determined by this class on the fly if no fixed rate is provided\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.PP
+Chris Knowles 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 39 of file CrossoverOperator\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.CrossoverOperator\&.CrossoverOperator () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this \fBCrossoverOperator\fP without a specified crossover rate, this results in dynamic crossover rate being turned off\&. This means that the crossover rate will be fixed at populationsize/2\&.
+.PP
+Attention: The configuration used is the one set with the static method Genotype\&.setConfiguration\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Knowles 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 85 of file CrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.getStaticConfiguration(), and org\&.jgap\&.impl\&.CrossoverOperator\&.init()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CrossoverOperator\&.compareTo()\&.
+.SS "org\&.jgap\&.impl\&.CrossoverOperator\&.CrossoverOperator (final \fBConfiguration\fPa_configuration) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this \fBCrossoverOperator\fP without a specified crossover rate, this results in dynamic crossover rate being turned off\&. This means that the crossover rate will be fixed at populationsize/2\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 102 of file CrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CrossoverOperator\&.init()\&.
+.SS "org\&.jgap\&.impl\&.CrossoverOperator\&.CrossoverOperator (final \fBConfiguration\fPa_configuration, final \fBIUniversalRateCalculator\fPa_crossoverRateCalculator) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this \fBCrossoverOperator\fP with a specified crossover rate calculator, which results in dynamic crossover being turned on\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.br
+\fIa_crossoverRateCalculator\fP calculator for dynamic crossover rate computation 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Knowles 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 (since 2\&.0 without a_configuration) 
+.RE
+.PP
+
+.PP
+Definition at line 138 of file CrossoverOperator\&.java\&.
+.SS "org\&.jgap\&.impl\&.CrossoverOperator\&.CrossoverOperator (final \fBConfiguration\fPa_configuration, final \fBIUniversalRateCalculator\fPa_crossoverRateCalculator, booleana_allowFullCrossOver) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this \fBCrossoverOperator\fP with a specified crossover rate calculator, which results in dynamic crossover being turned on\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.br
+\fIa_crossoverRateCalculator\fP calculator for dynamic crossover rate computation 
+.br
+\fIa_allowFullCrossOver\fP true: x-over before AND after x-over point, false: only x-over after x-over point 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 160 of file CrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CrossoverOperator\&.setAllowFullCrossOver(), and org\&.jgap\&.impl\&.CrossoverOperator\&.setCrossoverRateCalc()\&.
+.SS "org\&.jgap\&.impl\&.CrossoverOperator\&.CrossoverOperator (final \fBConfiguration\fPa_configuration, final inta_desiredCrossoverRate) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this \fBCrossoverOperator\fP with the given crossover rate\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.br
+\fIa_desiredCrossoverRate\fP the desired rate of crossover 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Knowles 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 (since 2\&.0 without a_configuration) 
+.RE
+.PP
+
+.PP
+Definition at line 182 of file CrossoverOperator\&.java\&.
+.SS "org\&.jgap\&.impl\&.CrossoverOperator\&.CrossoverOperator (final \fBConfiguration\fPa_configuration, final inta_desiredCrossoverRate, booleana_allowFullCrossOver) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this \fBCrossoverOperator\fP with the given crossover rate\&. No new chromosomes are x-overed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.br
+\fIa_desiredCrossoverRate\fP the desired rate of crossover 
+.br
+\fIa_allowFullCrossOver\fP true: x-over before AND after x-over point, false: only x-over after x-over point 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 201 of file CrossoverOperator\&.java\&.
+.SS "org\&.jgap\&.impl\&.CrossoverOperator\&.CrossoverOperator (final \fBConfiguration\fPa_configuration, final inta_desiredCrossoverRate, final booleana_allowFullCrossOver, final booleana_xoverNewAge) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this \fBCrossoverOperator\fP with the given crossover rate\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.br
+\fIa_desiredCrossoverRate\fP the desired rate of crossover 
+.br
+\fIa_allowFullCrossOver\fP true: x-over before AND after x-over point, false: only x-over after x-over point 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_xoverNewAge\fP true: also x-over chromosomes with age of zero (newly created chromosomes)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 223 of file CrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CrossoverOperator\&.m_crossoverRate, org\&.jgap\&.impl\&.CrossoverOperator\&.m_crossoverRatePercent, org\&.jgap\&.impl\&.CrossoverOperator\&.setAllowFullCrossOver(), org\&.jgap\&.impl\&.CrossoverOperator\&.setCrossoverRateCalc(), and org\&.jgap\&.impl\&.CrossoverOperator\&.setXoverNewAge()\&.
+.SS "org\&.jgap\&.impl\&.CrossoverOperator\&.CrossoverOperator (final \fBConfiguration\fPa_configuration, final doublea_crossoverRatePercentage) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this \fBCrossoverOperator\fP with the given crossover rate\&. No new chromosomes are x-overed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.br
+\fIa_crossoverRatePercentage\fP the desired rate of crossover in percentage of the population 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Knowles 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 (since 2\&.0 without a_configuration) 
+.RE
+.PP
+
+.PP
+Definition at line 252 of file CrossoverOperator\&.java\&.
+.SS "org\&.jgap\&.impl\&.CrossoverOperator\&.CrossoverOperator (final \fBConfiguration\fPa_configuration, final doublea_crossoverRatePercentage, booleana_allowFullCrossOver) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this \fBCrossoverOperator\fP with the given crossover rate\&. No new chromosomes are x-overed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.br
+\fIa_crossoverRatePercentage\fP the desired rate of crossover in percentage of the population 
+.br
+\fIa_allowFullCrossOver\fP true: x-over before AND after x-over point, false: only x-over after x-over point 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.2\&. 
+.RE
+.PP
+
+.PP
+Definition at line 272 of file CrossoverOperator\&.java\&.
+.SS "org\&.jgap\&.impl\&.CrossoverOperator\&.CrossoverOperator (final \fBConfiguration\fPa_configuration, final doublea_crossoverRatePercentage, final booleana_allowFullCrossOver, final booleana_xoverNewAge) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this \fBCrossoverOperator\fP with the given crossover rate\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.br
+\fIa_crossoverRatePercentage\fP the desired rate of crossover in percentage of the population 
+.br
+\fIa_allowFullCrossOver\fP true: x-over before AND after x-over point, false: only x-over after x-over point 
+.br
+\fIa_xoverNewAge\fP true: also x-over chromosomes with age of zero (newly created chromosomes) 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.2\&. 
+.RE
+.PP
+
+.PP
+Definition at line 295 of file CrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CrossoverOperator\&.m_crossoverRate, org\&.jgap\&.impl\&.CrossoverOperator\&.m_crossoverRatePercent, org\&.jgap\&.impl\&.CrossoverOperator\&.setAllowFullCrossOver(), org\&.jgap\&.impl\&.CrossoverOperator\&.setCrossoverRateCalc(), and org\&.jgap\&.impl\&.CrossoverOperator\&.setXoverNewAge()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int org\&.jgap\&.impl\&.CrossoverOperator\&.compareTo (final Objecta_other)\fC [inline]\fP"
+Compares the given object to this one\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the instance against which to compare this instance 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a negative number if this instance is 'less than' the given instance, zero if they are equal to each other, and a positive number if this is 'greater than' the given instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+consider \fBConfiguration\fP 
+.RE
+.PP
+
+.PP
+Definition at line 466 of file CrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CrossoverOperator\&.CrossoverOperator(), org\&.jgap\&.impl\&.CrossoverOperator\&.m_allowFullCrossOver, org\&.jgap\&.impl\&.CrossoverOperator\&.m_crossoverRate, org\&.jgap\&.impl\&.CrossoverOperator\&.m_crossoverRateCalc, and org\&.jgap\&.impl\&.CrossoverOperator\&.m_xoverNewAge\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CrossoverOperatorTest\&.testCompareTo_0()\&.
+.SS "void org\&.jgap\&.impl\&.CrossoverOperator\&.doCrossover (\fBIChromosome\fPfirstMate, \fBIChromosome\fPsecondMate, Lista_candidateChromosomes, \fBRandomGenerator\fPgenerator)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 390 of file CrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.BaseGeneticOperator\&.m_monitorActive\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CrossoverOperator\&.operate()\&.
+.SS "int org\&.jgap\&.impl\&.CrossoverOperator\&.getCrossOverRate ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the crossover rate set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 537 of file CrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CrossoverOperator\&.m_crossoverRate\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CrossoverOperatorTest\&.testConstruct_4(), org\&.jgap\&.impl\&.CrossoverOperatorTest\&.testConstruct_5(), and org\&.jgap\&.impl\&.CrossoverOperatorTest\&.testConstruct_6()\&.
+.SS "double org\&.jgap\&.impl\&.CrossoverOperator\&.getCrossOverRatePercent ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the crossover rate set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 547 of file CrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CrossoverOperator\&.m_crossoverRatePercent\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CrossoverOperatorTest\&.testConstruct_7(), org\&.jgap\&.impl\&.CrossoverOperatorTest\&.testConstruct_8(), and org\&.jgap\&.impl\&.CrossoverOperatorTest\&.testConstruct_9()\&.
+.SS "void org\&.jgap\&.impl\&.CrossoverOperator\&.init ()\fC [inline]\fP, \fC [protected]\fP"
+Initializes certain parameters\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 114 of file CrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CrossoverOperator\&.m_crossoverRate, org\&.jgap\&.impl\&.CrossoverOperator\&.m_crossoverRatePercent, org\&.jgap\&.impl\&.CrossoverOperator\&.setAllowFullCrossOver(), org\&.jgap\&.impl\&.CrossoverOperator\&.setCrossoverRateCalc(), and org\&.jgap\&.impl\&.CrossoverOperator\&.setXoverNewAge()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CrossoverOperator\&.CrossoverOperator()\&.
+.SS "boolean org\&.jgap\&.impl\&.CrossoverOperator\&.isAllowFullCrossOver ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+x-over before and after a randomly chosen x-over point
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 527 of file CrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CrossoverOperator\&.m_allowFullCrossOver\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CrossoverOperatorTest\&.testConstruct_4(), org\&.jgap\&.impl\&.CrossoverOperatorTest\&.testConstruct_5(), org\&.jgap\&.impl\&.CrossoverOperatorTest\&.testConstruct_6(), org\&.jgap\&.impl\&.CrossoverOperatorTest\&.testConstruct_7(), org\&.jgap\&.impl\&.CrossoverOperatorTest\&.testConstruct_8(), and org\&.jgap\&.impl\&.CrossoverOperatorTest\&.testConstruct_9()\&.
+.SS "boolean org\&.jgap\&.impl\&.CrossoverOperator\&.isXoverNewAge ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+a_xoverNewAge true: also x-over chromosomes with age of zero (newly created chromosomes)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 569 of file CrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CrossoverOperator\&.m_xoverNewAge\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CrossoverOperator\&.operate()\&.
+.SS "void org\&.jgap\&.impl\&.CrossoverOperator\&.operate (final \fBPopulation\fPa_population, final Lista_candidateChromosomes)\fC [inline]\fP"
+Does the crossing over\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_population\fP the population of chromosomes from the current evolution prior to exposure to crossing over 
+.br
+\fIa_candidateChromosomes\fP the pool of chromosomes that have been selected for the next evolved population
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.GeneticOperator\fP\&.
+.PP
+Definition at line 323 of file CrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.util\&.ICloneable\&.clone(), org\&.jgap\&.impl\&.CrossoverOperator\&.doCrossover(), org\&.jgap\&.BaseGeneticOperator\&.getConfiguration(), org\&.jgap\&.impl\&.CrossoverOperator\&.isXoverNewAge(), org\&.jgap\&.impl\&.CrossoverOperator\&.m_crossoverRate, org\&.jgap\&.impl\&.CrossoverOperator\&.m_crossoverRateCalc, org\&.jgap\&.impl\&.CrossoverOperator\&.m_crossoverRatePercent, org\&.jgap\&.BaseGeneticOperator\&.m_monitorActive, and org\&.jgap\&.Population\&.size()\&.
+.SS "void org\&.jgap\&.impl\&.CrossoverOperator\&.setAllowFullCrossOver (booleana_allowFullXOver)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_allowFullXOver\fP x-over before and after a randomly chosen point
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 517 of file CrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CrossoverOperator\&.m_allowFullCrossOver\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CrossoverOperator\&.CrossoverOperator(), and org\&.jgap\&.impl\&.CrossoverOperator\&.init()\&.
+.SS "void org\&.jgap\&.impl\&.CrossoverOperator\&.setCrossoverRateCalc (final \fBIUniversalRateCalculator\fPa_crossoverRateCalculator)\fC [inline]\fP, \fC [private]\fP"
+Sets the crossover rate calculator\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_crossoverRateCalculator\fP the new calculator
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Knowles 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 446 of file CrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CrossoverOperator\&.m_crossoverRate, org\&.jgap\&.impl\&.CrossoverOperator\&.m_crossoverRateCalc, and org\&.jgap\&.impl\&.CrossoverOperator\&.m_crossoverRatePercent\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CrossoverOperator\&.CrossoverOperator(), and org\&.jgap\&.impl\&.CrossoverOperator\&.init()\&.
+.SS "void org\&.jgap\&.impl\&.CrossoverOperator\&.setXoverNewAge (booleana_xoverNewAge)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_xoverNewAge\fP true: also x-over chromosomes with age of zero (newly created chromosomes)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 558 of file CrossoverOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CrossoverOperator\&.m_xoverNewAge\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CrossoverOperator\&.CrossoverOperator(), and org\&.jgap\&.impl\&.CrossoverOperator\&.init()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.CrossoverOperator\&.CVS_REVISION = '$Revision: 1\&.48 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 42 of file CrossoverOperator\&.java\&.
+.SS "boolean org\&.jgap\&.impl\&.CrossoverOperator\&.m_allowFullCrossOver\fC [private]\fP"
+true: x-over before and after a randomly chosen x-over point false: only x-over after the chosen point\&. 
+.PP
+Definition at line 66 of file CrossoverOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CrossoverOperator\&.compareTo(), org\&.jgap\&.impl\&.CrossoverOperator\&.isAllowFullCrossOver(), and org\&.jgap\&.impl\&.CrossoverOperator\&.setAllowFullCrossOver()\&.
+.SS "int org\&.jgap\&.impl\&.CrossoverOperator\&.m_crossoverRate\fC [private]\fP"
+The current crossover rate used by this crossover operator (mutual exclusive to m_crossoverRatePercent and m_crossoverRateCalc)\&. 
+.PP
+Definition at line 48 of file CrossoverOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CrossoverOperator\&.compareTo(), org\&.jgap\&.impl\&.CrossoverOperator\&.CrossoverOperator(), org\&.jgap\&.impl\&.CrossoverOperator\&.getCrossOverRate(), org\&.jgap\&.impl\&.CrossoverOperator\&.init(), org\&.jgap\&.impl\&.CrossoverOperator\&.operate(), and org\&.jgap\&.impl\&.CrossoverOperator\&.setCrossoverRateCalc()\&.
+.SS "\fBIUniversalRateCalculator\fP org\&.jgap\&.impl\&.CrossoverOperator\&.m_crossoverRateCalc\fC [private]\fP"
+Calculator for dynamically determining the crossover rate (mutual exclusive to m_crossoverRate and m_crossoverRatePercent) 
+.PP
+Definition at line 60 of file CrossoverOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CrossoverOperator\&.compareTo(), org\&.jgap\&.impl\&.CrossoverOperator\&.operate(), and org\&.jgap\&.impl\&.CrossoverOperator\&.setCrossoverRateCalc()\&.
+.SS "double org\&.jgap\&.impl\&.CrossoverOperator\&.m_crossoverRatePercent\fC [private]\fP"
+Crossover rate in percentage of population size (mutual exclusive to m_crossoverRate and m_crossoverRateCalc)\&. 
+.PP
+Definition at line 54 of file CrossoverOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CrossoverOperator\&.CrossoverOperator(), org\&.jgap\&.impl\&.CrossoverOperator\&.getCrossOverRatePercent(), org\&.jgap\&.impl\&.CrossoverOperator\&.init(), org\&.jgap\&.impl\&.CrossoverOperator\&.operate(), and org\&.jgap\&.impl\&.CrossoverOperator\&.setCrossoverRateCalc()\&.
+.SS "boolean org\&.jgap\&.impl\&.CrossoverOperator\&.m_xoverNewAge\fC [private]\fP"
+true: also x-over chromosomes with age of zero (newly created chromosomes) 
+.PP
+Definition at line 71 of file CrossoverOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CrossoverOperator\&.compareTo(), org\&.jgap\&.impl\&.CrossoverOperator\&.isXoverNewAge(), and org\&.jgap\&.impl\&.CrossoverOperator\&.setXoverNewAge()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

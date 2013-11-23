@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="interfaceorg_1_1jgap_1_1_i_natural_selector" kind="interface" prot="public">
+    <compoundname>org::jgap::INaturalSelector</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1_natural_selector" prot="public" virt="non-virtual">org.jgap.NaturalSelector</derivedcompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="interfaceorg_1_1jgap_1_1_i_natural_selector_1ac66372e84a053edd10b5c4c52ef2d365" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.INaturalSelector.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.13 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/INaturalSelector.java" line="29" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/INaturalSelector.java" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1_i_natural_selector_1a621ca08e2f66866178214093ca4412fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.INaturalSelector.select</definition>
+        <argsstring>(int a_howManyToSelect, Population a_from_population, Population a_to_population)</argsstring>
+        <name>select</name>
+        <param>
+          <type>int</type>
+          <declname>a_howManyToSelect</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_from_population</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_to_population</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Select a given number of Chromosomes from the pool that will move on to the next generation population. This selection should be guided by the fitness values, but fitness should be treated as a statistical probability of survival, not as the sole determining factor. In other words, Chromosomes with higher fitness values should be more likely to be selected than those with lower fitness values, but it should not be guaranteed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_howManyToSelect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of Chromosomes to select </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_from_population</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the population the Chromosomes will be selected from </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_to_population</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the population the Chromosomes will be added to</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 (since 1.0 with different return type) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/INaturalSelector.java" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1_i_natural_selector_1a824307b8be94282a3dfd03aaa6531139" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.INaturalSelector.empty</definition>
+        <argsstring>()</argsstring>
+        <name>empty</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1ad39ffedc3c37177fea2475bf8c70cdfe">empty</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_tournament_selector_1a2d31ee0259fe57f59ccbc9951c4c8eda">empty</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_standard_post_selector_1a8d37e415c80d67021aa81a886bab3948">empty</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a807b0148412ef68d5a5d4b660a515f80">empty</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a22f11caa1cdab23d1e61144bdcd70798">empty</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Empty out the working pool of Chromosomes. This will be invoked after each evolution cycle so that the natural selector can be reused for the next one.</para><para><simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/INaturalSelector.java" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1_i_natural_selector_1a7a6e97dab3548d73a829c9b998df377a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.INaturalSelector.returnsUniqueChromosomes</definition>
+        <argsstring>()</argsstring>
+        <name>returnsUniqueChromosomes</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a893b221b556725744ffa735e54df2eb0">returnsUniqueChromosomes</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_tournament_selector_1a0254281e4830d7521643903e172296ec">returnsUniqueChromosomes</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_standard_post_selector_1a0d6f463c584556eab66424315dd70b3f">returnsUniqueChromosomes</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ac1b16641fb070ed5039193e4f081d809">returnsUniqueChromosomes</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_1a077b4c36589db7f0a9eee47a0c281017">returnsUniqueChromosomes</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true: The implementation of the <ref refid="classorg_1_1jgap_1_1_natural_selector" kindref="compound">NaturalSelector</ref> only returns unique <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>&apos;s (example: BestChromosomesSelector). false: Also doublettes could be returned (example: WeightedRouletteSelector).</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/INaturalSelector.java" line="70" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Natural selectors are responsible for actually selecting a specified number of <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> specimens from a population, using the fitness values as a guide. Usually fitness is treated as a statistic probability of survival, not as the sole determining factor. Therefore, Chromosomes with higher fitness values are more likely to survive than those with lesser fitness values, but it&apos;s not guaranteed.</para><para><simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="14516">
+        <label>org.jgap.NaturalSelector</label>
+        <link refid="classorg_1_1jgap_1_1_natural_selector"/>
+        <childnode refid="14514" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14522">
+        <label>org.jgap.impl.WeightedRouletteSelector</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector"/>
+        <childnode refid="14518" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14515">
+        <label>Serializable</label>
+      </node>
+      <node id="14521">
+        <label>org.jgap.impl.TournamentSelector</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_tournament_selector"/>
+        <childnode refid="14518" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14519">
+        <label>org.jgap.impl.BestChromosomesSelector</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector"/>
+        <childnode refid="14518" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14514">
+        <label>org.jgap.INaturalSelector</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_natural_selector"/>
+        <childnode refid="14515" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14518">
+        <label>org.jgap.NaturalSelectorExt</label>
+        <link refid="classorg_1_1jgap_1_1_natural_selector_ext"/>
+        <childnode refid="14516" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14520">
+        <label>org.jgap.impl.ThresholdSelector</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector"/>
+        <childnode refid="14518" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14517">
+        <label>org.jgap.impl.StandardPostSelector</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_standard_post_selector"/>
+        <childnode refid="14516" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="14524">
+        <label>Serializable</label>
+      </node>
+      <node id="14523">
+        <label>org.jgap.INaturalSelector</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_natural_selector"/>
+        <childnode refid="14524" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/INaturalSelector.java" line="27" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/INaturalSelector.java" bodystart="26" bodyend="71"/>
+    <listofallmembers>
+      <member refid="interfaceorg_1_1jgap_1_1_i_natural_selector_1ac66372e84a053edd10b5c4c52ef2d365" prot="public" virt="non-virtual"><scope>org::jgap::INaturalSelector</scope><name>CVS_REVISION</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_natural_selector_1a824307b8be94282a3dfd03aaa6531139" prot="public" virt="non-virtual"><scope>org::jgap::INaturalSelector</scope><name>empty</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_natural_selector_1a7a6e97dab3548d73a829c9b998df377a" prot="public" virt="non-virtual"><scope>org::jgap::INaturalSelector</scope><name>returnsUniqueChromosomes</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_natural_selector_1a621ca08e2f66866178214093ca4412fd" prot="public" virt="non-virtual"><scope>org::jgap::INaturalSelector</scope><name>select</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

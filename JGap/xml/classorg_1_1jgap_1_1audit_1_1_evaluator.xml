@@ -1,0 +1,904 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1audit_1_1_evaluator" kind="class" prot="public">
+    <compoundname>org::jgap::audit::Evaluator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <innerclass refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1_1_chromosome_data" prot="public">org::jgap::audit::Evaluator::ChromosomeData</innerclass>
+    <innerclass refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1_1_genotype_data" prot="public">org::jgap::audit::Evaluator::GenotypeData</innerclass>
+    <innerclass refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1_1_genotype_data_avg" prot="public">org::jgap::audit::Evaluator::GenotypeDataAvg</innerclass>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1a7a2bf7a73556818006b153c300212453" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.audit.Evaluator.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.12 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000028"><xreftitle>Todo</xreftitle><xrefdescription><para>implement: overall score calculation (out of best/avg. fitness value etc.) </para></xrefdescription></xrefsect>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="29" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1ab3402fedd8070cb0c0b8c693148b1c01" prot="private" static="no" mutable="no">
+        <type>Map&lt; Object, <ref refid="classorg_1_1jgap_1_1audit_1_1_keyed_values2_d" kindref="compound">KeyedValues2D</ref> &gt;</type>
+        <definition>Map&lt;Object, KeyedValues2D&gt; org.jgap.audit.Evaluator.m_permutationData</definition>
+        <argsstring></argsstring>
+        <name>m_permutationData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Each data has its own data container </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="34" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a81edfe668ff07b19b1e5bd8d034d4056" compoundref="_evaluator_8java" startline="58" endline="69">org.jgap.audit.Evaluator.Evaluator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1a841cc8c34e1870b35fe0e38715841e15" prot="private" static="no" mutable="no">
+        <type>Map&lt; Integer, Map &gt;</type>
+        <definition>Map&lt;Integer, Map&gt; org.jgap.audit.Evaluator.m_permutationRuns</definition>
+        <argsstring></argsstring>
+        <name>m_permutationRuns</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stores the run-numbers (indexes) for all permutations submitted </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="39" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a81edfe668ff07b19b1e5bd8d034d4056" compoundref="_evaluator_8java" startline="58" endline="69">org.jgap.audit.Evaluator.Evaluator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1a7e7c140d026509d201e2054509293d88" prot="private" static="no" mutable="no">
+        <type><ref refid="classorg_1_1jgap_1_1audit_1_1_keyed_values2_d" kindref="compound">KeyedValues2D</ref></type>
+        <definition>KeyedValues2D org.jgap.audit.Evaluator.m_data</definition>
+        <argsstring></argsstring>
+        <name>m_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For processinf without permutation </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="44" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a81edfe668ff07b19b1e5bd8d034d4056" compoundref="_evaluator_8java" startline="58" endline="69">org.jgap.audit.Evaluator.Evaluator</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1afd40b95d423944b71ec75f14d61baf39" compoundref="_evaluator_8java" startline="134" endline="136">org.jgap.audit.Evaluator.getData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1aec14a492e20dcda8a92c18a8c76c10f3" prot="private" static="no" mutable="no">
+        <type><ref refid="classorg_1_1jgap_1_1audit_1_1_permuting_configuration" kindref="compound">PermutingConfiguration</ref></type>
+        <definition>PermutingConfiguration org.jgap.audit.Evaluator.m_permConf</definition>
+        <argsstring></argsstring>
+        <name>m_permConf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="46" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="46" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a81edfe668ff07b19b1e5bd8d034d4056" compoundref="_evaluator_8java" startline="58" endline="69">org.jgap.audit.Evaluator.Evaluator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1ae43c46df70ad2023f57b30b9cf039000" prot="private" static="no" mutable="no">
+        <type>Map&lt; String, <ref refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1_1_genotype_data" kindref="compound">GenotypeData</ref> &gt;</type>
+        <definition>Map&lt;String, GenotypeData&gt; org.jgap.audit.Evaluator.m_genotypeData</definition>
+        <argsstring></argsstring>
+        <name>m_genotypeData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> data per permutation per run </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="51" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="51" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a81edfe668ff07b19b1e5bd8d034d4056" compoundref="_evaluator_8java" startline="58" endline="69">org.jgap.audit.Evaluator.Evaluator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1ac0acc7588da13daadeb981c1acc755ec" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1_1_genotype_data_avg" kindref="compound">GenotypeDataAvg</ref> &gt;</type>
+        <definition>List&lt;GenotypeDataAvg&gt; org.jgap.audit.Evaluator.m_genotypeDataAvg</definition>
+        <argsstring></argsstring>
+        <name>m_genotypeDataAvg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> data per permutation (averaged over all runs) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="56" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="56" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a81edfe668ff07b19b1e5bd8d034d4056" compoundref="_evaluator_8java" startline="58" endline="69">org.jgap.audit.Evaluator.Evaluator</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a4860d3c1dadcc98c8889552e62358b67" compoundref="_evaluator_8java" startline="477" endline="479">org.jgap.audit.Evaluator.getGenotypeAverageData</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1a81edfe668ff07b19b1e5bd8d034d4056" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.audit.Evaluator.Evaluator</definition>
+        <argsstring>(final PermutingConfiguration a_conf)</argsstring>
+        <name>Evaluator</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1audit_1_1_permuting_configuration" kindref="compound">PermutingConfiguration</ref></type>
+          <declname>a_conf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="58" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="58" bodyend="69"/>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a7e7c140d026509d201e2054509293d88" compoundref="_evaluator_8java" startline="44">org.jgap.audit.Evaluator.m_data</references>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1ae43c46df70ad2023f57b30b9cf039000" compoundref="_evaluator_8java" startline="51">org.jgap.audit.Evaluator.m_genotypeData</references>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1ac0acc7588da13daadeb981c1acc755ec" compoundref="_evaluator_8java" startline="56">org.jgap.audit.Evaluator.m_genotypeDataAvg</references>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1aec14a492e20dcda8a92c18a8c76c10f3" compoundref="_evaluator_8java" startline="46">org.jgap.audit.Evaluator.m_permConf</references>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1ab3402fedd8070cb0c0b8c693148b1c01" compoundref="_evaluator_8java" startline="34">org.jgap.audit.Evaluator.m_permutationData</references>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a841cc8c34e1870b35fe0e38715841e15" compoundref="_evaluator_8java" startline="39">org.jgap.audit.Evaluator.m_permutationRuns</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1ad8cafe98e1b94dff9a556fdd455b49d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.audit.Evaluator.hasNext</definition>
+        <argsstring>()</argsstring>
+        <name>hasNext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="71" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="71" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1a2576280461955eb41abffc0e56491608" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+        <definition>Configuration org.jgap.audit.Evaluator.next</definition>
+        <argsstring>()</argsstring>
+        <name>next</name>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="75" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1a06ec484afd450635db73cf803ee4334c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.audit.Evaluator.setValue</definition>
+        <argsstring>(double a_value, Comparable a_rowKey, Comparable a_columnKey)</argsstring>
+        <name>setValue</name>
+        <param>
+          <type>double</type>
+          <declname>a_value</declname>
+        </param>
+        <param>
+          <type>Comparable</type>
+          <declname>a_rowKey</declname>
+        </param>
+        <param>
+          <type>Comparable</type>
+          <declname>a_columnKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="80" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="80" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1a89b956f95eb37137ca2b5f12a1d5402d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Number</type>
+        <definition>Number org.jgap.audit.Evaluator.getValue</definition>
+        <argsstring>(Comparable rowKey, Comparable columnKey)</argsstring>
+        <name>getValue</name>
+        <param>
+          <type>Comparable</type>
+          <declname>rowKey</declname>
+        </param>
+        <param>
+          <type>Comparable</type>
+          <declname>columnKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="86" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="86" bodyend="88"/>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_test_1a6acce1390aa91757798854ef00bff366" compoundref="_evaluator_test_8java" startline="351" endline="362">org.jgap.audit.EvaluatorTest.testSetValue_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_test_1a0399ea0d11b65c4fcf855d2906863f0f" compoundref="_evaluator_test_8java" startline="370" endline="382">org.jgap.audit.EvaluatorTest.testSetValue_1</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_test_1a939a33a98920389177c75cf9f11936be" compoundref="_evaluator_test_8java" startline="390" endline="405">org.jgap.audit.EvaluatorTest.testSetValue_2</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_test_1afa6ce4ba8a9a9e13a9262689ebf62076" compoundref="_evaluator_test_8java" startline="414" endline="427">org.jgap.audit.EvaluatorTest.testSetValue_3</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1ab0b472080690febf2bbf4d537f20cb72" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.audit.Evaluator.setValue</definition>
+        <argsstring>(int a_permutation, int a_run, double a_value, Comparable a_rowKey, Comparable a_columnKey)</argsstring>
+        <name>setValue</name>
+        <param>
+          <type>int</type>
+          <declname>a_permutation</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_run</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_value</declname>
+        </param>
+        <param>
+          <type>Comparable</type>
+          <declname>a_rowKey</declname>
+        </param>
+        <param>
+          <type>Comparable</type>
+          <declname>a_columnKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets a specific value.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_permutation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_run</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_rowKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Comparable </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_columnKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Comparable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="102" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="102" bodyend="114"/>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a1ab07be10354b09f0dbd5d22e8eed926" compoundref="_evaluator_8java" startline="116" endline="123">org.jgap.audit.Evaluator.addRunNumber</references>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a8fe0028b3b402c3a4844d65f584a846a" compoundref="_evaluator_8java" startline="138" endline="140">org.jgap.audit.Evaluator.createKey</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1a4e5098189bebb031f0a49eed915ed2e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Number</type>
+        <definition>Number org.jgap.audit.Evaluator.getValue</definition>
+        <argsstring>(int a_permutation, int a_run, Comparable rowKey, Comparable columnKey)</argsstring>
+        <name>getValue</name>
+        <param>
+          <type>int</type>
+          <declname>a_permutation</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_run</declname>
+        </param>
+        <param>
+          <type>Comparable</type>
+          <declname>rowKey</declname>
+        </param>
+        <param>
+          <type>Comparable</type>
+          <declname>columnKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="125" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="125" bodyend="132"/>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a8fe0028b3b402c3a4844d65f584a846a" compoundref="_evaluator_8java" startline="138" endline="140">org.jgap.audit.Evaluator.createKey</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1afd40b95d423944b71ec75f14d61baf39" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1audit_1_1_keyed_values2_d" kindref="compound">KeyedValues2D</ref></type>
+        <definition>KeyedValues2D org.jgap.audit.Evaluator.getData</definition>
+        <argsstring>()</argsstring>
+        <name>getData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="134" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="134" bodyend="136"/>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a7e7c140d026509d201e2054509293d88" compoundref="_evaluator_8java" startline="44">org.jgap.audit.Evaluator.m_data</references>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_test_1aaa855180e9082b81ce120f96b0d463f8" compoundref="_evaluator_test_8java" startline="302" endline="309">org.jgap.audit.EvaluatorTest.testConstruct_1</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1a383bb97616629ca05ef5c3164dd8de0a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1audit_1_1_keyed_values2_d" kindref="compound">KeyedValues2D</ref></type>
+        <definition>KeyedValues2D org.jgap.audit.Evaluator.calcAvgFitness</definition>
+        <argsstring>(int a_permutation)</argsstring>
+        <name>calcAvgFitness</name>
+        <param>
+          <type>int</type>
+          <declname>a_permutation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the average fitness value curve for a given permutation. If permutation -1 is given, a composition of all permutations available is created. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_permutation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>-1 to use all permutations </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>DefaultKeyedValues2D list of fitness values, one for each individual in the generation</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="153" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="153" bodyend="171"/>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a8f86ce5030064340d82ec8a96b2b6e21" compoundref="_evaluator_8java" startline="173" endline="221">org.jgap.audit.Evaluator.calcAvgFitnessHelper</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1a68331d6b5db79708b87b72d5077a0e5e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1audit_1_1_keyed_values2_d" kindref="compound">KeyedValues2D</ref></type>
+        <definition>KeyedValues2D org.jgap.audit.Evaluator.calcAvgFitnessImpr</definition>
+        <argsstring>(int a_permutation)</argsstring>
+        <name>calcAvgFitnessImpr</name>
+        <param>
+          <type>int</type>
+          <declname>a_permutation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a list of lists (i.e. a matrix) to use for output as a table <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DefaultKeyedValues2D </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>List</para></simplesect>
+<xrefsect id="todo_1_todo000029"><xreftitle>Todo</xreftitle><xrefdescription><para>implement </para></xrefdescription></xrefsect>Calculates average fitness value improvement per generation.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_permutation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>DefaultKeyedValues2D</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000030"><xreftitle>Todo</xreftitle><xrefdescription><para>implement </para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000031"><xreftitle>Todo</xreftitle><xrefdescription><para>is this method used resp. contained in calcPerformance? </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="242" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="242" bodyend="267"/>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a8fe0028b3b402c3a4844d65f584a846a" compoundref="_evaluator_8java" startline="138" endline="140">org.jgap.audit.Evaluator.createKey</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1aa7d5310dff0a906381202f502f24565c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.audit.Evaluator.getNumberOfRuns</definition>
+        <argsstring>(int a_permutation)</argsstring>
+        <name>getNumberOfRuns</name>
+        <param>
+          <type>int</type>
+          <declname>a_permutation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_permutation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the permutation to determine the number of runs for </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the number of runs for the given permutation </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="274" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="274" bodyend="282"/>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a586c5d8e9e31c16f2187c09f3f320727" compoundref="_evaluator_8java" startline="351" endline="424">org.jgap.audit.Evaluator.calcPerformance</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_test_1a352cdb796c96da72b6bb09bcb3bf75f3" compoundref="_evaluator_test_8java" startline="153" endline="175">org.jgap.audit.EvaluatorTest.testGetNumberOfRuns_0</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1a5279539edcf3b0cba17ca726072194f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.audit.Evaluator.storeGenotype</definition>
+        <argsstring>(int a_permutation, int a_run, Genotype a_genotype)</argsstring>
+        <name>storeGenotype</name>
+        <param>
+          <type>int</type>
+          <declname>a_permutation</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_run</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref></type>
+          <declname>a_genotype</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stores information contained in the given genotype. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_permutation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_run</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the run proceeded for the given genotype </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_genotype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the genotype holding the population of chromosomes</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="293" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="293" bodyend="295"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1a8241b2d89d32b283abe5c9b42974d64d" compoundref="_genotype_8java" startline="167" endline="169">org.jgap.Genotype.getPopulation</references>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a48f84bb9929cec12795c98bf1185ac68" compoundref="_evaluator_8java" startline="307" endline="334">org.jgap.audit.Evaluator.storePopulation</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1a48f84bb9929cec12795c98bf1185ac68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.audit.Evaluator.storePopulation</definition>
+        <argsstring>(int a_permutation, int a_run, Population a_pop)</argsstring>
+        <name>storePopulation</name>
+        <param>
+          <type>int</type>
+          <declname>a_permutation</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_run</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_pop</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stores information contained in the given genotype.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_permutation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_run</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the run proceeded for the given genotype </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_pop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the population holding the relevant chromosomes</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.5 (originally named storeGenotype) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000032"><xreftitle>Todo</xreftitle><xrefdescription><para>implement </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="307" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="307" bodyend="334"/>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a1ab07be10354b09f0dbd5d22e8eed926" compoundref="_evaluator_8java" startline="116" endline="123">org.jgap.audit.Evaluator.addRunNumber</references>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a5279539edcf3b0cba17ca726072194f1" compoundref="_evaluator_8java" startline="293" endline="295">org.jgap.audit.Evaluator.storeGenotype</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1af00e41cf4dfd12a799a1c4f3e2f7f1a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1_1_genotype_data" kindref="compound">GenotypeData</ref></type>
+        <definition>GenotypeData org.jgap.audit.Evaluator.retrieveGenotype</definition>
+        <argsstring>(int a_permutation, int a_run)</argsstring>
+        <name>retrieveGenotype</name>
+        <param>
+          <type>int</type>
+          <declname>a_permutation</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_run</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="336" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="336" bodyend="338"/>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a586c5d8e9e31c16f2187c09f3f320727" compoundref="_evaluator_8java" startline="351" endline="424">org.jgap.audit.Evaluator.calcPerformance</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1a586c5d8e9e31c16f2187c09f3f320727" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1_1_genotype_data_avg" kindref="compound">GenotypeDataAvg</ref></type>
+        <definition>GenotypeDataAvg org.jgap.audit.Evaluator.calcPerformance</definition>
+        <argsstring>(int a_permutation)</argsstring>
+        <name>calcPerformance</name>
+        <param>
+          <type>int</type>
+          <declname>a_permutation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates performance metrics for a given permutation and run stored before with storeGenotype, like: average fitness, maximum fitness... <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_permutation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the permutation to compute the performance metrics for </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>computed statistical data</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="351" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="351" bodyend="424"/>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1aa7d5310dff0a906381202f502f24565c" compoundref="_evaluator_8java" startline="274" endline="282">org.jgap.audit.Evaluator.getNumberOfRuns</references>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1af00e41cf4dfd12a799a1c4f3e2f7f1a9" compoundref="_evaluator_8java" startline="336" endline="338">org.jgap.audit.Evaluator.retrieveGenotype</references>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1_1_genotype_data_1aefc2b641dde439986c8f35147100c95c" compoundref="_evaluator_8java" startline="460">org.jgap.audit.Evaluator.GenotypeData.size</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1a4860d3c1dadcc98c8889552e62358b67" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1_1_genotype_data_avg" kindref="compound">GenotypeDataAvg</ref> &gt;</type>
+        <definition>List&lt;GenotypeDataAvg&gt; org.jgap.audit.Evaluator.getGenotypeAverageData</definition>
+        <argsstring>()</argsstring>
+        <name>getGenotypeAverageData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Averaged genotype data</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.5 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="477" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="477" bodyend="479"/>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1ac0acc7588da13daadeb981c1acc755ec" compoundref="_evaluator_8java" startline="56">org.jgap.audit.Evaluator.m_genotypeDataAvg</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1a1ab07be10354b09f0dbd5d22e8eed926" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.audit.Evaluator.addRunNumber</definition>
+        <argsstring>(int a_permutation, int a_run)</argsstring>
+        <name>addRunNumber</name>
+        <param>
+          <type>int</type>
+          <declname>a_permutation</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_run</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="116" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="116" bodyend="123"/>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1ab0b472080690febf2bbf4d537f20cb72" compoundref="_evaluator_8java" startline="102" endline="114">org.jgap.audit.Evaluator.setValue</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a48f84bb9929cec12795c98bf1185ac68" compoundref="_evaluator_8java" startline="307" endline="334">org.jgap.audit.Evaluator.storePopulation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1a8fe0028b3b402c3a4844d65f584a846a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.audit.Evaluator.createKey</definition>
+        <argsstring>(int a_permutation, int a_run)</argsstring>
+        <name>createKey</name>
+        <param>
+          <type>int</type>
+          <declname>a_permutation</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_run</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="138" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="138" bodyend="140"/>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a8f86ce5030064340d82ec8a96b2b6e21" compoundref="_evaluator_8java" startline="173" endline="221">org.jgap.audit.Evaluator.calcAvgFitnessHelper</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a68331d6b5db79708b87b72d5077a0e5e" compoundref="_evaluator_8java" startline="242" endline="267">org.jgap.audit.Evaluator.calcAvgFitnessImpr</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a4e5098189bebb031f0a49eed915ed2e4" compoundref="_evaluator_8java" startline="125" endline="132">org.jgap.audit.Evaluator.getValue</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1ab0b472080690febf2bbf4d537f20cb72" compoundref="_evaluator_8java" startline="102" endline="114">org.jgap.audit.Evaluator.setValue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1audit_1_1_evaluator_1a8f86ce5030064340d82ec8a96b2b6e21" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.audit.Evaluator.calcAvgFitnessHelper</definition>
+        <argsstring>(int a_permutation, final KeyedValues2D result)</argsstring>
+        <name>calcAvgFitnessHelper</name>
+        <param>
+          <type>int</type>
+          <declname>a_permutation</declname>
+        </param>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1audit_1_1_keyed_values2_d" kindref="compound">KeyedValues2D</ref></type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="173" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="173" bodyend="221"/>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a8fe0028b3b402c3a4844d65f584a846a" compoundref="_evaluator_8java" startline="138" endline="140">org.jgap.audit.Evaluator.createKey</references>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_keyed_values2_d_1a6ff2b29ee889c000dd78aa641dd6a26d" compoundref="_keyed_values2_d_8java" startline="152" endline="154">org.jgap.audit.KeyedValues2D.getColumnKey</references>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_keyed_values2_d_1a3f28a331e3fbe0f8b345d7f1da62b2e2" compoundref="_keyed_values2_d_8java" startline="113" endline="115">org.jgap.audit.KeyedValues2D.getRowKey</references>
+        <references refid="classorg_1_1jgap_1_1audit_1_1_keyed_values2_d_1a3571b9adfab009b7fb23f994adc02702" compoundref="_keyed_values2_d_8java" startline="95" endline="103">org.jgap.audit.KeyedValues2D.getValue</references>
+        <referencedby refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a383bb97616629ca05ef5c3164dd8de0a" compoundref="_evaluator_8java" startline="153" endline="171">org.jgap.audit.Evaluator.calcAvgFitness</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Gathers statistical data and returns them on request.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.2 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="12330">
+        <label>Serializable</label>
+      </node>
+      <node id="12329">
+        <label>org.jgap.audit.Evaluator</label>
+        <link refid="classorg_1_1jgap_1_1audit_1_1_evaluator"/>
+        <childnode refid="12330" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12347">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="12336">
+        <label>List</label>
+      </node>
+      <node id="12351">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="12332" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12334" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12348">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="12332" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12332">
+        <label>Serializable</label>
+      </node>
+      <node id="12341">
+        <label>Comparable</label>
+      </node>
+      <node id="12333">
+        <label>org.jgap.audit.KeyedValues2D</label>
+        <link refid="classorg_1_1jgap_1_1audit_1_1_keyed_values2_d"/>
+        <childnode refid="12334" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12332" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12336" relation="usage">
+          <edgelabel>m_columnKeys</edgelabel>
+          <edgelabel>m_rowKeys</edgelabel>
+          <edgelabel>m_rows</edgelabel>
+        </childnode>
+      </node>
+      <node id="12338">
+        <label>org.jgap.audit.PermutingConfiguration</label>
+        <link refid="classorg_1_1jgap_1_1audit_1_1_permuting_configuration"/>
+        <childnode refid="12339" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12339" relation="usage">
+          <edgelabel>m_configuration</edgelabel>
+        </childnode>
+        <childnode refid="12336" relation="usage">
+          <edgelabel>m_randomGeneratorSlots</edgelabel>
+          <edgelabel>m_naturalSelectorSlots</edgelabel>
+          <edgelabel>m_fitnessFunctionSlots</edgelabel>
+          <edgelabel>m_geneticOperatorSlots</edgelabel>
+        </childnode>
+      </node>
+      <node id="12337">
+        <label>List&lt; org.jgap.audit.Evaluator.GenotypeDataAvg &gt;</label>
+      </node>
+      <node id="12334">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="12335" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12345">
+        <label>org.jgap.FitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_fitness_evaluator"/>
+        <childnode refid="12332" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12349">
+        <label>org.jgap.BulkFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_bulk_fitness_function"/>
+        <childnode refid="12332" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12334" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12335">
+        <label>Cloneable</label>
+      </node>
+      <node id="12343">
+        <label>org.jgap.IJGAPFactory</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_j_g_a_p_factory"/>
+        <childnode refid="12332" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12350">
+        <label>org.jgap.Configuration.ConfigurationConfigurable</label>
+        <link refid="classorg_1_1jgap_1_1_configuration_1_1_configuration_configurable"/>
+        <childnode refid="12332" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12342">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="12334" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12332" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12341" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12346">
+        <label>org.jgap.IChromosome</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome"/>
+        <childnode refid="12341" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12334" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12332" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12347" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12331">
+        <label>org.jgap.audit.Evaluator</label>
+        <link refid="classorg_1_1jgap_1_1audit_1_1_evaluator"/>
+        <childnode refid="12332" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12333" relation="usage">
+          <edgelabel>m_data</edgelabel>
+        </childnode>
+        <childnode refid="12337" relation="usage">
+          <edgelabel>m_genotypeDataAvg</edgelabel>
+        </childnode>
+        <childnode refid="12338" relation="usage">
+          <edgelabel>m_permConf</edgelabel>
+        </childnode>
+      </node>
+      <node id="12339">
+        <label>org.jgap.Configuration</label>
+        <link refid="classorg_1_1jgap_1_1_configuration"/>
+        <childnode refid="12340" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12332" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12334" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12341" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12342" relation="usage">
+          <edgelabel>m_breeder</edgelabel>
+        </childnode>
+        <childnode refid="12343" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="12344" relation="usage">
+          <edgelabel>m_chromosomePool</edgelabel>
+        </childnode>
+        <childnode refid="12345" relation="usage">
+          <edgelabel>m_fitnessEvaluator</edgelabel>
+        </childnode>
+        <childnode refid="12346" relation="usage">
+          <edgelabel>m_sampleChromosome</edgelabel>
+        </childnode>
+        <childnode refid="12348" relation="usage">
+          <edgelabel>m_randomGenerator</edgelabel>
+        </childnode>
+        <childnode refid="12349" relation="usage">
+          <edgelabel>m_bulkObjectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="12350" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="12351" relation="usage">
+          <edgelabel>m_objectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="12336" relation="usage">
+          <edgelabel>m_geneticOperators</edgelabel>
+        </childnode>
+      </node>
+      <node id="12344">
+        <label>org.jgap.IChromosomePool</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool"/>
+      </node>
+      <node id="12340">
+        <label>Configurable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" line="23" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/audit/Evaluator.java" bodystart="22" bodyend="480"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a1ab07be10354b09f0dbd5d22e8eed926" prot="protected" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>addRunNumber</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a383bb97616629ca05ef5c3164dd8de0a" prot="public" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>calcAvgFitness</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a8f86ce5030064340d82ec8a96b2b6e21" prot="protected" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>calcAvgFitnessHelper</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a68331d6b5db79708b87b72d5077a0e5e" prot="public" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>calcAvgFitnessImpr</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a586c5d8e9e31c16f2187c09f3f320727" prot="public" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>calcPerformance</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a8fe0028b3b402c3a4844d65f584a846a" prot="protected" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>createKey</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a7a2bf7a73556818006b153c300212453" prot="private" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a81edfe668ff07b19b1e5bd8d034d4056" prot="public" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>Evaluator</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1afd40b95d423944b71ec75f14d61baf39" prot="public" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>getData</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a4860d3c1dadcc98c8889552e62358b67" prot="public" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>getGenotypeAverageData</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1aa7d5310dff0a906381202f502f24565c" prot="public" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>getNumberOfRuns</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a89b956f95eb37137ca2b5f12a1d5402d" prot="public" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>getValue</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a4e5098189bebb031f0a49eed915ed2e4" prot="public" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>getValue</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1ad8cafe98e1b94dff9a556fdd455b49d2" prot="public" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>hasNext</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a7e7c140d026509d201e2054509293d88" prot="private" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>m_data</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1ae43c46df70ad2023f57b30b9cf039000" prot="private" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>m_genotypeData</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1ac0acc7588da13daadeb981c1acc755ec" prot="private" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>m_genotypeDataAvg</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1aec14a492e20dcda8a92c18a8c76c10f3" prot="private" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>m_permConf</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1ab3402fedd8070cb0c0b8c693148b1c01" prot="private" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>m_permutationData</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a841cc8c34e1870b35fe0e38715841e15" prot="private" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>m_permutationRuns</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a2576280461955eb41abffc0e56491608" prot="public" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>next</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1af00e41cf4dfd12a799a1c4f3e2f7f1a9" prot="public" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>retrieveGenotype</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a06ec484afd450635db73cf803ee4334c" prot="public" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>setValue</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1ab0b472080690febf2bbf4d537f20cb72" prot="public" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>setValue</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a5279539edcf3b0cba17ca726072194f1" prot="public" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>storeGenotype</name></member>
+      <member refid="classorg_1_1jgap_1_1audit_1_1_evaluator_1a48f84bb9929cec12795c98bf1185ac68" prot="public" virt="non-virtual"><scope>org::jgap::audit::Evaluator</scope><name>storePopulation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

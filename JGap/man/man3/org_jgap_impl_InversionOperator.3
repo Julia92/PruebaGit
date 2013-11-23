@@ -1,0 +1,173 @@
+.TH "org.jgap.impl.InversionOperator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.InversionOperator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.BaseGeneticOperator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBInversionOperator\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBInversionOperator\fP (\fBConfiguration\fP a_config)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBoperate\fP (final \fBPopulation\fP a_population, final List a_candidateChromosomes)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (final Object a_other)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.11 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The inversion operator randomly selects one chromosomes from the population and inverses it by randomly picking a splitting locus on which to swap the first part with the last part of the chromosome\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file InversionOperator\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.InversionOperator\&.InversionOperator () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Default constructor\&.
+.PP
+Attention: The configuration used is the one set with the static method Genotype\&.setConfiguration\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 38 of file InversionOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.InversionOperator\&.compareTo()\&.
+.SS "org\&.jgap\&.impl\&.InversionOperator\&.InversionOperator (\fBConfiguration\fPa_config) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new instance of this operator\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 53 of file InversionOperator\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int org\&.jgap\&.impl\&.InversionOperator\&.compareTo (final Objecta_other)\fC [inline]\fP"
+Compares the given \fBGeneticOperator\fP to this \fBGeneticOperator\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the instance against which to compare this instance 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a negative number if this instance is 'less than' the given instance, zero if they are equal to each other, and a positive number if this is 'greater than' the given instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 124 of file InversionOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.InversionOperator\&.InversionOperator()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.InversionOperatorTest\&.testCompareTo_0()\&.
+.SS "void org\&.jgap\&.impl\&.InversionOperator\&.operate (final \fBPopulation\fPa_population, final Lista_candidateChromosomes)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_population\fP the population to operate on 
+.br
+\fIa_candidateChromosomes\fP resulting chromosomes
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.GeneticOperator\fP\&.
+.PP
+Definition at line 65 of file InversionOperator\&.java\&.
+.PP
+References org\&.jgap\&.util\&.ICloneable\&.clone(), org\&.jgap\&.BaseGeneticOperator\&.getConfiguration(), org\&.jgap\&.BaseGeneticOperator\&.m_monitorActive, and org\&.jgap\&.Population\&.size()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.InversionOperator\&.CVS_REVISION = '$Revision: 1\&.11 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file InversionOperator\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

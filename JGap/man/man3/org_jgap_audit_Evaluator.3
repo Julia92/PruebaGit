@@ -1,0 +1,504 @@
+.TH "org.jgap.audit.Evaluator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.audit.Evaluator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBChromosomeData\fP"
+.br
+.ti -1c
+.RI "class \fBGenotypeData\fP"
+.br
+.ti -1c
+.RI "class \fBGenotypeDataAvg\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEvaluator\fP (final \fBPermutingConfiguration\fP a_conf)"
+.br
+.ti -1c
+.RI "boolean \fBhasNext\fP ()"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBnext\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBsetValue\fP (double a_value, Comparable a_rowKey, Comparable a_columnKey)"
+.br
+.ti -1c
+.RI "Number \fBgetValue\fP (Comparable rowKey, Comparable columnKey)"
+.br
+.ti -1c
+.RI "void \fBsetValue\fP (int a_permutation, int a_run, double a_value, Comparable a_rowKey, Comparable a_columnKey)"
+.br
+.ti -1c
+.RI "Number \fBgetValue\fP (int a_permutation, int a_run, Comparable rowKey, Comparable columnKey)"
+.br
+.ti -1c
+.RI "\fBKeyedValues2D\fP \fBgetData\fP ()"
+.br
+.ti -1c
+.RI "\fBKeyedValues2D\fP \fBcalcAvgFitness\fP (int a_permutation)"
+.br
+.ti -1c
+.RI "\fBKeyedValues2D\fP \fBcalcAvgFitnessImpr\fP (int a_permutation)"
+.br
+.ti -1c
+.RI "int \fBgetNumberOfRuns\fP (int a_permutation)"
+.br
+.ti -1c
+.RI "void \fBstoreGenotype\fP (int a_permutation, int a_run, \fBGenotype\fP a_genotype)"
+.br
+.ti -1c
+.RI "void \fBstorePopulation\fP (int a_permutation, int a_run, \fBPopulation\fP a_pop)"
+.br
+.ti -1c
+.RI "\fBGenotypeData\fP \fBretrieveGenotype\fP (int a_permutation, int a_run)"
+.br
+.ti -1c
+.RI "\fBGenotypeDataAvg\fP \fBcalcPerformance\fP (int a_permutation)"
+.br
+.ti -1c
+.RI "List< \fBGenotypeDataAvg\fP > \fBgetGenotypeAverageData\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBaddRunNumber\fP (int a_permutation, int a_run)"
+.br
+.ti -1c
+.RI "Object \fBcreateKey\fP (int a_permutation, int a_run)"
+.br
+.ti -1c
+.RI "void \fBcalcAvgFitnessHelper\fP (int a_permutation, final \fBKeyedValues2D\fP result)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Map< Object, \fBKeyedValues2D\fP > \fBm_permutationData\fP"
+.br
+.ti -1c
+.RI "Map< Integer, Map > \fBm_permutationRuns\fP"
+.br
+.ti -1c
+.RI "\fBKeyedValues2D\fP \fBm_data\fP"
+.br
+.ti -1c
+.RI "\fBPermutingConfiguration\fP \fBm_permConf\fP"
+.br
+.ti -1c
+.RI "Map< String, \fBGenotypeData\fP > \fBm_genotypeData\fP"
+.br
+.ti -1c
+.RI "List< \fBGenotypeDataAvg\fP > \fBm_genotypeDataAvg\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.12 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Gathers statistical data and returns them on request\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file Evaluator\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.audit\&.Evaluator\&.Evaluator (final \fBPermutingConfiguration\fPa_conf)\fC [inline]\fP"
+
+.PP
+Definition at line 58 of file Evaluator\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.Evaluator\&.m_data, org\&.jgap\&.audit\&.Evaluator\&.m_genotypeData, org\&.jgap\&.audit\&.Evaluator\&.m_genotypeDataAvg, org\&.jgap\&.audit\&.Evaluator\&.m_permConf, org\&.jgap\&.audit\&.Evaluator\&.m_permutationData, and org\&.jgap\&.audit\&.Evaluator\&.m_permutationRuns\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.audit\&.Evaluator\&.addRunNumber (inta_permutation, inta_run)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 116 of file Evaluator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.Evaluator\&.setValue(), and org\&.jgap\&.audit\&.Evaluator\&.storePopulation()\&.
+.SS "\fBKeyedValues2D\fP org\&.jgap\&.audit\&.Evaluator\&.calcAvgFitness (inta_permutation)\fC [inline]\fP"
+Calculates the average fitness value curve for a given permutation\&. If permutation -1 is given, a composition of all permutations available is created\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_permutation\fP -1 to use all permutations 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+DefaultKeyedValues2D list of fitness values, one for each individual in the generation
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 153 of file Evaluator\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.Evaluator\&.calcAvgFitnessHelper()\&.
+.SS "void org\&.jgap\&.audit\&.Evaluator\&.calcAvgFitnessHelper (inta_permutation, final \fBKeyedValues2D\fPresult)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 173 of file Evaluator\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.Evaluator\&.createKey(), org\&.jgap\&.audit\&.KeyedValues2D\&.getColumnKey(), org\&.jgap\&.audit\&.KeyedValues2D\&.getRowKey(), and org\&.jgap\&.audit\&.KeyedValues2D\&.getValue()\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.Evaluator\&.calcAvgFitness()\&.
+.SS "\fBKeyedValues2D\fP org\&.jgap\&.audit\&.Evaluator\&.calcAvgFitnessImpr (inta_permutation)\fC [inline]\fP"
+Returns a list of lists (i\&.e\&. a matrix) to use for output as a table 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_data\fP DefaultKeyedValues2D 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+List
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+implement 
+.RE
+.PP
+Calculates average fitness value improvement per generation\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_permutation\fP int 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+DefaultKeyedValues2D
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+implement 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+is this method used resp\&. contained in calcPerformance? 
+.RE
+.PP
+
+.PP
+Definition at line 242 of file Evaluator\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.Evaluator\&.createKey()\&.
+.SS "\fBGenotypeDataAvg\fP org\&.jgap\&.audit\&.Evaluator\&.calcPerformance (inta_permutation)\fC [inline]\fP"
+Calculates performance metrics for a given permutation and run stored before with storeGenotype, like: average fitness, maximum fitness\&.\&.\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_permutation\fP the permutation to compute the performance metrics for 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+computed statistical data
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 351 of file Evaluator\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.Evaluator\&.getNumberOfRuns(), org\&.jgap\&.audit\&.Evaluator\&.retrieveGenotype(), and org\&.jgap\&.audit\&.Evaluator\&.GenotypeData\&.size\&.
+.SS "Object org\&.jgap\&.audit\&.Evaluator\&.createKey (inta_permutation, inta_run)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 138 of file Evaluator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.Evaluator\&.calcAvgFitnessHelper(), org\&.jgap\&.audit\&.Evaluator\&.calcAvgFitnessImpr(), org\&.jgap\&.audit\&.Evaluator\&.getValue(), and org\&.jgap\&.audit\&.Evaluator\&.setValue()\&.
+.SS "\fBKeyedValues2D\fP org\&.jgap\&.audit\&.Evaluator\&.getData ()\fC [inline]\fP"
+
+.PP
+Definition at line 134 of file Evaluator\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.Evaluator\&.m_data\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvaluatorTest\&.testConstruct_1()\&.
+.SS "List<\fBGenotypeDataAvg\fP> org\&.jgap\&.audit\&.Evaluator\&.getGenotypeAverageData ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+Averaged genotype data
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 477 of file Evaluator\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.Evaluator\&.m_genotypeDataAvg\&.
+.SS "int org\&.jgap\&.audit\&.Evaluator\&.getNumberOfRuns (inta_permutation)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_permutation\fP the permutation to determine the number of runs for 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of runs for the given permutation 
+.RE
+.PP
+
+.PP
+Definition at line 274 of file Evaluator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.Evaluator\&.calcPerformance(), and org\&.jgap\&.audit\&.EvaluatorTest\&.testGetNumberOfRuns_0()\&.
+.SS "Number org\&.jgap\&.audit\&.Evaluator\&.getValue (ComparablerowKey, ComparablecolumnKey)\fC [inline]\fP"
+
+.PP
+Definition at line 86 of file Evaluator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvaluatorTest\&.testSetValue_0(), org\&.jgap\&.audit\&.EvaluatorTest\&.testSetValue_1(), org\&.jgap\&.audit\&.EvaluatorTest\&.testSetValue_2(), and org\&.jgap\&.audit\&.EvaluatorTest\&.testSetValue_3()\&.
+.SS "Number org\&.jgap\&.audit\&.Evaluator\&.getValue (inta_permutation, inta_run, ComparablerowKey, ComparablecolumnKey)\fC [inline]\fP"
+
+.PP
+Definition at line 125 of file Evaluator\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.Evaluator\&.createKey()\&.
+.SS "boolean org\&.jgap\&.audit\&.Evaluator\&.hasNext ()\fC [inline]\fP"
+
+.PP
+Definition at line 71 of file Evaluator\&.java\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.audit\&.Evaluator\&.next () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 75 of file Evaluator\&.java\&.
+.SS "\fBGenotypeData\fP org\&.jgap\&.audit\&.Evaluator\&.retrieveGenotype (inta_permutation, inta_run)\fC [inline]\fP"
+
+.PP
+Definition at line 336 of file Evaluator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.Evaluator\&.calcPerformance()\&.
+.SS "void org\&.jgap\&.audit\&.Evaluator\&.setValue (doublea_value, Comparablea_rowKey, Comparablea_columnKey)\fC [inline]\fP"
+
+.PP
+Definition at line 80 of file Evaluator\&.java\&.
+.SS "void org\&.jgap\&.audit\&.Evaluator\&.setValue (inta_permutation, inta_run, doublea_value, Comparablea_rowKey, Comparablea_columnKey)\fC [inline]\fP"
+Sets a specific value\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_permutation\fP int 
+.br
+\fIa_run\fP int 
+.br
+\fIa_value\fP double 
+.br
+\fIa_rowKey\fP Comparable 
+.br
+\fIa_columnKey\fP Comparable
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 102 of file Evaluator\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.Evaluator\&.addRunNumber(), and org\&.jgap\&.audit\&.Evaluator\&.createKey()\&.
+.SS "void org\&.jgap\&.audit\&.Evaluator\&.storeGenotype (inta_permutation, inta_run, \fBGenotype\fPa_genotype)\fC [inline]\fP"
+Stores information contained in the given genotype\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_permutation\fP int 
+.br
+\fIa_run\fP index of the run proceeded for the given genotype 
+.br
+\fIa_genotype\fP the genotype holding the population of chromosomes
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 293 of file Evaluator\&.java\&.
+.PP
+References org\&.jgap\&.Genotype\&.getPopulation(), and org\&.jgap\&.audit\&.Evaluator\&.storePopulation()\&.
+.SS "void org\&.jgap\&.audit\&.Evaluator\&.storePopulation (inta_permutation, inta_run, \fBPopulation\fPa_pop)\fC [inline]\fP"
+Stores information contained in the given genotype\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_permutation\fP int 
+.br
+\fIa_run\fP index of the run proceeded for the given genotype 
+.br
+\fIa_pop\fP the population holding the relevant chromosomes
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 (originally named storeGenotype) 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+implement 
+.RE
+.PP
+
+.PP
+Definition at line 307 of file Evaluator\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.Evaluator\&.addRunNumber()\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.Evaluator\&.storeGenotype()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.audit\&.Evaluator\&.CVS_REVISION = '$Revision: 1\&.12 $'\fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+implement: overall score calculation (out of best/avg\&. fitness value etc\&.) 
+.RE
+.PP
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 29 of file Evaluator\&.java\&.
+.SS "\fBKeyedValues2D\fP org\&.jgap\&.audit\&.Evaluator\&.m_data\fC [private]\fP"
+For processinf without permutation 
+.PP
+Definition at line 44 of file Evaluator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.Evaluator\&.Evaluator(), and org\&.jgap\&.audit\&.Evaluator\&.getData()\&.
+.SS "Map<String, \fBGenotypeData\fP> org\&.jgap\&.audit\&.Evaluator\&.m_genotypeData\fC [private]\fP"
+\fBGenotype\fP data per permutation per run 
+.PP
+Definition at line 51 of file Evaluator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.Evaluator\&.Evaluator()\&.
+.SS "List<\fBGenotypeDataAvg\fP> org\&.jgap\&.audit\&.Evaluator\&.m_genotypeDataAvg\fC [private]\fP"
+\fBGenotype\fP data per permutation (averaged over all runs) 
+.PP
+Definition at line 56 of file Evaluator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.Evaluator\&.Evaluator(), and org\&.jgap\&.audit\&.Evaluator\&.getGenotypeAverageData()\&.
+.SS "\fBPermutingConfiguration\fP org\&.jgap\&.audit\&.Evaluator\&.m_permConf\fC [private]\fP"
+
+.PP
+Definition at line 46 of file Evaluator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.Evaluator\&.Evaluator()\&.
+.SS "Map<Object, \fBKeyedValues2D\fP> org\&.jgap\&.audit\&.Evaluator\&.m_permutationData\fC [private]\fP"
+Each data has its own data container 
+.PP
+Definition at line 34 of file Evaluator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.Evaluator\&.Evaluator()\&.
+.SS "Map<Integer, Map> org\&.jgap\&.audit\&.Evaluator\&.m_permutationRuns\fC [private]\fP"
+Stores the run-numbers (indexes) for all permutations submitted 
+.PP
+Definition at line 39 of file Evaluator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.Evaluator\&.Evaluator()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

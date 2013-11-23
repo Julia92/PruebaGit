@@ -1,0 +1,335 @@
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_threshold_selector}{\section{org.\-jgap.\-impl.\-Threshold\-Selector Class Reference}
+\label{classorg_1_1jgap_1_1impl_1_1_threshold_selector}\index{org.\-jgap.\-impl.\-Threshold\-Selector@{org.\-jgap.\-impl.\-Threshold\-Selector}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-impl.\-Threshold\-Selector\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{classorg_1_1jgap_1_1impl_1_1_threshold_selector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-impl.\-Threshold\-Selector\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_threshold_selector__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classorg_1_1jgap_1_1impl_1_1_threshold_selector_1_1_fitness_value_comparator}{Fitness\-Value\-Comparator}
+\item 
+class {\bfseries Threshold\-Selector\-Configurable}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_threshold_selector_ae1c215671de0da1dc9757868e17033bf}{Threshold\-Selector} ()  throws Invalid\-Configuration\-Exception 
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_threshold_selector_ad84f60978e742f2e3e1eadb5ed216f73}{Threshold\-Selector} (final \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} a\-\_\-config, final double a\-\_\-best\-Chromosomes\-\_\-\-Percentage)  throws Invalid\-Configuration\-Exception 
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a0503b950969a0c79b42963391ca131f5}{select\-Chromosomes} (final int a\-\_\-how\-Many\-To\-Select, \hyperlink{classorg_1_1jgap_1_1_population}{Population} a\-\_\-to\-\_\-pop)
+\item 
+boolean \hyperlink{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a893b221b556725744ffa735e54df2eb0}{returns\-Unique\-Chromosomes} ()
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_threshold_selector_ad39ffedc3c37177fea2475bf8c70cdfe}{empty} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_threshold_selector_ae91ab1838f89d6e53cad5822947e253d}{add} (final \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} a\-\_\-chromosome\-To\-Add)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List \hyperlink{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a905254461fabd1a828e42c639bd5cbfb}{m\-\_\-chromosomes}
+\item 
+boolean \hyperlink{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a8c0fdf7f12fa4492098068f1678a4e13}{m\-\_\-needs\-Sorting}
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_threshold_selector_1_1_fitness_value_comparator}{Fitness\-Value\-Comparator} \hyperlink{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a33a3ccca9c1908e0b42a873eaa89544b}{m\-\_\-fitness\-Value\-Comparator}
+\item 
+Threshold\-Selector\-Configurable \hyperlink{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a389543dd89814de9ac7aae9225f0128f}{m\-\_\-config} = new Threshold\-Selector\-Configurable()
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a2eb4c7aad8839a9485f499ee9605f078}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-19 \$\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementation of a \hyperlink{classorg_1_1jgap_1_1_natural_selector}{Natural\-Selector} that ensures a certain threshold of the best chromosomes are taken to the next generation.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 22 of file Threshold\-Selector.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_threshold_selector_ae1c215671de0da1dc9757868e17033bf}{\index{org\-::jgap\-::impl\-::\-Threshold\-Selector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}!Threshold\-Selector@{Threshold\-Selector}}
+\index{Threshold\-Selector@{Threshold\-Selector}!org::jgap::impl::ThresholdSelector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}}
+\subsubsection[{Threshold\-Selector}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Threshold\-Selector.\-Threshold\-Selector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\-Configuration\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_threshold_selector_ae1c215671de0da1dc9757868e17033bf}
+Default constructor. Uses threshold of 30 percent.
+
+Attention\-: The configuration used is the one set with the static method Genotype.\-set\-Configuration.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classorg_1_1jgap_1_1_invalid_configuration_exception}{Invalid\-Configuration\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-6 
+\end{DoxySince}
+
+
+Definition at line 55 of file Threshold\-Selector.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_threshold_selector_ad84f60978e742f2e3e1eadb5ed216f73}{\index{org\-::jgap\-::impl\-::\-Threshold\-Selector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}!Threshold\-Selector@{Threshold\-Selector}}
+\index{Threshold\-Selector@{Threshold\-Selector}!org::jgap::impl::ThresholdSelector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}}
+\subsubsection[{Threshold\-Selector}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Threshold\-Selector.\-Threshold\-Selector (
+\begin{DoxyParamCaption}
+\item[{final {\bf Configuration}}]{a\-\_\-config, }
+\item[{final double}]{a\-\_\-best\-Chromosomes\-\_\-\-Percentage}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\-Configuration\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_threshold_selector_ad84f60978e742f2e3e1eadb5ed216f73}
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-config} & the configuration to use \\
+\hline
+{\em a\-\_\-best\-Chromosomes\-\_\-\-Percentage} & indicates the number of best chromosomes from the population to be selected for granted. All other chromosomes will be selected in a random fashion. The value must be in the range from 0.\-0 to 1.\-0. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classorg_1_1jgap_1_1_invalid_configuration_exception}{Invalid\-Configuration\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 71 of file Threshold\-Selector.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Threshold\-Selector.\-m\-\_\-chromosomes, org.\-jgap.\-impl.\-Threshold\-Selector.\-m\-\_\-fitness\-Value\-Comparator, and org.\-jgap.\-impl.\-Threshold\-Selector.\-m\-\_\-needs\-Sorting.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_threshold_selector_ae91ab1838f89d6e53cad5822947e253d}{\index{org\-::jgap\-::impl\-::\-Threshold\-Selector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}!add@{add}}
+\index{add@{add}!org::jgap::impl::ThresholdSelector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Threshold\-Selector.\-add (
+\begin{DoxyParamCaption}
+\item[{final {\bf I\-Chromosome}}]{a\-\_\-chromosome\-To\-Add}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classorg_1_1jgap_1_1impl_1_1_threshold_selector_ae91ab1838f89d6e53cad5822947e253d}
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-chromosome\-To\-Add} & \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Implements \hyperlink{classorg_1_1jgap_1_1_natural_selector_ext_ab42019c92f31cc0c859202b0ae3b4e96}{org.\-jgap.\-Natural\-Selector\-Ext}.
+
+
+
+Definition at line 155 of file Threshold\-Selector.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Threshold\-Selector.\-m\-\_\-needs\-Sorting.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_threshold_selector_ad39ffedc3c37177fea2475bf8c70cdfe}{\index{org\-::jgap\-::impl\-::\-Threshold\-Selector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}!empty@{empty}}
+\index{empty@{empty}!org::jgap::impl::ThresholdSelector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Threshold\-Selector.\-empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_threshold_selector_ad39ffedc3c37177fea2475bf8c70cdfe}
+Empty out the working pool of Chromosomes. This will be invoked after each evolution cycle so that the natural selector can be reused for the next one.
+
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1_i_natural_selector_a824307b8be94282a3dfd03aaa6531139}{org.\-jgap.\-I\-Natural\-Selector}.
+
+
+
+Definition at line 143 of file Threshold\-Selector.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Threshold\-Selector.\-m\-\_\-needs\-Sorting.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a893b221b556725744ffa735e54df2eb0}{\index{org\-::jgap\-::impl\-::\-Threshold\-Selector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}!returns\-Unique\-Chromosomes@{returns\-Unique\-Chromosomes}}
+\index{returns\-Unique\-Chromosomes@{returns\-Unique\-Chromosomes}!org::jgap::impl::ThresholdSelector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}}
+\subsubsection[{returns\-Unique\-Chromosomes}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-impl.\-Threshold\-Selector.\-returns\-Unique\-Chromosomes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a893b221b556725744ffa735e54df2eb0}
+\begin{DoxyReturn}{Returns}
+false as we allow to return the same chromosome multiple times
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1_i_natural_selector_a7a6e97dab3548d73a829c9b998df377a}{org.\-jgap.\-I\-Natural\-Selector}.
+
+
+
+Definition at line 139 of file Threshold\-Selector.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Threshold\-Selector\-Test.\-test\-Construct\-\_\-2().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a0503b950969a0c79b42963391ca131f5}{\index{org\-::jgap\-::impl\-::\-Threshold\-Selector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}!select\-Chromosomes@{select\-Chromosomes}}
+\index{select\-Chromosomes@{select\-Chromosomes}!org::jgap::impl::ThresholdSelector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}}
+\subsubsection[{select\-Chromosomes}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Threshold\-Selector.\-select\-Chromosomes (
+\begin{DoxyParamCaption}
+\item[{final int}]{a\-\_\-how\-Many\-To\-Select, }
+\item[{{\bf Population}}]{a\-\_\-to\-\_\-pop}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a0503b950969a0c79b42963391ca131f5}
+Select a given number of Chromosomes from the pool that will move on to the next generation population. This selection will be guided by the fitness values. The chromosomes with the best fitness value win.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-how\-Many\-To\-Select} & the number of Chromosomes to select \\
+\hline
+{\em a\-\_\-to\-\_\-pop} & the population the Chromosomes will be added to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000174}{Todo}]replace this step by adding newly to create chromosomes \end{DoxyRefDesc}
+
+
+Definition at line 97 of file Threshold\-Selector.\-java.
+
+
+
+References org.\-jgap.\-Natural\-Selector.\-get\-Configuration(), org.\-jgap.\-impl.\-Threshold\-Selector.\-m\-\_\-chromosomes, org.\-jgap.\-impl.\-Threshold\-Selector.\-m\-\_\-config, org.\-jgap.\-impl.\-Threshold\-Selector.\-m\-\_\-fitness\-Value\-Comparator, and org.\-jgap.\-impl.\-Threshold\-Selector.\-m\-\_\-needs\-Sorting.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a0503b950969a0c79b42963391ca131f5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a2eb4c7aad8839a9485f499ee9605f078}{\index{org\-::jgap\-::impl\-::\-Threshold\-Selector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::impl::ThresholdSelector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-impl.\-Threshold\-Selector.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-19 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a2eb4c7aad8839a9485f499ee9605f078}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 25 of file Threshold\-Selector.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a905254461fabd1a828e42c639bd5cbfb}{\index{org\-::jgap\-::impl\-::\-Threshold\-Selector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}!m\-\_\-chromosomes@{m\-\_\-chromosomes}}
+\index{m\-\_\-chromosomes@{m\-\_\-chromosomes}!org::jgap::impl::ThresholdSelector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}}
+\subsubsection[{m\-\_\-chromosomes}]{\setlength{\rightskip}{0pt plus 5cm}List org.\-jgap.\-impl.\-Threshold\-Selector.\-m\-\_\-chromosomes\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a905254461fabd1a828e42c639bd5cbfb}
+Stores the chromosomes to be taken into account for selection 
+
+Definition at line 30 of file Threshold\-Selector.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Threshold\-Selector.\-select\-Chromosomes(), and org.\-jgap.\-impl.\-Threshold\-Selector.\-Threshold\-Selector().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a389543dd89814de9ac7aae9225f0128f}{\index{org\-::jgap\-::impl\-::\-Threshold\-Selector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}!m\-\_\-config@{m\-\_\-config}}
+\index{m\-\_\-config@{m\-\_\-config}!org::jgap::impl::ThresholdSelector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}}
+\subsubsection[{m\-\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}Threshold\-Selector\-Configurable org.\-jgap.\-impl.\-Threshold\-Selector.\-m\-\_\-config = new Threshold\-Selector\-Configurable()\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a389543dd89814de9ac7aae9225f0128f}
+
+
+Definition at line 43 of file Threshold\-Selector.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Threshold\-Selector.\-select\-Chromosomes().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a33a3ccca9c1908e0b42a873eaa89544b}{\index{org\-::jgap\-::impl\-::\-Threshold\-Selector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}!m\-\_\-fitness\-Value\-Comparator@{m\-\_\-fitness\-Value\-Comparator}}
+\index{m\-\_\-fitness\-Value\-Comparator@{m\-\_\-fitness\-Value\-Comparator}!org::jgap::impl::ThresholdSelector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}}
+\subsubsection[{m\-\_\-fitness\-Value\-Comparator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Fitness\-Value\-Comparator} org.\-jgap.\-impl.\-Threshold\-Selector.\-m\-\_\-fitness\-Value\-Comparator\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a33a3ccca9c1908e0b42a873eaa89544b}
+Comparator that is only concerned about fitness values 
+
+Definition at line 40 of file Threshold\-Selector.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Threshold\-Selector.\-select\-Chromosomes(), and org.\-jgap.\-impl.\-Threshold\-Selector.\-Threshold\-Selector().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a8c0fdf7f12fa4492098068f1678a4e13}{\index{org\-::jgap\-::impl\-::\-Threshold\-Selector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}!m\-\_\-needs\-Sorting@{m\-\_\-needs\-Sorting}}
+\index{m\-\_\-needs\-Sorting@{m\-\_\-needs\-Sorting}!org::jgap::impl::ThresholdSelector@{org\-::jgap\-::impl\-::\-Threshold\-Selector}}
+\subsubsection[{m\-\_\-needs\-Sorting}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-impl.\-Threshold\-Selector.\-m\-\_\-needs\-Sorting\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_threshold_selector_a8c0fdf7f12fa4492098068f1678a4e13}
+Indicated whether the list of added chromosomes needs sorting 
+
+Definition at line 35 of file Threshold\-Selector.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Threshold\-Selector.\-add(), org.\-jgap.\-impl.\-Threshold\-Selector.\-empty(), org.\-jgap.\-impl.\-Threshold\-Selector.\-select\-Chromosomes(), and org.\-jgap.\-impl.\-Threshold\-Selector.\-Threshold\-Selector().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/impl/\hyperlink{_threshold_selector_8java}{Threshold\-Selector.\-java}\end{DoxyCompactItemize}

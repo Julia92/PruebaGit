@@ -1,0 +1,1803 @@
+.TH "org.jgap.gp.CommandGene" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.CommandGene \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Comparable, and Serializable\&.
+.PP
+Inherited by \fBexamples\&.gp\&.anttrail\&.AntCommand\fP, \fBexamples\&.gp\&.monalisa\&.core\&.commands\&.ColorConstructor\fP, \fBexamples\&.gp\&.monalisa\&.core\&.commands\&.DrawPolygon\fP, \fBexamples\&.gp\&.monalisa\&.core\&.commands\&.PointConstructor\fP, \fBexamples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\fP, \fBexamples\&.gp\&.paintedDesert\&.AntCommand\fP, \fBexamples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\fP, \fBexamples\&.gp\&.paintedDesert\&.IfLessThanZero\fP, \fBexamples\&.gp\&.paintedDesert\&.LoopUntil\fP, \fBexamples\&.gp\&.tictactoe\&.CountStones\fP, \fBexamples\&.gp\&.tictactoe\&.EvaluateBoard\fP, \fBexamples\&.gp\&.tictactoe\&.IfColor\fP, \fBexamples\&.gp\&.tictactoe\&.IfIsFree\fP, \fBexamples\&.gp\&.tictactoe\&.IfIsOccupied\fP, \fBexamples\&.gp\&.tictactoe\&.IsOwnColor\fP, \fBexamples\&.gp\&.tictactoe\&.PutStone\fP, \fBexamples\&.gp\&.tictactoe\&.PutStone1\fP, \fBexamples\&.gp\&.tictactoe\&.ReadBoard\fP, \fBexamples\&.gp\&.tictactoe\&.TransferBoardToMemory\fP, \fBorg\&.jgap\&.gp\&.CommandDynamicArity\fP, org\&.jgap\&.gp\&.CommandGeneTest\&.CommandGeneImpl, \fBorg\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\fP, \fBorg\&.jgap\&.gp\&.function\&.ADF\fP, \fBorg\&.jgap\&.gp\&.function\&.CharacterProvider\fP, \fBorg\&.jgap\&.gp\&.function\&.CountMatrix\fP, \fBorg\&.jgap\&.gp\&.function\&.ExchangeMemory\fP, \fBorg\&.jgap\&.gp\&.function\&.ForLoop\fP, \fBorg\&.jgap\&.gp\&.function\&.ForXLoop\fP, \fBorg\&.jgap\&.gp\&.function\&.If\fP, \fBorg\&.jgap\&.gp\&.function\&.IfElse\fP, \fBorg\&.jgap\&.gp\&.function\&.Loop\fP, \fBorg\&.jgap\&.gp\&.function\&.Push\fP, \fBorg\&.jgap\&.gp\&.function\&.ReadFromMatrix\fP, \fBorg\&.jgap\&.gp\&.function\&.ReadTerminal\fP, \fBorg\&.jgap\&.gp\&.function\&.ReadTerminalIndexed\fP, \fBorg\&.jgap\&.gp\&.function\&.ReplaceInMatrix\fP, \fBorg\&.jgap\&.gp\&.function\&.ResetMatrix\fP, \fBorg\&.jgap\&.gp\&.function\&.StoreTerminal\fP, \fBorg\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\fP, \fBorg\&.jgap\&.gp\&.function\&.SubProgram\fP, \fBorg\&.jgap\&.gp\&.function\&.TransferMemory\fP, \fBorg\&.jgap\&.gp\&.function\&.Tupel\fP, \fBorg\&.jgap\&.gp\&.function\&.WriteToMatrix\fP, \fBorg\&.jgap\&.gp\&.MathCommand\fP, \fBorg\&.jgap\&.gp\&.terminal\&.Argument\fP, \fBorg\&.jgap\&.gp\&.terminal\&.Terminal\fP, and \fBorg\&.jgap\&.gp\&.terminal\&.Variable\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "enum \fBCOMMAND_TYPE\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCommandGene\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "\fBCommandGene\fP (final GPConfiguration a_conf, final int a_arity, final Class a_returnType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCommandGene\fP (final GPConfiguration a_conf, final int a_arity, final Class a_returnType, final int a_subReturnType, final int[] a_childSubTypes)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCommandGene\fP (final GPConfiguration a_conf, final int a_arity, final Class a_returnType, final int a_subReturnType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCommandGene\fP (final GPConfiguration a_conf, final int a_arity, final Class a_returnType, final int a_subReturnType, final int a_childSubType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBsetAllele\fP (Object a_newValue)"
+.br
+.ti -1c
+.RI "Object \fBgetAllele\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetToRandomValue\fP (\fBRandomGenerator\fP a_numberGenerator)"
+.br
+.ti -1c
+.RI "void \fBcleanup\fP ()"
+.br
+.ti -1c
+.RI "int \fBsize\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetArity\fP (\fBIGPProgram\fP a_indvividual)"
+.br
+.ti -1c
+.RI "void \fBdynamizeArity\fP ()"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.ti -1c
+.RI "abstract String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "Object \fBexecute\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "Class \fBgetReturnType\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetReturnType\fP (Class a_type)"
+.br
+.ti -1c
+.RI "boolean \fBexecute_boolean\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "void \fBexecute_void\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "int \fBexecute_int\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "long \fBexecute_long\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "float \fBexecute_float\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "double \fBexecute_double\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "Object \fBexecute_object\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "Class \fBgetChildType\fP (\fBIGPProgram\fP a_ind, int a_chromNum)"
+.br
+.ti -1c
+.RI "int \fBhashCode\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisIntegerType\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisFloatType\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisAffectGlobalState\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisValid\fP (ProgramChromosome a_program)"
+.br
+.ti -1c
+.RI "boolean \fBisValid\fP (ProgramChromosome a_program, int a_index)"
+.br
+.ti -1c
+.RI "void \fBsetNoValidation\fP (boolean a_noValidation)"
+.br
+.ti -1c
+.RI "GPConfiguration \fBgetGPConfiguration\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetApplicationData\fP (final Object a_newData)"
+.br
+.ti -1c
+.RI "Object \fBgetApplicationData\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetCompareApplicationData\fP (final boolean a_doCompare)"
+.br
+.ti -1c
+.RI "boolean \fBisCompareApplicationData\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetEnergy\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetEnergy\fP (final double a_energy)"
+.br
+.ti -1c
+.RI "int \fBgetSubReturnType\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetSubChildType\fP (int a_childNum)"
+.br
+.ti -1c
+.RI "int[] \fBgetSubChildTypes\fP ()"
+.br
+.ti -1c
+.RI "void \fBensureUniqueness\fP (ProgramChromosome a_program)"
+.br
+.ti -1c
+.RI "void \fBensureUniqueness\fP (ProgramChromosome a_program, int a_maxCount)"
+.br
+.ti -1c
+.RI "boolean \fBensureUniqueness2\fP (ProgramChromosome a_program, int a_maxCount)"
+.br
+.ti -1c
+.RI "String \fBgetPersistentRepresentation\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetValueFromPersistentRepresentation\fP (final String a_representation)  throws UnsupportedRepresentationException "
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBnodeIndex\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final double \fBDELTA\fP = 0\&.0000001"
+.br
+.ti -1c
+.RI "static final Class \fBBooleanClass\fP = Boolean\&.class"
+.br
+.ti -1c
+.RI "static final Class \fBIntegerClass\fP = Integer\&.class"
+.br
+.ti -1c
+.RI "static final Class \fBLongClass\fP = Long\&.class"
+.br
+.ti -1c
+.RI "static final Class \fBFloatClass\fP = Float\&.class"
+.br
+.ti -1c
+.RI "static final Class \fBDoubleClass\fP = Double\&.class"
+.br
+.ti -1c
+.RI "static final Class \fBVoidClass\fP = Void\&.class"
+.br
+.ti -1c
+.RI "static final Class \fBCharacterClass\fP = Character\&.class"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetArity\fP (int a_arity)"
+.br
+.ti -1c
+.RI "void \fBsetArityMin\fP (int a_arityMin)"
+.br
+.ti -1c
+.RI "void \fBsetArityMax\fP (int a_arityMax)"
+.br
+.ti -1c
+.RI "int \fBgetArityMin\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetArityMax\fP ()"
+.br
+.ti -1c
+.RI "Object \fBgetInternalValue\fP ()"
+.br
+.ti -1c
+.RI "void \fBcheck\fP (ProgramChromosome a_program)"
+.br
+.ti -1c
+.RI "void \fBcheck\fP (ProgramChromosome a_program, int a_index)"
+.br
+.ti -1c
+.RI "CommandGene\&.COMMAND_TYPE \fBgetCommandType\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetPersistentRepresentationExt\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetValueFromString\fP (int a_index, String a_value)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "GPConfiguration \fBm_configuration\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_noValidation\fP"
+.br
+.ti -1c
+.RI "Class \fBm_returnType\fP"
+.br
+.ti -1c
+.RI "int \fBm_arity\fP"
+.br
+.ti -1c
+.RI "int \fBm_arityMin\fP"
+.br
+.ti -1c
+.RI "int \fBm_arityMax\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_integerType\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_floatType\fP"
+.br
+.ti -1c
+.RI "double \fBm_energy\fP"
+.br
+.ti -1c
+.RI "Object \fBm_applicationData\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_compareAppData\fP"
+.br
+.ti -1c
+.RI "int \fBm_subReturnType\fP"
+.br
+.ti -1c
+.RI "int[] \fBm_subChildTypes\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.40 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Abstract base class for all GP commands\&.
+.PP
+A \fBCommandGene\fP represents a node within a GP program\&. A node either is a terminal (like a constant), or a function (having input parameters)\&.
+.PP
+A \fBCommandGene\fP can hold additional \fBCommandGene\fP's, it acts sort of like a
+.IP "\(bu" 2
+Composite (also see CompositeGene for a comparable concept, although for a GA)\&.
+.PP
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 31 of file CommandGene\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.CommandGene\&.CommandGene () throws Exception\fC [inline]\fP"
+Default constructor, only for dynamic instantiation\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 153 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.compareTo(), and org\&.jgap\&.gp\&.CommandGene\&.equals()\&.
+.SS "org\&.jgap\&.gp\&.CommandGene\&.CommandGene (final GPConfigurationa_conf, final inta_arity, final Classa_returnType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_arity\fP the number of children of the node 
+.br
+\fIa_returnType\fP type of the return value of the node 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+
+.PP
+Definition at line 164 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.DoubleClass, org\&.jgap\&.gp\&.CommandGene\&.FloatClass, org\&.jgap\&.gp\&.CommandGene\&.init(), org\&.jgap\&.gp\&.CommandGene\&.IntegerClass, org\&.jgap\&.gp\&.CommandGene\&.LongClass, org\&.jgap\&.gp\&.CommandGene\&.m_arity, org\&.jgap\&.gp\&.CommandGene\&.m_configuration, org\&.jgap\&.gp\&.CommandGene\&.m_floatType, org\&.jgap\&.gp\&.CommandGene\&.m_integerType, and org\&.jgap\&.gp\&.CommandGene\&.m_returnType\&.
+.SS "org\&.jgap\&.gp\&.CommandGene\&.CommandGene (final GPConfigurationa_conf, final inta_arity, final Classa_returnType, final inta_subReturnType, final int[]a_childSubTypes) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Allows specifying a sub return type and sub child types\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_arity\fP the number of children of the node 
+.br
+\fIa_returnType\fP type of the return value of the node 
+.br
+\fIa_subReturnType\fP sub type of the return type, optional usage 
+.br
+\fIa_childSubTypes\fP sub types of the childs, optional usage 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 201 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_subChildTypes, and org\&.jgap\&.gp\&.CommandGene\&.m_subReturnType\&.
+.SS "org\&.jgap\&.gp\&.CommandGene\&.CommandGene (final GPConfigurationa_conf, final inta_arity, final Classa_returnType, final inta_subReturnType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Allows specifying a sub return type\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_arity\fP the number of children of the node 
+.br
+\fIa_returnType\fP type of the return value of the node 
+.br
+\fIa_subReturnType\fP sub type of the return type, optional usage 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 245 of file CommandGene\&.java\&.
+.SS "org\&.jgap\&.gp\&.CommandGene\&.CommandGene (final GPConfigurationa_conf, final inta_arity, final Classa_returnType, final inta_subReturnType, final inta_childSubType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Command with one child: Allows specifying a sub return type and a sub child type\&. Convenience version of the called constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_arity\fP the number of children of the node 
+.br
+\fIa_returnType\fP type of the return value of the node 
+.br
+\fIa_subReturnType\fP sub type of the return type, optional usage 
+.br
+\fIa_childSubType\fP sub type of a child, optional usage 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 265 of file CommandGene\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.gp\&.CommandGene\&.check (ProgramChromosomea_program)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 700 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.isValid(), and org\&.jgap\&.gp\&.CommandGene\&.m_noValidation\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.IsOwnColor\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.IfElse\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.ADF\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.Pop\&.execute_double(), org\&.jgap\&.gp\&.function\&.Push\&.execute_double(), org\&.jgap\&.gp\&.function\&.ReadTerminal\&.execute_double(), org\&.jgap\&.gp\&.function\&.ReadTerminalIndexed\&.execute_double(), org\&.jgap\&.gp\&.function\&.ADF\&.execute_double(), org\&.jgap\&.gp\&.function\&.SubProgram\&.execute_double(), org\&.jgap\&.gp\&.function\&.Pop\&.execute_float(), org\&.jgap\&.gp\&.function\&.Push\&.execute_float(), org\&.jgap\&.gp\&.function\&.ReadTerminal\&.execute_float(), org\&.jgap\&.gp\&.function\&.ADF\&.execute_float(), org\&.jgap\&.gp\&.function\&.ReadTerminalIndexed\&.execute_float(), org\&.jgap\&.gp\&.function\&.SubProgram\&.execute_float(), examples\&.gp\&.tictactoe\&.ReadBoard\&.execute_int(), org\&.jgap\&.gp\&.function\&.Pop\&.execute_int(), org\&.jgap\&.gp\&.function\&.ReadTerminalIndexed\&.execute_int(), org\&.jgap\&.gp\&.function\&.ReadTerminal\&.execute_int(), org\&.jgap\&.gp\&.function\&.Push\&.execute_int(), org\&.jgap\&.gp\&.function\&.IfElse\&.execute_int(), org\&.jgap\&.gp\&.function\&.ADF\&.execute_int(), examples\&.gp\&.tictactoe\&.IfColor\&.execute_int(), org\&.jgap\&.gp\&.function\&.SubProgram\&.execute_int(), org\&.jgap\&.gp\&.function\&.Pop\&.execute_long(), org\&.jgap\&.gp\&.function\&.Push\&.execute_long(), org\&.jgap\&.gp\&.function\&.ReadTerminal\&.execute_long(), org\&.jgap\&.gp\&.function\&.ReadTerminalIndexed\&.execute_long(), org\&.jgap\&.gp\&.function\&.SubProgram\&.execute_long(), org\&.jgap\&.gp\&.function\&.Pop\&.execute_object(), org\&.jgap\&.gp\&.function\&.Push\&.execute_object(), org\&.jgap\&.gp\&.function\&.ReadTerminal\&.execute_object(), org\&.jgap\&.gp\&.function\&.ReadTerminalIndexed\&.execute_object(), org\&.jgap\&.gp\&.function\&.ADF\&.execute_object(), org\&.jgap\&.gp\&.function\&.SubProgram\&.execute_object(), org\&.jgap\&.gp\&.function\&.ForXLoop\&.execute_void(), org\&.jgap\&.gp\&.function\&.Push\&.execute_void(), examples\&.gp\&.tictactoe\&.CountStones\&.execute_void(), examples\&.gp\&.tictactoe\&.IfIsOccupied\&.execute_void(), examples\&.gp\&.tictactoe\&.IfIsFree\&.execute_void(), examples\&.gp\&.paintedDesert\&.IfLessThanZero\&.execute_void(), examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.execute_void(), examples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\&.execute_void(), org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.execute_void(), org\&.jgap\&.gp\&.function\&.TransferMemory\&.execute_void(), examples\&.gp\&.tictactoe\&.IfColor\&.execute_void(), examples\&.gp\&.tictactoe\&.EvaluateBoard\&.execute_void(), org\&.jgap\&.gp\&.function\&.IfElse\&.execute_void(), and org\&.jgap\&.gp\&.function\&.SubProgram\&.execute_void()\&.
+.SS "void org\&.jgap\&.gp\&.CommandGene\&.check (ProgramChromosomea_program, inta_index)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 709 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.isValid(), and org\&.jgap\&.gp\&.CommandGene\&.m_noValidation\&.
+.SS "void org\&.jgap\&.gp\&.CommandGene\&.cleanup ()\fC [inline]\fP"
+
+.PP
+Definition at line 287 of file CommandGene\&.java\&.
+.SS "int org\&.jgap\&.gp\&.CommandGene\&.compareTo (Objecta_other)\fC [inline]\fP"
+The compareTo-method\&. Considers application data when the configuration asks for this\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+-1, 0, 1
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+do it more precisely 
+.RE
+.PP
+
+.PP
+Definition at line 377 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.CommandGene(), org\&.jgap\&.gp\&.CommandGene\&.m_applicationData, org\&.jgap\&.gp\&.CommandGene\&.m_compareAppData, org\&.jgap\&.gp\&.CommandGene\&.m_subChildTypes, org\&.jgap\&.gp\&.CommandGene\&.m_subReturnType, and org\&.jgap\&.gp\&.CommandGene\&.size()\&.
+.SS "void org\&.jgap\&.gp\&.CommandGene\&.dynamizeArity ()\fC [inline]\fP"
+Adaptation of the arity so that it represents a value within the interval [m_arityMin, m_arityMax]\&.
+.PP
+Override if necessary\&. See \fBCommandDynamicArity\fP for an implementation\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 332 of file CommandGene\&.java\&.
+.SS "void org\&.jgap\&.gp\&.CommandGene\&.ensureUniqueness (ProgramChromosomea_program)\fC [inline]\fP"
+Ensures that the calling command is unique within the program\&. Call it on first place from the execute method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_program\fP the program to validate
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 856 of file CommandGene\&.java\&.
+.SS "void org\&.jgap\&.gp\&.CommandGene\&.ensureUniqueness (ProgramChromosomea_program, inta_maxCount)\fC [inline]\fP"
+Ensures that the calling command is unique within the program\&. Throws an exception if uniqueness is violated\&. Call it on first place from the execute method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_program\fP the program to validate 
+.br
+\fIa_maxCount\fP maximum number of allowed occurences
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 875 of file CommandGene\&.java\&.
+.SS "boolean org\&.jgap\&.gp\&.CommandGene\&.ensureUniqueness2 (ProgramChromosomea_program, inta_maxCount)\fC [inline]\fP"
+Ensures that the calling command is unique within the program\&. Returns false if uniqueness is violated\&. Call it on first place from the execute method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_program\fP the program to validate 
+.br
+\fIa_maxCount\fP maximum number of allowed occurences
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+false: uniqueness constraint violated
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 898 of file CommandGene\&.java\&.
+.SS "boolean org\&.jgap\&.gp\&.CommandGene\&.equals (Objecta_other)\fC [inline]\fP"
+The equals-method\&. Considers application data when the configuration asks for this\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the objects are seen as equal
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 408 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.CommandGene(), org\&.jgap\&.gp\&.CommandGene\&.m_applicationData, org\&.jgap\&.gp\&.CommandGene\&.m_compareAppData, org\&.jgap\&.gp\&.CommandGene\&.m_returnType, org\&.jgap\&.gp\&.CommandGene\&.m_subChildTypes, org\&.jgap\&.gp\&.CommandGene\&.m_subReturnType, and org\&.jgap\&.gp\&.CommandGene\&.size()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.EqualsTest\&.testEquals_0(), org\&.jgap\&.gp\&.function\&.LesserThanTest\&.testEquals_0(), and org\&.jgap\&.gp\&.function\&.GreaterThanTest\&.testEquals_0()\&.
+.SS "Object org\&.jgap\&.gp\&.CommandGene\&.execute (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+Executes this node without knowing its return type\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the current \fBChromosome\fP which is executing 
+.br
+\fIn\fP the index of the Function in the \fBChromosome\fP's Function array which is executing 
+.br
+\fIargs\fP the arguments to the current \fBChromosome\fP which is executing 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the object which wraps the return value of this node, or null if the return type is null or unknown 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP if the type of this node is not boolean
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 448 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.BooleanClass, org\&.jgap\&.gp\&.CommandGene\&.DoubleClass, org\&.jgap\&.gp\&.CommandGene\&.execute_boolean(), org\&.jgap\&.gp\&.CommandGene\&.execute_double(), org\&.jgap\&.gp\&.CommandGene\&.execute_float(), org\&.jgap\&.gp\&.CommandGene\&.execute_int(), org\&.jgap\&.gp\&.CommandGene\&.execute_long(), org\&.jgap\&.gp\&.CommandGene\&.execute_object(), org\&.jgap\&.gp\&.CommandGene\&.execute_void(), org\&.jgap\&.gp\&.CommandGene\&.FloatClass, org\&.jgap\&.gp\&.CommandGene\&.IntegerClass, org\&.jgap\&.gp\&.CommandGene\&.LongClass, org\&.jgap\&.gp\&.CommandGene\&.m_returnType, and org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.SS "boolean org\&.jgap\&.gp\&.CommandGene\&.execute_boolean (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+Executes this node as a boolean\&. Override to implement\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP ignored here 
+.br
+\fIn\fP ignored here 
+.br
+\fIargs\fP ignored here 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+nothing but exception 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 507 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getName()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.execute()\&.
+.SS "double org\&.jgap\&.gp\&.CommandGene\&.execute_double (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+Executes this node as a double\&. Override to implement\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP ignored here 
+.br
+\fIn\fP ignored here 
+.br
+\fIargs\fP ignored here 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+nothing but exception 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 591 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getName()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.execute()\&.
+.SS "float org\&.jgap\&.gp\&.CommandGene\&.execute_float (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+Executes this node as a float\&. Override to implement\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP ignored here 
+.br
+\fIn\fP ignored here 
+.br
+\fIargs\fP ignored here 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+nothing but exception 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 574 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getName()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.execute()\&.
+.SS "int org\&.jgap\&.gp\&.CommandGene\&.execute_int (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+Executes this node as an integer\&. Override to implement\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP ignored here 
+.br
+\fIn\fP ignored here 
+.br
+\fIargs\fP ignored here 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+nothing but exception 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 540 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getName()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.execute()\&.
+.SS "long org\&.jgap\&.gp\&.CommandGene\&.execute_long (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+Executes this node as a long\&. Override to implement\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP ignored here 
+.br
+\fIn\fP ignored here 
+.br
+\fIargs\fP ignored here 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+nothing but exception 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 557 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getName()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.execute()\&.
+.SS "Object org\&.jgap\&.gp\&.CommandGene\&.execute_object (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+Executes this node as an object\&. Override to implement\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP ignored here 
+.br
+\fIn\fP ignored here 
+.br
+\fIargs\fP ignored here 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+nothing but exception 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 608 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getName()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.execute()\&.
+.SS "void org\&.jgap\&.gp\&.CommandGene\&.execute_void (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+Executes this node, returning nothing\&. Override to implement\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP ignored here 
+.br
+\fIn\fP ignored here 
+.br
+\fIargs\fP ignored here 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 523 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getName()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.execute()\&.
+.SS "Object org\&.jgap\&.gp\&.CommandGene\&.getAllele ()\fC [inline]\fP"
+
+.PP
+Definition at line 278 of file CommandGene\&.java\&.
+.SS "Object org\&.jgap\&.gp\&.CommandGene\&.getApplicationData ()\fC [inline]\fP"
+Retrieves the application-specific data that is attached to this \fBGene\fP\&. Attaching application-specific data may be useful for some applications when it comes time to distinguish a \fBGene\fP from another\&. JGAP ignores this data functionally\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the application-specific data previously attached to this \fBGene\fP, or null if there is no data attached
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 760 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_applicationData\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntCommand\&.getMap(), and examples\&.gp\&.paintedDesert\&.AntCommand\&.getMap()\&.
+.SS "int org\&.jgap\&.gp\&.CommandGene\&.getArity (\fBIGPProgram\fPa_indvividual)\fC [inline]\fP"
+Arity of the command\&. Override if necessary\&. The arity is the number of children a node has\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_indvividual\fP the invididual the command's arity may depend on (in most cases the arity will not depend on the individual) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+arity of the command
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 307 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_arity\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.statistics\&.Mean\&.clone(), org\&.jgap\&.gp\&.function\&.Mean\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.StandardDeviation\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.Variance\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.Skewness\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.Kurtosis\&.clone(), org\&.jgap\&.gp\&.function\&.IfDyn\&.clone(), org\&.jgap\&.gp\&.function\&.ForLoop\&.clone(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFullNode(), org\&.jgap\&.gp\&.function\&.ForLoopTest\&.testClone_1(), org\&.jgap\&.gp\&.function\&.LesserThanTest\&.testClone_1(), org\&.jgap\&.gp\&.function\&.EqualsTest\&.testClone_1(), org\&.jgap\&.gp\&.function\&.GreaterThanTest\&.testClone_1(), org\&.jgap\&.gp\&.function\&.ForLoopTest\&.testClone_2(), and org\&.jgap\&.gp\&.CommandGeneTest\&.testSize_0()\&.
+.SS "int org\&.jgap\&.gp\&.CommandGene\&.getArityMax ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 363 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_arityMax\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.statistics\&.Mean\&.clone(), org\&.jgap\&.gp\&.function\&.Mean\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.StandardDeviation\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.Variance\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.Skewness\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.Kurtosis\&.clone(), org\&.jgap\&.gp\&.function\&.IfDyn\&.clone(), and org\&.jgap\&.gp\&.CommandDynamicArity\&.dynamizeArity()\&.
+.SS "int org\&.jgap\&.gp\&.CommandGene\&.getArityMin ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 359 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_arityMin\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.statistics\&.Mean\&.clone(), org\&.jgap\&.gp\&.function\&.Mean\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.StandardDeviation\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.Variance\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.Skewness\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.Kurtosis\&.clone(), org\&.jgap\&.gp\&.function\&.IfDyn\&.clone(), and org\&.jgap\&.gp\&.CommandDynamicArity\&.dynamizeArity()\&.
+.SS "Class org\&.jgap\&.gp\&.CommandGene\&.getChildType (\fBIGPProgram\fPa_ind, inta_chromNum)\fC [inline]\fP"
+Gets the type of node allowed from the given child number\&. Should be overridden in subclasses\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ind\fP the individual the child belongs to 
+.br
+\fIa_chromNum\fP the chromosome number 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the type of node allowed for that child, or null of no child exists
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 629 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getReturnType(), and org\&.jgap\&.gp\&.CommandGene\&.m_arity\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFullNode()\&.
+.SS "CommandGene\&.COMMAND_TYPE org\&.jgap\&.gp\&.CommandGene\&.getCommandType ()\fC [inline]\fP, \fC [protected]\fP"
+The type of the command this gene represents\&. Overwrite in sub classes\&. This is optional and allows fine-tuning of GP program creating\&. For example, you could have a function as a part of a desired GP program that only does some analysis stuff and not any execution\&. E\&.g\&. take a game like Noughts and Crosses (Tic Tac Toe)\&. There, a first part could be analysing the current state of the board and a second part could cope with exploiting the analysis results to execute a command (like put stone onto board at specific position)\&.
+.PP
+\fBReturns:\fP
+.RS 4
+type of the command this gene represents
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 920 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.COMMAND_TYPE\&.COMMAND_TYPE_UNDEFINED\&.
+.SS "double org\&.jgap\&.gp\&.CommandGene\&.getEnergy ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+energy of the gene
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 795 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_energy\&.
+.SS "GPConfiguration org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the configuration set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 728 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_configuration\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.Left\&.applyMutation(), examples\&.gp\&.anttrail\&.Right\&.applyMutation(), org\&.jgap\&.gp\&.function\&.Add\&.applyMutation(), org\&.jgap\&.gp\&.function\&.Multiply\&.applyMutation(), org\&.jgap\&.gp\&.function\&.Or\&.applyMutation(), org\&.jgap\&.gp\&.function\&.Divide\&.applyMutation(), org\&.jgap\&.gp\&.function\&.Subtract\&.applyMutation(), org\&.jgap\&.gp\&.function\&.Xor\&.applyMutation(), examples\&.gp\&.paintedDesert\&.GO_W\&.applyMutation(), org\&.jgap\&.gp\&.function\&.And\&.applyMutation(), org\&.jgap\&.gp\&.terminal\&.False\&.applyMutation(), org\&.jgap\&.gp\&.terminal\&.True\&.applyMutation(), examples\&.gp\&.paintedDesert\&.GO_E\&.applyMutation(), examples\&.gp\&.paintedDesert\&.GO_S\&.applyMutation(), examples\&.gp\&.paintedDesert\&.GO_N\&.applyMutation(), examples\&.gp\&.anttrail\&.TurnToFood\&.applyMutation(), examples\&.gp\&.paintedDesert\&.Y\&.applyMutation(), examples\&.gp\&.paintedDesert\&.X\&.applyMutation(), examples\&.gp\&.anttrail\&.IfFoodAheadRight\&.applyMutation(), examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.applyMutation(), examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.applyMutation(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.applyMutation(), org\&.jgap\&.gp\&.function\&.SubProgram\&.applyMutation(), org\&.jgap\&.gp\&.function\&.Add\&.clone(), org\&.jgap\&.gp\&.function\&.Multiply\&.clone(), org\&.jgap\&.gp\&.function\&.Divide\&.clone(), org\&.jgap\&.gp\&.function\&.Subtract\&.clone(), org\&.jgap\&.gp\&.terminal\&.True\&.clone(), org\&.jgap\&.gp\&.terminal\&.False\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.Mean\&.clone(), org\&.jgap\&.gp\&.function\&.And\&.clone(), org\&.jgap\&.gp\&.function\&.Mean\&.clone(), org\&.jgap\&.gp\&.function\&.Not\&.clone(), examples\&.gp\&.tictactoe\&.IsOwnColor\&.clone(), examples\&.gp\&.monalisa\&.core\&.commands\&.ColorConstructor\&.clone(), org\&.jgap\&.gp\&.function\&.RandomGenerator\&.clone(), examples\&.gp\&.monalisa\&.core\&.commands\&.PointConstructor\&.clone(), org\&.jgap\&.gp\&.function\&.Round\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.StandardDeviation\&.clone(), org\&.jgap\&.gp\&.function\&.Max\&.clone(), org\&.jgap\&.gp\&.function\&.Min\&.clone(), examples\&.gp\&.tictactoe\&.ReadBoard\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.Variance\&.clone(), org\&.jgap\&.gp\&.function\&.Log\&.clone(), org\&.jgap\&.gp\&.function\&.ArcSine\&.clone(), org\&.jgap\&.gp\&.function\&.ArcCosine\&.clone(), org\&.jgap\&.gp\&.function\&.ArcTangent\&.clone(), org\&.jgap\&.gp\&.function\&.Tangent\&.clone(), org\&.jgap\&.gp\&.function\&.Xor\&.clone(), org\&.jgap\&.gp\&.function\&.Abs\&.clone(), org\&.jgap\&.gp\&.function\&.Ceil\&.clone(), org\&.jgap\&.gp\&.function\&.Floor\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.Skewness\&.clone(), org\&.jgap\&.gp\&.function\&.Cosine\&.clone(), org\&.jgap\&.gp\&.function\&.Sine\&.clone(), org\&.jgap\&.gp\&.function\&.Or\&.clone(), examples\&.gp\&.monalisa\&.core\&.commands\&.DrawPolygon\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.Kurtosis\&.clone(), org\&.jgap\&.gp\&.function\&.Exp\&.clone(), org\&.jgap\&.gp\&.function\&.IfDyn\&.clone(), examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.clone(), org\&.jgap\&.gp\&.function\&.Add3\&.clone(), org\&.jgap\&.gp\&.terminal\&.Constant\&.clone(), org\&.jgap\&.gp\&.function\&.Multiply3\&.clone(), org\&.jgap\&.gp\&.function\&.Add4\&.clone(), org\&.jgap\&.gp\&.function\&.Pow\&.clone(), org\&.jgap\&.gp\&.function\&.GreaterThan\&.clone(), org\&.jgap\&.gp\&.function\&.LesserThan\&.clone(), org\&.jgap\&.gp\&.function\&.Equals\&.clone(), examples\&.gp\&.tictactoe\&.PutStone1\&.clone(), examples\&.gp\&.tictactoe\&.PutStone\&.clone(), org\&.jgap\&.gp\&.function\&.Modulo\&.clone(), examples\&.gp\&.tictactoe\&.IfIsFree\&.clone(), org\&.jgap\&.gp\&.function\&.Pop\&.clone(), examples\&.gp\&.tictactoe\&.IfIsOccupied\&.clone(), org\&.jgap\&.gp\&.function\&.Tupel\&.clone(), examples\&.gp\&.tictactoe\&.IfColor\&.clone(), examples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\&.clone(), org\&.jgap\&.gp\&.function\&.CharacterProvider\&.clone(), org\&.jgap\&.gp\&.function\&.ResetMatrix\&.clone(), examples\&.gp\&.tictactoe\&.CountStones\&.clone(), examples\&.gp\&.tictactoe\&.EvaluateBoard\&.clone(), org\&.jgap\&.gp\&.function\&.If\&.clone(), org\&.jgap\&.gp\&.function\&.AddAndStore\&.clone(), org\&.jgap\&.gp\&.function\&.Loop\&.clone(), org\&.jgap\&.gp\&.function\&.ForXLoop\&.clone(), org\&.jgap\&.gp\&.function\&.Switch\&.clone(), org\&.jgap\&.gp\&.function\&.TransferMemory\&.clone(), org\&.jgap\&.gp\&.function\&.Increment\&.clone(), org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.clone(), org\&.jgap\&.gp\&.function\&.IncrementMemory\&.clone(), org\&.jgap\&.gp\&.function\&.IfElse\&.clone(), org\&.jgap\&.gp\&.function\&.Push\&.clone(), org\&.jgap\&.gp\&.function\&.ReadTerminal\&.clone(), org\&.jgap\&.gp\&.function\&.ReadTerminalIndexed\&.clone(), org\&.jgap\&.gp\&.function\&.SubProgram\&.clone(), org\&.jgap\&.gp\&.function\&.ForLoop\&.clone(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.clone(), org\&.jgap\&.gp\&.CommandDynamicArity\&.dynamizeArity(), org\&.jgap\&.gp\&.function\&.Pop\&.execute_double(), org\&.jgap\&.gp\&.function\&.ReadTerminal\&.execute_double(), org\&.jgap\&.gp\&.function\&.ReadTerminalIndexed\&.execute_double(), org\&.jgap\&.gp\&.function\&.Pop\&.execute_float(), org\&.jgap\&.gp\&.function\&.ReadTerminal\&.execute_float(), org\&.jgap\&.gp\&.function\&.ReadTerminalIndexed\&.execute_float(), org\&.jgap\&.gp\&.function\&.Pop\&.execute_int(), org\&.jgap\&.gp\&.function\&.ReadTerminalIndexed\&.execute_int(), org\&.jgap\&.gp\&.function\&.ReadTerminal\&.execute_int(), org\&.jgap\&.gp\&.function\&.IncrementMemory\&.execute_int(), org\&.jgap\&.gp\&.function\&.Pop\&.execute_long(), org\&.jgap\&.gp\&.function\&.ReadTerminal\&.execute_long(), org\&.jgap\&.gp\&.function\&.ReadTerminalIndexed\&.execute_long(), org\&.jgap\&.gp\&.function\&.Pop\&.execute_object(), org\&.jgap\&.gp\&.function\&.ReadTerminal\&.execute_object(), org\&.jgap\&.gp\&.function\&.ReadTerminalIndexed\&.execute_object(), org\&.jgap\&.gp\&.function\&.AddAndStore\&.execute_void(), examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.execute_void(), org\&.jgap\&.gp\&.function\&.ResetMatrix\&.execute_void(), org\&.jgap\&.gp\&.function\&.TransferMemory\&.execute_void(), org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.execute_void(), examples\&.gp\&.tictactoe\&.EvaluateBoard\&.execute_void(), org\&.jgap\&.gp\&.function\&.ForLoop\&.execute_void(), org\&.jgap\&.gp\&.function\&.ForLoop\&.init(), org\&.jgap\&.gp\&.function\&.Push\&.pushIt(), org\&.jgap\&.gp\&.function\&.ReadTerminalIndexed\&.ReadTerminalIndexed(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue(), and examples\&.gp\&.tictactoe\&.CountStones\&.store()\&.
+.SS "Object org\&.jgap\&.gp\&.CommandGene\&.getInternalValue ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 638 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.hashCode()\&.
+.SS "String org\&.jgap\&.gp\&.CommandGene\&.getName ()\fC [inline]\fP"
+
+.PP
+Definition at line 613 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.toString()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.execute_boolean(), org\&.jgap\&.gp\&.CommandGene\&.execute_double(), org\&.jgap\&.gp\&.CommandGene\&.execute_float(), org\&.jgap\&.gp\&.CommandGene\&.execute_int(), org\&.jgap\&.gp\&.CommandGene\&.execute_long(), org\&.jgap\&.gp\&.CommandGene\&.execute_object(), examples\&.gp\&.tictactoe\&.PutStone1\&.execute_void(), org\&.jgap\&.gp\&.CommandGene\&.execute_void(), examples\&.gp\&.anttrail\&.AntTreeBranchRenderer\&.getBranchColor(), examples\&.gp\&.anttrail\&.AntTreeNodeRenderer\&.getNodeColor(), and org\&.jgap\&.gp\&.CommandGene\&.getPersistentRepresentation()\&.
+.SS "String org\&.jgap\&.gp\&.CommandGene\&.getPersistentRepresentation ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the persistent representation of the chromosome, including all genes
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 931 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getName(), org\&.jgap\&.gp\&.CommandGene\&.getPersistentRepresentationExt(), org\&.jgap\&.gp\&.CommandGene\&.m_arity, org\&.jgap\&.gp\&.CommandGene\&.m_returnType, org\&.jgap\&.gp\&.CommandGene\&.m_subChildTypes, and org\&.jgap\&.gp\&.CommandGene\&.m_subReturnType\&.
+.SS "String org\&.jgap\&.gp\&.CommandGene\&.getPersistentRepresentationExt ()\fC [inline]\fP, \fC [protected]\fP"
+Override in your sub classes of \fBCommandGene\fP if you have to add additional information to be persisted\&.
+.PP
+\fBReturns:\fP
+.RS 4
+additional infos
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 958 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.getPersistentRepresentation()\&.
+.SS "Class org\&.jgap\&.gp\&.CommandGene\&.getReturnType ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the return type of this node
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 479 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_returnType\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.Add\&.applyMutation(), org\&.jgap\&.gp\&.function\&.Subtract\&.applyMutation(), org\&.jgap\&.gp\&.function\&.Divide\&.applyMutation(), org\&.jgap\&.gp\&.function\&.Multiply\&.applyMutation(), org\&.jgap\&.gp\&.terminal\&.False\&.applyMutation(), org\&.jgap\&.gp\&.terminal\&.True\&.applyMutation(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.applyMutation(), org\&.jgap\&.gp\&.function\&.Add\&.clone(), org\&.jgap\&.gp\&.function\&.Subtract\&.clone(), org\&.jgap\&.gp\&.function\&.Divide\&.clone(), org\&.jgap\&.gp\&.function\&.Multiply\&.clone(), org\&.jgap\&.gp\&.terminal\&.True\&.clone(), org\&.jgap\&.gp\&.terminal\&.False\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.Mean\&.clone(), org\&.jgap\&.gp\&.function\&.And\&.clone(), org\&.jgap\&.gp\&.function\&.Mean\&.clone(), org\&.jgap\&.gp\&.function\&.RandomGenerator\&.clone(), org\&.jgap\&.gp\&.function\&.Round\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.StandardDeviation\&.clone(), org\&.jgap\&.gp\&.function\&.Max\&.clone(), org\&.jgap\&.gp\&.function\&.Min\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.Variance\&.clone(), org\&.jgap\&.gp\&.function\&.ArcCosine\&.clone(), org\&.jgap\&.gp\&.function\&.ArcSine\&.clone(), org\&.jgap\&.gp\&.function\&.ArcTangent\&.clone(), org\&.jgap\&.gp\&.function\&.Log\&.clone(), org\&.jgap\&.gp\&.function\&.Tangent\&.clone(), org\&.jgap\&.gp\&.function\&.Abs\&.clone(), org\&.jgap\&.gp\&.function\&.Floor\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.Skewness\&.clone(), org\&.jgap\&.gp\&.function\&.Ceil\&.clone(), org\&.jgap\&.gp\&.function\&.Sine\&.clone(), org\&.jgap\&.gp\&.function\&.Cosine\&.clone(), org\&.jgap\&.gp\&.function\&.statistics\&.Kurtosis\&.clone(), org\&.jgap\&.gp\&.function\&.Exp\&.clone(), org\&.jgap\&.gp\&.function\&.IfDyn\&.clone(), org\&.jgap\&.gp\&.function\&.Add3\&.clone(), org\&.jgap\&.gp\&.terminal\&.Constant\&.clone(), org\&.jgap\&.gp\&.function\&.Multiply3\&.clone(), org\&.jgap\&.gp\&.function\&.Add4\&.clone(), org\&.jgap\&.gp\&.function\&.Pow\&.clone(), org\&.jgap\&.gp\&.function\&.Modulo\&.clone(), org\&.jgap\&.gp\&.function\&.Pop\&.clone(), org\&.jgap\&.gp\&.function\&.Tupel\&.clone(), org\&.jgap\&.gp\&.function\&.CharacterProvider\&.clone(), org\&.jgap\&.gp\&.function\&.If\&.clone(), org\&.jgap\&.gp\&.function\&.Increment\&.clone(), org\&.jgap\&.gp\&.function\&.IncrementMemory\&.clone(), org\&.jgap\&.gp\&.function\&.ReadTerminal\&.clone(), org\&.jgap\&.gp\&.function\&.ReadTerminalIndexed\&.clone(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.clone(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.execute_object(), org\&.jgap\&.gp\&.function\&.If\&.getChildType(), org\&.jgap\&.gp\&.CommandGene\&.getChildType(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.toString(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.verifyDepthsForNodes()\&.
+.SS "int org\&.jgap\&.gp\&.CommandGene\&.getSubChildType (inta_childNum)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_childNum\fP the index of the child 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the sub type of the given child
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 828 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_subChildTypes\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.PutStone1\&.clone(), org\&.jgap\&.gp\&.function\&.Loop\&.clone(), org\&.jgap\&.gp\&.function\&.Push\&.clone(), org\&.jgap\&.gp\&.function\&.ForLoop\&.clone(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.verifyDepthsForNodes()\&.
+.SS "int [] org\&.jgap\&.gp\&.CommandGene\&.getSubChildTypes ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+sub type for all children
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 843 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_subChildTypes\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.SubProgram\&.applyMutation(), examples\&.gp\&.tictactoe\&.ReadBoard\&.clone(), org\&.jgap\&.gp\&.function\&.GreaterThan\&.clone(), org\&.jgap\&.gp\&.function\&.LesserThan\&.clone(), org\&.jgap\&.gp\&.function\&.Equals\&.clone(), examples\&.gp\&.tictactoe\&.PutStone\&.clone(), examples\&.gp\&.tictactoe\&.IfIsFree\&.clone(), examples\&.gp\&.tictactoe\&.IfIsOccupied\&.clone(), examples\&.gp\&.tictactoe\&.IfColor\&.clone(), org\&.jgap\&.gp\&.function\&.IfElse\&.clone(), org\&.jgap\&.gp\&.function\&.SubProgram\&.clone(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.verifyChildNodes()\&.
+.SS "int org\&.jgap\&.gp\&.CommandGene\&.getSubReturnType ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+sub return type
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 817 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_subReturnType\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.SubProgram\&.applyMutation(), examples\&.gp\&.tictactoe\&.IsOwnColor\&.clone(), examples\&.gp\&.tictactoe\&.ReadBoard\&.clone(), examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.clone(), org\&.jgap\&.gp\&.terminal\&.Constant\&.clone(), org\&.jgap\&.gp\&.function\&.GreaterThan\&.clone(), org\&.jgap\&.gp\&.function\&.LesserThan\&.clone(), org\&.jgap\&.gp\&.function\&.Equals\&.clone(), examples\&.gp\&.tictactoe\&.PutStone1\&.clone(), examples\&.gp\&.tictactoe\&.PutStone\&.clone(), examples\&.gp\&.tictactoe\&.IfIsFree\&.clone(), examples\&.gp\&.tictactoe\&.IfIsOccupied\&.clone(), org\&.jgap\&.gp\&.function\&.Pop\&.clone(), examples\&.gp\&.tictactoe\&.IfColor\&.clone(), org\&.jgap\&.gp\&.function\&.CharacterProvider\&.clone(), examples\&.gp\&.tictactoe\&.CountStones\&.clone(), examples\&.gp\&.tictactoe\&.EvaluateBoard\&.clone(), org\&.jgap\&.gp\&.function\&.Loop\&.clone(), org\&.jgap\&.gp\&.function\&.IfElse\&.clone(), org\&.jgap\&.gp\&.function\&.Push\&.clone(), org\&.jgap\&.gp\&.function\&.ReadTerminal\&.clone(), org\&.jgap\&.gp\&.function\&.ReadTerminalIndexed\&.clone(), org\&.jgap\&.gp\&.function\&.SubProgram\&.clone(), org\&.jgap\&.gp\&.function\&.ForLoop\&.clone(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.clone(), and org\&.jgap\&.gp\&.impl\&.GPGenotype\&.verifyDepthsForNodes()\&.
+.SS "int org\&.jgap\&.gp\&.CommandGene\&.hashCode ()\fC [inline]\fP"
+Retrieves the hash code value for a \fBCommandGene\fP\&. Override if another \fBhashCode()\fP implementation is necessary or more appropriate than this default implementation\&.
+.PP
+\fBReturns:\fP
+.RS 4
+this \fBGene\fP's hash code
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 652 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getInternalValue()\&.
+.SS "void org\&.jgap\&.gp\&.CommandGene\&.init ()\fC [inline]\fP, \fC [protected]\fP"
+Initializations, called from each Constructor\&. 
+.PP
+Definition at line 142 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.CommandGene()\&.
+.SS "boolean org\&.jgap\&.gp\&.CommandGene\&.isAffectGlobalState ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+true: command affects global state (i\&.e\&. stack or memory)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 678 of file CommandGene\&.java\&.
+.SS "boolean org\&.jgap\&.gp\&.CommandGene\&.isCompareApplicationData ()\fC [inline]\fP"
+
+.PP
+Definition at line 785 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_compareAppData\&.
+.SS "boolean org\&.jgap\&.gp\&.CommandGene\&.isFloatType ()\fC [inline]\fP"
+
+.PP
+Definition at line 668 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_floatType\&.
+.SS "boolean org\&.jgap\&.gp\&.CommandGene\&.isIntegerType ()\fC [inline]\fP"
+
+.PP
+Definition at line 664 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_integerType\&.
+.SS "boolean org\&.jgap\&.gp\&.CommandGene\&.isValid (ProgramChromosomea_program)\fC [inline]\fP"
+Subclasses capable of validating programs should overwrite this method\&. See class Push as a sample\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_program\fP the ProgramChromosome to validate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: a_program is (superficially) valid with the current Command
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 692 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.check()\&.
+.SS "boolean org\&.jgap\&.gp\&.CommandGene\&.isValid (ProgramChromosomea_program, inta_index)\fC [inline]\fP"
+
+.PP
+Definition at line 696 of file CommandGene\&.java\&.
+.SS "void org\&.jgap\&.gp\&.CommandGene\&.setAllele (Objecta_newValue)\fC [inline]\fP"
+
+.PP
+Definition at line 273 of file CommandGene\&.java\&.
+.SS "void org\&.jgap\&.gp\&.CommandGene\&.setApplicationData (final Objecta_newData)\fC [inline]\fP"
+This sets the application-specific data that is attached to this \fBGene\fP\&. Attaching application-specific data may be useful for some applications when it comes time to distinguish a \fBGene\fP from another\&. JGAP ignores this data functionally\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_newData\fP the new application-specific data to attach to this \fBGene\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 744 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_applicationData\&.
+.SS "void org\&.jgap\&.gp\&.CommandGene\&.setArity (inta_arity)\fC [inline]\fP, \fC [protected]\fP"
+Should only be used by class \fBCommandDynamicArity\fP or a similar class\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_arity\fP the arity to set, overrides the current arity\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 319 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_arity\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandDynamicArity\&.dynamizeArity()\&.
+.SS "void org\&.jgap\&.gp\&.CommandGene\&.setArityMax (inta_arityMax)\fC [inline]\fP, \fC [protected]\fP"
+Should only be used by class \fBCommandDynamicArity\fP or a similar class\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_arityMax\fP the maximal arity possible
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 355 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_arityMax\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandDynamicArity\&.CommandDynamicArity()\&.
+.SS "void org\&.jgap\&.gp\&.CommandGene\&.setArityMin (inta_arityMin)\fC [inline]\fP, \fC [protected]\fP"
+Should only be used by class \fBCommandDynamicArity\fP or a similar class\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_arityMin\fP the minimal arity possible
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 344 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_arityMin\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandDynamicArity\&.CommandDynamicArity()\&.
+.SS "void org\&.jgap\&.gp\&.CommandGene\&.setCompareApplicationData (final booleana_doCompare)\fC [inline]\fP"
+Should we also consider the application data when comparing? Default is 'false' as 'true' means a \fBGene\fP is losing its identity when application data is set differently!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_doCompare\fP true: consider application data in method compareTo and equals
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 775 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_compareAppData\&.
+.SS "void org\&.jgap\&.gp\&.CommandGene\&.setEnergy (final doublea_energy)\fC [inline]\fP"
+Sets the energy of the gene\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_energy\fP the energy to set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 807 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_energy\&.
+.SS "void org\&.jgap\&.gp\&.CommandGene\&.setNoValidation (booleana_noValidation)\fC [inline]\fP"
+
+.PP
+Definition at line 718 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_noValidation\&.
+.SS "void org\&.jgap\&.gp\&.CommandGene\&.setReturnType (Classa_type)\fC [inline]\fP"
+Sets the return type of this node\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_type\fP the type to set the return type to
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 491 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_returnType\&.
+.SS "void org\&.jgap\&.gp\&.CommandGene\&.setToRandomValue (\fBRandomGenerator\fPa_numberGenerator)\fC [inline]\fP"
+
+.PP
+Definition at line 282 of file CommandGene\&.java\&.
+.SS "void org\&.jgap\&.gp\&.CommandGene\&.setValueFromPersistentRepresentation (final Stringa_representation) throws \fBUnsupportedRepresentationException\fP\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_representation\fP String 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBUnsupportedRepresentationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+finish 
+.RE
+.PP
+
+.PP
+Definition at line 970 of file CommandGene\&.java\&.
+.SS "void org\&.jgap\&.gp\&.CommandGene\&.setValueFromString (inta_index, Stringa_value)\fC [inline]\fP, \fC [protected]\fP"
+Override in your sub classes of \fBCommandGene\fP if you have to add additional information to be persisted\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP index of the parameter in the range 0\&.\&.n-1 (n=number of parameters) 
+.br
+\fIa_value\fP string value of the parameter
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 1043 of file CommandGene\&.java\&.
+.SS "int org\&.jgap\&.gp\&.CommandGene\&.size ()\fC [inline]\fP"
+
+.PP
+Definition at line 292 of file CommandGene\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.m_arity\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.SubProgram\&.applyMutation(), org\&.jgap\&.gp\&.CommandGene\&.compareTo(), org\&.jgap\&.gp\&.function\&.ForXLoop\&.equals(), org\&.jgap\&.gp\&.CommandGene\&.equals(), org\&.jgap\&.gp\&.function\&.IfDyn\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.statistics\&.Mean\&.execute_double(), org\&.jgap\&.gp\&.function\&.Mean\&.execute_double(), org\&.jgap\&.gp\&.function\&.statistics\&.Skewness\&.execute_double(), org\&.jgap\&.gp\&.function\&.statistics\&.StandardDeviation\&.execute_double(), org\&.jgap\&.gp\&.function\&.statistics\&.Variance\&.execute_double(), org\&.jgap\&.gp\&.function\&.statistics\&.Kurtosis\&.execute_double(), org\&.jgap\&.gp\&.function\&.statistics\&.Skewness\&.execute_float(), org\&.jgap\&.gp\&.function\&.statistics\&.StandardDeviation\&.execute_float(), org\&.jgap\&.gp\&.function\&.statistics\&.Variance\&.execute_float(), org\&.jgap\&.gp\&.function\&.statistics\&.Kurtosis\&.execute_float(), org\&.jgap\&.gp\&.function\&.Tupel\&.execute_object(), org\&.jgap\&.gp\&.function\&.ForLoop\&.execute_object(), org\&.jgap\&.gp\&.function\&.IfDyn\&.execute_void(), org\&.jgap\&.gp\&.CommandGeneTest\&.testSize_0(), org\&.jgap\&.gp\&.function\&.statistics\&.StandardDeviation\&.toString(), org\&.jgap\&.gp\&.function\&.IfDyn\&.toString(), org\&.jgap\&.gp\&.function\&.statistics\&.Variance\&.toString(), org\&.jgap\&.gp\&.function\&.statistics\&.Kurtosis\&.toString(), org\&.jgap\&.gp\&.function\&.statistics\&.Mean\&.toString(), org\&.jgap\&.gp\&.function\&.Mean\&.toString(), org\&.jgap\&.gp\&.function\&.statistics\&.Skewness\&.toString(), and org\&.jgap\&.gp\&.function\&.ADF\&.toString()\&.
+.SS "abstract String org\&.jgap\&.gp\&.CommandGene\&.toString ()\fC [pure virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.terminal\&.Terminal\fP, \fBexamples\&.gp\&.anttrail\&.TurnToFood\fP, \fBorg\&.jgap\&.gp\&.function\&.SubProgram\fP, \fBorg\&.jgap\&.gp\&.function\&.ForLoop\fP, \fBexamples\&.gp\&.anttrail\&.IfFoodAheadLeft\fP, \fBexamples\&.gp\&.anttrail\&.IfFoodAheadRight\fP, \fBexamples\&.gp\&.anttrail\&.IfFoodAheadElse\fP, \fBexamples\&.gp\&.anttrail\&.Move\fP, \fBorg\&.jgap\&.gp\&.function\&.WriteToMatrix\fP, \fBorg\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\fP, \fBorg\&.jgap\&.gp\&.function\&.IncrementMemory\fP, \fBorg\&.jgap\&.gp\&.function\&.CountMatrix\fP, \fBexamples\&.gp\&.monalisa\&.core\&.commands\&.PolygonConstructor\fP, \fBorg\&.jgap\&.gp\&.function\&.ReplaceInMatrix\fP, \fBorg\&.jgap\&.gp\&.function\&.Increment\fP, \fBorg\&.jgap\&.gp\&.function\&.StoreTerminal\fP, \fBorg\&.jgap\&.gp\&.function\&.ADF\fP, \fBexamples\&.gp\&.tictactoe\&.EvaluateBoard\fP, \fBorg\&.jgap\&.gp\&.function\&.And\fP, \fBexamples\&.gp\&.paintedDesert\&.X\fP, \fBexamples\&.gp\&.monalisa\&.core\&.commands\&.DrawPolygon\fP, \fBexamples\&.gp\&.tictactoe\&.IfColor\fP, \fBorg\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\fP, \fBexamples\&.gp\&.paintedDesert\&.Y\fP, \fBorg\&.jgap\&.gp\&.function\&.ReadFromMatrix\fP, \fBorg\&.jgap\&.gp\&.terminal\&.False\fP, \fBorg\&.jgap\&.gp\&.terminal\&.True\fP, \fBorg\&.jgap\&.gp\&.function\&.ResetMatrix\fP, \fBorg\&.jgap\&.gp\&.function\&.statistics\&.Skewness\fP, \fBexamples\&.gp\&.anttrail\&.Left\fP, \fBexamples\&.gp\&.anttrail\&.Right\fP, \fBorg\&.jgap\&.gp\&.function\&.ExchangeMemory\fP, \fBorg\&.jgap\&.gp\&.function\&.TransferMemory\fP, \fBexamples\&.gp\&.paintedDesert\&.GO_E\fP, \fBexamples\&.gp\&.paintedDesert\&.GO_N\fP, \fBexamples\&.gp\&.paintedDesert\&.GO_S\fP, \fBorg\&.jgap\&.gp\&.function\&.Loop\fP, \fBexamples\&.gp\&.paintedDesert\&.LoopUntil\fP, \fBorg\&.jgap\&.gp\&.function\&.Add\fP, \fBorg\&.jgap\&.gp\&.function\&.Divide\fP, \fBorg\&.jgap\&.gp\&.function\&.Multiply\fP, \fBorg\&.jgap\&.gp\&.function\&.Subtract\fP, \fBexamples\&.gp\&.paintedDesert\&.GO_W\fP, \fBexamples\&.gp\&.monalisa\&.core\&.commands\&.PointConstructor\fP, \fBexamples\&.gp\&.paintedDesert\&.MoveRandom\fP, \fBorg\&.jgap\&.gp\&.function\&.CharacterProvider\fP, \fBexamples\&.gp\&.monalisa\&.core\&.commands\&.ColorConstructor\fP, \fBexamples\&.gp\&.paintedDesert\&.Carrying\fP, \fBexamples\&.gp\&.paintedDesert\&.Drop\fP, \fBexamples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\fP, \fBorg\&.jgap\&.gp\&.function\&.If\fP, \fBorg\&.jgap\&.gp\&.function\&.ReadTerminal\fP, \fBorg\&.jgap\&.gp\&.terminal\&.Variable\fP, \fBexamples\&.gp\&.paintedDesert\&.IfDrop\fP, \fBexamples\&.gp\&.paintedDesert\&.MayPickUp\fP, \fBorg\&.jgap\&.gp\&.function\&.ReadTerminalIndexed\fP, \fBexamples\&.gp\&.paintedDesert\&.IfLessThanZero\fP, \fBexamples\&.gp\&.paintedDesert\&.MayDropSand\fP, \fBexamples\&.gp\&.paintedDesert\&.SandColor\fP, \fBexamples\&.gp\&.paintedDesert\&.Pickup\fP, \fBexamples\&.gp\&.paintedDesert\&.SandAtLocation\fP, \fBexamples\&.gp\&.paintedDesert\&.SandBelongsHere\fP, \fBexamples\&.gp\&.tictactoe\&.IfIsFree\fP, \fBexamples\&.gp\&.tictactoe\&.IfIsOccupied\fP, \fBexamples\&.gp\&.tictactoe\&.PutStone\fP, \fBexamples\&.gp\&.tictactoe\&.PutStone1\fP, \fBorg\&.jgap\&.gp\&.function\&.Mean\fP, \fBorg\&.jgap\&.gp\&.function\&.Tupel\fP, \fBorg\&.jgap\&.gp\&.function\&.Xor\fP, \fBorg\&.jgap\&.gp\&.function\&.AddAndStore\fP, \fBorg\&.jgap\&.gp\&.function\&.Or\fP, \fBorg\&.jgap\&.gp\&.function\&.statistics\&.Mean\fP, \fBexamples\&.gp\&.tictactoe\&.CountStones\fP, \fBorg\&.jgap\&.gp\&.function\&.LesserThan\fP, \fBorg\&.jgap\&.gp\&.terminal\&.NOP\fP, \fBorg\&.jgap\&.gp\&.function\&.Equals\fP, \fBorg\&.jgap\&.gp\&.function\&.GreaterThan\fP, \fBorg\&.jgap\&.gp\&.function\&.IfElse\fP, \fBorg\&.jgap\&.gp\&.function\&.Push\fP, \fBorg\&.jgap\&.gp\&.terminal\&.Constant\fP, \fBexamples\&.gp\&.tictactoe\&.TransferBoardToMemory\fP, \fBorg\&.jgap\&.gp\&.function\&.statistics\&.Kurtosis\fP, \fBorg\&.jgap\&.gp\&.function\&.Switch\fP, \fBexamples\&.gp\&.tictactoe\&.IsOwnColor\fP, \fBorg\&.jgap\&.gp\&.function\&.Pop\fP, \fBorg\&.jgap\&.gp\&.function\&.ForXLoop\fP, \fBorg\&.jgap\&.gp\&.function\&.statistics\&.Variance\fP, \fBexamples\&.gp\&.tictactoe\&.ReadBoard\fP, \fBorg\&.jgap\&.gp\&.function\&.IfDyn\fP, \fBorg\&.jgap\&.gp\&.terminal\&.Argument\fP, \fBorg\&.jgap\&.gp\&.function\&.Ceil\fP, \fBorg\&.jgap\&.gp\&.function\&.Floor\fP, \fBorg\&.jgap\&.gp\&.function\&.Modulo\fP, \fBorg\&.jgap\&.gp\&.function\&.RandomGenerator\fP, \fBorg\&.jgap\&.gp\&.function\&.Abs\fP, \fBorg\&.jgap\&.gp\&.function\&.Add3\fP, \fBorg\&.jgap\&.gp\&.function\&.Add4\fP, \fBorg\&.jgap\&.gp\&.function\&.ArcCosine\fP, \fBorg\&.jgap\&.gp\&.function\&.ArcSine\fP, \fBorg\&.jgap\&.gp\&.function\&.ArcTangent\fP, \fBorg\&.jgap\&.gp\&.function\&.Cosine\fP, \fBorg\&.jgap\&.gp\&.function\&.Exp\fP, \fBorg\&.jgap\&.gp\&.function\&.Log\fP, \fBorg\&.jgap\&.gp\&.function\&.Max\fP, \fBorg\&.jgap\&.gp\&.function\&.Min\fP, \fBorg\&.jgap\&.gp\&.function\&.Multiply3\fP, \fBorg\&.jgap\&.gp\&.function\&.Not\fP, \fBorg\&.jgap\&.gp\&.function\&.Pow\fP, \fBorg\&.jgap\&.gp\&.function\&.Round\fP, \fBorg\&.jgap\&.gp\&.function\&.Sine\fP, \fBorg\&.jgap\&.gp\&.function\&.statistics\&.StandardDeviation\fP, and \fBorg\&.jgap\&.gp\&.function\&.Tangent\fP\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.getName(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getProgramString(), and org\&.jgap\&.gp\&.CommandGeneTest\&.testToString_0()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final Class org\&.jgap\&.gp\&.CommandGene\&.BooleanClass = Boolean\&.class\fC [static]\fP"
+
+.PP
+Definition at line 49 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.And\&.And(), examples\&.gp\&.SimpleExample\&.create(), examples\&.gp\&.KarubProblem\&.create(), examples\&.gp\&.tictactoe\&.TicTacToeMain\&.create(), examples\&.gp\&.island\&.IslandGPThread\&.create(), examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.create(), org\&.jgap\&.gp\&.function\&.Equals\&.Equals(), org\&.jgap\&.gp\&.CommandGene\&.execute(), org\&.jgap\&.gp\&.function\&.Equals\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.GreaterThan\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.IfElse\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.LesserThan\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.If\&.execute_int(), org\&.jgap\&.gp\&.function\&.IfElse\&.execute_int(), examples\&.gp\&.paintedDesert\&.IfLessThanZero\&.execute_void(), examples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\&.execute_void(), org\&.jgap\&.gp\&.function\&.IfElse\&.execute_void(), org\&.jgap\&.gp\&.terminal\&.False\&.False(), org\&.jgap\&.gp\&.function\&.Switch\&.getChildType(), org\&.jgap\&.gp\&.function\&.GreaterThan\&.GreaterThan(), examples\&.gp\&.tictactoe\&.IsOwnColor\&.IsOwnColor(), org\&.jgap\&.gp\&.function\&.LesserThan\&.LesserThan(), examples\&.gp\&.paintedDesert\&.LoopUntil\&.LoopUntil(), examples\&.gp\&.paintedDesert\&.MayDropSand\&.MayDropSand(), examples\&.gp\&.paintedDesert\&.MayPickUp\&.MayPickUp(), org\&.jgap\&.gp\&.function\&.Not\&.Not(), org\&.jgap\&.gp\&.function\&.Or\&.Or(), examples\&.gp\&.paintedDesert\&.SandAtLocation\&.SandAtLocation(), examples\&.gp\&.paintedDesert\&.SandBelongsHere\&.SandBelongsHere(), org\&.jgap\&.gp\&.terminal\&.True\&.True(), and org\&.jgap\&.gp\&.function\&.Xor\&.Xor()\&.
+.SS "final Class org\&.jgap\&.gp\&.CommandGene\&.CharacterClass = Character\&.class\fC [static]\fP"
+
+.PP
+Definition at line 61 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.ReadFromMatrix\&.ReadFromMatrix()\&.
+.SS "final String org\&.jgap\&.gp\&.CommandGene\&.CVS_REVISION = '$Revision: 1\&.40 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 34 of file CommandGene\&.java\&.
+.SS "final double org\&.jgap\&.gp\&.CommandGene\&.DELTA = 0\&.0000001\fC [static]\fP"
+Delta, useful for comparing doubles and floats\&. 
+.PP
+Definition at line 47 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.terminal\&.Terminal\&.applyMutation(), org\&.jgap\&.gp\&.function\&.Equals\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.Modulo\&.execute_double(), and org\&.jgap\&.gp\&.function\&.Modulo\&.execute_float()\&.
+.SS "final Class org\&.jgap\&.gp\&.CommandGene\&.DoubleClass = Double\&.class\fC [static]\fP"
+
+.PP
+Definition at line 57 of file CommandGene\&.java\&.
+.PP
+Referenced by examples\&.gp\&.symbolicRegression\&.AndD\&.AndD(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.applyMutation(), org\&.jgap\&.gp\&.CommandGene\&.CommandGene(), examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.create(), org\&.jgap\&.gp\&.CommandGene\&.execute(), org\&.jgap\&.gp\&.function\&.IfElse\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.Equals\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.GreaterThan\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.LesserThan\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.If\&.execute_int(), org\&.jgap\&.gp\&.function\&.IfElse\&.execute_int(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.execute_object(), org\&.jgap\&.gp\&.function\&.ForXLoop\&.execute_void(), org\&.jgap\&.gp\&.function\&.AddAndStore\&.execute_void(), examples\&.gp\&.paintedDesert\&.IfLessThanZero\&.execute_void(), examples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\&.execute_void(), org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.execute_void(), org\&.jgap\&.gp\&.function\&.StoreTerminal\&.execute_void(), org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.execute_void(), org\&.jgap\&.gp\&.function\&.IfElse\&.execute_void(), org\&.jgap\&.gp\&.function\&.ForLoop\&.execute_void(), examples\&.gp\&.symbolicRegression\&.NotD\&.NotD(), examples\&.gp\&.symbolicRegression\&.OrD\&.OrD(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.toString(), and examples\&.gp\&.symbolicRegression\&.XorD\&.XorD()\&.
+.SS "final Class org\&.jgap\&.gp\&.CommandGene\&.FloatClass = Float\&.class\fC [static]\fP"
+
+.PP
+Definition at line 55 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.terminal\&.Terminal\&.applyMutation(), org\&.jgap\&.gp\&.CommandGene\&.CommandGene(), examples\&.gp\&.monalisa\&.core\&.DrawingProblem\&.create(), examples\&.gp\&.MathProblem\&.create(), examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.createVariable(), org\&.jgap\&.gp\&.CommandGene\&.execute(), org\&.jgap\&.gp\&.function\&.IfElse\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.Equals\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.GreaterThan\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.LesserThan\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.If\&.execute_int(), org\&.jgap\&.gp\&.function\&.IfElse\&.execute_int(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.execute_object(), org\&.jgap\&.gp\&.function\&.ForXLoop\&.execute_void(), org\&.jgap\&.gp\&.function\&.AddAndStore\&.execute_void(), examples\&.gp\&.paintedDesert\&.IfLessThanZero\&.execute_void(), examples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\&.execute_void(), org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.execute_void(), org\&.jgap\&.gp\&.function\&.StoreTerminal\&.execute_void(), org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.execute_void(), org\&.jgap\&.gp\&.function\&.IfElse\&.execute_void(), org\&.jgap\&.gp\&.function\&.ForLoop\&.execute_void(), examples\&.gp\&.monalisa\&.core\&.commands\&.ColorConstructor\&.getChildType(), examples\&.grid\&.mathProblemDistributed\&.ClientEvolveStrategy\&.getNodeSets(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue(), org\&.jgap\&.gp\&.function\&.Switch\&.Switch(), and org\&.jgap\&.gp\&.terminal\&.Terminal\&.toString()\&.
+.SS "final Class org\&.jgap\&.gp\&.CommandGene\&.IntegerClass = Integer\&.class\fC [static]\fP"
+
+.PP
+Definition at line 51 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.terminal\&.Terminal\&.applyMutation(), examples\&.gp\&.paintedDesert\&.Carrying\&.Carrying(), org\&.jgap\&.gp\&.CommandGene\&.CommandGene(), org\&.jgap\&.gp\&.function\&.CountMatrix\&.CountMatrix(), examples\&.gp\&.SimpleExample\&.create(), examples\&.gp\&.monalisa\&.core\&.DrawingProblem\&.create(), examples\&.gp\&.KarubProblem\&.create(), examples\&.gp\&.Fibonacci\&.create(), examples\&.gp\&.tictactoe\&.TicTacToeMain\&.create(), examples\&.gp\&.island\&.IslandGPThread\&.create(), examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.create(), examples\&.gp\&.anttrail\&.AntTrailProblem\&.create(), examples\&.gp\&.symbolicRegression\&.SymbolicRegression\&.create(), examples\&.gp\&.paintedDesert\&.Drop\&.Drop(), examples\&.gp\&.tictactoe\&.EvaluateBoard\&.EvaluateBoard(), org\&.jgap\&.gp\&.CommandGene\&.execute(), org\&.jgap\&.gp\&.function\&.Equals\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.GreaterThan\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.IfElse\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.LesserThan\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.If\&.execute_int(), org\&.jgap\&.gp\&.function\&.IfElse\&.execute_int(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.execute_object(), org\&.jgap\&.gp\&.function\&.ForXLoop\&.execute_void(), org\&.jgap\&.gp\&.function\&.AddAndStore\&.execute_void(), examples\&.gp\&.tictactoe\&.IfIsFree\&.execute_void(), examples\&.gp\&.tictactoe\&.IfIsOccupied\&.execute_void(), examples\&.gp\&.paintedDesert\&.IfLessThanZero\&.execute_void(), examples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\&.execute_void(), org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.execute_void(), examples\&.gp\&.tictactoe\&.IfColor\&.execute_void(), org\&.jgap\&.gp\&.function\&.StoreTerminal\&.execute_void(), org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.execute_void(), org\&.jgap\&.gp\&.function\&.IfElse\&.execute_void(), org\&.jgap\&.gp\&.function\&.ForLoop\&.execute_void(), examples\&.gp\&.monalisa\&.core\&.commands\&.PointConstructor\&.getChildType(), examples\&.gp\&.paintedDesert\&.X\&.getChildType(), examples\&.gp\&.tictactoe\&.IsOwnColor\&.getChildType(), examples\&.gp\&.tictactoe\&.PutStone1\&.getChildType(), examples\&.gp\&.tictactoe\&.PutStone\&.getChildType(), org\&.jgap\&.gp\&.function\&.ReadFromMatrix\&.getChildType(), org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.getChildType(), org\&.jgap\&.gp\&.function\&.CountMatrix\&.getChildType(), examples\&.gp\&.paintedDesert\&.Pickup\&.Pickup(), examples\&.gp\&.tictactoe\&.ReadBoard\&.ReadBoard(), org\&.jgap\&.gp\&.function\&.ReplaceInMatrix\&.ReplaceInMatrix(), examples\&.gp\&.paintedDesert\&.SandColor\&.SandColor(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue(), org\&.jgap\&.gp\&.GPTestCase\&.setUp(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.Terminal(), org\&.jgap\&.gp\&.impl\&.GPConfigurationTest\&.testClone_0(), org\&.jgap\&.gp\&.impl\&.GPConfigurationTest\&.testClone_1(), org\&.jgap\&.gp\&.impl\&.GPGenotypeTest\&.testConfigurationInstance_0(), org\&.jgap\&.gp\&.impl\&.GPPopulationTest\&.testCreate_1(), org\&.jgap\&.gp\&.impl\&.GPPopulationTest\&.testCreate_2(), org\&.jgap\&.gp\&.impl\&.GPPopulationTest\&.testCreate_3(), org\&.jgap\&.gp\&.impl\&.GPProgramTest\&.testExecute_0(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGetDepth_0(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGetDepth_1(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGetDepth_2(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGrowNode_0(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGrowNode_1(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGrowNode_2(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGrowNode_3(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGrowNode_4(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGrowNode_4_2(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGrowNode_4_3(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGrowNode_5(), org\&.jgap\&.gp\&.impl\&.GPGenotypeTest\&.testRandomInitialize_0(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testRedepth_0(), org\&.jgap\&.gp\&.impl\&.GPGenotypeTest\&.testReferenceProblem_0(), org\&.jgap\&.gp\&.impl\&.GPProgramTest\&.testSerialize_0(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testSerialize_0(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testToString_0(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testToString_1(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testToStringNorm_0(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testToStringNorm_1(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testToStringNorm_2(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testToStringNorm_3(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testToStringNorm_4(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testToStringNorm_5(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testToStringNorm_6(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testToStringNorm_7(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testToStringNorm_8(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testToStringNorm_9(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testToStringNorm_A(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testToStringNorm_B(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testToStringNorm_C(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.toString(), examples\&.gp\&.paintedDesert\&.X\&.X(), and examples\&.gp\&.paintedDesert\&.Y\&.Y()\&.
+.SS "final Class org\&.jgap\&.gp\&.CommandGene\&.LongClass = Long\&.class\fC [static]\fP"
+
+.PP
+Definition at line 53 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.terminal\&.Terminal\&.applyMutation(), org\&.jgap\&.gp\&.CommandGene\&.CommandGene(), org\&.jgap\&.gp\&.CommandGene\&.execute(), org\&.jgap\&.gp\&.function\&.Equals\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.GreaterThan\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.IfElse\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.LesserThan\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.If\&.execute_int(), org\&.jgap\&.gp\&.function\&.IfElse\&.execute_int(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.execute_object(), org\&.jgap\&.gp\&.function\&.ForXLoop\&.execute_void(), org\&.jgap\&.gp\&.function\&.AddAndStore\&.execute_void(), examples\&.gp\&.paintedDesert\&.IfLessThanZero\&.execute_void(), examples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\&.execute_void(), org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.execute_void(), examples\&.gp\&.tictactoe\&.IfColor\&.execute_void(), org\&.jgap\&.gp\&.function\&.StoreTerminal\&.execute_void(), org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.execute_void(), org\&.jgap\&.gp\&.function\&.IfElse\&.execute_void(), org\&.jgap\&.gp\&.function\&.ForLoop\&.execute_void(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue(), and org\&.jgap\&.gp\&.terminal\&.Terminal\&.toString()\&.
+.SS "Object org\&.jgap\&.gp\&.CommandGene\&.m_applicationData\fC [private]\fP"
+Application-specific data that is attached to the \fBGene\fP\&. This data may assist the application in labelling this \fBGene\fP\&. JGAP ignores the data, aside from allowing it to be set and retrieved and considering it in clone and compareTo\&.
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 122 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.compareTo(), org\&.jgap\&.gp\&.CommandGene\&.equals(), org\&.jgap\&.gp\&.CommandGene\&.getApplicationData(), and org\&.jgap\&.gp\&.CommandGene\&.setApplicationData()\&.
+.SS "int org\&.jgap\&.gp\&.CommandGene\&.m_arity\fC [private]\fP"
+The arity of this node\&. Arity is the number of children of the node\&. An arity if zero means: there are no children\&. A terminal has an arity of zero\&. 
+.PP
+Definition at line 101 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.CommandGene(), org\&.jgap\&.gp\&.CommandGene\&.getArity(), org\&.jgap\&.gp\&.CommandGene\&.getChildType(), org\&.jgap\&.gp\&.CommandGene\&.getPersistentRepresentation(), org\&.jgap\&.gp\&.CommandGene\&.setArity(), and org\&.jgap\&.gp\&.CommandGene\&.size()\&.
+.SS "int org\&.jgap\&.gp\&.CommandGene\&.m_arityMax\fC [private]\fP"
+
+.PP
+Definition at line 105 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.getArityMax(), and org\&.jgap\&.gp\&.CommandGene\&.setArityMax()\&.
+.SS "int org\&.jgap\&.gp\&.CommandGene\&.m_arityMin\fC [private]\fP"
+
+.PP
+Definition at line 103 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.getArityMin(), and org\&.jgap\&.gp\&.CommandGene\&.setArityMin()\&.
+.SS "boolean org\&.jgap\&.gp\&.CommandGene\&.m_compareAppData\fC [private]\fP"
+Method compareTo and equals: Should we also consider the application data when comparing? Default is 'false' as 'true' means a \fBGene\fP's losing its identity when application data is set differently!
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 131 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.compareTo(), org\&.jgap\&.gp\&.CommandGene\&.equals(), org\&.jgap\&.gp\&.CommandGene\&.isCompareApplicationData(), and org\&.jgap\&.gp\&.CommandGene\&.setCompareApplicationData()\&.
+.SS "GPConfiguration org\&.jgap\&.gp\&.CommandGene\&.m_configuration\fC [private]\fP"
+
+.PP
+Definition at line 84 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.CommandGene(), and org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration()\&.
+.SS "double org\&.jgap\&.gp\&.CommandGene\&.m_energy\fC [private]\fP"
+Energy of a gene, see RFE 1102206 
+.PP
+Definition at line 112 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.getEnergy(), and org\&.jgap\&.gp\&.CommandGene\&.setEnergy()\&.
+.SS "boolean org\&.jgap\&.gp\&.CommandGene\&.m_floatType\fC [private]\fP"
+
+.PP
+Definition at line 109 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.CommandGene(), and org\&.jgap\&.gp\&.CommandGene\&.isFloatType()\&.
+.SS "boolean org\&.jgap\&.gp\&.CommandGene\&.m_integerType\fC [private]\fP"
+
+.PP
+Definition at line 107 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.CommandGene(), and org\&.jgap\&.gp\&.CommandGene\&.isIntegerType()\&.
+.SS "boolean org\&.jgap\&.gp\&.CommandGene\&.m_noValidation\fC [private]\fP"
+Should \fBisValid()\fP be called? True = no! 
+.PP
+Definition at line 89 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.check(), and org\&.jgap\&.gp\&.CommandGene\&.setNoValidation()\&.
+.SS "Class org\&.jgap\&.gp\&.CommandGene\&.m_returnType\fC [private]\fP"
+The return type of this node\&. 
+.PP
+Definition at line 94 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.CommandGene(), org\&.jgap\&.gp\&.CommandGene\&.equals(), org\&.jgap\&.gp\&.CommandGene\&.execute(), org\&.jgap\&.gp\&.CommandGene\&.getPersistentRepresentation(), org\&.jgap\&.gp\&.CommandGene\&.getReturnType(), and org\&.jgap\&.gp\&.CommandGene\&.setReturnType()\&.
+.SS "int [] org\&.jgap\&.gp\&.CommandGene\&.m_subChildTypes\fC [private]\fP"
+
+.PP
+Definition at line 135 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.CommandGene(), org\&.jgap\&.gp\&.CommandGene\&.compareTo(), org\&.jgap\&.gp\&.CommandGene\&.equals(), org\&.jgap\&.gp\&.CommandGene\&.getPersistentRepresentation(), org\&.jgap\&.gp\&.CommandGene\&.getSubChildType(), and org\&.jgap\&.gp\&.CommandGene\&.getSubChildTypes()\&.
+.SS "int org\&.jgap\&.gp\&.CommandGene\&.m_subReturnType\fC [private]\fP"
+
+.PP
+Definition at line 133 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.CommandGene\&.CommandGene(), org\&.jgap\&.gp\&.CommandGene\&.compareTo(), org\&.jgap\&.gp\&.CommandGene\&.equals(), org\&.jgap\&.gp\&.CommandGene\&.getPersistentRepresentation(), and org\&.jgap\&.gp\&.CommandGene\&.getSubReturnType()\&.
+.SS "int org\&.jgap\&.gp\&.CommandGene\&.nodeIndex"
+
+.PP
+Definition at line 137 of file CommandGene\&.java\&.
+.SS "final Class org\&.jgap\&.gp\&.CommandGene\&.VoidClass = Void\&.class\fC [static]\fP"
+
+.PP
+Definition at line 59 of file CommandGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.AddAndStore\&.AddAndStore(), org\&.jgap\&.gp\&.function\&.AddAndStoreTerminal\&.AddAndStoreTerminal(), examples\&.gp\&.anttrail\&.AntCommand\&.AntCommand(), examples\&.gp\&.tictactoe\&.CountStones\&.CountStones(), examples\&.gp\&.Fibonacci\&.create(), examples\&.gp\&.tictactoe\&.TicTacToeMain\&.create(), examples\&.gp\&.paintedDesert\&.PaintedDesertProblem\&.create(), examples\&.gp\&.anttrail\&.AntTrailProblem\&.create(), org\&.jgap\&.gp\&.GPProblem\&.createTree(), examples\&.gp\&.tictactoe\&.EvaluateBoard\&.EvaluateBoard(), org\&.jgap\&.gp\&.function\&.ExchangeMemory\&.ExchangeMemory(), org\&.jgap\&.gp\&.CommandGene\&.execute(), org\&.jgap\&.gp\&.function\&.Equals\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.ForLoop\&.ForLoop(), org\&.jgap\&.gp\&.function\&.ForXLoop\&.ForXLoop(), org\&.jgap\&.gp\&.function\&.Loop\&.getChildType(), examples\&.gp\&.paintedDesert\&.IfDrop\&.getChildType(), org\&.jgap\&.gp\&.function\&.ForXLoop\&.getChildType(), examples\&.gp\&.paintedDesert\&.LoopUntil\&.getChildType(), examples\&.gp\&.tictactoe\&.IfIsFree\&.getChildType(), examples\&.gp\&.tictactoe\&.IfIsOccupied\&.getChildType(), examples\&.gp\&.paintedDesert\&.IfLessThanZero\&.getChildType(), examples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\&.getChildType(), examples\&.gp\&.tictactoe\&.IfColor\&.getChildType(), org\&.jgap\&.gp\&.function\&.IfElse\&.getChildType(), org\&.jgap\&.gp\&.function\&.ForLoop\&.getChildType(), examples\&.gp\&.paintedDesert\&.GO_E\&.GO_E(), examples\&.gp\&.paintedDesert\&.GO_N\&.GO_N(), examples\&.gp\&.paintedDesert\&.GO_S\&.GO_S(), examples\&.gp\&.paintedDesert\&.GO_W\&.GO_W(), examples\&.gp\&.tictactoe\&.IfColor\&.IfColor(), examples\&.gp\&.paintedDesert\&.IfDrop\&.IfDrop(), org\&.jgap\&.gp\&.function\&.IfElse\&.IfElse(), examples\&.gp\&.anttrail\&.IfFoodAheadElse\&.IfFoodAheadElse(), examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.IfFoodAheadLeft(), examples\&.gp\&.anttrail\&.IfFoodAheadRight\&.IfFoodAheadRight(), examples\&.gp\&.tictactoe\&.IfIsFree\&.IfIsFree(), examples\&.gp\&.tictactoe\&.IfIsOccupied\&.IfIsOccupied(), examples\&.gp\&.paintedDesert\&.IfLessThanOrEqual\&.IfLessThanOrEqual(), examples\&.gp\&.paintedDesert\&.IfLessThanZero\&.IfLessThanZero(), org\&.jgap\&.gp\&.function\&.Loop\&.Loop(), examples\&.gp\&.paintedDesert\&.MoveRandom\&.MoveRandom(), org\&.jgap\&.gp\&.terminal\&.NOP\&.NOP(), org\&.jgap\&.gp\&.function\&.Push\&.Push(), examples\&.gp\&.tictactoe\&.PutStone\&.PutStone(), examples\&.gp\&.tictactoe\&.PutStone1\&.PutStone1(), org\&.jgap\&.gp\&.function\&.ResetMatrix\&.ResetMatrix(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.selectNode(), org\&.jgap\&.gp\&.GPTestCase\&.setUp(), org\&.jgap\&.gp\&.function\&.StoreTerminal\&.StoreTerminal(), org\&.jgap\&.gp\&.function\&.StoreTerminalIndexed\&.StoreTerminalIndexed(), org\&.jgap\&.gp\&.impl\&.GPGenotypeTest\&.testRandomInitialize_0(), examples\&.gp\&.tictactoe\&.TransferBoardToMemory\&.TransferBoardToMemory(), org\&.jgap\&.gp\&.function\&.TransferMemory\&.TransferMemory(), examples\&.gp\&.anttrail\&.TurnToFood\&.TurnToFood(), examples\&.gp\&.FibonacciNodeValidator\&.validate(), and org\&.jgap\&.gp\&.function\&.WriteToMatrix\&.WriteToMatrix()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

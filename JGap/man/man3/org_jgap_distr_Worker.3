@@ -1,0 +1,318 @@
+.TH "org.jgap.distr.Worker" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.Worker \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.distr\&.IWorker\fP\&.
+.PP
+Inherited by \fBorg\&.jgap\&.distr\&.grid\&.gp\&.JGAPWorkerGP\fP, and \fBorg\&.jgap\&.distr\&.grid\&.JGAPWorker\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWorker\fP (final String a_displayName, final \fBMasterInfo\fP a_master, final \fBMasterListener\fP a_masterListener)"
+.br
+.ti -1c
+.RI "String \fBgetDisplayName\fP ()"
+.br
+.ti -1c
+.RI "Object \fBsendCommand\fP (final \fBWorkerCommand\fP a_command)"
+.br
+.ti -1c
+.RI "Object \fBgetStatus\fP ()"
+.br
+.ti -1c
+.RI "Object \fBpause\fP ()"
+.br
+.ti -1c
+.RI "Object \fBstop\fP ()"
+.br
+.ti -1c
+.RI "Object \fBresume\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "String \fBm_displayName\fP"
+.br
+.ti -1c
+.RI "\fBMasterListener\fP \fBm_masterListener\fP"
+.br
+.ti -1c
+.RI "\fBMasterInfo\fP \fBm_master\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.8 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+\fBWorker\fP implementation\&. A worker receives commands from an IMaster instance and returns results to the master\&. A worker can receive commands even when it is working but it can only work on one task at a time\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file Worker\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.distr\&.Worker\&.Worker (final Stringa_displayName, final \fBMasterInfo\fPa_master, final \fBMasterListener\fPa_masterListener)\fC [inline]\fP"
+Construct the worker and tell him who his master is\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_displayName\fP name for imformative purpose 
+.br
+\fIa_master\fP the master of this worker 
+.br
+\fIa_masterListener\fP listener for requests from master
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file Worker\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Worker\&.m_displayName, org\&.jgap\&.distr\&.Worker\&.m_master, and org\&.jgap\&.distr\&.Worker\&.m_masterListener\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "String org\&.jgap\&.distr\&.Worker\&.getDisplayName ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+display name of the worker
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.IWorker\fP\&.
+.PP
+Definition at line 64 of file Worker\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.Worker\&.m_displayName\&.
+.SS "Object org\&.jgap\&.distr\&.Worker\&.getStatus ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+current status of the entity
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+implement: idle starting receiving task working sending result stopping stopped 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.IWorker\fP\&.
+.PP
+Definition at line 90 of file Worker\&.java\&.
+.SS "Object org\&.jgap\&.distr\&.Worker\&.pause ()\fC [inline]\fP"
+Forces the worker to pause its work (can be resumed) 
+.PP
+\fBReturns:\fP
+.RS 4
+status message
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+implement: able to pause resp\&. in work? 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.IWorker\fP\&.
+.PP
+Definition at line 109 of file Worker\&.java\&.
+.SS "Object org\&.jgap\&.distr\&.Worker\&.resume ()\fC [inline]\fP"
+Forces the worker to resume a paused work 
+.PP
+\fBReturns:\fP
+.RS 4
+status message
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+implement: able to resum resp\&. paused? 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.IWorker\fP\&.
+.PP
+Definition at line 135 of file Worker\&.java\&.
+.SS "Object org\&.jgap\&.distr\&.Worker\&.sendCommand (final \fBWorkerCommand\fPa_command)\fC [inline]\fP"
+Lets a server send a command to process to the worker 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_command\fP the command to process 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+status message
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+this should be moved to a thread 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+implement: currently working? if yes, add to queue (if queue not full) if no: start work 
+.RE
+.PP
+
+.PP
+Definition at line 76 of file Worker\&.java\&.
+.SS "Object org\&.jgap\&.distr\&.Worker\&.stop ()\fC [inline]\fP"
+Forces the worker to stop its work (cannot be resumed) 
+.PP
+\fBReturns:\fP
+.RS 4
+status message
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+implement: able to stop resp\&. in work? 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.distr\&.IWorker\fP\&.
+.PP
+Definition at line 122 of file Worker\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.Worker\&.CVS_REVISION = '$Revision: 1\&.8 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 23 of file Worker\&.java\&.
+.SS "String org\&.jgap\&.distr\&.Worker\&.m_displayName\fC [private]\fP"
+Display name, only textual information\&. 
+.PP
+Definition at line 28 of file Worker\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Worker\&.getDisplayName(), and org\&.jgap\&.distr\&.Worker\&.Worker()\&.
+.SS "\fBMasterInfo\fP org\&.jgap\&.distr\&.Worker\&.m_master\fC [private]\fP"
+Reference to master for calling him back\&. 
+.PP
+Definition at line 40 of file Worker\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Worker\&.Worker()\&.
+.SS "\fBMasterListener\fP org\&.jgap\&.distr\&.Worker\&.m_masterListener\fC [private]\fP"
+Listener to requests from the (one and only) master of this worker (=KKMultiServerThread resp\&. KKMultiServer (to make it more sophisticated and allow multiple requests from the master at once)) 
+.PP
+Definition at line 35 of file Worker\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.Worker\&.Worker()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,687 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector" kind="class" prot="public">
+    <compoundname>org::jgap::impl::BestChromosomesSelector</compoundname>
+    <basecompoundref refid="classorg_1_1jgap_1_1_natural_selector_ext" prot="public" virt="non-virtual">org.jgap.NaturalSelectorExt</basecompoundref>
+    <basecompoundref refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable" prot="public" virt="non-virtual">org.jgap.util.ICloneable</basecompoundref>
+    <innerclass refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1_1_best_chromosomes_selector_config" prot="package">org::jgap::impl::BestChromosomesSelector::BestChromosomesSelectorConfig</innerclass>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a15ff008a0835eb0a54af6df185c864f9" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.impl.BestChromosomesSelector.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.54 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" line="27" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ad57ed87538c6396da97b9da75e7b9fcc" prot="private" static="no" mutable="no">
+        <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+        <definition>Population org.jgap.impl.BestChromosomesSelector.m_chromosomes</definition>
+        <argsstring></argsstring>
+        <name>m_chromosomes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stores the chromosomes to be taken into account for selection </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" line="32" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a0bc7fd36123954647b0c8a7e6ca8e5ae" compoundref="_best_chromosomes_selector_8java" startline="94" endline="128">org.jgap.impl.BestChromosomesSelector.add</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ae2ea64513693e0beb2cc713daf56ffc5" compoundref="_best_chromosomes_selector_8java" startline="76" endline="85">org.jgap.impl.BestChromosomesSelector.BestChromosomesSelector</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ac75ef274bef9371aa93d5b370061f8d8" compoundref="_best_chromosomes_selector_8java" startline="275" endline="296">org.jgap.impl.BestChromosomesSelector.equals</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a81d9b14ee7e7e116fbd1c71ec41ba059" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.BestChromosomesSelector.m_needsSorting</definition>
+        <argsstring></argsstring>
+        <name>m_needsSorting</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicated whether the list of added chromosomes needs sorting </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" line="37" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" bodystart="37" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a0bc7fd36123954647b0c8a7e6ca8e5ae" compoundref="_best_chromosomes_selector_8java" startline="94" endline="128">org.jgap.impl.BestChromosomesSelector.add</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ae2ea64513693e0beb2cc713daf56ffc5" compoundref="_best_chromosomes_selector_8java" startline="76" endline="85">org.jgap.impl.BestChromosomesSelector.BestChromosomesSelector</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a5853ec606d4404adc52c906857fee0c5" compoundref="_best_chromosomes_selector_8java" startline="298" endline="309">org.jgap.impl.BestChromosomesSelector.clone</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a807b0148412ef68d5a5d4b660a515f80" compoundref="_best_chromosomes_selector_8java" startline="216" endline="221">org.jgap.impl.BestChromosomesSelector.empty</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1afa8c26dbb642fa1809cd89cb9b7e0d43" compoundref="_best_chromosomes_selector_8java" startline="141" endline="208">org.jgap.impl.BestChromosomesSelector.selectChromosomes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a22d07dd607627312855df65e2e4ea770" prot="private" static="no" mutable="no">
+        <type>Comparator</type>
+        <definition>Comparator org.jgap.impl.BestChromosomesSelector.m_fitnessValueComparator</definition>
+        <argsstring></argsstring>
+        <name>m_fitnessValueComparator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Comparator that is concerned about both age and fitness values </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" line="42" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" bodystart="42" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ae2ea64513693e0beb2cc713daf56ffc5" compoundref="_best_chromosomes_selector_8java" startline="76" endline="85">org.jgap.impl.BestChromosomesSelector.BestChromosomesSelector</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ac75ef274bef9371aa93d5b370061f8d8" compoundref="_best_chromosomes_selector_8java" startline="275" endline="296">org.jgap.impl.BestChromosomesSelector.equals</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1afa8c26dbb642fa1809cd89cb9b7e0d43" compoundref="_best_chromosomes_selector_8java" startline="141" endline="208">org.jgap.impl.BestChromosomesSelector.selectChromosomes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a9b16ee07ecb31c2bd6b0af709cdd2248" prot="private" static="no" mutable="no">
+        <type>BestChromosomesSelectorConfig</type>
+        <definition>BestChromosomesSelectorConfig org.jgap.impl.BestChromosomesSelector.m_config</definition>
+        <argsstring></argsstring>
+        <name>m_config</name>
+        <initializer>= new
+      BestChromosomesSelectorConfig()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" line="44" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a5853ec606d4404adc52c906857fee0c5" compoundref="_best_chromosomes_selector_8java" startline="298" endline="309">org.jgap.impl.BestChromosomesSelector.clone</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ac75ef274bef9371aa93d5b370061f8d8" compoundref="_best_chromosomes_selector_8java" startline="275" endline="296">org.jgap.impl.BestChromosomesSelector.equals</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a3ea96e0ab01abd0a12f324fd484e82b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.BestChromosomesSelector.BestChromosomesSelector</definition>
+        <argsstring>()</argsstring>
+        <name>BestChromosomesSelector</name>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor. Attention: The configuration used is the one set with the static method Genotype.setConfiguration.</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" line="57" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" bodystart="57" bodyend="60"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a5853ec606d4404adc52c906857fee0c5" compoundref="_best_chromosomes_selector_8java" startline="298" endline="309">org.jgap.impl.BestChromosomesSelector.clone</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ac75ef274bef9371aa93d5b370061f8d8" compoundref="_best_chromosomes_selector_8java" startline="275" endline="296">org.jgap.impl.BestChromosomesSelector.equals</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a7f758fb893bf4d7270cdd587251063a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.BestChromosomesSelector.BestChromosomesSelector</definition>
+        <argsstring>(final Configuration a_config)</argsstring>
+        <name>BestChromosomesSelector</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_config</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Using original rate of 1.0</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" line="71" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ae2ea64513693e0beb2cc713daf56ffc5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.BestChromosomesSelector.BestChromosomesSelector</definition>
+        <argsstring>(final Configuration a_config, final double a_originalRate)</argsstring>
+        <name>BestChromosomesSelector</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_config</declname>
+        </param>
+        <param>
+          <type>final double</type>
+          <declname>a_originalRate</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" line="76" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" bodystart="76" bodyend="85"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ad57ed87538c6396da97b9da75e7b9fcc" compoundref="_best_chromosomes_selector_8java" startline="32">org.jgap.impl.BestChromosomesSelector.m_chromosomes</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a22d07dd607627312855df65e2e4ea770" compoundref="_best_chromosomes_selector_8java" startline="42">org.jgap.impl.BestChromosomesSelector.m_fitnessValueComparator</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a81d9b14ee7e7e116fbd1c71ec41ba059" compoundref="_best_chromosomes_selector_8java" startline="37">org.jgap.impl.BestChromosomesSelector.m_needsSorting</references>
+        <references refid="classorg_1_1jgap_1_1_natural_selector_ext_1aaae7ddb53108703f9de14639f48889e8" compoundref="_natural_selector_ext_8java" startline="71" endline="73">org.jgap.NaturalSelectorExt.setDoubletteChromosomesAllowed</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1aba1bf0b64c8a0515a958ee6eced6f78d" compoundref="_best_chromosomes_selector_8java" startline="247" endline="253">org.jgap.impl.BestChromosomesSelector.setOriginalRate</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1afa8c26dbb642fa1809cd89cb9b7e0d43" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.BestChromosomesSelector.selectChromosomes</definition>
+        <argsstring>(final int a_howManyToSelect, Population a_to_pop)</argsstring>
+        <name>selectChromosomes</name>
+        <param>
+          <type>final int</type>
+          <declname>a_howManyToSelect</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_to_pop</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Selects a given number of chromosomes from the pool that will move on to the next generation population. This selection will be guided by the fitness values. The chromosomes with the best fitness value win.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_to_pop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the population the chromosomes will be added to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_howManyToSelect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of chromosomes to select</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" line="141" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" bodystart="141" bodyend="208"/>
+        <references refid="classorg_1_1jgap_1_1_natural_selector_1a70fc78d093b52685eae39ffdb30b9ef4" compoundref="_natural_selector_8java" startline="68" endline="70">org.jgap.NaturalSelector.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1_natural_selector_ext_1a1fb87b0d55b3fb5a3cd84b159a9b97ff" compoundref="_natural_selector_ext_8java" startline="83" endline="85">org.jgap.NaturalSelectorExt.getDoubletteChromosomesAllowed</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a22d07dd607627312855df65e2e4ea770" compoundref="_best_chromosomes_selector_8java" startline="42">org.jgap.impl.BestChromosomesSelector.m_fitnessValueComparator</references>
+        <references refid="classorg_1_1jgap_1_1_natural_selector_1a97b709b2715d76b87b3e15da6a22d5f8" compoundref="_natural_selector_8java" startline="33">org.jgap.NaturalSelector.m_monitorActive</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a81d9b14ee7e7e116fbd1c71ec41ba059" compoundref="_best_chromosomes_selector_8java" startline="37">org.jgap.impl.BestChromosomesSelector.m_needsSorting</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a807b0148412ef68d5a5d4b660a515f80" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.BestChromosomesSelector.empty</definition>
+        <argsstring>()</argsstring>
+        <name>empty</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_natural_selector_1a824307b8be94282a3dfd03aaa6531139">empty</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Empties out the working pool of Chromosomes.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" line="216" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" bodystart="216" bodyend="221"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a81d9b14ee7e7e116fbd1c71ec41ba059" compoundref="_best_chromosomes_selector_8java" startline="37">org.jgap.impl.BestChromosomesSelector.m_needsSorting</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ac1b16641fb070ed5039193e4f081d809" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.BestChromosomesSelector.returnsUniqueChromosomes</definition>
+        <argsstring>()</argsstring>
+        <name>returnsUniqueChromosomes</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_natural_selector_1a7a6e97dab3548d73a829c9b998df377a">returnsUniqueChromosomes</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>always true as no <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> can be returnd multiple times</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" line="229" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" bodystart="229" bodyend="231"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_test_1a52b32e57b945d4d94e2058a74c15811f" compoundref="_best_chromosomes_selector_test_8java" startline="38" endline="49">org.jgap.impl.BestChromosomesSelectorTest.testConstruct_0</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_test_1a571766234647a1162362435c1465a55b" compoundref="_best_chromosomes_selector_test_8java" startline="460" endline="464">org.jgap.impl.BestChromosomesSelectorTest.testReturnsUnique_0</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1aba1bf0b64c8a0515a958ee6eced6f78d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.BestChromosomesSelector.setOriginalRate</definition>
+        <argsstring>(final double a_originalRate)</argsstring>
+        <name>setOriginalRate</name>
+        <param>
+          <type>final double</type>
+          <declname>a_originalRate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setting this parameter controls how many chromosomes of the original population will be considered for selection to the next population. If the value is 1 then the whole original population is considered, if it is 0.5 only half of the chromosomes are considered. If doublettes are allowed, then a number of chromosomes missing (number of to be selected minus number selected) will be added. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_originalRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the rate of how many of the original chromosomes will be selected according to BestChromosomeSelector&apos;s strategy. The rest (non-original) of the chromosomes is added as duplicates</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" line="247" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" bodystart="247" bodyend="253"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ae2ea64513693e0beb2cc713daf56ffc5" compoundref="_best_chromosomes_selector_8java" startline="76" endline="85">org.jgap.impl.BestChromosomesSelector.BestChromosomesSelector</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ac06f03890f0fa7e11109ae8bce3a25fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double org.jgap.impl.BestChromosomesSelector.getOriginalRate</definition>
+        <argsstring>()</argsstring>
+        <name>getOriginalRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>see setOriginalRate</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" line="262" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" bodystart="262" bodyend="264"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_test_1accef041deb5e095382c162b427d86fac" compoundref="_best_chromosomes_selector_test_8java" startline="447" endline="452">org.jgap.impl.BestChromosomesSelectorTest.testSetOriginalRate_1</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ac75ef274bef9371aa93d5b370061f8d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.BestChromosomesSelector.equals</definition>
+        <argsstring>(Object a_o)</argsstring>
+        <name>equals</name>
+        <param>
+          <type>Object</type>
+          <declname>a_o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" line="275" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" bodystart="275" bodyend="296"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a3ea96e0ab01abd0a12f324fd484e82b4" compoundref="_best_chromosomes_selector_8java" startline="57" endline="60">org.jgap.impl.BestChromosomesSelector.BestChromosomesSelector</references>
+        <references refid="classorg_1_1jgap_1_1_population_1ab415c85cc397ce6d54924c4d14aa8cf6" compoundref="_population_8java" startline="605" endline="614">org.jgap.Population.equals</references>
+        <references refid="classorg_1_1jgap_1_1_natural_selector_ext_1a1fb87b0d55b3fb5a3cd84b159a9b97ff" compoundref="_natural_selector_ext_8java" startline="83" endline="85">org.jgap.NaturalSelectorExt.getDoubletteChromosomesAllowed</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ad57ed87538c6396da97b9da75e7b9fcc" compoundref="_best_chromosomes_selector_8java" startline="32">org.jgap.impl.BestChromosomesSelector.m_chromosomes</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a9b16ee07ecb31c2bd6b0af709cdd2248" compoundref="_best_chromosomes_selector_8java" startline="44">org.jgap.impl.BestChromosomesSelector.m_config</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a22d07dd607627312855df65e2e4ea770" compoundref="_best_chromosomes_selector_8java" startline="42">org.jgap.impl.BestChromosomesSelector.m_fitnessValueComparator</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a5853ec606d4404adc52c906857fee0c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.impl.BestChromosomesSelector.clone</definition>
+        <argsstring>()</argsstring>
+        <name>clone</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable_1aa7e7d62077e6428ad7904932b1b4f7d5">clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>clone of the current object instance </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" line="298" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" bodystart="298" bodyend="309"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a3ea96e0ab01abd0a12f324fd484e82b4" compoundref="_best_chromosomes_selector_8java" startline="57" endline="60">org.jgap.impl.BestChromosomesSelector.BestChromosomesSelector</references>
+        <references refid="classorg_1_1jgap_1_1_natural_selector_1a70fc78d093b52685eae39ffdb30b9ef4" compoundref="_natural_selector_8java" startline="68" endline="70">org.jgap.NaturalSelector.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1_natural_selector_ext_1a1fb87b0d55b3fb5a3cd84b159a9b97ff" compoundref="_natural_selector_ext_8java" startline="83" endline="85">org.jgap.NaturalSelectorExt.getDoubletteChromosomesAllowed</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a9b16ee07ecb31c2bd6b0af709cdd2248" compoundref="_best_chromosomes_selector_8java" startline="44">org.jgap.impl.BestChromosomesSelector.m_config</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a81d9b14ee7e7e116fbd1c71ec41ba059" compoundref="_best_chromosomes_selector_8java" startline="37">org.jgap.impl.BestChromosomesSelector.m_needsSorting</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a0bc7fd36123954647b0c8a7e6ca8e5ae" compoundref="_best_chromosomes_selector_8java" startline="94" endline="128">org.jgap.impl.BestChromosomesSelector.add</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a0bc7fd36123954647b0c8a7e6ca8e5ae" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.BestChromosomesSelector.add</definition>
+        <argsstring>(final IChromosome a_chromosomeToAdd)</argsstring>
+        <name>add</name>
+        <reimplements refid="classorg_1_1jgap_1_1_natural_selector_ext_1ab42019c92f31cc0c859202b0ae3b4e96">add</reimplements>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+          <declname>a_chromosomeToAdd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> instance to this selector&apos;s working pool of Chromosomes. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_chromosomeToAdd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the specimen to add to the pool</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" line="94" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" bodystart="94" bodyend="128"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a5853ec606d4404adc52c906857fee0c5" compoundref="_best_chromosomes_selector_8java" startline="298" endline="309">org.jgap.impl.BestChromosomesSelector.clone</references>
+        <references refid="classorg_1_1jgap_1_1_population_1aa9deff3f371931e7151070af03465e83" compoundref="_population_8java" startline="246" endline="248">org.jgap.Population.getChromosomes</references>
+        <references refid="classorg_1_1jgap_1_1_natural_selector_1a70fc78d093b52685eae39ffdb30b9ef4" compoundref="_natural_selector_8java" startline="68" endline="70">org.jgap.NaturalSelector.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1_natural_selector_ext_1a1fb87b0d55b3fb5a3cd84b159a9b97ff" compoundref="_natural_selector_ext_8java" startline="83" endline="85">org.jgap.NaturalSelectorExt.getDoubletteChromosomesAllowed</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ad57ed87538c6396da97b9da75e7b9fcc" compoundref="_best_chromosomes_selector_8java" startline="32">org.jgap.impl.BestChromosomesSelector.m_chromosomes</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a81d9b14ee7e7e116fbd1c71ec41ba059" compoundref="_best_chromosomes_selector_8java" startline="37">org.jgap.impl.BestChromosomesSelector.m_needsSorting</references>
+        <references refid="interfaceorg_1_1jgap_1_1_i_handler_1a60199862000df04a4b2491d6d08f2f2c">org.jgap.IHandler.perform</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Implementation of a <ref refid="classorg_1_1jgap_1_1_natural_selector" kindref="compound">NaturalSelector</ref> that takes the top n chromosomes into the next generation. n can be specified. Which chromosomes are the best is decided by evaluating their fitness value.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="10001">
+        <label>org.jgap.NaturalSelector</label>
+        <link refid="classorg_1_1jgap_1_1_natural_selector"/>
+        <childnode refid="10002" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10004" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10003">
+        <label>Serializable</label>
+      </node>
+      <node id="9999">
+        <label>org.jgap.impl.BestChromosomesSelector</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector"/>
+        <childnode refid="10000" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10005" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10005">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="10006" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10002">
+        <label>org.jgap.INaturalSelector</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_natural_selector"/>
+        <childnode refid="10003" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10006">
+        <label>Cloneable</label>
+      </node>
+      <node id="10000">
+        <label>org.jgap.NaturalSelectorExt</label>
+        <link refid="classorg_1_1jgap_1_1_natural_selector_ext"/>
+        <childnode refid="10001" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10004">
+        <label>Configurable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10022">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="10032">
+        <label>Comparator</label>
+      </node>
+      <node id="10009">
+        <label>org.jgap.NaturalSelector</label>
+        <link refid="classorg_1_1jgap_1_1_natural_selector"/>
+        <childnode refid="10010" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10012" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10013" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+      </node>
+      <node id="10030">
+        <label>List&lt; org.jgap.IChromosome &gt;</label>
+      </node>
+      <node id="10027">
+        <label>List</label>
+      </node>
+      <node id="10026">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="10011" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10014" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10023">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="10011" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10011">
+        <label>Serializable</label>
+      </node>
+      <node id="10016">
+        <label>Comparable</label>
+      </node>
+      <node id="10031">
+        <label>org.jgap.impl.BestChromosomesSelector.BestChromosomesSelectorConfig</label>
+        <childnode refid="10011" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10007">
+        <label>org.jgap.impl.BestChromosomesSelector</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector"/>
+        <childnode refid="10008" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10014" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10031" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="10032" relation="usage">
+          <edgelabel>m_fitnessValueComparator</edgelabel>
+        </childnode>
+        <childnode refid="10028" relation="usage">
+          <edgelabel>m_chromosomes</edgelabel>
+        </childnode>
+      </node>
+      <node id="10014">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="10015" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10020">
+        <label>org.jgap.FitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_fitness_evaluator"/>
+        <childnode refid="10011" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10010">
+        <label>org.jgap.INaturalSelector</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_natural_selector"/>
+        <childnode refid="10011" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10024">
+        <label>org.jgap.BulkFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_bulk_fitness_function"/>
+        <childnode refid="10011" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10014" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10015">
+        <label>Cloneable</label>
+      </node>
+      <node id="10029">
+        <label>org.jgap.IPersistentRepresentation</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_persistent_representation"/>
+      </node>
+      <node id="10018">
+        <label>org.jgap.IJGAPFactory</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_j_g_a_p_factory"/>
+        <childnode refid="10011" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10025">
+        <label>org.jgap.Configuration.ConfigurationConfigurable</label>
+        <link refid="classorg_1_1jgap_1_1_configuration_1_1_configuration_configurable"/>
+        <childnode refid="10011" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10028">
+        <label>org.jgap.Population</label>
+        <link refid="classorg_1_1jgap_1_1_population"/>
+        <childnode refid="10011" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10014" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10029" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10030" relation="usage">
+          <edgelabel>m_chromosomes</edgelabel>
+        </childnode>
+        <childnode refid="10013" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="10021" relation="usage">
+          <edgelabel>m_fittestChromosome</edgelabel>
+        </childnode>
+      </node>
+      <node id="10008">
+        <label>org.jgap.NaturalSelectorExt</label>
+        <link refid="classorg_1_1jgap_1_1_natural_selector_ext"/>
+        <childnode refid="10009" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10028" relation="usage">
+          <edgelabel>m_to_pop</edgelabel>
+        </childnode>
+      </node>
+      <node id="10017">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="10014" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10011" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10016" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10021">
+        <label>org.jgap.IChromosome</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome"/>
+        <childnode refid="10016" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10014" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10011" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10013">
+        <label>org.jgap.Configuration</label>
+        <link refid="classorg_1_1jgap_1_1_configuration"/>
+        <childnode refid="10012" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10011" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10014" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10016" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10017" relation="usage">
+          <edgelabel>m_breeder</edgelabel>
+        </childnode>
+        <childnode refid="10018" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="10019" relation="usage">
+          <edgelabel>m_chromosomePool</edgelabel>
+        </childnode>
+        <childnode refid="10020" relation="usage">
+          <edgelabel>m_fitnessEvaluator</edgelabel>
+        </childnode>
+        <childnode refid="10021" relation="usage">
+          <edgelabel>m_sampleChromosome</edgelabel>
+        </childnode>
+        <childnode refid="10023" relation="usage">
+          <edgelabel>m_randomGenerator</edgelabel>
+        </childnode>
+        <childnode refid="10024" relation="usage">
+          <edgelabel>m_bulkObjectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="10025" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="10026" relation="usage">
+          <edgelabel>m_objectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="10027" relation="usage">
+          <edgelabel>m_geneticOperators</edgelabel>
+        </childnode>
+      </node>
+      <node id="10019">
+        <label>org.jgap.IChromosomePool</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool"/>
+      </node>
+      <node id="10012">
+        <label>Configurable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" line="25" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/BestChromosomesSelector.java" bodystart="24" bodyend="310"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a0bc7fd36123954647b0c8a7e6ca8e5ae" prot="protected" virt="virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>add</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1a889f35e483ad2b7590a4af17771b7ffa" prot="protected" virt="pure-virtual" ambiguityscope="org::jgap::NaturalSelector."><scope>org::jgap::impl::BestChromosomesSelector</scope><name>add</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a3ea96e0ab01abd0a12f324fd484e82b4" prot="public" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>BestChromosomesSelector</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a7f758fb893bf4d7270cdd587251063a2" prot="public" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>BestChromosomesSelector</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ae2ea64513693e0beb2cc713daf56ffc5" prot="public" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>BestChromosomesSelector</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a5853ec606d4404adc52c906857fee0c5" prot="public" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>clone</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a15ff008a0835eb0a54af6df185c864f9" prot="private" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a807b0148412ef68d5a5d4b660a515f80" prot="public" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>empty</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ac75ef274bef9371aa93d5b370061f8d8" prot="public" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>equals</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1a70fc78d093b52685eae39ffdb30b9ef4" prot="public" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>getConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1a1fb87b0d55b3fb5a3cd84b159a9b97ff" prot="public" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>getDoubletteChromosomesAllowed</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ac06f03890f0fa7e11109ae8bce3a25fe" prot="public" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>getOriginalRate</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1a2463922ff619e3fdb7273afa25119cfa" prot="protected" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>init</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ad57ed87538c6396da97b9da75e7b9fcc" prot="private" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>m_chromosomes</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a9b16ee07ecb31c2bd6b0af709cdd2248" prot="private" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>m_config</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a22d07dd607627312855df65e2e4ea770" prot="private" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>m_fitnessValueComparator</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1a0ecc4abad2b9f2235e686113913dec17" prot="protected" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>m_monitor</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1a97b709b2715d76b87b3e15da6a22d5f8" prot="protected" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>m_monitorActive</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1a81d9b14ee7e7e116fbd1c71ec41ba059" prot="private" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>m_needsSorting</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1a3eb9d0041ece6e97945fa2a67cbef9a4" prot="public" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>NaturalSelector</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1abdf8ec5961eae78b4ab7c5e242a32d32" prot="public" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>NaturalSelector</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1a07fbce4646a51d8dbac653f85aa2dd07" prot="public" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>NaturalSelectorExt</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1ae56adaa72d97b09f44e29832db0913f8" prot="public" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>NaturalSelectorExt</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1ac1b16641fb070ed5039193e4f081d809" prot="public" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>returnsUniqueChromosomes</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1ab7eac27131f30abd83bd1eec964be8af" prot="public" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>select</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_natural_selector_1a621ca08e2f66866178214093ca4412fd" prot="public" virt="non-virtual" ambiguityscope="org::jgap::NaturalSelector."><scope>org::jgap::impl::BestChromosomesSelector</scope><name>select</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1ad330fe572e650caf3549d5896beb40a9" prot="protected" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>selectChromosome</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1afa8c26dbb642fa1809cd89cb9b7e0d43" prot="public" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>selectChromosomes</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1a86725d343805cef081f381b51423ce2b" prot="protected" virt="pure-virtual" ambiguityscope="org::jgap::NaturalSelectorExt."><scope>org::jgap::impl::BestChromosomesSelector</scope><name>selectChromosomes</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1aaae7ddb53108703f9de14639f48889e8" prot="public" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>setDoubletteChromosomesAllowed</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_best_chromosomes_selector_1aba1bf0b64c8a0515a958ee6eced6f78d" prot="public" virt="non-virtual"><scope>org::jgap::impl::BestChromosomesSelector</scope><name>setOriginalRate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

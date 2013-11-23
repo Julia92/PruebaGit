@@ -1,0 +1,242 @@
+\hypertarget{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator}{\section{org.\-jgap.\-audit.\-Evolution\-Evaluator Class Reference}
+\label{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator}\index{org.\-jgap.\-audit.\-Evolution\-Evaluator@{org.\-jgap.\-audit.\-Evolution\-Evaluator}}
+}
+
+
+Collaboration diagram for org.\-jgap.\-audit.\-Evolution\-Evaluator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_a1dc266bf9517cbaf2dd766cc452c8096}{Evolution\-Evaluator} (\hyperlink{classorg_1_1jgap_1_1eval_1_1_population_history_indexed}{Population\-History\-Indexed} a\-\_\-monitor\-Data)
+\item 
+void \hyperlink{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_a411341e5eb1abbec8e0995d8fb49727a}{evaluate} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Map$<$ \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome}, Map$<$ Integer, \\*
+List$<$ \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} $>$ $>$ $>$ \hyperlink{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_ac4654f0d7b2ca9f360ce0ecdb7ebfb94}{track\-Chromosomes} (Map$<$ Integer, Map $>$ a\-\_\-data)
+\item 
+Map$<$ \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome}, Map$<$ Integer, \\*
+List$<$ \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} $>$ $>$ $>$ \hyperlink{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_a5a2b533431aca9f07c73a2e46520a4cf}{track\-Chromosomes} (Map$<$ Integer, Map $>$ a\-\_\-data, \hyperlink{classorg_1_1jgap_1_1_population}{Population} a\-\_\-pop)
+\item 
+Map$<$ String, Map$<$ \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome}, \\*
+List$<$ Integer $>$ $>$ $>$ \hyperlink{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_a33f904c1c2e7ac20bd340feef425c159}{gather\-Chromosomes\-I\-Ds} (Map$<$ Integer, Map $>$ a\-\_\-data)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1eval_1_1_population_history_indexed}{Population\-History\-Indexed} \hyperlink{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_a5fabe529afcc7272b37aa940c9339817}{m\-\_\-monitor\-Data}
+\item 
+List$<$ Integer $>$ \hyperlink{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_accd4f76386641576b80ad5f2c6e94a10}{evolution\-Indexes}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_a3bcd75b9231b782f81ed96c2cc1dd9ef}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-3 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Evaluates evolution progress thas has previously been tracked by \hyperlink{classorg_1_1jgap_1_1audit_1_1_evolution_monitor}{Evolution\-Monitor} (or a similar instance). This class regards a complete evolution, not just a single round. This is an optional way, another would be to just gather data per round and then display or evaluate the round-\/specific data. This class considers global (complete evolution) data because computations are executed on this data, like tracking chromosomes, evaluating the progress of selectors or genetic operators, etc.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-5 
+\end{DoxySince}
+
+
+Definition at line 32 of file Evolution\-Evaluator.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_a1dc266bf9517cbaf2dd766cc452c8096}{\index{org\-::jgap\-::audit\-::\-Evolution\-Evaluator@{org\-::jgap\-::audit\-::\-Evolution\-Evaluator}!Evolution\-Evaluator@{Evolution\-Evaluator}}
+\index{Evolution\-Evaluator@{Evolution\-Evaluator}!org::jgap::audit::EvolutionEvaluator@{org\-::jgap\-::audit\-::\-Evolution\-Evaluator}}
+\subsubsection[{Evolution\-Evaluator}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-audit.\-Evolution\-Evaluator.\-Evolution\-Evaluator (
+\begin{DoxyParamCaption}
+\item[{{\bf Population\-History\-Indexed}}]{a\-\_\-monitor\-Data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_a1dc266bf9517cbaf2dd766cc452c8096}
+
+
+Definition at line 40 of file Evolution\-Evaluator.\-java.
+
+
+
+References org.\-jgap.\-audit.\-Evolution\-Evaluator.\-evolution\-Indexes, and org.\-jgap.\-audit.\-Evolution\-Evaluator.\-m\-\_\-monitor\-Data.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_a411341e5eb1abbec8e0995d8fb49727a}{\index{org\-::jgap\-::audit\-::\-Evolution\-Evaluator@{org\-::jgap\-::audit\-::\-Evolution\-Evaluator}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!org::jgap::audit::EvolutionEvaluator@{org\-::jgap\-::audit\-::\-Evolution\-Evaluator}}
+\subsubsection[{evaluate}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-audit.\-Evolution\-Evaluator.\-evaluate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_a411341e5eb1abbec8e0995d8fb49727a}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000033}{Todo}]use chrom\-I\-Ds and chrom\-Track \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000034}{Todo}]\end{DoxyRefDesc}
+
+
+Definition at line 48 of file Evolution\-Evaluator.\-java.
+
+
+
+References org.\-jgap.\-audit.\-Evolution\-Evaluator.\-gather\-Chromosomes\-I\-Ds(), and org.\-jgap.\-audit.\-Evolution\-Evaluator.\-track\-Chromosomes().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_a411341e5eb1abbec8e0995d8fb49727a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_a33f904c1c2e7ac20bd340feef425c159}{\index{org\-::jgap\-::audit\-::\-Evolution\-Evaluator@{org\-::jgap\-::audit\-::\-Evolution\-Evaluator}!gather\-Chromosomes\-I\-Ds@{gather\-Chromosomes\-I\-Ds}}
+\index{gather\-Chromosomes\-I\-Ds@{gather\-Chromosomes\-I\-Ds}!org::jgap::audit::EvolutionEvaluator@{org\-::jgap\-::audit\-::\-Evolution\-Evaluator}}
+\subsubsection[{gather\-Chromosomes\-I\-Ds}]{\setlength{\rightskip}{0pt plus 5cm}Map$<$String, Map$<${\bf I\-Chromosome}, List$<$Integer$>$ $>$ $>$ org.\-jgap.\-audit.\-Evolution\-Evaluator.\-gather\-Chromosomes\-I\-Ds (
+\begin{DoxyParamCaption}
+\item[{Map$<$ Integer, Map $>$}]{a\-\_\-data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_a33f904c1c2e7ac20bd340feef425c159}
+For all chromosomes\-: Gather their I\-Ds and the list of indexes of the evolution rounds they appeared in. Normally, a chromosome with a specific unique I\-D just appears within one single generation. The reason is, that, normally, in selection and genetic operator, the chromosomes' I\-Ds change, because the chromosomes are cloned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-data} & monitoring data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result of investigation 
+\end{DoxyReturn}
+
+
+Definition at line 197 of file Evolution\-Evaluator.\-java.
+
+
+
+Referenced by org.\-jgap.\-audit.\-Evolution\-Evaluator.\-evaluate().
+
+\hypertarget{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_ac4654f0d7b2ca9f360ce0ecdb7ebfb94}{\index{org\-::jgap\-::audit\-::\-Evolution\-Evaluator@{org\-::jgap\-::audit\-::\-Evolution\-Evaluator}!track\-Chromosomes@{track\-Chromosomes}}
+\index{track\-Chromosomes@{track\-Chromosomes}!org::jgap::audit::EvolutionEvaluator@{org\-::jgap\-::audit\-::\-Evolution\-Evaluator}}
+\subsubsection[{track\-Chromosomes}]{\setlength{\rightskip}{0pt plus 5cm}Map$<${\bf I\-Chromosome}, Map$<$Integer, List$<${\bf I\-Chromosome}$>$ $>$ $>$ org.\-jgap.\-audit.\-Evolution\-Evaluator.\-track\-Chromosomes (
+\begin{DoxyParamCaption}
+\item[{Map$<$ Integer, Map $>$}]{a\-\_\-data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_ac4654f0d7b2ca9f360ce0ecdb7ebfb94}
+Tracks the originator chain of each chromosome in the final population. The originator chain potentially begins with the first generation. A chromosome could virtually have as many originators as there are evolutions (minus one), or it could have zero originators. The latter case means the chromosome was just created in the final population.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-data} & population (evolution) data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the result of the investigation
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-5 
+\end{DoxySince}
+
+
+Definition at line 116 of file Evolution\-Evaluator.\-java.
+
+
+
+References org.\-jgap.\-audit.\-Evolution\-Monitor.\-C\-O\-N\-T\-E\-X\-T\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-C\-Y\-C\-L\-E.
+
+
+
+Referenced by org.\-jgap.\-audit.\-Evolution\-Evaluator.\-evaluate().
+
+\hypertarget{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_a5a2b533431aca9f07c73a2e46520a4cf}{\index{org\-::jgap\-::audit\-::\-Evolution\-Evaluator@{org\-::jgap\-::audit\-::\-Evolution\-Evaluator}!track\-Chromosomes@{track\-Chromosomes}}
+\index{track\-Chromosomes@{track\-Chromosomes}!org::jgap::audit::EvolutionEvaluator@{org\-::jgap\-::audit\-::\-Evolution\-Evaluator}}
+\subsubsection[{track\-Chromosomes}]{\setlength{\rightskip}{0pt plus 5cm}Map$<${\bf I\-Chromosome}, Map$<$Integer, List$<${\bf I\-Chromosome}$>$ $>$ $>$ org.\-jgap.\-audit.\-Evolution\-Evaluator.\-track\-Chromosomes (
+\begin{DoxyParamCaption}
+\item[{Map$<$ Integer, Map $>$}]{a\-\_\-data, }
+\item[{{\bf Population}}]{a\-\_\-pop}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_a5a2b533431aca9f07c73a2e46520a4cf}
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-data} & Map \\
+\hline
+{\em a\-\_\-pop} & \hyperlink{classorg_1_1jgap_1_1_population}{Population} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the result of the investigation
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-5 
+\end{DoxySince}
+
+
+Definition at line 135 of file Evolution\-Evaluator.\-java.
+
+
+
+References org.\-jgap.\-audit.\-Evolution\-Monitor.\-C\-O\-N\-T\-E\-X\-T\-\_\-\-E\-N\-D\-\_\-\-O\-F\-\_\-\-C\-Y\-C\-L\-E.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_a3bcd75b9231b782f81ed96c2cc1dd9ef}{\index{org\-::jgap\-::audit\-::\-Evolution\-Evaluator@{org\-::jgap\-::audit\-::\-Evolution\-Evaluator}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::audit::EvolutionEvaluator@{org\-::jgap\-::audit\-::\-Evolution\-Evaluator}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-audit.\-Evolution\-Evaluator.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-3 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_a3bcd75b9231b782f81ed96c2cc1dd9ef}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 34 of file Evolution\-Evaluator.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_accd4f76386641576b80ad5f2c6e94a10}{\index{org\-::jgap\-::audit\-::\-Evolution\-Evaluator@{org\-::jgap\-::audit\-::\-Evolution\-Evaluator}!evolution\-Indexes@{evolution\-Indexes}}
+\index{evolution\-Indexes@{evolution\-Indexes}!org::jgap::audit::EvolutionEvaluator@{org\-::jgap\-::audit\-::\-Evolution\-Evaluator}}
+\subsubsection[{evolution\-Indexes}]{\setlength{\rightskip}{0pt plus 5cm}List$<$Integer$>$ org.\-jgap.\-audit.\-Evolution\-Evaluator.\-evolution\-Indexes\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_accd4f76386641576b80ad5f2c6e94a10}
+
+
+Definition at line 38 of file Evolution\-Evaluator.\-java.
+
+
+
+Referenced by org.\-jgap.\-audit.\-Evolution\-Evaluator.\-Evolution\-Evaluator().
+
+\hypertarget{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_a5fabe529afcc7272b37aa940c9339817}{\index{org\-::jgap\-::audit\-::\-Evolution\-Evaluator@{org\-::jgap\-::audit\-::\-Evolution\-Evaluator}!m\-\_\-monitor\-Data@{m\-\_\-monitor\-Data}}
+\index{m\-\_\-monitor\-Data@{m\-\_\-monitor\-Data}!org::jgap::audit::EvolutionEvaluator@{org\-::jgap\-::audit\-::\-Evolution\-Evaluator}}
+\subsubsection[{m\-\_\-monitor\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Population\-History\-Indexed} org.\-jgap.\-audit.\-Evolution\-Evaluator.\-m\-\_\-monitor\-Data\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1audit_1_1_evolution_evaluator_a5fabe529afcc7272b37aa940c9339817}
+
+
+Definition at line 36 of file Evolution\-Evaluator.\-java.
+
+
+
+Referenced by org.\-jgap.\-audit.\-Evolution\-Evaluator.\-Evolution\-Evaluator().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/audit/\hyperlink{_evolution_evaluator_8java}{Evolution\-Evaluator.\-java}\end{DoxyCompactItemize}

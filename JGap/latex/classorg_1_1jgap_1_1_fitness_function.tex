@@ -1,0 +1,264 @@
+\hypertarget{classorg_1_1jgap_1_1_fitness_function}{\section{org.\-jgap.\-Fitness\-Function Class Reference}
+\label{classorg_1_1jgap_1_1_fitness_function}\index{org.\-jgap.\-Fitness\-Function@{org.\-jgap.\-Fitness\-Function}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-Fitness\-Function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1_fitness_function__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-Fitness\-Function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{classorg_1_1jgap_1_1_fitness_function__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classorg_1_1jgap_1_1_fitness_function_a05fff0534d3cfdccd1d4d96d8ba6dda2}{get\-Fitness\-Value} (final \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} a\-\_\-subject)
+\item 
+double \hyperlink{classorg_1_1jgap_1_1_fitness_function_adc5e20816cb3fd6f3486adb53b1e563d}{get\-Last\-Computed\-Fitness\-Value} ()
+\item 
+Object \hyperlink{classorg_1_1jgap_1_1_fitness_function_aa47c6f886479efc5ed5fe84eb7f9b5ca}{clone} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final double \hyperlink{classorg_1_1jgap_1_1_fitness_function_a5f1f23e6f8a0f9606aee5d52fac6a06b}{N\-O\-\_\-\-F\-I\-T\-N\-E\-S\-S\-\_\-\-V\-A\-L\-U\-E} = -\/1.\-0000000d
+\item 
+static final double \hyperlink{classorg_1_1jgap_1_1_fitness_function_a89cbf1ef4c08655f209ce69fde6731e7}{D\-E\-L\-T\-A} = 0.\-0000001d
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract double \hyperlink{classorg_1_1jgap_1_1_fitness_function_a0078e42480eac93729f906ac4dc185d9}{evaluate} (\hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} a\-\_\-subject)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classorg_1_1jgap_1_1_fitness_function_a80e29e5b948a1a6ed10c94965abf79a7}{m\-\_\-last\-Computed\-Fitness\-Value} = \hyperlink{classorg_1_1jgap_1_1_fitness_function_a5f1f23e6f8a0f9606aee5d52fac6a06b}{N\-O\-\_\-\-F\-I\-T\-N\-E\-S\-S\-\_\-\-V\-A\-L\-U\-E}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1_fitness_function_ab4a9c34ed3bbaabed749120536d897ba}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-22 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fitness functions are used to determine how optimal a particular solution is relative to other solutions. This abstract class should be extended and the \hyperlink{classorg_1_1jgap_1_1_fitness_function_a0078e42480eac93729f906ac4dc185d9}{evaluate()} method implemented. The fitness function is given a \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} to evaluate and should return a positive double that reflects its fitness value. The higher the value, the more fit the \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome}. The actual range of fitness values isn't important (other than the fact that they must be positive doubles)\-: it's the relative difference as a percentage that tends to determine the success or failure of a \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome}. So in other words, two Chromosomes with respective fitness values of 1 and 100 have the same relative fitness to each other as two Chromosomes with respective fitness values of 10 and 1000 (in each case, the first is 1\% as fit as the second). 
+
+Note\-: Two Chromosomes with equivalent sets of genes should always be assigned the same fitness value by any implementation of this interface.
+
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 35 of file Fitness\-Function.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1_fitness_function_aa47c6f886479efc5ed5fe84eb7f9b5ca}{\index{org\-::jgap\-::\-Fitness\-Function@{org\-::jgap\-::\-Fitness\-Function}!clone@{clone}}
+\index{clone@{clone}!org::jgap::FitnessFunction@{org\-::jgap\-::\-Fitness\-Function}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}Object org.\-jgap.\-Fitness\-Function.\-clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1_fitness_function_aa47c6f886479efc5ed5fe84eb7f9b5ca}
+Please override in your implementations!
+
+\begin{DoxyReturn}{Returns}
+deep clone of the current instance
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-2 
+\end{DoxySince}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1util_1_1_i_cloneable_aa7e7d62077e6428ad7904932b1b4f7d5}{org.\-jgap.\-util.\-I\-Cloneable}.
+
+
+
+Definition at line 113 of file Fitness\-Function.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover.\-clone().
+
+\hypertarget{classorg_1_1jgap_1_1_fitness_function_a0078e42480eac93729f906ac4dc185d9}{\index{org\-::jgap\-::\-Fitness\-Function@{org\-::jgap\-::\-Fitness\-Function}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!org::jgap::FitnessFunction@{org\-::jgap\-::\-Fitness\-Function}}
+\subsubsection[{evaluate}]{\setlength{\rightskip}{0pt plus 5cm}abstract double org.\-jgap.\-Fitness\-Function.\-evaluate (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Chromosome}}]{a\-\_\-subject}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{classorg_1_1jgap_1_1_fitness_function_a0078e42480eac93729f906ac4dc185d9}
+Determine the fitness of the given \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} instance. The higher the return value, the more fit the instance. This method should always return the same fitness value for two equivalent \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} instances.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-subject} & the \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} instance to evaluate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+positive double reflecting the fitness rating of the given \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome}. Note that if a non-\/positive double is returned, a Runtime\-Exception should be generated
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 (until 1.\-1\-: return type int) 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1_genotype_test_1_1_test2_function_ac741afc698abf042df1f9944c4de9b64}{org.\-jgap.\-Genotype\-Test.\-Test2\-Function}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_test_1_1_dummy_fitness_function_a2747fc89c0b198c7ed5123d9f7257163}{org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover\-Test.\-Dummy\-Fitness\-Function}, \hyperlink{classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_test_1_1_truth_table_fitness_function_impl_ada3bae7de32db125a917447b1680482f}{org.\-jgap.\-impl.\-fitness.\-Truth\-Table\-Fitness\-Function\-Test.\-Truth\-Table\-Fitness\-Function\-Impl}, \hyperlink{classorg_1_1jgap_1_1impl_1_1fitness_1_1_truth_table_fitness_function_a3f159f68ac2f247c18d1e62ff030c56c}{org.\-jgap.\-impl.\-fitness.\-Truth\-Table\-Fitness\-Function}, \hyperlink{classorg_1_1jgap_1_1_j_g_a_p_test_case_1_1_test_fitness_function_a394849df24473b2a23c394f46024e817}{org.\-jgap.\-J\-G\-A\-P\-Test\-Case.\-Test\-Fitness\-Function}, \hyperlink{classorg_1_1jgap_1_1_fitness_function_test_1_1_fitness_function_impl_a03ea7e09f08e84fbdf1b40ad53242516}{org.\-jgap.\-Fitness\-Function\-Test.\-Fitness\-Function\-Impl}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_static_fitness_function_a0be7d9763e3cd063933c2ac39c742b41}{org.\-jgap.\-impl.\-Static\-Fitness\-Function}, \hyperlink{classorg_1_1jgap_1_1perf_1_1_test_overall_performance_fitness_func_ad03ee237768a581313bb05c1a7fdf481}{org.\-jgap.\-perf.\-Test\-Overall\-Performance\-Fitness\-Func}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_random_fitness_function_a946f5cf586ad067f029a4ab65f45f1f0}{org.\-jgap.\-impl.\-Random\-Fitness\-Function}, and \hyperlink{classorg_1_1jgap_1_1impl_1_1job_1_1_max_function_a6b0344c8642af9170743d9be9a6509b8}{org.\-jgap.\-impl.\-job.\-Max\-Function}.
+
+
+
+Referenced by org.\-jgap.\-Fitness\-Function.\-get\-Fitness\-Value().
+
+\hypertarget{classorg_1_1jgap_1_1_fitness_function_a05fff0534d3cfdccd1d4d96d8ba6dda2}{\index{org\-::jgap\-::\-Fitness\-Function@{org\-::jgap\-::\-Fitness\-Function}!get\-Fitness\-Value@{get\-Fitness\-Value}}
+\index{get\-Fitness\-Value@{get\-Fitness\-Value}!org::jgap::FitnessFunction@{org\-::jgap\-::\-Fitness\-Function}}
+\subsubsection[{get\-Fitness\-Value}]{\setlength{\rightskip}{0pt plus 5cm}double org.\-jgap.\-Fitness\-Function.\-get\-Fitness\-Value (
+\begin{DoxyParamCaption}
+\item[{final {\bf I\-Chromosome}}]{a\-\_\-subject}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1_fitness_function_a05fff0534d3cfdccd1d4d96d8ba6dda2}
+Retrieves the fitness value of the given \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome}. The fitness value will be a positive double.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-subject} & the \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} for which to compute and return the fitness value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the fitness value of the given \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome}
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 (until 1.\-1\-: return type int) 
+\end{DoxySince}
+
+
+Definition at line 61 of file Fitness\-Function.\-java.
+
+
+
+References org.\-jgap.\-Fitness\-Function.\-evaluate(), and org.\-jgap.\-Fitness\-Function.\-m\-\_\-last\-Computed\-Fitness\-Value.
+
+
+
+Referenced by org.\-jgap.\-Fitness\-Function\-Test.\-test\-Get\-Fitness\-Value\-\_\-0().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1_fitness_function_a05fff0534d3cfdccd1d4d96d8ba6dda2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1_fitness_function_adc5e20816cb3fd6f3486adb53b1e563d}{\index{org\-::jgap\-::\-Fitness\-Function@{org\-::jgap\-::\-Fitness\-Function}!get\-Last\-Computed\-Fitness\-Value@{get\-Last\-Computed\-Fitness\-Value}}
+\index{get\-Last\-Computed\-Fitness\-Value@{get\-Last\-Computed\-Fitness\-Value}!org::jgap::FitnessFunction@{org\-::jgap\-::\-Fitness\-Function}}
+\subsubsection[{get\-Last\-Computed\-Fitness\-Value}]{\setlength{\rightskip}{0pt plus 5cm}double org.\-jgap.\-Fitness\-Function.\-get\-Last\-Computed\-Fitness\-Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1_fitness_function_adc5e20816cb3fd6f3486adb53b1e563d}
+\begin{DoxyReturn}{Returns}
+the last fitness value computed via method get\-Fitness\-Value( \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome}), or N\-O\-\_\-\-F\-I\-T\-N\-E\-S\-\_\-\-V\-A\-L\-U\-E if the former method has not been called yet
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-4 
+\end{DoxySince}
+
+
+Definition at line 84 of file Fitness\-Function.\-java.
+
+
+
+References org.\-jgap.\-Fitness\-Function.\-m\-\_\-last\-Computed\-Fitness\-Value.
+
+
+
+Referenced by org.\-jgap.\-Fitness\-Function\-Test.\-test\-Last\-Computed\-Value\-\_\-0().
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1_fitness_function_ab4a9c34ed3bbaabed749120536d897ba}{\index{org\-::jgap\-::\-Fitness\-Function@{org\-::jgap\-::\-Fitness\-Function}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::FitnessFunction@{org\-::jgap\-::\-Fitness\-Function}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-Fitness\-Function.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-22 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1_fitness_function_ab4a9c34ed3bbaabed749120536d897ba}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 38 of file Fitness\-Function.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1_fitness_function_a89cbf1ef4c08655f209ce69fde6731e7}{\index{org\-::jgap\-::\-Fitness\-Function@{org\-::jgap\-::\-Fitness\-Function}!D\-E\-L\-T\-A@{D\-E\-L\-T\-A}}
+\index{D\-E\-L\-T\-A@{D\-E\-L\-T\-A}!org::jgap::FitnessFunction@{org\-::jgap\-::\-Fitness\-Function}}
+\subsubsection[{D\-E\-L\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}final double org.\-jgap.\-Fitness\-Function.\-D\-E\-L\-T\-A = 0.\-0000001d\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1jgap_1_1_fitness_function_a89cbf1ef4c08655f209ce69fde6731e7}
+
+
+Definition at line 42 of file Fitness\-Function.\-java.
+
+
+
+Referenced by org.\-jgap.\-gp.\-impl.\-G\-P\-Population.\-determine\-Fittest\-Program\-Computed(), org.\-jgap.\-audit.\-Fitness\-Improvement\-Monitor.\-next\-Cycle(), and org.\-jgap.\-impl.\-Standard\-Post\-Selector.\-select().
+
+\hypertarget{classorg_1_1jgap_1_1_fitness_function_a80e29e5b948a1a6ed10c94965abf79a7}{\index{org\-::jgap\-::\-Fitness\-Function@{org\-::jgap\-::\-Fitness\-Function}!m\-\_\-last\-Computed\-Fitness\-Value@{m\-\_\-last\-Computed\-Fitness\-Value}}
+\index{m\-\_\-last\-Computed\-Fitness\-Value@{m\-\_\-last\-Computed\-Fitness\-Value}!org::jgap::FitnessFunction@{org\-::jgap\-::\-Fitness\-Function}}
+\subsubsection[{m\-\_\-last\-Computed\-Fitness\-Value}]{\setlength{\rightskip}{0pt plus 5cm}double org.\-jgap.\-Fitness\-Function.\-m\-\_\-last\-Computed\-Fitness\-Value = {\bf N\-O\-\_\-\-F\-I\-T\-N\-E\-S\-S\-\_\-\-V\-A\-L\-U\-E}\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1_fitness_function_a80e29e5b948a1a6ed10c94965abf79a7}
+The fitness value computed during the previous run 
+
+Definition at line 47 of file Fitness\-Function.\-java.
+
+
+
+Referenced by org.\-jgap.\-Fitness\-Function.\-get\-Fitness\-Value(), and org.\-jgap.\-Fitness\-Function.\-get\-Last\-Computed\-Fitness\-Value().
+
+\hypertarget{classorg_1_1jgap_1_1_fitness_function_a5f1f23e6f8a0f9606aee5d52fac6a06b}{\index{org\-::jgap\-::\-Fitness\-Function@{org\-::jgap\-::\-Fitness\-Function}!N\-O\-\_\-\-F\-I\-T\-N\-E\-S\-S\-\_\-\-V\-A\-L\-U\-E@{N\-O\-\_\-\-F\-I\-T\-N\-E\-S\-S\-\_\-\-V\-A\-L\-U\-E}}
+\index{N\-O\-\_\-\-F\-I\-T\-N\-E\-S\-S\-\_\-\-V\-A\-L\-U\-E@{N\-O\-\_\-\-F\-I\-T\-N\-E\-S\-S\-\_\-\-V\-A\-L\-U\-E}!org::jgap::FitnessFunction@{org\-::jgap\-::\-Fitness\-Function}}
+\subsubsection[{N\-O\-\_\-\-F\-I\-T\-N\-E\-S\-S\-\_\-\-V\-A\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}final double org.\-jgap.\-Fitness\-Function.\-N\-O\-\_\-\-F\-I\-T\-N\-E\-S\-S\-\_\-\-V\-A\-L\-U\-E = -\/1.\-0000000d\hspace{0.3cm}{\ttfamily [static]}}}\label{classorg_1_1jgap_1_1_fitness_function_a5f1f23e6f8a0f9606aee5d52fac6a06b}
+
+
+Definition at line 40 of file Fitness\-Function.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-G\-A\-Breeder.\-bulk\-Function\-Evaluation(), org.\-jgap.\-gp.\-impl.\-G\-P\-Genotype.\-calc\-Fitness(), org.\-jgap.\-gp.\-impl.\-G\-P\-Population.\-determine\-Fittest\-Program\-Computed(), org.\-jgap.\-impl.\-G\-A\-Breeder.\-evolve(), org.\-jgap.\-audit.\-Fitness\-Improvement\-Monitor.\-Fitness\-Improvement\-Monitor(), org.\-jgap.\-gp.\-impl.\-G\-P\-Genotype.\-get\-Fittest\-Program(), org.\-jgap.\-gp.\-impl.\-G\-P\-Genotype.\-G\-P\-Genotype(), org.\-jgap.\-audit.\-Fitness\-Improvement\-Monitor.\-next\-Cycle(), org.\-jgap.\-Chromosome.\-random\-Initial\-Chromosome(), org.\-jgap.\-Chromosome\-For\-Testing.\-random\-Initial\-Chromosome2(), org.\-jgap.\-impl.\-G\-A\-Breeder.\-remove\-Chromosomes\-Without\-Fitness\-Value(), org.\-jgap.\-impl.\-G\-A\-Breeder.\-remove\-Evaluated\-Chromosomes(), org.\-jgap.\-impl.\-Standard\-Post\-Selector.\-select(), org.\-jgap.\-Fitness\-Function\-Test.\-test\-Last\-Computed\-Value\-\_\-0(), org.\-jgap.\-Chromosome\-Test.\-test\-Random\-Initial\-Chromosome\-\_\-3(), and org.\-jgap.\-Genotype\-Test.\-test\-To\-String\-\_\-0().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/\hyperlink{_fitness_function_8java}{Fitness\-Function.\-java}\end{DoxyCompactItemize}

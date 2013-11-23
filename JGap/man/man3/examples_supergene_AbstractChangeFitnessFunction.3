@@ -1,0 +1,200 @@
+.TH "examples.supergene.AbstractChangeFitnessFunction" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.supergene.AbstractChangeFitnessFunction \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits FitnessFunction\&.
+.PP
+Inherited by \fBexamples\&.supergene\&.SupergeneChangeFitnessFunction\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAbstractChangeFitnessFunction\fP (int a_targetAmount)"
+.br
+.ti -1c
+.RI "double \fBevaluate\fP (IChromosome a_subject)"
+.br
+.ti -1c
+.RI "int \fBamountOfChange\fP (IChromosome a_potentialSolution)"
+.br
+.ti -1c
+.RI "int \fBgetNumberOfCoinsAtGene\fP (IChromosome a_potentialSolution, int a_code)"
+.br
+.ti -1c
+.RI "int \fBgetTotalNumberOfCoins\fP (IChromosome a_potentialsolution)"
+.br
+.ti -1c
+.RI "abstract Gene \fBgetResponsibleGene\fP (IChromosome a_chromosome, int a_code)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "final int \fBm_targetAmount\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.2 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Sample fitness function for the MakeChange example, including supergenes\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.PP
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file AbstractChangeFitnessFunction\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.supergene\&.AbstractChangeFitnessFunction\&.AbstractChangeFitnessFunction (inta_targetAmount)\fC [inline]\fP"
+
+.PP
+Definition at line 31 of file AbstractChangeFitnessFunction\&.java\&.
+.PP
+References examples\&.supergene\&.AbstractChangeFitnessFunction\&.m_targetAmount\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int examples\&.supergene\&.AbstractChangeFitnessFunction\&.amountOfChange (IChromosomea_potentialSolution)\fC [inline]\fP"
+Calculates the total amount of change (in cents) represented by the given potential solution and returns that amount\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_potentialSolution\fP the potential solution to evaluate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the total amount of change (in cents) represented by the given solution 
+.RE
+.PP
+
+.PP
+Definition at line 97 of file AbstractChangeFitnessFunction\&.java\&.
+.PP
+References examples\&.supergene\&.AbstractSupergeneTest\&.DIMES, examples\&.supergene\&.AbstractChangeFitnessFunction\&.getNumberOfCoinsAtGene(), examples\&.supergene\&.AbstractSupergeneTest\&.NICKELS, examples\&.supergene\&.AbstractSupergeneTest\&.PENNIES, and examples\&.supergene\&.AbstractSupergeneTest\&.QUARTERS\&.
+.PP
+Referenced by examples\&.supergene\&.AbstractChangeFitnessFunction\&.evaluate()\&.
+.SS "double examples\&.supergene\&.AbstractChangeFitnessFunction\&.evaluate (IChromosomea_subject)\fC [inline]\fP"
+Determine the fitness of the given Chromosome instance\&. The higher the return value, the more fit the instance\&. This method should always return the same fitness value for two equivalent Chromosome instances\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_subject\fP the Chromosome instance to evaluate
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+positive integer reflecting the fitness rating of the given Chromosome 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 50 of file AbstractChangeFitnessFunction\&.java\&.
+.PP
+References examples\&.supergene\&.AbstractChangeFitnessFunction\&.amountOfChange(), examples\&.supergene\&.AbstractChangeFitnessFunction\&.getTotalNumberOfCoins(), and examples\&.supergene\&.AbstractChangeFitnessFunction\&.m_targetAmount\&.
+.SS "int examples\&.supergene\&.AbstractChangeFitnessFunction\&.getNumberOfCoinsAtGene (IChromosomea_potentialSolution, inta_code)\fC [inline]\fP"
+Retrieves the number of coins represented by the given potential solution at the given gene position\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_potentialSolution\fP the potential solution to evaluate 
+.br
+\fIa_code\fP index of gene 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of coins represented by the potential solution at the given gene position 
+.RE
+.PP
+
+.PP
+Definition at line 119 of file AbstractChangeFitnessFunction\&.java\&.
+.PP
+References examples\&.supergene\&.AbstractChangeFitnessFunction\&.getResponsibleGene()\&.
+.PP
+Referenced by examples\&.supergene\&.AbstractChangeFitnessFunction\&.amountOfChange(), and examples\&.supergene\&.AbstractChangeFitnessFunction\&.getTotalNumberOfCoins()\&.
+.SS "abstract Gene examples\&.supergene\&.AbstractChangeFitnessFunction\&.getResponsibleGene (IChromosomea_chromosome, inta_code)\fC [pure virtual]\fP"
+Get the gene, responsible for the number of coins, corresponding this code\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosome\fP Chromosome to evaluate 
+.br
+\fIa_code\fP index of Gene 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+responsible gene 
+.RE
+.PP
+
+.PP
+Implemented in \fBexamples\&.supergene\&.SupergeneChangeFitnessFunction\fP\&.
+.PP
+Referenced by examples\&.supergene\&.AbstractChangeFitnessFunction\&.getNumberOfCoinsAtGene()\&.
+.SS "int examples\&.supergene\&.AbstractChangeFitnessFunction\&.getTotalNumberOfCoins (IChromosomea_potentialsolution)\fC [inline]\fP"
+Returns the total number of coins represented by all of the genes in the given potential solution\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_potentialsolution\fP the potential solution to evaluate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the total number of coins represented by the given Chromosome 
+.RE
+.PP
+
+.PP
+Definition at line 132 of file AbstractChangeFitnessFunction\&.java\&.
+.PP
+References examples\&.supergene\&.AbstractSupergeneTest\&.DIMES, examples\&.supergene\&.AbstractChangeFitnessFunction\&.getNumberOfCoinsAtGene(), examples\&.supergene\&.AbstractSupergeneTest\&.NICKELS, examples\&.supergene\&.AbstractSupergeneTest\&.PENNIES, and examples\&.supergene\&.AbstractSupergeneTest\&.QUARTERS\&.
+.PP
+Referenced by examples\&.supergene\&.AbstractChangeFitnessFunction\&.evaluate(), and examples\&.supergene\&.AbstractSupergeneTest\&.report()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.supergene\&.AbstractChangeFitnessFunction\&.CVS_REVISION = '$Revision: 1\&.2 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 27 of file AbstractChangeFitnessFunction\&.java\&.
+.SS "final int examples\&.supergene\&.AbstractChangeFitnessFunction\&.m_targetAmount\fC [private]\fP"
+
+.PP
+Definition at line 29 of file AbstractChangeFitnessFunction\&.java\&.
+.PP
+Referenced by examples\&.supergene\&.AbstractChangeFitnessFunction\&.AbstractChangeFitnessFunction(), and examples\&.supergene\&.AbstractChangeFitnessFunction\&.evaluate()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,87 @@
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_test_1_1_dummy_fitness_function}{\section{org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover\-Test.\-Dummy\-Fitness\-Function Class Reference}
+\label{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_test_1_1_dummy_fitness_function}\index{org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover\-Test.\-Dummy\-Fitness\-Function@{org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover\-Test.\-Dummy\-Fitness\-Function}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover\-Test.\-Dummy\-Fitness\-Function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_test_1_1_dummy_fitness_function__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover\-Test.\-Dummy\-Fitness\-Function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_test_1_1_dummy_fitness_function__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_test_1_1_dummy_fitness_function_a2747fc89c0b198c7ed5123d9f7257163}{evaluate} (\hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} a\-\_\-subject)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class is a helper to allow testing class \hyperlink{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover}{Bulk\-Fitness\-Offset\-Remover}in a plainforward way\-: It only works with \hyperlink{classorg_1_1jgap_1_1impl_1_1_number_gene}{Number\-Gene}instances and returns the addition of their primitive values as the fitness value. This way we can configure a \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} with numerical value genes knowing their fitness and see what fitness values should be installed by the method \hyperlink{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover}{Bulk\-Fitness\-Offset\-Remover}. 
+
+Do not copy or use this implementation it is for this test only. It is tested itself by the outer class (\hyperlink{}{test\-Dummy\-Fitness\-Function()}) to ensure valid test results. 
+
+\begin{DoxyAuthor}{Author}
+Achim Westermann 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-2 
+\end{DoxySince}
+
+
+Definition at line 327 of file Bulk\-Fitness\-Offset\-Remover\-Test.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_test_1_1_dummy_fitness_function_a2747fc89c0b198c7ed5123d9f7257163}{\index{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover\-Test\-::\-Dummy\-Fitness\-Function@{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover\-Test\-::\-Dummy\-Fitness\-Function}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!org::jgap::impl::BulkFitnessOffsetRemoverTest::DummyFitnessFunction@{org\-::jgap\-::impl\-::\-Bulk\-Fitness\-Offset\-Remover\-Test\-::\-Dummy\-Fitness\-Function}}
+\subsubsection[{evaluate}]{\setlength{\rightskip}{0pt plus 5cm}double org.\-jgap.\-impl.\-Bulk\-Fitness\-Offset\-Remover\-Test.\-Dummy\-Fitness\-Function.\-evaluate (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Chromosome}}]{a\-\_\-subject}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classorg_1_1jgap_1_1impl_1_1_bulk_fitness_offset_remover_test_1_1_dummy_fitness_function_a2747fc89c0b198c7ed5123d9f7257163}
+Casts every \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} to the subtype of \hyperlink{classorg_1_1jgap_1_1impl_1_1_number_gene}{Number\-Gene} and calculates the sum of the numerical values obtained.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-subject} & the \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} to be evaluated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sum of all numerical values of the Genes within the given \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} that only consists of \hyperlink{classorg_1_1jgap_1_1impl_1_1_number_gene}{Number\-Gene} instances 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Class\-Cast\-Exception} & if a \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} within the \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} is not derived from \hyperlink{classorg_1_1jgap_1_1impl_1_1_number_gene}{Number\-Gene}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classorg_1_1jgap_1_1_fitness_function_a0078e42480eac93729f906ac4dc185d9}{org.\-jgap.\-Fitness\-Function\-::evaluate}(\hyperlink{classorg_1_1jgap_1_1_chromosome}{org.\-jgap.\-Chromosome}) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{classorg_1_1jgap_1_1_fitness_function_a0078e42480eac93729f906ac4dc185d9}{org.\-jgap.\-Fitness\-Function}.
+
+
+
+Definition at line 341 of file Bulk\-Fitness\-Offset\-Remover\-Test.\-java.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/tests/org/jgap/impl/\hyperlink{_bulk_fitness_offset_remover_test_8java}{Bulk\-Fitness\-Offset\-Remover\-Test.\-java}\end{DoxyCompactItemize}

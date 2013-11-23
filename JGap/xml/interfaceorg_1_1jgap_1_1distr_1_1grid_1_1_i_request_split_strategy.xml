@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_request_split_strategy" kind="interface" prot="public">
+    <compoundname>org::jgap::distr::grid::IRequestSplitStrategy</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_sample_split_strategy" prot="public" virt="non-virtual">org.jgap.distr.grid.SampleSplitStrategy</derivedcompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_request_split_strategy_1aef08b28ef1455714a55e1cdd37acca64" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.distr.grid.IRequestSplitStrategy.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.2 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/IRequestSplitStrategy.java" line="25" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/IRequestSplitStrategy.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_request_split_strategy_1ae43619a42994ddfad41f8fc6513cf44c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_request" kindref="compound">JGAPRequest</ref>[]</type>
+        <definition>JGAPRequest [] org.jgap.distr.grid.IRequestSplitStrategy.split</definition>
+        <argsstring>(JGAPRequest a_request)</argsstring>
+        <name>split</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_sample_split_strategy_1ac7d09ab06f415b984bfd93703755ebea">split</reimplementedby>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_request" kindref="compound">JGAPRequest</ref></type>
+          <declname>a_request</declname>
+        </param>
+        <exceptions> throws Exception</exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates single requests to be sent to workers. This is done by splitting a single request into several parts. Each parts is sort of a modified clone of the original (super) request</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request to split </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>single requests to be computed by workers </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/IRequestSplitStrategy.java" line="39" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Interface for a strategy how to split a work request into parts. Each part will be sent to a worker as an individual work request.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="14791">
+        <label>Serializable</label>
+      </node>
+      <node id="14790">
+        <label>org.jgap.distr.grid.IRequestSplitStrategy</label>
+        <link refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_request_split_strategy"/>
+        <childnode refid="14791" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14792">
+        <label>org.jgap.distr.grid.SampleSplitStrategy</label>
+        <link refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_sample_split_strategy"/>
+        <childnode refid="14790" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="14794">
+        <label>Serializable</label>
+      </node>
+      <node id="14793">
+        <label>org.jgap.distr.grid.IRequestSplitStrategy</label>
+        <link refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_request_split_strategy"/>
+        <childnode refid="14794" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/IRequestSplitStrategy.java" line="22" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/IRequestSplitStrategy.java" bodystart="21" bodyend="41"/>
+    <listofallmembers>
+      <member refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_request_split_strategy_1aef08b28ef1455714a55e1cdd37acca64" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::IRequestSplitStrategy</scope><name>CVS_REVISION</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_request_split_strategy_1ae43619a42994ddfad41f8fc6513cf44c" prot="public" virt="non-virtual"><scope>org::jgap::distr::grid::IRequestSplitStrategy</scope><name>split</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

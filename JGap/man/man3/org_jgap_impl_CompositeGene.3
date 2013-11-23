@@ -1,0 +1,953 @@
+.TH "org.jgap.impl.CompositeGene" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.CompositeGene \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.BaseGene\fP, \fBorg\&.jgap\&.ICompositeGene\fP, and \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCompositeGene\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCompositeGene\fP (\fBConfiguration\fP a_config)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCompositeGene\fP (final \fBConfiguration\fP a_config, final \fBGene\fP a_geneTypeAllowed)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBaddGene\fP (final \fBGene\fP a_gene)"
+.br
+.ti -1c
+.RI "\fBGene\fP \fBgetGeneTypeAllowed\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddGene\fP (final \fBGene\fP a_gene, final boolean a_strict)"
+.br
+.ti -1c
+.RI "boolean \fBremoveGeneByIdentity\fP (final \fBGene\fP a_gene)"
+.br
+.ti -1c
+.RI "boolean \fBremoveGene\fP (final \fBGene\fP a_gene)"
+.br
+.ti -1c
+.RI "void \fBcleanup\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetToRandomValue\fP (final \fBRandomGenerator\fP a_numberGenerator)"
+.br
+.ti -1c
+.RI "void \fBsetValueFromPersistentRepresentation\fP (String a_representation)  throws UnsupportedRepresentationException "
+.br
+.ti -1c
+.RI "String \fBgetPersistentRepresentation\fP ()  throws UnsupportedOperationException "
+.br
+.ti -1c
+.RI "Object \fBgetAllele\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetAllele\fP (Object a_newValue)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisEmpty\fP ()"
+.br
+.ti -1c
+.RI "\fBGene\fP \fBgeneAt\fP (int a_index)"
+.br
+.ti -1c
+.RI "List< \fBGene\fP > \fBgetGenes\fP ()"
+.br
+.ti -1c
+.RI "int \fBsize\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBcontainsGeneByIdentity\fP (\fBGene\fP gene)"
+.br
+.ti -1c
+.RI "void \fBapplyMutation\fP (int a_index, double a_percentage)"
+.br
+.ti -1c
+.RI "int \fBhashCode\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetBusinessKey\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBGENE_DELIMITER\fP = '#'"
+.br
+.ti -1c
+.RI "static final String \fBGENE_DELIMITER_HEADING\fP = '<'"
+.br
+.ti -1c
+.RI "static final String \fBGENE_DELIMITER_CLOSING\fP = '>'"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGene\fP \fBcreateGene\fP (String a_geneClassName, String a_persistentRepresentation)  throws Exception "
+.br
+.ti -1c
+.RI "\fBGene\fP \fBnewGeneInternal\fP ()"
+.br
+.ti -1c
+.RI "Object \fBgetInternalValue\fP ()"
+.br
+.in -1c
+.SS "Static Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static final List \fBsplit\fP (String a_string)  throws UnsupportedRepresentationException "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBGene\fP \fBm_geneTypeAllowed\fP"
+.br
+.ti -1c
+.RI "List< \fBGene\fP > \fBm_genes\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.60 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Ordered container for multiple genes Has the same interface as a single gene and could be used accordingly\&. Use the \fBaddGene(Gene)\fP method to add single genes (possibly CompositeGenes) after construction, an empty \fBCompositeGene\fP without genes makes no sense\&. Beware that there are two equalities defined for a \fBCompositeGene\fP in respect to its contained genes: a) Two genes are (only) equal if they are identical b) Two genes are (seen as) equal if their equals method returns true
+.PP
+This influences several methods such as addGene\&. Notice that it is safer to use addGene(a_gene, false) than addGene(a_gene, true) because the second variant only allows to add genes not seen as equal to already added genes in respect to their equals function\&. But: the equals function returns true for two different DoubleGenes (e\&.g\&.) just after their creation\&. If no specific (and hopefully different) allele is set for these DoubleGenes they are seen as equal!
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.PP
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 38 of file CompositeGene\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.CompositeGene\&.CompositeGene () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Default constructor\&.
+.PP
+Attention: The configuration used is the one set with the static method Genotype\&.setConfiguration\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 82 of file CompositeGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGene\&.compareTo(), and org\&.jgap\&.impl\&.CompositeGene\&.newGeneInternal()\&.
+.SS "org\&.jgap\&.impl\&.CompositeGene\&.CompositeGene (\fBConfiguration\fPa_config) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 94 of file CompositeGene\&.java\&.
+.SS "org\&.jgap\&.impl\&.CompositeGene\&.CompositeGene (final \fBConfiguration\fPa_config, final \fBGene\fPa_geneTypeAllowed) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Allows to specify which \fBGene\fP implementation is allowed to be added to the \fBCompositeGene\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.br
+\fIa_geneTypeAllowed\fP the class of Genes to be allowed to be added to the \fBCompositeGene\fP
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 112 of file CompositeGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CompositeGene\&.m_genes, and org\&.jgap\&.impl\&.CompositeGene\&.m_geneTypeAllowed\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.impl\&.CompositeGene\&.addGene (final \fBGene\fPa_gene)\fC [inline]\fP"
+Adds a gene to the \fBCompositeGene\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_gene\fP the gene to add 
+.RE
+.PP
+
+.PP
+Definition at line 127 of file CompositeGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGene\&.setValueFromPersistentRepresentation()\&.
+.SS "void org\&.jgap\&.impl\&.CompositeGene\&.addGene (final \fBGene\fPa_gene, final booleana_strict)\fC [inline]\fP"
+Adds a gene to the \fBCompositeGene\fP's container\&. See comments in class header for additional details about equality (concerning 'strict' param\&.)
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_gene\fP the gene to be added 
+.br
+\fIa_strict\fP false: add the given gene except the gene itself already is contained within the \fBCompositeGene\fP's container\&. true: add the gene if there is no other gene being equal to the given gene in request to the \fBGene\fP's equals method
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 154 of file CompositeGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CompositeGene\&.containsGeneByIdentity(), org\&.jgap\&.BaseGene\&.equals(), and org\&.jgap\&.impl\&.CompositeGene\&.m_geneTypeAllowed\&.
+.SS "void org\&.jgap\&.impl\&.CompositeGene\&.applyMutation (inta_index, doublea_percentage)\fC [inline]\fP"
+Don't use this method, is makes no sense here\&. It is just there to satisfy the \fBGene\fP interface\&. Instead, loop over all contained genes and call their applyMutation method\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP does not matter here 
+.br
+\fIa_percentage\fP does not matter here
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 622 of file CompositeGene\&.java\&.
+.SS "void org\&.jgap\&.impl\&.CompositeGene\&.cleanup ()\fC [inline]\fP"
+Executed by the genetic engine when this \fBGene\fP instance is no longer needed and should perform any necessary resource cleanup\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 231 of file CompositeGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CompositeGene\&.m_genes, and org\&.jgap\&.impl\&.CompositeGene\&.size()\&.
+.SS "int org\&.jgap\&.impl\&.CompositeGene\&.compareTo (Objecta_other)\fC [inline]\fP"
+Compares this \fBCompositeGene\fP with the specified object for order\&. A false value is considered to be less than a true value\&. A null value is considered to be less than any non-null value\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the \fBCompositeGene\fP to be compared 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a negative integer, zero, or a positive integer as this object is less than, equal to, or greater than the specified object
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIClassCastException\fP if the specified object's type prevents it from being compared to this \fBCompositeGene\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 450 of file CompositeGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.compareApplicationData(), org\&.jgap\&.impl\&.CompositeGene\&.CompositeGene(), org\&.jgap\&.impl\&.CompositeGene\&.geneAt(), org\&.jgap\&.BaseGene\&.getApplicationData(), org\&.jgap\&.BaseGene\&.isCompareApplicationData(), org\&.jgap\&.impl\&.CompositeGene\&.isEmpty(), and org\&.jgap\&.impl\&.CompositeGene\&.size()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGeneTest\&.testCompareTo_0(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testCompareTo_1(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testCompareTo_2(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testCompareTo_3_2(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testCompareTo_4(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testCompareTo_5(), and org\&.jgap\&.impl\&.CompositeGeneTest\&.testCompareTo_6()\&.
+.SS "boolean org\&.jgap\&.impl\&.CompositeGene\&.containsGeneByIdentity (\fBGene\fPgene)\fC [inline]\fP"
+Checks whether a specific gene is already contained\&. The determination will be done by checking for identity and not using the equal method!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIgene\fP the gene under test 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: the given gene object is contained
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 592 of file CompositeGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CompositeGene\&.geneAt(), and org\&.jgap\&.impl\&.CompositeGene\&.size()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGene\&.addGene()\&.
+.SS "\fBGene\fP org\&.jgap\&.impl\&.CompositeGene\&.createGene (Stringa_geneClassName, Stringa_persistentRepresentation) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Creates a new instance of gene\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_geneClassName\fP name of the gene class 
+.br
+\fIa_persistentRepresentation\fP persistent representation of the gene to create (could be obtained via getPersistentRepresentation)
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+newly created gene 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Definition at line 319 of file CompositeGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getConfiguration()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGene\&.setValueFromPersistentRepresentation()\&.
+.SS "\fBGene\fP org\&.jgap\&.impl\&.CompositeGene\&.geneAt (inta_index)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP index to return the gene at 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the gene at the given index
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.ICompositeGene\fP\&.
+.PP
+Definition at line 557 of file CompositeGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGene\&.compareTo(), org\&.jgap\&.impl\&.CompositeGene\&.containsGeneByIdentity(), org\&.jgap\&.impl\&.CompositeGene\&.hashCode(), org\&.jgap\&.impl\&.GaussianMutationOperator\&.operate(), org\&.jgap\&.impl\&.CompositeGene\&.removeGeneByIdentity(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testGetGenes_1(), and org\&.jgap\&.impl\&.CompositeGeneTest\&.testPersistentPresentation_1()\&.
+.SS "Object org\&.jgap\&.impl\&.CompositeGene\&.getAllele ()\fC [inline]\fP"
+Retrieves the value represented by this \fBGene\fP\&. All values returned by this class will be Vector instances\&. Each element of the Vector represents the allele of the corresponding gene in the \fBCompositeGene\fP's container
+.PP
+\fBReturns:\fP
+.RS 4
+the value of this \fBGene\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 367 of file CompositeGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CompositeGene\&.m_genes, and org\&.jgap\&.impl\&.CompositeGene\&.size()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGeneTest\&.testGetAllele_1(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testGetAllele_2(), org\&.jgap\&.impl\&.AveragingCrossoverOperatorTest\&.testOperate_2(), org\&.jgap\&.impl\&.InversionOperatorTest\&.testOperate_2(), org\&.jgap\&.impl\&.CrossoverOperatorTest\&.testOperate_2(), and org\&.jgap\&.impl\&.AveragingCrossoverOperatorTest\&.testOperate_4()\&.
+.SS "String org\&.jgap\&.impl\&.CompositeGene\&.getBusinessKey ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+business key
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IBusinessKey\fP\&.
+.PP
+Definition at line 697 of file CompositeGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CompositeGene\&.GENE_DELIMITER_CLOSING, and org\&.jgap\&.impl\&.CompositeGene\&.GENE_DELIMITER_HEADING\&.
+.SS "List<\fBGene\fP> org\&.jgap\&.impl\&.CompositeGene\&.getGenes ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+list of genes contained in the \fBCompositeGene\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 568 of file CompositeGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CompositeGene\&.m_genes\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGeneTest\&.testGetGenes_1()\&.
+.SS "\fBGene\fP org\&.jgap\&.impl\&.CompositeGene\&.getGeneTypeAllowed ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the gene type allowed, or null if any type allowed
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 137 of file CompositeGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CompositeGene\&.m_geneTypeAllowed\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGeneTest\&.testAddGene_2(), and org\&.jgap\&.impl\&.CompositeGeneTest\&.testConstruct_0()\&.
+.SS "Object org\&.jgap\&.impl\&.CompositeGene\&.getInternalValue ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+This method is not called internally because \fBBaseGene\&.getAllele()\fP is overridden here! 
+.PP
+\fBReturns:\fP
+.RS 4
+always null 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Definition at line 692 of file CompositeGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGeneTest\&.testGetAllele_3()\&.
+.SS "String org\&.jgap\&.impl\&.CompositeGene\&.getPersistentRepresentation () throws UnsupportedOperationException\fC [inline]\fP"
+See interface \fBGene\fP for description\&.
+.PP
+\fBReturns:\fP
+.RS 4
+string representation of this \fBGene\fP's current state 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.PP
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.PP
+Definition at line 339 of file CompositeGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.encode(), org\&.jgap\&.impl\&.CompositeGene\&.GENE_DELIMITER, org\&.jgap\&.impl\&.CompositeGene\&.GENE_DELIMITER_CLOSING, and org\&.jgap\&.impl\&.CompositeGene\&.GENE_DELIMITER_HEADING\&.
+.SS "int org\&.jgap\&.impl\&.CompositeGene\&.hashCode ()\fC [inline]\fP"
+Retrieves the hash code value for this \fBGene\fP\&.
+.PP
+\fBReturns:\fP
+.RS 4
+this \fBGene\fP's hash code
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 677 of file CompositeGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CompositeGene\&.geneAt(), and org\&.jgap\&.impl\&.CompositeGene\&.size()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGeneTest\&.testHashCode_0()\&.
+.SS "boolean org\&.jgap\&.impl\&.CompositeGene\&.isEmpty ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+true: no genes contained, false otherwise
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 546 of file CompositeGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGene\&.compareTo()\&.
+.SS "\fBGene\fP org\&.jgap\&.impl\&.CompositeGene\&.newGeneInternal ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Provides an implementation-independent means for creating new \fBGene\fP instances\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a new \fBGene\fP instance of the same type and with the same setup as this concrete \fBGene\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Definition at line 418 of file CompositeGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CompositeGene\&.CompositeGene(), org\&.jgap\&.BaseGene\&.getConfiguration(), org\&.jgap\&.BaseGene\&.getConstraintChecker(), and org\&.jgap\&.impl\&.CompositeGene\&.m_genes\&.
+.SS "boolean org\&.jgap\&.impl\&.CompositeGene\&.removeGene (final \fBGene\fPa_gene)\fC [inline]\fP"
+Removes the given gene from the collection of genes\&. The gene is removed if another gene exists that is equal to the given gene in respect to the equals method of the gene\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_gene\fP the gene to be removed 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: given gene found and removed
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 220 of file CompositeGene\&.java\&.
+.SS "boolean org\&.jgap\&.impl\&.CompositeGene\&.removeGeneByIdentity (final \fBGene\fPa_gene)\fC [inline]\fP"
+Removes the given gene from the collection of genes\&. The gene is only removed if an object of the same identity is contained\&. The equals method is not used here intentionally\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_gene\fP the gene to be removed 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: given gene found and removed
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 193 of file CompositeGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CompositeGene\&.geneAt(), and org\&.jgap\&.impl\&.CompositeGene\&.size()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGeneTest\&.testRemoveGeneByIdentity_0(), and org\&.jgap\&.impl\&.CompositeGeneTest\&.testRemoveGeneByIdentity_1()\&.
+.SS "void org\&.jgap\&.impl\&.CompositeGene\&.setAllele (Objecta_newValue)\fC [inline]\fP"
+Sets the value of the contained Genes to the new given value\&. This class expects the value to be of a Vector type\&. Each element of the Vector must conform with the type of the gene in the \fBCompositeGene\fP's container at the corresponding position\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_newValue\fP the new value of this \fBGene\fP instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 389 of file CompositeGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getConstraintChecker(), and org\&.jgap\&.impl\&.CompositeGene\&.m_genes\&.
+.SS "void org\&.jgap\&.impl\&.CompositeGene\&.setToRandomValue (final \fBRandomGenerator\fPa_numberGenerator)\fC [inline]\fP"
+See interface \fBGene\fP for description\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_numberGenerator\fP the random number generator that should be used to create any random values\&. It's important to use this generator to maintain the user's flexibility to configure the genetic engine to use the random number generator of their choice
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 251 of file CompositeGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CompositeGene\&.m_genes, and org\&.jgap\&.impl\&.CompositeGene\&.size()\&.
+.SS "void org\&.jgap\&.impl\&.CompositeGene\&.setValueFromPersistentRepresentation (Stringa_representation) throws \fBUnsupportedRepresentationException\fP\fC [inline]\fP"
+See interface \fBGene\fP for description\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_representation\fP the string representation retrieved from a prior call to the \fBgetPersistentRepresentation()\fP method
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBUnsupportedRepresentationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.PP
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.PP
+Definition at line 275 of file CompositeGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CompositeGene\&.addGene(), org\&.jgap\&.impl\&.CompositeGene\&.createGene(), org\&.jgap\&.BaseGene\&.decode(), org\&.jgap\&.impl\&.CompositeGene\&.GENE_DELIMITER, and org\&.jgap\&.impl\&.CompositeGene\&.split()\&.
+.SS "int org\&.jgap\&.impl\&.CompositeGene\&.size ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the number of genes contained
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 578 of file CompositeGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGene\&.cleanup(), org\&.jgap\&.impl\&.CompositeGene\&.compareTo(), org\&.jgap\&.impl\&.CompositeGene\&.containsGeneByIdentity(), org\&.jgap\&.impl\&.CompositeGene\&.getAllele(), org\&.jgap\&.impl\&.CompositeGene\&.hashCode(), org\&.jgap\&.impl\&.CompositeGene\&.removeGeneByIdentity(), org\&.jgap\&.impl\&.CompositeGene\&.setToRandomValue(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testAddGene_0(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testAddGene_1(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testAddGene_2(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testAddGene_4(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testCleanup_0(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testCleanup_1(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testGetGenes_1(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testPersistentPresentation_2(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testPersistentPresentation_7(), and org\&.jgap\&.impl\&.CompositeGeneTest\&.testRemoveGeneByIdentity_1()\&.
+.SS "static final List org\&.jgap\&.impl\&.CompositeGene\&.split (Stringa_string) throws \fBUnsupportedRepresentationException\fP\fC [inline]\fP, \fC [static]\fP, \fC [protected]\fP"
+Splits a_string into individual gene representations\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_string\fP the string to split 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the elements of the returned array are the persistent representation strings of the gene's components 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBUnsupportedRepresentationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 644 of file CompositeGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CompositeGene\&.GENE_DELIMITER_CLOSING, and org\&.jgap\&.impl\&.CompositeGene\&.GENE_DELIMITER_HEADING\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGene\&.setValueFromPersistentRepresentation()\&.
+.SS "String org\&.jgap\&.impl\&.CompositeGene\&.toString ()\fC [inline]\fP"
+Retrieves a string representation of this \fBCompositeGene\fP's value that may be useful for display purposes\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+string representation of this \fBCompositeGene\fP's value\&. Every contained gene's string representation is delimited by the given delimiter
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.PP
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 522 of file CompositeGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.CompositeGene\&.GENE_DELIMITER, and org\&.jgap\&.impl\&.CompositeGene\&.m_genes\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGeneTest\&.testToString_0(), and org\&.jgap\&.impl\&.CompositeGeneTest\&.testToString_1()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.CompositeGene\&.CVS_REVISION = '$Revision: 1\&.60 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 42 of file CompositeGene\&.java\&.
+.SS "final String org\&.jgap\&.impl\&.CompositeGene\&.GENE_DELIMITER = '#'\fC [static]\fP"
+This field separates gene class name from the gene persistent representation string\&. '*' does not work properly with URLEncoder! 
+.PP
+Definition at line 48 of file CompositeGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGenePersistentReprTest\&.createSampleNestedGene(), org\&.jgap\&.impl\&.CompositeGene\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.CompositeGene\&.setValueFromPersistentRepresentation(), org\&.jgap\&.impl\&.StringGeneTest\&.testPersistentRepresentation_5(), and org\&.jgap\&.impl\&.CompositeGene\&.toString()\&.
+.SS "final String org\&.jgap\&.impl\&.CompositeGene\&.GENE_DELIMITER_CLOSING = '>'\fC [static]\fP"
+Represents the closing delimiter that is used to separate genes in the persistent representation of \fBCompositeGene\fP instances\&. 
+.PP
+Definition at line 60 of file CompositeGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGene\&.getBusinessKey(), org\&.jgap\&.impl\&.CompositeGene\&.getPersistentRepresentation(), and org\&.jgap\&.impl\&.CompositeGene\&.split()\&.
+.SS "final String org\&.jgap\&.impl\&.CompositeGene\&.GENE_DELIMITER_HEADING = '<'\fC [static]\fP"
+Represents the heading delimiter that is used to separate genes in the persistent representation of \fBCompositeGene\fP instances\&. 
+.PP
+Definition at line 54 of file CompositeGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGene\&.getBusinessKey(), org\&.jgap\&.impl\&.CompositeGene\&.getPersistentRepresentation(), and org\&.jgap\&.impl\&.CompositeGene\&.split()\&.
+.SS "List<\fBGene\fP> org\&.jgap\&.impl\&.CompositeGene\&.m_genes\fC [private]\fP"
+The genes contained in this \fBCompositeGene\fP
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 70 of file CompositeGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGene\&.cleanup(), org\&.jgap\&.impl\&.CompositeGene\&.CompositeGene(), org\&.jgap\&.impl\&.CompositeGene\&.getAllele(), org\&.jgap\&.impl\&.CompositeGene\&.getGenes(), org\&.jgap\&.impl\&.CompositeGene\&.newGeneInternal(), org\&.jgap\&.impl\&.CompositeGene\&.setAllele(), org\&.jgap\&.impl\&.CompositeGene\&.setToRandomValue(), and org\&.jgap\&.impl\&.CompositeGene\&.toString()\&.
+.SS "\fBGene\fP org\&.jgap\&.impl\&.CompositeGene\&.m_geneTypeAllowed\fC [private]\fP"
+
+.PP
+Definition at line 62 of file CompositeGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.CompositeGene\&.addGene(), org\&.jgap\&.impl\&.CompositeGene\&.CompositeGene(), and org\&.jgap\&.impl\&.CompositeGene\&.getGeneTypeAllowed()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

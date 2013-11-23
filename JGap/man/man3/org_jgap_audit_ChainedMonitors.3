@@ -1,0 +1,240 @@
+.TH "org.jgap.audit.ChainedMonitors" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.audit.ChainedMonitors \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.audit\&.IEvolutionMonitor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChainedMonitors\fP (List< \fBIEvolutionMonitor\fP > a_monitors, int a_positiveMonitorsRequired)"
+.br
+.ti -1c
+.RI "boolean \fBnextCycle\fP (\fBPopulation\fP a_pop, List< String > a_messages)"
+.br
+.ti -1c
+.RI "void \fBstart\fP (\fBConfiguration\fP a_config)"
+.br
+.ti -1c
+.RI "void \fBevent\fP (String a_monitorEvent, int a_evolutionNo, Object[] a_information)"
+.br
+.ti -1c
+.RI "\fBPopulationHistoryIndexed\fP \fBgetPopulations\fP ()"
+.br
+.ti -1c
+.RI "List< \fBIEvolutionMonitor\fP > \fBgetMonitors\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "List< \fBIEvolutionMonitor\fP > \fBm_monitors\fP"
+.br
+.ti -1c
+.RI "int \fBm_positiveMonitorsRequired\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.4 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A meta monitor that chains together given monitors and executes them subsequently\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file ChainedMonitors\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.audit\&.ChainedMonitors\&.ChainedMonitors (List< \fBIEvolutionMonitor\fP >a_monitors, inta_positiveMonitorsRequired)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_monitors\fP sequence of monitors to use 
+.br
+\fIa_positiveMonitorsRequired\fP number of monitors that must return true in nextCycle in order to let the evolution continue\&. If this parameter equals one, it means we have an or-operation, if it equals the number of monitors, we have an and-operation\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 43 of file ChainedMonitors\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.ChainedMonitors\&.m_monitors, and org\&.jgap\&.audit\&.ChainedMonitors\&.m_positiveMonitorsRequired\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.audit\&.ChainedMonitors\&.event (Stringa_monitorEvent, inta_evolutionNo, Object[]a_information)\fC [inline]\fP"
+Called whenever it's worth monitoring\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_monitorEvent\fP see constants at top of class \fBIEvolutionMonitor\fP 
+.br
+\fIa_evolutionNo\fP the index of the evolution round (1, 2, \&.\&.\&.) 
+.br
+\fIa_information\fP event-specific information
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.audit\&.IEvolutionMonitor\fP\&.
+.PP
+Definition at line 116 of file ChainedMonitors\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.ChainedMonitors\&.m_monitors\&.
+.SS "List<\fBIEvolutionMonitor\fP> org\&.jgap\&.audit\&.ChainedMonitors\&.getMonitors ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+List of monitors registered
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 139 of file ChainedMonitors\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.ChainedMonitors\&.m_monitors\&.
+.SS "\fBPopulationHistoryIndexed\fP org\&.jgap\&.audit\&.ChainedMonitors\&.getPopulations ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+null, use \fBgetMonitors()\fP and then call each monitor's method
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.audit\&.IEvolutionMonitor\fP\&.
+.PP
+Definition at line 129 of file ChainedMonitors\&.java\&.
+.SS "boolean org\&.jgap\&.audit\&.ChainedMonitors\&.nextCycle (\fBPopulation\fPa_pop, List< String >a_messages)\fC [inline]\fP"
+Called after another evolution cycle has been executed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pop\fP the currently evolved population 
+.br
+\fIa_messages\fP the monitor can append messages here to indicate why it asks evolution to stop
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: continue with the evolution; false: stop evolution
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.audit\&.IEvolutionMonitor\fP\&.
+.PP
+Definition at line 73 of file ChainedMonitors\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.ChainedMonitors\&.m_monitors, and org\&.jgap\&.audit\&.ChainedMonitors\&.m_positiveMonitorsRequired\&.
+.SS "void org\&.jgap\&.audit\&.ChainedMonitors\&.start (\fBConfiguration\fPa_config)\fC [inline]\fP"
+Called just before the evolution starts\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration used 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.audit\&.IEvolutionMonitor\fP\&.
+.PP
+Definition at line 100 of file ChainedMonitors\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.ChainedMonitors\&.m_monitors\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.audit\&.ChainedMonitors\&.CVS_REVISION = '$Revision: 1\&.4 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file ChainedMonitors\&.java\&.
+.SS "List<\fBIEvolutionMonitor\fP> org\&.jgap\&.audit\&.ChainedMonitors\&.m_monitors\fC [private]\fP"
+
+.PP
+Definition at line 28 of file ChainedMonitors\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.ChainedMonitors\&.ChainedMonitors(), org\&.jgap\&.audit\&.ChainedMonitors\&.event(), org\&.jgap\&.audit\&.ChainedMonitors\&.getMonitors(), org\&.jgap\&.audit\&.ChainedMonitors\&.nextCycle(), and org\&.jgap\&.audit\&.ChainedMonitors\&.start()\&.
+.SS "int org\&.jgap\&.audit\&.ChainedMonitors\&.m_positiveMonitorsRequired\fC [private]\fP"
+
+.PP
+Definition at line 30 of file ChainedMonitors\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.ChainedMonitors\&.ChainedMonitors(), and org\&.jgap\&.audit\&.ChainedMonitors\&.nextCycle()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

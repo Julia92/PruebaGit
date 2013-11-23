@@ -1,0 +1,131 @@
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_l_ecuyer}{\section{org.\-jgap.\-util.\-random\-L\-Ecuyer Class Reference}
+\label{classorg_1_1jgap_1_1util_1_1random_l_ecuyer}\index{org.\-jgap.\-util.\-random\-L\-Ecuyer@{org.\-jgap.\-util.\-random\-L\-Ecuyer}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-util.\-random\-L\-Ecuyer\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classorg_1_1jgap_1_1util_1_1random_l_ecuyer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-util.\-random\-L\-Ecuyer\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classorg_1_1jgap_1_1util_1_1random_l_ecuyer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1util_1_1random_l_ecuyer_acc7d2d5b8cde7de0a580b1d9ded91799}{random\-L\-Ecuyer} ()
+\item 
+\hyperlink{classorg_1_1jgap_1_1util_1_1random_l_ecuyer_a51d64e7303a6f6c7eb7a880de3be7af0}{random\-L\-Ecuyer} (long seed)  throws Illegal\-Argument\-Exception 
+\item 
+void \hyperlink{classorg_1_1jgap_1_1util_1_1random_l_ecuyer_a951ef034c3579306fadfaf7785e6b1c8}{set\-Seed} (long seed)  throws Illegal\-Argument\-Exception 
+\item 
+byte \hyperlink{classorg_1_1jgap_1_1util_1_1random_l_ecuyer_aea42f1e0206083a4b8943bd3ec50972d}{next\-Byte} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of a {\bfseries \hyperlink{classorg_1_1jgap_1_1util_1_1random_x}{random\-X}}-\/compliant class using L'Ecuyer's two-\/sequence generator with a Bays-\/\-Durham shuffle, as described on page 282 of Press et al., $<$cite$>$Numerical Recipes in C$<$/cite$>$, 2nd edition. Their implementation was constrained by the absence of a 64-\/bit integer data type. Since Java guarantees a {\ttfamily long} to be 64 bit, we can use L'Ecuyer's multiplier and modulus directly, rather than flailing around with Schrage's algorithm. Further, 64-\/bit {\ttfamily long} arithmetic allows us to directly combine the results from the two generators by adding and taking the modulus of one of them, bypassing the subtract and test for negative gimmick used in $<$cite$>$Numerical Recipes$<$/cite$>$.
+
+For additional details, see L'Ecuyer's original 1968 paper at page 742 of $<$cite$>$Communications of the A\-C\-M$<$/cite$>$, Vol. 31.
+
+Designed and implemented in July 1996 by \href{http://www.fourmilab.ch/}{\tt John Walker}, \href{mailto:kelvin@fourmilab.ch}{\tt kelvin@fourmilab.\-ch}. 
+
+Definition at line 27 of file random\-L\-Ecuyer.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_l_ecuyer_acc7d2d5b8cde7de0a580b1d9ded91799}{\index{org\-::jgap\-::util\-::random\-L\-Ecuyer@{org\-::jgap\-::util\-::random\-L\-Ecuyer}!random\-L\-Ecuyer@{random\-L\-Ecuyer}}
+\index{random\-L\-Ecuyer@{random\-L\-Ecuyer}!org::jgap::util::randomLEcuyer@{org\-::jgap\-::util\-::random\-L\-Ecuyer}}
+\subsubsection[{random\-L\-Ecuyer}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-util.\-random\-L\-Ecuyer.\-random\-L\-Ecuyer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1random_l_ecuyer_acc7d2d5b8cde7de0a580b1d9ded91799}
+Creates a new pseudorandom number generator, seeded from the current time. 
+
+Definition at line 51 of file random\-L\-Ecuyer.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_l_ecuyer_a51d64e7303a6f6c7eb7a880de3be7af0}{\index{org\-::jgap\-::util\-::random\-L\-Ecuyer@{org\-::jgap\-::util\-::random\-L\-Ecuyer}!random\-L\-Ecuyer@{random\-L\-Ecuyer}}
+\index{random\-L\-Ecuyer@{random\-L\-Ecuyer}!org::jgap::util::randomLEcuyer@{org\-::jgap\-::util\-::random\-L\-Ecuyer}}
+\subsubsection[{random\-L\-Ecuyer}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-util.\-random\-L\-Ecuyer.\-random\-L\-Ecuyer (
+\begin{DoxyParamCaption}
+\item[{long}]{seed}
+\end{DoxyParamCaption}
+) throws Illegal\-Argument\-Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1random_l_ecuyer_a51d64e7303a6f6c7eb7a880de3be7af0}
+\begin{DoxyVerb}    Creates a new pseudorandom number generator with a
+    specified nonzero seed.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & initial seed for the generator \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 62 of file random\-L\-Ecuyer.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_l_ecuyer_aea42f1e0206083a4b8943bd3ec50972d}{\index{org\-::jgap\-::util\-::random\-L\-Ecuyer@{org\-::jgap\-::util\-::random\-L\-Ecuyer}!next\-Byte@{next\-Byte}}
+\index{next\-Byte@{next\-Byte}!org::jgap::util::randomLEcuyer@{org\-::jgap\-::util\-::random\-L\-Ecuyer}}
+\subsubsection[{next\-Byte}]{\setlength{\rightskip}{0pt plus 5cm}byte org.\-jgap.\-util.\-random\-L\-Ecuyer.\-next\-Byte (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classorg_1_1jgap_1_1util_1_1random_l_ecuyer_aea42f1e0206083a4b8943bd3ec50972d}
+\begin{DoxyVerb}    Get next byte from generator.
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+the next byte from the generator. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classorg_1_1jgap_1_1util_1_1random_x_a3ef715392cb00b38bba43e5abc5ab845}{org.\-jgap.\-util.\-random\-X}.
+
+
+
+Definition at line 104 of file random\-L\-Ecuyer.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_l_ecuyer_a951ef034c3579306fadfaf7785e6b1c8}{\index{org\-::jgap\-::util\-::random\-L\-Ecuyer@{org\-::jgap\-::util\-::random\-L\-Ecuyer}!set\-Seed@{set\-Seed}}
+\index{set\-Seed@{set\-Seed}!org::jgap::util::randomLEcuyer@{org\-::jgap\-::util\-::random\-L\-Ecuyer}}
+\subsubsection[{set\-Seed}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-util.\-random\-L\-Ecuyer.\-set\-Seed (
+\begin{DoxyParamCaption}
+\item[{long}]{seed}
+\end{DoxyParamCaption}
+) throws Illegal\-Argument\-Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1random_l_ecuyer_a951ef034c3579306fadfaf7785e6b1c8}
+\begin{DoxyVerb}    Set seed for generator.  Subsequent values will be based
+    on the given nonzero seed.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & seed for the generator \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 75 of file random\-L\-Ecuyer.\-java.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/util/\hyperlink{random_l_ecuyer_8java}{random\-L\-Ecuyer.\-java}\end{DoxyCompactItemize}

@@ -1,0 +1,963 @@
+.TH "org.jgap.distr.grid.gp.JGAPRequestGP" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.grid.gp.JGAPRequestGP \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits WorkRequest, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBJGAPRequestGP\fP (String a_name, String a_id, int a_chunk, \fBIGridConfigurationGP\fP a_config, \fBIWorkerEvolveStrategyGP\fP a_strategy)"
+.br
+.ti -1c
+.RI "\fBJGAPRequestGP\fP (String name, String a_id, int a_chunk, \fBIGridConfigurationGP\fP a_config)"
+.br
+.ti -1c
+.RI "\fBJGAPRequestGP\fP (String a_name, String a_id, int a_chunk, \fBIGridConfigurationGP\fP a_config, GPPopulation a_pop, \fBIWorkerEvolveStrategyGP\fP a_strategy)"
+.br
+.ti -1c
+.RI "\fBJGAPRequestGP\fP (String a_name, String a_id, int a_chunk, \fBIGridConfigurationGP\fP a_config, GPPopulation a_pop)"
+.br
+.ti -1c
+.RI "void \fBsetEvolveStrategy\fP (\fBIWorkerEvolveStrategyGP\fP a_evolveStrategy)"
+.br
+.ti -1c
+.RI "\fBIWorkerEvolveStrategyGP\fP \fBgetWorkerEvolveStrategy\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetWorkerReturnStrategy\fP (\fBIWorkerReturnStrategyGP\fP a_strategy)"
+.br
+.ti -1c
+.RI "\fBIWorkerReturnStrategyGP\fP \fBgetWorkerReturnStrategy\fP ()"
+.br
+.ti -1c
+.RI "GridWorkerFeedback \fBgetWorkerFeedback\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetWorkerFeedback\fP (GridWorkerFeedback a_feedback)"
+.br
+.ti -1c
+.RI "void \fBsetGenotypeInitializer\fP (\fBIGenotypeInitializerGP\fP a_initializer)"
+.br
+.ti -1c
+.RI "\fBIGenotypeInitializerGP\fP \fBgetGenotypeInitializer\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPopulation\fP (GPPopulation a_pop)"
+.br
+.ti -1c
+.RI "\fBGPConfiguration\fP \fBgetConfiguration\fP ()"
+.br
+.ti -1c
+.RI "\fBIGridConfigurationGP\fP \fBgetGridConfiguration\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetConfiguration\fP (\fBGPConfiguration\fP a_conf)"
+.br
+.ti -1c
+.RI "GPPopulation \fBgetPopulation\fP ()"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "\fBJGAPRequestGP\fP \fBnewInstance\fP (String a_name, String a_id, int a_chunk)"
+.br
+.ti -1c
+.RI "int \fBgetChunk\fP ()"
+.br
+.ti -1c
+.RI "\fBMasterInfo\fP \fBgetRequesterInfo\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetRequesterInfo\fP (\fBMasterInfo\fP a_requesterInfo)"
+.br
+.ti -1c
+.RI "String \fBgetID\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetRequestDate\fP (Date a_date)"
+.br
+.ti -1c
+.RI "Date \fBgetRequestDate\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDescription\fP (String a_descr)"
+.br
+.ti -1c
+.RI "String \fBgetDescription\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetMinFitness\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMinFitness\fP (double a_minFitness)"
+.br
+.ti -1c
+.RI "void \fBsetTitle\fP (String a_title)"
+.br
+.ti -1c
+.RI "String \fBgetTitle\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBIGridConfigurationGP\fP \fBm_config\fP"
+.br
+.ti -1c
+.RI "GPPopulation \fBm_pop\fP"
+.br
+.ti -1c
+.RI "\fBIWorkerEvolveStrategyGP\fP \fBm_evolveStrategy\fP"
+.br
+.ti -1c
+.RI "\fBIWorkerReturnStrategyGP\fP \fBm_returnStrategy\fP"
+.br
+.ti -1c
+.RI "\fBIGenotypeInitializerGP\fP \fBm_genotypeInitializer\fP"
+.br
+.ti -1c
+.RI "GridWorkerFeedback \fBm_workerFeedback\fP"
+.br
+.ti -1c
+.RI "int \fBm_chunk\fP"
+.br
+.ti -1c
+.RI "\fBMasterInfo\fP \fBm_requesterInfo\fP"
+.br
+.ti -1c
+.RI "String \fBm_id\fP"
+.br
+.ti -1c
+.RI "Date \fBm_requestDate\fP"
+.br
+.ti -1c
+.RI "String \fBm_description\fP"
+.br
+.ti -1c
+.RI "double \fBm_minFitness\fP"
+.br
+.ti -1c
+.RI "String \fBm_title\fP"
+.br
+.ti -1c
+.RI "Object \fBm_genericData\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.8 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+An instance that defines a request from which work packages are generated that are sent to workers in the grid\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file JGAPRequestGP\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.JGAPRequestGP (Stringa_name, Stringa_id, inta_chunk, \fBIGridConfigurationGP\fPa_config, \fBIWorkerEvolveStrategyGP\fPa_strategy)\fC [inline]\fP"
+Constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP textual description of request 
+.br
+\fIa_id\fP unique identification of request 
+.br
+\fIa_chunk\fP running index of request chunk, should be unique within an identification 
+.br
+\fIa_config\fP \fBConfiguration\fP 
+.br
+\fIa_strategy\fP the strategy to choose for evolution
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 73 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_chunk, org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_config, org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_evolveStrategy, and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_id\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.newInstance()\&.
+.SS "org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.JGAPRequestGP (Stringname, Stringa_id, inta_chunk, \fBIGridConfigurationGP\fPa_config)\fC [inline]\fP"
+Constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP String 
+.br
+\fIa_id\fP unique identification of request 
+.br
+\fIa_chunk\fP running index of request chunk, should be unique within an identification 
+.br
+\fIa_config\fP \fBConfiguration\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 95 of file JGAPRequestGP\&.java\&.
+.SS "org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.JGAPRequestGP (Stringa_name, Stringa_id, inta_chunk, \fBIGridConfigurationGP\fPa_config, GPPopulationa_pop, \fBIWorkerEvolveStrategyGP\fPa_strategy)\fC [inline]\fP"
+Constructor\&. Allows to specify a preset population with which the genotype will be initialized\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP textual description of request 
+.br
+\fIa_id\fP unique identification of request 
+.br
+\fIa_chunk\fP running index of request chunk, should be unique within an identification 
+.br
+\fIa_config\fP \fBConfiguration\fP 
+.br
+\fIa_pop\fP \fBPopulation\fP 
+.br
+\fIa_strategy\fP the strategy to choose for evolution
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 115 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_pop\&.
+.SS "org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.JGAPRequestGP (Stringa_name, Stringa_id, inta_chunk, \fBIGridConfigurationGP\fPa_config, GPPopulationa_pop)\fC [inline]\fP"
+Constructor\&. Allows to specify a preset population with which the genotype will be initialized\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP textual description of request 
+.br
+\fIa_id\fP unique identification of request 
+.br
+\fIa_chunk\fP running index of request chunk, should be unique within an identification 
+.br
+\fIa_config\fP \fBConfiguration\fP 
+.br
+\fIa_pop\fP \fBPopulation\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 136 of file JGAPRequestGP\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+deep clone of current instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 270 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getChunk(), org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getID(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.newInstance()\&.
+.SS "int org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getChunk ()\fC [inline]\fP"
+
+.PP
+Definition at line 302 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_chunk\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.clone()\&.
+.SS "\fBGPConfiguration\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getConfiguration ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the JGAP configuration set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 226 of file JGAPRequestGP\&.java\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getDescription ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+arbitrary description of the request
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 367 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_description\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.newInstance()\&.
+.SS "\fBIGenotypeInitializerGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getGenotypeInitializer ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the \fBIGenotypeInitializer\fP set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 203 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_genotypeInitializer\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.newInstance()\&.
+.SS "\fBIGridConfigurationGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getGridConfiguration ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the grid configuration set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 236 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_config\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getID ()\fC [inline]\fP"
+
+.PP
+Definition at line 327 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_id\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.clone()\&.
+.SS "double org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getMinFitness ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the minimum fitness wanted for results to be returned as response to this request
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 378 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_minFitness\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.newInstance()\&.
+.SS "GPPopulation org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getPopulation ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the population used to initialize new requests\&. May be null or empty
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 260 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_pop\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.newInstance()\&.
+.SS "Date org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getRequestDate ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the date the request was initialized
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 347 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_requestDate\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.newInstance()\&.
+.SS "\fBMasterInfo\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getRequesterInfo ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+information about the requester
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 312 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_requesterInfo\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.newInstance()\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getTitle ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the title set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 409 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_title\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.newInstance()\&.
+.SS "\fBIWorkerEvolveStrategyGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getWorkerEvolveStrategy ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the evolve strategy set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 161 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_evolveStrategy\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.newInstance()\&.
+.SS "GridWorkerFeedback org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getWorkerFeedback ()\fC [inline]\fP"
+
+.PP
+Definition at line 179 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_workerFeedback\&.
+.SS "\fBIWorkerReturnStrategyGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getWorkerReturnStrategy ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the strategy which part of a result is returned by a worker
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 175 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_returnStrategy\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.newInstance()\&.
+.SS "\fBJGAPRequestGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.newInstance (Stringa_name, Stringa_id, inta_chunk)\fC [inline]\fP"
+Creates a new instance using the given name and ID\&. Reason for this method: ID cannot be set other than with construction!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP textual description of request 
+.br
+\fIa_id\fP unique identification of request 
+.br
+\fIa_chunk\fP running index of request chunk, should be unique within an identification 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+newly created \fBJGAPRequest\fP object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 288 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getDescription(), org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getGenotypeInitializer(), org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getMinFitness(), org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getPopulation(), org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getRequestDate(), org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getRequesterInfo(), org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getTitle(), org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getWorkerEvolveStrategy(), org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getWorkerReturnStrategy(), org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.JGAPRequestGP(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_config\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.clone()\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.setConfiguration (\fBGPConfiguration\fPa_conf)\fC [inline]\fP"
+Set a modified JGAP configuration\&. Should only be used to re-set a configuration because some parts have not been serialized\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the JGAP \fBConfiguration\fP to set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 249 of file JGAPRequestGP\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.setDescription (Stringa_descr)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_descr\fP arbitrary description of the request
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 357 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_description\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.setEvolveStrategy (\fBIWorkerEvolveStrategyGP\fPa_evolveStrategy)\fC [inline]\fP"
+Sets the strategy to use for executing the evolution with a worker for a single request\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_evolveStrategy\fP the evolve strategy to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 151 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_evolveStrategy\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.setGenotypeInitializer (\fBIGenotypeInitializerGP\fPa_initializer)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_initializer\fP the \fBIGenotypeInitializer\fP to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 193 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_genotypeInitializer\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.setMinFitness (doublea_minFitness)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_minFitness\fP the minimum fitness wanted for results to be returned as response to this request
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 389 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_minFitness\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.setPopulation (GPPopulationa_pop)\fC [inline]\fP"
+Sets the \fBPopulation\fP to store in this request so that it can be passed to workers\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pop\fP the \fBPopulation\fP to store
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 216 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_pop\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.setRequestDate (Datea_date)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_date\fP date the request was initialized
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 337 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_requestDate\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.setRequesterInfo (\fBMasterInfo\fPa_requesterInfo)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_requesterInfo\fP set information about the requester
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 323 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_requesterInfo\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.setTitle (Stringa_title)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_title\fP the title to set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 399 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_title\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.setWorkerFeedback (GridWorkerFeedbacka_feedback)\fC [inline]\fP"
+
+.PP
+Definition at line 183 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_workerFeedback\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.setWorkerReturnStrategy (\fBIWorkerReturnStrategyGP\fPa_strategy)\fC [inline]\fP"
+
+.PP
+Definition at line 165 of file JGAPRequestGP\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_returnStrategy\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.CVS_REVISION = '$Revision: 1\&.8 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 30 of file JGAPRequestGP\&.java\&.
+.SS "int org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_chunk\fC [private]\fP"
+
+.PP
+Definition at line 44 of file JGAPRequestGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getChunk(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.JGAPRequestGP()\&.
+.SS "\fBIGridConfigurationGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_config\fC [private]\fP"
+
+.PP
+Definition at line 32 of file JGAPRequestGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getGridConfiguration(), org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.JGAPRequestGP(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.newInstance()\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_description\fC [private]\fP"
+
+.PP
+Definition at line 52 of file JGAPRequestGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getDescription(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.setDescription()\&.
+.SS "\fBIWorkerEvolveStrategyGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_evolveStrategy\fC [private]\fP"
+
+.PP
+Definition at line 36 of file JGAPRequestGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getWorkerEvolveStrategy(), org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.JGAPRequestGP(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.setEvolveStrategy()\&.
+.SS "Object org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_genericData\fC [private]\fP"
+
+.PP
+Definition at line 58 of file JGAPRequestGP\&.java\&.
+.SS "\fBIGenotypeInitializerGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_genotypeInitializer\fC [private]\fP"
+
+.PP
+Definition at line 40 of file JGAPRequestGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getGenotypeInitializer(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.setGenotypeInitializer()\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_id\fC [private]\fP"
+
+.PP
+Definition at line 48 of file JGAPRequestGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getID(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.JGAPRequestGP()\&.
+.SS "double org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_minFitness\fC [private]\fP"
+
+.PP
+Definition at line 54 of file JGAPRequestGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getMinFitness(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.setMinFitness()\&.
+.SS "GPPopulation org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_pop\fC [private]\fP"
+
+.PP
+Definition at line 34 of file JGAPRequestGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getPopulation(), org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.JGAPRequestGP(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.setPopulation()\&.
+.SS "Date org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_requestDate\fC [private]\fP"
+
+.PP
+Definition at line 50 of file JGAPRequestGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getRequestDate(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.setRequestDate()\&.
+.SS "\fBMasterInfo\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_requesterInfo\fC [private]\fP"
+
+.PP
+Definition at line 46 of file JGAPRequestGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getRequesterInfo(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.setRequesterInfo()\&.
+.SS "\fBIWorkerReturnStrategyGP\fP org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_returnStrategy\fC [private]\fP"
+
+.PP
+Definition at line 38 of file JGAPRequestGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getWorkerReturnStrategy(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.setWorkerReturnStrategy()\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_title\fC [private]\fP"
+
+.PP
+Definition at line 56 of file JGAPRequestGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getTitle(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.setTitle()\&.
+.SS "GridWorkerFeedback org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.m_workerFeedback\fC [private]\fP"
+
+.PP
+Definition at line 42 of file JGAPRequestGP\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.getWorkerFeedback(), and org\&.jgap\&.distr\&.grid\&.gp\&.JGAPRequestGP\&.setWorkerFeedback()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

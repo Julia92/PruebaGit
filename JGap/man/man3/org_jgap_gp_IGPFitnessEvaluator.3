@@ -1,0 +1,90 @@
+.TH "org.jgap.gp.IGPFitnessEvaluator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.IGPFitnessEvaluator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable\&.
+.PP
+Inherited by \fBorg\&.jgap\&.gp\&.impl\&.DefaultGPFitnessEvaluator\fP, and \fBorg\&.jgap\&.gp\&.impl\&.DeltaGPFitnessEvaluator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "boolean \fBisFitter\fP (double a_fitness_value1, double a_fitness_value2)"
+.br
+.ti -1c
+.RI "boolean \fBisFitter\fP (\fBIGPProgram\fP a_prog1, \fBIGPProgram\fP a_prog2)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.6 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Interface for a fitness evaluator used in a \fBGenotype\fP to determine how to interpret the fitness value\&. The fitness value can either be interpreted straight forward as a fitness indicator (the higher the better)\&. Or it could be seen as a defect rate (the lower the better)\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file IGPFitnessEvaluator\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "boolean org\&.jgap\&.gp\&.IGPFitnessEvaluator\&.isFitter (doublea_fitness_value1, doublea_fitness_value2)"
+Compares the first given fitness value with the second and returns true if the first one is fitter than the second one\&. Otherwise returns false\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_fitness_value1\fP first fitness value 
+.br
+\fIa_fitness_value2\fP second fitness value 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: first fitness value fitter than second
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 (until 1\&.1: input types int) 
+.RE
+.PP
+
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.GPGenotype\&.calcFitness(), org\&.jgap\&.gp\&.impl\&.GPProgramFitnessComparator\&.compare(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.determineFittestProgram(), org\&.jgap\&.gp\&.impl\&.GPPopulation\&.determineFittestProgramComputed(), and org\&.jgap\&.gp\&.impl\&.TournamentSelector\&.select()\&.
+.SS "boolean org\&.jgap\&.gp\&.IGPFitnessEvaluator\&.isFitter (\fBIGPProgram\fPa_prog1, \fBIGPProgram\fPa_prog2)"
+
+.PP
+Implemented in \fBorg\&.jgap\&.gp\&.impl\&.DeltaGPFitnessEvaluator\fP, and \fBorg\&.jgap\&.gp\&.impl\&.DefaultGPFitnessEvaluator\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.IGPFitnessEvaluator\&.CVS_REVISION = '$Revision: 1\&.6 $'\fC [static]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 24 of file IGPFitnessEvaluator\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

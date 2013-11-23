@@ -1,0 +1,388 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1data_1_1_document_builder_base" kind="class" prot="public" abstract="yes">
+    <compoundname>org::jgap::data::DocumentBuilderBase</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1data_1_1_document_builder_base_1a4a15b7fd875043a3c021b54766f9a8ca" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.data.DocumentBuilderBase.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.8 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000055"><xreftitle>Todo</xreftitle><xrefdescription><para>add new class DocumentCreatorBase that reads in data written by <ref refid="classorg_1_1jgap_1_1data_1_1_document_builder_base" kindref="compound">DocumentBuilderBase</ref> </para></xrefdescription></xrefsect>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/data/DocumentBuilderBase.java" line="27" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/data/DocumentBuilderBase.java" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1data_1_1_document_builder_base_1a9c17627652f63e842a01b23640244164" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.data.DocumentBuilderBase.buildDocument</definition>
+        <argsstring>(final IDataCreators a_dataholder, final Object a_document)</argsstring>
+        <name>buildDocument</name>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1data_1_1_i_data_creators" kindref="compound">IDataCreators</ref></type>
+          <declname>a_dataholder</declname>
+        </param>
+        <param>
+          <type>final Object</type>
+          <declname>a_document</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Builds a document from the given input (input data + existing document). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_dataholder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the input structure holding the data to be represented as a generic document </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_document</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the document to put the elements in </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the document built up by adding elements</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/data/DocumentBuilderBase.java" line="40" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/data/DocumentBuilderBase.java" bodystart="40" bodyend="53"/>
+        <references refid="classorg_1_1jgap_1_1data_1_1_document_builder_base_1af8fa5961d7a5d6531c085ffd4f9eb2bb" compoundref="_document_builder_base_8java" startline="66" endline="87">org.jgap.data.DocumentBuilderBase.doTraverse</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1data_1_1_document_builder_base_1af8fa5961d7a5d6531c085ffd4f9eb2bb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.data.DocumentBuilderBase.doTraverse</definition>
+        <argsstring>(final IDataElement a_elem, final Object a_document, final Object a_Element)</argsstring>
+        <name>doTraverse</name>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1data_1_1_i_data_element" kindref="compound">IDataElement</ref></type>
+          <declname>a_elem</declname>
+        </param>
+        <param>
+          <type>final Object</type>
+          <declname>a_document</declname>
+        </param>
+        <param>
+          <type>final Object</type>
+          <declname>a_Element</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recursive traversing over data tree containing elements to be transformed into tags. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_elem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="interfaceorg_1_1jgap_1_1data_1_1_i_data_element" kindref="compound">IDataElement</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_document</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Document </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_Element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Element </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/data/DocumentBuilderBase.java" line="66" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/data/DocumentBuilderBase.java" bodystart="66" bodyend="87"/>
+        <references refid="classorg_1_1jgap_1_1data_1_1_document_builder_base_1a0e1ea86e20b5ac3273c051fb4c2a86bd" compoundref="_document_builder_base_8java" startline="99" endline="113">org.jgap.data.DocumentBuilderBase.createElementGeneric</references>
+        <references refid="classorg_1_1jgap_1_1data_1_1_document_builder_base_1af3b9815c594048ebf431d69392432470">org.jgap.data.DocumentBuilderBase.setAttribute</references>
+        <referencedby refid="classorg_1_1jgap_1_1data_1_1_document_builder_base_1a9c17627652f63e842a01b23640244164" compoundref="_document_builder_base_8java" startline="40" endline="53">org.jgap.data.DocumentBuilderBase.buildDocument</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1data_1_1_document_builder_base_1a0e1ea86e20b5ac3273c051fb4c2a86bd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object org.jgap.data.DocumentBuilderBase.createElementGeneric</definition>
+        <argsstring>(final Object a_document, final Object a_element, final String a_tagName)</argsstring>
+        <name>createElementGeneric</name>
+        <param>
+          <type>final Object</type>
+          <declname>a_document</declname>
+        </param>
+        <param>
+          <type>final Object</type>
+          <declname>a_element</declname>
+        </param>
+        <param>
+          <type>final String</type>
+          <declname>a_tagName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generically creates an element (Template Method). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_document</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>could be used as factory to create the element with </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>null or existing element as template </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_tagName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of tag to create for the element </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>created element</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/data/DocumentBuilderBase.java" line="99" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/data/DocumentBuilderBase.java" bodystart="99" bodyend="113"/>
+        <references refid="classorg_1_1jgap_1_1data_1_1_document_builder_base_1a48956cd46c57c9385eb0ff415efb06ba">org.jgap.data.DocumentBuilderBase.createElement</references>
+        <references refid="classorg_1_1jgap_1_1data_1_1_document_builder_base_1a8e93e27975995198e29961ff13f8540c">org.jgap.data.DocumentBuilderBase.documentAppendChild</references>
+        <references refid="classorg_1_1jgap_1_1data_1_1_document_builder_base_1a99c384f0c43ac1d35d6a5270f642bec9">org.jgap.data.DocumentBuilderBase.elementAppendChild</references>
+        <referencedby refid="classorg_1_1jgap_1_1data_1_1_document_builder_base_1af8fa5961d7a5d6531c085ffd4f9eb2bb" compoundref="_document_builder_base_8java" startline="66" endline="87">org.jgap.data.DocumentBuilderBase.doTraverse</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1data_1_1_document_builder_base_1a8e93e27975995198e29961ff13f8540c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract Object</type>
+        <definition>abstract Object org.jgap.data.DocumentBuilderBase.documentAppendChild</definition>
+        <argsstring>(Object a_document, Object a_element)</argsstring>
+        <name>documentAppendChild</name>
+        <param>
+          <type>Object</type>
+          <declname>a_document</declname>
+        </param>
+        <param>
+          <type>Object</type>
+          <declname>a_element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Append a child to a given document. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_document</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to append element on (e.g. org.w3c.dom.Document) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to append to document (e.g. org.w3c.com.Element) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a_document with appended element (e.g. org.w3c.dom.Document)</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/data/DocumentBuilderBase.java" line="124" column="1"/>
+        <referencedby refid="classorg_1_1jgap_1_1data_1_1_document_builder_base_1a0e1ea86e20b5ac3273c051fb4c2a86bd" compoundref="_document_builder_base_8java" startline="99" endline="113">org.jgap.data.DocumentBuilderBase.createElementGeneric</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1data_1_1_document_builder_base_1a99c384f0c43ac1d35d6a5270f642bec9" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract Object</type>
+        <definition>abstract Object org.jgap.data.DocumentBuilderBase.elementAppendChild</definition>
+        <argsstring>(Object a_rootElement, Object a_childElement)</argsstring>
+        <name>elementAppendChild</name>
+        <param>
+          <type>Object</type>
+          <declname>a_rootElement</declname>
+        </param>
+        <param>
+          <type>Object</type>
+          <declname>a_childElement</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Append a child to a given element. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_rootElement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to append childElement on (e.g. org.w3c.com.Element) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_childElement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to append to rootElement (e.g. org.w3c.com.Element) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>rootElement with appended childElement (e.g. org.w3c.com.Element)</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/data/DocumentBuilderBase.java" line="136" column="1"/>
+        <referencedby refid="classorg_1_1jgap_1_1data_1_1_document_builder_base_1a0e1ea86e20b5ac3273c051fb4c2a86bd" compoundref="_document_builder_base_8java" startline="99" endline="113">org.jgap.data.DocumentBuilderBase.createElementGeneric</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1data_1_1_document_builder_base_1a48956cd46c57c9385eb0ff415efb06ba" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract Object</type>
+        <definition>abstract Object org.jgap.data.DocumentBuilderBase.createElement</definition>
+        <argsstring>(Object a_document, Object a_element, String a_tagName)</argsstring>
+        <name>createElement</name>
+        <param>
+          <type>Object</type>
+          <declname>a_document</declname>
+        </param>
+        <param>
+          <type>Object</type>
+          <declname>a_element</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>a_tagName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates an element with help for a given document. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_document</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>could be used as factory to create the element with </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>null or existing element as template </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_tagName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of tag to create for the element </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>created element</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/data/DocumentBuilderBase.java" line="149" column="1"/>
+        <referencedby refid="classorg_1_1jgap_1_1data_1_1_document_builder_base_1a0e1ea86e20b5ac3273c051fb4c2a86bd" compoundref="_document_builder_base_8java" startline="99" endline="113">org.jgap.data.DocumentBuilderBase.createElementGeneric</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1data_1_1_document_builder_base_1af3b9815c594048ebf431d69392432470" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract void</type>
+        <definition>abstract void org.jgap.data.DocumentBuilderBase.setAttribute</definition>
+        <argsstring>(Object a_element, String a_key, String a_value)</argsstring>
+        <name>setAttribute</name>
+        <param>
+          <type>Object</type>
+          <declname>a_element</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>a_key</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>a_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets an attribute for a given Element. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Element to set an attribute for (e.g. org.w3c.com.Element) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the key of the attribute </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value of the attribute</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/data/DocumentBuilderBase.java" line="162" column="1"/>
+        <referencedby refid="classorg_1_1jgap_1_1data_1_1_document_builder_base_1af8fa5961d7a5d6531c085ffd4f9eb2bb" compoundref="_document_builder_base_8java" startline="66" endline="87">org.jgap.data.DocumentBuilderBase.doTraverse</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/data/DocumentBuilderBase.java" line="22" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/data/DocumentBuilderBase.java" bodystart="22" bodyend="164"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1data_1_1_document_builder_base_1a9c17627652f63e842a01b23640244164" prot="public" virt="non-virtual"><scope>org::jgap::data::DocumentBuilderBase</scope><name>buildDocument</name></member>
+      <member refid="classorg_1_1jgap_1_1data_1_1_document_builder_base_1a48956cd46c57c9385eb0ff415efb06ba" prot="protected" virt="pure-virtual"><scope>org::jgap::data::DocumentBuilderBase</scope><name>createElement</name></member>
+      <member refid="classorg_1_1jgap_1_1data_1_1_document_builder_base_1a0e1ea86e20b5ac3273c051fb4c2a86bd" prot="private" virt="non-virtual"><scope>org::jgap::data::DocumentBuilderBase</scope><name>createElementGeneric</name></member>
+      <member refid="classorg_1_1jgap_1_1data_1_1_document_builder_base_1a4a15b7fd875043a3c021b54766f9a8ca" prot="private" virt="non-virtual"><scope>org::jgap::data::DocumentBuilderBase</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1data_1_1_document_builder_base_1a8e93e27975995198e29961ff13f8540c" prot="protected" virt="pure-virtual"><scope>org::jgap::data::DocumentBuilderBase</scope><name>documentAppendChild</name></member>
+      <member refid="classorg_1_1jgap_1_1data_1_1_document_builder_base_1af8fa5961d7a5d6531c085ffd4f9eb2bb" prot="private" virt="non-virtual"><scope>org::jgap::data::DocumentBuilderBase</scope><name>doTraverse</name></member>
+      <member refid="classorg_1_1jgap_1_1data_1_1_document_builder_base_1a99c384f0c43ac1d35d6a5270f642bec9" prot="protected" virt="pure-virtual"><scope>org::jgap::data::DocumentBuilderBase</scope><name>elementAppendChild</name></member>
+      <member refid="classorg_1_1jgap_1_1data_1_1_document_builder_base_1af3b9815c594048ebf431d69392432470" prot="protected" virt="pure-virtual"><scope>org::jgap::data::DocumentBuilderBase</scope><name>setAttribute</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,110 @@
+.TH "org.jgap.util.randomMCG" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.util.randomMCG \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.util\&.randomX\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBrandomMCG\fP ()"
+.br
+.ti -1c
+.RI "\fBrandomMCG\fP (long seed)  throws IllegalArgumentException "
+.br
+.ti -1c
+.RI "void \fBsetSeed\fP (long seed)  throws IllegalArgumentException "
+.br
+.ti -1c
+.RI "byte \fBnextByte\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implementation of a \fB\fBrandomX\fP\fP-compliant class using the 'Minimal Standard' multiplicative congruential generator of Park and Miller\&. [Park, S\&.K\&. and K\&.W\&. Miller, <cite>Communications of the ACM</cite> \fB31\fP, 1192-1201 (1988)\&.]
+.PP
+The generation algorithm is:
+.PP
+ \fII\*<j+1\*> \fP = (\fII\*<j\*> \fP × 16807) & 0x7FFFFFFF 
+.PP
+Note that the intermediate value of the multiplication by 16807 (7\*{5\*} ) exceeds that representable in 32 bits; this has deterred use of this generator in most portable languages\&. Fortunately, Java's \fClong\fP type is guaranteed to be 64 bits, so a straightforward and portable implementation is possible\&.
+.PP
+Designed and implemented in July 1996 by \fCJohn Walker\fP, \fCkelvin@fourmilab\&.ch\fP\&. 
+.PP
+Definition at line 31 of file randomMCG\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.util\&.randomMCG\&.randomMCG ()\fC [inline]\fP"
+Creates a new pseudorandom number generator, seeded from the current time\&. 
+.PP
+Definition at line 39 of file randomMCG\&.java\&.
+.SS "org\&.jgap\&.util\&.randomMCG\&.randomMCG (longseed) throws IllegalArgumentException\fC [inline]\fP"
+
+.PP
+.nf
+    Creates a new pseudorandom number generator with a
+    specified nonzero seed.
+
+.fi
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIseed\fP initial seed for the generator 
+.RE
+.PP
+
+.PP
+Definition at line 49 of file randomMCG\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "byte org\&.jgap\&.util\&.randomMCG\&.nextByte ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+.nf
+    Get next byte from generator.
+
+.fi
+.PP
+.PP
+\fBReturns:\fP
+.RS 4
+the next byte from the generator\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.randomX\fP\&.
+.PP
+Definition at line 79 of file randomMCG\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.randomMCG\&.setSeed()\&.
+.SS "void org\&.jgap\&.util\&.randomMCG\&.setSeed (longseed) throws IllegalArgumentException\fC [inline]\fP"
+
+.PP
+.nf
+    Set seed for generator.  Subsequent values will be based
+    on the given nonzero seed.
+
+.fi
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIseed\fP seed for the generator 
+.RE
+.PP
+
+.PP
+Definition at line 61 of file randomMCG\&.java\&.
+.PP
+References org\&.jgap\&.util\&.randomMCG\&.nextByte()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

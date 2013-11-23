@@ -1,0 +1,236 @@
+.TH "examples.gp.tictactoe.IfColor" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.tictactoe.IfColor \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandGene\fP, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIfColor\fP (final \fBGPConfiguration\fP a_conf, Class a_type, int a_color)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBIfColor\fP (final \fBGPConfiguration\fP a_conf, Class a_type, int a_color, int a_subChildType1, int a_subChildType2)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBIfColor\fP (final \fBGPConfiguration\fP a_conf, Class a_type, int a_color, int a_subReturnType, int[] a_subChildTypes)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "void \fBexecute_void\fP (\fBProgramChromosome\fP c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "int \fBexecute_int\fP (\fBProgramChromosome\fP c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "Class \fBgetChildType\fP (\fBIGPProgram\fP a_ind, int a_chromNum)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Class \fBm_type\fP"
+.br
+.ti -1c
+.RI "int \fBm_color\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.3 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The if-then construct\&. If-Condition is: if specific color, then execute X else do nothing\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file IfColor\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.gp\&.tictactoe\&.IfColor\&.IfColor (final \fBGPConfiguration\fPa_conf, Classa_type, inta_color) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 33 of file IfColor\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.IfColor\&.clone()\&.
+.SS "examples\&.gp\&.tictactoe\&.IfColor\&.IfColor (final \fBGPConfiguration\fPa_conf, Classa_type, inta_color, inta_subChildType1, inta_subChildType2) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Allows setting the sub child type\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP GPConfiguration 
+.br
+\fIa_type\fP Class 
+.br
+\fIa_color\fP int 
+.br
+\fIa_subChildType1\fP int 
+.br
+\fIa_subChildType2\fP int 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIInvalidConfigurationException\fP 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file IfColor\&.java\&.
+.SS "examples\&.gp\&.tictactoe\&.IfColor\&.IfColor (final \fBGPConfiguration\fPa_conf, Classa_type, inta_color, inta_subReturnType, int[]a_subChildTypes) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 57 of file IfColor\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.IfColor\&.m_color, examples\&.gp\&.tictactoe\&.IfColor\&.m_type, and org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object examples\&.gp\&.tictactoe\&.IfColor\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+clone of the current object instance 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 122 of file IfColor\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.getSubChildTypes(), org\&.jgap\&.gp\&.CommandGene\&.getSubReturnType(), examples\&.gp\&.tictactoe\&.IfColor\&.IfColor(), examples\&.gp\&.tictactoe\&.IfColor\&.m_color, and examples\&.gp\&.tictactoe\&.IfColor\&.m_type\&.
+.SS "int examples\&.gp\&.tictactoe\&.IfColor\&.execute_int (\fBProgramChromosome\fPc, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 96 of file IfColor\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), and examples\&.gp\&.tictactoe\&.IfColor\&.m_color\&.
+.SS "void examples\&.gp\&.tictactoe\&.IfColor\&.execute_void (\fBProgramChromosome\fPc, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 79 of file IfColor\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), org\&.jgap\&.gp\&.CommandGene\&.IntegerClass, org\&.jgap\&.gp\&.CommandGene\&.LongClass, examples\&.gp\&.tictactoe\&.IfColor\&.m_color, and examples\&.gp\&.tictactoe\&.IfColor\&.m_type\&.
+.SS "Class examples\&.gp\&.tictactoe\&.IfColor\&.getChildType (\fBIGPProgram\fPa_ind, inta_chromNum)\fC [inline]\fP"
+Determines which type a specific child of this command has\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ind\fP ignored here 
+.br
+\fIa_chromNum\fP index of child 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+type of the a_chromNum'th child
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 115 of file IfColor\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.IfColor\&.m_type, and org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.SS "String examples\&.gp\&.tictactoe\&.IfColor\&.getName ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+textual name of this command
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 75 of file IfColor\&.java\&.
+.SS "String examples\&.gp\&.tictactoe\&.IfColor\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 65 of file IfColor\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.IfColor\&.m_color\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.gp\&.tictactoe\&.IfColor\&.CVS_REVISION = '$Revision: 1\&.3 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 27 of file IfColor\&.java\&.
+.SS "int examples\&.gp\&.tictactoe\&.IfColor\&.m_color\fC [private]\fP"
+
+.PP
+Definition at line 31 of file IfColor\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.IfColor\&.clone(), examples\&.gp\&.tictactoe\&.IfColor\&.execute_int(), examples\&.gp\&.tictactoe\&.IfColor\&.execute_void(), examples\&.gp\&.tictactoe\&.IfColor\&.IfColor(), and examples\&.gp\&.tictactoe\&.IfColor\&.toString()\&.
+.SS "Class examples\&.gp\&.tictactoe\&.IfColor\&.m_type\fC [private]\fP"
+
+.PP
+Definition at line 29 of file IfColor\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.IfColor\&.clone(), examples\&.gp\&.tictactoe\&.IfColor\&.execute_void(), examples\&.gp\&.tictactoe\&.IfColor\&.getChildType(), and examples\&.gp\&.tictactoe\&.IfColor\&.IfColor()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

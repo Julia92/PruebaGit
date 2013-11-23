@@ -1,0 +1,199 @@
+.TH "org.jgap.audit.EvolutionEvaluator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.audit.EvolutionEvaluator \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEvolutionEvaluator\fP (\fBPopulationHistoryIndexed\fP a_monitorData)"
+.br
+.ti -1c
+.RI "void \fBevaluate\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Map< \fBIChromosome\fP, Map< Integer, 
+.br
+List< \fBIChromosome\fP > > > \fBtrackChromosomes\fP (Map< Integer, Map > a_data)"
+.br
+.ti -1c
+.RI "Map< \fBIChromosome\fP, Map< Integer, 
+.br
+List< \fBIChromosome\fP > > > \fBtrackChromosomes\fP (Map< Integer, Map > a_data, \fBPopulation\fP a_pop)"
+.br
+.ti -1c
+.RI "Map< String, Map< \fBIChromosome\fP, 
+.br
+List< Integer > > > \fBgatherChromosomesIDs\fP (Map< Integer, Map > a_data)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPopulationHistoryIndexed\fP \fBm_monitorData\fP"
+.br
+.ti -1c
+.RI "List< Integer > \fBevolutionIndexes\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.3 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Evaluates evolution progress thas has previously been tracked by \fBEvolutionMonitor\fP (or a similar instance)\&. This class regards a complete evolution, not just a single round\&. This is an optional way, another would be to just gather data per round and then display or evaluate the round-specific data\&. This class considers global (complete evolution) data because computations are executed on this data, like tracking chromosomes, evaluating the progress of selectors or genetic operators, etc\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 32 of file EvolutionEvaluator\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.audit\&.EvolutionEvaluator\&.EvolutionEvaluator (\fBPopulationHistoryIndexed\fPa_monitorData)\fC [inline]\fP"
+
+.PP
+Definition at line 40 of file EvolutionEvaluator\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.EvolutionEvaluator\&.evolutionIndexes, and org\&.jgap\&.audit\&.EvolutionEvaluator\&.m_monitorData\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.audit\&.EvolutionEvaluator\&.evaluate ()\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+use chromIDs and chromTrack 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 48 of file EvolutionEvaluator\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.EvolutionEvaluator\&.gatherChromosomesIDs(), and org\&.jgap\&.audit\&.EvolutionEvaluator\&.trackChromosomes()\&.
+.SS "Map<String, Map<\fBIChromosome\fP, List<Integer> > > org\&.jgap\&.audit\&.EvolutionEvaluator\&.gatherChromosomesIDs (Map< Integer, Map >a_data)\fC [inline]\fP, \fC [private]\fP"
+For all chromosomes: Gather their IDs and the list of indexes of the evolution rounds they appeared in\&. Normally, a chromosome with a specific unique ID just appears within one single generation\&. The reason is, that, normally, in selection and genetic operator, the chromosomes' IDs change, because the chromosomes are cloned\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_data\fP monitoring data 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+result of investigation 
+.RE
+.PP
+
+.PP
+Definition at line 197 of file EvolutionEvaluator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvolutionEvaluator\&.evaluate()\&.
+.SS "Map<\fBIChromosome\fP, Map<Integer, List<\fBIChromosome\fP> > > org\&.jgap\&.audit\&.EvolutionEvaluator\&.trackChromosomes (Map< Integer, Map >a_data)\fC [inline]\fP, \fC [private]\fP"
+Tracks the originator chain of each chromosome in the final population\&. The originator chain potentially begins with the first generation\&. A chromosome could virtually have as many originators as there are evolutions (minus one), or it could have zero originators\&. The latter case means the chromosome was just created in the final population\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_data\fP population (evolution) data 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the result of the investigation
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 116 of file EvolutionEvaluator\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.EvolutionMonitor\&.CONTEXT_END_OF_CYCLE\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvolutionEvaluator\&.evaluate()\&.
+.SS "Map<\fBIChromosome\fP, Map<Integer, List<\fBIChromosome\fP> > > org\&.jgap\&.audit\&.EvolutionEvaluator\&.trackChromosomes (Map< Integer, Map >a_data, \fBPopulation\fPa_pop)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_data\fP Map 
+.br
+\fIa_pop\fP \fBPopulation\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the result of the investigation
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 135 of file EvolutionEvaluator\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.EvolutionMonitor\&.CONTEXT_END_OF_CYCLE\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.audit\&.EvolutionEvaluator\&.CVS_REVISION = '$Revision: 1\&.3 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 34 of file EvolutionEvaluator\&.java\&.
+.SS "List<Integer> org\&.jgap\&.audit\&.EvolutionEvaluator\&.evolutionIndexes\fC [private]\fP"
+
+.PP
+Definition at line 38 of file EvolutionEvaluator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvolutionEvaluator\&.EvolutionEvaluator()\&.
+.SS "\fBPopulationHistoryIndexed\fP org\&.jgap\&.audit\&.EvolutionEvaluator\&.m_monitorData\fC [private]\fP"
+
+.PP
+Definition at line 36 of file EvolutionEvaluator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.EvolutionEvaluator\&.EvolutionEvaluator()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

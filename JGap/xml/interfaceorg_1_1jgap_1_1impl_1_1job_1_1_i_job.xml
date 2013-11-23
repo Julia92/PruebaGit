@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="interfaceorg_1_1jgap_1_1impl_1_1job_1_1_i_job" kind="interface" prot="public">
+    <compoundname>org::jgap::impl::job::IJob</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Runnable</basecompoundref>
+    <derivedcompoundref refid="interfaceorg_1_1jgap_1_1impl_1_1job_1_1_i_evolve_job" prot="public" virt="non-virtual">org.jgap.impl.job.IEvolveJob</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1impl_1_1job_1_1_job_base" prot="public" virt="non-virtual">org.jgap.impl.job.JobBase</derivedcompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="interfaceorg_1_1jgap_1_1impl_1_1job_1_1_i_job_1a8d76655b9eddf18c2cc184cb362dd0e3" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.impl.job.IJob.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.7 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/job/IJob.java" line="23" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/job/IJob.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1impl_1_1job_1_1_i_job_1a5318a1ce0e973553131c3cb268c8b3f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1impl_1_1job_1_1_job_result" kindref="compound">JobResult</ref></type>
+        <definition>JobResult org.jgap.impl.job.IJob.execute</definition>
+        <argsstring>(JobData a_data)</argsstring>
+        <name>execute</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job_1a15941e3a369e59b86a5688181875204d">execute</reimplementedby>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1impl_1_1job_1_1_job_data" kindref="compound">JobData</ref></type>
+          <declname>a_data</declname>
+        </param>
+        <exceptions> throws Exception</exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Executes a job.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generic input parameters, as needed </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result of execution</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in case of any error </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/job/IJob.java" line="33" column="1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1job_1_1_job_base_1a4395288c6b1143da26fc7edb5d2bc792" compoundref="_job_base_8java" startline="33" endline="45">org.jgap.impl.job.JobBase.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1impl_1_1job_1_1_i_job_1aee1614176eba42e6405b0ae1ce216754" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1impl_1_1job_1_1_job_data" kindref="compound">JobData</ref></type>
+        <definition>JobData org.jgap.impl.job.IJob.getJobData</definition>
+        <argsstring>()</argsstring>
+        <name>getJobData</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1job_1_1_job_base_1a95104e54e5fb2719a025cb95389d4805">getJobData</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/job/IJob.java" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1impl_1_1job_1_1_i_job_1adab19ae6b78cabf77f43aefb5aa74650" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.job.IJob.run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1job_1_1_job_base_1a4395288c6b1143da26fc7edb5d2bc792">run</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/job/IJob.java" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1impl_1_1job_1_1_i_job_1a9b72a2342b23ac0cfba5d41dde3ef8ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.job.IJob.isFinished</definition>
+        <argsstring>()</argsstring>
+        <name>isFinished</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1job_1_1_job_base_1a7a763c3c6874b7aff8f1643efc22fcf0">isFinished</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/job/IJob.java" line="40" column="1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1job_1_1_simple_job_consumer_1a2d4216f5e3957b29d2d5dbd66a56561a" compoundref="_simple_job_consumer_8java" startline="40" endline="61">org.jgap.impl.job.SimpleJobConsumer.waitForAllJobs</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1impl_1_1job_1_1_i_job_1a2bcd1a7d7f165baba66b8fa4e0b9bf43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1impl_1_1job_1_1_job_result" kindref="compound">JobResult</ref></type>
+        <definition>JobResult org.jgap.impl.job.IJob.getResult</definition>
+        <argsstring>()</argsstring>
+        <name>getResult</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1job_1_1_job_base_1ae5cacf4304620ad0b831db78a6323af2">getResult</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/job/IJob.java" line="42" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Interface for jobs of any kind.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="14486">
+        <label>org.jgap.impl.job.JobBase</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1job_1_1_job_base"/>
+        <childnode refid="14481" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14482">
+        <label>Serializable</label>
+      </node>
+      <node id="14481">
+        <label>org.jgap.impl.job.IJob</label>
+        <link refid="interfaceorg_1_1jgap_1_1impl_1_1job_1_1_i_job"/>
+        <childnode refid="14482" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14483" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14483">
+        <label>Runnable</label>
+      </node>
+      <node id="14484">
+        <label>org.jgap.impl.job.IEvolveJob</label>
+        <link refid="interfaceorg_1_1jgap_1_1impl_1_1job_1_1_i_evolve_job"/>
+        <childnode refid="14481" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14485">
+        <label>org.jgap.impl.job.EvolveJob</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1job_1_1_evolve_job"/>
+        <childnode refid="14484" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14486" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="14488">
+        <label>Serializable</label>
+      </node>
+      <node id="14487">
+        <label>org.jgap.impl.job.IJob</label>
+        <link refid="interfaceorg_1_1jgap_1_1impl_1_1job_1_1_i_job"/>
+        <childnode refid="14488" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14489" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14489">
+        <label>Runnable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/job/IJob.java" line="21" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/job/IJob.java" bodystart="20" bodyend="43"/>
+    <listofallmembers>
+      <member refid="interfaceorg_1_1jgap_1_1impl_1_1job_1_1_i_job_1a8d76655b9eddf18c2cc184cb362dd0e3" prot="public" virt="non-virtual"><scope>org::jgap::impl::job::IJob</scope><name>CVS_REVISION</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1impl_1_1job_1_1_i_job_1a5318a1ce0e973553131c3cb268c8b3f2" prot="public" virt="non-virtual"><scope>org::jgap::impl::job::IJob</scope><name>execute</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1impl_1_1job_1_1_i_job_1aee1614176eba42e6405b0ae1ce216754" prot="public" virt="non-virtual"><scope>org::jgap::impl::job::IJob</scope><name>getJobData</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1impl_1_1job_1_1_i_job_1a2bcd1a7d7f165baba66b8fa4e0b9bf43" prot="public" virt="non-virtual"><scope>org::jgap::impl::job::IJob</scope><name>getResult</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1impl_1_1job_1_1_i_job_1a9b72a2342b23ac0cfba5d41dde3ef8ac" prot="public" virt="non-virtual"><scope>org::jgap::impl::job::IJob</scope><name>isFinished</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1impl_1_1job_1_1_i_job_1adab19ae6b78cabf77f43aefb5aa74650" prot="public" virt="non-virtual"><scope>org::jgap::impl::job::IJob</scope><name>run</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

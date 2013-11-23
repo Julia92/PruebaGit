@@ -1,0 +1,227 @@
+.TH "org.jgap.distr.grid.JGAPClient" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.grid.JGAPClient \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Thread\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBJGAPClient\fP (GridNodeClientConfig a_gridconfig, String a_clientClassName)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBsetWorkRequest\fP (\fBJGAPRequest\fP a_request)"
+.br
+.ti -1c
+.RI "void \fBrun\fP ()"
+.br
+.ti -1c
+.RI "void \fBstart\fP ()"
+.br
+.ti -1c
+.RI "\fBConfiguration\fP \fBgetConfiguration\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "GridClient \fBstartClient\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "void \fBsendWorkRequests\fP (\fBJGAPRequest\fP[] a_workList)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBreceiveWorkResults\fP (\fBJGAPRequest\fP[] workList)  throws Exception "
+.br
+.ti -1c
+.RI "void \fBevolve\fP (GridClient gc)  throws Exception "
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "GridNodeClientConfig \fBm_gridconfig\fP"
+.br
+.ti -1c
+.RI "\fBJGAPRequest\fP \fBm_workReq\fP"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "GridClient \fBm_gc\fP"
+.br
+.ti -1c
+.RI "\fBIGridConfiguration\fP \fBm_gridConfig\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.14 $'"
+.br
+.ti -1c
+.RI "static final String \fBclassName\fP = JGAPClient\&.class\&.getName()"
+.br
+.ti -1c
+.RI "static Logger \fBlog\fP = Logger\&.getLogger(\fBclassName\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A client defines work for the grid and sends it to the \fBJGAPServer\fP\&. Use this class to get an idea for your grid client implementation or see the samples under package \fBexamples\&.grid\fP to have templates for a) fitness computation and b) evolution on the worker side\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 30 of file JGAPClient\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.distr\&.grid\&.JGAPClient\&.JGAPClient (GridNodeClientConfiga_gridconfig, Stringa_clientClassName) throws Exception\fC [inline]\fP"
+
+.PP
+Definition at line 47 of file JGAPClient\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.JGAPClient\&.m_gridconfig, and org\&.jgap\&.distr\&.grid\&.JGAPClient\&.m_gridConfig\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.distr\&.grid\&.JGAPClient\&.evolve (GridClientgc) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+If necessary: override to implement your evolution cycle individually\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIgc\fP GridClient 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+
+.PP
+Definition at line 168 of file JGAPClient\&.java\&.
+.SS "\fBConfiguration\fP org\&.jgap\&.distr\&.grid\&.JGAPClient\&.getConfiguration ()\fC [inline]\fP"
+
+.PP
+Definition at line 213 of file JGAPClient\&.java\&.
+.SS "static void org\&.jgap\&.distr\&.grid\&.JGAPClient\&.main (String[]args)\fC [inline]\fP, \fC [static]\fP"
+Starts a client (first parameter: name of specific setup class)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP String[]
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 225 of file JGAPClient\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.JGAPClient\&.receiveWorkResults (\fBJGAPRequest\fP[]workList) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 139 of file JGAPClient\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.JGAPClient\&.run ()\fC [inline]\fP"
+Threaded: Splits work, sends it to workers and receives computed solutions\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 89 of file JGAPClient\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.JGAPClient\&.sendWorkRequests (\fBJGAPRequest\fP[]a_workList) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 125 of file JGAPClient\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.JGAPClient\&.setWorkRequest (\fBJGAPRequest\fPa_request)\fC [inline]\fP"
+
+.PP
+Definition at line 71 of file JGAPClient\&.java\&.
+.SS "void org\&.jgap\&.distr\&.grid\&.JGAPClient\&.start ()\fC [inline]\fP"
+
+.PP
+Definition at line 204 of file JGAPClient\&.java\&.
+.SS "GridClient org\&.jgap\&.distr\&.grid\&.JGAPClient\&.startClient () throws Exception\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 75 of file JGAPClient\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.grid\&.JGAPClient\&.className = JGAPClient\&.class\&.getName()\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 35 of file JGAPClient\&.java\&.
+.SS "final String org\&.jgap\&.distr\&.grid\&.JGAPClient\&.CVS_REVISION = '$Revision: 1\&.14 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 33 of file JGAPClient\&.java\&.
+.SS "Logger org\&.jgap\&.distr\&.grid\&.JGAPClient\&.log = Logger\&.getLogger(\fBclassName\fP)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 37 of file JGAPClient\&.java\&.
+.SS "GridClient org\&.jgap\&.distr\&.grid\&.JGAPClient\&.m_gc\fC [private]\fP"
+
+.PP
+Definition at line 43 of file JGAPClient\&.java\&.
+.SS "GridNodeClientConfig org\&.jgap\&.distr\&.grid\&.JGAPClient\&.m_gridconfig\fC [protected]\fP"
+
+.PP
+Definition at line 39 of file JGAPClient\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.JGAPClient\&.JGAPClient()\&.
+.SS "\fBIGridConfiguration\fP org\&.jgap\&.distr\&.grid\&.JGAPClient\&.m_gridConfig\fC [private]\fP"
+
+.PP
+Definition at line 45 of file JGAPClient\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.JGAPClient\&.JGAPClient()\&.
+.SS "\fBJGAPRequest\fP org\&.jgap\&.distr\&.grid\&.JGAPClient\&.m_workReq\fC [protected]\fP"
+
+.PP
+Definition at line 41 of file JGAPClient\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,237 @@
+.TH "examples.gp.Fibonacci" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.Fibonacci \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.GPProblem\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBFormulaFitnessFunction\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFibonacci\fP (\fBGPConfiguration\fP a_conf)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGPGenotype\fP \fBcreate\fP ()  throws InvalidConfigurationException "
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)"
+.br
+.ti -1c
+.RI "static void \fBwriteToStream\fP (\fBIGPProgram\fP prog)  throws Exception "
+.br
+.ti -1c
+.RI "static Object \fBreadFromStream\fP ()  throws Exception "
+.br
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fBfib_iter\fP (int a_index)"
+.br
+.ti -1c
+.RI "static int \fBfib_array\fP (int a_index)"
+.br
+.ti -1c
+.RI "static int \fBfib\fP (int a_index)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.34 $'"
+.br
+.ti -1c
+.RI "static final int \fBNUMFIB\fP = 10"
+.br
+.ti -1c
+.RI "static PersistableObject \fBpo\fP"
+.br
+.ti -1c
+.RI "static final String \fBPERSISTFILENAME\fP = 'c:\\\\xstreamtest\&.xml'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Example demonstrating Genetic Programming (GP) capabilities of JGAP\&.
+.PP
+Here, the \fBFibonacci\fP sequence is calculated (only integers are used)\&.
+.PP
+Please note: We try to find a program that computes \fBFibonacci\fP iteratively\&.
+.PP
+This example utilizes a INodeValidator (see \fBFibonacciNodeValidator\fP)\&.
+.PP
+Each new best solution found will be displayed as a graphical tree representing the GP\&. The tree is written to a PNG-imagefile onto harddisk\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 35 of file Fibonacci\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.gp\&.Fibonacci\&.Fibonacci (\fBGPConfiguration\fPa_conf) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 55 of file Fibonacci\&.java\&.
+.PP
+References examples\&.gp\&.Fibonacci\&.PERSISTFILENAME, and examples\&.gp\&.Fibonacci\&.po\&.
+.PP
+Referenced by examples\&.gp\&.Fibonacci\&.main()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBGPGenotype\fP examples\&.gp\&.Fibonacci\&.create () throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [virtual]\fP"
+Sets up the functions to use and other parameters\&. Then creates the initial genotype\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the genotype created 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIInvalidConfigurationException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+allow to optionally preset a static program in each chromosome 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.GPProblem\fP\&.
+.PP
+Definition at line 71 of file Fibonacci\&.java\&.
+.PP
+References examples\&.gp\&.Fibonacci\&.fib_iter(), org\&.jgap\&.gp\&.GPProblem\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.IntegerClass, examples\&.gp\&.Fibonacci\&.NUMFIB, and org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.SS "static int examples\&.gp\&.Fibonacci\&.fib (inta_index)\fC [inline]\fP, \fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 169 of file Fibonacci\&.java\&.
+.SS "static int examples\&.gp\&.Fibonacci\&.fib_array (inta_index)\fC [inline]\fP, \fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 153 of file Fibonacci\&.java\&.
+.SS "static int examples\&.gp\&.Fibonacci\&.fib_iter (inta_index)\fC [inline]\fP, \fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 134 of file Fibonacci\&.java\&.
+.PP
+Referenced by examples\&.gp\&.Fibonacci\&.create()\&.
+.SS "static void examples\&.gp\&.Fibonacci\&.main (String[]args)\fC [inline]\fP, \fC [static]\fP"
+Starts the example\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP ignored 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+New best solution found\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_firedEvent\fP GeneticEvent
+.RE
+.PP
+
+.PP
+Definition at line 185 of file Fibonacci\&.java\&.
+.PP
+References examples\&.gp\&.Fibonacci\&.Fibonacci(), org\&.jgap\&.gp\&.impl\&.GPGenotype\&.getAllTimeBest(), examples\&.gp\&.Fibonacci\&.readFromStream(), and examples\&.gp\&.Fibonacci\&.writeToStream()\&.
+.SS "static Object examples\&.gp\&.Fibonacci\&.readFromStream () throws Exception\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 387 of file Fibonacci\&.java\&.
+.PP
+References examples\&.gp\&.Fibonacci\&.PERSISTFILENAME\&.
+.PP
+Referenced by examples\&.gp\&.Fibonacci\&.main()\&.
+.SS "static void examples\&.gp\&.Fibonacci\&.writeToStream (\fBIGPProgram\fPprog) throws Exception\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Definition at line 361 of file Fibonacci\&.java\&.
+.PP
+References examples\&.gp\&.Fibonacci\&.PERSISTFILENAME\&.
+.PP
+Referenced by examples\&.gp\&.Fibonacci\&.main()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.gp\&.Fibonacci\&.CVS_REVISION = '$Revision: 1\&.34 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 38 of file Fibonacci\&.java\&.
+.SS "final int examples\&.gp\&.Fibonacci\&.NUMFIB = 10\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 46 of file Fibonacci\&.java\&.
+.PP
+Referenced by examples\&.gp\&.Fibonacci\&.FormulaFitnessFunction\&.computeRawFitness(), and examples\&.gp\&.Fibonacci\&.create()\&.
+.SS "final String examples\&.gp\&.Fibonacci\&.PERSISTFILENAME = 'c:\\\\xstreamtest\&.xml'\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 53 of file Fibonacci\&.java\&.
+.PP
+Referenced by examples\&.gp\&.Fibonacci\&.Fibonacci(), examples\&.gp\&.Fibonacci\&.readFromStream(), and examples\&.gp\&.Fibonacci\&.writeToStream()\&.
+.SS "PersistableObject examples\&.gp\&.Fibonacci\&.po\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 52 of file Fibonacci\&.java\&.
+.PP
+Referenced by examples\&.gp\&.Fibonacci\&.Fibonacci()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

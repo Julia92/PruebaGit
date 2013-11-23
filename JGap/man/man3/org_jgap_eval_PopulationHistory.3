@@ -1,0 +1,235 @@
+.TH "org.jgap.eval.PopulationHistory" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.eval.PopulationHistory \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPopulationHistory\fP (final int a_maxSize)"
+.br
+.ti -1c
+.RI "\fBPopulation\fP \fBgetPopulation\fP (final int a_count)"
+.br
+.ti -1c
+.RI "void \fBaddPopulation\fP (final \fBPopulation\fP a_population)"
+.br
+.ti -1c
+.RI "void \fBremoveAllPopulations\fP ()"
+.br
+.ti -1c
+.RI "int \fBsize\fP ()"
+.br
+.ti -1c
+.RI "List \fBgetPopulations\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPopulations\fP (final List a_populations)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "List \fBm_populations\fP"
+.br
+.ti -1c
+.RI "int \fBm_maxSize\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.7 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Container for holding a given number of populations\&. Serves as a history object for later evaluation\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file PopulationHistory\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.eval\&.PopulationHistory\&.PopulationHistory (final inta_maxSize)\fC [inline]\fP"
+Constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_maxSize\fP the maximum number of \fBPopulation\fP objects to hold, or zero if there is no limit\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 41 of file PopulationHistory\&.java\&.
+.PP
+References org\&.jgap\&.eval\&.PopulationHistory\&.m_maxSize, and org\&.jgap\&.eval\&.PopulationHistory\&.m_populations\&.
+.PP
+Referenced by org\&.jgap\&.eval\&.PopulationHistory\&.equals()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.eval\&.PopulationHistory\&.addPopulation (final \fBPopulation\fPa_population)\fC [inline]\fP"
+Adds a population to the history\&. If the maximum size of this container is exceeded, then the population added earliest is removed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_population\fP the population to be added
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 68 of file PopulationHistory\&.java\&.
+.PP
+References org\&.jgap\&.eval\&.PopulationHistory\&.m_maxSize\&.
+.SS "boolean org\&.jgap\&.eval\&.PopulationHistory\&.equals (Objecta_other)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP other object to compare to 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true other object seen as equal
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 120 of file PopulationHistory\&.java\&.
+.PP
+References org\&.jgap\&.Population\&.equals(), org\&.jgap\&.eval\&.PopulationHistory\&.getPopulation(), org\&.jgap\&.eval\&.PopulationHistory\&.PopulationHistory(), and org\&.jgap\&.eval\&.PopulationHistory\&.size()\&.
+.SS "\fBPopulation\fP org\&.jgap\&.eval\&.PopulationHistory\&.getPopulation (final inta_count)\fC [inline]\fP"
+
+.PP
+Definition at line 50 of file PopulationHistory\&.java\&.
+.PP
+References org\&.jgap\&.eval\&.PopulationHistory\&.m_populations\&.
+.PP
+Referenced by org\&.jgap\&.eval\&.PopulationHistory\&.equals()\&.
+.SS "List org\&.jgap\&.eval\&.PopulationHistory\&.getPopulations ()\fC [inline]\fP"
+
+.PP
+Definition at line 91 of file PopulationHistory\&.java\&.
+.PP
+References org\&.jgap\&.eval\&.PopulationHistory\&.m_populations\&.
+.SS "void org\&.jgap\&.eval\&.PopulationHistory\&.removeAllPopulations ()\fC [inline]\fP"
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 83 of file PopulationHistory\&.java\&.
+.PP
+References org\&.jgap\&.eval\&.PopulationHistory\&.m_populations\&.
+.SS "void org\&.jgap\&.eval\&.PopulationHistory\&.setPopulations (final Lista_populations)\fC [inline]\fP"
+Sets the list of populations to the list provided\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_populations\fP list of populations to be set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 103 of file PopulationHistory\&.java\&.
+.PP
+References org\&.jgap\&.eval\&.PopulationHistory\&.m_maxSize, and org\&.jgap\&.eval\&.PopulationHistory\&.m_populations\&.
+.SS "int org\&.jgap\&.eval\&.PopulationHistory\&.size ()\fC [inline]\fP"
+
+.PP
+Definition at line 87 of file PopulationHistory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.eval\&.PopulationHistory\&.equals(), org\&.jgap\&.eval\&.PopulationHistoryTest\&.testAddPopulation_0(), org\&.jgap\&.eval\&.PopulationHistoryTest\&.testAddPopulation_1(), org\&.jgap\&.eval\&.PopulationHistoryTest\&.testRemoveAllPopulations_0(), and org\&.jgap\&.eval\&.PopulationHistoryTest\&.testSize_0()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.eval\&.PopulationHistory\&.CVS_REVISION = '$Revision: 1\&.7 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file PopulationHistory\&.java\&.
+.SS "int org\&.jgap\&.eval\&.PopulationHistory\&.m_maxSize\fC [private]\fP"
+
+.PP
+Definition at line 30 of file PopulationHistory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.eval\&.PopulationHistory\&.addPopulation(), org\&.jgap\&.eval\&.PopulationHistory\&.PopulationHistory(), and org\&.jgap\&.eval\&.PopulationHistory\&.setPopulations()\&.
+.SS "List org\&.jgap\&.eval\&.PopulationHistory\&.m_populations\fC [private]\fP"
+
+.PP
+Definition at line 28 of file PopulationHistory\&.java\&.
+.PP
+Referenced by org\&.jgap\&.eval\&.PopulationHistory\&.getPopulation(), org\&.jgap\&.eval\&.PopulationHistory\&.getPopulations(), org\&.jgap\&.eval\&.PopulationHistory\&.PopulationHistory(), org\&.jgap\&.eval\&.PopulationHistory\&.removeAllPopulations(), and org\&.jgap\&.eval\&.PopulationHistory\&.setPopulations()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

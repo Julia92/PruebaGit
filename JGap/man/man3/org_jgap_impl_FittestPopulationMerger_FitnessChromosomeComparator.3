@@ -1,0 +1,99 @@
+.TH "org.jgap.impl.FittestPopulationMerger.FitnessChromosomeComparator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.FittestPopulationMerger.FitnessChromosomeComparator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Comparator\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFitnessChromosomeComparator\fP (\fBConfiguration\fP a_config)"
+.br
+.ti -1c
+.RI "int \fBcompare\fP (final Object a_o1, final Object a_o2)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "transient \fBConfiguration\fP \fBm_config\fP"
+.br
+.ti -1c
+.RI "\fBFitnessEvaluator\fP \fBm_fEvaluator\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is used to sort the merged population chromosomes according to their fitness values\&. For convenience, the sorting is done in a reverse way, so this comparator returns 1 if the first chromosome has a LOWER fitness value\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Henrique Goulart 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 70 of file FittestPopulationMerger\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.FittestPopulationMerger\&.FitnessChromosomeComparator\&.FitnessChromosomeComparator (\fBConfiguration\fPa_config)\fC [inline]\fP"
+
+.PP
+Definition at line 78 of file FittestPopulationMerger\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.FittestPopulationMerger\&.FitnessChromosomeComparator\&.m_config, and org\&.jgap\&.impl\&.FittestPopulationMerger\&.FitnessChromosomeComparator\&.m_fEvaluator\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int org\&.jgap\&.impl\&.FittestPopulationMerger\&.FitnessChromosomeComparator\&.compare (final Objecta_o1, final Objecta_o2)\fC [inline]\fP"
+Implements the compare method using the fitness function\&. The comparation is implemented in a reverse way to make the merging easier (the list of chromosomes is sorted in a descending fitness value order)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_o1\fP first \fBIChromosome\fP to compare 
+.br
+\fIa_o2\fP second \fBIChromosome\fP to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+java\&.util\&.Comparator::compare(java\&.lang\&.Object, java\&.lang\&.Object) 
+.RE
+.PP
+
+.PP
+Definition at line 93 of file FittestPopulationMerger\&.java\&.
+.PP
+References org\&.jgap\&.IChromosome\&.getFitnessValue(), org\&.jgap\&.FitnessEvaluator\&.isFitter(), and org\&.jgap\&.impl\&.FittestPopulationMerger\&.FitnessChromosomeComparator\&.m_fEvaluator\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "transient \fBConfiguration\fP org\&.jgap\&.impl\&.FittestPopulationMerger\&.FitnessChromosomeComparator\&.m_config\fC [private]\fP"
+
+.PP
+Definition at line 72 of file FittestPopulationMerger\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.FittestPopulationMerger\&.FitnessChromosomeComparator\&.FitnessChromosomeComparator()\&.
+.SS "\fBFitnessEvaluator\fP org\&.jgap\&.impl\&.FittestPopulationMerger\&.FitnessChromosomeComparator\&.m_fEvaluator\fC [private]\fP"
+
+.PP
+Definition at line 76 of file FittestPopulationMerger\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.FittestPopulationMerger\&.FitnessChromosomeComparator\&.compare(), and org\&.jgap\&.impl\&.FittestPopulationMerger\&.FitnessChromosomeComparator\&.FitnessChromosomeComparator()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

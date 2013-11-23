@@ -1,0 +1,112 @@
+.TH "org.jgap.gp.function.statistics.Variance" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.function.statistics.Variance \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandDynamicArity\fP, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVariance\fP (GPConfiguration a_conf, int a_arityInitial, int a_arityMin, int a_arityMax, Class a_returnType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "double \fBexecute_double\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "float \fBexecute_float\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Computes the variance of the available values\&. The unbiased 'sample variance' definitional formula is used: 
+.PP
+variance = sum((x_i - mean)^2) / (n - 1) 
+.PP
+\fBAuthor:\fP
+.RS 4
+Luis Garcia 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file Variance\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.function\&.statistics\&.Variance\&.Variance (GPConfigurationa_conf, inta_arityInitial, inta_arityMin, inta_arityMax, Classa_returnType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 29 of file Variance\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.statistics\&.Variance\&.clone()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.gp\&.function\&.statistics\&.Variance\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+clone of the current object instance 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 70 of file Variance\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getArity(), org\&.jgap\&.gp\&.CommandGene\&.getArityMax(), org\&.jgap\&.gp\&.CommandGene\&.getArityMin(), org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.getReturnType(), and org\&.jgap\&.gp\&.function\&.statistics\&.Variance\&.Variance()\&.
+.SS "double org\&.jgap\&.gp\&.function\&.statistics\&.Variance\&.execute_double (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 51 of file Variance\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.size()\&.
+.SS "float org\&.jgap\&.gp\&.function\&.statistics\&.Variance\&.execute_float (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 61 of file Variance\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.size()\&.
+.SS "String org\&.jgap\&.gp\&.function\&.statistics\&.Variance\&.getName ()\fC [inline]\fP"
+
+.PP
+Definition at line 82 of file Variance\&.java\&.
+.SS "String org\&.jgap\&.gp\&.function\&.statistics\&.Variance\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 38 of file Variance\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.size()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

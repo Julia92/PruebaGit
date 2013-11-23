@@ -1,0 +1,435 @@
+.TH "org.jgap.util.TestHashcode" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.util.TestHashcode \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetVerbose\fP (boolean a_verbose)"
+.br
+.ti -1c
+.RI "void \fBsetAverageMax\fP (double a_averageMax)"
+.br
+.ti -1c
+.RI "void \fBsetAverageMin\fP (double a_averageMin)"
+.br
+.ti -1c
+.RI "void \fBsetStdDevMax\fP (double a_stdDevMax)"
+.br
+.ti -1c
+.RI "void \fBsetStdDevMin\fP (double a_stdDevMin)"
+.br
+.ti -1c
+.RI "void \fBsetFractionUnique\fP (double a_fractionUnique)"
+.br
+.ti -1c
+.RI "double \fBgetActualFractionUnique\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBtestHashCodeUniqueness\fP (List a_ObjectList)"
+.br
+.ti -1c
+.RI "boolean \fBtestHashCodeEquality\fP (List a_ObjectList)"
+.br
+.ti -1c
+.RI "boolean \fBtestDispersion\fP (List a_ObjectList)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "boolean \fBm_verbose\fP"
+.br
+.ti -1c
+.RI "double \fBm_AverageMin\fP = 0\&.0d"
+.br
+.ti -1c
+.RI "double \fBm_AverageMax\fP = 1\&.0d"
+.br
+.ti -1c
+.RI "double \fBm_StdDevMin\fP = 1\&.0d"
+.br
+.ti -1c
+.RI "double \fBm_StdDevMax\fP = 2\&.0d"
+.br
+.ti -1c
+.RI "double \fBm_fractionUnique\fP = 0\&.9d"
+.br
+.ti -1c
+.RI "double \fBm_actualFractionUnique\fP = 0\&.0d"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.8 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class used to help in the testing of the hashCode() method\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+John Serri 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file TestHashcode\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "double org\&.jgap\&.util\&.TestHashcode\&.getActualFractionUnique ()\fC [inline]\fP"
+
+.PP
+Definition at line 153 of file TestHashcode\&.java\&.
+.PP
+References org\&.jgap\&.util\&.TestHashcode\&.m_actualFractionUnique\&.
+.SS "static void org\&.jgap\&.util\&.TestHashcode\&.main (String[]args)\fC [inline]\fP, \fC [static]\fP"
+Simple main method to test the class\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP ignored
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+John Serri 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 302 of file TestHashcode\&.java\&.
+.SS "void org\&.jgap\&.util\&.TestHashcode\&.setAverageMax (doublea_averageMax)\fC [inline]\fP"
+Set's the maximum average value of hashCodes needed to pass the \fBtestDispersion()\fP test\&. Also see TestHascode::testDispersion\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_averageMax\fP New Maximum average 
+.RE
+.PP
+
+.PP
+Definition at line 94 of file TestHashcode\&.java\&.
+.PP
+References org\&.jgap\&.util\&.TestHashcode\&.m_AverageMax\&.
+.SS "void org\&.jgap\&.util\&.TestHashcode\&.setAverageMin (doublea_averageMin)\fC [inline]\fP"
+Set's the minimum average value of hashCodes needed to pass the \fBtestDispersion()\fP test
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_averageMin\fP new Minimum average 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBTestHashcode::testDispersion\fP 
+.RE
+.PP
+
+.PP
+Definition at line 105 of file TestHashcode\&.java\&.
+.PP
+References org\&.jgap\&.util\&.TestHashcode\&.m_AverageMin\&.
+.SS "void org\&.jgap\&.util\&.TestHashcode\&.setFractionUnique (doublea_fractionUnique)\fC [inline]\fP"
+Set's the fraction of hashCodes that must be unique for the testHashCodeUniqueness method to succed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_fractionUnique\fP new value, must be between 0\&.0 and 1\&.0 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIllegalArgumentException\fP 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBTestHashcode::testHashCodeUniqueness\fP
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 145 of file TestHashcode\&.java\&.
+.PP
+References org\&.jgap\&.util\&.TestHashcode\&.m_fractionUnique\&.
+.SS "void org\&.jgap\&.util\&.TestHashcode\&.setStdDevMax (doublea_stdDevMax)\fC [inline]\fP"
+Set's the Maximum standard deviationvalue of hashCodes needed to pass the \fBtestDispersion()\fP test
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_stdDevMax\fP new Maximum standard deviation 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBTestHashcode::testDispersion\fP
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 118 of file TestHashcode\&.java\&.
+.PP
+References org\&.jgap\&.util\&.TestHashcode\&.m_StdDevMax\&.
+.SS "void org\&.jgap\&.util\&.TestHashcode\&.setStdDevMin (doublea_stdDevMin)\fC [inline]\fP"
+Set's the Minimum standard deviationvalue of hashCodes needed to pass the \fBtestDispersion()\fP test
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_stdDevMin\fP new Minimum standard deviation 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBTestHashcode::testDispersion\fP
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 131 of file TestHashcode\&.java\&.
+.PP
+References org\&.jgap\&.util\&.TestHashcode\&.m_StdDevMin\&.
+.SS "void org\&.jgap\&.util\&.TestHashcode\&.setVerbose (booleana_verbose)\fC [inline]\fP"
+Set whether the object will output debug information\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_verbose\fP true if you want debug information, else set to false
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 83 of file TestHashcode\&.java\&.
+.PP
+References org\&.jgap\&.util\&.TestHashcode\&.m_verbose\&.
+.SS "boolean org\&.jgap\&.util\&.TestHashcode\&.testDispersion (Lista_ObjectList)\fC [inline]\fP"
+Test that verifies if average and Standard deviation of hashCodes in list match criteria\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ObjectList\fP list of objects to test 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if average and Standard deviation of hashCodes in List match criterias\&. Else false 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBTestHashcode::setAverageMax\fP 
+.PP
+\fBTestHashcode::setAverageMin\fP 
+.PP
+\fBTestHashcode::setStdDevMax\fP 
+.PP
+\fBTestHashcode::setStdDevMin\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+John Serri 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 239 of file TestHashcode\&.java\&.
+.PP
+References org\&.jgap\&.util\&.TestHashcode\&.m_AverageMax, org\&.jgap\&.util\&.TestHashcode\&.m_AverageMin, org\&.jgap\&.util\&.TestHashcode\&.m_StdDevMax, org\&.jgap\&.util\&.TestHashcode\&.m_StdDevMin, and org\&.jgap\&.util\&.TestHashcode\&.m_verbose\&.
+.SS "boolean org\&.jgap\&.util\&.TestHashcode\&.testHashCodeEquality (Lista_ObjectList)\fC [inline]\fP"
+Test to make sure that equal objects all have the same hashCode\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ObjectList\fP list of objects to test 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if all hashCodes in List are the same\&. Else false
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+John Serri 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 207 of file TestHashcode\&.java\&.
+.SS "boolean org\&.jgap\&.util\&.TestHashcode\&.testHashCodeUniqueness (Lista_ObjectList)\fC [inline]\fP"
+Test that verifies that a the fraction of unique hashCodes is greater than the one specified\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ObjectList\fP list of objects to test 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the fraction of unique hashCodes is greater than the one specified\&. Else false 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBTestHashcode::setFractionUnique\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+John Serri 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 169 of file TestHashcode\&.java\&.
+.PP
+References org\&.jgap\&.util\&.TestHashcode\&.m_actualFractionUnique, and org\&.jgap\&.util\&.TestHashcode\&.m_fractionUnique\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.util\&.TestHashcode\&.CVS_REVISION = '$Revision: 1\&.8 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 23 of file TestHashcode\&.java\&.
+.SS "double org\&.jgap\&.util\&.TestHashcode\&.m_actualFractionUnique = 0\&.0d\fC [private]\fP"
+Contains the real fraction of hashCodes that where found to be unique in testHashCodeUniqueness\&. 
+.PP
+Definition at line 74 of file TestHashcode\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.TestHashcode\&.getActualFractionUnique(), and org\&.jgap\&.util\&.TestHashcode\&.testHashCodeUniqueness()\&.
+.SS "double org\&.jgap\&.util\&.TestHashcode\&.m_AverageMax = 1\&.0d\fC [private]\fP"
+Maximum average value of hashCodes needed to pass the \fBtestDispersion()\fP test
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBTestHashcode::testDispersion\fP, \fBm_AverageMin\fP 
+.RE
+.PP
+
+.PP
+Definition at line 44 of file TestHashcode\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.TestHashcode\&.setAverageMax(), and org\&.jgap\&.util\&.TestHashcode\&.testDispersion()\&.
+.SS "double org\&.jgap\&.util\&.TestHashcode\&.m_AverageMin = 0\&.0d\fC [private]\fP"
+Minimum average value of hashCodes needed to pass the \fBtestDispersion()\fP test
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBTestHashcode::testDispersion\fP, \fBm_AverageMax\fP 
+.RE
+.PP
+
+.PP
+Definition at line 36 of file TestHashcode\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.TestHashcode\&.setAverageMin(), and org\&.jgap\&.util\&.TestHashcode\&.testDispersion()\&.
+.SS "double org\&.jgap\&.util\&.TestHashcode\&.m_fractionUnique = 0\&.9d\fC [private]\fP"
+fraction of hashCodes that must be unique for the testHashCodeUniqueness method to succed\&.
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBtestHashCodeUniqueness\fP 
+.RE
+.PP
+
+.PP
+Definition at line 68 of file TestHashcode\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.TestHashcode\&.setFractionUnique(), and org\&.jgap\&.util\&.TestHashcode\&.testHashCodeUniqueness()\&.
+.SS "double org\&.jgap\&.util\&.TestHashcode\&.m_StdDevMax = 2\&.0d\fC [private]\fP"
+Maximum Standard Deviation value of hashCodes needed to pass the \fBtestDispersion()\fP test
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBtestDispersion()\fP, \fBm_StdDevMin\fP 
+.RE
+.PP
+
+.PP
+Definition at line 60 of file TestHashcode\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.TestHashcode\&.setStdDevMax(), and org\&.jgap\&.util\&.TestHashcode\&.testDispersion()\&.
+.SS "double org\&.jgap\&.util\&.TestHashcode\&.m_StdDevMin = 1\&.0d\fC [private]\fP"
+Minimum Standard Deviation value of hashCodes needed to pass the \fBtestDispersion()\fP test
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBtestDispersion()\fP, \fBm_StdDevMax\fP 
+.RE
+.PP
+
+.PP
+Definition at line 52 of file TestHashcode\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.TestHashcode\&.setStdDevMin(), and org\&.jgap\&.util\&.TestHashcode\&.testDispersion()\&.
+.SS "boolean org\&.jgap\&.util\&.TestHashcode\&.m_verbose\fC [private]\fP"
+Determines if object should output debug information\&. 
+.PP
+Definition at line 28 of file TestHashcode\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.TestHashcode\&.setVerbose(), and org\&.jgap\&.util\&.TestHashcode\&.testDispersion()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

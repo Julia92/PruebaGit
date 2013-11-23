@@ -1,0 +1,224 @@
+.TH "examples.gp.tictactoe.EvaluateBoard" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.tictactoe.EvaluateBoard \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandGene\fP, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEvaluateBoard\fP (final \fBGPConfiguration\fP a_conf, \fBBoard\fP a_board, int a_index)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBEvaluateBoard\fP (final \fBGPConfiguration\fP a_conf, \fBBoard\fP a_board, int a_index, int a_subReturnType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBEvaluateBoard\fP (final \fBGPConfiguration\fP a_conf, \fBBoard\fP a_board, Class a_type)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBEvaluateBoard\fP (final \fBGPConfiguration\fP a_conf, \fBBoard\fP a_board, Class a_type, int a_subReturnType, int a_subChildType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "Class \fBgetChildType\fP (\fBIGPProgram\fP a_ind, int a_chromNum)"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "void \fBexecute_void\fP (\fBProgramChromosome\fP c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBBoard\fP \fBm_board\fP"
+.br
+.ti -1c
+.RI "int \fBm_index\fP"
+.br
+.ti -1c
+.RI "Class \fBm_type\fP"
+.br
+.ti -1c
+.RI "int \fBm_subChildType\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.4 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Evaluates the board\&. Generates one unique number for each board position\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file EvaluateBoard\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.gp\&.tictactoe\&.EvaluateBoard\&.EvaluateBoard (final \fBGPConfiguration\fPa_conf, \fBBoard\fPa_board, inta_index) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 35 of file EvaluateBoard\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.EvaluateBoard\&.clone()\&.
+.SS "examples\&.gp\&.tictactoe\&.EvaluateBoard\&.EvaluateBoard (final \fBGPConfiguration\fPa_conf, \fBBoard\fPa_board, inta_index, inta_subReturnType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 41 of file EvaluateBoard\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.IntegerClass, examples\&.gp\&.tictactoe\&.EvaluateBoard\&.m_board, examples\&.gp\&.tictactoe\&.EvaluateBoard\&.m_index, examples\&.gp\&.tictactoe\&.EvaluateBoard\&.m_subChildType, examples\&.gp\&.tictactoe\&.EvaluateBoard\&.m_type, and org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.SS "examples\&.gp\&.tictactoe\&.EvaluateBoard\&.EvaluateBoard (final \fBGPConfiguration\fPa_conf, \fBBoard\fPa_board, Classa_type) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 51 of file EvaluateBoard\&.java\&.
+.SS "examples\&.gp\&.tictactoe\&.EvaluateBoard\&.EvaluateBoard (final \fBGPConfiguration\fPa_conf, \fBBoard\fPa_board, Classa_type, inta_subReturnType, inta_subChildType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 57 of file EvaluateBoard\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.EvaluateBoard\&.m_board, examples\&.gp\&.tictactoe\&.EvaluateBoard\&.m_index, examples\&.gp\&.tictactoe\&.EvaluateBoard\&.m_subChildType, examples\&.gp\&.tictactoe\&.EvaluateBoard\&.m_type, and org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object examples\&.gp\&.tictactoe\&.EvaluateBoard\&.clone ()\fC [inline]\fP"
+Clones the object\&. Simple and straight forward implementation here\&.
+.PP
+\fBReturns:\fP
+.RS 4
+cloned instance of this object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 134 of file EvaluateBoard\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.EvaluateBoard\&.EvaluateBoard(), org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.getSubReturnType(), examples\&.gp\&.tictactoe\&.EvaluateBoard\&.m_board, examples\&.gp\&.tictactoe\&.EvaluateBoard\&.m_index, examples\&.gp\&.tictactoe\&.EvaluateBoard\&.m_subChildType, and examples\&.gp\&.tictactoe\&.EvaluateBoard\&.m_type\&.
+.SS "void examples\&.gp\&.tictactoe\&.EvaluateBoard\&.execute_void (\fBProgramChromosome\fPc, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+support other types than integer 
+.RE
+.PP
+
+.PP
+Definition at line 100 of file EvaluateBoard\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), examples\&.gp\&.tictactoe\&.Board\&.HEIGHT, examples\&.gp\&.tictactoe\&.EvaluateBoard\&.m_index, and examples\&.gp\&.tictactoe\&.Board\&.WIDTH\&.
+.SS "Class examples\&.gp\&.tictactoe\&.EvaluateBoard\&.getChildType (\fBIGPProgram\fPa_ind, inta_chromNum)\fC [inline]\fP"
+
+.PP
+Definition at line 76 of file EvaluateBoard\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.EvaluateBoard\&.m_index, and examples\&.gp\&.tictactoe\&.EvaluateBoard\&.m_type\&.
+.SS "String examples\&.gp\&.tictactoe\&.EvaluateBoard\&.getName ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+textual name of this command
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 91 of file EvaluateBoard\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.EvaluateBoard\&.m_index\&.
+.SS "String examples\&.gp\&.tictactoe\&.EvaluateBoard\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 67 of file EvaluateBoard\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.EvaluateBoard\&.m_index\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.gp\&.tictactoe\&.EvaluateBoard\&.CVS_REVISION = '$Revision: 1\&.4 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file EvaluateBoard\&.java\&.
+.SS "\fBBoard\fP examples\&.gp\&.tictactoe\&.EvaluateBoard\&.m_board\fC [private]\fP"
+
+.PP
+Definition at line 28 of file EvaluateBoard\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.EvaluateBoard\&.clone(), and examples\&.gp\&.tictactoe\&.EvaluateBoard\&.EvaluateBoard()\&.
+.SS "int examples\&.gp\&.tictactoe\&.EvaluateBoard\&.m_index\fC [private]\fP"
+
+.PP
+Definition at line 30 of file EvaluateBoard\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.EvaluateBoard\&.clone(), examples\&.gp\&.tictactoe\&.EvaluateBoard\&.EvaluateBoard(), examples\&.gp\&.tictactoe\&.EvaluateBoard\&.execute_void(), examples\&.gp\&.tictactoe\&.EvaluateBoard\&.getChildType(), examples\&.gp\&.tictactoe\&.EvaluateBoard\&.getName(), and examples\&.gp\&.tictactoe\&.EvaluateBoard\&.toString()\&.
+.SS "int examples\&.gp\&.tictactoe\&.EvaluateBoard\&.m_subChildType\fC [private]\fP"
+
+.PP
+Definition at line 33 of file EvaluateBoard\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.EvaluateBoard\&.clone(), and examples\&.gp\&.tictactoe\&.EvaluateBoard\&.EvaluateBoard()\&.
+.SS "Class examples\&.gp\&.tictactoe\&.EvaluateBoard\&.m_type\fC [private]\fP"
+
+.PP
+Definition at line 32 of file EvaluateBoard\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.EvaluateBoard\&.clone(), examples\&.gp\&.tictactoe\&.EvaluateBoard\&.EvaluateBoard(), and examples\&.gp\&.tictactoe\&.EvaluateBoard\&.getChildType()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,143 @@
+.TH "org.jgap.perf.TestOverallPerformance" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.perf.TestOverallPerformance \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmakeChangeForAmount\fP (int a_targetChangeAmount)  throws Exception "
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)  throws Exception "
+.br
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static long \fBgetCurrentMilliseconds\fP ()"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.7 $'"
+.br
+.ti -1c
+.RI "static final int \fBMAX_ALLOWED_EVOLUTIONS\fP = 1000"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class provides an implementation of an overall performance test\&. To obtain this, the provided example has been modified slightly, regarding the random number generator\&. We use a static number generator here which does not deserve the name 'random generator'\&. With that we have a determined calculation path that results in reproducable results\&. By executing the example several times we get a performance measurement\&. The measured time has to be compared to other results manually as with different hardware equipment the numbers vary a lot\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 29 of file TestOverallPerformance\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static long org\&.jgap\&.perf\&.TestOverallPerformance\&.getCurrentMilliseconds ()\fC [inline]\fP, \fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+current time in milliseconds 
+.RE
+.PP
+
+.PP
+Definition at line 151 of file TestOverallPerformance\&.java\&.
+.PP
+Referenced by org\&.jgap\&.perf\&.TestOverallPerformance\&.main()\&.
+.SS "static void org\&.jgap\&.perf\&.TestOverallPerformance\&.main (String[]args) throws Exception\fC [inline]\fP, \fC [static]\fP"
+Execute the performance test\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP ignored 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 130 of file TestOverallPerformance\&.java\&.
+.PP
+References org\&.jgap\&.perf\&.TestOverallPerformance\&.getCurrentMilliseconds()\&.
+.SS "void org\&.jgap\&.perf\&.TestOverallPerformance\&.makeChangeForAmount (inta_targetChangeAmount) throws Exception\fC [inline]\fP"
+Executes the genetic algorithm to determine the minimum number of coins necessary to make up the given target amount of change\&. The solution will then be written to System\&.out\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_targetChangeAmount\fP the target amount of change for which this method is attempting to produce the minimum number of coins
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file TestOverallPerformance\&.java\&.
+.PP
+References org\&.jgap\&.perf\&.TestOverallPerformance\&.MAX_ALLOWED_EVOLUTIONS\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.perf\&.TestOverallPerformance\&.CVS_REVISION = '$Revision: 1\&.7 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 31 of file TestOverallPerformance\&.java\&.
+.SS "final int org\&.jgap\&.perf\&.TestOverallPerformance\&.MAX_ALLOWED_EVOLUTIONS = 1000\fC [static]\fP, \fC [private]\fP"
+The total number of times we'll let the population evolve\&. 
+.PP
+Definition at line 36 of file TestOverallPerformance\&.java\&.
+.PP
+Referenced by org\&.jgap\&.perf\&.TestOverallPerformance\&.makeChangeForAmount()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

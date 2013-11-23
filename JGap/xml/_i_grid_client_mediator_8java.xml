@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="_i_grid_client_mediator_8java" kind="file">
+    <compoundname>IGridClientMediator.java</compoundname>
+    <innerclass refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator" prot="public">org::jgap::distr::grid::IGridClientMediator</innerclass>
+    <innernamespace refid="namespaceorg_1_1jgap_1_1distr_1_1grid">org::jgap::distr::grid</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>JGAP.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>JGAP<sp/>offers<sp/>a<sp/>dual<sp/>license<sp/>model<sp/>containing<sp/>the<sp/>LGPL<sp/>as<sp/>well<sp/>as<sp/>the<sp/>MPL.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>For<sp/>licensing<sp/>information<sp/>please<sp/>see<sp/>the<sp/>file<sp/>license.txt<sp/>included<sp/>with<sp/>JGAP</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>or<sp/>have<sp/>a<sp/>look<sp/>at<sp/>the<sp/>top<sp/>of<sp/>class<sp/>org.jgap.Chromosome<sp/>which<sp/>representatively</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>includes<sp/>the<sp/>JGAP<sp/>license<sp/>policy<sp/>applicable<sp/>for<sp/>any<sp/>file<sp/>delivered<sp/>with<sp/>JGAP.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">org.jgap.distr.grid;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.io.*;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.*;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.homedns.dade.jcgrid.message.*;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator" kindref="compound">IGridClientMediator</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>Serializable<sp/>{</highlight></codeline>
+<codeline lineno="25" refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_1a40d2352a76e3fd5e56b1c4ac6443a54c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_1a40d2352a76e3fd5e56b1c4ac6443a54c" kindref="member">CVS_REVISION</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$Revision:<sp/>1.8<sp/>$&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_1a9c167ee36b2c5c1b1d0c3a73535b4c67" kindref="member">connect</ref>()</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_1ae0f495c6b3b530c17080176a0ab1bb35" kindref="member">disconnect</ref>()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_1affc59251eaf699da84a107ebbf27ed78" kindref="member">send</ref>(GridMessage<sp/>a_msg,<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_message_context" kindref="compound">MessageContext</ref><sp/>a_context,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Map&lt;String,<sp/>String&gt;<sp/>a_headerData)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>List<sp/><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_1a6d3b85a4f42475b5825f924d9ba59eba" kindref="member">listRequests</ref>(<ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_message_context" kindref="compound">MessageContext</ref><sp/>a_context,<sp/>String<sp/>a_datetime,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>a_pattern)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>List<sp/><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_1a7499a616fadcee3847e73535799e74a4" kindref="member">listResults</ref>(<ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_message_context" kindref="compound">MessageContext</ref><sp/>a_context,<sp/>String<sp/>a_datetime,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>a_pattern)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>GridMessage<sp/><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_1a1716e496659e90ae169149fd11ef0637" kindref="member">getGridMessage</ref>(<ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_message_context" kindref="compound">MessageContext</ref><sp/>a_context,<sp/>String<sp/>a_datetime,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_timeoutSeconds,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_waitTimeSeconds,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>a_removeRequest)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_1ab6b6be3e765dd6b96d44f9d5daa6ffbd" kindref="member">removeMessage</ref>(Object<sp/>a_entry)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_1a1754c025617ae00ef9c8905c5b7aa4ec" kindref="member">stop</ref>()</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator_1a811c4a83e3e1cc91e23804f56aafa9a4" kindref="member">backupResult</ref>(Object<sp/>a_result,<sp/>String<sp/>a_subDir,<sp/>String<sp/>a_title)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/IGridClientMediator.java"/>
+  </compounddef>
+</doxygen>

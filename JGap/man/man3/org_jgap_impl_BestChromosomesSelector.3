@@ -1,0 +1,361 @@
+.TH "org.jgap.impl.BestChromosomesSelector" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.BestChromosomesSelector \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.NaturalSelectorExt\fP, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBBestChromosomesSelectorConfig\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBestChromosomesSelector\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBBestChromosomesSelector\fP (final \fBConfiguration\fP a_config)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBBestChromosomesSelector\fP (final \fBConfiguration\fP a_config, final double a_originalRate)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBselectChromosomes\fP (final int a_howManyToSelect, \fBPopulation\fP a_to_pop)"
+.br
+.ti -1c
+.RI "void \fBempty\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBreturnsUniqueChromosomes\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetOriginalRate\fP (final double a_originalRate)"
+.br
+.ti -1c
+.RI "double \fBgetOriginalRate\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_o)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBadd\fP (final \fBIChromosome\fP a_chromosomeToAdd)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPopulation\fP \fBm_chromosomes\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_needsSorting\fP"
+.br
+.ti -1c
+.RI "Comparator \fBm_fitnessValueComparator\fP"
+.br
+.ti -1c
+.RI "BestChromosomesSelectorConfig \fBm_config\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.54 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Implementation of a \fBNaturalSelector\fP that takes the top n chromosomes into the next generation\&. n can be specified\&. Which chromosomes are the best is decided by evaluating their fitness value\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file BestChromosomesSelector\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.BestChromosomesSelector\&.BestChromosomesSelector () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Default constructor\&. Attention: The configuration used is the one set with the static method Genotype\&.setConfiguration\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 57 of file BestChromosomesSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BestChromosomesSelector\&.clone(), and org\&.jgap\&.impl\&.BestChromosomesSelector\&.equals()\&.
+.SS "org\&.jgap\&.impl\&.BestChromosomesSelector\&.BestChromosomesSelector (final \fBConfiguration\fPa_config) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Using original rate of 1\&.0
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 71 of file BestChromosomesSelector\&.java\&.
+.SS "org\&.jgap\&.impl\&.BestChromosomesSelector\&.BestChromosomesSelector (final \fBConfiguration\fPa_config, final doublea_originalRate) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 76 of file BestChromosomesSelector\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.BestChromosomesSelector\&.m_chromosomes, org\&.jgap\&.impl\&.BestChromosomesSelector\&.m_fitnessValueComparator, org\&.jgap\&.impl\&.BestChromosomesSelector\&.m_needsSorting, org\&.jgap\&.NaturalSelectorExt\&.setDoubletteChromosomesAllowed(), and org\&.jgap\&.impl\&.BestChromosomesSelector\&.setOriginalRate()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.impl\&.BestChromosomesSelector\&.add (final \fBIChromosome\fPa_chromosomeToAdd)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Add a \fBChromosome\fP instance to this selector's working pool of Chromosomes\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomeToAdd\fP the specimen to add to the pool
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.NaturalSelectorExt\fP\&.
+.PP
+Definition at line 94 of file BestChromosomesSelector\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.BestChromosomesSelector\&.clone(), org\&.jgap\&.Population\&.getChromosomes(), org\&.jgap\&.NaturalSelector\&.getConfiguration(), org\&.jgap\&.NaturalSelectorExt\&.getDoubletteChromosomesAllowed(), org\&.jgap\&.impl\&.BestChromosomesSelector\&.m_chromosomes, org\&.jgap\&.impl\&.BestChromosomesSelector\&.m_needsSorting, and org\&.jgap\&.IHandler\&.perform()\&.
+.SS "Object org\&.jgap\&.impl\&.BestChromosomesSelector\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+clone of the current object instance 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 298 of file BestChromosomesSelector\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.BestChromosomesSelector\&.BestChromosomesSelector(), org\&.jgap\&.NaturalSelector\&.getConfiguration(), org\&.jgap\&.NaturalSelectorExt\&.getDoubletteChromosomesAllowed(), org\&.jgap\&.impl\&.BestChromosomesSelector\&.m_config, and org\&.jgap\&.impl\&.BestChromosomesSelector\&.m_needsSorting\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BestChromosomesSelector\&.add()\&.
+.SS "void org\&.jgap\&.impl\&.BestChromosomesSelector\&.empty ()\fC [inline]\fP"
+Empties out the working pool of Chromosomes\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.INaturalSelector\fP\&.
+.PP
+Definition at line 216 of file BestChromosomesSelector\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.BestChromosomesSelector\&.m_needsSorting\&.
+.SS "boolean org\&.jgap\&.impl\&.BestChromosomesSelector\&.equals (Objecta_o)\fC [inline]\fP"
+
+.PP
+Definition at line 275 of file BestChromosomesSelector\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.BestChromosomesSelector\&.BestChromosomesSelector(), org\&.jgap\&.Population\&.equals(), org\&.jgap\&.NaturalSelectorExt\&.getDoubletteChromosomesAllowed(), org\&.jgap\&.impl\&.BestChromosomesSelector\&.m_chromosomes, org\&.jgap\&.impl\&.BestChromosomesSelector\&.m_config, and org\&.jgap\&.impl\&.BestChromosomesSelector\&.m_fitnessValueComparator\&.
+.SS "double org\&.jgap\&.impl\&.BestChromosomesSelector\&.getOriginalRate ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+see setOriginalRate
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 262 of file BestChromosomesSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BestChromosomesSelectorTest\&.testSetOriginalRate_1()\&.
+.SS "boolean org\&.jgap\&.impl\&.BestChromosomesSelector\&.returnsUniqueChromosomes ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+always true as no \fBChromosome\fP can be returnd multiple times
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.INaturalSelector\fP\&.
+.PP
+Definition at line 229 of file BestChromosomesSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BestChromosomesSelectorTest\&.testConstruct_0(), and org\&.jgap\&.impl\&.BestChromosomesSelectorTest\&.testReturnsUnique_0()\&.
+.SS "void org\&.jgap\&.impl\&.BestChromosomesSelector\&.selectChromosomes (final inta_howManyToSelect, \fBPopulation\fPa_to_pop)\fC [inline]\fP"
+Selects a given number of chromosomes from the pool that will move on to the next generation population\&. This selection will be guided by the fitness values\&. The chromosomes with the best fitness value win\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_to_pop\fP the population the chromosomes will be added to 
+.br
+\fIa_howManyToSelect\fP the number of chromosomes to select
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 141 of file BestChromosomesSelector\&.java\&.
+.PP
+References org\&.jgap\&.NaturalSelector\&.getConfiguration(), org\&.jgap\&.NaturalSelectorExt\&.getDoubletteChromosomesAllowed(), org\&.jgap\&.impl\&.BestChromosomesSelector\&.m_fitnessValueComparator, org\&.jgap\&.NaturalSelector\&.m_monitorActive, and org\&.jgap\&.impl\&.BestChromosomesSelector\&.m_needsSorting\&.
+.SS "void org\&.jgap\&.impl\&.BestChromosomesSelector\&.setOriginalRate (final doublea_originalRate)\fC [inline]\fP"
+Setting this parameter controls how many chromosomes of the original population will be considered for selection to the next population\&. If the value is 1 then the whole original population is considered, if it is 0\&.5 only half of the chromosomes are considered\&. If doublettes are allowed, then a number of chromosomes missing (number of to be selected minus number selected) will be added\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_originalRate\fP the rate of how many of the original chromosomes will be selected according to BestChromosomeSelector's strategy\&. The rest (non-original) of the chromosomes is added as duplicates
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 247 of file BestChromosomesSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BestChromosomesSelector\&.BestChromosomesSelector()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.BestChromosomesSelector\&.CVS_REVISION = '$Revision: 1\&.54 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 27 of file BestChromosomesSelector\&.java\&.
+.SS "\fBPopulation\fP org\&.jgap\&.impl\&.BestChromosomesSelector\&.m_chromosomes\fC [private]\fP"
+Stores the chromosomes to be taken into account for selection 
+.PP
+Definition at line 32 of file BestChromosomesSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BestChromosomesSelector\&.add(), org\&.jgap\&.impl\&.BestChromosomesSelector\&.BestChromosomesSelector(), and org\&.jgap\&.impl\&.BestChromosomesSelector\&.equals()\&.
+.SS "BestChromosomesSelectorConfig org\&.jgap\&.impl\&.BestChromosomesSelector\&.m_config\fC [private]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= new
+      BestChromosomesSelectorConfig()
+.fi
+.PP
+Definition at line 44 of file BestChromosomesSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BestChromosomesSelector\&.clone(), and org\&.jgap\&.impl\&.BestChromosomesSelector\&.equals()\&.
+.SS "Comparator org\&.jgap\&.impl\&.BestChromosomesSelector\&.m_fitnessValueComparator\fC [private]\fP"
+Comparator that is concerned about both age and fitness values 
+.PP
+Definition at line 42 of file BestChromosomesSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BestChromosomesSelector\&.BestChromosomesSelector(), org\&.jgap\&.impl\&.BestChromosomesSelector\&.equals(), and org\&.jgap\&.impl\&.BestChromosomesSelector\&.selectChromosomes()\&.
+.SS "boolean org\&.jgap\&.impl\&.BestChromosomesSelector\&.m_needsSorting\fC [private]\fP"
+Indicated whether the list of added chromosomes needs sorting 
+.PP
+Definition at line 37 of file BestChromosomesSelector\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BestChromosomesSelector\&.add(), org\&.jgap\&.impl\&.BestChromosomesSelector\&.BestChromosomesSelector(), org\&.jgap\&.impl\&.BestChromosomesSelector\&.clone(), org\&.jgap\&.impl\&.BestChromosomesSelector\&.empty(), and org\&.jgap\&.impl\&.BestChromosomesSelector\&.selectChromosomes()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

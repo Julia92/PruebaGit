@@ -1,0 +1,284 @@
+.TH "org.jgap.data.config.ConfigFileReader" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.data.config.ConfigFileReader \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "String \fBgetValue\fP (final String a_name)"
+.br
+.ti -1c
+.RI "List \fBgetValues\fP (final String a_name)"
+.br
+.ti -1c
+.RI "void \fBsetNS\fP (final String a_ns)"
+.br
+.ti -1c
+.RI "void \fBsetFileName\fP (final String a_fileName)  throws ConfigException "
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBConfigFileReader\fP \fBinstance\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConfigFileReader\fP ()"
+.br
+.ti -1c
+.RI "void \fBload\fP ()  throws ConfigException "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "String \fBm_fileName\fP"
+.br
+.ti -1c
+.RI "Properties \fBm_props\fP"
+.br
+.ti -1c
+.RI "String \fBm_ns\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.6 $'"
+.br
+.ti -1c
+.RI "static \fBConfigFileReader\fP \fBm_cfReader\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is a Singleton Helper class to read a JGAP config file and provide a simple interface to the config properties\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file ConfigFileReader\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.data\&.config\&.ConfigFileReader\&.ConfigFileReader ()\fC [inline]\fP, \fC [private]\fP"
+Private Constructor\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 59 of file ConfigFileReader\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigFileReader\&.m_props\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.ConfigFileReader\&.instance()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "String org\&.jgap\&.data\&.config\&.ConfigFileReader\&.getValue (final Stringa_name)\fC [inline]\fP"
+Retrieve the value for the property with the name as in param name\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP name of the property of which the value is required 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+value for the property with the name as in param name, null if property not found
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 72 of file ConfigFileReader\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigFileReader\&.m_ns\&.
+.SS "List org\&.jgap\&.data\&.config\&.ConfigFileReader\&.getValues (final Stringa_name)\fC [inline]\fP"
+Retrieve the values for the property with the name as in param name\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_name\fP the name of the property of which the value is required 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+ArrayList of Strings with values for the property with the name as in param name, null if property not found
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+
+.PP
+Definition at line 87 of file ConfigFileReader\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigFileReader\&.m_ns\&.
+.SS "static \fBConfigFileReader\fP org\&.jgap\&.data\&.config\&.ConfigFileReader\&.instance ()\fC [inline]\fP, \fC [static]\fP"
+Method to create and access the Singleton \fBConfigFileReader\fP instance\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+instance of the \fBConfigFileReader\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 46 of file ConfigFileReader\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigFileReader\&.ConfigFileReader(), and org\&.jgap\&.data\&.config\&.ConfigFileReader\&.m_cfReader\&.
+.SS "void org\&.jgap\&.data\&.config\&.ConfigFileReader\&.load () throws \fBConfigException\fP\fC [inline]\fP, \fC [private]\fP"
+Load the config properties file into a Properties instance\&. 
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBConfigException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 147 of file ConfigFileReader\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigFileReader\&.m_fileName\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.ConfigFileReader\&.setFileName()\&.
+.SS "void org\&.jgap\&.data\&.config\&.ConfigFileReader\&.setFileName (final Stringa_fileName) throws \fBConfigException\fP\fC [inline]\fP"
+Set the config file to load from\&. Everytime this method is called, properties are reloaded from the config file\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_fileName\fP Name of the config file\&. 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBConfigException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 134 of file ConfigFileReader\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigFileReader\&.load(), and org\&.jgap\&.data\&.config\&.ConfigFileReader\&.m_fileName\&.
+.SS "void org\&.jgap\&.data\&.config\&.ConfigFileReader\&.setNS (final Stringa_ns)\fC [inline]\fP"
+Set the namespace for the properties that are being read from the config file at this point\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ns\fP namespace for the properties being read
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+
+.PP
+Definition at line 120 of file ConfigFileReader\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigFileReader\&.m_ns\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.data\&.config\&.ConfigFileReader\&.CVS_REVISION = '$Revision: 1\&.6 $'\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 23 of file ConfigFileReader\&.java\&.
+.SS "\fBConfigFileReader\fP org\&.jgap\&.data\&.config\&.ConfigFileReader\&.m_cfReader\fC [static]\fP, \fC [private]\fP"
+Singleton Instance of \fBConfigFileReader\fP 
+.PP
+Definition at line 37 of file ConfigFileReader\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.ConfigFileReader\&.instance()\&.
+.SS "String org\&.jgap\&.data\&.config\&.ConfigFileReader\&.m_fileName\fC [private]\fP"
+
+.PP
+Definition at line 26 of file ConfigFileReader\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.ConfigFileReader\&.load(), and org\&.jgap\&.data\&.config\&.ConfigFileReader\&.setFileName()\&.
+.SS "String org\&.jgap\&.data\&.config\&.ConfigFileReader\&.m_ns\fC [private]\fP"
+
+.PP
+Definition at line 32 of file ConfigFileReader\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.ConfigFileReader\&.getValue(), org\&.jgap\&.data\&.config\&.ConfigFileReader\&.getValues(), and org\&.jgap\&.data\&.config\&.ConfigFileReader\&.setNS()\&.
+.SS "Properties org\&.jgap\&.data\&.config\&.ConfigFileReader\&.m_props\fC [private]\fP"
+
+.PP
+Definition at line 29 of file ConfigFileReader\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.ConfigFileReader\&.ConfigFileReader()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

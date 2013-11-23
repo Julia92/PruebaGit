@@ -1,0 +1,286 @@
+.TH "org.jgap.gp.function.ADF" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.function.ADF \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBADF\fP (final GPConfiguration a_conf, int a_chromosomeNum, int a_arity)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "int \fBgetChromosomeNum\fP ()"
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetArity\fP (\fBIGPProgram\fP a_individual)"
+.br
+.ti -1c
+.RI "int \fBexecute_int\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "boolean \fBexecute_boolean\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "float \fBexecute_float\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "double \fBexecute_double\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "Object \fBexecute_object\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "Class \fBgetChildType\fP (\fBIGPProgram\fP a_ind, int i)"
+.br
+.ti -1c
+.RI "boolean \fBisValid\fP (ProgramChromosome a_chrom)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBm_chromosomeNum\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.19 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Automatically Defined Function (\fBADF\fP)\&. Works with output of other chromosomes\&. An \fBADF\fP is automatically created by ProgramChromosome\&. For more information about ADFs see John Koza's book on Genetic Programming\&. \fBOr\fP google for 'Koza ADF'\&. For a German explanation, see see http://www.tu-chemnitz.de/informatik/ThIS/seminare/ws01/gp/singer.pdf or http://www.tu-chemnitz.de/informatik/ThIS/seminare/ws01/gp/forbriger.pdf or http://www.klaus-meffert.de/download/genetische_programmierung_mit_java.pdf
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 32 of file ADF\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.function\&.ADF\&.ADF (final GPConfigurationa_conf, inta_chromosomeNum, inta_arity) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_chromosomeNum\fP the index of the chromosome to execute 
+.br
+\fIa_arity\fP the arity of the \fBADF\fP
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 53 of file ADF\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.ADF\&.m_chromosomeNum\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.ADF\&.compareTo(), and org\&.jgap\&.gp\&.function\&.ADF\&.equals()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int org\&.jgap\&.gp\&.function\&.ADF\&.compareTo (Objecta_other)\fC [inline]\fP"
+The compareTo-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+-1, 0, 1
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 164 of file ADF\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.ADF\&.ADF(), and org\&.jgap\&.gp\&.function\&.ADF\&.m_chromosomeNum\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.ADF\&.equals (Objecta_other)\fC [inline]\fP"
+The equals-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the objects are seen as equal
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 184 of file ADF\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.ADF\&.ADF(), and org\&.jgap\&.gp\&.function\&.ADF\&.m_chromosomeNum\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.ADF\&.execute_boolean (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 101 of file ADF\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), and org\&.jgap\&.gp\&.function\&.ADF\&.m_chromosomeNum\&.
+.SS "double org\&.jgap\&.gp\&.function\&.ADF\&.execute_double (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 121 of file ADF\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), and org\&.jgap\&.gp\&.function\&.ADF\&.m_chromosomeNum\&.
+.SS "float org\&.jgap\&.gp\&.function\&.ADF\&.execute_float (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 111 of file ADF\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), and org\&.jgap\&.gp\&.function\&.ADF\&.m_chromosomeNum\&.
+.SS "int org\&.jgap\&.gp\&.function\&.ADF\&.execute_int (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 89 of file ADF\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), and org\&.jgap\&.gp\&.function\&.ADF\&.m_chromosomeNum\&.
+.SS "Object org\&.jgap\&.gp\&.function\&.ADF\&.execute_object (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 131 of file ADF\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.check(), and org\&.jgap\&.gp\&.function\&.ADF\&.m_chromosomeNum\&.
+.SS "int org\&.jgap\&.gp\&.function\&.ADF\&.getArity (\fBIGPProgram\fPa_individual)\fC [inline]\fP"
+
+.PP
+Definition at line 82 of file ADF\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.ADF\&.m_chromosomeNum, and org\&.jgap\&.gp\&.IGPProgram\&.size()\&.
+.SS "Class org\&.jgap\&.gp\&.function\&.ADF\&.getChildType (\fBIGPProgram\fPa_ind, inti)\fC [inline]\fP"
+
+.PP
+Definition at line 141 of file ADF\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.ADF\&.m_chromosomeNum\&.
+.SS "int org\&.jgap\&.gp\&.function\&.ADF\&.getChromosomeNum ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the index of the chromosome to execute
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 65 of file ADF\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.ADF\&.m_chromosomeNum\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.ADF\&.isValid (ProgramChromosomea_chrom)\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+enhance 
+.RE
+.PP
+
+.PP
+Definition at line 145 of file ADF\&.java\&.
+.SS "String org\&.jgap\&.gp\&.function\&.ADF\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 69 of file ADF\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.ADF\&.m_chromosomeNum, and org\&.jgap\&.gp\&.CommandGene\&.size()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.function\&.ADF\&.CVS_REVISION = '$Revision: 1\&.19 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 37 of file ADF\&.java\&.
+.SS "int org\&.jgap\&.gp\&.function\&.ADF\&.m_chromosomeNum\fC [private]\fP"
+
+.PP
+Definition at line 39 of file ADF\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.ADF\&.ADF(), org\&.jgap\&.gp\&.function\&.ADF\&.compareTo(), org\&.jgap\&.gp\&.function\&.ADF\&.equals(), org\&.jgap\&.gp\&.function\&.ADF\&.execute_boolean(), org\&.jgap\&.gp\&.function\&.ADF\&.execute_double(), org\&.jgap\&.gp\&.function\&.ADF\&.execute_float(), org\&.jgap\&.gp\&.function\&.ADF\&.execute_int(), org\&.jgap\&.gp\&.function\&.ADF\&.execute_object(), org\&.jgap\&.gp\&.function\&.ADF\&.getArity(), org\&.jgap\&.gp\&.function\&.ADF\&.getChildType(), org\&.jgap\&.gp\&.function\&.ADF\&.getChromosomeNum(), and org\&.jgap\&.gp\&.function\&.ADF\&.toString()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,88 @@
+.TH "examples.gp.tictactoe.GameNodeValidator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.tictactoe.GameNodeValidator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits INodeValidator\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "boolean \fBvalidate\fP (\fBProgramChromosome\fP a_chrom, \fBCommandGene\fP a_node, \fBCommandGene\fP a_rootNode, int a_tries, int a_num, int a_recurseLevel, Class a_type, \fBCommandGene\fP[] a_functionSet, int a_depth, boolean a_grow, int a_childIndex, boolean a_fullProgram)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Validates evolved nodes for the Tic Tac Toe problem\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file GameNodeValidator\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "boolean examples\&.gp\&.tictactoe\&.GameNodeValidator\&.validate (\fBProgramChromosome\fPa_chrom, \fBCommandGene\fPa_node, \fBCommandGene\fPa_rootNode, inta_tries, inta_num, inta_recurseLevel, Classa_type, \fBCommandGene\fP[]a_functionSet, inta_depth, booleana_grow, inta_childIndex, booleana_fullProgram)\fC [inline]\fP"
+Validates a_node in the context of a_chrom during evolution\&. Considers the recursion level (a_recursLevel), the type needed (a_type) for the node, the functions available (a_functionSet) and the depth of the whole chromosome needed (a_depth), and whether grow mode is used (a_grow is true) or not\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chrom\fP the chromosome that will contain the node, if valid (ignored in this implementation) 
+.br
+\fIa_node\fP the node selected and to be validated 
+.br
+\fIa_rootNode\fP the root node of a_node, may be null for top nodes 
+.br
+\fIa_tries\fP number of times the validator has been called, useful for stopping by returning true if the number exceeds a limit 
+.br
+\fIa_num\fP the chromosome's index in the individual of this chromosome 
+.br
+\fIa_recurseLevel\fP level of recursion, i\&.e\&. the depth of a node 
+.br
+\fIa_type\fP the return type of the node needed 
+.br
+\fIa_functionSet\fP the array of available functions (ignored in this implementation) 
+.br
+\fIa_depth\fP the allowed remaining depth of the program chromosome 
+.br
+\fIa_grow\fP true: use grow mode, false: use full mode (ignored in this implementation) 
+.br
+\fIa_childIndex\fP index of the child in the parent node to which it belongs (-1 if node is root node) 
+.br
+\fIa_fullProgram\fP true: full program is available for evaluation 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: node is valid; false: node is invalid
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 53 of file GameNodeValidator\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

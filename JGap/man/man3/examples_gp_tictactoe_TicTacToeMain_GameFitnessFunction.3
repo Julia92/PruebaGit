@@ -1,0 +1,146 @@
+.TH "examples.gp.tictactoe.TicTacToeMain.GameFitnessFunction" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.tictactoe.TicTacToeMain.GameFitnessFunction \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.GPFitnessFunction\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGameFitnessFunction\fP (\fBBoard\fP a_board, int a_color, \fBGPGenotype\fP a_other, int a_otherColor)"
+.br
+.ti -1c
+.RI "void \fBsetPlayer\fP (\fBGPGenotype\fP a_player)"
+.br
+.ti -1c
+.RI "void \fBsetOpponent\fP (\fBGPGenotype\fP a_other)"
+.br
+.ti -1c
+.RI "double \fBcomputeRawFitness\fP (final \fBIGPProgram\fP a_program)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "double \fBevaluate\fP (final \fBIGPProgram\fP a_subject)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBBoard\fP \fBm_board\fP"
+.br
+.ti -1c
+.RI "int \fBm_color\fP"
+.br
+.ti -1c
+.RI "\fBGPGenotype\fP \fBm_other\fP"
+.br
+.ti -1c
+.RI "boolean \fBfirstTime\fP"
+.br
+.ti -1c
+.RI "\fBGPGenotype\fP \fBm_player\fP"
+.br
+.ti -1c
+.RI "int \fBnullfound\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fBmaxMoves\fP"
+.br
+.ti -1c
+.RI "static int \fBmaxreads\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Definition at line 369 of file TicTacToeMain\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.gp\&.tictactoe\&.TicTacToeMain\&.GameFitnessFunction\&.GameFitnessFunction (\fBBoard\fPa_board, inta_color, \fBGPGenotype\fPa_other, inta_otherColor)\fC [inline]\fP"
+
+.PP
+Definition at line 401 of file TicTacToeMain\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "double examples\&.gp\&.tictactoe\&.TicTacToeMain\&.GameFitnessFunction\&.computeRawFitness (final \fBIGPProgram\fPa_program)\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+reduce fitness for NOP 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+value memory reads and writes 
+.RE
+.PP
+
+.PP
+Definition at line 421 of file TicTacToeMain\&.java\&.
+.PP
+References examples\&.gp\&.tictactoe\&.GameWonException\&.getColor(), examples\&.gp\&.tictactoe\&.Board\&.HEIGHT, org\&.jgap\&.gp\&.IGPProgram\&.size(), and examples\&.gp\&.tictactoe\&.Board\&.WIDTH\&.
+.SS "double examples\&.gp\&.tictactoe\&.TicTacToeMain\&.GameFitnessFunction\&.evaluate (final \fBIGPProgram\fPa_subject)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 417 of file TicTacToeMain\&.java\&.
+.SS "void examples\&.gp\&.tictactoe\&.TicTacToeMain\&.GameFitnessFunction\&.setOpponent (\fBGPGenotype\fPa_other)\fC [inline]\fP"
+
+.PP
+Definition at line 413 of file TicTacToeMain\&.java\&.
+.SS "void examples\&.gp\&.tictactoe\&.TicTacToeMain\&.GameFitnessFunction\&.setPlayer (\fBGPGenotype\fPa_player)\fC [inline]\fP"
+
+.PP
+Definition at line 409 of file TicTacToeMain\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "boolean examples\&.gp\&.tictactoe\&.TicTacToeMain\&.GameFitnessFunction\&.firstTime\fC [private]\fP"
+
+.PP
+Definition at line 377 of file TicTacToeMain\&.java\&.
+.SS "\fBBoard\fP examples\&.gp\&.tictactoe\&.TicTacToeMain\&.GameFitnessFunction\&.m_board\fC [private]\fP"
+
+.PP
+Definition at line 371 of file TicTacToeMain\&.java\&.
+.SS "int examples\&.gp\&.tictactoe\&.TicTacToeMain\&.GameFitnessFunction\&.m_color\fC [private]\fP"
+
+.PP
+Definition at line 373 of file TicTacToeMain\&.java\&.
+.SS "\fBGPGenotype\fP examples\&.gp\&.tictactoe\&.TicTacToeMain\&.GameFitnessFunction\&.m_other\fC [private]\fP"
+
+.PP
+Definition at line 375 of file TicTacToeMain\&.java\&.
+.SS "\fBGPGenotype\fP examples\&.gp\&.tictactoe\&.TicTacToeMain\&.GameFitnessFunction\&.m_player\fC [private]\fP"
+
+.PP
+Definition at line 383 of file TicTacToeMain\&.java\&.
+.SS "int examples\&.gp\&.tictactoe\&.TicTacToeMain\&.GameFitnessFunction\&.maxMoves\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 379 of file TicTacToeMain\&.java\&.
+.SS "int examples\&.gp\&.tictactoe\&.TicTacToeMain\&.GameFitnessFunction\&.maxreads\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 381 of file TicTacToeMain\&.java\&.
+.SS "int examples\&.gp\&.tictactoe\&.TicTacToeMain\&.GameFitnessFunction\&.nullfound\fC [private]\fP"
+
+.PP
+Definition at line 385 of file TicTacToeMain\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

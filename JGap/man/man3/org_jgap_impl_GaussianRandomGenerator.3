@@ -1,0 +1,332 @@
+.TH "org.jgap.impl.GaussianRandomGenerator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.GaussianRandomGenerator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.RandomGenerator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGaussianRandomGenerator\fP ()"
+.br
+.ti -1c
+.RI "\fBGaussianRandomGenerator\fP (final double a_standardDeviation)"
+.br
+.ti -1c
+.RI "void \fBsetGaussianStdDeviation\fP (final double a_standardDeviation)"
+.br
+.ti -1c
+.RI "double \fBgetGaussianStdDeviation\fP ()"
+.br
+.ti -1c
+.RI "int \fBnextInt\fP ()"
+.br
+.ti -1c
+.RI "int \fBnextInt\fP (final int a_ceiling)"
+.br
+.ti -1c
+.RI "long \fBnextLong\fP ()"
+.br
+.ti -1c
+.RI "double \fBnextDouble\fP ()"
+.br
+.ti -1c
+.RI "float \fBnextFloat\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBnextBoolean\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.ti -1c
+.RI "double \fBnextGaussian\fP ()"
+.br
+.ti -1c
+.RI "void \fBreadObject\fP (ObjectInputStream a_inputStream)  throws IOException, ClassNotFoundException "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Random \fBm_rn\fP"
+.br
+.ti -1c
+.RI "double \fBm_standardDeviation\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.21 $'"
+.br
+.ti -1c
+.RI "static final double \fBDELTA\fP = 0\&.0000001"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Gaussian deviation serving as basis for randomly finding a number\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file GaussianRandomGenerator\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.GaussianRandomGenerator\&.GaussianRandomGenerator ()\fC [inline]\fP"
+
+.PP
+Definition at line 37 of file GaussianRandomGenerator\&.java\&.
+.SS "org\&.jgap\&.impl\&.GaussianRandomGenerator\&.GaussianRandomGenerator (final doublea_standardDeviation)\fC [inline]\fP"
+Constructor speicifying the (obliagtory) standard deviation\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_standardDeviation\fP the standard deviation to use 
+.RE
+.PP
+
+.PP
+Definition at line 46 of file GaussianRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.GaussianRandomGenerator\&.init(), and org\&.jgap\&.impl\&.GaussianRandomGenerator\&.setGaussianStdDeviation()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "double org\&.jgap\&.impl\&.GaussianRandomGenerator\&.getGaussianStdDeviation ()\fC [inline]\fP"
+
+.PP
+Definition at line 67 of file GaussianRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.GaussianRandomGenerator\&.m_standardDeviation\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GaussianRandomGeneratorTest\&.testGetGaussianStdDeviation_0()\&.
+.SS "void org\&.jgap\&.impl\&.GaussianRandomGenerator\&.init ()\fC [inline]\fP, \fC [private]\fP"
+Initializations on construction\&. 
+.PP
+Definition at line 55 of file GaussianRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.GaussianRandomGenerator\&.m_rn\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GaussianRandomGenerator\&.GaussianRandomGenerator()\&.
+.SS "boolean org\&.jgap\&.impl\&.GaussianRandomGenerator\&.nextBoolean ()\fC [inline]\fP"
+Returns the next pseudorandom, uniformly distributed boolean value from this random number generator's sequence\&. The general contract of nextBoolean is that one boolean value is pseudorandomly generated and returned\&. The values true and false are produced with (approximately) equal probability\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a pseudorandom boolean value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.RandomGenerator\fP\&.
+.PP
+Definition at line 106 of file GaussianRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.GaussianRandomGenerator\&.nextGaussian()\&.
+.SS "double org\&.jgap\&.impl\&.GaussianRandomGenerator\&.nextDouble ()\fC [inline]\fP"
+Returns the next pseudorandom, uniformly distributed double value between 0\&.0 and 1\&.0 from this random number generator's sequence\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a psuedorandom double value GREATER/EQUAL 0 AND LESS THAN 1
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.RandomGenerator\fP\&.
+.PP
+Definition at line 98 of file GaussianRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.GaussianRandomGenerator\&.nextGaussian()\&.
+.SS "float org\&.jgap\&.impl\&.GaussianRandomGenerator\&.nextFloat ()\fC [inline]\fP"
+Returns the next pseudorandom, uniformly distributed float value between 0\&.0 and 1\&.0 from this random number generator's sequence\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a psuedorandom float value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.RandomGenerator\fP\&.
+.PP
+Definition at line 102 of file GaussianRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.GaussianRandomGenerator\&.nextGaussian()\&.
+.SS "double org\&.jgap\&.impl\&.GaussianRandomGenerator\&.nextGaussian ()\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the next randomly distributed gaussian with current standard deviation, will be greater/equal zero 
+.RE
+.PP
+
+.PP
+Definition at line 114 of file GaussianRandomGenerator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GaussianRandomGenerator\&.nextBoolean(), org\&.jgap\&.impl\&.GaussianRandomGenerator\&.nextDouble(), org\&.jgap\&.impl\&.GaussianRandomGenerator\&.nextFloat(), org\&.jgap\&.impl\&.GaussianRandomGenerator\&.nextInt(), and org\&.jgap\&.impl\&.GaussianRandomGenerator\&.nextLong()\&.
+.SS "int org\&.jgap\&.impl\&.GaussianRandomGenerator\&.nextInt ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+positive integer value 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.RandomGenerator\fP\&.
+.PP
+Definition at line 74 of file GaussianRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.GaussianRandomGenerator\&.nextGaussian()\&.
+.SS "int org\&.jgap\&.impl\&.GaussianRandomGenerator\&.nextInt (final inta_ceiling)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ceiling\fP the upper boundary excluded 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+positive integer value between 0 and (ceiling - 1) 
+.RE
+.PP
+
+.PP
+Definition at line 84 of file GaussianRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.GaussianRandomGenerator\&.nextGaussian()\&.
+.SS "long org\&.jgap\&.impl\&.GaussianRandomGenerator\&.nextLong ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+positive long value 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.RandomGenerator\fP\&.
+.PP
+Definition at line 92 of file GaussianRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.GaussianRandomGenerator\&.nextGaussian()\&.
+.SS "void org\&.jgap\&.impl\&.GaussianRandomGenerator\&.readObject (ObjectInputStreama_inputStream) throws IOException, ClassNotFoundException\fC [inline]\fP, \fC [private]\fP"
+When deserializing, initialize the seed because otherwise we could get duplicate evolution results when doing distributed computing!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_inputStream\fP the ObjectInputStream provided for deserialzation
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIOException\fP 
+.br
+\fIClassNotFoundException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 132 of file GaussianRandomGenerator\&.java\&.
+.SS "void org\&.jgap\&.impl\&.GaussianRandomGenerator\&.setGaussianStdDeviation (final doublea_standardDeviation)\fC [inline]\fP"
+
+.PP
+Definition at line 59 of file GaussianRandomGenerator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.GaussianRandomGenerator\&.DELTA, and org\&.jgap\&.impl\&.GaussianRandomGenerator\&.m_standardDeviation\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GaussianRandomGenerator\&.GaussianRandomGenerator()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.GaussianRandomGenerator\&.CVS_REVISION = '$Revision: 1\&.21 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file GaussianRandomGenerator\&.java\&.
+.SS "final double org\&.jgap\&.impl\&.GaussianRandomGenerator\&.DELTA = 0\&.0000001\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 28 of file GaussianRandomGenerator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GaussianRandomGenerator\&.setGaussianStdDeviation()\&.
+.SS "Random org\&.jgap\&.impl\&.GaussianRandomGenerator\&.m_rn\fC [private]\fP"
+
+.PP
+Definition at line 30 of file GaussianRandomGenerator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GaussianRandomGenerator\&.init()\&.
+.SS "double org\&.jgap\&.impl\&.GaussianRandomGenerator\&.m_standardDeviation\fC [private]\fP"
+Standard deviation of the gaussian deviation 
+.PP
+Definition at line 35 of file GaussianRandomGenerator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GaussianRandomGenerator\&.getGaussianStdDeviation(), and org\&.jgap\&.impl\&.GaussianRandomGenerator\&.setGaussianStdDeviation()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,220 @@
+.TH "org.jgap.audit.TimedMonitor" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.audit.TimedMonitor \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.audit\&.IEvolutionMonitor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTimedMonitor\fP (int a_seconds)"
+.br
+.ti -1c
+.RI "boolean \fBnextCycle\fP (\fBPopulation\fP a_pop, List< String > a_messages)"
+.br
+.ti -1c
+.RI "void \fBstart\fP (\fBConfiguration\fP a_config)"
+.br
+.ti -1c
+.RI "void \fBevent\fP (String a_monitorEvent, int a_evolutionNo, Object[] a_information)"
+.br
+.ti -1c
+.RI "\fBPopulationHistoryIndexed\fP \fBgetPopulations\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "long \fBm_startMillis\fP"
+.br
+.ti -1c
+.RI "int \fBm_seconds\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.5 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Monitors the evolution and stops it after a given number of seconds\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file TimedMonitor\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.audit\&.TimedMonitor\&.TimedMonitor (inta_seconds)\fC [inline]\fP"
+Constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_seconds\fP number of seconds to let the evolution run
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 40 of file TimedMonitor\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.TimedMonitor\&.m_seconds\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.audit\&.TimedMonitor\&.event (Stringa_monitorEvent, inta_evolutionNo, Object[]a_information)\fC [inline]\fP"
+Called whenever it's worth monitoring\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_monitorEvent\fP see constants at top of class \fBIEvolutionMonitor\fP 
+.br
+\fIa_evolutionNo\fP the index of the evolution round (1, 2, \&.\&.\&.) 
+.br
+\fIa_information\fP event-specific information
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.audit\&.IEvolutionMonitor\fP\&.
+.PP
+Definition at line 88 of file TimedMonitor\&.java\&.
+.SS "\fBPopulationHistoryIndexed\fP org\&.jgap\&.audit\&.TimedMonitor\&.getPopulations ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+null as no data is gathered by this monitor
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.audit\&.IEvolutionMonitor\fP\&.
+.PP
+Definition at line 100 of file TimedMonitor\&.java\&.
+.SS "boolean org\&.jgap\&.audit\&.TimedMonitor\&.nextCycle (\fBPopulation\fPa_pop, List< String >a_messages)\fC [inline]\fP"
+Called after another evolution cycle has been executed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pop\fP the currently evolved population 
+.br
+\fIa_messages\fP the monitor can append messages here to indicate why it asks evolution to stop 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: continue with the evolution; false: stop evolution
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.audit\&.IEvolutionMonitor\fP\&.
+.PP
+Definition at line 55 of file TimedMonitor\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.TimedMonitor\&.m_seconds, and org\&.jgap\&.audit\&.TimedMonitor\&.m_startMillis\&.
+.SS "void org\&.jgap\&.audit\&.TimedMonitor\&.start (\fBConfiguration\fPa_config)\fC [inline]\fP"
+Called just before the evolution starts\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration used
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.audit\&.IEvolutionMonitor\fP\&.
+.PP
+Definition at line 74 of file TimedMonitor\&.java\&.
+.PP
+References org\&.jgap\&.audit\&.TimedMonitor\&.m_startMillis\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.audit\&.TimedMonitor\&.CVS_REVISION = '$Revision: 1\&.5 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file TimedMonitor\&.java\&.
+.SS "int org\&.jgap\&.audit\&.TimedMonitor\&.m_seconds\fC [private]\fP"
+
+.PP
+Definition at line 30 of file TimedMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.TimedMonitor\&.nextCycle(), and org\&.jgap\&.audit\&.TimedMonitor\&.TimedMonitor()\&.
+.SS "long org\&.jgap\&.audit\&.TimedMonitor\&.m_startMillis\fC [private]\fP"
+
+.PP
+Definition at line 28 of file TimedMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.TimedMonitor\&.nextCycle(), and org\&.jgap\&.audit\&.TimedMonitor\&.start()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

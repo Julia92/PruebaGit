@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="_local_evolution_demo_8java" kind="file">
+    <compoundname>LocalEvolutionDemo.java</compoundname>
+    <innerclass refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo" prot="public">examples::grid::evolutionDistributed::LocalEvolutionDemo</innerclass>
+    <innernamespace refid="namespaceexamples_1_1grid_1_1evolution_distributed">examples::grid::evolutionDistributed</innernamespace>
+    <innernamespace refid="namespaceexamples_1_1grid_1_1fitness_distributed_1_1">examples::grid::fitnessDistributed::</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>JGAP.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>JGAP<sp/>offers<sp/>a<sp/>dual<sp/>license<sp/>model<sp/>containing<sp/>the<sp/>LGPL<sp/>as<sp/>well<sp/>as<sp/>the<sp/>MPL.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>For<sp/>licensing<sp/>information<sp/>please<sp/>see<sp/>the<sp/>file<sp/>license.txt<sp/>included<sp/>with<sp/>JGAP</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>or<sp/>have<sp/>a<sp/>look<sp/>at<sp/>the<sp/>top<sp/>of<sp/>class<sp/>org.jgap.Chromosome<sp/>which<sp/>representatively</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>includes<sp/>the<sp/>JGAP<sp/>license<sp/>policy<sp/>applicable<sp/>for<sp/>any<sp/>file<sp/>delivered<sp/>with<sp/>JGAP.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">examples.grid.evolutionDistributed;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.distr.grid.*;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.*;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>examples.grid.fitnessDistributed.*;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo" kindref="compound">LocalEvolutionDemo</ref><sp/>{</highlight></codeline>
+<codeline lineno="29" refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1a42275b97c574b91c0538866b747ba676" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1a42275b97c574b91c0538866b747ba676" kindref="member">CVS_REVISION</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$Revision:<sp/>1.3<sp/>$&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1abde92093fa558697aafd74f680183cf9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_grid_configuration" kindref="compound">GridConfiguration</ref><sp/><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1abde92093fa558697aafd74f680183cf9" kindref="member">m_localconfig</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1ac103e14a2676fda0d390fe58bf830c68" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>IClientEvolveStrategy<sp/><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1ac103e14a2676fda0d390fe58bf830c68" kindref="member">m_clientEvolver</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1a6aed0955894a41cd1cd26b23ecfb3022" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>MyRequest<sp/><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1a6aed0955894a41cd1cd26b23ecfb3022" kindref="member">m_req</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1abd68b267515c76b48a709b7546c6f1b6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1abd68b267515c76b48a709b7546c6f1b6" kindref="member">LocalEvolutionDemo</ref>()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1abde92093fa558697aafd74f680183cf9" kindref="member">m_localconfig</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_grid_configuration" kindref="compound">GridConfiguration</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>m_localconfig.initialize(null);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1ac103e14a2676fda0d390fe58bf830c68" kindref="member">m_clientEvolver</ref><sp/>=<sp/>m_localconfig.getClientEvolveStrategy();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_clientEvolver<sp/>!=<sp/>null)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>m_clientEvolver.initialize(null,<sp/>m_localconfig.getConfiguration(),</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1abde92093fa558697aafd74f680183cf9" kindref="member">m_localconfig</ref>.getClientFeedback());</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1a6aed0955894a41cd1cd26b23ecfb3022" kindref="member">m_req</ref><sp/>=<sp/><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1af9be8fc03dc972482768ab2630079f1b" kindref="member">assembleWorkRequest</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1a9729391105e08c9bc81b515b907f5aa1" kindref="member">evolve</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1af9be8fc03dc972482768ab2630079f1b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/>MyRequest<sp/><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1af9be8fc03dc972482768ab2630079f1b" kindref="member">assembleWorkRequest</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>MyRequest<sp/>req<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>MyRequest(</highlight><highlight class="stringliteral">&quot;Local<sp/>session&quot;</highlight><highlight class="normal">,<sp/>0,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1abde92093fa558697aafd74f680183cf9" kindref="member">m_localconfig</ref>.getConfiguration());</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>req.setWorkerReturnStrategy(m_localconfig.getWorkerReturnStrategy());</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>req.setGenotypeInitializer(m_localconfig.getGenotypeInitializer());</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>req.setEvolveStrategy(m_localconfig.getWorkerEvolveStrategy());</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>req.setConfiguration(m_localconfig.getConfiguration());</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Evolution<sp/>takes<sp/>place<sp/>on<sp/>client<sp/>only!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>req.setEvolveStrategy(null);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>req;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1a9729391105e08c9bc81b515b907f5aa1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1a9729391105e08c9bc81b515b907f5aa1" kindref="member">evolve</ref>()</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>JGAPClient</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>m_localconfig.getClientFeedback().beginWork();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>m_localconfig.getClientFeedback().endWork();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>m_clientEvolver.generateWorkRequests(<ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1a6aed0955894a41cd1cd26b23ecfb3022" kindref="member">m_req</ref>,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_localconfig.getRequestSplitStrategy(),<sp/>null);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>m_clientEvolver.evolve();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>JGAPWorker</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>Genotype<sp/>genotype<sp/>=<sp/>m_localconfig.getGenotypeInitializer().</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setupGenotype(m_req,<sp/>null);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1abde92093fa558697aafd74f680183cf9" kindref="member">m_localconfig</ref>.getWorkerEvolveStrategy()<sp/>!=<sp/>null)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>m_localconfig.getWorkerEvolveStrategy().<ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1a9729391105e08c9bc81b515b907f5aa1" kindref="member">evolve</ref>(genotype);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1abde92093fa558697aafd74f680183cf9" kindref="member">m_localconfig</ref>.getWorkerReturnStrategy()<sp/>==<sp/>null)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>IllegalStateException(</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Worker<sp/>return<sp/>strategy<sp/>expected,<sp/>but<sp/>was<sp/>null!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fetch<sp/>the<sp/>result<sp/>and<sp/>display<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>JGAPResult<sp/>res<sp/>=<sp/>m_localconfig.getWorkerReturnStrategy().assembleResult(</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_req,<sp/>genotype);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>System.out.println(res.getPopulation().determineFittestChromosome());</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1ada7df7586ef30ce81679a34799f8b217" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1ada7df7586ef30ce81679a34799f8b217" kindref="member">main</ref>(String[]<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classexamples_1_1grid_1_1evolution_distributed_1_1_local_evolution_demo_1abd68b267515c76b48a709b7546c6f1b6" kindref="member">LocalEvolutionDemo</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(Throwable<sp/>t)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>t.printStackTrace();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>System.exit(1);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/examples/src/examples/grid/evolutionDistributed/LocalEvolutionDemo.java"/>
+  </compounddef>
+</doxygen>

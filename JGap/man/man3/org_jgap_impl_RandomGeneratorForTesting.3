@@ -1,0 +1,442 @@
+.TH "org.jgap.impl.RandomGeneratorForTesting" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.RandomGeneratorForTesting \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.RandomGenerator\fP, and Serializable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRandomGeneratorForTesting\fP ()"
+.br
+.ti -1c
+.RI "\fBRandomGeneratorForTesting\fP (int a_nextInt)"
+.br
+.ti -1c
+.RI "\fBRandomGeneratorForTesting\fP (double a_nextDouble)"
+.br
+.ti -1c
+.RI "\fBRandomGeneratorForTesting\fP (float a_nextFloat)"
+.br
+.ti -1c
+.RI "\fBRandomGeneratorForTesting\fP (long a_nextLong)"
+.br
+.ti -1c
+.RI "\fBRandomGeneratorForTesting\fP (boolean a_nextBoolean)"
+.br
+.ti -1c
+.RI "int \fBnextInt\fP ()"
+.br
+.ti -1c
+.RI "int \fBnextInt\fP (int a_ceiling)"
+.br
+.ti -1c
+.RI "long \fBnextLong\fP ()"
+.br
+.ti -1c
+.RI "double \fBnextDouble\fP ()"
+.br
+.ti -1c
+.RI "double \fBnextGaussian\fP ()"
+.br
+.ti -1c
+.RI "float \fBnextFloat\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBnextBoolean\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetNextBoolean\fP (boolean a_nextBoolean)"
+.br
+.ti -1c
+.RI "void \fBsetNextDouble\fP (double a_nextDouble)"
+.br
+.ti -1c
+.RI "void \fBsetNextGaussian\fP (double a_nextDouble)"
+.br
+.ti -1c
+.RI "void \fBsetNextFloat\fP (float a_nextFloat)"
+.br
+.ti -1c
+.RI "void \fBsetNextInt\fP (int a_nextInt)"
+.br
+.ti -1c
+.RI "void \fBsetNextLong\fP (long a_nextLong)"
+.br
+.ti -1c
+.RI "void \fBsetNextFloatSequence\fP (float[] a_sequence)"
+.br
+.ti -1c
+.RI "void \fBsetNextIntSequence\fP (int[] a_sequence)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "long \fBm_nextLong\fP"
+.br
+.ti -1c
+.RI "double \fBm_nextDouble\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_nextBoolean\fP"
+.br
+.ti -1c
+.RI "int[] \fBm_nextIntSequence\fP"
+.br
+.ti -1c
+.RI "float[] \fBm_nextFloatSequence\fP"
+.br
+.ti -1c
+.RI "double \fBm_nextGaussian\fP"
+.br
+.ti -1c
+.RI "int \fBm_intIndex\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.2 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A random generator only determined for testing purposes\&. With this, you can specify the next value which will be returned\&. It is also possible to specify a sequence to be produced\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file RandomGeneratorForTesting\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.RandomGeneratorForTesting ()\fC [inline]\fP"
+
+.PP
+Definition at line 36 of file RandomGeneratorForTesting\&.java\&.
+.SS "org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.RandomGeneratorForTesting (inta_nextInt)\fC [inline]\fP"
+
+.PP
+Definition at line 39 of file RandomGeneratorForTesting\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextInt()\&.
+.SS "org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.RandomGeneratorForTesting (doublea_nextDouble)\fC [inline]\fP"
+
+.PP
+Definition at line 44 of file RandomGeneratorForTesting\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextDouble()\&.
+.SS "org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.RandomGeneratorForTesting (floata_nextFloat)\fC [inline]\fP"
+
+.PP
+Definition at line 49 of file RandomGeneratorForTesting\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextFloat()\&.
+.SS "org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.RandomGeneratorForTesting (longa_nextLong)\fC [inline]\fP"
+
+.PP
+Definition at line 54 of file RandomGeneratorForTesting\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextLong()\&.
+.SS "org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.RandomGeneratorForTesting (booleana_nextBoolean)\fC [inline]\fP"
+
+.PP
+Definition at line 59 of file RandomGeneratorForTesting\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextBoolean(), and org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextInt()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "boolean org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.nextBoolean ()\fC [inline]\fP"
+Returns the next pseudorandom, uniformly distributed boolean value from this random number generator's sequence\&. The general contract of nextBoolean is that one boolean value is pseudorandomly generated and returned\&. The values true and false are produced with (approximately) equal probability\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a pseudorandom boolean value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.RandomGenerator\fP\&.
+.PP
+Definition at line 97 of file RandomGeneratorForTesting\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.m_nextBoolean\&.
+.SS "double org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.nextDouble ()\fC [inline]\fP"
+Returns the next pseudorandom, uniformly distributed double value between 0\&.0 and 1\&.0 from this random number generator's sequence\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a psuedorandom double value GREATER/EQUAL 0 AND LESS THAN 1
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.RandomGenerator\fP\&.
+.PP
+Definition at line 81 of file RandomGeneratorForTesting\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.m_nextDouble\&.
+.SS "float org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.nextFloat ()\fC [inline]\fP"
+Returns the next pseudorandom, uniformly distributed float value between 0\&.0 and 1\&.0 from this random number generator's sequence\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a psuedorandom float value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.RandomGenerator\fP\&.
+.PP
+Definition at line 89 of file RandomGeneratorForTesting\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.m_nextFloatSequence\&.
+.SS "double org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.nextGaussian ()\fC [inline]\fP"
+
+.PP
+Definition at line 85 of file RandomGeneratorForTesting\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.m_nextGaussian\&.
+.SS "int org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.nextInt ()\fC [inline]\fP"
+Returns the next pseudorandom, uniformly distributed int value from this random number generator's sequence\&. The general contract of nextInt is that one int value is pseudorandomly generated and returned\&. All 2^32 possible int values are produced with (approximately) equal probability\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a pseudorandom integer value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.RandomGenerator\fP\&.
+.PP
+Definition at line 65 of file RandomGeneratorForTesting\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.m_intIndex, and org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.m_nextIntSequence\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.nextInt()\&.
+.SS "int org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.nextInt (inta_ceiling)\fC [inline]\fP"
+Returns a pseudorandom, uniformly distributed int value between 0 (inclusive) and the specified value (exclusive), drawn from this random number generator's sequence\&. The general contract of nextInt is that one int value in the specified range is pseudorandomly generated and returned\&. All n possible int values are produced with (approximately) equal probability\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ceiling\fP the upper boundary excluded
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a pseudorandom integer value between 0 and the given ceiling - 1, inclusive
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.RandomGenerator\fP\&.
+.PP
+Definition at line 73 of file RandomGeneratorForTesting\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.nextInt()\&.
+.SS "long org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.nextLong ()\fC [inline]\fP"
+Returns the next pseudorandom, uniformly distributed long value from this random number generator's sequence\&. The general contract of \fBnextLong()\fP is that one long value is pseudorandomly generated and returned\&. All 2^64 possible long values are produced with (approximately) equal probability\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a psuedorandom long value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.RandomGenerator\fP\&.
+.PP
+Definition at line 77 of file RandomGeneratorForTesting\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.m_nextLong\&.
+.SS "void org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextBoolean (booleana_nextBoolean)\fC [inline]\fP"
+
+.PP
+Definition at line 101 of file RandomGeneratorForTesting\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.m_nextBoolean\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.RandomGeneratorForTesting()\&.
+.SS "void org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextDouble (doublea_nextDouble)\fC [inline]\fP"
+
+.PP
+Definition at line 105 of file RandomGeneratorForTesting\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.m_nextDouble\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.RandomGeneratorForTesting()\&.
+.SS "void org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextFloat (floata_nextFloat)\fC [inline]\fP"
+
+.PP
+Definition at line 113 of file RandomGeneratorForTesting\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextFloatSequence()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.RandomGeneratorForTesting()\&.
+.SS "void org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextFloatSequence (float[]a_sequence)\fC [inline]\fP"
+
+.PP
+Definition at line 125 of file RandomGeneratorForTesting\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.m_nextFloatSequence\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextFloat()\&.
+.SS "void org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextGaussian (doublea_nextDouble)\fC [inline]\fP"
+
+.PP
+Definition at line 109 of file RandomGeneratorForTesting\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.m_nextGaussian\&.
+.SS "void org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextInt (inta_nextInt)\fC [inline]\fP"
+
+.PP
+Definition at line 117 of file RandomGeneratorForTesting\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextIntSequence()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.RandomGeneratorForTesting()\&.
+.SS "void org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextIntSequence (int[]a_sequence)\fC [inline]\fP"
+
+.PP
+Definition at line 130 of file RandomGeneratorForTesting\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.m_intIndex, and org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.m_nextIntSequence\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextInt()\&.
+.SS "void org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextLong (longa_nextLong)\fC [inline]\fP"
+
+.PP
+Definition at line 121 of file RandomGeneratorForTesting\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.m_nextLong\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.RandomGeneratorForTesting()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.CVS_REVISION = '$Revision: 1\&.2 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file RandomGeneratorForTesting\&.java\&.
+.SS "int org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.m_intIndex\fC [private]\fP"
+
+.PP
+Definition at line 34 of file RandomGeneratorForTesting\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.nextInt(), and org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextIntSequence()\&.
+.SS "boolean org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.m_nextBoolean\fC [private]\fP"
+
+.PP
+Definition at line 30 of file RandomGeneratorForTesting\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.nextBoolean(), and org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextBoolean()\&.
+.SS "double org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.m_nextDouble\fC [private]\fP"
+
+.PP
+Definition at line 29 of file RandomGeneratorForTesting\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.nextDouble(), and org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextDouble()\&.
+.SS "float [] org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.m_nextFloatSequence\fC [private]\fP"
+
+.PP
+Definition at line 32 of file RandomGeneratorForTesting\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.nextFloat(), and org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextFloatSequence()\&.
+.SS "double org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.m_nextGaussian\fC [private]\fP"
+
+.PP
+Definition at line 33 of file RandomGeneratorForTesting\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.nextGaussian(), and org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextGaussian()\&.
+.SS "int [] org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.m_nextIntSequence\fC [private]\fP"
+
+.PP
+Definition at line 31 of file RandomGeneratorForTesting\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.nextInt(), and org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextIntSequence()\&.
+.SS "long org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.m_nextLong\fC [private]\fP"
+
+.PP
+Definition at line 28 of file RandomGeneratorForTesting\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.nextLong(), and org\&.jgap\&.impl\&.RandomGeneratorForTesting\&.setNextLong()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,98 @@
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_request_split_strategy}{\section{org.\-jgap.\-distr.\-grid.\-I\-Request\-Split\-Strategy Interface Reference}
+\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_request_split_strategy}\index{org.\-jgap.\-distr.\-grid.\-I\-Request\-Split\-Strategy@{org.\-jgap.\-distr.\-grid.\-I\-Request\-Split\-Strategy}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-distr.\-grid.\-I\-Request\-Split\-Strategy\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_request_split_strategy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-distr.\-grid.\-I\-Request\-Split\-Strategy\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_request_split_strategy__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_request}{J\-G\-A\-P\-Request}\mbox{[}$\,$\mbox{]} \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_request_split_strategy_ae43619a42994ddfad41f8fc6513cf44c}{split} (\hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_request}{J\-G\-A\-P\-Request} a\-\_\-request)  throws Exception
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_request_split_strategy_aef08b28ef1455714a55e1cdd37acca64}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-2 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for a strategy how to split a work request into parts. Each part will be sent to a worker as an individual work request.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-2 
+\end{DoxySince}
+
+
+Definition at line 21 of file I\-Request\-Split\-Strategy.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_request_split_strategy_ae43619a42994ddfad41f8fc6513cf44c}{\index{org\-::jgap\-::distr\-::grid\-::\-I\-Request\-Split\-Strategy@{org\-::jgap\-::distr\-::grid\-::\-I\-Request\-Split\-Strategy}!split@{split}}
+\index{split@{split}!org::jgap::distr::grid::IRequestSplitStrategy@{org\-::jgap\-::distr\-::grid\-::\-I\-Request\-Split\-Strategy}}
+\subsubsection[{split}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\-G\-A\-P\-Request} \mbox{[}$\,$\mbox{]} org.\-jgap.\-distr.\-grid.\-I\-Request\-Split\-Strategy.\-split (
+\begin{DoxyParamCaption}
+\item[{{\bf J\-G\-A\-P\-Request}}]{a\-\_\-request}
+\end{DoxyParamCaption}
+) throws Exception}}\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_request_split_strategy_ae43619a42994ddfad41f8fc6513cf44c}
+Creates single requests to be sent to workers. This is done by splitting a single request into several parts. Each parts is sort of a modified clone of the original (super) request
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-request} & the request to split \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+single requests to be computed by workers 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-2 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_sample_split_strategy_ac7d09ab06f415b984bfd93703755ebea}{org.\-jgap.\-distr.\-grid.\-Sample\-Split\-Strategy}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_request_split_strategy_aef08b28ef1455714a55e1cdd37acca64}{\index{org\-::jgap\-::distr\-::grid\-::\-I\-Request\-Split\-Strategy@{org\-::jgap\-::distr\-::grid\-::\-I\-Request\-Split\-Strategy}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::distr::grid::IRequestSplitStrategy@{org\-::jgap\-::distr\-::grid\-::\-I\-Request\-Split\-Strategy}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-distr.\-grid.\-I\-Request\-Split\-Strategy.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-2 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_request_split_strategy_aef08b28ef1455714a55e1cdd37acca64}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 25 of file I\-Request\-Split\-Strategy.\-java.
+
+
+
+The documentation for this interface was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/distr/grid/\hyperlink{_i_request_split_strategy_8java}{I\-Request\-Split\-Strategy.\-java}\end{DoxyCompactItemize}

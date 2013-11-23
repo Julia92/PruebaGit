@@ -1,0 +1,190 @@
+.TH "org.jgap.CachedFitnessFunction" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.CachedFitnessFunction \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.FitnessFunction\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCachedFitnessFunction\fP ()"
+.br
+.ti -1c
+.RI "\fBCachedFitnessFunction\fP (Map< String, Double > cache)"
+.br
+.ti -1c
+.RI "final double \fBgetFitnessValue\fP (final \fBIChromosome\fP a_subject)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "String \fBgetBusinessKey\fP (\fBIChromosome\fP a_subject)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Map< String, Double > \fBcachedFitnessValues\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.4 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The cached fitness function extends the original \fBFitnessFunction\fP functionality in order to reduce evaluating something twice\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Dennis Fleurbaaij 
+.PP
+Klaus Meffert 
+.PP
+Tobias Getrost 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file CachedFitnessFunction\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.CachedFitnessFunction\&.CachedFitnessFunction ()\fC [inline]\fP"
+Default Constructor ensuring downward compatibility\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Tobias Getrost 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 39 of file CachedFitnessFunction\&.java\&.
+.SS "org\&.jgap\&.CachedFitnessFunction\&.CachedFitnessFunction (Map< String, Double >cache)\fC [inline]\fP"
+Constructor that allows to use a custom \fCjava\&.util\&.Map\fP implementation as cache\&.
+.br
+ E\&.g\&. for multi-threaded fitness calculations one could use one instance of \fCjava\&.util\&.concurrent\&.ConcurrentHashMap\fP for all instances of the fitness function\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcache\fP \fCjava\&.util\&.Map\fP data structure used to cache the fitness values
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Tobias Getrost 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 56 of file CachedFitnessFunction\&.java\&.
+.PP
+References org\&.jgap\&.CachedFitnessFunction\&.cachedFitnessValues\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "String org\&.jgap\&.CachedFitnessFunction\&.getBusinessKey (\fBIChromosome\fPa_subject)\fC [inline]\fP, \fC [protected]\fP"
+Retrieves the business key of a chromosome instance\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_subject\fP the chromosome to retrieve the key for 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the business key of the chromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 107 of file CachedFitnessFunction\&.java\&.
+.PP
+Referenced by org\&.jgap\&.CachedFitnessFunction\&.getFitnessValue()\&.
+.SS "final double org\&.jgap\&.CachedFitnessFunction\&.getFitnessValue (final \fBIChromosome\fPa_subject)\fC [inline]\fP"
+Cached fitness value function\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_subject\fP the chromosome to evaluate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+fitness value, from cache if available
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Dennis Fleurbaaij 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 70 of file CachedFitnessFunction\&.java\&.
+.PP
+References org\&.jgap\&.CachedFitnessFunction\&.getBusinessKey()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "Map<String, Double> org\&.jgap\&.CachedFitnessFunction\&.cachedFitnessValues\fC [private]\fP"
+
+.PP
+Definition at line 31 of file CachedFitnessFunction\&.java\&.
+.PP
+Referenced by org\&.jgap\&.CachedFitnessFunction\&.CachedFitnessFunction()\&.
+.SS "final String org\&.jgap\&.CachedFitnessFunction\&.CVS_REVISION = '$Revision: 1\&.4 $'\fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+allow to restrict size of cache / age of entries 
+.RE
+.PP
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 28 of file CachedFitnessFunction\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

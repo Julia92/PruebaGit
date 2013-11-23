@@ -1,0 +1,196 @@
+.TH "org.jgap.impl.job.EvolveJob" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.job.EvolveJob \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.impl\&.job\&.JobBase\fP, and \fBorg\&.jgap\&.impl\&.job\&.IEvolveJob\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEvolveJob\fP (\fBJobData\fP a_data)"
+.br
+.ti -1c
+.RI "\fBJobResult\fP \fBexecute\fP (\fBJobData\fP a_data)  throws Exception "
+.br
+.ti -1c
+.RI "\fBEvolveResult\fP \fBevolve\fP (\fBEvolveData\fP a_evolveData)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPopulation\fP \fBapplyNaturalSelectors\fP (\fBConfiguration\fP a_config, \fBPopulation\fP a_pop, boolean a_processBeforeGeneticOperators)"
+.br
+.ti -1c
+.RI "void \fBapplyGeneticOperators\fP (\fBConfiguration\fP a_config, \fBPopulation\fP a_pop)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.12 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A job that evolves a population\&. The evolution takes place as given by the configuration\&. It operates on a population also provided\&. This class utilizes sub jobs to perform its sub-tasks\&. Each sub job may either be a local implementation satisfying the \fBIJob\fP interface\&. Or it may be a job that eventually is put onto the grid and returns with a result!
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file EvolveJob\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.job\&.EvolveJob\&.EvolveJob (\fBJobData\fPa_data)\fC [inline]\fP"
+
+.PP
+Definition at line 31 of file EvolveJob\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.impl\&.job\&.EvolveJob\&.applyGeneticOperators (\fBConfiguration\fPa_config, \fBPopulation\fPa_pop)\fC [inline]\fP, \fC [protected]\fP"
+Applies all GeneticOperators registered with the \fBConfiguration\fP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+utilize jobs: integrate job into \fBGeneticOperator\fP 
+.RE
+.PP
+
+.PP
+Definition at line 141 of file EvolveJob\&.java\&.
+.SS "\fBPopulation\fP org\&.jgap\&.impl\&.job\&.EvolveJob\&.applyNaturalSelectors (\fBConfiguration\fPa_config, \fBPopulation\fPa_pop, booleana_processBeforeGeneticOperators)\fC [inline]\fP, \fC [protected]\fP"
+Applies all NaturalSelectors registered with the \fBConfiguration\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_processBeforeGeneticOperators\fP true apply NaturalSelectors applicable before GeneticOperators, false: apply the ones applicable after GeneticOperators
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+optionally use working pool 
+.RE
+.PP
+.PP
+\fBTodo\fP
+.RS 4
+utilize jobs: integrate job into NaturalSelector! 
+.RE
+.PP
+
+.PP
+Definition at line 85 of file EvolveJob\&.java\&.
+.SS "\fBEvolveResult\fP org\&.jgap\&.impl\&.job\&.EvolveJob\&.evolve (\fBEvolveData\fPa_evolveData)\fC [inline]\fP"
+Does the genetic evolution\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_evolveData\fP parameters for the evolution 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+result of the evolution
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 61 of file EvolveJob\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.job\&.EvolveJob\&.execute()\&.
+.SS "\fBJobResult\fP org\&.jgap\&.impl\&.job\&.EvolveJob\&.execute (\fBJobData\fPa_data) throws Exception\fC [inline]\fP"
+Execute the evolution via JGAP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_data\fP input parameter of type \fBEvolveData\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+result of the evolution
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP in case of any error
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.impl\&.job\&.IJob\fP\&.
+.PP
+Definition at line 46 of file EvolveJob\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.job\&.EvolveJob\&.evolve()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.job\&.EvolveJob\&.CVS_REVISION = '$Revision: 1\&.12 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 29 of file EvolveJob\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

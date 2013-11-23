@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classexamples_1_1gp_1_1tictactoe_1_1_game_node_validator" kind="class" prot="public">
+    <compoundname>examples::gp::tictactoe::GameNodeValidator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">INodeValidator</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classexamples_1_1gp_1_1tictactoe_1_1_game_node_validator_1a02996b5a9558c698b5a9b8a1f68bc86a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean examples.gp.tictactoe.GameNodeValidator.validate</definition>
+        <argsstring>(ProgramChromosome a_chrom, CommandGene a_node, CommandGene a_rootNode, int a_tries, int a_num, int a_recurseLevel, Class a_type, CommandGene[] a_functionSet, int a_depth, boolean a_grow, int a_childIndex, boolean a_fullProgram)</argsstring>
+        <name>validate</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_program_chromosome" kindref="compound">ProgramChromosome</ref></type>
+          <declname>a_chrom</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref></type>
+          <declname>a_node</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref></type>
+          <declname>a_rootNode</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_tries</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_num</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_recurseLevel</declname>
+        </param>
+        <param>
+          <type>Class</type>
+          <declname>a_type</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1gp_1_1_command_gene" kindref="compound">CommandGene</ref>[]</type>
+          <declname>a_functionSet</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_depth</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_grow</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_childIndex</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>a_fullProgram</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Validates a_node in the context of a_chrom during evolution. Considers the recursion level (a_recursLevel), the type needed (a_type) for the node, the functions available (a_functionSet) and the depth of the whole chromosome needed (a_depth), and whether grow mode is used (a_grow is true) or not.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_chrom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the chromosome that will contain the node, if valid (ignored in this implementation) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the node selected and to be validated </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_rootNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the root node of a_node, may be null for top nodes </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_tries</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of times the validator has been called, useful for stopping by returning true if the number exceeds a limit </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the chromosome&apos;s index in the individual of this chromosome </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_recurseLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>level of recursion, i.e. the depth of a node </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the return type of the node needed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_functionSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the array of available functions (ignored in this implementation) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the allowed remaining depth of the program chromosome </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_grow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true: use grow mode, false: use full mode (ignored in this implementation) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_childIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the child in the parent node to which it belongs (-1 if node is root node) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_fullProgram</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true: full program is available for evaluation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true: node is valid; false: node is invalid</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/examples/src/examples/gp/tictactoe/GameNodeValidator.java" line="53" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/examples/src/examples/gp/tictactoe/GameNodeValidator.java" bodystart="53" bodyend="134"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Validates evolved nodes for the Tic Tac Toe problem.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.2 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="13021">
+        <label>INodeValidator</label>
+      </node>
+      <node id="13020">
+        <label>examples.gp.tictactoe.GameNodeValidator</label>
+        <link refid="classexamples_1_1gp_1_1tictactoe_1_1_game_node_validator"/>
+        <childnode refid="13021" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="13023">
+        <label>INodeValidator</label>
+      </node>
+      <node id="13022">
+        <label>examples.gp.tictactoe.GameNodeValidator</label>
+        <link refid="classexamples_1_1gp_1_1tictactoe_1_1_game_node_validator"/>
+        <childnode refid="13023" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/examples/src/examples/gp/tictactoe/GameNodeValidator.java" line="24" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/examples/src/examples/gp/tictactoe/GameNodeValidator.java" bodystart="23" bodyend="135"/>
+    <listofallmembers>
+      <member refid="classexamples_1_1gp_1_1tictactoe_1_1_game_node_validator_1a02996b5a9558c698b5a9b8a1f68bc86a" prot="public" virt="non-virtual"><scope>examples::gp::tictactoe::GameNodeValidator</scope><name>validate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

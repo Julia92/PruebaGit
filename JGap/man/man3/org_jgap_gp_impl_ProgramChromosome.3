@@ -1,0 +1,1775 @@
+.TH "org.jgap.gp.impl.ProgramChromosome" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.impl.ProgramChromosome \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.BaseGPChromosome\fP, Comparable, Cloneable, and \fBorg\&.jgap\&.IBusinessKey\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBNodeInfo\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProgramChromosome\fP (\fBGPConfiguration\fP a_conf, int a_size)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBProgramChromosome\fP (\fBGPConfiguration\fP a_conf, int a_size, \fBIGPProgram\fP a_ind)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBProgramChromosome\fP (\fBGPConfiguration\fP a_conf, int a_size, \fBCommandGene\fP[] a_functionSet, Class[] a_argTypes, \fBIGPProgram\fP a_ind)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBProgramChromosome\fP (\fBGPConfiguration\fP a_conf, \fBCommandGene\fP[] a_initialGenes)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBProgramChromosome\fP (final \fBGPConfiguration\fP a_conf)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBProgramChromosome\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBsetArgTypes\fP (Class[] a_argTypes)"
+.br
+.ti -1c
+.RI "synchronized Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "void \fBcleanup\fP ()"
+.br
+.ti -1c
+.RI "void \fBgrowOrFull\fP (final int a_num, final int a_depth, final Class a_type, final Class[] a_argTypes, final \fBCommandGene\fP[] a_functionSet, boolean a_grow, int a_tries)"
+.br
+.ti -1c
+.RI "String \fBtoString\fP (final int a_startNode)"
+.br
+.ti -1c
+.RI "String \fBtoStringNorm\fP (final int a_startNode)"
+.br
+.ti -1c
+.RI "String \fBgetBusinessKey\fP ()"
+.br
+.ti -1c
+.RI "String \fBtoStringDebug\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBisPossible\fP (Class a_returnType, int a_subReturnType, \fBCommandGene\fP[] a_nodeSet, boolean a_function, boolean a_growing)"
+.br
+.ti -1c
+.RI "void \fBredepth\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetChild\fP (int a_index, int a_child)"
+.br
+.ti -1c
+.RI "int \fBgetChild\fP (\fBCommandGene\fP a_node, int a_child)"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP[] \fBgetFunctionSet\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetFunctionSet\fP (\fBCommandGene\fP[] a_functionSet)"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP[] \fBgetFunctions\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetFunctions\fP (\fBCommandGene\fP[] a_functions)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "int \fBgetSize\fP (int a_index)"
+.br
+.ti -1c
+.RI "int \fBgetDepth\fP (int a_index)"
+.br
+.ti -1c
+.RI "int \fBgetParentNode\fP (int a_child)"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP \fBgetNode\fP (Class a_type, boolean a_exactMatch)"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP \fBgetNode\fP (Class a_type, boolean a_exactMatch, int a_startIndex)"
+.br
+.ti -1c
+.RI "boolean \fBexecute_boolean\fP (Object[] args)"
+.br
+.ti -1c
+.RI "boolean \fBexecute_boolean\fP (int n, int child, Object[] args)"
+.br
+.ti -1c
+.RI "void \fBexecute_void\fP (Object[] args)"
+.br
+.ti -1c
+.RI "void \fBexecute_void\fP (int n, int child, Object[] args)"
+.br
+.ti -1c
+.RI "int \fBexecute_int\fP (Object[] args)"
+.br
+.ti -1c
+.RI "int \fBexecute_int\fP (int n, int child, Object[] args)"
+.br
+.ti -1c
+.RI "long \fBexecute_long\fP (Object[] args)"
+.br
+.ti -1c
+.RI "long \fBexecute_long\fP (int n, int child, Object[] args)"
+.br
+.ti -1c
+.RI "float \fBexecute_float\fP (Object[] args)"
+.br
+.ti -1c
+.RI "float \fBexecute_float\fP (int n, int child, Object[] args)"
+.br
+.ti -1c
+.RI "double \fBexecute_double\fP (Object[] args)"
+.br
+.ti -1c
+.RI "double \fBexecute_double\fP (int n, int child, Object[] args)"
+.br
+.ti -1c
+.RI "Object \fBexecute_object\fP (Object[] args)"
+.br
+.ti -1c
+.RI "Object \fBexecute_object\fP (int n, int child, Object[] args)"
+.br
+.ti -1c
+.RI "Object \fBexecute\fP (Object[] args)"
+.br
+.ti -1c
+.RI "Object \fBexecute\fP (int n, int child, Object[] args)"
+.br
+.ti -1c
+.RI "void \fBsetGene\fP (int index, \fBCommandGene\fP a_gene)"
+.br
+.ti -1c
+.RI "Class[] \fBgetArgTypes\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetArity\fP ()"
+.br
+.ti -1c
+.RI "int \fBsize\fP ()"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.ti -1c
+.RI "void \fBsetCompareApplicationData\fP (boolean a_doCompare)"
+.br
+.ti -1c
+.RI "boolean \fBisCompareApplicationData\fP ()"
+.br
+.ti -1c
+.RI "Object \fBgetApplicationData\fP ()"
+.br
+.ti -1c
+.RI "synchronized \fBCommandGene\fP \fBgetGene\fP (int a_locus)"
+.br
+.ti -1c
+.RI "String \fBgetPersistentRepresentation\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetValueFromPersistentRepresentation\fP (final String a_representation)  throws UnsupportedRepresentationException "
+.br
+.ti -1c
+.RI "boolean \fBcontains\fP (\fBCommandGene\fP[] a_functionSet, \fBCommandGene\fP a_function)"
+.br
+.ti -1c
+.RI "boolean \fBcontains\fP (\fBCommandGene\fP[] a_functionSet, Class a_function)"
+.br
+.ti -1c
+.RI "int \fBcontains\fP (\fBCommandGene\fP[] a_functionSet, \fBCommandGene\fP a_function, int a_limit)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCommandGene\fP \fBselectNode\fP (int a_chromIndex, Class a_returnType, int a_subReturnType, \fBCommandGene\fP[] a_functionSet, boolean a_function, boolean a_growing)"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP[] \fBgrowOrFullNode\fP (int a_num, int a_depth, Class a_returnType, int a_subReturnType, \fBCommandGene\fP[] a_functionSet, \fBCommandGene\fP a_rootNode, int a_recurseLevel, boolean a_grow, int a_childNum, boolean a_validateNode)"
+.br
+.ti -1c
+.RI "int \fBredepth\fP (int a_index)"
+.br
+.ti -1c
+.RI "String \fBencode\fP (String a_string)"
+.br
+.ti -1c
+.RI "String \fBdecode\fP (String a_string)"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP \fBcreateGene\fP (String a_geneClassName, String a_persistentRepresentation)  throws Exception "
+.br
+.in -1c
+.SS "Static Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static final List \fBsplit\fP (String a_string)  throws UnsupportedRepresentationException "
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBinit\fP (final int a_size)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCommandGene\fP[] \fBremove\fP (\fBCommandGene\fP[] a_functionSet, \fBCommandGene\fP node)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBCommandGene\fP[] \fBm_functionSet\fP"
+.br
+.ti -1c
+.RI "int[] \fBm_depth\fP"
+.br
+.ti -1c
+.RI "Class[] \fBargTypes\fP"
+.br
+.ti -1c
+.RI "transient int \fBm_index\fP"
+.br
+.ti -1c
+.RI "transient int \fBm_maxDepth\fP"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP[] \fBm_genes\fP"
+.br
+.ti -1c
+.RI "Object \fBm_applicationData\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_compareAppData\fP"
+.br
+.ti -1c
+.RI "Map< \fBNodeInfo\fP, Boolean > \fBm_possibleNodes\fP = new HashMap()"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.52 $'"
+.br
+.ti -1c
+.RI "static transient Logger \fBLOGGER\fP = Logger\&.getLogger(ProgramChromosome\&.class)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+\fBChromosome\fP representing a single GP Program\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file ProgramChromosome\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.ProgramChromosome (\fBGPConfiguration\fPa_conf, inta_size) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 84 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.init()\&.
+.SS "org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.ProgramChromosome (\fBGPConfiguration\fPa_conf, inta_size, \fBIGPProgram\fPa_ind) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 94 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.init()\&.
+.SS "org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.ProgramChromosome (\fBGPConfiguration\fPa_conf, inta_size, \fBCommandGene\fP[]a_functionSet, Class[]a_argTypes, \fBIGPProgram\fPa_ind) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 108 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.argTypes, org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.init(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_functionSet\&.
+.SS "org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.ProgramChromosome (\fBGPConfiguration\fPa_conf, \fBCommandGene\fP[]a_initialGenes) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 126 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.init(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.SS "org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.ProgramChromosome (final \fBGPConfiguration\fPa_conf) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 139 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.init()\&.
+.SS "org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.ProgramChromosome () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Default constructor\&. Only use for dynamic instantiation\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 153 of file ProgramChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.clone(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.compareTo()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.cleanup ()\fC [inline]\fP"
+Clean up the chromosome\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPChromosome\fP\&.
+.PP
+Definition at line 216 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_boolean(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_double(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_float(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_int(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_long(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_object(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_void()\&.
+.SS "synchronized Object org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.clone ()\fC [inline]\fP"
+
+.PP
+Definition at line 173 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.argTypes, org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getFunctionSet(), org\&.jgap\&.gp\&.BaseGPChromosome\&.getGPConfiguration(), org\&.jgap\&.gp\&.BaseGPChromosome\&.getIndividual(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_depth, org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes, org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.ProgramChromosome(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.size()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFullNode()\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.compareTo (Objecta_other)\fC [inline]\fP"
+Compares the given chromosome to this chromosome\&. This chromosome is considered to be 'less than' the given chromosome if it has a fewer number of genes or if any of its gene values (alleles) are less than their corresponding gene values in the other chromosome\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the chromosome against which to compare this chromosome 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a negative number if this chromosome is 'less than' the given chromosome, zero if they are equal to each other, and a positive number if this chromosome is 'greater than' the given chromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+compare m_functionSet 
+.RE
+.PP
+
+.PP
+Definition at line 1200 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getApplicationData(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.isCompareApplicationData(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes, org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.ProgramChromosome(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.size()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.equals()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.contains (\fBCommandGene\fP[]a_functionSet, \fBCommandGene\fPa_function)\fC [inline]\fP"
+Checks if a function or terminal of the class of the given instance exists within a_functionSet
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_functionSet\fP the set of functions to check 
+.br
+\fIa_function\fP the commandgene to check for via its class 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if a_function's class exists within a_functionSet
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 1496 of file ProgramChromosome\&.java\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.SingleNodeValidator\&.isAllowed()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.contains (\fBCommandGene\fP[]a_functionSet, Classa_function)\fC [inline]\fP"
+Checks if a function or terminal of the class of the given instance exists within a_functionSet 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_functionSet\fP the set of functions to check 
+.br
+\fIa_function\fP the commandgene to check for via its class 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if a_function's class exists within a_functionSet
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 1511 of file ProgramChromosome\&.java\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.contains (\fBCommandGene\fP[]a_functionSet, \fBCommandGene\fPa_function, inta_limit)\fC [inline]\fP"
+Checks if a function or terminal of the class of the given instance exists within a_functionSet at least a_limit times
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_functionSet\fP the set of functions to check 
+.br
+\fIa_function\fP the commandgene to check for via its class 
+.br
+\fIa_limit\fP if a_limit occurrences of a_function were detected, exit 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if a_function's class exists at least a_limit times within a_functionSet
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 1534 of file ProgramChromosome\&.java\&.
+.SS "\fBCommandGene\fP org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.createGene (Stringa_geneClassName, Stringa_persistentRepresentation) throws Exception\fC [inline]\fP, \fC [protected]\fP"
+Creates a new instance of gene\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_geneClassName\fP name of the gene class 
+.br
+\fIa_persistentRepresentation\fP persistent representation of the gene to create (could be obtained via getPersistentRepresentation)
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+newly created gene 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 1437 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.BaseGPChromosome\&.getGPConfiguration()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.setValueFromPersistentRepresentation()\&.
+.SS "String org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.decode (Stringa_string)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 1352 of file ProgramChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.setValueFromPersistentRepresentation()\&.
+.SS "String org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.encode (Stringa_string)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 1348 of file ProgramChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getPersistentRepresentation()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.equals (Objecta_other)\fC [inline]\fP"
+Compares this chromosome against the specified object\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the object to compare against 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: if the objects are the same, false otherwise
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1267 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.compareTo()\&.
+.SS "Object org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute (Object[]args)\fC [inline]\fP"
+Executes this node without knowing its return type\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP the arguments for execution 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the Object which wraps the return value of this node, or null if the return type is null or unknown
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1149 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.SS "Object org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute (intn, intchild, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 1153 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_object()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_boolean (Object[]args)\fC [inline]\fP"
+Executes this node as a boolean\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP the arguments for execution 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the boolean return value of this node 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP if the type of this node is not boolean
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 964 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.cleanup(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_boolean (intn, intchild, Object[]args)\fC [inline]\fP"
+Executes this node as a boolean\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIn\fP the index of the parent node 
+.br
+\fIchild\fP the child number of the node to execute 
+.br
+\fIargs\fP the arguments for execution 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the boolean return value of this node 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP if the type of this node is not boolean
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 983 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getChild(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_double (Object[]args)\fC [inline]\fP"
+Executes this node as a double\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP the arguments for execution 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the double return value of this node 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP if this node's type is not double
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1100 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.cleanup(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.SS "double org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_double (intn, intchild, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 1106 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getChild(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.SS "float org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_float (Object[]args)\fC [inline]\fP"
+Executes this node as a float\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP the arguments for execution 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the float return value of this node 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP if the type of this node is not float
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1076 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.cleanup(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.SS "float org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_float (intn, intchild, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 1082 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getChild(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_int (Object[]args)\fC [inline]\fP"
+Executes this node as an integer\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP the arguments for execution 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the integer return value of this node 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP if the type of this node is not integer
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1026 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.cleanup(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_int (intn, intchild, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 1032 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getChild(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.SS "long org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_long (Object[]args)\fC [inline]\fP"
+Executes this node as a long\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP the arguments for execution 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the long return value of this node 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP if the type of this node is not long
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1052 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.cleanup(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.SS "long org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_long (intn, intchild, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 1058 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getChild(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.SS "Object org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_object (Object[]args)\fC [inline]\fP"
+Executes this node as an object\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP the arguments for execution 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the object return value of this node 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP if the type of this node is not of type Object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1125 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.cleanup(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute()\&.
+.SS "Object org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_object (intn, intchild, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 1131 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getChild(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_void (Object[]args)\fC [inline]\fP"
+Executes this node, returning nothing\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP the arguments for execution 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP if the type of this node is not void
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1000 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.cleanup(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_void (intn, intchild, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 1005 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getChild(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.SS "Object org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getApplicationData ()\fC [inline]\fP"
+Retrieves the application-specific data that is attached to this \fBChromosome\fP\&. Attaching application-specific data may be useful for some applications when it comes time to evaluate this \fBChromosome\fP in the fitness function\&. JGAP ignores this data functionally\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the application-specific data previously attached to this \fBChromosome\fP, or null if there is no data attached
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1311 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_applicationData\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.compareTo()\&.
+.SS "Class [] org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getArgTypes ()\fC [inline]\fP"
+
+.PP
+Definition at line 1164 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.argTypes\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getArity ()\fC [inline]\fP"
+
+.PP
+Definition at line 1168 of file ProgramChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.isPossible(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.selectNode(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toString(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toStringDebug(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toStringNorm()\&.
+.SS "String org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getBusinessKey ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+business key of the chromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IBusinessKey\fP\&.
+.PP
+Definition at line 398 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toStringNorm()\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getChild (inta_index, inta_child)\fC [inline]\fP"
+Gets the a_child'th child of the a_index'th node in this chromosome\&. This is the same as the a_child'th node whose depth is one more than the depth of the a_index'th node\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the node number of the parent 
+.br
+\fIa_child\fP the child number (starting from 0) of the parent 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the node number of the child, or -1 if not found
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPChromosome\fP\&.
+.PP
+Definition at line 786 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getFunctions(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_depth\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_boolean(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_double(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_float(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_int(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_long(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_object(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_void(), org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getChildCount(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toString(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toStringDebug(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toStringNorm()\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getChild (\fBCommandGene\fPa_node, inta_child)\fC [inline]\fP"
+
+.PP
+Definition at line 804 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getFunctions(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_depth, and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getDepth (inta_index)\fC [inline]\fP"
+Gets the depth of the branch starting at the a_index'th node\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the index of the node at which to check the depth 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the depth of the branch starting at the a_index'th node
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 877 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_depth, and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.selectNode(), org\&.jgap\&.gp\&.impl\&.GPProgramTest\&.testExecute_0(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGetDepth_0(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGetDepth_1(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGetDepth_2(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGrowNode_3()\&.
+.SS "\fBCommandGene\fP [] org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getFunctions ()\fC [inline]\fP"
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPChromosome\fP\&.
+.PP
+Definition at line 838 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getChild(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toString(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toStringNorm()\&.
+.SS "\fBCommandGene\fP [] org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getFunctionSet ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+set of \fBCommandGene\fP instances allowed
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPChromosome\fP\&.
+.PP
+Definition at line 830 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_functionSet\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.clone(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFull()\&.
+.SS "synchronized \fBCommandGene\fP org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getGene (inta_locus)\fC [inline]\fP"
+Returns the \fBGene\fP at the given index (locus) within the \fBChromosome\fP\&. The first gene is at index zero and the last gene is at the index equal to the size of this \fBChromosome\fP - 1\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_locus\fP index of the gene value to be returned 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBGene\fP at the given index
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1326 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.PP
+Referenced by examples\&.gp\&.tictactoe\&.PutStone1\&.execute_void(), org\&.jgap\&.gp\&.impl\&.BranchTypingCrossTest\&.testOperate_0(), org\&.jgap\&.gp\&.impl\&.BranchTypingCrossTest\&.testOperate_1(), org\&.jgap\&.gp\&.impl\&.BranchTypingCrossTest\&.testOperate_2(), and org\&.jgap\&.gp\&.impl\&.GPGenotypeTest\&.testReferenceProblem_0()\&.
+.SS "\fBCommandGene\fP org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getNode (Classa_type, booleana_exactMatch)\fC [inline]\fP"
+Checks whether a node with a given type is contained in the program\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_type\fP the type to look for 
+.br
+\fIa_exactMatch\fP true: look for exactly the given type: false: also look for sub types 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true specific node found
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 924 of file ProgramChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.redepth(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGrowNode_0(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGrowNode_1(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGrowNode_2(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGrowNode_3(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGrowNode_4(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGrowNode_4_2(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGrowNode_4_3(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testGrowNode_5()\&.
+.SS "\fBCommandGene\fP org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getNode (Classa_type, booleana_exactMatch, inta_startIndex)\fC [inline]\fP"
+
+.PP
+Definition at line 928 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes, and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.size()\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getParentNode (inta_child)\fC [inline]\fP"
+Gets the node which is the parent of the given node in this chromosome\&. If the child is at depth d then the parent is the first function at depth d-1 when iterating backwards through the function list starting from the child\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_child\fP the child node 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the parent node, or null if the child is the root node
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 901 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_depth, and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.JGAPTreeNode\&.getParent()\&.
+.SS "String org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getPersistentRepresentation ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the persistent representation of the chromosome, including all genes
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPChromosome\fP\&.
+.PP
+Definition at line 1363 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.encode(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getSize (inta_index)\fC [inline]\fP"
+Gets the number of nodes in the branch starting at the a_index'th node\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the index of the node at which to start counting 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of nodes in the branch starting at the a_index'th node
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 856 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_depth, and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFull (final inta_num, final inta_depth, final Classa_type, final Class[]a_argTypes, final \fBCommandGene\fP[]a_functionSet, booleana_grow, inta_tries)\fC [inline]\fP"
+Initialize this chromosome using the grow or the full method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_num\fP the chromosome's index in the individual of this chromosome 
+.br
+\fIa_depth\fP the maximum depth of the chromosome to create 
+.br
+\fIa_type\fP the type of the chromosome to create 
+.br
+\fIa_argTypes\fP the array of argument types for this chromosome 
+.br
+\fIa_functionSet\fP the set of nodes valid to pick from 
+.br
+\fIa_grow\fP true: use grow method; false: use full method 
+.br
+\fIa_tries\fP maximum number of tries for creating a valid program
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 240 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.argTypes, org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getFunctionSet(), org\&.jgap\&.gp\&.BaseGPChromosome\&.getGPConfiguration(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFullNode(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_functionSet, org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_index, org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_maxDepth, org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.redepth(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.setFunctionSet()\&.
+.SS "\fBCommandGene\fP [] org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFullNode (inta_num, inta_depth, Classa_returnType, inta_subReturnType, \fBCommandGene\fP[]a_functionSet, \fBCommandGene\fPa_rootNode, inta_recurseLevel, booleana_grow, inta_childNum, booleana_validateNode)\fC [inline]\fP, \fC [protected]\fP"
+Create a tree of nodes using the grow or the full method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_num\fP the chromosome's index in the individual of this chromosome 
+.br
+\fIa_depth\fP the maximum depth of the tree to create 
+.br
+\fIa_returnType\fP the return type the lastly evaluated node must have 
+.br
+\fIa_subReturnType\fP the sub return type to look for 
+.br
+\fIa_functionSet\fP the set of function valid to pick from 
+.br
+\fIa_rootNode\fP null, or parent node of the node to develop 
+.br
+\fIa_recurseLevel\fP 0 for first call 
+.br
+\fIa_grow\fP true: use grow method; false: use full method 
+.br
+\fIa_childNum\fP index of the child in the parent node to which it belongs (-1 if node is root node) 
+.br
+\fIa_validateNode\fP true: check if node selected is valid (when called recursively a_validateNode is set to true)
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+possible modified set of functions (e\&.g\&. to avoid having a unique command more than once)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+we could optionally use the clone handler 
+.RE
+.PP
+
+.PP
+Definition at line 591 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.clone(), org\&.jgap\&.gp\&.CommandGene\&.getArity(), org\&.jgap\&.gp\&.CommandGene\&.getChildType(), org\&.jgap\&.gp\&.BaseGPChromosome\&.getCommandOfClass(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.getDynamizeArityProb(), org\&.jgap\&.gp\&.BaseGPChromosome\&.getGPConfiguration(), org\&.jgap\&.gp\&.BaseGPChromosome\&.getIndividual(), org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.isNoCommandGeneCloning(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_depth, org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes, org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_index, org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_maxDepth, org\&.jgap\&.RandomGenerator\&.nextDouble(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.selectNode(), and org\&.jgap\&.gp\&.impl\&.GPConfiguration\&.validateNode()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFull()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.init () throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 158 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.BaseGPChromosome\&.getGPConfiguration()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.ProgramChromosome()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.init (final inta_size) throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 163 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_depth, and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.isCompareApplicationData ()\fC [inline]\fP"
+
+.PP
+Definition at line 1295 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_compareAppData\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.compareTo()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.isPossible (Classa_returnType, inta_subReturnType, \fBCommandGene\fP[]a_nodeSet, booleana_function, booleana_growing)\fC [inline]\fP"
+Determines whether there exists a function or terminal in the given node set with the given return and sub return type\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_returnType\fP the return type to look for 
+.br
+\fIa_subReturnType\fP the sub return type to look for 
+.br
+\fIa_nodeSet\fP the array of nodes to look through 
+.br
+\fIa_function\fP true to look for a function, false to look for a terminal 
+.br
+\fIa_growing\fP true: grow mode, false: full mode
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if such a node exists, false otherwise
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 440 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getArity(), and org\&.jgap\&.gp\&.BaseGPChromosome\&.getIndividual()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.redepth ()\fC [inline]\fP"
+Recalculate the depth of each node\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPChromosome\fP\&.
+.PP
+Definition at line 728 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_depth\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFull(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.redepth()\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.redepth (inta_index)\fC [inline]\fP, \fC [protected]\fP"
+Calculate the depth of the next node and the indices of the children of the current node\&. The depth of the next node is just one plus the depth of the current node\&. The index of the first child is always the next node\&. The index of the second child is found by recursively calling this method on the tree starting with the first child\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP the index of the reference depth 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the index of the next node of the same depth as the current node (i\&.e\&. the next sibling node)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 748 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.BaseGPChromosome\&.getIndividual(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getNode(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_depth, and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.redepth()\&.
+.SS "\fBCommandGene\fP [] org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.remove (\fBCommandGene\fP[]a_functionSet, \fBCommandGene\fPnode)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 1330 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.size()\&.
+.SS "\fBCommandGene\fP org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.selectNode (inta_chromIndex, Classa_returnType, inta_subReturnType, \fBCommandGene\fP[]a_functionSet, booleana_function, booleana_growing)\fC [inline]\fP, \fC [protected]\fP"
+Randomly chooses a valid node from the functions set\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromIndex\fP index of the chromosome in the individual (0\&.\&.n-1) 
+.br
+\fIa_returnType\fP the return type of node to choose 
+.br
+\fIa_subReturnType\fP the sub return type to look for 
+.br
+\fIa_functionSet\fP the functions to use 
+.br
+\fIa_function\fP true to choose a function, false to choose a terminal 
+.br
+\fIa_growing\fP true to ignore the function parameter, false otherwise 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the node chosen
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 490 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getArity(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getDepth(), org\&.jgap\&.gp\&.BaseGPChromosome\&.getGPConfiguration(), org\&.jgap\&.gp\&.BaseGPChromosome\&.getIndividual(), org\&.jgap\&.gp\&.ISingleNodeValidator\&.isAllowed(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_index, and org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFullNode()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.setArgTypes (Class[]a_argTypes)\fC [inline]\fP"
+
+.PP
+Definition at line 169 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.argTypes\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.setCompareApplicationData (booleana_doCompare)\fC [inline]\fP"
+Should we also consider the application data when comparing? Default is 'false' as 'true' means a \fBChromosome\fP is losing its identity when application data is set differently!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_doCompare\fP true: consider application data in method compareTo
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1285 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_compareAppData\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.setFunctions (\fBCommandGene\fP[]a_functions) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 842 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.setFunctionSet (\fBCommandGene\fP[]a_functionSet)\fC [inline]\fP"
+
+.PP
+Definition at line 834 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_functionSet\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFull()\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.setGene (intindex, \fBCommandGene\fPa_gene)\fC [inline]\fP"
+
+.PP
+Definition at line 1157 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.SS "void org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.setValueFromPersistentRepresentation (final Stringa_representation) throws \fBUnsupportedRepresentationException\fP\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_representation\fP String 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBUnsupportedRepresentationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 1393 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.createGene(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.decode(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes, and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.split()\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.size ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+number of functions and terminals present
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 1178 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.clone(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.compareTo(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getNode(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.remove()\&.
+.SS "static final List org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.split (Stringa_string) throws \fBUnsupportedRepresentationException\fP\fC [inline]\fP, \fC [static]\fP, \fC [protected]\fP"
+Splits a_string into individual gene representations\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_string\fP the string to split 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the elements of the returned array are the persistent representation strings of the gene's components 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBUnsupportedRepresentationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 1459 of file ProgramChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.setValueFromPersistentRepresentation()\&.
+.SS "String org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toString (final inta_startNode)\fC [inline]\fP"
+Output program in left-hand notion (e\&.g\&.: '+ X Y' for 'X + Y')\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_startNode\fP node to start with 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+output in left-hand notion
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 298 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getArity(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getChild(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getFunctions(), org\&.jgap\&.gp\&.BaseGPChromosome\&.getIndividual(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toStringNorm()\&.
+.SS "String org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toStringDebug ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+debug representation of progrm chromosome, containing class names of all children
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 409 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getArity(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getChild(), org\&.jgap\&.gp\&.BaseGPChromosome\&.getIndividual(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes, and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toStringNorm()\&.
+.SS "String org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toStringNorm (final inta_startNode)\fC [inline]\fP"
+Output program in 'natural' notion (e\&.g\&.: 'X + Y' for 'X + Y')\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_startNode\fP the node to start with, e\&.g\&. 0 for a complete dump of the program 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+output in normalized notion
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IGPChromosome\fP\&.
+.PP
+Definition at line 350 of file ProgramChromosome\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getArity(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getChild(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getFunctions(), org\&.jgap\&.gp\&.BaseGPChromosome\&.getIndividual(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes, and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toString()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getBusinessKey(), org\&.jgap\&.gp\&.impl\&.ProgramChromosomeTest\&.testToStringNorm_0(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toStringDebug()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "Class [] org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.argTypes\fC [private]\fP"
+Array to hold the types of the arguments to this \fBChromosome\fP\&. 
+.PP
+Definition at line 55 of file ProgramChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.clone(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getArgTypes(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFull(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.ProgramChromosome(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.setArgTypes()\&.
+.SS "final String org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.CVS_REVISION = '$Revision: 1\&.52 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 30 of file ProgramChromosome\&.java\&.
+.SS "transient Logger org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.LOGGER = Logger\&.getLogger(ProgramChromosome\&.class)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 40 of file ProgramChromosome\&.java\&.
+.SS "Object org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_applicationData\fC [private]\fP"
+Application-specific data that is attached to this \fBChromosome\fP\&. This data may assist the application in evaluating this \fBChromosome\fP in the fitness function\&. JGAP does not operate on the data, aside from allowing it to be set and retrieved, and considering it with comparations (if user opted in to do so)\&. 
+.PP
+Definition at line 73 of file ProgramChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getApplicationData()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_compareAppData\fC [private]\fP"
+Method \fBcompareTo()\fP: Should we also consider the application data when comparing? Default is 'false' as 'true' means a \fBChromosome\fP's losing its identity when application data is set differently!
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 82 of file ProgramChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.isCompareApplicationData(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.setCompareApplicationData()\&.
+.SS "int [] org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_depth\fC [private]\fP"
+Array to hold the depths of each node\&. 
+.PP
+Definition at line 50 of file ProgramChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.clone(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getChild(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getDepth(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getParentNode(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getSize(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFullNode(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.init(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.redepth()\&.
+.SS "\fBCommandGene\fP [] org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_functionSet\fC [private]\fP"
+The list of allowed functions/terminals\&. 
+.PP
+Definition at line 45 of file ProgramChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getFunctionSet(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFull(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.ProgramChromosome(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.setFunctionSet()\&.
+.SS "\fBCommandGene\fP [] org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_genes\fC [private]\fP"
+The array of genes contained in this chromosome\&. 
+.PP
+Definition at line 64 of file ProgramChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.cleanup(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.clone(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.compareTo(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_boolean(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_double(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_float(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_int(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_long(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_object(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.execute_void(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getChild(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getDepth(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getFunctions(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getGene(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getNode(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getParentNode(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getPersistentRepresentation(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.getSize(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFullNode(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.init(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.ProgramChromosome(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.setFunctions(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.setGene(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.setValueFromPersistentRepresentation(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.size(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toString(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toStringDebug(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.toStringNorm()\&.
+.SS "transient int org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_index\fC [private]\fP"
+
+.PP
+Definition at line 57 of file ProgramChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFull(), org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFullNode(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.selectNode()\&.
+.SS "transient int org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_maxDepth\fC [private]\fP"
+
+.PP
+Definition at line 59 of file ProgramChromosome\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFull(), and org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.growOrFullNode()\&.
+.SS "Map<\fBNodeInfo\fP,Boolean> org\&.jgap\&.gp\&.impl\&.ProgramChromosome\&.m_possibleNodes = new HashMap()\fC [private]\fP"
+
+.PP
+Definition at line 423 of file ProgramChromosome\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

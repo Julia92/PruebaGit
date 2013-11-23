@@ -1,0 +1,99 @@
+\hypertarget{interfaceorg_1_1jgap_1_1_genetic_operator}{\section{org.\-jgap.\-Genetic\-Operator Interface Reference}
+\label{interfaceorg_1_1jgap_1_1_genetic_operator}\index{org.\-jgap.\-Genetic\-Operator@{org.\-jgap.\-Genetic\-Operator}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-Genetic\-Operator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceorg_1_1jgap_1_1_genetic_operator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-Genetic\-Operator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{interfaceorg_1_1jgap_1_1_genetic_operator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1_genetic_operator_a0f9dfe925c4c21e07522be67d6c5d084}{operate} (final \hyperlink{classorg_1_1jgap_1_1_population}{Population} a\-\_\-population, final List a\-\_\-candidate\-Chromosomes)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{interfaceorg_1_1jgap_1_1_genetic_operator_ad0ddbf3fa1dfd7bd8639eba1d9e35267}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-16 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{interfaceorg_1_1jgap_1_1_genetic_operator}{Genetic\-Operator} represents an operation that takes place on a population of Chromosomes during the evolution process. Examples of genetic operators include reproduction, crossover, and mutation. This interface contains only one method -\/ \hyperlink{interfaceorg_1_1jgap_1_1_genetic_operator_a0f9dfe925c4c21e07522be67d6c5d084}{operate()} -\/ which is responsible for performing the genetic operation on the current population of Chromosomes.
+
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 27 of file Genetic\-Operator.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1_genetic_operator_a0f9dfe925c4c21e07522be67d6c5d084}{\index{org\-::jgap\-::\-Genetic\-Operator@{org\-::jgap\-::\-Genetic\-Operator}!operate@{operate}}
+\index{operate@{operate}!org::jgap::GeneticOperator@{org\-::jgap\-::\-Genetic\-Operator}}
+\subsubsection[{operate}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-Genetic\-Operator.\-operate (
+\begin{DoxyParamCaption}
+\item[{final {\bf Population}}]{a\-\_\-population, }
+\item[{final List}]{a\-\_\-candidate\-Chromosomes}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_genetic_operator_a0f9dfe925c4c21e07522be67d6c5d084}
+The operate method will be invoked on each of the genetic operators referenced by the current \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} object during the evolution phase. Operators are given an opportunity to run in the order that they are added to the \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration}. Implementations of this method may reference the population of Chromosomes as it was at the beginning of the evolutionary phase and/or they may instead reference the candidate Chromosomes, which are the results of prior genetic operators. In either case, only Chromosomes added to the list of candidate chromosomes will be considered for natural selection.
+
+The parameters a\-\_\-population and a\-\_\-candidate\-Chromosomes may refer to the same list of chromosomes for performance issues. Thus would mean an in-\/place modification. In ealier J\-G\-A\-P versions it was suggested never modifying the input population. Please refer to implementations delivered with J\-G\-A\-P to get a picture of the way non-\/susceptible in-\/place modifications are possible. If wrongly done, Concurrent\-Modification\-Exception could be risen when accessing the population by an iterator in a \hyperlink{interfaceorg_1_1jgap_1_1_genetic_operator}{Genetic\-Operator}. Or, if population.\-get\-Chromosomes().size() was used inside a loop where chromosomes were added to the input population this could lead to an infinite loop in worst case.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-population} & the population of chromosomes from the current evolution prior to exposure to any genetic operators. Chromosomes in this array should not be modified. Please, notice, that the call in \hyperlink{classorg_1_1jgap_1_1_genotype_a54a6791fbb6e13920e79f4e2dd719eb4}{Genotype.\-evolve()} to the implementations of \hyperlink{interfaceorg_1_1jgap_1_1_genetic_operator}{Genetic\-Operator} overgoes this due to performance issues \\
+\hline
+{\em a\-\_\-candidate\-Chromosomes} & the pool of chromosomes that have been selected for the next evolved population\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 (earlier versions referenced the \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} object) 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1impl_1_1_crossover_operator_a271b82e98b398a42b576c956350d905e}{org.\-jgap.\-impl.\-Crossover\-Operator}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_averaging_crossover_operator_a6acef66720d9c62e2be2f570bd0755f9}{org.\-jgap.\-impl.\-Averaging\-Crossover\-Operator}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_mutation_operator_a4a1c852770559bba4ffa3e9718f4a0d8}{org.\-jgap.\-impl.\-Mutation\-Operator}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_two_way_mutation_operator_a53ac73cd4e6b197e6756d4efe02bd01e}{org.\-jgap.\-impl.\-Two\-Way\-Mutation\-Operator}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_greedy_crossover_a57adb8d442035ecae43e194f29dff43c}{org.\-jgap.\-impl.\-Greedy\-Crossover}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_gaussian_mutation_operator_aa33da8cc4da351383f79ddaae90e988a}{org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator}, and \hyperlink{classorg_1_1jgap_1_1impl_1_1_inversion_operator_a7947681b60c19a585b1e0ee4595f625b}{org.\-jgap.\-impl.\-Inversion\-Operator}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1_genetic_operator_ad0ddbf3fa1dfd7bd8639eba1d9e35267}{\index{org\-::jgap\-::\-Genetic\-Operator@{org\-::jgap\-::\-Genetic\-Operator}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::GeneticOperator@{org\-::jgap\-::\-Genetic\-Operator}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-Genetic\-Operator.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-16 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{interfaceorg_1_1jgap_1_1_genetic_operator_ad0ddbf3fa1dfd7bd8639eba1d9e35267}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 31 of file Genetic\-Operator.\-java.
+
+
+
+The documentation for this interface was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/\hyperlink{_genetic_operator_8java}{Genetic\-Operator.\-java}\end{DoxyCompactItemize}

@@ -1,0 +1,616 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman" kind="class" prot="public" abstract="yes">
+    <compoundname>org::jgap::impl::salesman::Salesman</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_travelling_salesman_test_1_1_travelling_salesman_for_testing" prot="public" virt="non-virtual">org.jgap.impl.salesman.TravellingSalesmanTest.TravellingSalesmanForTesting</derivedcompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a2dfecb0dafceaa67235b2958f64770dc" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.impl.salesman.Salesman.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.22 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" line="48" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1afcb5455ce482f8d5c76d0f2d882022f9" prot="private" static="no" mutable="no">
+        <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+        <definition>Configuration org.jgap.impl.salesman.Salesman.m_config</definition>
+        <argsstring></argsstring>
+        <name>m_config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" line="50" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" bodystart="50" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a17270454b42f21cf42819a47c65c65ee" compoundref="_salesman_8java" startline="198" endline="253">org.jgap.impl.salesman.Salesman.findOptimalPath</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a2d0c09a1b99ae518259a4e551fe12d3b" compoundref="_salesman_8java" startline="285" endline="287">org.jgap.impl.salesman.Salesman.getConfiguration</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a6b0dae8b40df55bd71370761005d0bee" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int org.jgap.impl.salesman.Salesman.m_maxEvolution</definition>
+        <argsstring></argsstring>
+        <name>m_maxEvolution</name>
+        <initializer>= 128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" line="52" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" bodystart="52" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1ad5ff641569964f2c82cdc769e18fa9ec" compoundref="_salesman_8java" startline="148" endline="150">org.jgap.impl.salesman.Salesman.getMaxEvolution</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a490c23524355029fb233ba131371019e" compoundref="_salesman_8java" startline="159" endline="161">org.jgap.impl.salesman.Salesman.setMaxEvolution</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a3af54d1b6aa53b23cab72f0cdf0bf41e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int org.jgap.impl.salesman.Salesman.m_populationSize</definition>
+        <argsstring></argsstring>
+        <name>m_populationSize</name>
+        <initializer>= 512</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" line="54" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" bodystart="54" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a493897c0bbe0d11d7c600bfc8bff882d" compoundref="_salesman_8java" startline="168" endline="170">org.jgap.impl.salesman.Salesman.getPopulationSize</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a35ae7583e5a7148d600351147e8b24b6" compoundref="_salesman_8java" startline="179" endline="181">org.jgap.impl.salesman.Salesman.setPopulationSize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a2b3a133e0be2cd885c11ef899563f816" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int org.jgap.impl.salesman.Salesman.m_startOffset</definition>
+        <argsstring></argsstring>
+        <name>m_startOffset</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" line="255" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" bodystart="255" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1abcd6189164cf7f797c141a43d12d66a3" compoundref="_salesman_8java" startline="281" endline="283">org.jgap.impl.salesman.Salesman.getStartOffset</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a2b2c4a050ea8d6b8974465a3ca933d9e" compoundref="_salesman_8java" startline="267" endline="269">org.jgap.impl.salesman.Salesman.setStartOffset</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a423725e8d0b857402a4db166061137aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract double</type>
+        <definition>abstract double org.jgap.impl.salesman.Salesman.distance</definition>
+        <argsstring>(Gene a_from, Gene a_to)</argsstring>
+        <name>distance</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_travelling_salesman_test_1_1_travelling_salesman_for_testing_1ad85b8e3b7f696be1895a8f4942786a2d">distance</reimplementedby>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+          <declname>a_from</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+          <declname>a_to</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override this method to compute the distance between &quot;cities&quot;, indicated by these two given genes. The algorithm is not dependent on the used type of genes.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first gene, representing a city </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_to</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second gene, representing a city </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the distance between two cities represented as genes</para></simplesect>
+<simplesect kind="author"><para>Audrius Meskauskas </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a862317900d8463de5375560a20b2df34" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract <ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+        <definition>abstract IChromosome org.jgap.impl.salesman.Salesman.createSampleChromosome</definition>
+        <argsstring>(Object a_initial_data)</argsstring>
+        <name>createSampleChromosome</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_travelling_salesman_test_1_1_travelling_salesman_for_testing_1a3587ad164718c422dba17cc9c1a2507f">createSampleChromosome</reimplementedby>
+        <param>
+          <type>Object</type>
+          <declname>a_initial_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override this method to create a single sample chromosome, representing a list of &quot;cities&quot;. Each gene corresponds a single &quot;city&quot; and can appear only once. By default, the first gene corresponds a &quot;city&quot; where the salesman starts the journey. It never changes its position. This can be changed by setting other start offset with <ref refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a2b2c4a050ea8d6b8974465a3ca933d9e" kindref="member">setStartOffset( )</ref>. Other genes will be shuffled to create the initial random population.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_initial_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the same object as was passed to findOptimalPath. It can be used to specify the task more precisely if the class is used for solving multiple tasks </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a sample chromosome</para></simplesect>
+<simplesect kind="author"><para>Audrius Meskauskas </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" line="87" column="1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a17270454b42f21cf42819a47c65c65ee" compoundref="_salesman_8java" startline="198" endline="253">org.jgap.impl.salesman.Salesman.findOptimalPath</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1accdccbaa500b8c5ad94cd861cf7e9306" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1_fitness_function" kindref="compound">FitnessFunction</ref></type>
+        <definition>FitnessFunction org.jgap.impl.salesman.Salesman.createFitnessFunction</definition>
+        <argsstring>(final Object a_initial_data)</argsstring>
+        <name>createFitnessFunction</name>
+        <param>
+          <type>final Object</type>
+          <declname>a_initial_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the fitness function to use.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_initial_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the same object as was passed to findOptimalPath. It can be used to specify the task more precisely if the class is used for solving multiple tasks </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>an applicable fitness function</para></simplesect>
+<simplesect kind="author"><para>Audrius Meskauskas </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" line="100" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" bodystart="100" bodyend="102"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a17270454b42f21cf42819a47c65c65ee" compoundref="_salesman_8java" startline="198" endline="253">org.jgap.impl.salesman.Salesman.findOptimalPath</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a193cb2998893eb36fc7d37cc87d24326" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+        <definition>Configuration org.jgap.impl.salesman.Salesman.createConfiguration</definition>
+        <argsstring>(final Object a_initial_data)</argsstring>
+        <name>createConfiguration</name>
+        <param>
+          <type>final Object</type>
+          <declname>a_initial_data</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a configuration. The configuration should not contain operators for odrinary crossover and mutations, as they make chromosoms invalid in this task. The special operators <ref refid="classorg_1_1jgap_1_1impl_1_1_swapping_mutation_operator" kindref="compound">SwappingMutationOperator</ref> and GreedyCrossober should be used instead.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_initial_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the same object as was passed to findOptimalPath. It can be used to specify the task more precisely if the class is used for solving multiple tasks</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>created configuration</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Audrius Meskauskas </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" line="121" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" bodystart="121" bodyend="140"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a17270454b42f21cf42819a47c65c65ee" compoundref="_salesman_8java" startline="198" endline="253">org.jgap.impl.salesman.Salesman.findOptimalPath</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1ad5ff641569964f2c82cdc769e18fa9ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.impl.salesman.Salesman.getMaxEvolution</definition>
+        <argsstring>()</argsstring>
+        <name>getMaxEvolution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>maximal number of iterations for population to evolve</para></simplesect>
+<simplesect kind="author"><para>Audrius Meskauskas </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" line="148" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" bodystart="148" bodyend="150"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a6b0dae8b40df55bd71370761005d0bee" compoundref="_salesman_8java" startline="52">org.jgap.impl.salesman.Salesman.m_maxEvolution</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a17270454b42f21cf42819a47c65c65ee" compoundref="_salesman_8java" startline="198" endline="253">org.jgap.impl.salesman.Salesman.findOptimalPath</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a490c23524355029fb233ba131371019e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.salesman.Salesman.setMaxEvolution</definition>
+        <argsstring>(final int a_maxEvolution)</argsstring>
+        <name>setMaxEvolution</name>
+        <param>
+          <type>final int</type>
+          <declname>a_maxEvolution</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the maximal number of iterations for population to evolve (default 512). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_maxEvolution</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sic</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Audrius Meskauskas </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" line="159" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" bodystart="159" bodyend="161"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a6b0dae8b40df55bd71370761005d0bee" compoundref="_salesman_8java" startline="52">org.jgap.impl.salesman.Salesman.m_maxEvolution</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a493897c0bbe0d11d7c600bfc8bff882d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.impl.salesman.Salesman.getPopulationSize</definition>
+        <argsstring>()</argsstring>
+        <name>getPopulationSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>population size for this solution</para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" line="168" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" bodystart="168" bodyend="170"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a3af54d1b6aa53b23cab72f0cdf0bf41e" compoundref="_salesman_8java" startline="54">org.jgap.impl.salesman.Salesman.m_populationSize</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a17270454b42f21cf42819a47c65c65ee" compoundref="_salesman_8java" startline="198" endline="253">org.jgap.impl.salesman.Salesman.findOptimalPath</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a35ae7583e5a7148d600351147e8b24b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.salesman.Salesman.setPopulationSize</definition>
+        <argsstring>(final int a_populationSize)</argsstring>
+        <name>setPopulationSize</name>
+        <param>
+          <type>final int</type>
+          <declname>a_populationSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set an population size for this solution (default 512)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_populationSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sic</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" line="179" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" bodystart="179" bodyend="181"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a3af54d1b6aa53b23cab72f0cdf0bf41e" compoundref="_salesman_8java" startline="54">org.jgap.impl.salesman.Salesman.m_populationSize</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a17270454b42f21cf42819a47c65c65ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+        <definition>IChromosome org.jgap.impl.salesman.Salesman.findOptimalPath</definition>
+        <argsstring>(final Object a_initial_data)</argsstring>
+        <name>findOptimalPath</name>
+        <param>
+          <type>final Object</type>
+          <declname>a_initial_data</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Executes the genetic algorithm to determine the optimal path between the cities.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_initial_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>can be a record with fields, specifying the task more precisely if the class is used to solve multiple tasks. It is passed to createFitnessFunction, createSampleChromosome and createConfiguration</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>chromosome representing the optimal path between cities</para></simplesect>
+<simplesect kind="author"><para>Audrius Meskauskas </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" line="198" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" bodystart="198" bodyend="253"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a193cb2998893eb36fc7d37cc87d24326" compoundref="_salesman_8java" startline="121" endline="140">org.jgap.impl.salesman.Salesman.createConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1accdccbaa500b8c5ad94cd861cf7e9306" compoundref="_salesman_8java" startline="100" endline="102">org.jgap.impl.salesman.Salesman.createFitnessFunction</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a862317900d8463de5375560a20b2df34">org.jgap.impl.salesman.Salesman.createSampleChromosome</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1ad5ff641569964f2c82cdc769e18fa9ec" compoundref="_salesman_8java" startline="148" endline="150">org.jgap.impl.salesman.Salesman.getMaxEvolution</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a493897c0bbe0d11d7c600bfc8bff882d" compoundref="_salesman_8java" startline="168" endline="170">org.jgap.impl.salesman.Salesman.getPopulationSize</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1afcb5455ce482f8d5c76d0f2d882022f9" compoundref="_salesman_8java" startline="50">org.jgap.impl.salesman.Salesman.m_config</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a2b2c4a050ea8d6b8974465a3ca933d9e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.salesman.Salesman.setStartOffset</definition>
+        <argsstring>(final int a_offset)</argsstring>
+        <name>setStartOffset</name>
+        <param>
+          <type>final int</type>
+          <declname>a_offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets a number of genes at the start of chromosome, that are excluded from the swapping. In the <ref refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman" kindref="compound">Salesman</ref> task, the first city in the list should (where the salesman leaves from) probably should not change as it is part of the list. The default value is 1.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start offset for chromosome</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" line="267" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" bodystart="267" bodyend="269"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a2b3a133e0be2cd885c11ef899563f816" compoundref="_salesman_8java" startline="255">org.jgap.impl.salesman.Salesman.m_startOffset</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1abcd6189164cf7f797c141a43d12d66a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.impl.salesman.Salesman.getStartOffset</definition>
+        <argsstring>()</argsstring>
+        <name>getStartOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets a number of genes at the start of chromosome, that are excluded from the swapping. In the <ref refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman" kindref="compound">Salesman</ref> task, the first city in the list should (where the salesman leaves from) probably should not change as it is part of the list. The default value is 1.</para><para><simplesect kind="return"><para>start offset for chromosome</para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" line="281" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" bodystart="281" bodyend="283"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a2b3a133e0be2cd885c11ef899563f816" compoundref="_salesman_8java" startline="255">org.jgap.impl.salesman.Salesman.m_startOffset</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_travelling_salesman_test_1aa7f222f2abe404cf53186363efc3bb14" compoundref="_travelling_salesman_test_8java" startline="73" endline="79">org.jgap.impl.salesman.TravellingSalesmanTest.testSetStartOffset_0</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a2d0c09a1b99ae518259a4e551fe12d3b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+        <definition>Configuration org.jgap.impl.salesman.Salesman.getConfiguration</definition>
+        <argsstring>()</argsstring>
+        <name>getConfiguration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" line="285" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" bodystart="285" bodyend="287"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1afcb5455ce482f8d5c76d0f2d882022f9" compoundref="_salesman_8java" startline="50">org.jgap.impl.salesman.Salesman.m_config</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_travelling_salesman_test_1_1_travelling_salesman_for_testing_1a3587ad164718c422dba17cc9c1a2507f" compoundref="_travelling_salesman_test_8java" startline="135" endline="147">org.jgap.impl.salesman.TravellingSalesmanTest.TravellingSalesmanForTesting.createSampleChromosome</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The class solves the travelling salesman problem. The traveling salesman problem, or TSP for short, is this: given a finite number of &apos;cities&apos; along with the cost of travel between each pair of them, find the cheapest way of visiting all the cities and returning to your starting point.)</para><para><simplesect kind="author"><para>Audrius Meskauskas </para><simplesectsep/><para>Neil Rotstan, Klaus Meffert (reused code fragments) </para></simplesect>
+<simplesect kind="since"><para>2.0</para></simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem>
+<para>J. Grefenstette, R. Gopal, R. Rosmaita, and D. Gucht. <emphasis>Genetic algorithms for the traveling <ref refid="namespaceorg_1_1jgap_1_1impl_1_1salesman" kindref="compound">salesman</ref> problem</emphasis>. In Proceedings of the Second International Conference on Genetic Algorithms. Lawrence Eribaum Associates, Mahwah, NJ, 1985.  </para></listitem>
+<listitem>
+<para><ulink url="http://ecsl.cs.unr.edu/docs/techreports/gong/node3.html">Sushil J. Louis &amp; Gong Li</ulink> (explanatory material)  </para></listitem>
+<listitem>
+<para><ulink url="http://www.tsp.gatech.edu www.tsp.gatech.edu">TPS web site</ulink>  </para></listitem>
+</itemizedlist>
+</para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="17465">
+        <label>Serializable</label>
+      </node>
+      <node id="17464">
+        <label>org.jgap.impl.salesman.Salesman</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman"/>
+        <childnode refid="17465" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17466">
+        <label>org.jgap.impl.salesman.TravellingSalesmanTest.TravellingSalesmanForTesting</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_travelling_salesman_test_1_1_travelling_salesman_for_testing"/>
+        <childnode refid="17464" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="17479">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="17484">
+        <label>List</label>
+      </node>
+      <node id="17483">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="17468" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17471" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17480">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="17468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17468">
+        <label>Serializable</label>
+      </node>
+      <node id="17473">
+        <label>Comparable</label>
+      </node>
+      <node id="17467">
+        <label>org.jgap.impl.salesman.Salesman</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman"/>
+        <childnode refid="17468" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17469" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+      </node>
+      <node id="17471">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="17472" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17477">
+        <label>org.jgap.FitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_fitness_evaluator"/>
+        <childnode refid="17468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17481">
+        <label>org.jgap.BulkFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_bulk_fitness_function"/>
+        <childnode refid="17468" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17471" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17472">
+        <label>Cloneable</label>
+      </node>
+      <node id="17475">
+        <label>org.jgap.IJGAPFactory</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_j_g_a_p_factory"/>
+        <childnode refid="17468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17482">
+        <label>org.jgap.Configuration.ConfigurationConfigurable</label>
+        <link refid="classorg_1_1jgap_1_1_configuration_1_1_configuration_configurable"/>
+        <childnode refid="17468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17474">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="17471" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17468" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17473" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17478">
+        <label>org.jgap.IChromosome</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome"/>
+        <childnode refid="17473" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17471" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17468" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17479" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17469">
+        <label>org.jgap.Configuration</label>
+        <link refid="classorg_1_1jgap_1_1_configuration"/>
+        <childnode refid="17470" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17468" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17471" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17473" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17474" relation="usage">
+          <edgelabel>m_breeder</edgelabel>
+        </childnode>
+        <childnode refid="17475" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="17476" relation="usage">
+          <edgelabel>m_chromosomePool</edgelabel>
+        </childnode>
+        <childnode refid="17477" relation="usage">
+          <edgelabel>m_fitnessEvaluator</edgelabel>
+        </childnode>
+        <childnode refid="17478" relation="usage">
+          <edgelabel>m_sampleChromosome</edgelabel>
+        </childnode>
+        <childnode refid="17480" relation="usage">
+          <edgelabel>m_randomGenerator</edgelabel>
+        </childnode>
+        <childnode refid="17481" relation="usage">
+          <edgelabel>m_bulkObjectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="17482" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="17483" relation="usage">
+          <edgelabel>m_objectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="17484" relation="usage">
+          <edgelabel>m_geneticOperators</edgelabel>
+        </childnode>
+      </node>
+      <node id="17476">
+        <label>org.jgap.IChromosomePool</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool"/>
+      </node>
+      <node id="17470">
+        <label>Configurable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" line="46" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/salesman/Salesman.java" bodystart="45" bodyend="288"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a193cb2998893eb36fc7d37cc87d24326" prot="public" virt="non-virtual"><scope>org::jgap::impl::salesman::Salesman</scope><name>createConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1accdccbaa500b8c5ad94cd861cf7e9306" prot="public" virt="non-virtual"><scope>org::jgap::impl::salesman::Salesman</scope><name>createFitnessFunction</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a862317900d8463de5375560a20b2df34" prot="public" virt="pure-virtual"><scope>org::jgap::impl::salesman::Salesman</scope><name>createSampleChromosome</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a2dfecb0dafceaa67235b2958f64770dc" prot="private" virt="non-virtual"><scope>org::jgap::impl::salesman::Salesman</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a423725e8d0b857402a4db166061137aa" prot="public" virt="pure-virtual"><scope>org::jgap::impl::salesman::Salesman</scope><name>distance</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a17270454b42f21cf42819a47c65c65ee" prot="public" virt="non-virtual"><scope>org::jgap::impl::salesman::Salesman</scope><name>findOptimalPath</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a2d0c09a1b99ae518259a4e551fe12d3b" prot="public" virt="non-virtual"><scope>org::jgap::impl::salesman::Salesman</scope><name>getConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1ad5ff641569964f2c82cdc769e18fa9ec" prot="public" virt="non-virtual"><scope>org::jgap::impl::salesman::Salesman</scope><name>getMaxEvolution</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a493897c0bbe0d11d7c600bfc8bff882d" prot="public" virt="non-virtual"><scope>org::jgap::impl::salesman::Salesman</scope><name>getPopulationSize</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1abcd6189164cf7f797c141a43d12d66a3" prot="public" virt="non-virtual"><scope>org::jgap::impl::salesman::Salesman</scope><name>getStartOffset</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1afcb5455ce482f8d5c76d0f2d882022f9" prot="private" virt="non-virtual"><scope>org::jgap::impl::salesman::Salesman</scope><name>m_config</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a6b0dae8b40df55bd71370761005d0bee" prot="private" virt="non-virtual"><scope>org::jgap::impl::salesman::Salesman</scope><name>m_maxEvolution</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a3af54d1b6aa53b23cab72f0cdf0bf41e" prot="private" virt="non-virtual"><scope>org::jgap::impl::salesman::Salesman</scope><name>m_populationSize</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a2b3a133e0be2cd885c11ef899563f816" prot="private" virt="non-virtual"><scope>org::jgap::impl::salesman::Salesman</scope><name>m_startOffset</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a490c23524355029fb233ba131371019e" prot="public" virt="non-virtual"><scope>org::jgap::impl::salesman::Salesman</scope><name>setMaxEvolution</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a35ae7583e5a7148d600351147e8b24b6" prot="public" virt="non-virtual"><scope>org::jgap::impl::salesman::Salesman</scope><name>setPopulationSize</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1salesman_1_1_salesman_1a2b2c4a050ea8d6b8974465a3ca933d9e" prot="public" virt="non-virtual"><scope>org::jgap::impl::salesman::Salesman</scope><name>setStartOffset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,705 @@
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_double_gene}{\section{org.\-jgap.\-impl.\-Double\-Gene Class Reference}
+\label{classorg_1_1jgap_1_1impl_1_1_double_gene}\index{org.\-jgap.\-impl.\-Double\-Gene@{org.\-jgap.\-impl.\-Double\-Gene}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-impl.\-Double\-Gene\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_double_gene__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-impl.\-Double\-Gene\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_double_gene__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_aea962046b97d87bd6e4b9180295587eb}{Double\-Gene} ()  throws Invalid\-Configuration\-Exception 
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_ab207a560e848e93ae4ae53ad1b422357}{Double\-Gene} (final \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} a\-\_\-config)  throws Invalid\-Configuration\-Exception 
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_acf5e9830d934ce129e690dafd1ee0101}{Double\-Gene} (final \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} a\-\_\-config, final double a\-\_\-lower\-Bound, final double a\-\_\-upper\-Bound)  throws Invalid\-Configuration\-Exception 
+\item 
+String \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_a8da36e3431c7c509e2e09285e47da105}{get\-Persistent\-Representation} ()
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_a9b71158d4e12d38732f9b60bf2ba1949}{set\-Value\-From\-Persistent\-Representation} (String a\-\_\-representation)  throws Unsupported\-Representation\-Exception 
+\item 
+double \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_ad4a32fa2f8796bc1598539e93a72e39f}{double\-Value} ()
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_aa60b29de6b26966ef4038bc02ccc2fd7}{set\-To\-Random\-Value} (\hyperlink{interfaceorg_1_1jgap_1_1_random_generator}{Random\-Generator} a\-\_\-number\-Generator)
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_a7cb99b828171a8f23c191876a3fd3c46}{apply\-Mutation} (int index, double a\-\_\-percentage)
+\item 
+int \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_ac1e682ba44a3708cc505d78415ee5b6d}{hash\-Code} ()
+\item 
+String \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_a9819e6f329bd77276a5821b4c433cd6e}{to\-String} ()
+\item 
+double \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_a5d7bdb546951bbae98ee0aa5d7f3fa09}{get\-Lower\-Bound} ()
+\item 
+double \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_a6310705faae7069e39bc0da68b9b2e3b}{get\-Upper\-Bound} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_af714cdfc2b8f7f3e4d397cf149c09b95}{new\-Gene\-Internal} ()
+\item 
+int \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_ac51a53a77b67a6ab2a220ac750be84a8}{compare\-To\-Native} (Object o1, Object o2)
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_a7487946984538fd71a24e0f8280a8e24}{map\-Value\-To\-Within\-Bounds} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_a258aa95e2039227c87fb0c78758bba8b}{m\-\_\-upper\-Bound}
+\item 
+double \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_a07193d7a0dc9a450d41463104ee72f02}{m\-\_\-lower\-Bound}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_aae41c294c77e89a7971fd485b9454507}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-40 \$\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} implementation that supports a double values for its allele. Upper and lower bounds may optionally be provided to restrict the range of legal values allowed by this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} instance.
+
+Partly copied from \hyperlink{classorg_1_1jgap_1_1impl_1_1_integer_gene}{Integer\-Gene}.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Definition at line 24 of file Double\-Gene.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_double_gene_aea962046b97d87bd6e4b9180295587eb}{\index{org\-::jgap\-::impl\-::\-Double\-Gene@{org\-::jgap\-::impl\-::\-Double\-Gene}!Double\-Gene@{Double\-Gene}}
+\index{Double\-Gene@{Double\-Gene}!org::jgap::impl::DoubleGene@{org\-::jgap\-::impl\-::\-Double\-Gene}}
+\subsubsection[{Double\-Gene}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Double\-Gene.\-Double\-Gene (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\-Configuration\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_double_gene_aea962046b97d87bd6e4b9180295587eb}
+Constructs a new \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene}{Double\-Gene} with default settings. No bounds will be put into effect for values (alleles) of this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} instance, other than the standard range of double values.
+
+Attention\-: The configuration used is the one set with the static method Genotype.\-set\-Configuration.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classorg_1_1jgap_1_1_invalid_configuration_exception}{Invalid\-Configuration\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Definition at line 54 of file Double\-Gene.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Double\-Gene.\-new\-Gene\-Internal().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_double_gene_ab207a560e848e93ae4ae53ad1b422357}{\index{org\-::jgap\-::impl\-::\-Double\-Gene@{org\-::jgap\-::impl\-::\-Double\-Gene}!Double\-Gene@{Double\-Gene}}
+\index{Double\-Gene@{Double\-Gene}!org::jgap::impl::DoubleGene@{org\-::jgap\-::impl\-::\-Double\-Gene}}
+\subsubsection[{Double\-Gene}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Double\-Gene.\-Double\-Gene (
+\begin{DoxyParamCaption}
+\item[{final {\bf Configuration}}]{a\-\_\-config}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\-Configuration\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_double_gene_ab207a560e848e93ae4ae53ad1b422357}
+Constructs a new \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene}{Double\-Gene} with default settings. No bounds will be put into effect for values (alleles) of this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} instance, other than the standard range of double values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-config} & the configuration to use \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classorg_1_1jgap_1_1_invalid_configuration_exception}{Invalid\-Configuration\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-0 
+\end{DoxySince}
+
+
+Definition at line 70 of file Double\-Gene.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_double_gene_acf5e9830d934ce129e690dafd1ee0101}{\index{org\-::jgap\-::impl\-::\-Double\-Gene@{org\-::jgap\-::impl\-::\-Double\-Gene}!Double\-Gene@{Double\-Gene}}
+\index{Double\-Gene@{Double\-Gene}!org::jgap::impl::DoubleGene@{org\-::jgap\-::impl\-::\-Double\-Gene}}
+\subsubsection[{Double\-Gene}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Double\-Gene.\-Double\-Gene (
+\begin{DoxyParamCaption}
+\item[{final {\bf Configuration}}]{a\-\_\-config, }
+\item[{final double}]{a\-\_\-lower\-Bound, }
+\item[{final double}]{a\-\_\-upper\-Bound}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\-Configuration\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_double_gene_acf5e9830d934ce129e690dafd1ee0101}
+Constructs a new \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene}{Double\-Gene} with the specified lower and upper bounds for values (alleles) of this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} instance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-config} & the configuration to use \\
+\hline
+{\em a\-\_\-lower\-Bound} & the lowest value that this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} may possess, inclusively \\
+\hline
+{\em a\-\_\-upper\-Bound} & the highest value that this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} may possess, inclusively \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classorg_1_1jgap_1_1_invalid_configuration_exception}{Invalid\-Configuration\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 90 of file Double\-Gene.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Double\-Gene.\-m\-\_\-lower\-Bound, and org.\-jgap.\-impl.\-Double\-Gene.\-m\-\_\-upper\-Bound.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_double_gene_a7cb99b828171a8f23c191876a3fd3c46}{\index{org\-::jgap\-::impl\-::\-Double\-Gene@{org\-::jgap\-::impl\-::\-Double\-Gene}!apply\-Mutation@{apply\-Mutation}}
+\index{apply\-Mutation@{apply\-Mutation}!org::jgap::impl::DoubleGene@{org\-::jgap\-::impl\-::\-Double\-Gene}}
+\subsubsection[{apply\-Mutation}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Double\-Gene.\-apply\-Mutation (
+\begin{DoxyParamCaption}
+\item[{int}]{index, }
+\item[{double}]{a\-\_\-percentage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_double_gene_a7cb99b828171a8f23c191876a3fd3c46}
+See interface \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} for description. 
+\begin{DoxyParams}{Parameters}
+{\em index} & ignored (because there is only 1 atomic element) \\
+\hline
+{\em a\-\_\-percentage} & percentage of mutation (greater than -\/1 and smaller than 1)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1_gene_af506b6e1d6ceb3e88e522da4c79adba4}{org.\-jgap.\-Gene}.
+
+
+
+Definition at line 328 of file Double\-Gene.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Double\-Gene.\-double\-Value(), org.\-jgap.\-impl.\-Double\-Gene.\-m\-\_\-lower\-Bound, org.\-jgap.\-impl.\-Double\-Gene.\-m\-\_\-upper\-Bound, and org.\-jgap.\-impl.\-Number\-Gene.\-set\-Allele().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_double_gene_a7cb99b828171a8f23c191876a3fd3c46_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_double_gene_ac51a53a77b67a6ab2a220ac750be84a8}{\index{org\-::jgap\-::impl\-::\-Double\-Gene@{org\-::jgap\-::impl\-::\-Double\-Gene}!compare\-To\-Native@{compare\-To\-Native}}
+\index{compare\-To\-Native@{compare\-To\-Native}!org::jgap::impl::DoubleGene@{org\-::jgap\-::impl\-::\-Double\-Gene}}
+\subsubsection[{compare\-To\-Native}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-jgap.\-impl.\-Double\-Gene.\-compare\-To\-Native (
+\begin{DoxyParamCaption}
+\item[{Object}]{o1, }
+\item[{Object}]{o2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classorg_1_1jgap_1_1impl_1_1_double_gene_ac51a53a77b67a6ab2a220ac750be84a8}
+Compares to objects by first casting them into their expected type (e.\-g. Integer for \hyperlink{classorg_1_1jgap_1_1impl_1_1_integer_gene}{Integer\-Gene}) and then calling the compare\-To-\/method of the casted type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em o1} & first object to be compared, which is always not null \\
+\hline
+{\em o2} & second object to be compared, which is always not null \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a negative integer, zero, or a positive integer as this object is less than, equal to, or greater than the object provided for comparison
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Implements \hyperlink{classorg_1_1jgap_1_1impl_1_1_number_gene_ad43d0cc91b4458f407085e30aaf6ce3e}{org.\-jgap.\-impl.\-Number\-Gene}.
+
+
+
+Definition at line 271 of file Double\-Gene.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_double_gene_ad4a32fa2f8796bc1598539e93a72e39f}{\index{org\-::jgap\-::impl\-::\-Double\-Gene@{org\-::jgap\-::impl\-::\-Double\-Gene}!double\-Value@{double\-Value}}
+\index{double\-Value@{double\-Value}!org::jgap::impl::DoubleGene@{org\-::jgap\-::impl\-::\-Double\-Gene}}
+\subsubsection[{double\-Value}]{\setlength{\rightskip}{0pt plus 5cm}double org.\-jgap.\-impl.\-Double\-Gene.\-double\-Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_double_gene_ad4a32fa2f8796bc1598539e93a72e39f}
+Retrieves the double value of this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}, which may be more convenient in some cases than the more general \hyperlink{classorg_1_1jgap_1_1_base_gene_a35e754e8e217bdd26962e1c3c31d0169}{get\-Allele()} method.
+
+\begin{DoxyReturn}{Returns}
+the double value of this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Definition at line 236 of file Double\-Gene.\-java.
+
+
+
+References org.\-jgap.\-Base\-Gene.\-get\-Allele().
+
+
+
+Referenced by org.\-jgap.\-impl.\-Double\-Gene.\-apply\-Mutation(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Apply\-Mutation\-\_\-0(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Apply\-Mutation\-\_\-6(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Double\-Value\-\_\-0(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Double\-Value\-\_\-1(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Set\-Allele\-\_\-4(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Set\-Allele\-\_\-5(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Set\-Allele\-\_\-6(), org.\-jgap.\-impl.\-Composite\-Gene\-Test.\-test\-Set\-To\-Random\-Value\-\_\-1(), org.\-jgap.\-impl.\-Composite\-Gene\-Test.\-test\-Set\-To\-Random\-Value\-\_\-2(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Set\-To\-Random\-Value\-\_\-3(), and org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Set\-To\-Random\-Value\-\_\-4().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_double_gene_ad4a32fa2f8796bc1598539e93a72e39f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_double_gene_a5d7bdb546951bbae98ee0aa5d7f3fa09}{\index{org\-::jgap\-::impl\-::\-Double\-Gene@{org\-::jgap\-::impl\-::\-Double\-Gene}!get\-Lower\-Bound@{get\-Lower\-Bound}}
+\index{get\-Lower\-Bound@{get\-Lower\-Bound}!org::jgap::impl::DoubleGene@{org\-::jgap\-::impl\-::\-Double\-Gene}}
+\subsubsection[{get\-Lower\-Bound}]{\setlength{\rightskip}{0pt plus 5cm}double org.\-jgap.\-impl.\-Double\-Gene.\-get\-Lower\-Bound (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_double_gene_a5d7bdb546951bbae98ee0aa5d7f3fa09}
+\begin{DoxyReturn}{Returns}
+the lower bound set 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-0 
+\end{DoxySince}
+
+
+Definition at line 375 of file Double\-Gene.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Double\-Gene.\-m\-\_\-lower\-Bound.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Bounds\-\_\-0(), and org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Bounds\-\_\-1().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_double_gene_a8da36e3431c7c509e2e09285e47da105}{\index{org\-::jgap\-::impl\-::\-Double\-Gene@{org\-::jgap\-::impl\-::\-Double\-Gene}!get\-Persistent\-Representation@{get\-Persistent\-Representation}}
+\index{get\-Persistent\-Representation@{get\-Persistent\-Representation}!org::jgap::impl::DoubleGene@{org\-::jgap\-::impl\-::\-Double\-Gene}}
+\subsubsection[{get\-Persistent\-Representation}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-jgap.\-impl.\-Double\-Gene.\-get\-Persistent\-Representation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_double_gene_a8da36e3431c7c509e2e09285e47da105}
+Retrieves a string representation of this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} that includes any information required to reconstruct it at a later time, such as its value and internal state. This string will be used to represent this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} in X\-M\-L persistence. This is an optional method but, if not implemented, X\-M\-L persistence and possibly other features will not be available. An Unsupported\-Operation\-Exception should be thrown if no implementation is provided.
+
+\begin{DoxyReturn}{Returns}
+a string representation of this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}'s current state
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1_i_persistent_representation_a07bf7dbaa8de08e268c9357a46e79dac}{org.\-jgap.\-I\-Persistent\-Representation}.
+
+
+
+Definition at line 133 of file Double\-Gene.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Number\-Gene.\-get\-Internal\-Value(), org.\-jgap.\-impl.\-Double\-Gene.\-m\-\_\-lower\-Bound, org.\-jgap.\-impl.\-Double\-Gene.\-m\-\_\-upper\-Bound, and org.\-jgap.\-Gene.\-P\-E\-R\-S\-I\-S\-T\-E\-N\-T\-\_\-\-F\-I\-E\-L\-D\-\_\-\-D\-E\-L\-I\-M\-I\-T\-E\-R.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_double_gene_a8da36e3431c7c509e2e09285e47da105_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_double_gene_a6310705faae7069e39bc0da68b9b2e3b}{\index{org\-::jgap\-::impl\-::\-Double\-Gene@{org\-::jgap\-::impl\-::\-Double\-Gene}!get\-Upper\-Bound@{get\-Upper\-Bound}}
+\index{get\-Upper\-Bound@{get\-Upper\-Bound}!org::jgap::impl::DoubleGene@{org\-::jgap\-::impl\-::\-Double\-Gene}}
+\subsubsection[{get\-Upper\-Bound}]{\setlength{\rightskip}{0pt plus 5cm}double org.\-jgap.\-impl.\-Double\-Gene.\-get\-Upper\-Bound (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_double_gene_a6310705faae7069e39bc0da68b9b2e3b}
+\begin{DoxyReturn}{Returns}
+the upper bound set 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-0 
+\end{DoxySince}
+
+
+Definition at line 384 of file Double\-Gene.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Double\-Gene.\-m\-\_\-upper\-Bound.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Bounds\-\_\-0(), and org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Bounds\-\_\-1().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_double_gene_ac1e682ba44a3708cc505d78415ee5b6d}{\index{org\-::jgap\-::impl\-::\-Double\-Gene@{org\-::jgap\-::impl\-::\-Double\-Gene}!hash\-Code@{hash\-Code}}
+\index{hash\-Code@{hash\-Code}!org::jgap::impl::DoubleGene@{org\-::jgap\-::impl\-::\-Double\-Gene}}
+\subsubsection[{hash\-Code}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-jgap.\-impl.\-Double\-Gene.\-hash\-Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_double_gene_ac1e682ba44a3708cc505d78415ee5b6d}
+Modified \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_ac1e682ba44a3708cc505d78415ee5b6d}{hash\-Code()} function to return different hashcodes for differently ordered genes in a chromosome. \begin{DoxyReturn}{Returns}
+-\/3 if no allele set, otherwise value return by \hyperlink{classorg_1_1jgap_1_1_base_gene_af842a106d90ca973956f560ae448464e}{Base\-Gene.\-hash\-Code()}
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-2 
+\end{DoxySince}
+
+
+Definition at line 342 of file Double\-Gene.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Number\-Gene.\-get\-Internal\-Value().
+
+
+
+Referenced by org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Hash\-Code\-\_\-0(), and org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Hash\-Code\-\_\-1().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_double_gene_ac1e682ba44a3708cc505d78415ee5b6d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_double_gene_a7487946984538fd71a24e0f8280a8e24}{\index{org\-::jgap\-::impl\-::\-Double\-Gene@{org\-::jgap\-::impl\-::\-Double\-Gene}!map\-Value\-To\-Within\-Bounds@{map\-Value\-To\-Within\-Bounds}}
+\index{map\-Value\-To\-Within\-Bounds@{map\-Value\-To\-Within\-Bounds}!org::jgap::impl::DoubleGene@{org\-::jgap\-::impl\-::\-Double\-Gene}}
+\subsubsection[{map\-Value\-To\-Within\-Bounds}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Double\-Gene.\-map\-Value\-To\-Within\-Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classorg_1_1jgap_1_1impl_1_1_double_gene_a7487946984538fd71a24e0f8280a8e24}
+Maps the value of this \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene}{Double\-Gene} to within the bounds specified by the m\-\_\-upper\-Bounds and m\-\_\-lower\-Bounds instance variables. The value's relative position within the double range will be preserved within the bounds range (in other words, if the value is about halfway between the double max and min, then the resulting value will be about halfway between the upper bounds and lower bounds). If the value is null or is already within the bounds, it will be left unchanged.
+
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Implements \hyperlink{classorg_1_1jgap_1_1impl_1_1_number_gene_abecc7e11d15220180de70184adbca1dd}{org.\-jgap.\-impl.\-Number\-Gene}.
+
+
+
+Definition at line 288 of file Double\-Gene.\-java.
+
+
+
+References org.\-jgap.\-Base\-Gene.\-get\-Allele(), org.\-jgap.\-Base\-Gene.\-get\-Configuration(), org.\-jgap.\-impl.\-Double\-Gene.\-m\-\_\-lower\-Bound, org.\-jgap.\-impl.\-Double\-Gene.\-m\-\_\-upper\-Bound, org.\-jgap.\-Random\-Generator.\-next\-Double(), and org.\-jgap.\-impl.\-Number\-Gene.\-set\-Allele().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_double_gene_a7487946984538fd71a24e0f8280a8e24_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_double_gene_af714cdfc2b8f7f3e4d397cf149c09b95}{\index{org\-::jgap\-::impl\-::\-Double\-Gene@{org\-::jgap\-::impl\-::\-Double\-Gene}!new\-Gene\-Internal@{new\-Gene\-Internal}}
+\index{new\-Gene\-Internal@{new\-Gene\-Internal}!org::jgap::impl::DoubleGene@{org\-::jgap\-::impl\-::\-Double\-Gene}}
+\subsubsection[{new\-Gene\-Internal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gene} org.\-jgap.\-impl.\-Double\-Gene.\-new\-Gene\-Internal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classorg_1_1jgap_1_1impl_1_1_double_gene_af714cdfc2b8f7f3e4d397cf149c09b95}
+Provides an implementation-\/independent means for creating new \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} instances.
+
+\begin{DoxyReturn}{Returns}
+a new \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} instance of the same type and with the same setup as this concrete \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Implements \hyperlink{classorg_1_1jgap_1_1_base_gene_aa423e96ffac5a9589fb3a4fbda791b3c}{org.\-jgap.\-Base\-Gene}.
+
+
+
+Definition at line 108 of file Double\-Gene.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Double\-Gene.\-Double\-Gene(), org.\-jgap.\-Base\-Gene.\-get\-Configuration(), org.\-jgap.\-impl.\-Double\-Gene.\-m\-\_\-lower\-Bound, and org.\-jgap.\-impl.\-Double\-Gene.\-m\-\_\-upper\-Bound.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_double_gene_af714cdfc2b8f7f3e4d397cf149c09b95_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_double_gene_aa60b29de6b26966ef4038bc02ccc2fd7}{\index{org\-::jgap\-::impl\-::\-Double\-Gene@{org\-::jgap\-::impl\-::\-Double\-Gene}!set\-To\-Random\-Value@{set\-To\-Random\-Value}}
+\index{set\-To\-Random\-Value@{set\-To\-Random\-Value}!org::jgap::impl::DoubleGene@{org\-::jgap\-::impl\-::\-Double\-Gene}}
+\subsubsection[{set\-To\-Random\-Value}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Double\-Gene.\-set\-To\-Random\-Value (
+\begin{DoxyParamCaption}
+\item[{{\bf Random\-Generator}}]{a\-\_\-number\-Generator}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_double_gene_aa60b29de6b26966ef4038bc02ccc2fd7}
+Sets the value (allele) of this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} to a random Double value between the lower and upper bounds (if any) of this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-number\-Generator} & the random number generator that should be used to create any random values. It's important to use this generator to maintain the user's flexibility to configure the genetic engine to use the random number generator of their choice\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1_gene_a4ef135da7549ee98139928e21adb841a}{org.\-jgap.\-Gene}.
+
+
+
+Definition at line 252 of file Double\-Gene.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Double\-Gene.\-m\-\_\-lower\-Bound, org.\-jgap.\-impl.\-Double\-Gene.\-m\-\_\-upper\-Bound, org.\-jgap.\-Random\-Generator.\-next\-Double(), and org.\-jgap.\-impl.\-Number\-Gene.\-set\-Allele().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_double_gene_aa60b29de6b26966ef4038bc02ccc2fd7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_double_gene_a9b71158d4e12d38732f9b60bf2ba1949}{\index{org\-::jgap\-::impl\-::\-Double\-Gene@{org\-::jgap\-::impl\-::\-Double\-Gene}!set\-Value\-From\-Persistent\-Representation@{set\-Value\-From\-Persistent\-Representation}}
+\index{set\-Value\-From\-Persistent\-Representation@{set\-Value\-From\-Persistent\-Representation}!org::jgap::impl::DoubleGene@{org\-::jgap\-::impl\-::\-Double\-Gene}}
+\subsubsection[{set\-Value\-From\-Persistent\-Representation}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Double\-Gene.\-set\-Value\-From\-Persistent\-Representation (
+\begin{DoxyParamCaption}
+\item[{String}]{a\-\_\-representation}
+\end{DoxyParamCaption}
+) throws {\bf Unsupported\-Representation\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_double_gene_a9b71158d4e12d38732f9b60bf2ba1949}
+Sets the value and internal state of this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} from the string representation returned by a previous invocation of the \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_a8da36e3431c7c509e2e09285e47da105}{get\-Persistent\-Representation()} method. This is an optional method but, if not implemented, X\-M\-L persistence and possibly other features will not be available. An Unsupported\-Operation\-Exception should be thrown if no implementation is provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-representation} & the string representation retrieved from a prior call to the \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_a8da36e3431c7c509e2e09285e47da105}{get\-Persistent\-Representation()} method\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unsupported\-Operation\-Exception} & to indicate that no implementation is provided for this method \\
+\hline
+{\em \hyperlink{classorg_1_1jgap_1_1_unsupported_representation_exception}{Unsupported\-Representation\-Exception}} & if this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} implementation does not support the given string representation\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000162}{Todo}]unify first part of method with \hyperlink{classorg_1_1jgap_1_1impl_1_1_integer_gene}{Integer\-Gene} \end{DoxyRefDesc}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1_i_persistent_representation_a94a345f1919c4840dd0b9eecf7afc6a3}{org.\-jgap.\-I\-Persistent\-Representation}.
+
+
+
+Definition at line 167 of file Double\-Gene.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Double\-Gene.\-m\-\_\-lower\-Bound, org.\-jgap.\-impl.\-Double\-Gene.\-m\-\_\-upper\-Bound, org.\-jgap.\-Gene.\-P\-E\-R\-S\-I\-S\-T\-E\-N\-T\-\_\-\-F\-I\-E\-L\-D\-\_\-\-D\-E\-L\-I\-M\-I\-T\-E\-R, and org.\-jgap.\-impl.\-Number\-Gene.\-set\-Allele().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_double_gene_a9b71158d4e12d38732f9b60bf2ba1949_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_double_gene_a9819e6f329bd77276a5821b4c433cd6e}{\index{org\-::jgap\-::impl\-::\-Double\-Gene@{org\-::jgap\-::impl\-::\-Double\-Gene}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!org::jgap::impl::DoubleGene@{org\-::jgap\-::impl\-::\-Double\-Gene}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-jgap.\-impl.\-Double\-Gene.\-to\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_double_gene_a9819e6f329bd77276a5821b4c433cd6e}
+\begin{DoxyReturn}{Returns}
+string representation of this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}'s value that may be useful for display purposes
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-4 
+\end{DoxySince}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1_gene_ac62239b4b7bf81179fd491a4c4bd1901}{org.\-jgap.\-Gene}.
+
+
+
+Definition at line 358 of file Double\-Gene.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Number\-Gene.\-get\-Internal\-Value(), org.\-jgap.\-impl.\-Double\-Gene.\-m\-\_\-lower\-Bound, and org.\-jgap.\-impl.\-Double\-Gene.\-m\-\_\-upper\-Bound.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_double_gene_a9819e6f329bd77276a5821b4c433cd6e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_double_gene_aae41c294c77e89a7971fd485b9454507}{\index{org\-::jgap\-::impl\-::\-Double\-Gene@{org\-::jgap\-::impl\-::\-Double\-Gene}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::impl::DoubleGene@{org\-::jgap\-::impl\-::\-Double\-Gene}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-impl.\-Double\-Gene.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-40 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_double_gene_aae41c294c77e89a7971fd485b9454507}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 27 of file Double\-Gene.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_double_gene_a07193d7a0dc9a450d41463104ee72f02}{\index{org\-::jgap\-::impl\-::\-Double\-Gene@{org\-::jgap\-::impl\-::\-Double\-Gene}!m\-\_\-lower\-Bound@{m\-\_\-lower\-Bound}}
+\index{m\-\_\-lower\-Bound@{m\-\_\-lower\-Bound}!org::jgap::impl::DoubleGene@{org\-::jgap\-::impl\-::\-Double\-Gene}}
+\subsubsection[{m\-\_\-lower\-Bound}]{\setlength{\rightskip}{0pt plus 5cm}double org.\-jgap.\-impl.\-Double\-Gene.\-m\-\_\-lower\-Bound\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_double_gene_a07193d7a0dc9a450d41463104ee72f02}
+The lower bounds of values represented by this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}. If not explicitly provided by the user, this should be set to Double.\-M\-I\-N\-\_\-\-V\-A\-L\-U\-E 
+
+Definition at line 39 of file Double\-Gene.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Double\-Gene.\-apply\-Mutation(), org.\-jgap.\-impl.\-Double\-Gene.\-Double\-Gene(), org.\-jgap.\-impl.\-Double\-Gene.\-get\-Lower\-Bound(), org.\-jgap.\-impl.\-Double\-Gene.\-get\-Persistent\-Representation(), org.\-jgap.\-impl.\-Double\-Gene.\-map\-Value\-To\-Within\-Bounds(), org.\-jgap.\-impl.\-Double\-Gene.\-new\-Gene\-Internal(), org.\-jgap.\-impl.\-Double\-Gene.\-set\-To\-Random\-Value(), org.\-jgap.\-impl.\-Double\-Gene.\-set\-Value\-From\-Persistent\-Representation(), and org.\-jgap.\-impl.\-Double\-Gene.\-to\-String().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_double_gene_a258aa95e2039227c87fb0c78758bba8b}{\index{org\-::jgap\-::impl\-::\-Double\-Gene@{org\-::jgap\-::impl\-::\-Double\-Gene}!m\-\_\-upper\-Bound@{m\-\_\-upper\-Bound}}
+\index{m\-\_\-upper\-Bound@{m\-\_\-upper\-Bound}!org::jgap::impl::DoubleGene@{org\-::jgap\-::impl\-::\-Double\-Gene}}
+\subsubsection[{m\-\_\-upper\-Bound}]{\setlength{\rightskip}{0pt plus 5cm}double org.\-jgap.\-impl.\-Double\-Gene.\-m\-\_\-upper\-Bound\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_double_gene_a258aa95e2039227c87fb0c78758bba8b}
+The upper bounds of values represented by this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}. If not explicitly provided by the user, this should be set to Double.\-M\-A\-X\-\_\-\-V\-A\-L\-U\-E. 
+
+Definition at line 33 of file Double\-Gene.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Double\-Gene.\-apply\-Mutation(), org.\-jgap.\-impl.\-Double\-Gene.\-Double\-Gene(), org.\-jgap.\-impl.\-Double\-Gene.\-get\-Persistent\-Representation(), org.\-jgap.\-impl.\-Double\-Gene.\-get\-Upper\-Bound(), org.\-jgap.\-impl.\-Double\-Gene.\-map\-Value\-To\-Within\-Bounds(), org.\-jgap.\-impl.\-Double\-Gene.\-new\-Gene\-Internal(), org.\-jgap.\-impl.\-Double\-Gene.\-set\-To\-Random\-Value(), org.\-jgap.\-impl.\-Double\-Gene.\-set\-Value\-From\-Persistent\-Representation(), and org.\-jgap.\-impl.\-Double\-Gene.\-to\-String().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/impl/\hyperlink{_double_gene_8java}{Double\-Gene.\-java}\end{DoxyCompactItemize}

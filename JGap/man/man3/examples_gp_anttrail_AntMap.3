@@ -1,0 +1,421 @@
+.TH "examples.gp.anttrail.AntMap" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.anttrail.AntMap \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAntMap\fP (final int[][] a_map, int a_maxMoves)"
+.br
+.ti -1c
+.RI "int[][] \fBgetMap\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetFromMap\fP (int a_x, int a_y)"
+.br
+.ti -1c
+.RI "int \fBgetPosX\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetPosY\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPosX\fP (int a_value)"
+.br
+.ti -1c
+.RI "void \fBsetPosY\fP (int a_value)"
+.br
+.ti -1c
+.RI "int[][] \fBgetMovements\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetOrientation\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetOrientation\fP (int a_orientation)"
+.br
+.ti -1c
+.RI "int \fBgetFoodTaken\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetMoveCount\fP ()"
+.br
+.ti -1c
+.RI "void \fBIncrementMoveCounter\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetWidth\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetHeight\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final int \fBERROR\fP = 0"
+.br
+.ti -1c
+.RI "static final int \fBFOOD\fP = -1"
+.br
+.ti -1c
+.RI "static final int \fBEMPTY\fP = 1"
+.br
+.ti -1c
+.RI "static final int \fBTRAIL\fP = 2"
+.br
+.ti -1c
+.RI "static final int \fBATE\fP = 3"
+.br
+.ti -1c
+.RI "static final int \fBO_UP\fP = 0"
+.br
+.ti -1c
+.RI "static final int \fBO_LEFT\fP = 1"
+.br
+.ti -1c
+.RI "static final int \fBO_DOWN\fP = 2"
+.br
+.ti -1c
+.RI "static final int \fBO_RIGHT\fP = 3"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBstoreMove\fP ()"
+.br
+.ti -1c
+.RI "void \fBcheckFoodTaken\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBm_orientation\fP"
+.br
+.ti -1c
+.RI "int \fBm_posx\fP"
+.br
+.ti -1c
+.RI "int \fBm_posy\fP"
+.br
+.ti -1c
+.RI "int \fBm_foodTaken\fP"
+.br
+.ti -1c
+.RI "int \fBm_moves\fP"
+.br
+.ti -1c
+.RI "int \fBm_sizex\fP"
+.br
+.ti -1c
+.RI "int \fBm_sizey\fP"
+.br
+.ti -1c
+.RI "int[][] \fBm_map\fP"
+.br
+.ti -1c
+.RI "int \fBm_moveMod\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_moveModUpper\fP"
+.br
+.ti -1c
+.RI "int[][] \fBm_movementMap\fP"
+.br
+.ti -1c
+.RI "int \fBm_maxMoves\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.6 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Holds the map of the ant trail\&. Important: Clone intentionally not supported here!
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.01 
+.RE
+.PP
+
+.PP
+Definition at line 19 of file AntMap\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.gp\&.anttrail\&.AntMap\&.AntMap (final inta_map[][], inta_maxMoves)\fC [inline]\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+speedup possible by using string? 
+.RE
+.PP
+
+.PP
+Definition at line 92 of file AntMap\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntMap\&.m_map, examples\&.gp\&.anttrail\&.AntMap\&.m_maxMoves, examples\&.gp\&.anttrail\&.AntMap\&.m_movementMap, examples\&.gp\&.anttrail\&.AntMap\&.m_moveMod, examples\&.gp\&.anttrail\&.AntMap\&.m_moveModUpper, examples\&.gp\&.anttrail\&.AntMap\&.m_moves, examples\&.gp\&.anttrail\&.AntMap\&.m_orientation, examples\&.gp\&.anttrail\&.AntMap\&.m_posx, examples\&.gp\&.anttrail\&.AntMap\&.m_posy, examples\&.gp\&.anttrail\&.AntMap\&.m_sizex, examples\&.gp\&.anttrail\&.AntMap\&.m_sizey, examples\&.gp\&.anttrail\&.AntMap\&.O_RIGHT, and examples\&.gp\&.anttrail\&.AntMap\&.storeMove()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void examples\&.gp\&.anttrail\&.AntMap\&.checkFoodTaken ()\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 165 of file AntMap\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntMap\&.ATE, examples\&.gp\&.anttrail\&.AntMap\&.FOOD, examples\&.gp\&.anttrail\&.AntMap\&.m_foodTaken, examples\&.gp\&.anttrail\&.AntMap\&.m_map, examples\&.gp\&.anttrail\&.AntMap\&.m_posx, and examples\&.gp\&.anttrail\&.AntMap\&.m_posy\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntMap\&.setPosX(), and examples\&.gp\&.anttrail\&.AntMap\&.setPosY()\&.
+.SS "int examples\&.gp\&.anttrail\&.AntMap\&.getFoodTaken ()\fC [inline]\fP"
+
+.PP
+Definition at line 184 of file AntMap\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntMap\&.m_foodTaken\&.
+.SS "int examples\&.gp\&.anttrail\&.AntMap\&.getFromMap (inta_x, inta_y)\fC [inline]\fP"
+
+.PP
+Definition at line 114 of file AntMap\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntMap\&.m_map\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntTrailProblem\&.countFood(), and examples\&.gp\&.anttrail\&.TurnToFood\&.execute_void()\&.
+.SS "int examples\&.gp\&.anttrail\&.AntMap\&.getHeight ()\fC [inline]\fP"
+
+.PP
+Definition at line 203 of file AntMap\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntMap\&.m_sizey\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.TurnToFood\&.execute_void(), examples\&.gp\&.anttrail\&.Move\&.execute_void(), examples\&.gp\&.anttrail\&.IfFoodAheadElse\&.execute_void(), examples\&.gp\&.anttrail\&.IfFoodAheadRight\&.execute_void(), and examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.execute_void()\&.
+.SS "int [][] examples\&.gp\&.anttrail\&.AntMap\&.getMap ()\fC [inline]\fP"
+
+.PP
+Definition at line 110 of file AntMap\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntMap\&.m_map\&.
+.SS "int examples\&.gp\&.anttrail\&.AntMap\&.getMoveCount ()\fC [inline]\fP"
+
+.PP
+Definition at line 188 of file AntMap\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntMap\&.m_moves\&.
+.SS "int [][] examples\&.gp\&.anttrail\&.AntMap\&.getMovements ()\fC [inline]\fP"
+
+.PP
+Definition at line 161 of file AntMap\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntMap\&.m_movementMap\&.
+.SS "int examples\&.gp\&.anttrail\&.AntMap\&.getOrientation ()\fC [inline]\fP"
+
+.PP
+Definition at line 176 of file AntMap\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntMap\&.m_orientation\&.
+.SS "int examples\&.gp\&.anttrail\&.AntMap\&.getPosX ()\fC [inline]\fP"
+
+.PP
+Definition at line 122 of file AntMap\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntMap\&.m_posx\&.
+.SS "int examples\&.gp\&.anttrail\&.AntMap\&.getPosY ()\fC [inline]\fP"
+
+.PP
+Definition at line 126 of file AntMap\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntMap\&.m_posy\&.
+.SS "int examples\&.gp\&.anttrail\&.AntMap\&.getWidth ()\fC [inline]\fP"
+
+.PP
+Definition at line 199 of file AntMap\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntMap\&.m_sizex\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.TurnToFood\&.execute_void(), examples\&.gp\&.anttrail\&.Move\&.execute_void(), examples\&.gp\&.anttrail\&.IfFoodAheadElse\&.execute_void(), examples\&.gp\&.anttrail\&.IfFoodAheadRight\&.execute_void(), and examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.execute_void()\&.
+.SS "void examples\&.gp\&.anttrail\&.AntMap\&.IncrementMoveCounter ()\fC [inline]\fP"
+
+.PP
+Definition at line 192 of file AntMap\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntMap\&.m_maxMoves, and examples\&.gp\&.anttrail\&.AntMap\&.m_moves\&.
+.SS "void examples\&.gp\&.anttrail\&.AntMap\&.setOrientation (inta_orientation)\fC [inline]\fP"
+
+.PP
+Definition at line 180 of file AntMap\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntMap\&.m_orientation\&.
+.SS "void examples\&.gp\&.anttrail\&.AntMap\&.setPosX (inta_value)\fC [inline]\fP"
+
+.PP
+Definition at line 130 of file AntMap\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntMap\&.checkFoodTaken(), examples\&.gp\&.anttrail\&.AntMap\&.m_posx, and examples\&.gp\&.anttrail\&.AntMap\&.storeMove()\&.
+.SS "void examples\&.gp\&.anttrail\&.AntMap\&.setPosY (inta_value)\fC [inline]\fP"
+
+.PP
+Definition at line 136 of file AntMap\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntMap\&.checkFoodTaken(), examples\&.gp\&.anttrail\&.AntMap\&.m_posy, and examples\&.gp\&.anttrail\&.AntMap\&.storeMove()\&.
+.SS "void examples\&.gp\&.anttrail\&.AntMap\&.storeMove ()\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 142 of file AntMap\&.java\&.
+.PP
+References examples\&.gp\&.anttrail\&.AntMap\&.m_movementMap, examples\&.gp\&.anttrail\&.AntMap\&.m_moveMod, examples\&.gp\&.anttrail\&.AntMap\&.m_moveModUpper, examples\&.gp\&.anttrail\&.AntMap\&.m_posx, and examples\&.gp\&.anttrail\&.AntMap\&.m_posy\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntMap\&.AntMap(), examples\&.gp\&.anttrail\&.AntMap\&.setPosX(), and examples\&.gp\&.anttrail\&.AntMap\&.setPosY()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final int examples\&.gp\&.anttrail\&.AntMap\&.ATE = 3\fC [static]\fP"
+
+.PP
+Definition at line 32 of file AntMap\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntMap\&.checkFoodTaken()\&.
+.SS "final String examples\&.gp\&.anttrail\&.AntMap\&.CVS_REVISION = '$Revision: 1\&.6 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 21 of file AntMap\&.java\&.
+.SS "final int examples\&.gp\&.anttrail\&.AntMap\&.EMPTY = 1\fC [static]\fP"
+
+.PP
+Definition at line 28 of file AntMap\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.IfFoodAheadElse\&.execute_void(), examples\&.gp\&.anttrail\&.IfFoodAheadRight\&.execute_void(), examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.execute_void(), and examples\&.gp\&.anttrail\&.AntTrailProblem\&.readTrail()\&.
+.SS "final int examples\&.gp\&.anttrail\&.AntMap\&.ERROR = 0\fC [static]\fP"
+
+.PP
+Definition at line 24 of file AntMap\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.IfFoodAheadElse\&.execute_void(), examples\&.gp\&.anttrail\&.IfFoodAheadRight\&.execute_void(), and examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.execute_void()\&.
+.SS "final int examples\&.gp\&.anttrail\&.AntMap\&.FOOD = -1\fC [static]\fP"
+
+.PP
+Definition at line 26 of file AntMap\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntMap\&.checkFoodTaken(), examples\&.gp\&.anttrail\&.AntTrailProblem\&.countFood(), examples\&.gp\&.anttrail\&.TurnToFood\&.execute_void(), examples\&.gp\&.anttrail\&.IfFoodAheadElse\&.execute_void(), examples\&.gp\&.anttrail\&.IfFoodAheadLeft\&.execute_void(), examples\&.gp\&.anttrail\&.IfFoodAheadRight\&.execute_void(), and examples\&.gp\&.anttrail\&.AntTrailProblem\&.readTrail()\&.
+.SS "int examples\&.gp\&.anttrail\&.AntMap\&.m_foodTaken\fC [private]\fP"
+
+.PP
+Definition at line 49 of file AntMap\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntMap\&.checkFoodTaken(), and examples\&.gp\&.anttrail\&.AntMap\&.getFoodTaken()\&.
+.SS "int [][] examples\&.gp\&.anttrail\&.AntMap\&.m_map\fC [private]\fP"
+Holder of the trail's map\&. 
+.PP
+Definition at line 69 of file AntMap\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntMap\&.AntMap(), examples\&.gp\&.anttrail\&.AntMap\&.checkFoodTaken(), examples\&.gp\&.anttrail\&.AntMap\&.getFromMap(), and examples\&.gp\&.anttrail\&.AntMap\&.getMap()\&.
+.SS "int examples\&.gp\&.anttrail\&.AntMap\&.m_maxMoves\fC [private]\fP"
+Maximum number of solutions allowed\&. 
+.PP
+Definition at line 90 of file AntMap\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntMap\&.AntMap(), and examples\&.gp\&.anttrail\&.AntMap\&.IncrementMoveCounter()\&.
+.SS "int [][] examples\&.gp\&.anttrail\&.AntMap\&.m_movementMap\fC [private]\fP"
+Stores the moves done to display them later\&. 
+.PP
+Definition at line 85 of file AntMap\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntMap\&.AntMap(), examples\&.gp\&.anttrail\&.AntMap\&.getMovements(), and examples\&.gp\&.anttrail\&.AntMap\&.storeMove()\&.
+.SS "int examples\&.gp\&.anttrail\&.AntMap\&.m_moveMod\fC [private]\fP"
+For displaying moves as a\&.\&.za\&.\&.z etc\&. (idea from ECJ)\&. Also see m_moveModUpper 
+.PP
+Definition at line 75 of file AntMap\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntMap\&.AntMap(), and examples\&.gp\&.anttrail\&.AntMap\&.storeMove()\&.
+.SS "boolean examples\&.gp\&.anttrail\&.AntMap\&.m_moveModUpper\fC [private]\fP"
+False: use lower case chars with m_moveMod\&. true: Use Upper case chars\&. 
+.PP
+Definition at line 80 of file AntMap\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntMap\&.AntMap(), and examples\&.gp\&.anttrail\&.AntMap\&.storeMove()\&.
+.SS "int examples\&.gp\&.anttrail\&.AntMap\&.m_moves\fC [private]\fP"
+Number of moves proceeded\&. 
+.PP
+Definition at line 54 of file AntMap\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntMap\&.AntMap(), examples\&.gp\&.anttrail\&.AntMap\&.getMoveCount(), and examples\&.gp\&.anttrail\&.AntMap\&.IncrementMoveCounter()\&.
+.SS "int examples\&.gp\&.anttrail\&.AntMap\&.m_orientation\fC [private]\fP"
+
+.PP
+Definition at line 43 of file AntMap\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntMap\&.AntMap(), examples\&.gp\&.anttrail\&.AntMap\&.getOrientation(), and examples\&.gp\&.anttrail\&.AntMap\&.setOrientation()\&.
+.SS "int examples\&.gp\&.anttrail\&.AntMap\&.m_posx\fC [private]\fP"
+
+.PP
+Definition at line 45 of file AntMap\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntMap\&.AntMap(), examples\&.gp\&.anttrail\&.AntMap\&.checkFoodTaken(), examples\&.gp\&.anttrail\&.AntMap\&.getPosX(), examples\&.gp\&.anttrail\&.AntMap\&.setPosX(), and examples\&.gp\&.anttrail\&.AntMap\&.storeMove()\&.
+.SS "int examples\&.gp\&.anttrail\&.AntMap\&.m_posy\fC [private]\fP"
+
+.PP
+Definition at line 47 of file AntMap\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntMap\&.AntMap(), examples\&.gp\&.anttrail\&.AntMap\&.checkFoodTaken(), examples\&.gp\&.anttrail\&.AntMap\&.getPosY(), examples\&.gp\&.anttrail\&.AntMap\&.setPosY(), and examples\&.gp\&.anttrail\&.AntMap\&.storeMove()\&.
+.SS "int examples\&.gp\&.anttrail\&.AntMap\&.m_sizex\fC [private]\fP"
+Width of map\&. 
+.PP
+Definition at line 59 of file AntMap\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntMap\&.AntMap(), and examples\&.gp\&.anttrail\&.AntMap\&.getWidth()\&.
+.SS "int examples\&.gp\&.anttrail\&.AntMap\&.m_sizey\fC [private]\fP"
+Height of map\&. 
+.PP
+Definition at line 64 of file AntMap\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntMap\&.AntMap(), and examples\&.gp\&.anttrail\&.AntMap\&.getHeight()\&.
+.SS "final int examples\&.gp\&.anttrail\&.AntMap\&.O_DOWN = 2\fC [static]\fP"
+
+.PP
+Definition at line 39 of file AntMap\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.Left\&.execute_void(), examples\&.gp\&.anttrail\&.Right\&.execute_void(), and examples\&.gp\&.anttrail\&.TurnToFood\&.execute_void()\&.
+.SS "final int examples\&.gp\&.anttrail\&.AntMap\&.O_LEFT = 1\fC [static]\fP"
+
+.PP
+Definition at line 37 of file AntMap\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.Left\&.execute_void(), examples\&.gp\&.anttrail\&.Right\&.execute_void(), and examples\&.gp\&.anttrail\&.TurnToFood\&.execute_void()\&.
+.SS "final int examples\&.gp\&.anttrail\&.AntMap\&.O_RIGHT = 3\fC [static]\fP"
+
+.PP
+Definition at line 41 of file AntMap\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntMap\&.AntMap(), examples\&.gp\&.anttrail\&.Left\&.execute_void(), examples\&.gp\&.anttrail\&.Right\&.execute_void(), and examples\&.gp\&.anttrail\&.TurnToFood\&.execute_void()\&.
+.SS "final int examples\&.gp\&.anttrail\&.AntMap\&.O_UP = 0\fC [static]\fP"
+
+.PP
+Definition at line 35 of file AntMap\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.Left\&.execute_void(), examples\&.gp\&.anttrail\&.Right\&.execute_void(), and examples\&.gp\&.anttrail\&.TurnToFood\&.execute_void()\&.
+.SS "final int examples\&.gp\&.anttrail\&.AntMap\&.TRAIL = 2\fC [static]\fP"
+
+.PP
+Definition at line 30 of file AntMap\&.java\&.
+.PP
+Referenced by examples\&.gp\&.anttrail\&.AntTrailProblem\&.readTrail()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

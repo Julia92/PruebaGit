@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_fitness_evaluator" kind="interface" prot="public">
+    <compoundname>org::jgap::gp::IGPFitnessEvaluator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_default_g_p_fitness_evaluator" prot="public" virt="non-virtual">org.jgap.gp.impl.DefaultGPFitnessEvaluator</derivedcompoundref>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_delta_g_p_fitness_evaluator" prot="public" virt="non-virtual">org.jgap.gp.impl.DeltaGPFitnessEvaluator</derivedcompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_fitness_evaluator_1ab6283bd647ed6f93f3bec1735120929c" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.gp.IGPFitnessEvaluator.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.6 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/IGPFitnessEvaluator.java" line="24" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/IGPFitnessEvaluator.java" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_fitness_evaluator_1a662e6dc1e9722db5645479562c7aa9f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.gp.IGPFitnessEvaluator.isFitter</definition>
+        <argsstring>(double a_fitness_value1, double a_fitness_value2)</argsstring>
+        <name>isFitter</name>
+        <param>
+          <type>double</type>
+          <declname>a_fitness_value1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a_fitness_value2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compares the first given fitness value with the second and returns true if the first one is fitter than the second one. Otherwise returns false.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_fitness_value1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first fitness value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_fitness_value2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second fitness value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true: first fitness value fitter than second</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 (until 1.1: input types int) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/IGPFitnessEvaluator.java" line="37" column="1"/>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_genotype_1aa465c7cbfb45d77644b3d195782a12c9" compoundref="_g_p_genotype_8java" startline="557" endline="639">org.jgap.gp.impl.GPGenotype.calcFitness</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_program_fitness_comparator_1a6132392fd7160988e6f40907dfe6357d" compoundref="_g_p_program_fitness_comparator_8java" startline="69" endline="81">org.jgap.gp.impl.GPProgramFitnessComparator.compare</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_population_1a6daa11823812dd94682ae3a590dd38f1" compoundref="_g_p_population_8java" startline="657" endline="695">org.jgap.gp.impl.GPPopulation.determineFittestProgram</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_g_p_population_1a4086d0d89287220377311d23251e10ba" compoundref="_g_p_population_8java" startline="706" endline="729">org.jgap.gp.impl.GPPopulation.determineFittestProgramComputed</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_tournament_selector_1a08597c23b02dc77cd993d2d3291b7ba1" compoundref="gp_2impl_2_tournament_selector_8java" startline="75" endline="106">org.jgap.gp.impl.TournamentSelector.select</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_fitness_evaluator_1ac633e9f987a542defc2cae4de4180b83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.gp.IGPFitnessEvaluator.isFitter</definition>
+        <argsstring>(IGPProgram a_prog1, IGPProgram a_prog2)</argsstring>
+        <name>isFitter</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_default_g_p_fitness_evaluator_1af38c72c70f7a22ff7902e58fc201a074">isFitter</reimplementedby>
+        <reimplementedby refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_delta_g_p_fitness_evaluator_1a20f05611ae245947af88da5b3eec176c">isFitter</reimplementedby>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program" kindref="compound">IGPProgram</ref></type>
+          <declname>a_prog1</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_program" kindref="compound">IGPProgram</ref></type>
+          <declname>a_prog2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/IGPFitnessEvaluator.java" line="39" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Interface for a fitness evaluator used in a <ref refid="classorg_1_1jgap_1_1_genotype" kindref="compound">Genotype</ref> to determine how to interpret the fitness value. The fitness value can either be interpreted straight forward as a fitness indicator (the higher the better). Or it could be seen as a defect rate (the lower the better).</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="14402">
+        <label>Serializable</label>
+      </node>
+      <node id="14404">
+        <label>org.jgap.gp.impl.DeltaGPFitnessEvaluator</label>
+        <link refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_delta_g_p_fitness_evaluator"/>
+        <childnode refid="14401" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14403">
+        <label>org.jgap.gp.impl.DefaultGPFitnessEvaluator</label>
+        <link refid="classorg_1_1jgap_1_1gp_1_1impl_1_1_default_g_p_fitness_evaluator"/>
+        <childnode refid="14401" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14401">
+        <label>org.jgap.gp.IGPFitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_fitness_evaluator"/>
+        <childnode refid="14402" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="14406">
+        <label>Serializable</label>
+      </node>
+      <node id="14405">
+        <label>org.jgap.gp.IGPFitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_fitness_evaluator"/>
+        <childnode refid="14406" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/IGPFitnessEvaluator.java" line="22" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/gp/IGPFitnessEvaluator.java" bodystart="21" bodyend="40"/>
+    <listofallmembers>
+      <member refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_fitness_evaluator_1ab6283bd647ed6f93f3bec1735120929c" prot="public" virt="non-virtual"><scope>org::jgap::gp::IGPFitnessEvaluator</scope><name>CVS_REVISION</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_fitness_evaluator_1a662e6dc1e9722db5645479562c7aa9f8" prot="public" virt="non-virtual"><scope>org::jgap::gp::IGPFitnessEvaluator</scope><name>isFitter</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1gp_1_1_i_g_p_fitness_evaluator_1ac633e9f987a542defc2cae4de4180b83" prot="public" virt="non-virtual"><scope>org::jgap::gp::IGPFitnessEvaluator</scope><name>isFitter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

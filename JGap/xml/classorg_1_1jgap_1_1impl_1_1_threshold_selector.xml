@@ -1,0 +1,558 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1impl_1_1_threshold_selector" kind="class" prot="public">
+    <compoundname>org::jgap::impl::ThresholdSelector</compoundname>
+    <basecompoundref refid="classorg_1_1jgap_1_1_natural_selector_ext" prot="public" virt="non-virtual">org.jgap.NaturalSelectorExt</basecompoundref>
+    <innerclass refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1_1_fitness_value_comparator" prot="private">org::jgap::impl::ThresholdSelector::FitnessValueComparator</innerclass>
+    <innerclass refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1_1_threshold_selector_configurable" prot="package">org::jgap::impl::ThresholdSelector::ThresholdSelectorConfigurable</innerclass>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a2eb4c7aad8839a9485f499ee9605f078" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.impl.ThresholdSelector.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.19 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" line="25" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a905254461fabd1a828e42c639bd5cbfb" prot="private" static="no" mutable="no">
+        <type>List</type>
+        <definition>List org.jgap.impl.ThresholdSelector.m_chromosomes</definition>
+        <argsstring></argsstring>
+        <name>m_chromosomes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stores the chromosomes to be taken into account for selection </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" line="30" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a0503b950969a0c79b42963391ca131f5" compoundref="_threshold_selector_8java" startline="97" endline="131">org.jgap.impl.ThresholdSelector.selectChromosomes</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1ad84f60978e742f2e3e1eadb5ed216f73" compoundref="_threshold_selector_8java" startline="71" endline="84">org.jgap.impl.ThresholdSelector.ThresholdSelector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a8c0fdf7f12fa4492098068f1678a4e13" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.ThresholdSelector.m_needsSorting</definition>
+        <argsstring></argsstring>
+        <name>m_needsSorting</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicated whether the list of added chromosomes needs sorting </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" line="35" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1ae91ab1838f89d6e53cad5822947e253d" compoundref="_threshold_selector_8java" startline="155" endline="158">org.jgap.impl.ThresholdSelector.add</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1ad39ffedc3c37177fea2475bf8c70cdfe" compoundref="_threshold_selector_8java" startline="143" endline="146">org.jgap.impl.ThresholdSelector.empty</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a0503b950969a0c79b42963391ca131f5" compoundref="_threshold_selector_8java" startline="97" endline="131">org.jgap.impl.ThresholdSelector.selectChromosomes</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1ad84f60978e742f2e3e1eadb5ed216f73" compoundref="_threshold_selector_8java" startline="71" endline="84">org.jgap.impl.ThresholdSelector.ThresholdSelector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a33a3ccca9c1908e0b42a873eaa89544b" prot="private" static="no" mutable="no">
+        <type><ref refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1_1_fitness_value_comparator" kindref="compound">FitnessValueComparator</ref></type>
+        <definition>FitnessValueComparator org.jgap.impl.ThresholdSelector.m_fitnessValueComparator</definition>
+        <argsstring></argsstring>
+        <name>m_fitnessValueComparator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Comparator that is only concerned about fitness values </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" line="40" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a0503b950969a0c79b42963391ca131f5" compoundref="_threshold_selector_8java" startline="97" endline="131">org.jgap.impl.ThresholdSelector.selectChromosomes</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1ad84f60978e742f2e3e1eadb5ed216f73" compoundref="_threshold_selector_8java" startline="71" endline="84">org.jgap.impl.ThresholdSelector.ThresholdSelector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a389543dd89814de9ac7aae9225f0128f" prot="private" static="no" mutable="no">
+        <type>ThresholdSelectorConfigurable</type>
+        <definition>ThresholdSelectorConfigurable org.jgap.impl.ThresholdSelector.m_config</definition>
+        <argsstring></argsstring>
+        <name>m_config</name>
+        <initializer>= new ThresholdSelectorConfigurable()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" line="42" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" bodystart="43" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a0503b950969a0c79b42963391ca131f5" compoundref="_threshold_selector_8java" startline="97" endline="131">org.jgap.impl.ThresholdSelector.selectChromosomes</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1ae1c215671de0da1dc9757868e17033bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.ThresholdSelector.ThresholdSelector</definition>
+        <argsstring>()</argsstring>
+        <name>ThresholdSelector</name>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor. Uses threshold of 30 percent.</para><para>Attention: The configuration used is the one set with the static method Genotype.setConfiguration.</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" line="55" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1ad84f60978e742f2e3e1eadb5ed216f73" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.ThresholdSelector.ThresholdSelector</definition>
+        <argsstring>(final Configuration a_config, final double a_bestChromosomes_Percentage)</argsstring>
+        <name>ThresholdSelector</name>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_config</declname>
+        </param>
+        <param>
+          <type>final double</type>
+          <declname>a_bestChromosomes_Percentage</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_bestChromosomes_Percentage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indicates the number of best chromosomes from the population to be selected for granted. All other chromosomes will be selected in a random fashion. The value must be in the range from 0.0 to 1.0. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" line="71" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" bodystart="71" bodyend="84"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a905254461fabd1a828e42c639bd5cbfb" compoundref="_threshold_selector_8java" startline="30">org.jgap.impl.ThresholdSelector.m_chromosomes</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a33a3ccca9c1908e0b42a873eaa89544b" compoundref="_threshold_selector_8java" startline="40">org.jgap.impl.ThresholdSelector.m_fitnessValueComparator</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a8c0fdf7f12fa4492098068f1678a4e13" compoundref="_threshold_selector_8java" startline="35">org.jgap.impl.ThresholdSelector.m_needsSorting</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a0503b950969a0c79b42963391ca131f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.ThresholdSelector.selectChromosomes</definition>
+        <argsstring>(final int a_howManyToSelect, Population a_to_pop)</argsstring>
+        <name>selectChromosomes</name>
+        <param>
+          <type>final int</type>
+          <declname>a_howManyToSelect</declname>
+        </param>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_to_pop</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Select a given number of Chromosomes from the pool that will move on to the next generation population. This selection will be guided by the fitness values. The chromosomes with the best fitness value win.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_howManyToSelect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of Chromosomes to select </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_to_pop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the population the Chromosomes will be added to</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000174"><xreftitle>Todo</xreftitle><xrefdescription><para>replace this step by adding newly to create chromosomes </para></xrefdescription></xrefsect></para>        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" line="97" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" bodystart="97" bodyend="131"/>
+        <references refid="classorg_1_1jgap_1_1_natural_selector_1a70fc78d093b52685eae39ffdb30b9ef4" compoundref="_natural_selector_8java" startline="68" endline="70">org.jgap.NaturalSelector.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a905254461fabd1a828e42c639bd5cbfb" compoundref="_threshold_selector_8java" startline="30">org.jgap.impl.ThresholdSelector.m_chromosomes</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a389543dd89814de9ac7aae9225f0128f" compoundref="_threshold_selector_8java" startline="43">org.jgap.impl.ThresholdSelector.m_config</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a33a3ccca9c1908e0b42a873eaa89544b" compoundref="_threshold_selector_8java" startline="40">org.jgap.impl.ThresholdSelector.m_fitnessValueComparator</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a8c0fdf7f12fa4492098068f1678a4e13" compoundref="_threshold_selector_8java" startline="35">org.jgap.impl.ThresholdSelector.m_needsSorting</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a893b221b556725744ffa735e54df2eb0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.ThresholdSelector.returnsUniqueChromosomes</definition>
+        <argsstring>()</argsstring>
+        <name>returnsUniqueChromosomes</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_natural_selector_1a7a6e97dab3548d73a829c9b998df377a">returnsUniqueChromosomes</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>false as we allow to return the same chromosome multiple times</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" line="139" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" bodystart="139" bodyend="141"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_test_1a3937c1e6775e5e1f952393943b7037f2" compoundref="_threshold_selector_test_8java" startline="57" endline="69">org.jgap.impl.ThresholdSelectorTest.testConstruct_2</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1ad39ffedc3c37177fea2475bf8c70cdfe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.ThresholdSelector.empty</definition>
+        <argsstring>()</argsstring>
+        <name>empty</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_i_natural_selector_1a824307b8be94282a3dfd03aaa6531139">empty</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Empty out the working pool of Chromosomes. This will be invoked after each evolution cycle so that the natural selector can be reused for the next one.</para><para><simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" line="143" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" bodystart="143" bodyend="146"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a8c0fdf7f12fa4492098068f1678a4e13" compoundref="_threshold_selector_8java" startline="35">org.jgap.impl.ThresholdSelector.m_needsSorting</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1ae91ab1838f89d6e53cad5822947e253d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.ThresholdSelector.add</definition>
+        <argsstring>(final IChromosome a_chromosomeToAdd)</argsstring>
+        <name>add</name>
+        <reimplements refid="classorg_1_1jgap_1_1_natural_selector_ext_1ab42019c92f31cc0c859202b0ae3b4e96">add</reimplements>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+          <declname>a_chromosomeToAdd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_chromosomeToAdd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" line="155" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" bodystart="155" bodyend="158"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a8c0fdf7f12fa4492098068f1678a4e13" compoundref="_threshold_selector_8java" startline="35">org.jgap.impl.ThresholdSelector.m_needsSorting</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Implementation of a <ref refid="classorg_1_1jgap_1_1_natural_selector" kindref="compound">NaturalSelector</ref> that ensures a certain threshold of the best chromosomes are taken to the next generation.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="18464">
+        <label>org.jgap.NaturalSelector</label>
+        <link refid="classorg_1_1jgap_1_1_natural_selector"/>
+        <childnode refid="18465" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18467" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18466">
+        <label>Serializable</label>
+      </node>
+      <node id="18465">
+        <label>org.jgap.INaturalSelector</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_natural_selector"/>
+        <childnode refid="18466" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18463">
+        <label>org.jgap.NaturalSelectorExt</label>
+        <link refid="classorg_1_1jgap_1_1_natural_selector_ext"/>
+        <childnode refid="18464" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18462">
+        <label>org.jgap.impl.ThresholdSelector</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector"/>
+        <childnode refid="18463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18467">
+        <label>Configurable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="18483">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="18493">
+        <label>Comparator</label>
+      </node>
+      <node id="18470">
+        <label>org.jgap.NaturalSelector</label>
+        <link refid="classorg_1_1jgap_1_1_natural_selector"/>
+        <childnode refid="18471" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18473" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18474" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+      </node>
+      <node id="18491">
+        <label>List&lt; org.jgap.IChromosome &gt;</label>
+      </node>
+      <node id="18488">
+        <label>List</label>
+      </node>
+      <node id="18487">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="18472" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18475" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18484">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="18472" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18472">
+        <label>Serializable</label>
+      </node>
+      <node id="18477">
+        <label>Comparable</label>
+      </node>
+      <node id="18475">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="18476" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18481">
+        <label>org.jgap.FitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_fitness_evaluator"/>
+        <childnode refid="18472" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18471">
+        <label>org.jgap.INaturalSelector</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_natural_selector"/>
+        <childnode refid="18472" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18485">
+        <label>org.jgap.BulkFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_bulk_fitness_function"/>
+        <childnode refid="18472" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18475" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18476">
+        <label>Cloneable</label>
+      </node>
+      <node id="18490">
+        <label>org.jgap.IPersistentRepresentation</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_persistent_representation"/>
+      </node>
+      <node id="18492">
+        <label>org.jgap.impl.ThresholdSelector.FitnessValueComparator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1_1_fitness_value_comparator"/>
+        <childnode refid="18493" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18479">
+        <label>org.jgap.IJGAPFactory</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_j_g_a_p_factory"/>
+        <childnode refid="18472" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18486">
+        <label>org.jgap.Configuration.ConfigurationConfigurable</label>
+        <link refid="classorg_1_1jgap_1_1_configuration_1_1_configuration_configurable"/>
+        <childnode refid="18472" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18489">
+        <label>org.jgap.Population</label>
+        <link refid="classorg_1_1jgap_1_1_population"/>
+        <childnode refid="18472" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18475" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18490" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18491" relation="usage">
+          <edgelabel>m_chromosomes</edgelabel>
+        </childnode>
+        <childnode refid="18474" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="18482" relation="usage">
+          <edgelabel>m_fittestChromosome</edgelabel>
+        </childnode>
+      </node>
+      <node id="18469">
+        <label>org.jgap.NaturalSelectorExt</label>
+        <link refid="classorg_1_1jgap_1_1_natural_selector_ext"/>
+        <childnode refid="18470" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18489" relation="usage">
+          <edgelabel>m_to_pop</edgelabel>
+        </childnode>
+      </node>
+      <node id="18478">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="18475" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18472" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18477" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18482">
+        <label>org.jgap.IChromosome</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome"/>
+        <childnode refid="18477" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18475" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18472" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18483" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18494">
+        <label>org.jgap.impl.ThresholdSelector.ThresholdSelectorConfigurable</label>
+      </node>
+      <node id="18468">
+        <label>org.jgap.impl.ThresholdSelector</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector"/>
+        <childnode refid="18469" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18492" relation="usage">
+          <edgelabel>m_fitnessValueComparator</edgelabel>
+        </childnode>
+        <childnode refid="18494" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="18488" relation="usage">
+          <edgelabel>m_chromosomes</edgelabel>
+        </childnode>
+      </node>
+      <node id="18474">
+        <label>org.jgap.Configuration</label>
+        <link refid="classorg_1_1jgap_1_1_configuration"/>
+        <childnode refid="18473" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18472" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18475" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18477" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18478" relation="usage">
+          <edgelabel>m_breeder</edgelabel>
+        </childnode>
+        <childnode refid="18479" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="18480" relation="usage">
+          <edgelabel>m_chromosomePool</edgelabel>
+        </childnode>
+        <childnode refid="18481" relation="usage">
+          <edgelabel>m_fitnessEvaluator</edgelabel>
+        </childnode>
+        <childnode refid="18482" relation="usage">
+          <edgelabel>m_sampleChromosome</edgelabel>
+        </childnode>
+        <childnode refid="18484" relation="usage">
+          <edgelabel>m_randomGenerator</edgelabel>
+        </childnode>
+        <childnode refid="18485" relation="usage">
+          <edgelabel>m_bulkObjectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="18486" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="18487" relation="usage">
+          <edgelabel>m_objectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="18488" relation="usage">
+          <edgelabel>m_geneticOperators</edgelabel>
+        </childnode>
+      </node>
+      <node id="18480">
+        <label>org.jgap.IChromosomePool</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool"/>
+      </node>
+      <node id="18473">
+        <label>Configurable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" line="23" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/ThresholdSelector.java" bodystart="22" bodyend="196"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1ae91ab1838f89d6e53cad5822947e253d" prot="protected" virt="virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>add</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1a889f35e483ad2b7590a4af17771b7ffa" prot="protected" virt="pure-virtual" ambiguityscope="org::jgap::NaturalSelector."><scope>org::jgap::impl::ThresholdSelector</scope><name>add</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a2eb4c7aad8839a9485f499ee9605f078" prot="private" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1ad39ffedc3c37177fea2475bf8c70cdfe" prot="public" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>empty</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1a8ef9cd66bddceccecd03a9670354a7aa" prot="public" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>equals</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1a70fc78d093b52685eae39ffdb30b9ef4" prot="public" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>getConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1a1fb87b0d55b3fb5a3cd84b159a9b97ff" prot="public" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>getDoubletteChromosomesAllowed</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1a2463922ff619e3fdb7273afa25119cfa" prot="protected" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>init</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a905254461fabd1a828e42c639bd5cbfb" prot="private" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>m_chromosomes</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a389543dd89814de9ac7aae9225f0128f" prot="private" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>m_config</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a33a3ccca9c1908e0b42a873eaa89544b" prot="private" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>m_fitnessValueComparator</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1a0ecc4abad2b9f2235e686113913dec17" prot="protected" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>m_monitor</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1a97b709b2715d76b87b3e15da6a22d5f8" prot="protected" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>m_monitorActive</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a8c0fdf7f12fa4492098068f1678a4e13" prot="private" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>m_needsSorting</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1a3eb9d0041ece6e97945fa2a67cbef9a4" prot="public" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>NaturalSelector</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_1abdf8ec5961eae78b4ab7c5e242a32d32" prot="public" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>NaturalSelector</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1a07fbce4646a51d8dbac653f85aa2dd07" prot="public" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>NaturalSelectorExt</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1ae56adaa72d97b09f44e29832db0913f8" prot="public" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>NaturalSelectorExt</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a893b221b556725744ffa735e54df2eb0" prot="public" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>returnsUniqueChromosomes</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1ab7eac27131f30abd83bd1eec964be8af" prot="public" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>select</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_natural_selector_1a621ca08e2f66866178214093ca4412fd" prot="public" virt="non-virtual" ambiguityscope="org::jgap::NaturalSelector."><scope>org::jgap::impl::ThresholdSelector</scope><name>select</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1ad330fe572e650caf3549d5896beb40a9" prot="protected" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>selectChromosome</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1a0503b950969a0c79b42963391ca131f5" prot="public" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>selectChromosomes</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1a86725d343805cef081f381b51423ce2b" prot="protected" virt="pure-virtual" ambiguityscope="org::jgap::NaturalSelectorExt."><scope>org::jgap::impl::ThresholdSelector</scope><name>selectChromosomes</name></member>
+      <member refid="classorg_1_1jgap_1_1_natural_selector_ext_1aaae7ddb53108703f9de14639f48889e8" prot="public" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>setDoubletteChromosomesAllowed</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1ae1c215671de0da1dc9757868e17033bf" prot="public" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>ThresholdSelector</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_threshold_selector_1ad84f60978e742f2e3e1eadb5ed216f73" prot="public" virt="non-virtual"><scope>org::jgap::impl::ThresholdSelector</scope><name>ThresholdSelector</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

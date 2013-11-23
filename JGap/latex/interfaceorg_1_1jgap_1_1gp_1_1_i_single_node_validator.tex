@@ -1,0 +1,101 @@
+\hypertarget{interfaceorg_1_1jgap_1_1gp_1_1_i_single_node_validator}{\section{org.\-jgap.\-gp.\-I\-Single\-Node\-Validator Interface Reference}
+\label{interfaceorg_1_1jgap_1_1gp_1_1_i_single_node_validator}\index{org.\-jgap.\-gp.\-I\-Single\-Node\-Validator@{org.\-jgap.\-gp.\-I\-Single\-Node\-Validator}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-gp.\-I\-Single\-Node\-Validator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{interfaceorg_1_1jgap_1_1gp_1_1_i_single_node_validator__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+boolean \hyperlink{interfaceorg_1_1jgap_1_1gp_1_1_i_single_node_validator_a8c657d357179ee11ac73015301fa2789}{is\-Allowed} (int a\-\_\-chrom\-Index, Program\-Chromosome a\-\_\-pc, \hyperlink{classorg_1_1jgap_1_1gp_1_1_command_gene}{Command\-Gene}\mbox{[}$\,$\mbox{]} a\-\_\-function\-Set, \hyperlink{classorg_1_1jgap_1_1gp_1_1_command_gene}{Command\-Gene} a\-\_\-function, Class a\-\_\-return\-Type, int a\-\_\-sub\-Return\-Typ, int a\-\_\-index)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{interfaceorg_1_1jgap_1_1gp_1_1_i_single_node_validator_a5c912001980b26394d7ea604fd12ba13}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-1 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Checks whether a single node is valid during G\-P program creation. This helps to avoid useless tries in program creation.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-6 
+\end{DoxySince}
+
+
+Definition at line 21 of file I\-Single\-Node\-Validator.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1gp_1_1_i_single_node_validator_a8c657d357179ee11ac73015301fa2789}{\index{org\-::jgap\-::gp\-::\-I\-Single\-Node\-Validator@{org\-::jgap\-::gp\-::\-I\-Single\-Node\-Validator}!is\-Allowed@{is\-Allowed}}
+\index{is\-Allowed@{is\-Allowed}!org::jgap::gp::ISingleNodeValidator@{org\-::jgap\-::gp\-::\-I\-Single\-Node\-Validator}}
+\subsubsection[{is\-Allowed}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-gp.\-I\-Single\-Node\-Validator.\-is\-Allowed (
+\begin{DoxyParamCaption}
+\item[{int}]{a\-\_\-chrom\-Index, }
+\item[{Program\-Chromosome}]{a\-\_\-pc, }
+\item[{{\bf Command\-Gene}\mbox{[}$\,$\mbox{]}}]{a\-\_\-function\-Set, }
+\item[{{\bf Command\-Gene}}]{a\-\_\-function, }
+\item[{Class}]{a\-\_\-return\-Type, }
+\item[{int}]{a\-\_\-sub\-Return\-Typ, }
+\item[{int}]{a\-\_\-index}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1gp_1_1_i_single_node_validator_a8c657d357179ee11ac73015301fa2789}
+Checks if the given a\-\_\-function is allowed in the current context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-chrom\-Index} & index of the chromosome within the G\-P program \\
+\hline
+{\em a\-\_\-pc} & the instance of the Program\-Chromosome \\
+\hline
+{\em a\-\_\-function\-Set} & the current function set within the program chromosome (given as input parameter for convenience, could also be determined via a\-\_\-pc.\-m\-\_\-genes) \\
+\hline
+{\em a\-\_\-function} & the function that should be added, if allowed \\
+\hline
+{\em a\-\_\-return\-Type} & the class the return type is required to have \\
+\hline
+{\em a\-\_\-sub\-Return\-Typ} & the sub return type the return type is required to have \\
+\hline
+{\em a\-\_\-index} & the index of the up-\/to-\/date last command gene in the program chromosome \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if a\-\_\-function's class exists within a\-\_\-function\-Set
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-6 
+\end{DoxySince}
+
+
+Referenced by org.\-jgap.\-gp.\-impl.\-Program\-Chromosome.\-select\-Node().
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1gp_1_1_i_single_node_validator_a5c912001980b26394d7ea604fd12ba13}{\index{org\-::jgap\-::gp\-::\-I\-Single\-Node\-Validator@{org\-::jgap\-::gp\-::\-I\-Single\-Node\-Validator}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::gp::ISingleNodeValidator@{org\-::jgap\-::gp\-::\-I\-Single\-Node\-Validator}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-gp.\-I\-Single\-Node\-Validator.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-1 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{interfaceorg_1_1jgap_1_1gp_1_1_i_single_node_validator_a5c912001980b26394d7ea604fd12ba13}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 23 of file I\-Single\-Node\-Validator.\-java.
+
+
+
+The documentation for this interface was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/gp/\hyperlink{_i_single_node_validator_8java}{I\-Single\-Node\-Validator.\-java}\end{DoxyCompactItemize}

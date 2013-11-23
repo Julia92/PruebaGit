@@ -1,0 +1,176 @@
+.TH "examples.gp.MathProblem" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.gp.MathProblem \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.GPProblem\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBFormulaFitnessFunction\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMathProblem\fP (\fBGPConfiguration\fP a_conf)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGPGenotype\fP \fBcreate\fP ()  throws InvalidConfigurationException "
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)  throws Exception "
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBVariable\fP \fBvx\fP"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static Float[] \fBx\fP = new Float[20]"
+.br
+.ti -1c
+.RI "static float[] \fBy\fP = new float[20]"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.25 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Example demonstrating Genetic Programming (GP) capabilities of JGAP\&. Also demonstrates usage of ADF's\&.
+.br
+ The problem is to find a formula for a given truth table (X/Y-pairs)\&. 
+.PP
+.PD 0
+.IP "\(bu" 2
+The setup of the GP is done in method main and specifically in method \fBcreate()\fP 
+.IP "\(bu" 2
+The problem solving process is started via gp\&.evolve(800) in the main method, with 800 the maximum number of evolutions to take place\&. 
+.IP "\(bu" 2
+The evaluation of the evolved formula is done in fitness function \fBFormulaFitnessFunction\fP, which is implemented in this class, \fBMathProblem\fP 
+.PP
+
+.br
+ For details, please see the mentioned methods and the fitness function\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 38 of file MathProblem\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.gp\&.MathProblem\&.MathProblem (\fBGPConfiguration\fPa_conf) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 49 of file MathProblem\&.java\&.
+.PP
+Referenced by examples\&.gp\&.MathProblem\&.main()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBGPGenotype\fP examples\&.gp\&.MathProblem\&.create () throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [virtual]\fP"
+This method is used for setting up the commands and terminals that can be used to solve the problem\&. In this example an ADF (an automatically defined function) is used for demonstration purpuses\&. Using an ADF is optional\&. If you want to use one, care about the places marked with 'ADF-relevant:' below\&. If you do not want to use an ADF, please remove the below places (and reduce the outer size of the arrays 'types', 'argTypes' and 'nodeSets' to one)\&. Please notice, that the variables types, argTypes and nodeSets correspond to each other: they have the same number of elements and the element at the i'th index of each variable corresponds to the i'th index of the other variables!
+.PP
+\fBReturns:\fP
+.RS 4
+GPGenotype 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIInvalidConfigurationException\fP 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.GPProblem\fP\&.
+.PP
+Definition at line 70 of file MathProblem\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.FloatClass, org\&.jgap\&.gp\&.GPProblem\&.getGPConfiguration(), examples\&.gp\&.MathProblem\&.vx, examples\&.gp\&.MathProblem\&.x, and examples\&.gp\&.MathProblem\&.y\&.
+.SS "static void examples\&.gp\&.MathProblem\&.main (String[]args) throws Exception\fC [inline]\fP, \fC [static]\fP"
+Starts the example\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP ignored 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 154 of file MathProblem\&.java\&.
+.PP
+References examples\&.gp\&.MathProblem\&.MathProblem()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.gp\&.MathProblem\&.CVS_REVISION = '$Revision: 1\&.25 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 41 of file MathProblem\&.java\&.
+.SS "\fBVariable\fP examples\&.gp\&.MathProblem\&.vx\fC [static]\fP"
+
+.PP
+Definition at line 43 of file MathProblem\&.java\&.
+.PP
+Referenced by examples\&.gp\&.MathProblem\&.create()\&.
+.SS "Float [] examples\&.gp\&.MathProblem\&.x = new Float[20]\fC [static]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 45 of file MathProblem\&.java\&.
+.PP
+Referenced by examples\&.gp\&.MathProblem\&.FormulaFitnessFunction\&.computeRawFitness(), and examples\&.gp\&.MathProblem\&.create()\&.
+.SS "float [] examples\&.gp\&.MathProblem\&.y = new float[20]\fC [static]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 47 of file MathProblem\&.java\&.
+.PP
+Referenced by examples\&.gp\&.MathProblem\&.FormulaFitnessFunction\&.computeRawFitness(), and examples\&.gp\&.MathProblem\&.create()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

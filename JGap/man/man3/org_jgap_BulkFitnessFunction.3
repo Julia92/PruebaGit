@@ -1,0 +1,107 @@
+.TH "org.jgap.BulkFitnessFunction" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.BulkFitnessFunction \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Inherited by \fBorg\&.jgap\&.impl\&.BulkFitnessOffsetRemover\fP, \fBorg\&.jgap\&.impl\&.fitness\&.RosenbrocksBulkNegativeFunction\fP, org\&.jgap\&.TestBulkFitnessFunction, and org\&.jgap\&.TestBulkFitnessFunction2\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "abstract void \fBevaluate\fP (\fBPopulation\fP a_chromosomes)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.9 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Bulk fitness functions are used to determine how optimal a group of solutions are relative to each other\&. Bulk fitness functions can be useful (vs\&. normal fitness functions) when fitness of a particular solution cannot be easily computed in isolation, but instead is dependent upon the fitness of its fellow solutions that are also under consideration\&. This abstract class should be extended and the evaluateChromosomes() method implemented to evaluate each of the Chromosomes given in an array and set their fitness values prior to returning\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 30 of file BulkFitnessFunction\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.BulkFitnessFunction\&.clone ()\fC [inline]\fP"
+Override in your implementation if necessary\&.
+.PP
+\fBReturns:\fP
+.RS 4
+deep clone of the current instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 56 of file BulkFitnessFunction\&.java\&.
+.SS "abstract void org\&.jgap\&.BulkFitnessFunction\&.evaluate (\fBPopulation\fPa_chromosomes)\fC [pure virtual]\fP"
+Calculates and sets the fitness values on each of the given Chromosomes via their setFitnessValue() method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosomes\fP list of Chromosomes for which the fitness values must be computed and set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 (prior versions used other input type) 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.impl\&.fitness\&.RosenbrocksBulkNegativeFunction\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.BulkFitnessFunction\&.CVS_REVISION = '$Revision: 1\&.9 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 33 of file BulkFitnessFunction\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,581 @@
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector}{\section{org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector Class Reference}
+\label{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector}\index{org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector@{org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Weighted\-Roulette\-Sel\-Config}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_ad344e96dc51c77d065e55aebb0b93882}{Weighted\-Roulette\-Selector} ()  throws Invalid\-Configuration\-Exception 
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_af7ea72c2cd321272658318051d800d38}{Weighted\-Roulette\-Selector} (\hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} a\-\_\-config)  throws Invalid\-Configuration\-Exception 
+\item 
+synchronized void \hyperlink{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a8d501289de36fcd27de2352ce8f6404a}{select\-Chromosomes} (int a\-\_\-how\-Many\-To\-Select, \hyperlink{classorg_1_1jgap_1_1_population}{Population} a\-\_\-to\-\_\-pop)
+\item 
+synchronized void \hyperlink{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a22f11caa1cdab23d1e61144bdcd70798}{empty} ()
+\item 
+boolean \hyperlink{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a077b4c36589db7f0a9eee47a0c281017}{returns\-Unique\-Chromosomes} ()
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a48b8de4edf53d90dcfb9cb11d6e6ded2}{set\-Doublette\-Chromosomes\-Allowed} (final boolean a\-\_\-doublettes\-Allowed)
+\item 
+boolean \hyperlink{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_af508701fcc8e9cce41f6f68b674dee65}{get\-Doublette\-Chromosomes\-Allowed} ()
+\item 
+Object \hyperlink{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a6d11f3e1551fbee391ce80e3d643b14e}{clone} ()
+\item 
+boolean \hyperlink{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a0274429675772b2b81fb162b2914a946}{equals} (Object o)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+synchronized void \hyperlink{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a9159512255d11e69543387cd3a155a31}{add} (final \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} a\-\_\-chromosome\-To\-Add)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} \hyperlink{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a7eabf165a70445ab131f7fcc6b4aa3fd}{spin\-Wheel} (final \hyperlink{interfaceorg_1_1jgap_1_1_random_generator}{Random\-Generator} a\-\_\-generator, final double\mbox{[}$\,$\mbox{]} a\-\_\-fitness\-Values, double\mbox{[}$\,$\mbox{]} a\-\_\-counter\-Values, final \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome}\mbox{[}$\,$\mbox{]} a\-\_\-chromosomes)
+\item 
+void \hyperlink{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a8d866890cb4edf93557c733ebe426797}{scale\-Fitness\-Values} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T\-Hash\-Map \hyperlink{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_aab723231155bb89882434f47f092a55a}{m\-\_\-wheel} = new T\-Hash\-Map()
+\item 
+double \hyperlink{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a2e232452c43c7625bea03cb4799500d8}{m\-\_\-total\-Number\-Of\-Used\-Slots}
+\item 
+transient \hyperlink{classorg_1_1jgap_1_1impl_1_1_pool}{Pool} \hyperlink{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_ab3dc747b69b4d746dd6b0e1c8556dcdd}{m\-\_\-counter\-Pool}
+\item 
+Weighted\-Roulette\-Sel\-Config \hyperlink{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_af9b7d0d34b65bf6e6a3841f9956f9cb5}{m\-\_\-config} = new Weighted\-Roulette\-Sel\-Config()
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_ab462052fe73bae7036fa4f8625d5a2fc}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-44 \$\char`\"{}
+\item 
+static final double \hyperlink{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_aa0e65ef8a77636cbea4ece7a3bcacc71}{D\-E\-L\-T\-A} = 0.\-000001d
+\item 
+static final Big\-Decimal \hyperlink{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a7ec7736a02e3288af740a2a129ab6386}{Z\-E\-R\-O\-\_\-\-B\-I\-G\-\_\-\-D\-E\-C\-I\-M\-A\-L} = new Big\-Decimal(0.\-0d)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A basic implementation of \hyperlink{classorg_1_1jgap_1_1_natural_selector}{Natural\-Selector} that models a roulette wheel. When a \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} is added, it gets a number of \char`\"{}slots\char`\"{} on the wheel equal to its fitness value. When the select method is invoked, the wheel is \char`\"{}spun\char`\"{} and the \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} occupying the spot on which it lands is selected. Then the wheel is spun again and again until the requested number of Chromosomes have been selected. Since Chromosomes with higher fitness values get more slots on the wheel, there's a higher statistical probability that they'll be chosen, but it's not guaranteed.
+
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 33 of file Weighted\-Roulette\-Selector.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_ad344e96dc51c77d065e55aebb0b93882}{\index{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}!Weighted\-Roulette\-Selector@{Weighted\-Roulette\-Selector}}
+\index{Weighted\-Roulette\-Selector@{Weighted\-Roulette\-Selector}!org::jgap::impl::WeightedRouletteSelector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}}
+\subsubsection[{Weighted\-Roulette\-Selector}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-Weighted\-Roulette\-Selector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\-Configuration\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_ad344e96dc51c77d065e55aebb0b93882}
+Default constructor.
+
+Attention\-: The configuration used is the one set with the static method Genotype.\-set\-Configuration.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classorg_1_1jgap_1_1_invalid_configuration_exception}{Invalid\-Configuration\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 77 of file Weighted\-Roulette\-Selector.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-clone(), and org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-equals().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_af7ea72c2cd321272658318051d800d38}{\index{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}!Weighted\-Roulette\-Selector@{Weighted\-Roulette\-Selector}}
+\index{Weighted\-Roulette\-Selector@{Weighted\-Roulette\-Selector}!org::jgap::impl::WeightedRouletteSelector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}}
+\subsubsection[{Weighted\-Roulette\-Selector}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-Weighted\-Roulette\-Selector (
+\begin{DoxyParamCaption}
+\item[{{\bf Configuration}}]{a\-\_\-config}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\-Configuration\-Exception}\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_af7ea72c2cd321272658318051d800d38}
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-config} & the configuration to use\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classorg_1_1jgap_1_1_invalid_configuration_exception}{Invalid\-Configuration\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-0 
+\end{DoxySince}
+
+
+Definition at line 90 of file Weighted\-Roulette\-Selector.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-m\-\_\-counter\-Pool.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a9159512255d11e69543387cd3a155a31}{\index{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}!add@{add}}
+\index{add@{add}!org::jgap::impl::WeightedRouletteSelector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}synchronized void org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-add (
+\begin{DoxyParamCaption}
+\item[{final {\bf I\-Chromosome}}]{a\-\_\-chromosome\-To\-Add}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a9159512255d11e69543387cd3a155a31}
+Add a chromosome instance to this selector's working pool of chromosomes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-chromosome\-To\-Add} & the chromosom to add to the pool\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Implements \hyperlink{classorg_1_1jgap_1_1_natural_selector_ext_ab42019c92f31cc0c859202b0ae3b4e96}{org.\-jgap.\-Natural\-Selector\-Ext}.
+
+
+
+Definition at line 106 of file Weighted\-Roulette\-Selector.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Pool.\-acquire\-Pooled\-Object(), org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-m\-\_\-counter\-Pool, and org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-m\-\_\-wheel.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a9159512255d11e69543387cd3a155a31_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a6d11f3e1551fbee391ce80e3d643b14e}{\index{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}!clone@{clone}}
+\index{clone@{clone}!org::jgap::impl::WeightedRouletteSelector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}Object org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a6d11f3e1551fbee391ce80e3d643b14e}
+\begin{DoxyReturn}{Returns}
+deep clone of this instance
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-2 
+\end{DoxySince}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1util_1_1_i_cloneable_aa7e7d62077e6428ad7904932b1b4f7d5}{org.\-jgap.\-util.\-I\-Cloneable}.
+
+
+
+Definition at line 419 of file Weighted\-Roulette\-Selector.\-java.
+
+
+
+References org.\-jgap.\-Natural\-Selector.\-get\-Configuration(), org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-m\-\_\-wheel, and org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-Weighted\-Roulette\-Selector().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a6d11f3e1551fbee391ce80e3d643b14e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a22f11caa1cdab23d1e61144bdcd70798}{\index{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}!empty@{empty}}
+\index{empty@{empty}!org::jgap::impl::WeightedRouletteSelector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}synchronized void org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a22f11caa1cdab23d1e61144bdcd70798}
+Empty out the working pool of Chromosomes.
+
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1_i_natural_selector_a824307b8be94282a3dfd03aaa6531139}{org.\-jgap.\-I\-Natural\-Selector}.
+
+
+
+Definition at line 333 of file Weighted\-Roulette\-Selector.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-m\-\_\-total\-Number\-Of\-Used\-Slots.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a0274429675772b2b81fb162b2914a946}{\index{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}!equals@{equals}}
+\index{equals@{equals}!org::jgap::impl::WeightedRouletteSelector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}}
+\subsubsection[{equals}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-equals (
+\begin{DoxyParamCaption}
+\item[{Object}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a0274429675772b2b81fb162b2914a946}
+
+
+Definition at line 432 of file Weighted\-Roulette\-Selector.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-m\-\_\-config, org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-m\-\_\-counter\-Pool, org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-m\-\_\-total\-Number\-Of\-Used\-Slots, org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-m\-\_\-wheel, and org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-Weighted\-Roulette\-Selector().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a0274429675772b2b81fb162b2914a946_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_af508701fcc8e9cce41f6f68b674dee65}{\index{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}!get\-Doublette\-Chromosomes\-Allowed@{get\-Doublette\-Chromosomes\-Allowed}}
+\index{get\-Doublette\-Chromosomes\-Allowed@{get\-Doublette\-Chromosomes\-Allowed}!org::jgap::impl::WeightedRouletteSelector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}}
+\subsubsection[{get\-Doublette\-Chromosomes\-Allowed}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-get\-Doublette\-Chromosomes\-Allowed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_af508701fcc8e9cce41f6f68b674dee65}
+\begin{DoxyReturn}{Returns}
+T\-R\-U\-E\-: doublette chromosomes allowed to be added by the selector
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 409 of file Weighted\-Roulette\-Selector.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-spin\-Wheel().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a077b4c36589db7f0a9eee47a0c281017}{\index{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}!returns\-Unique\-Chromosomes@{returns\-Unique\-Chromosomes}}
+\index{returns\-Unique\-Chromosomes@{returns\-Unique\-Chromosomes}!org::jgap::impl::WeightedRouletteSelector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}}
+\subsubsection[{returns\-Unique\-Chromosomes}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-returns\-Unique\-Chromosomes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a077b4c36589db7f0a9eee47a0c281017}
+\begin{DoxyReturn}{Returns}
+always false as some \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome}'s could be returnd multiple times
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1_i_natural_selector_a7a6e97dab3548d73a829c9b998df377a}{org.\-jgap.\-I\-Natural\-Selector}.
+
+
+
+Definition at line 385 of file Weighted\-Roulette\-Selector.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a8d866890cb4edf93557c733ebe426797}{\index{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}!scale\-Fitness\-Values@{scale\-Fitness\-Values}}
+\index{scale\-Fitness\-Values@{scale\-Fitness\-Values}!org::jgap::impl::WeightedRouletteSelector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}}
+\subsubsection[{scale\-Fitness\-Values}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-scale\-Fitness\-Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a8d866890cb4edf93557c733ebe426797}
+
+
+Definition at line 344 of file Weighted\-Roulette\-Selector.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-Z\-E\-R\-O\-\_\-\-B\-I\-G\-\_\-\-D\-E\-C\-I\-M\-A\-L.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-select\-Chromosomes().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a8d501289de36fcd27de2352ce8f6404a}{\index{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}!select\-Chromosomes@{select\-Chromosomes}}
+\index{select\-Chromosomes@{select\-Chromosomes}!org::jgap::impl::WeightedRouletteSelector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}}
+\subsubsection[{select\-Chromosomes}]{\setlength{\rightskip}{0pt plus 5cm}synchronized void org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-select\-Chromosomes (
+\begin{DoxyParamCaption}
+\item[{int}]{a\-\_\-how\-Many\-To\-Select, }
+\item[{{\bf Population}}]{a\-\_\-to\-\_\-pop}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a8d501289de36fcd27de2352ce8f6404a}
+Select a given number of Chromosomes from the pool that will move on to the next generation population. This selection should be guided by the fitness values, but fitness should be treated as a statistical probability of survival, not as the sole determining factor. In other words, Chromosomes with higher fitness values should be more likely to be selected than those with lower fitness values, but it should not be guaranteed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-how\-Many\-To\-Select} & the number of Chromosomes to select \\
+\hline
+{\em a\-\_\-to\-\_\-pop} & the population the Chromosomes will be added to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 158 of file Weighted\-Roulette\-Selector.\-java.
+
+
+
+References org.\-jgap.\-Population.\-contains(), org.\-jgap.\-Natural\-Selector.\-get\-Configuration(), org.\-jgap.\-Natural\-Selector.\-m\-\_\-monitor\-Active, org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-m\-\_\-total\-Number\-Of\-Used\-Slots, org.\-jgap.\-I\-Handler.\-perform(), org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-scale\-Fitness\-Values(), and org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-spin\-Wheel().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a8d501289de36fcd27de2352ce8f6404a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a48b8de4edf53d90dcfb9cb11d6e6ded2}{\index{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}!set\-Doublette\-Chromosomes\-Allowed@{set\-Doublette\-Chromosomes\-Allowed}}
+\index{set\-Doublette\-Chromosomes\-Allowed@{set\-Doublette\-Chromosomes\-Allowed}!org::jgap::impl::WeightedRouletteSelector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}}
+\subsubsection[{set\-Doublette\-Chromosomes\-Allowed}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-set\-Doublette\-Chromosomes\-Allowed (
+\begin{DoxyParamCaption}
+\item[{final boolean}]{a\-\_\-doublettes\-Allowed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a48b8de4edf53d90dcfb9cb11d6e6ded2}
+Not supported by this selector! Please do not use it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-doublettes\-Allowed} & do not use\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 397 of file Weighted\-Roulette\-Selector.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a7eabf165a70445ab131f7fcc6b4aa3fd}{\index{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}!spin\-Wheel@{spin\-Wheel}}
+\index{spin\-Wheel@{spin\-Wheel}!org::jgap::impl::WeightedRouletteSelector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}}
+\subsubsection[{spin\-Wheel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\-Chromosome} org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-spin\-Wheel (
+\begin{DoxyParamCaption}
+\item[{final {\bf Random\-Generator}}]{a\-\_\-generator, }
+\item[{final double\mbox{[}$\,$\mbox{]}}]{a\-\_\-fitness\-Values, }
+\item[{double\mbox{[}$\,$\mbox{]}}]{a\-\_\-counter\-Values, }
+\item[{final {\bf I\-Chromosome}\mbox{[}$\,$\mbox{]}}]{a\-\_\-chromosomes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a7eabf165a70445ab131f7fcc6b4aa3fd}
+This method \char`\"{}spins\char`\"{} the wheel and returns the \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} that is \char`\"{}landed upon.\char`\"{} Each time a chromosome is selected, one instance of it is removed from the wheel so that it cannot be selected again.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-generator} & the random number generator to be used during the spinning process \\
+\hline
+{\em a\-\_\-fitness\-Values} & an array of fitness values of the respective Chromosomes \\
+\hline
+{\em a\-\_\-counter\-Values} & an array of total counter values of the respective Chromosomes \\
+\hline
+{\em a\-\_\-chromosomes} & the respective \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} instances from which selection is to occur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+selected \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} from the roulette wheel
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 252 of file Weighted\-Roulette\-Selector.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-D\-E\-L\-T\-A, org.\-jgap.\-Natural\-Selector.\-get\-Configuration(), org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-get\-Doublette\-Chromosomes\-Allowed(), and org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-m\-\_\-total\-Number\-Of\-Used\-Slots.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-select\-Chromosomes().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a7eabf165a70445ab131f7fcc6b4aa3fd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_ab462052fe73bae7036fa4f8625d5a2fc}{\index{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::impl::WeightedRouletteSelector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-44 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_ab462052fe73bae7036fa4f8625d5a2fc}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 36 of file Weighted\-Roulette\-Selector.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_aa0e65ef8a77636cbea4ece7a3bcacc71}{\index{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}!D\-E\-L\-T\-A@{D\-E\-L\-T\-A}}
+\index{D\-E\-L\-T\-A@{D\-E\-L\-T\-A}!org::jgap::impl::WeightedRouletteSelector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}}
+\subsubsection[{D\-E\-L\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}final double org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-D\-E\-L\-T\-A = 0.\-000001d\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_aa0e65ef8a77636cbea4ece7a3bcacc71}
+
+
+Definition at line 39 of file Weighted\-Roulette\-Selector.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-spin\-Wheel().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_af9b7d0d34b65bf6e6a3841f9956f9cb5}{\index{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}!m\-\_\-config@{m\-\_\-config}}
+\index{m\-\_\-config@{m\-\_\-config}!org::jgap::impl::WeightedRouletteSelector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}}
+\subsubsection[{m\-\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}Weighted\-Roulette\-Sel\-Config org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-m\-\_\-config = new Weighted\-Roulette\-Sel\-Config()\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_af9b7d0d34b65bf6e6a3841f9956f9cb5}
+
+
+Definition at line 65 of file Weighted\-Roulette\-Selector.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-equals().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_ab3dc747b69b4d746dd6b0e1c8556dcdd}{\index{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}!m\-\_\-counter\-Pool@{m\-\_\-counter\-Pool}}
+\index{m\-\_\-counter\-Pool@{m\-\_\-counter\-Pool}!org::jgap::impl::WeightedRouletteSelector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}}
+\subsubsection[{m\-\_\-counter\-Pool}]{\setlength{\rightskip}{0pt plus 5cm}transient {\bf Pool} org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-m\-\_\-counter\-Pool\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_ab3dc747b69b4d746dd6b0e1c8556dcdd}
+An internal pool in which discarded Slot\-Counter instances can be stored so that they can be reused over and over again, thus saving memory and the overhead of constructing new ones each time. 
+
+Definition at line 62 of file Weighted\-Roulette\-Selector.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-add(), org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-equals(), and org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-Weighted\-Roulette\-Selector().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a2e232452c43c7625bea03cb4799500d8}{\index{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}!m\-\_\-total\-Number\-Of\-Used\-Slots@{m\-\_\-total\-Number\-Of\-Used\-Slots}}
+\index{m\-\_\-total\-Number\-Of\-Used\-Slots@{m\-\_\-total\-Number\-Of\-Used\-Slots}!org::jgap::impl::WeightedRouletteSelector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}}
+\subsubsection[{m\-\_\-total\-Number\-Of\-Used\-Slots}]{\setlength{\rightskip}{0pt plus 5cm}double org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-m\-\_\-total\-Number\-Of\-Used\-Slots\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a2e232452c43c7625bea03cb4799500d8}
+Keeps track of the total number of slots that are in use on the roulette wheel. This is equal to the combined fitness values of all \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} instances that have been added to this wheel. 
+
+Definition at line 55 of file Weighted\-Roulette\-Selector.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-empty(), org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-equals(), org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-select\-Chromosomes(), and org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-spin\-Wheel().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_aab723231155bb89882434f47f092a55a}{\index{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}!m\-\_\-wheel@{m\-\_\-wheel}}
+\index{m\-\_\-wheel@{m\-\_\-wheel}!org::jgap::impl::WeightedRouletteSelector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}}
+\subsubsection[{m\-\_\-wheel}]{\setlength{\rightskip}{0pt plus 5cm}T\-Hash\-Map org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-m\-\_\-wheel = new T\-Hash\-Map()\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_aab723231155bb89882434f47f092a55a}
+Represents the \char`\"{}roulette wheel.\char`\"{} Each key in the Map is a \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} and each value is an instance of the Slot\-Counter inner class, which keeps track of how many slots on the wheel each \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} is occupying. 
+
+Definition at line 48 of file Weighted\-Roulette\-Selector.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-add(), org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-clone(), and org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-equals().
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a7ec7736a02e3288af740a2a129ab6386}{\index{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}!Z\-E\-R\-O\-\_\-\-B\-I\-G\-\_\-\-D\-E\-C\-I\-M\-A\-L@{Z\-E\-R\-O\-\_\-\-B\-I\-G\-\_\-\-D\-E\-C\-I\-M\-A\-L}}
+\index{Z\-E\-R\-O\-\_\-\-B\-I\-G\-\_\-\-D\-E\-C\-I\-M\-A\-L@{Z\-E\-R\-O\-\_\-\-B\-I\-G\-\_\-\-D\-E\-C\-I\-M\-A\-L}!org::jgap::impl::WeightedRouletteSelector@{org\-::jgap\-::impl\-::\-Weighted\-Roulette\-Selector}}
+\subsubsection[{Z\-E\-R\-O\-\_\-\-B\-I\-G\-\_\-\-D\-E\-C\-I\-M\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}final Big\-Decimal org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-Z\-E\-R\-O\-\_\-\-B\-I\-G\-\_\-\-D\-E\-C\-I\-M\-A\-L = new Big\-Decimal(0.\-0d)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_weighted_roulette_selector_a7ec7736a02e3288af740a2a129ab6386}
+
+
+Definition at line 41 of file Weighted\-Roulette\-Selector.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Weighted\-Roulette\-Selector.\-scale\-Fitness\-Values().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/impl/\hyperlink{_weighted_roulette_selector_8java}{Weighted\-Roulette\-Selector.\-java}\end{DoxyCompactItemize}

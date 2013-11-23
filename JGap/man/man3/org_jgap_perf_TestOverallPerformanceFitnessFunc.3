@@ -1,0 +1,173 @@
+.TH "org.jgap.perf.TestOverallPerformanceFitnessFunc" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.perf.TestOverallPerformanceFitnessFunc \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.FitnessFunction\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTestOverallPerformanceFitnessFunc\fP (int a_targetAmount)"
+.br
+.ti -1c
+.RI "double \fBevaluate\fP (\fBIChromosome\fP a_subject)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fBamountOfChange\fP (\fBIChromosome\fP a_potentialSolution)"
+.br
+.ti -1c
+.RI "static int \fBgetNumberOfCoinsAtGene\fP (\fBIChromosome\fP a_potentialSolution, int a_position)"
+.br
+.ti -1c
+.RI "static int \fBgetTotalNumberOfCoins\fP (\fBIChromosome\fP a_potentialsolution)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "final int \fBm_targetAmount\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.4 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Sample fitness function for the MakeChange example\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file TestOverallPerformanceFitnessFunc\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.perf\&.TestOverallPerformanceFitnessFunc\&.TestOverallPerformanceFitnessFunc (inta_targetAmount)\fC [inline]\fP"
+
+.PP
+Definition at line 28 of file TestOverallPerformanceFitnessFunc\&.java\&.
+.PP
+References org\&.jgap\&.perf\&.TestOverallPerformanceFitnessFunc\&.m_targetAmount\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static int org\&.jgap\&.perf\&.TestOverallPerformanceFitnessFunc\&.amountOfChange (\fBIChromosome\fPa_potentialSolution)\fC [inline]\fP, \fC [static]\fP"
+Calculates the total amount of change (in cents) represented by the given potential solution and returns that amount\&. Here we use 'fantasy' coins just to have more genes and bloat the time consumed for test performance test
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_potentialSolution\fP the pontential solution to evaluate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the total amount of change (in cents) represented by the given solution 
+.RE
+.PP
+
+.PP
+Definition at line 91 of file TestOverallPerformanceFitnessFunc\&.java\&.
+.PP
+References org\&.jgap\&.perf\&.TestOverallPerformanceFitnessFunc\&.getNumberOfCoinsAtGene()\&.
+.PP
+Referenced by org\&.jgap\&.perf\&.TestOverallPerformanceFitnessFunc\&.evaluate()\&.
+.SS "double org\&.jgap\&.perf\&.TestOverallPerformanceFitnessFunc\&.evaluate (\fBIChromosome\fPa_subject)\fC [inline]\fP, \fC [virtual]\fP"
+Determine the fitness of the given \fBChromosome\fP instance\&. The higher the return value, the more fit the instance\&. This method should always return the same fitness value for two equivalent \fBChromosome\fP instances\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_subject\fP the \fBChromosome\fP instance to evaluate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a positive integer reflecting the fitness rating of the given \fBChromosome\fP 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.FitnessFunction\fP\&.
+.PP
+Definition at line 45 of file TestOverallPerformanceFitnessFunc\&.java\&.
+.PP
+References org\&.jgap\&.perf\&.TestOverallPerformanceFitnessFunc\&.amountOfChange(), org\&.jgap\&.perf\&.TestOverallPerformanceFitnessFunc\&.getTotalNumberOfCoins(), and org\&.jgap\&.perf\&.TestOverallPerformanceFitnessFunc\&.m_targetAmount\&.
+.SS "static int org\&.jgap\&.perf\&.TestOverallPerformanceFitnessFunc\&.getNumberOfCoinsAtGene (\fBIChromosome\fPa_potentialSolution, inta_position)\fC [inline]\fP, \fC [static]\fP"
+Retrieves the number of coins represented by the given potential solution at the given gene position\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_potentialSolution\fP the potential solution to evaluate 
+.br
+\fIa_position\fP the gene position to evaluate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of coins represented by the potential solution at the given gene position 
+.RE
+.PP
+
+.PP
+Definition at line 116 of file TestOverallPerformanceFitnessFunc\&.java\&.
+.PP
+References org\&.jgap\&.IChromosome\&.getGene()\&.
+.PP
+Referenced by org\&.jgap\&.perf\&.TestOverallPerformanceFitnessFunc\&.amountOfChange(), and org\&.jgap\&.perf\&.TestOverallPerformanceFitnessFunc\&.getTotalNumberOfCoins()\&.
+.SS "static int org\&.jgap\&.perf\&.TestOverallPerformanceFitnessFunc\&.getTotalNumberOfCoins (\fBIChromosome\fPa_potentialsolution)\fC [inline]\fP, \fC [static]\fP"
+Returns the total number of coins represented by all of the genes in the given potential solution\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_potentialsolution\fP the potential solution to evaluate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the total number of coins represented by the given \fBChromosome\fP 
+.RE
+.PP
+
+.PP
+Definition at line 130 of file TestOverallPerformanceFitnessFunc\&.java\&.
+.PP
+References org\&.jgap\&.perf\&.TestOverallPerformanceFitnessFunc\&.getNumberOfCoinsAtGene()\&.
+.PP
+Referenced by org\&.jgap\&.perf\&.TestOverallPerformanceFitnessFunc\&.evaluate()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.perf\&.TestOverallPerformanceFitnessFunc\&.CVS_REVISION = '$Revision: 1\&.4 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 24 of file TestOverallPerformanceFitnessFunc\&.java\&.
+.SS "final int org\&.jgap\&.perf\&.TestOverallPerformanceFitnessFunc\&.m_targetAmount\fC [private]\fP"
+
+.PP
+Definition at line 26 of file TestOverallPerformanceFitnessFunc\&.java\&.
+.PP
+Referenced by org\&.jgap\&.perf\&.TestOverallPerformanceFitnessFunc\&.evaluate(), and org\&.jgap\&.perf\&.TestOverallPerformanceFitnessFunc\&.TestOverallPerformanceFitnessFunc()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

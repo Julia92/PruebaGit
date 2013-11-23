@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="_dummy_grid_client_mediator_8java" kind="file">
+    <compoundname>DummyGridClientMediator.java</compoundname>
+    <innerclass refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator" prot="public">org::jgap::distr::grid::DummyGridClientMediator</innerclass>
+    <innernamespace refid="namespaceorg_1_1jgap_1_1distr_1_1grid">org::jgap::distr::grid</innernamespace>
+    <innernamespace refid="namespaceorg_1_1homedns_1_1dade_1_1jcgrid_1_1message_1_1">org::homedns::dade::jcgrid::message::</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>JGAP.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>JGAP<sp/>offers<sp/>a<sp/>dual<sp/>license<sp/>model<sp/>containing<sp/>the<sp/>LGPL<sp/>as<sp/>well<sp/>as<sp/>the<sp/>MPL.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>For<sp/>licensing<sp/>information<sp/>please<sp/>see<sp/>the<sp/>file<sp/>license.txt<sp/>included<sp/>with<sp/>JGAP</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>or<sp/>have<sp/>a<sp/>look<sp/>at<sp/>the<sp/>top<sp/>of<sp/>class<sp/>org.jgap.Chromosome<sp/>which<sp/>representatively</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>includes<sp/>the<sp/>JGAP<sp/>license<sp/>policy<sp/>applicable<sp/>for<sp/>any<sp/>file<sp/>delivered<sp/>with<sp/>JGAP.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">org.jgap.distr.grid;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.*;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.apache.log4j.*;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.homedns.dade.jcgrid.client.*;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.homedns.dade.jcgrid.cmd.*;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.homedns.dade.jcgrid.message.*;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator" kindref="compound">DummyGridClientMediator</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">implements</highlight><highlight class="normal"><sp/><ref refid="interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_grid_client_mediator" kindref="compound">IGridClientMediator</ref><sp/>{</highlight></codeline>
+<codeline lineno="27" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a894855d63dd785d9b523712f9eee9770" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a894855d63dd785d9b523712f9eee9770" kindref="member">CVS_REVISION</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$Revision:<sp/>1.6<sp/>$&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a5b46671cbe448716a12f21528a01cd9e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">transient</highlight><highlight class="normal"><sp/>Logger<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a5b46671cbe448716a12f21528a01cd9e" kindref="member">log</ref><sp/>=<sp/>Logger.getLogger(getClass());</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a294d251a49d05182f184199b1b5e28bd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/>GridNodeClientConfig<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a294d251a49d05182f184199b1b5e28bd" kindref="member">m_gridconfig</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1ae5b4466541aa576166f1004920f5b29f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>GridClient<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1ae5b4466541aa576166f1004920f5b29f" kindref="member">m_gc</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a201b886400a332631434c618dd33633a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a201b886400a332631434c618dd33633a" kindref="member">DummyGridClientMediator</ref>(GridNodeClientConfig<sp/>a_gridconfig)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setup<sp/>logging.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>MainCmd.setUpLog4J(</highlight><highlight class="stringliteral">&quot;DummyClientMediator&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a294d251a49d05182f184199b1b5e28bd" kindref="member">m_gridconfig</ref><sp/>=<sp/>a_gridconfig;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1ae5b4466541aa576166f1004920f5b29f" kindref="member">m_gc</ref><sp/>=<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a080ac41bf4278214c07055ebcc9060f8" kindref="member">startClient</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>log.info(</highlight><highlight class="stringliteral">&quot;LAN<sp/>mode<sp/>selected&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a080ac41bf4278214c07055ebcc9060f8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/>GridClient<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a080ac41bf4278214c07055ebcc9060f8" kindref="member">startClient</ref>()</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>GridClient<sp/>gc<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>GridClient();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>gc.setNodeConfig(<ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a294d251a49d05182f184199b1b5e28bd" kindref="member">m_gridconfig</ref>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>gc.start();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>gc;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1add00b971fe4812626f1e952d8da2648f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1add00b971fe4812626f1e952d8da2648f" kindref="member">stop</ref>()</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>m_gc.stop();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a4f94da08e9439931b276891b3a6150ce" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a4f94da08e9439931b276891b3a6150ce" kindref="member">send</ref>(GridMessage<sp/>a_msg,<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_message_context" kindref="compound">MessageContext</ref><sp/>a_context,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Map&lt;String,<sp/>String&gt;<sp/>a_headerData)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>m_gc.send(a_msg);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a7212ea568d78375a552bc599e62e4648" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>GridMessage<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a7212ea568d78375a552bc599e62e4648" kindref="member">getGridMessage</ref>(<ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_message_context" kindref="compound">MessageContext</ref><sp/>a_context,<sp/>String<sp/>a_datetime,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_timeoutSeconds,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_waitTimeSeconds,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>a_removeRequest)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>asynchroneous</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>m_gc.getGridMessageChannel();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>GridMessageWorkResult<sp/>gmwr<sp/>=<sp/>(GridMessageWorkResult)<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1ae5b4466541aa576166f1004920f5b29f" kindref="member">m_gc</ref>.recv(</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a_timeoutSeconds<sp/>*<sp/>1000);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>gmwr;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a950d64600cc838a85c06f497b0075ce0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>List<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a950d64600cc838a85c06f497b0075ce0" kindref="member">listRequests</ref>(<ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_message_context" kindref="compound">MessageContext</ref><sp/>a_context,<sp/>String<sp/>a_datetime,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>a_pattern)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Not<sp/>implemented<sp/>yet.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>null;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1afade62453ebe98f4c8361c40777cc987" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>List<sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1afade62453ebe98f4c8361c40777cc987" kindref="member">listResults</ref>(<ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_message_context" kindref="compound">MessageContext</ref><sp/>a_context,<sp/>String<sp/>a_datetime,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>a_pattern)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Not<sp/>implemented<sp/>yet.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>null;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a6f464e99178fe73142944a3a134389a0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a6f464e99178fe73142944a3a134389a0" kindref="member">connect</ref>()</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Not<sp/>implemented<sp/>yet.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a1f30008ccd49b0ad0762d450796b9f43" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a1f30008ccd49b0ad0762d450796b9f43" kindref="member">disconnect</ref>()</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Not<sp/>implemented<sp/>yet.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a0c5ffc3df90242b0f79261e6a9fed827" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1a0c5ffc3df90242b0f79261e6a9fed827" kindref="member">removeMessage</ref>(Object<sp/>a_entry)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Not<sp/>implemented<sp/>yet.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1ad75ecd94f86875a82de94a4ccf83d6ce" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classorg_1_1jgap_1_1distr_1_1grid_1_1_dummy_grid_client_mediator_1ad75ecd94f86875a82de94a4ccf83d6ce" kindref="member">backupResult</ref>(Object<sp/>a_result,<sp/>String<sp/>a_subDir,<sp/>String<sp/>a_title)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Not<sp/>implemented<sp/>yet.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/distr/grid/DummyGridClientMediator.java"/>
+  </compounddef>
+</doxygen>

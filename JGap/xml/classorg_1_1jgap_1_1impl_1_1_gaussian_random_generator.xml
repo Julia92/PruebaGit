@@ -1,0 +1,405 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator" kind="class" prot="public">
+    <compoundname>org::jgap::impl::GaussianRandomGenerator</compoundname>
+    <basecompoundref refid="interfaceorg_1_1jgap_1_1_random_generator" prot="public" virt="non-virtual">org.jgap.RandomGenerator</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a076a5c47f1bbaea7bf0cdb3e0d97972a" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.impl.GaussianRandomGenerator.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.21 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" line="25" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1adda7e9fd5a5b01d4a8ea3706ec5dc6f8" prot="private" static="yes" mutable="no">
+        <type>final double</type>
+        <definition>final double org.jgap.impl.GaussianRandomGenerator.DELTA</definition>
+        <argsstring></argsstring>
+        <name>DELTA</name>
+        <initializer>= 0.0000001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" line="28" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a03d196e9eff9b867e34edc8d1ea41bf3" compoundref="_gaussian_random_generator_8java" startline="59" endline="65">org.jgap.impl.GaussianRandomGenerator.setGaussianStdDeviation</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a37f7ceea3a0a9230371f2de2ee947ed0" prot="private" static="no" mutable="no">
+        <type>Random</type>
+        <definition>Random org.jgap.impl.GaussianRandomGenerator.m_rn</definition>
+        <argsstring></argsstring>
+        <name>m_rn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" line="30" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1af7d50d80a6da0555d358ffe29bd7e567" compoundref="_gaussian_random_generator_8java" startline="55" endline="57">org.jgap.impl.GaussianRandomGenerator.init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a6682c3135c973d1dae2d061ebb90a5cc" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double org.jgap.impl.GaussianRandomGenerator.m_standardDeviation</definition>
+        <argsstring></argsstring>
+        <name>m_standardDeviation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Standard deviation of the gaussian deviation </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" line="35" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a1635642b24a965dc72f82240b575ef6a" compoundref="_gaussian_random_generator_8java" startline="67" endline="69">org.jgap.impl.GaussianRandomGenerator.getGaussianStdDeviation</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a03d196e9eff9b867e34edc8d1ea41bf3" compoundref="_gaussian_random_generator_8java" startline="59" endline="65">org.jgap.impl.GaussianRandomGenerator.setGaussianStdDeviation</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a2871c5bd1227c8a34197955d9f752afd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.GaussianRandomGenerator.GaussianRandomGenerator</definition>
+        <argsstring>()</argsstring>
+        <name>GaussianRandomGenerator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" line="37" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a95775aac692072a487de922f6c1a516f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.GaussianRandomGenerator.GaussianRandomGenerator</definition>
+        <argsstring>(final double a_standardDeviation)</argsstring>
+        <name>GaussianRandomGenerator</name>
+        <param>
+          <type>final double</type>
+          <declname>a_standardDeviation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor speicifying the (obliagtory) standard deviation.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_standardDeviation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the standard deviation to use </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" line="46" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" bodystart="46" bodyend="50"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1af7d50d80a6da0555d358ffe29bd7e567" compoundref="_gaussian_random_generator_8java" startline="55" endline="57">org.jgap.impl.GaussianRandomGenerator.init</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a03d196e9eff9b867e34edc8d1ea41bf3" compoundref="_gaussian_random_generator_8java" startline="59" endline="65">org.jgap.impl.GaussianRandomGenerator.setGaussianStdDeviation</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a03d196e9eff9b867e34edc8d1ea41bf3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.GaussianRandomGenerator.setGaussianStdDeviation</definition>
+        <argsstring>(final double a_standardDeviation)</argsstring>
+        <name>setGaussianStdDeviation</name>
+        <param>
+          <type>final double</type>
+          <declname>a_standardDeviation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" line="59" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" bodystart="59" bodyend="65"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1adda7e9fd5a5b01d4a8ea3706ec5dc6f8" compoundref="_gaussian_random_generator_8java" startline="28">org.jgap.impl.GaussianRandomGenerator.DELTA</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a6682c3135c973d1dae2d061ebb90a5cc" compoundref="_gaussian_random_generator_8java" startline="35">org.jgap.impl.GaussianRandomGenerator.m_standardDeviation</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a95775aac692072a487de922f6c1a516f" compoundref="_gaussian_random_generator_8java" startline="46" endline="50">org.jgap.impl.GaussianRandomGenerator.GaussianRandomGenerator</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a1635642b24a965dc72f82240b575ef6a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double org.jgap.impl.GaussianRandomGenerator.getGaussianStdDeviation</definition>
+        <argsstring>()</argsstring>
+        <name>getGaussianStdDeviation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" line="67" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" bodystart="67" bodyend="69"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a6682c3135c973d1dae2d061ebb90a5cc" compoundref="_gaussian_random_generator_8java" startline="35">org.jgap.impl.GaussianRandomGenerator.m_standardDeviation</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_test_1ace1d14a1c8b90112d955db90b5e22eb8" compoundref="_gaussian_random_generator_test_8java" startline="82" endline="91">org.jgap.impl.GaussianRandomGeneratorTest.testGetGaussianStdDeviation_0</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a2e174018c76eddb6c09c05eceeb83e11" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.impl.GaussianRandomGenerator.nextInt</definition>
+        <argsstring>()</argsstring>
+        <name>nextInt</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_random_generator_1a993f3b23cfbc3f8001405544580eda2e">nextInt</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>positive integer value </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" line="74" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" bodystart="74" bodyend="78"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1ab3f21b622c8c12df010b95dc5d84eafb" compoundref="_gaussian_random_generator_8java" startline="114" endline="118">org.jgap.impl.GaussianRandomGenerator.nextGaussian</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1ab825ac259fdacdd0cebecfaa6cea44bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.impl.GaussianRandomGenerator.nextInt</definition>
+        <argsstring>(final int a_ceiling)</argsstring>
+        <name>nextInt</name>
+        <param>
+          <type>final int</type>
+          <declname>a_ceiling</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_ceiling</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the upper boundary excluded </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>positive integer value between 0 and (ceiling - 1) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" line="84" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" bodystart="84" bodyend="87"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1ab3f21b622c8c12df010b95dc5d84eafb" compoundref="_gaussian_random_generator_8java" startline="114" endline="118">org.jgap.impl.GaussianRandomGenerator.nextGaussian</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a88b311f4d24b41b670187515bd6795b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>long org.jgap.impl.GaussianRandomGenerator.nextLong</definition>
+        <argsstring>()</argsstring>
+        <name>nextLong</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_random_generator_1a09b1ace0d1020d186b726bb725557ad2">nextLong</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>positive long value </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" line="92" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" bodystart="92" bodyend="96"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1ab3f21b622c8c12df010b95dc5d84eafb" compoundref="_gaussian_random_generator_8java" startline="114" endline="118">org.jgap.impl.GaussianRandomGenerator.nextGaussian</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1ae84caa388b60147fac8fbba721275cca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double org.jgap.impl.GaussianRandomGenerator.nextDouble</definition>
+        <argsstring>()</argsstring>
+        <name>nextDouble</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_random_generator_1a708f273cc71846c2ae973172f20f2c01">nextDouble</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the next pseudorandom, uniformly distributed double value between 0.0 and 1.0 from this random number generator&apos;s sequence.</para><para><simplesect kind="return"><para>a psuedorandom double value GREATER/EQUAL 0 AND LESS THAN 1</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" line="98" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" bodystart="98" bodyend="100"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1ab3f21b622c8c12df010b95dc5d84eafb" compoundref="_gaussian_random_generator_8java" startline="114" endline="118">org.jgap.impl.GaussianRandomGenerator.nextGaussian</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a20b553e1eaf81d7fdb405dbb8201aa19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float org.jgap.impl.GaussianRandomGenerator.nextFloat</definition>
+        <argsstring>()</argsstring>
+        <name>nextFloat</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_random_generator_1a0c5ff6cb7faf2d5385405f56f463a070">nextFloat</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the next pseudorandom, uniformly distributed float value between 0.0 and 1.0 from this random number generator&apos;s sequence.</para><para><simplesect kind="return"><para>a psuedorandom float value</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" line="102" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" bodystart="102" bodyend="104"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1ab3f21b622c8c12df010b95dc5d84eafb" compoundref="_gaussian_random_generator_8java" startline="114" endline="118">org.jgap.impl.GaussianRandomGenerator.nextGaussian</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a26567fd1a8a095c2dbf12c552d2da0be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.GaussianRandomGenerator.nextBoolean</definition>
+        <argsstring>()</argsstring>
+        <name>nextBoolean</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_random_generator_1ae1e8373d795fa8269c2f51f2e5525150">nextBoolean</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the next pseudorandom, uniformly distributed boolean value from this random number generator&apos;s sequence. The general contract of nextBoolean is that one boolean value is pseudorandomly generated and returned. The values true and false are produced with (approximately) equal probability.</para><para><simplesect kind="return"><para>a pseudorandom boolean value</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para></simplesect>
+<simplesect kind="since"><para>1.0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" line="106" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" bodystart="106" bodyend="108"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1ab3f21b622c8c12df010b95dc5d84eafb" compoundref="_gaussian_random_generator_8java" startline="114" endline="118">org.jgap.impl.GaussianRandomGenerator.nextGaussian</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1af7d50d80a6da0555d358ffe29bd7e567" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.GaussianRandomGenerator.init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializations on construction. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" line="55" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" bodystart="55" bodyend="57"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a37f7ceea3a0a9230371f2de2ee947ed0" compoundref="_gaussian_random_generator_8java" startline="30">org.jgap.impl.GaussianRandomGenerator.m_rn</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a95775aac692072a487de922f6c1a516f" compoundref="_gaussian_random_generator_8java" startline="46" endline="50">org.jgap.impl.GaussianRandomGenerator.GaussianRandomGenerator</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1ab3f21b622c8c12df010b95dc5d84eafb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double org.jgap.impl.GaussianRandomGenerator.nextGaussian</definition>
+        <argsstring>()</argsstring>
+        <name>nextGaussian</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the next randomly distributed gaussian with current standard deviation, will be greater/equal zero </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" line="114" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" bodystart="114" bodyend="118"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a26567fd1a8a095c2dbf12c552d2da0be" compoundref="_gaussian_random_generator_8java" startline="106" endline="108">org.jgap.impl.GaussianRandomGenerator.nextBoolean</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1ae84caa388b60147fac8fbba721275cca" compoundref="_gaussian_random_generator_8java" startline="98" endline="100">org.jgap.impl.GaussianRandomGenerator.nextDouble</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a20b553e1eaf81d7fdb405dbb8201aa19" compoundref="_gaussian_random_generator_8java" startline="102" endline="104">org.jgap.impl.GaussianRandomGenerator.nextFloat</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a2e174018c76eddb6c09c05eceeb83e11" compoundref="_gaussian_random_generator_8java" startline="74" endline="78">org.jgap.impl.GaussianRandomGenerator.nextInt</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a88b311f4d24b41b670187515bd6795b7" compoundref="_gaussian_random_generator_8java" startline="92" endline="96">org.jgap.impl.GaussianRandomGenerator.nextLong</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a6ec137db76575acdde40b13f3e702d13" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.GaussianRandomGenerator.readObject</definition>
+        <argsstring>(ObjectInputStream a_inputStream)</argsstring>
+        <name>readObject</name>
+        <param>
+          <type>ObjectInputStream</type>
+          <declname>a_inputStream</declname>
+        </param>
+        <exceptions> throws IOException, ClassNotFoundException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>When deserializing, initialize the seed because otherwise we could get duplicate evolution results when doing distributed computing!</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_inputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the ObjectInputStream provided for deserialzation</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ClassNotFoundException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.01 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" line="132" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" bodystart="132" bodyend="137"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Gaussian deviation serving as basis for randomly finding a number.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="13094">
+        <label>org.jgap.impl.GaussianRandomGenerator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator"/>
+        <childnode refid="13095" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13095">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="13096" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13096">
+        <label>Serializable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="13097">
+        <label>org.jgap.impl.GaussianRandomGenerator</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator"/>
+        <childnode refid="13098" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13100" relation="usage">
+          <edgelabel>m_rn</edgelabel>
+        </childnode>
+      </node>
+      <node id="13098">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="13099" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13099">
+        <label>Serializable</label>
+      </node>
+      <node id="13100">
+        <label>Random</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" line="23" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GaussianRandomGenerator.java" bodystart="22" bodyend="138"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a076a5c47f1bbaea7bf0cdb3e0d97972a" prot="private" virt="non-virtual"><scope>org::jgap::impl::GaussianRandomGenerator</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1adda7e9fd5a5b01d4a8ea3706ec5dc6f8" prot="private" virt="non-virtual"><scope>org::jgap::impl::GaussianRandomGenerator</scope><name>DELTA</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a2871c5bd1227c8a34197955d9f752afd" prot="public" virt="non-virtual"><scope>org::jgap::impl::GaussianRandomGenerator</scope><name>GaussianRandomGenerator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a95775aac692072a487de922f6c1a516f" prot="public" virt="non-virtual"><scope>org::jgap::impl::GaussianRandomGenerator</scope><name>GaussianRandomGenerator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a1635642b24a965dc72f82240b575ef6a" prot="public" virt="non-virtual"><scope>org::jgap::impl::GaussianRandomGenerator</scope><name>getGaussianStdDeviation</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1af7d50d80a6da0555d358ffe29bd7e567" prot="private" virt="non-virtual"><scope>org::jgap::impl::GaussianRandomGenerator</scope><name>init</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a37f7ceea3a0a9230371f2de2ee947ed0" prot="private" virt="non-virtual"><scope>org::jgap::impl::GaussianRandomGenerator</scope><name>m_rn</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a6682c3135c973d1dae2d061ebb90a5cc" prot="private" virt="non-virtual"><scope>org::jgap::impl::GaussianRandomGenerator</scope><name>m_standardDeviation</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a26567fd1a8a095c2dbf12c552d2da0be" prot="public" virt="non-virtual"><scope>org::jgap::impl::GaussianRandomGenerator</scope><name>nextBoolean</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1ae84caa388b60147fac8fbba721275cca" prot="public" virt="non-virtual"><scope>org::jgap::impl::GaussianRandomGenerator</scope><name>nextDouble</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a20b553e1eaf81d7fdb405dbb8201aa19" prot="public" virt="non-virtual"><scope>org::jgap::impl::GaussianRandomGenerator</scope><name>nextFloat</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1ab3f21b622c8c12df010b95dc5d84eafb" prot="private" virt="non-virtual"><scope>org::jgap::impl::GaussianRandomGenerator</scope><name>nextGaussian</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a2e174018c76eddb6c09c05eceeb83e11" prot="public" virt="non-virtual"><scope>org::jgap::impl::GaussianRandomGenerator</scope><name>nextInt</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1ab825ac259fdacdd0cebecfaa6cea44bf" prot="public" virt="non-virtual"><scope>org::jgap::impl::GaussianRandomGenerator</scope><name>nextInt</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_random_generator_1a29411be7a476ab217372b7f046536be6" prot="public" virt="non-virtual" ambiguityscope="org::jgap::RandomGenerator."><scope>org::jgap::impl::GaussianRandomGenerator</scope><name>nextInt</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a88b311f4d24b41b670187515bd6795b7" prot="public" virt="non-virtual"><scope>org::jgap::impl::GaussianRandomGenerator</scope><name>nextLong</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a6ec137db76575acdde40b13f3e702d13" prot="private" virt="non-virtual"><scope>org::jgap::impl::GaussianRandomGenerator</scope><name>readObject</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_gaussian_random_generator_1a03d196e9eff9b867e34edc8d1ea41bf3" prot="public" virt="non-virtual"><scope>org::jgap::impl::GaussianRandomGenerator</scope><name>setGaussianStdDeviation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

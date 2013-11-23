@@ -1,0 +1,466 @@
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_x}{\section{org.\-jgap.\-util.\-random\-X Class Reference}
+\label{classorg_1_1jgap_1_1util_1_1random_x}\index{org.\-jgap.\-util.\-random\-X@{org.\-jgap.\-util.\-random\-X}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-util.\-random\-X\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1util_1_1random_x__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1jgap_1_1util_1_1random_x_ab18450263842c7fde69a1d17579714dc}{set\-Seed} ()
+\item 
+abstract byte \hyperlink{classorg_1_1jgap_1_1util_1_1random_x_a3ef715392cb00b38bba43e5abc5ab845}{next\-Byte} ()
+\item 
+int \hyperlink{classorg_1_1jgap_1_1util_1_1random_x_a5748a6cb455da130bd937ea5c90a01fa}{next\-Int} ()
+\item 
+long \hyperlink{classorg_1_1jgap_1_1util_1_1random_x_a9a2981e95cb4e3f9acf59cbbaf383194}{next\-Long} ()
+\item 
+float \hyperlink{classorg_1_1jgap_1_1util_1_1random_x_a8ce941e4b871d17c36586b89f915c47c}{next\-Float} ()
+\item 
+double \hyperlink{classorg_1_1jgap_1_1util_1_1random_x_a61463f36f557007b65c688e91a5c5022}{next\-Double} ()
+\item 
+double \hyperlink{classorg_1_1jgap_1_1util_1_1random_x_aaa39ce24a15f1a77a5e3bd7866e2793e}{next\-Gaussian} ()
+\item 
+boolean \hyperlink{classorg_1_1jgap_1_1util_1_1random_x_ab8a07cb9d83f3eccca8f58c3a18e02fd}{next\-Bit} ()
+\item 
+void \hyperlink{classorg_1_1jgap_1_1util_1_1random_x_a2d85f4af5176e48b9463546f85b9f5e5}{next\-Byte} (byte buf\mbox{[}$\,$\mbox{]}, int buflen)
+\item 
+void \hyperlink{classorg_1_1jgap_1_1util_1_1random_x_a2591a4836fa228447c5f508d6850c56c}{next\-Byte} (byte buf\mbox{[}$\,$\mbox{]})
+\item 
+short \hyperlink{classorg_1_1jgap_1_1util_1_1random_x_a70085735339aee1eb3be72dd292d29ec}{next\-Short} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classorg_1_1jgap_1_1util_1_1random_x_abc44223fc17ec257b1a4514b31ad3211}{nbits} = 0
+\item 
+boolean \hyperlink{classorg_1_1jgap_1_1util_1_1random_x_af8cac8df13b9e25cb13d505e3d10ed8e}{iset} = false
+\item 
+double \hyperlink{classorg_1_1jgap_1_1util_1_1random_x_a455672ae37ed072b4f820bfbb0741610}{gset}
+\item 
+byte \hyperlink{classorg_1_1jgap_1_1util_1_1random_x_a150c6d8d0e49a38277c41352b000ce21}{b}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Abstract superclass for emulations of java.util.Random with
+various underlying generators.  These generators provide a
+superset of the methods of the built-in Java generator, and
+allow easy replacement of the low-level byte-stream random
+generator without the need to reimplement the higher-level
+calls.
+\end{DoxyVerb}
+ 
+
+The nature of the data returned by the functions in this class depends upon the generator provided by the class derived from it. If the generator is algorithmic, the data are pseudorandom; if a hardware generator is employed, genuine random data may be obtained. For brevity, in this document, we use {\itshape random} to refer to the data returned, whatever its actual source. 
+
+Designed and implemented in July 1996 by \href{http://www.fourmilab.ch/}{\tt John Walker}, \href{mailto:kelvin@fourmilab.ch}{\tt kelvin@fourmilab.\-ch}.
+
+\begin{DoxySeeAlso}{See Also}
+java.\-util.\-Random 
+\end{DoxySeeAlso}
+
+
+Definition at line 25 of file random\-X.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_x_ab8a07cb9d83f3eccca8f58c3a18e02fd}{\index{org\-::jgap\-::util\-::random\-X@{org\-::jgap\-::util\-::random\-X}!next\-Bit@{next\-Bit}}
+\index{next\-Bit@{next\-Bit}!org::jgap::util::randomX@{org\-::jgap\-::util\-::random\-X}}
+\subsubsection[{next\-Bit}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-util.\-random\-X.\-next\-Bit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1random_x_ab8a07cb9d83f3eccca8f58c3a18e02fd}
+\begin{DoxyReturn}{Returns}
+the next random bit, as a {\ttfamily boolean}. 
+\end{DoxyReturn}
+
+
+Definition at line 130 of file random\-X.\-java.
+
+
+
+References org.\-jgap.\-util.\-random\-X.\-b, org.\-jgap.\-util.\-random\-X.\-nbits, and org.\-jgap.\-util.\-random\-X.\-next\-Byte().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1util_1_1random_x_ab8a07cb9d83f3eccca8f58c3a18e02fd_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_x_a3ef715392cb00b38bba43e5abc5ab845}{\index{org\-::jgap\-::util\-::random\-X@{org\-::jgap\-::util\-::random\-X}!next\-Byte@{next\-Byte}}
+\index{next\-Byte@{next\-Byte}!org::jgap::util::randomX@{org\-::jgap\-::util\-::random\-X}}
+\subsubsection[{next\-Byte}]{\setlength{\rightskip}{0pt plus 5cm}abstract byte org.\-jgap.\-util.\-random\-X.\-next\-Byte (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classorg_1_1jgap_1_1util_1_1random_x_a3ef715392cb00b38bba43e5abc5ab845}
+Return next \mbox{[}pseudo\mbox{]}random byte from low level generator. All generators derived from this class must implement {\ttfamily \hyperlink{classorg_1_1jgap_1_1util_1_1random_x_a3ef715392cb00b38bba43e5abc5ab845}{next\-Byte()}}. 
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1util_1_1random_l_ecuyer_aea42f1e0206083a4b8943bd3ec50972d}{org.\-jgap.\-util.\-random\-L\-Ecuyer}, \hyperlink{classorg_1_1jgap_1_1util_1_1random_m_c_g_acb654143cff19333454f9be140a66092}{org.\-jgap.\-util.\-random\-M\-C\-G}, \hyperlink{classorg_1_1jgap_1_1util_1_1random_java_a964a6603268d4d76c95c82e4a3b48955}{org.\-jgap.\-util.\-random\-Java}, \hyperlink{classorg_1_1jgap_1_1util_1_1random_l_c_g_ab3b28701764c40bed7a00c9096612304}{org.\-jgap.\-util.\-random\-L\-C\-G}, and \hyperlink{classorg_1_1jgap_1_1util_1_1random_hot_bits_a4a58860751f086577a9b0f2866a9e647}{org.\-jgap.\-util.\-random\-Hot\-Bits}.
+
+
+
+Referenced by org.\-jgap.\-util.\-random\-X.\-next\-Bit(), org.\-jgap.\-util.\-random\-X.\-next\-Byte(), and org.\-jgap.\-util.\-random\-X.\-next\-Short().
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_x_a2d85f4af5176e48b9463546f85b9f5e5}{\index{org\-::jgap\-::util\-::random\-X@{org\-::jgap\-::util\-::random\-X}!next\-Byte@{next\-Byte}}
+\index{next\-Byte@{next\-Byte}!org::jgap::util::randomX@{org\-::jgap\-::util\-::random\-X}}
+\subsubsection[{next\-Byte}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-util.\-random\-X.\-next\-Byte (
+\begin{DoxyParamCaption}
+\item[{byte}]{buf\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{buflen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1random_x_a2d85f4af5176e48b9463546f85b9f5e5}
+\begin{DoxyVerb}    Fill a portion of an array of bytes with random data.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & array of {\ttfamily byte} to fill.\\
+\hline
+{\em buflen} & number of bytes to store. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 150 of file random\-X.\-java.
+
+
+
+References org.\-jgap.\-util.\-random\-X.\-next\-Byte().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1util_1_1random_x_a2d85f4af5176e48b9463546f85b9f5e5_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_x_a2591a4836fa228447c5f508d6850c56c}{\index{org\-::jgap\-::util\-::random\-X@{org\-::jgap\-::util\-::random\-X}!next\-Byte@{next\-Byte}}
+\index{next\-Byte@{next\-Byte}!org::jgap::util::randomX@{org\-::jgap\-::util\-::random\-X}}
+\subsubsection[{next\-Byte}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-util.\-random\-X.\-next\-Byte (
+\begin{DoxyParamCaption}
+\item[{byte}]{buf\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1random_x_a2591a4836fa228447c5f508d6850c56c}
+\begin{DoxyVerb}    Fill an array of bytes with random data.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & array of {\ttfamily byte}s to fill. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 163 of file random\-X.\-java.
+
+
+
+References org.\-jgap.\-util.\-random\-X.\-next\-Byte().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1util_1_1random_x_a2591a4836fa228447c5f508d6850c56c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_x_a61463f36f557007b65c688e91a5c5022}{\index{org\-::jgap\-::util\-::random\-X@{org\-::jgap\-::util\-::random\-X}!next\-Double@{next\-Double}}
+\index{next\-Double@{next\-Double}!org::jgap::util::randomX@{org\-::jgap\-::util\-::random\-X}}
+\subsubsection[{next\-Double}]{\setlength{\rightskip}{0pt plus 5cm}double org.\-jgap.\-util.\-random\-X.\-next\-Double (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1random_x_a61463f36f557007b65c688e91a5c5022}
+\begin{DoxyReturn}{Returns}
+the next random, uniformly distributed, {\ttfamily double} value, greater than or equal to 0 and less than 1. 
+\end{DoxyReturn}
+
+
+Definition at line 94 of file random\-X.\-java.
+
+
+
+References org.\-jgap.\-util.\-random\-X.\-next\-Long().
+
+
+
+Referenced by org.\-jgap.\-util.\-random\-X.\-next\-Gaussian().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1util_1_1random_x_a61463f36f557007b65c688e91a5c5022_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_x_a8ce941e4b871d17c36586b89f915c47c}{\index{org\-::jgap\-::util\-::random\-X@{org\-::jgap\-::util\-::random\-X}!next\-Float@{next\-Float}}
+\index{next\-Float@{next\-Float}!org::jgap::util::randomX@{org\-::jgap\-::util\-::random\-X}}
+\subsubsection[{next\-Float}]{\setlength{\rightskip}{0pt plus 5cm}float org.\-jgap.\-util.\-random\-X.\-next\-Float (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1random_x_a8ce941e4b871d17c36586b89f915c47c}
+\begin{DoxyReturn}{Returns}
+the next random, uniformly distributed, {\ttfamily float} value, greater than or equal to 0 and less than 1. 
+\end{DoxyReturn}
+
+
+Definition at line 87 of file random\-X.\-java.
+
+
+
+References org.\-jgap.\-util.\-random\-X.\-next\-Int().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1util_1_1random_x_a8ce941e4b871d17c36586b89f915c47c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_x_aaa39ce24a15f1a77a5e3bd7866e2793e}{\index{org\-::jgap\-::util\-::random\-X@{org\-::jgap\-::util\-::random\-X}!next\-Gaussian@{next\-Gaussian}}
+\index{next\-Gaussian@{next\-Gaussian}!org::jgap::util::randomX@{org\-::jgap\-::util\-::random\-X}}
+\subsubsection[{next\-Gaussian}]{\setlength{\rightskip}{0pt plus 5cm}double org.\-jgap.\-util.\-random\-X.\-next\-Gaussian (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1random_x_aaa39ce24a15f1a77a5e3bd7866e2793e}
+\begin{DoxyReturn}{Returns}
+the next Gaussian (normal, or bell-\/curve) distributed random value, with mean of 0.\-0 and standard deviation 1.\-0. 
+\end{DoxyReturn}
+
+
+Definition at line 105 of file random\-X.\-java.
+
+
+
+References org.\-jgap.\-util.\-random\-X.\-gset, org.\-jgap.\-util.\-random\-X.\-iset, and org.\-jgap.\-util.\-random\-X.\-next\-Double().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1util_1_1random_x_aaa39ce24a15f1a77a5e3bd7866e2793e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_x_a5748a6cb455da130bd937ea5c90a01fa}{\index{org\-::jgap\-::util\-::random\-X@{org\-::jgap\-::util\-::random\-X}!next\-Int@{next\-Int}}
+\index{next\-Int@{next\-Int}!org::jgap::util::randomX@{org\-::jgap\-::util\-::random\-X}}
+\subsubsection[{next\-Int}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-jgap.\-util.\-random\-X.\-next\-Int (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1random_x_a5748a6cb455da130bd937ea5c90a01fa}
+\begin{DoxyReturn}{Returns}
+the next random, uniformly distributed, {\ttfamily int} value. 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file random\-X.\-java.
+
+
+
+References org.\-jgap.\-util.\-random\-X.\-next\-Short().
+
+
+
+Referenced by org.\-jgap.\-util.\-random\-X.\-next\-Float(), and org.\-jgap.\-util.\-random\-X.\-next\-Long().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1util_1_1random_x_a5748a6cb455da130bd937ea5c90a01fa_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_x_a9a2981e95cb4e3f9acf59cbbaf383194}{\index{org\-::jgap\-::util\-::random\-X@{org\-::jgap\-::util\-::random\-X}!next\-Long@{next\-Long}}
+\index{next\-Long@{next\-Long}!org::jgap::util::randomX@{org\-::jgap\-::util\-::random\-X}}
+\subsubsection[{next\-Long}]{\setlength{\rightskip}{0pt plus 5cm}long org.\-jgap.\-util.\-random\-X.\-next\-Long (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1random_x_a9a2981e95cb4e3f9acf59cbbaf383194}
+\begin{DoxyReturn}{Returns}
+the next random, uniformly distributed, {\ttfamily long} value. 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file random\-X.\-java.
+
+
+
+References org.\-jgap.\-util.\-random\-X.\-next\-Int().
+
+
+
+Referenced by org.\-jgap.\-util.\-random\-X.\-next\-Double().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1util_1_1random_x_a9a2981e95cb4e3f9acf59cbbaf383194_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_x_a70085735339aee1eb3be72dd292d29ec}{\index{org\-::jgap\-::util\-::random\-X@{org\-::jgap\-::util\-::random\-X}!next\-Short@{next\-Short}}
+\index{next\-Short@{next\-Short}!org::jgap::util::randomX@{org\-::jgap\-::util\-::random\-X}}
+\subsubsection[{next\-Short}]{\setlength{\rightskip}{0pt plus 5cm}short org.\-jgap.\-util.\-random\-X.\-next\-Short (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1random_x_a70085735339aee1eb3be72dd292d29ec}
+\begin{DoxyReturn}{Returns}
+the next random, uniformly distributed, {\ttfamily short} value. 
+\end{DoxyReturn}
+
+
+Definition at line 170 of file random\-X.\-java.
+
+
+
+References org.\-jgap.\-util.\-random\-X.\-next\-Byte().
+
+
+
+Referenced by org.\-jgap.\-util.\-random\-X.\-next\-Int().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1util_1_1random_x_a70085735339aee1eb3be72dd292d29ec_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_x_ab18450263842c7fde69a1d17579714dc}{\index{org\-::jgap\-::util\-::random\-X@{org\-::jgap\-::util\-::random\-X}!set\-Seed@{set\-Seed}}
+\index{set\-Seed@{set\-Seed}!org::jgap::util::randomX@{org\-::jgap\-::util\-::random\-X}}
+\subsubsection[{set\-Seed}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-util.\-random\-X.\-set\-Seed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1util_1_1random_x_ab18450263842c7fde69a1d17579714dc}
+Reset when seed changes. A generator which supports seed must call this method by {\ttfamily super.\-set\-Seed()} when its own {\ttfamily set\-Seed(}{\itshape long}{\ttfamily )} method is called. This allows \hyperlink{classorg_1_1jgap_1_1util_1_1random_x}{random\-X} to discard any buffered data in the {\ttfamily \hyperlink{classorg_1_1jgap_1_1util_1_1random_x_ab8a07cb9d83f3eccca8f58c3a18e02fd}{next\-Bit()}} and {\ttfamily \hyperlink{classorg_1_1jgap_1_1util_1_1random_x_aaa39ce24a15f1a77a5e3bd7866e2793e}{next\-Gaussian()}} methods so that subsequent calls will immediately reflect the new seed.
+
+If a derived class does not permit specification of a seed (hardware-\/based generators, for example), it should declare\-:
+
+\begin{quotation}
+{\ttfamily private void set\-Seed(long seed) \{ \}} \end{quotation}
+
+
+which will hide the set\-Seed method from its users and cause a compile-\/time error if a program attempts to specify a seed. 
+
+Definition at line 49 of file random\-X.\-java.
+
+
+
+References org.\-jgap.\-util.\-random\-X.\-iset, and org.\-jgap.\-util.\-random\-X.\-nbits.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_x_a150c6d8d0e49a38277c41352b000ce21}{\index{org\-::jgap\-::util\-::random\-X@{org\-::jgap\-::util\-::random\-X}!b@{b}}
+\index{b@{b}!org::jgap::util::randomX@{org\-::jgap\-::util\-::random\-X}}
+\subsubsection[{b}]{\setlength{\rightskip}{0pt plus 5cm}byte org.\-jgap.\-util.\-random\-X.\-b\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1util_1_1random_x_a150c6d8d0e49a38277c41352b000ce21}
+
+
+Definition at line 126 of file random\-X.\-java.
+
+
+
+Referenced by org.\-jgap.\-util.\-random\-X.\-next\-Bit().
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_x_a455672ae37ed072b4f820bfbb0741610}{\index{org\-::jgap\-::util\-::random\-X@{org\-::jgap\-::util\-::random\-X}!gset@{gset}}
+\index{gset@{gset}!org::jgap::util::randomX@{org\-::jgap\-::util\-::random\-X}}
+\subsubsection[{gset}]{\setlength{\rightskip}{0pt plus 5cm}double org.\-jgap.\-util.\-random\-X.\-gset\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1util_1_1random_x_a455672ae37ed072b4f820bfbb0741610}
+
+
+Definition at line 99 of file random\-X.\-java.
+
+
+
+Referenced by org.\-jgap.\-util.\-random\-X.\-next\-Gaussian().
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_x_af8cac8df13b9e25cb13d505e3d10ed8e}{\index{org\-::jgap\-::util\-::random\-X@{org\-::jgap\-::util\-::random\-X}!iset@{iset}}
+\index{iset@{iset}!org::jgap::util::randomX@{org\-::jgap\-::util\-::random\-X}}
+\subsubsection[{iset}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-util.\-random\-X.\-iset = false\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1util_1_1random_x_af8cac8df13b9e25cb13d505e3d10ed8e}
+
+
+Definition at line 28 of file random\-X.\-java.
+
+
+
+Referenced by org.\-jgap.\-util.\-random\-X.\-next\-Gaussian(), and org.\-jgap.\-util.\-random\-X.\-set\-Seed().
+
+\hypertarget{classorg_1_1jgap_1_1util_1_1random_x_abc44223fc17ec257b1a4514b31ad3211}{\index{org\-::jgap\-::util\-::random\-X@{org\-::jgap\-::util\-::random\-X}!nbits@{nbits}}
+\index{nbits@{nbits}!org::jgap::util::randomX@{org\-::jgap\-::util\-::random\-X}}
+\subsubsection[{nbits}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-jgap.\-util.\-random\-X.\-nbits = 0\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1util_1_1random_x_abc44223fc17ec257b1a4514b31ad3211}
+
+
+Definition at line 27 of file random\-X.\-java.
+
+
+
+Referenced by org.\-jgap.\-util.\-random\-X.\-next\-Bit(), and org.\-jgap.\-util.\-random\-X.\-set\-Seed().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/util/\hyperlink{random_x_8java}{random\-X.\-java}\end{DoxyCompactItemize}

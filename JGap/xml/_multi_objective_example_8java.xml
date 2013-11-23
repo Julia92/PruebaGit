@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="_multi_objective_example_8java" kind="file">
+    <compoundname>MultiObjectiveExample.java</compoundname>
+    <innerclass refid="classexamples_1_1multiobjective_1_1_multi_objective_example" prot="public">examples::multiobjective::MultiObjectiveExample</innerclass>
+    <innerclass refid="classexamples_1_1multiobjective_1_1_multi_objective_example_1_1_m_o_fitness_comparator" prot="public">examples::multiobjective::MultiObjectiveExample::MOFitnessComparator</innerclass>
+    <innernamespace refid="namespaceexamples_1_1multiobjective">examples::multiobjective</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>JGAP.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>JGAP<sp/>offers<sp/>a<sp/>dual<sp/>license<sp/>model<sp/>containing<sp/>the<sp/>LGPL<sp/>as<sp/>well<sp/>as<sp/>the<sp/>MPL.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>For<sp/>licensing<sp/>information<sp/>please<sp/>see<sp/>the<sp/>file<sp/>license.txt<sp/>included<sp/>with<sp/>JGAP</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>or<sp/>have<sp/>a<sp/>look<sp/>at<sp/>the<sp/>top<sp/>of<sp/>class<sp/>org.jgap.Chromosome<sp/>which<sp/>representatively</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>includes<sp/>the<sp/>JGAP<sp/>license<sp/>policy<sp/>applicable<sp/>for<sp/>any<sp/>file<sp/>delivered<sp/>with<sp/>JGAP.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">examples.multiobjective;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.*;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.*;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.impl.*;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.util.*;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classexamples_1_1multiobjective_1_1_multi_objective_example" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classexamples_1_1multiobjective_1_1_multi_objective_example" kindref="compound">MultiObjectiveExample</ref><sp/>{</highlight></codeline>
+<codeline lineno="30" refid="classexamples_1_1multiobjective_1_1_multi_objective_example_1a96fb051aebf23c7ca548e696ff949556" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classexamples_1_1multiobjective_1_1_multi_objective_example_1a96fb051aebf23c7ca548e696ff949556" kindref="member">CVS_REVISION</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$Revision:<sp/>1.8<sp/>$&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classexamples_1_1multiobjective_1_1_multi_objective_example_1a8c0957f48f1a4f97a40cf68a8f07e198" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classexamples_1_1multiobjective_1_1_multi_objective_example_1a8c0957f48f1a4f97a40cf68a8f07e198" kindref="member">MAX_ALLOWED_EVOLUTIONS</ref><sp/>=<sp/>20;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classexamples_1_1multiobjective_1_1_multi_objective_example_1af1145a63678ec2afd8c0c1bf34ce0352" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classexamples_1_1multiobjective_1_1_multi_objective_example_1af1145a63678ec2afd8c0c1bf34ce0352" kindref="member">execute</ref>()</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>with<sp/>a<sp/>DefaultConfiguration,<sp/>which<sp/>comes<sp/>setup<sp/>with<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>most<sp/>common<sp/>settings.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>Configuration<sp/>conf<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>DefaultConfiguration();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>BestChromosomesSelector<sp/>with<sp/>doublettes<sp/>allowed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>----------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>conf.removeNaturalSelectors(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>BestChromosomesSelector<sp/>bestChromsSelector<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>BestChromosomesSelector(</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>conf,<sp/>0.95d);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>bestChromsSelector.setDoubletteChromosomesAllowed(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>conf.addNaturalSelector(bestChromsSelector,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>conf.reset();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>conf.setFitnessEvaluator(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classexamples_1_1multiobjective_1_1_m_o_fitness_evaluator" kindref="compound">MOFitnessEvaluator</ref>());</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>conf.setPreservFittestIndividual(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>conf.setKeepPopulationSizeConstant(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>fitness<sp/>function<sp/>we<sp/>want<sp/>to<sp/>use,<sp/>which<sp/>is<sp/>our</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MultiObjectiveFitnessFunction.<sp/>We<sp/>construct<sp/>it<sp/>with</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>target<sp/>amount<sp/>of<sp/>change<sp/>passed<sp/>in<sp/>to<sp/>this<sp/>method.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-----------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>BulkFitnessFunction<sp/>myFunc<sp/>=</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classexamples_1_1multiobjective_1_1_multi_objective_fitness_function" kindref="compound">MultiObjectiveFitnessFunction</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>conf.setBulkFitnessFunction(myFunc);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>sample<sp/>chromosome.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>----------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>Gene[]<sp/>sampleGenes<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Gene[1];</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>sampleGenes[0]<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>DoubleGene(conf,<sp/><ref refid="classexamples_1_1multiobjective_1_1_multi_objective_fitness_function" kindref="compound">MultiObjectiveFitnessFunction</ref>.<ref refid="classexamples_1_1multiobjective_1_1_multi_objective_fitness_function_1ab01dfcf9674d7fe1baff858ce700e48c" kindref="member">MIN_X</ref>,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classexamples_1_1multiobjective_1_1_multi_objective_fitness_function" kindref="compound">MultiObjectiveFitnessFunction</ref>.<ref refid="classexamples_1_1multiobjective_1_1_multi_objective_fitness_function_1a039b662c49738b20f0ca7e8c87550f4f" kindref="member">MAX_X</ref>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>IChromosome<sp/>sampleChromosome<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Chromosome(conf,<sp/>sampleGenes);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>conf.setSampleChromosome(sampleChromosome);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Finally,<sp/>we<sp/>need<sp/>to<sp/>tell<sp/>the<sp/>Configuration<sp/>object<sp/>how<sp/>many</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Chromosomes<sp/>we<sp/>want<sp/>in<sp/>our<sp/>population.<sp/>The<sp/>more<sp/>Chromosomes,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>larger<sp/>number<sp/>of<sp/>potential<sp/>solutions<sp/>(which<sp/>is<sp/>good<sp/>for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>finding<sp/>the<sp/>answer),<sp/>but<sp/>the<sp/>longer<sp/>it<sp/>will<sp/>take<sp/>to<sp/>evolve</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>population<sp/>(which<sp/>could<sp/>be<sp/>seen<sp/>as<sp/>bad).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>conf.setPopulationSize(500);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>random<sp/>initial<sp/>population<sp/>of<sp/>Chromosomes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>Genotype<sp/>population<sp/>=<sp/>Genotype.randomInitialGenotype(conf);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Evolve<sp/>the<sp/>population.<sp/>Since<sp/>we<sp/>don&apos;t<sp/>know<sp/>what<sp/>the<sp/>best<sp/>answer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>is<sp/>going<sp/>to<sp/>be,<sp/>we<sp/>just<sp/>evolve<sp/>the<sp/>max<sp/>number<sp/>of<sp/>times.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classexamples_1_1multiobjective_1_1_multi_objective_example_1a8c0957f48f1a4f97a40cf68a8f07e198" kindref="member">MAX_ALLOWED_EVOLUTIONS</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>population.evolve();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>we<sp/>have<sp/>at<sp/>least<sp/>one<sp/>solution.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>----------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>List<sp/>chroms<sp/>=<sp/>population.getPopulation().getChromosomes();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classexamples_1_1multiobjective_1_1_multi_objective_example_1_1_m_o_fitness_comparator" kindref="compound">MOFitnessComparator</ref><sp/>comp<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classexamples_1_1multiobjective_1_1_multi_objective_example_1_1_m_o_fitness_comparator" kindref="compound">MOFitnessComparator</ref>();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>all<sp/>duplicate<sp/>solutions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>Collections.sort(chroms,<sp/>comp);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(index<sp/>&lt;<sp/>chroms.size()<sp/>-<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>First<sp/>solution<sp/>to<sp/>compare.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Chromosome<sp/>aSolution1<sp/>=<sp/>(Chromosome)<sp/>chroms.get(index);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Vector&lt;Double&gt;<sp/>v1<sp/>=<sp/>MultiObjectiveFitnessFunction.getVector(aSolution1);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Double<sp/>d1<sp/>=<sp/>v1.get(0);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Second<sp/>solution<sp/>to<sp/>compare.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Chromosome<sp/>aSolution2<sp/>=<sp/>(Chromosome)<sp/>chroms.get(index<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Vector&lt;Double&gt;<sp/>v2<sp/>=<sp/>MultiObjectiveFitnessFunction.getVector(aSolution2);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Double<sp/>d2<sp/>=<sp/>v2.get(0);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Math.abs(d1<sp/>-<sp/>d2)<sp/>&lt;<sp/>0.000001)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Duplicate<sp/>solution<sp/>found</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chroms.remove(index);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index++;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print<sp/>all<sp/>Pareto-optimal<sp/>solutions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-----------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>System.out.println(</highlight><highlight class="stringliteral">&quot;Formula<sp/>F1(x)<sp/>=<sp/>x² );
+<sp/><sp/><sp/><sp/>System.out.println(&quot;Formula<sp/>F2(x)<sp/>=<sp/>(x-2)²");
+<sp/><sp/><sp/><sp/>System.out.println(&quot;\nFound<sp/>pareto-optimal<sp/>solutions:&quot;);
+<sp/><sp/><sp/><sp/>System.out.println(&quot;===============================\n&quot;);
+<sp/><sp/><sp/><sp/>System.out.println(&quot;Input<sp/>value<sp/>x<sp/><sp/>F1(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>F2(x)&quot;
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Difference<sp/>from<sp/>optimum&quot;);
+<sp/><sp/><sp/><sp/>System.out.println(&quot;=============<sp/><sp/>=====<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=====&quot;
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=======================&quot;);
+<sp/><sp/><sp/><sp/>for<sp/>(int<sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>chroms.size();<sp/>k++)<sp/>{
+<sp/><sp/><sp/><sp/><sp/><sp/>Chromosome<sp/>bestSolutionSoFar<sp/>=<sp/>(Chromosome)<sp/>chroms.get(k);
+<sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>s<sp/>=<sp/>&quot;&quot;;
+<sp/><sp/><sp/><sp/><sp/><sp/>Vector&lt;Double&gt;
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v<sp/>=<sp/>MultiObjectiveFitnessFunction.getVector(bestSolutionSoFar);
+<sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>4;<sp/>j++)<sp/>{
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Double<sp/>d<sp/>=<sp/>v.get(j);
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>t<sp/>=<sp/>NumberKit.niceDecimalNumber(d,<sp/>9);
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>=<sp/>StringKit.fill(t,<sp/>15,<sp/>&apos;<sp/>&apos;);
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/>+=<sp/>t;
+<sp/><sp/><sp/><sp/><sp/><sp/>}
+<sp/><sp/><sp/><sp/><sp/><sp/>System.out.println(s);
+<sp/><sp/><sp/><sp/>}
+<sp/><sp/>}
+
+<sp/><sp/>/**
+<sp/><sp/><sp/>*<sp/>Main<sp/>method<sp/>to<sp/>run<sp/>the<sp/>example.
+<sp/><sp/><sp/>*
+<sp/><sp/><sp/>*<sp/>@param<sp/>args<sp/>ignored
+<sp/><sp/><sp/>*<sp/>@throws<sp/>Exception
+<sp/><sp/><sp/>*
+<sp/><sp/><sp/>*<sp/>@author<sp/>Klaus<sp/>Meffert
+<sp/><sp/><sp/>*<sp/>@since<sp/>2.6
+<sp/><sp/><sp/>*/
+<sp/><sp/>public<sp/>static<sp/>void<sp/>main(String[]<sp/>args)
+<sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{
+<sp/><sp/><sp/><sp/>MultiObjectiveExample<sp/>instance<sp/>=<sp/>new<sp/>MultiObjectiveExample();
+<sp/><sp/><sp/><sp/>instance.execute();
+<sp/><sp/>}
+
+<sp/><sp/>/**
+<sp/><sp/><sp/>*<sp/>@author<sp/>Klaus<sp/>Meffert
+<sp/><sp/><sp/>*<sp/>@since<sp/>2.6
+<sp/><sp/><sp/>*/
+<sp/><sp/>public<sp/>class<sp/>MOFitnessComparator
+<sp/><sp/><sp/><sp/><sp/><sp/>implements<sp/>java.util.Comparator<sp/>{
+<sp/><sp/><sp/><sp/>public<sp/>int<sp/>compare(final<sp/>Object<sp/>a_chrom1,<sp/>final<sp/>Object<sp/>a_chrom2)<sp/>{
+<sp/><sp/><sp/><sp/><sp/><sp/>List<sp/>v1<sp/>=<sp/>(<sp/>(Chromosome)<sp/>a_chrom1).getMultiObjectives();
+<sp/><sp/><sp/><sp/><sp/><sp/>List<sp/>v2<sp/>=<sp/>(<sp/>(Chromosome)<sp/>a_chrom2).getMultiObjectives();
+<sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>size<sp/>=<sp/>v1.size();
+<sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(size<sp/>!=<sp/>v2.size())<sp/>{
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>throw<sp/>new<sp/>RuntimeException(&quot;Size<sp/>of<sp/>objectives<sp/>inconsistent!&quot;);
+<sp/><sp/><sp/><sp/><sp/><sp/>}
+<sp/><sp/><sp/><sp/><sp/><sp/>double<sp/>d1Total<sp/>=<sp/>0;
+<sp/><sp/><sp/><sp/><sp/><sp/>double<sp/>d2Total<sp/>=<sp/>0;
+<sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>size;<sp/>i++)<sp/>{
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>double<sp/>d1<sp/>=<sp/>(<sp/>(Double)<sp/>v1.get(i)).doubleValue();
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>double<sp/>d2<sp/>=<sp/>(<sp/>(Double)<sp/>v2.get(i)).doubleValue();
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d1Total<sp/>+=<sp/>d1;
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d2Total<sp/>+=<sp/>d2;
+<sp/><sp/><sp/><sp/><sp/><sp/>}
+<sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(d1Total<sp/>&lt;<sp/>d2Total)<sp/>{
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>-1;
+<sp/><sp/><sp/><sp/><sp/><sp/>}
+<sp/><sp/><sp/><sp/><sp/><sp/>else<sp/>{
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(d1Total<sp/>&gt;<sp/>d2Total)<sp/>{
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>1;
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else<sp/>{
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>0;
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}
+<sp/><sp/><sp/><sp/><sp/><sp/>}
+<sp/><sp/><sp/><sp/>}
+<sp/><sp/>}
+}
+&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>System.out.println(</highlight><highlight class="stringliteral">&quot;Formula<sp/>F2(x)<sp/>=<sp/>(x-2)² );
+<sp/><sp/><sp/><sp/>System.out.println(&quot;\nFound<sp/>pareto-optimal<sp/>solutions:&quot;);
+<sp/><sp/><sp/><sp/>System.out.println(&quot;===============================\n&quot;);
+<sp/><sp/><sp/><sp/>System.out.println(&quot;Input<sp/>value<sp/>x<sp/><sp/>F1(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>F2(x)&quot;
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Difference<sp/>from<sp/>optimum&quot;);
+<sp/><sp/><sp/><sp/>System.out.println(&quot;=============<sp/><sp/>=====<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=====&quot;
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=======================&quot;);
+<sp/><sp/><sp/><sp/>for<sp/>(int<sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>chroms.size();<sp/>k++)<sp/>{
+<sp/><sp/><sp/><sp/><sp/><sp/>Chromosome<sp/>bestSolutionSoFar<sp/>=<sp/>(Chromosome)<sp/>chroms.get(k);
+<sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>s<sp/>=<sp/>&quot;&quot;;
+<sp/><sp/><sp/><sp/><sp/><sp/>Vector&lt;Double&gt;
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v<sp/>=<sp/>MultiObjectiveFitnessFunction.getVector(bestSolutionSoFar);
+<sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>4;<sp/>j++)<sp/>{
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Double<sp/>d<sp/>=<sp/>v.get(j);
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>t<sp/>=<sp/>NumberKit.niceDecimalNumber(d,<sp/>9);
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>=<sp/>StringKit.fill(t,<sp/>15,<sp/>&apos;<sp/>&apos;);
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/>+=<sp/>t;
+<sp/><sp/><sp/><sp/><sp/><sp/>}
+<sp/><sp/><sp/><sp/><sp/><sp/>System.out.println(s);
+<sp/><sp/><sp/><sp/>}
+<sp/><sp/>}
+
+<sp/><sp/>/**
+<sp/><sp/><sp/>*<sp/>Main<sp/>method<sp/>to<sp/>run<sp/>the<sp/>example.
+<sp/><sp/><sp/>*
+<sp/><sp/><sp/>*<sp/>@param<sp/>args<sp/>ignored
+<sp/><sp/><sp/>*<sp/>@throws<sp/>Exception
+<sp/><sp/><sp/>*
+<sp/><sp/><sp/>*<sp/>@author<sp/>Klaus<sp/>Meffert
+<sp/><sp/><sp/>*<sp/>@since<sp/>2.6
+<sp/><sp/><sp/>*/
+<sp/><sp/>public<sp/>static<sp/>void<sp/>main(String[]<sp/>args)
+<sp/><sp/><sp/><sp/><sp/><sp/>throws<sp/>Exception<sp/>{
+<sp/><sp/><sp/><sp/>MultiObjectiveExample<sp/>instance<sp/>=<sp/>new<sp/>MultiObjectiveExample();
+<sp/><sp/><sp/><sp/>instance.execute();
+<sp/><sp/>}
+
+<sp/><sp/>/**
+<sp/><sp/><sp/>*<sp/>@author<sp/>Klaus<sp/>Meffert
+<sp/><sp/><sp/>*<sp/>@since<sp/>2.6
+<sp/><sp/><sp/>*/
+<sp/><sp/>public<sp/>class<sp/>MOFitnessComparator
+<sp/><sp/><sp/><sp/><sp/><sp/>implements<sp/>java.util.Comparator<sp/>{
+<sp/><sp/><sp/><sp/>public<sp/>int<sp/>compare(final<sp/>Object<sp/>a_chrom1,<sp/>final<sp/>Object<sp/>a_chrom2)<sp/>{
+<sp/><sp/><sp/><sp/><sp/><sp/>List<sp/>v1<sp/>=<sp/>(<sp/>(Chromosome)<sp/>a_chrom1).getMultiObjectives();
+<sp/><sp/><sp/><sp/><sp/><sp/>List<sp/>v2<sp/>=<sp/>(<sp/>(Chromosome)<sp/>a_chrom2).getMultiObjectives();
+<sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>size<sp/>=<sp/>v1.size();
+<sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(size<sp/>!=<sp/>v2.size())<sp/>{
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>throw<sp/>new<sp/>RuntimeException(&quot;Size<sp/>of<sp/>objectives<sp/>inconsistent!&quot;);
+<sp/><sp/><sp/><sp/><sp/><sp/>}
+<sp/><sp/><sp/><sp/><sp/><sp/>double<sp/>d1Total<sp/>=<sp/>0;
+<sp/><sp/><sp/><sp/><sp/><sp/>double<sp/>d2Total<sp/>=<sp/>0;
+<sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>size;<sp/>i++)<sp/>{
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>double<sp/>d1<sp/>=<sp/>(<sp/>(Double)<sp/>v1.get(i)).doubleValue();
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>double<sp/>d2<sp/>=<sp/>(<sp/>(Double)<sp/>v2.get(i)).doubleValue();
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d1Total<sp/>+=<sp/>d1;
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d2Total<sp/>+=<sp/>d2;
+<sp/><sp/><sp/><sp/><sp/><sp/>}
+<sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(d1Total<sp/>&lt;<sp/>d2Total)<sp/>{
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>-1;
+<sp/><sp/><sp/><sp/><sp/><sp/>}
+<sp/><sp/><sp/><sp/><sp/><sp/>else<sp/>{
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(d1Total<sp/>&gt;<sp/>d2Total)<sp/>{
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>1;
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else<sp/>{
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>0;
+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}
+<sp/><sp/><sp/><sp/><sp/><sp/>}
+<sp/><sp/><sp/><sp/>}
+<sp/><sp/>}
+}
+&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>System.out.println(</highlight><highlight class="stringliteral">&quot;\nFound<sp/>pareto-optimal<sp/>solutions:&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>System.out.println(</highlight><highlight class="stringliteral">&quot;===============================\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>System.out.println(</highlight><highlight class="stringliteral">&quot;Input<sp/>value<sp/>x<sp/><sp/>F1(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>F2(x)&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Difference<sp/>from<sp/>optimum&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>System.out.println(</highlight><highlight class="stringliteral">&quot;=============<sp/><sp/>=====<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=====&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=======================&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>chroms.size();<sp/>k++)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Chromosome<sp/>bestSolutionSoFar<sp/>=<sp/>(Chromosome)<sp/>chroms.get(k);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>s<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Vector&lt;Double&gt;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v<sp/>=<sp/>MultiObjectiveFitnessFunction.getVector(bestSolutionSoFar);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>4;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Double<sp/>d<sp/>=<sp/>v.get(j);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>t<sp/>=<sp/>NumberKit.niceDecimalNumber(d,<sp/>9);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>=<sp/>StringKit.fill(t,<sp/>15,<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/>+=<sp/>t;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>System.out.println(s);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="classexamples_1_1multiobjective_1_1_multi_objective_example_1a4189ae0ffd4a667269cf1de90f045088" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classexamples_1_1multiobjective_1_1_multi_objective_example_1a4189ae0ffd4a667269cf1de90f045088" kindref="member">main</ref>(String[]<sp/>args)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classexamples_1_1multiobjective_1_1_multi_objective_example" kindref="compound">MultiObjectiveExample</ref><sp/>instance<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classexamples_1_1multiobjective_1_1_multi_objective_example" kindref="compound">MultiObjectiveExample</ref>();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>instance.execute();</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="classexamples_1_1multiobjective_1_1_multi_objective_example_1_1_m_o_fitness_comparator" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classexamples_1_1multiobjective_1_1_multi_objective_example_1_1_m_o_fitness_comparator" kindref="compound">MOFitnessComparator</ref></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">implements</highlight><highlight class="normal"><sp/>java.util.Comparator<sp/>{</highlight></codeline>
+<codeline lineno="163" refid="classexamples_1_1multiobjective_1_1_multi_objective_example_1_1_m_o_fitness_comparator_1a36a10d6b82c98c14757f7a0d1fced3aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classexamples_1_1multiobjective_1_1_multi_objective_example_1_1_m_o_fitness_comparator_1a36a10d6b82c98c14757f7a0d1fced3aa" kindref="member">compare</ref>(</highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>Object<sp/>a_chrom1,<sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>Object<sp/>a_chrom2)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>List<sp/>v1<sp/>=<sp/>(<sp/>(Chromosome)<sp/>a_chrom1).getMultiObjectives();</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>List<sp/>v2<sp/>=<sp/>(<sp/>(Chromosome)<sp/>a_chrom2).getMultiObjectives();</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size<sp/>=<sp/>v1.size();</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>!=<sp/>v2.size())<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>RuntimeException(</highlight><highlight class="stringliteral">&quot;Size<sp/>of<sp/>objectives<sp/>inconsistent!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d1Total<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d2Total<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>size;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d1<sp/>=<sp/>(<sp/>(Double)<sp/>v1.get(i)).doubleValue();</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d2<sp/>=<sp/>(<sp/>(Double)<sp/>v2.get(i)).doubleValue();</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d1Total<sp/>+=<sp/>d1;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d2Total<sp/>+=<sp/>d2;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(d1Total<sp/>&lt;<sp/>d2Total)<sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(d1Total<sp/>&gt;<sp/>d2Total)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/examples/src/examples/multiobjective/MultiObjectiveExample.java"/>
+  </compounddef>
+</doxygen>

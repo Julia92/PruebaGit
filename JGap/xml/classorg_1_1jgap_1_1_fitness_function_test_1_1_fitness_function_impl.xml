@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1_fitness_function_test_1_1_fitness_function_impl" kind="class" prot="private">
+    <compoundname>org::jgap::FitnessFunctionTest::FitnessFunctionImpl</compoundname>
+    <basecompoundref refid="classorg_1_1jgap_1_1_fitness_function" prot="public" virt="non-virtual">org.jgap.FitnessFunction</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1_fitness_function_test_1_1_fitness_function_impl_1a4d6f85bdff6993727519b1de36aa49cb" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double org.jgap.FitnessFunctionTest.FitnessFunctionImpl.m_evaluationValue</definition>
+        <argsstring></argsstring>
+        <name>m_evaluationValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.0 (until 1.1: type int) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/tests/org/jgap/FitnessFunctionTest.java" line="83" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/tests/org/jgap/FitnessFunctionTest.java" bodystart="83" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1_fitness_function_test_1_1_fitness_function_impl_1a03ea7e09f08e84fbdf1b40ad53242516" compoundref="_fitness_function_test_8java" startline="89" endline="91">org.jgap.FitnessFunctionTest.FitnessFunctionImpl.evaluate</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1_fitness_function_test_1_1_fitness_function_impl_1af03d529efeedeea419bfdb6ebc6b99b1" compoundref="_fitness_function_test_8java" startline="85" endline="87">org.jgap.FitnessFunctionTest.FitnessFunctionImpl.FitnessFunctionImpl</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_fitness_function_test_1_1_fitness_function_impl_1af03d529efeedeea419bfdb6ebc6b99b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.FitnessFunctionTest.FitnessFunctionImpl.FitnessFunctionImpl</definition>
+        <argsstring>(double a_evaluationValue)</argsstring>
+        <name>FitnessFunctionImpl</name>
+        <param>
+          <type>double</type>
+          <declname>a_evaluationValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/tests/org/jgap/FitnessFunctionTest.java" line="85" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/tests/org/jgap/FitnessFunctionTest.java" bodystart="85" bodyend="87"/>
+        <references refid="classorg_1_1jgap_1_1_fitness_function_test_1_1_fitness_function_impl_1a4d6f85bdff6993727519b1de36aa49cb" compoundref="_fitness_function_test_8java" startline="83">org.jgap.FitnessFunctionTest.FitnessFunctionImpl.m_evaluationValue</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1_fitness_function_test_1_1_fitness_function_impl_1a03ea7e09f08e84fbdf1b40ad53242516" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double org.jgap.FitnessFunctionTest.FitnessFunctionImpl.evaluate</definition>
+        <argsstring>(IChromosome a_subject)</argsstring>
+        <name>evaluate</name>
+        <reimplements refid="classorg_1_1jgap_1_1_fitness_function_1a0078e42480eac93729f906ac4dc185d9">evaluate</reimplements>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+          <declname>a_subject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine the fitness of the given <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> instance. The higher the return value, the more fit the instance. This method should always return the same fitness value for two equivalent <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> instances.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_subject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> instance to evaluate</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>positive double reflecting the fitness rating of the given <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>. Note that if a non-positive double is returned, a RuntimeException should be generated</para></simplesect>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 (until 1.1: return type int) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/tests/org/jgap/FitnessFunctionTest.java" line="89" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/tests/org/jgap/FitnessFunctionTest.java" bodystart="89" bodyend="91"/>
+        <references refid="classorg_1_1jgap_1_1_fitness_function_test_1_1_fitness_function_impl_1a4d6f85bdff6993727519b1de36aa49cb" compoundref="_fitness_function_test_8java" startline="83">org.jgap.FitnessFunctionTest.FitnessFunctionImpl.m_evaluationValue</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Implementing class of abstract <ref refid="classorg_1_1jgap_1_1_fitness_function" kindref="compound">FitnessFunction</ref> class.</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>1.1 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="12698">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="12699" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12700" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12699">
+        <label>Serializable</label>
+      </node>
+      <node id="12697">
+        <label>org.jgap.FitnessFunctionTest.FitnessFunctionImpl</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function_test_1_1_fitness_function_impl"/>
+        <childnode refid="12698" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12700">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="12701" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12701">
+        <label>Cloneable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12703">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="12704" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12705" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12704">
+        <label>Serializable</label>
+      </node>
+      <node id="12702">
+        <label>org.jgap.FitnessFunctionTest.FitnessFunctionImpl</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function_test_1_1_fitness_function_impl"/>
+        <childnode refid="12703" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12705">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="12706" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12706">
+        <label>Cloneable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/tests/org/jgap/FitnessFunctionTest.java" line="79" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/tests/org/jgap/FitnessFunctionTest.java" bodystart="78" bodyend="92"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1aa47c6f886479efc5ed5fe84eb7f9b5ca" prot="public" virt="non-virtual"><scope>org::jgap::FitnessFunctionTest::FitnessFunctionImpl</scope><name>clone</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1a89cbf1ef4c08655f209ce69fde6731e7" prot="public" virt="non-virtual"><scope>org::jgap::FitnessFunctionTest::FitnessFunctionImpl</scope><name>DELTA</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_test_1_1_fitness_function_impl_1a03ea7e09f08e84fbdf1b40ad53242516" prot="protected" virt="virtual"><scope>org::jgap::FitnessFunctionTest::FitnessFunctionImpl</scope><name>evaluate</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_test_1_1_fitness_function_impl_1af03d529efeedeea419bfdb6ebc6b99b1" prot="public" virt="non-virtual"><scope>org::jgap::FitnessFunctionTest::FitnessFunctionImpl</scope><name>FitnessFunctionImpl</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1a05fff0534d3cfdccd1d4d96d8ba6dda2" prot="public" virt="non-virtual"><scope>org::jgap::FitnessFunctionTest::FitnessFunctionImpl</scope><name>getFitnessValue</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1adc5e20816cb3fd6f3486adb53b1e563d" prot="public" virt="non-virtual"><scope>org::jgap::FitnessFunctionTest::FitnessFunctionImpl</scope><name>getLastComputedFitnessValue</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_test_1_1_fitness_function_impl_1a4d6f85bdff6993727519b1de36aa49cb" prot="private" virt="non-virtual"><scope>org::jgap::FitnessFunctionTest::FitnessFunctionImpl</scope><name>m_evaluationValue</name></member>
+      <member refid="classorg_1_1jgap_1_1_fitness_function_1a5f1f23e6f8a0f9606aee5d52fac6a06b" prot="public" virt="non-virtual"><scope>org::jgap::FitnessFunctionTest::FitnessFunctionImpl</scope><name>NO_FITNESS_VALUE</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

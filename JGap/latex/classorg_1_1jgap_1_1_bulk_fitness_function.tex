@@ -1,0 +1,123 @@
+\hypertarget{classorg_1_1jgap_1_1_bulk_fitness_function}{\section{org.\-jgap.\-Bulk\-Fitness\-Function Class Reference}
+\label{classorg_1_1jgap_1_1_bulk_fitness_function}\index{org.\-jgap.\-Bulk\-Fitness\-Function@{org.\-jgap.\-Bulk\-Fitness\-Function}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-Bulk\-Fitness\-Function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1_bulk_fitness_function__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-Bulk\-Fitness\-Function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{classorg_1_1jgap_1_1_bulk_fitness_function__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract void \hyperlink{classorg_1_1jgap_1_1_bulk_fitness_function_a2685b837c809586e7a029e670bc1cd42}{evaluate} (\hyperlink{classorg_1_1jgap_1_1_population}{Population} a\-\_\-chromosomes)
+\item 
+Object \hyperlink{classorg_1_1jgap_1_1_bulk_fitness_function_a3789d9f9a8c4245f3f970c172241b1da}{clone} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1_bulk_fitness_function_a2cf877b42f4607be78def1b50cb0008f}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-9 \$\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Bulk fitness functions are used to determine how optimal a group of solutions are relative to each other. Bulk fitness functions can be useful (vs. normal fitness functions) when fitness of a particular solution cannot be easily computed in isolation, but instead is dependent upon the fitness of its fellow solutions that are also under consideration. This abstract class should be extended and the evaluate\-Chromosomes() method implemented to evaluate each of the Chromosomes given in an array and set their fitness values prior to returning.
+
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 30 of file Bulk\-Fitness\-Function.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1_bulk_fitness_function_a3789d9f9a8c4245f3f970c172241b1da}{\index{org\-::jgap\-::\-Bulk\-Fitness\-Function@{org\-::jgap\-::\-Bulk\-Fitness\-Function}!clone@{clone}}
+\index{clone@{clone}!org::jgap::BulkFitnessFunction@{org\-::jgap\-::\-Bulk\-Fitness\-Function}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}Object org.\-jgap.\-Bulk\-Fitness\-Function.\-clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1_bulk_fitness_function_a3789d9f9a8c4245f3f970c172241b1da}
+Override in your implementation if necessary.
+
+\begin{DoxyReturn}{Returns}
+deep clone of the current instance
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-2 
+\end{DoxySince}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1util_1_1_i_cloneable_aa7e7d62077e6428ad7904932b1b4f7d5}{org.\-jgap.\-util.\-I\-Cloneable}.
+
+
+
+Definition at line 56 of file Bulk\-Fitness\-Function.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1_bulk_fitness_function_a2685b837c809586e7a029e670bc1cd42}{\index{org\-::jgap\-::\-Bulk\-Fitness\-Function@{org\-::jgap\-::\-Bulk\-Fitness\-Function}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!org::jgap::BulkFitnessFunction@{org\-::jgap\-::\-Bulk\-Fitness\-Function}}
+\subsubsection[{evaluate}]{\setlength{\rightskip}{0pt plus 5cm}abstract void org.\-jgap.\-Bulk\-Fitness\-Function.\-evaluate (
+\begin{DoxyParamCaption}
+\item[{{\bf Population}}]{a\-\_\-chromosomes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classorg_1_1jgap_1_1_bulk_fitness_function_a2685b837c809586e7a029e670bc1cd42}
+Calculates and sets the fitness values on each of the given Chromosomes via their set\-Fitness\-Value() method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-chromosomes} & list of Chromosomes for which the fitness values must be computed and set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-2 (prior versions used other input type) 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1impl_1_1fitness_1_1_rosenbrocks_bulk_negative_function_ad5b5b0c55e81266cf47abbed3069f470}{org.\-jgap.\-impl.\-fitness.\-Rosenbrocks\-Bulk\-Negative\-Function}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1_bulk_fitness_function_a2cf877b42f4607be78def1b50cb0008f}{\index{org\-::jgap\-::\-Bulk\-Fitness\-Function@{org\-::jgap\-::\-Bulk\-Fitness\-Function}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::BulkFitnessFunction@{org\-::jgap\-::\-Bulk\-Fitness\-Function}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-Bulk\-Fitness\-Function.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-9 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1_bulk_fitness_function_a2cf877b42f4607be78def1b50cb0008f}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 33 of file Bulk\-Fitness\-Function.\-java.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/\hyperlink{_bulk_fitness_function_8java}{Bulk\-Fitness\-Function.\-java}\end{DoxyCompactItemize}

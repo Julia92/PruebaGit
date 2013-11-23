@@ -1,0 +1,203 @@
+.TH "org.jgap.gp.function.Equals" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.function.Equals \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.MathCommand\fP, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEquals\fP (final GPConfiguration a_conf, Class a_type)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBEquals\fP (final GPConfiguration a_conf, Class a_type, int a_subReturnType, int[] a_subChildTypes)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBexecute_boolean\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "Class \fBgetChildType\fP (\fBIGPProgram\fP a_ind, int a_index)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Class \fBm_type\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.9 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The equals operation\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file Equals\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.function\&.Equals\&.Equals (final GPConfigurationa_conf, Classa_type) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 31 of file Equals\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.Equals\&.clone(), and org\&.jgap\&.gp\&.function\&.Equals\&.equals()\&.
+.SS "org\&.jgap\&.gp\&.function\&.Equals\&.Equals (final GPConfigurationa_conf, Classa_type, inta_subReturnType, int[]a_subChildTypes) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 36 of file Equals\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.BooleanClass, and org\&.jgap\&.gp\&.function\&.Equals\&.m_type\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.gp\&.function\&.Equals\&.clone ()\fC [inline]\fP"
+Clones the object\&. Simple and straight forward implementation here\&.
+.PP
+\fBReturns:\fP
+.RS 4
+cloned instance of this object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 94 of file Equals\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.Equals\&.Equals(), org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.getSubChildTypes(), org\&.jgap\&.gp\&.CommandGene\&.getSubReturnType(), and org\&.jgap\&.gp\&.function\&.Equals\&.m_type\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.Equals\&.equals (Objecta_other)\fC [inline]\fP"
+The equals method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the objects are seen as equal
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Frank Pape 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 113 of file Equals\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.Equals\&.Equals(), and org\&.jgap\&.gp\&.function\&.Equals\&.m_type\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.Equals\&.execute_boolean()\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.Equals\&.execute_boolean (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 57 of file Equals\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.BooleanClass, org\&.jgap\&.gp\&.CommandGene\&.DELTA, org\&.jgap\&.gp\&.CommandGene\&.DoubleClass, org\&.jgap\&.gp\&.function\&.Equals\&.equals(), org\&.jgap\&.gp\&.CommandGene\&.FloatClass, org\&.jgap\&.gp\&.CommandGene\&.IntegerClass, org\&.jgap\&.gp\&.CommandGene\&.LongClass, org\&.jgap\&.gp\&.function\&.Equals\&.m_type, and org\&.jgap\&.gp\&.CommandGene\&.VoidClass\&.
+.SS "Class org\&.jgap\&.gp\&.function\&.Equals\&.getChildType (\fBIGPProgram\fPa_ind, inta_index)\fC [inline]\fP"
+
+.PP
+Definition at line 82 of file Equals\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.Equals\&.m_type\&.
+.SS "String org\&.jgap\&.gp\&.function\&.Equals\&.getName ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+textual name of this command
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 53 of file Equals\&.java\&.
+.SS "String org\&.jgap\&.gp\&.function\&.Equals\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 43 of file Equals\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.function\&.Equals\&.CVS_REVISION = '$Revision: 1\&.9 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 27 of file Equals\&.java\&.
+.SS "Class org\&.jgap\&.gp\&.function\&.Equals\&.m_type\fC [private]\fP"
+
+.PP
+Definition at line 29 of file Equals\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.Equals\&.clone(), org\&.jgap\&.gp\&.function\&.Equals\&.Equals(), org\&.jgap\&.gp\&.function\&.Equals\&.equals(), org\&.jgap\&.gp\&.function\&.Equals\&.execute_boolean(), and org\&.jgap\&.gp\&.function\&.Equals\&.getChildType()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

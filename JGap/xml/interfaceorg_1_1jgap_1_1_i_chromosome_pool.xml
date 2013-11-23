@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="interfaceorg_1_1jgap_1_1_i_chromosome_pool" kind="interface" prot="public">
+    <compoundname>org::jgap::IChromosomePool</compoundname>
+    <derivedcompoundref refid="classorg_1_1jgap_1_1impl_1_1_chromosome_pool" prot="public" virt="non-virtual">org.jgap.impl.ChromosomePool</derivedcompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="interfaceorg_1_1jgap_1_1_i_chromosome_pool_1ab847d47751d5e687022ffb82b3ce7937" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.IChromosomePool.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.3 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IChromosomePool.java" line="20" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IChromosomePool.java" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1_i_chromosome_pool_1a8ca58eebe408999a357f4c6c8d413f9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+        <definition>IChromosome org.jgap.IChromosomePool.acquireChromosome</definition>
+        <argsstring>()</argsstring>
+        <name>acquireChromosome</name>
+        <reimplementedby refid="classorg_1_1jgap_1_1impl_1_1_chromosome_pool_1a3d6d1ebd5a974a85a62e89897a2be0a7">acquireChromosome</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Attempts to acquire an <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> instance from the chromosome pool.</para><para><simplesect kind="return"><para>a <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> instance from the pool or null if no <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> instances are available in the pool</para></simplesect>
+<simplesect kind="author"><para>Neil Rostan </para></simplesect>
+<simplesect kind="since"><para>2.6 (since 1.0 in ChromosomePool) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IChromosomePool.java" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceorg_1_1jgap_1_1_i_chromosome_pool_1a79be125cb49cca7236932cc2dbc7f014" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.IChromosomePool.releaseChromosome</definition>
+        <argsstring>(IChromosome a_chromosome)</argsstring>
+        <name>releaseChromosome</name>
+        <param>
+          <type><ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+          <declname>a_chromosome</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Releases a <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> to the pool. It&apos;s not required that the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> originated from the pool<ndash/>any <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> can be released to it. This method should invoke the cleanup() method on each of the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref>&apos;s genes prior to adding it back to the pool.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_chromosome</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classorg_1_1jgap_1_1_chromosome" kindref="compound">Chromosome</ref> instance to be released into the pool</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rostan </para></simplesect>
+<simplesect kind="since"><para>2.6 (since 1.0 in ChromosomePool) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IChromosomePool.java" line="44" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Interface for chromosome pools (e.g., see class ChromosomePool).</para><para><simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="14002">
+        <label>org.jgap.impl.ChromosomePool</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_chromosome_pool"/>
+        <childnode refid="14001" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14001">
+        <label>org.jgap.IChromosomePool</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool"/>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IChromosomePool.java" line="18" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/IChromosomePool.java" bodystart="18" bodyend="45"/>
+    <listofallmembers>
+      <member refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool_1a8ca58eebe408999a357f4c6c8d413f9d" prot="public" virt="non-virtual"><scope>org::jgap::IChromosomePool</scope><name>acquireChromosome</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool_1ab847d47751d5e687022ffb82b3ce7937" prot="public" virt="non-virtual"><scope>org::jgap::IChromosomePool</scope><name>CVS_REVISION</name></member>
+      <member refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool_1a79be125cb49cca7236932cc2dbc7f014" prot="public" virt="non-virtual"><scope>org::jgap::IChromosomePool</scope><name>releaseChromosome</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

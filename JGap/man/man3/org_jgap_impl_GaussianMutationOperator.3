@@ -1,0 +1,281 @@
+.TH "org.jgap.impl.GaussianMutationOperator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.GaussianMutationOperator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.BaseGeneticOperator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGaussianMutationOperator\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGaussianMutationOperator\fP (\fBConfiguration\fP a_config)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBGaussianMutationOperator\fP (final \fBConfiguration\fP a_configuration, final double a_deviation)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBoperate\fP (final \fBPopulation\fP a_population, final List a_candidateChromosomes)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (final Object a_other)"
+.br
+.ti -1c
+.RI "double \fBgetDeviation\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmutateGene\fP (final \fBGene\fP a_gene, final double a_percentage)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBm_deviation\fP"
+.br
+.ti -1c
+.RI "\fBRandomGenerator\fP \fBm_rg\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.25 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This genetic operator performs Gaussian mutation across all genes in a \fBChromosome\fP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert (modified JOONEGAP source) 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file GaussianMutationOperator\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.GaussianMutationOperator\&.GaussianMutationOperator () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a \fBGaussianMutationOperator\fP with a default deviation of 0\&.05\&. Attention: The configuration used is the one set with the static method Genotype\&.setConfiguration\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 41 of file GaussianMutationOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GaussianMutationOperator\&.compareTo()\&.
+.SS "org\&.jgap\&.impl\&.GaussianMutationOperator\&.GaussianMutationOperator (\fBConfiguration\fPa_config) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a \fBGaussianMutationOperator\fP with a default deviation of 0\&.05\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 56 of file GaussianMutationOperator\&.java\&.
+.SS "org\&.jgap\&.impl\&.GaussianMutationOperator\&.GaussianMutationOperator (final \fBConfiguration\fPa_configuration, final doublea_deviation) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a \fBGaussianMutationOperator\fP with the given deviation\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_configuration\fP the configuration to use 
+.br
+\fIa_deviation\fP sic
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 (since 2\&.0 without a_configuration) 
+.RE
+.PP
+
+.PP
+Definition at line 71 of file GaussianMutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.GaussianMutationOperator\&.m_deviation\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int org\&.jgap\&.impl\&.GaussianMutationOperator\&.compareTo (final Objecta_other)\fC [inline]\fP"
+Compares the given \fBGeneticOperator\fP to this \fBGeneticOperator\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the instance against which to compare this instance
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a negative number if this instance is 'less than' the given instance, zero if they are equal to each other, and a positive number if this is 'greater than' the given instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 178 of file GaussianMutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.GaussianMutationOperator\&.GaussianMutationOperator(), and org\&.jgap\&.impl\&.GaussianMutationOperator\&.m_deviation\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GaussianMutationOperatorTest\&.testCompareTo_0()\&.
+.SS "double org\&.jgap\&.impl\&.GaussianMutationOperator\&.getDeviation ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the deviation set
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 202 of file GaussianMutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.GaussianMutationOperator\&.m_deviation\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GaussianMutationOperatorTest\&.testConstruct_0(), org\&.jgap\&.impl\&.GaussianMutationOperatorTest\&.testConstruct_1(), and org\&.jgap\&.impl\&.GaussianMutationOperatorTest\&.testConstruct_3()\&.
+.SS "void org\&.jgap\&.impl\&.GaussianMutationOperator\&.mutateGene (final \fBGene\fPa_gene, final doublea_percentage)\fC [inline]\fP, \fC [private]\fP"
+Helper: mutate all atomic elements of a gene\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_gene\fP the gene to be mutated 
+.br
+\fIa_percentage\fP the percentage the gene is to be mutated with
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 158 of file GaussianMutationOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GaussianMutationOperator\&.operate()\&.
+.SS "void org\&.jgap\&.impl\&.GaussianMutationOperator\&.operate (final \fBPopulation\fPa_population, final Lista_candidateChromosomes)\fC [inline]\fP"
+Executes the operation\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_population\fP containing chromosomes to be mutated 
+.br
+\fIa_candidateChromosomes\fP resulting chromosomes
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.GeneticOperator\fP\&.
+.PP
+Definition at line 87 of file GaussianMutationOperator\&.java\&.
+.PP
+References org\&.jgap\&.util\&.ICloneable\&.clone(), org\&.jgap\&.impl\&.CompositeGene\&.geneAt(), org\&.jgap\&.BaseGeneticOperator\&.getConfiguration(), org\&.jgap\&.impl\&.GaussianMutationOperator\&.m_deviation, org\&.jgap\&.BaseGeneticOperator\&.m_monitorActive, org\&.jgap\&.impl\&.GaussianMutationOperator\&.m_rg, org\&.jgap\&.impl\&.GaussianMutationOperator\&.mutateGene(), and org\&.jgap\&.Population\&.size()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.GaussianMutationOperator\&.CVS_REVISION = '$Revision: 1\&.25 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file GaussianMutationOperator\&.java\&.
+.SS "double org\&.jgap\&.impl\&.GaussianMutationOperator\&.m_deviation\fC [private]\fP"
+
+.PP
+Definition at line 27 of file GaussianMutationOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GaussianMutationOperator\&.compareTo(), org\&.jgap\&.impl\&.GaussianMutationOperator\&.GaussianMutationOperator(), org\&.jgap\&.impl\&.GaussianMutationOperator\&.getDeviation(), and org\&.jgap\&.impl\&.GaussianMutationOperator\&.operate()\&.
+.SS "\fBRandomGenerator\fP org\&.jgap\&.impl\&.GaussianMutationOperator\&.m_rg\fC [private]\fP"
+
+.PP
+Definition at line 29 of file GaussianMutationOperator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.GaussianMutationOperator\&.operate()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

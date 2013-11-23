@@ -1,0 +1,316 @@
+.TH "org.jgap.audit.IEvolutionMonitor" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.audit.IEvolutionMonitor \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Serializable\&.
+.PP
+Inherited by \fBorg\&.jgap\&.audit\&.ChainedMonitors\fP, \fBorg\&.jgap\&.audit\&.EvolutionMonitor\fP, \fBorg\&.jgap\&.audit\&.FitnessImprovementMonitor\fP, and \fBorg\&.jgap\&.audit\&.TimedMonitor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBstart\fP (\fBConfiguration\fP a_config)"
+.br
+.ti -1c
+.RI "boolean \fBnextCycle\fP (\fBPopulation\fP a_pop, List< String > a_messages)"
+.br
+.ti -1c
+.RI "void \fBevent\fP (String a_monitorEvent, int a_evolutionNo, Object[] a_information)"
+.br
+.ti -1c
+.RI "\fBPopulationHistoryIndexed\fP \fBgetPopulations\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.5 $'"
+.br
+.ti -1c
+.RI "static final String \fBMONITOR_EVENT_REMOVE_CHROMOSOME\fP"
+.br
+.ti -1c
+.RI "static final String \fBMONITOR_EVENT_BEFORE_UPDATE_CHROMOSOMES1\fP"
+.br
+.ti -1c
+.RI "static final String \fBMONITOR_EVENT_BEFORE_UPDATE_CHROMOSOMES2\fP"
+.br
+.ti -1c
+.RI "static final String \fBMONITOR_EVENT_AFTER_UPDATE_CHROMOSOMES1\fP"
+.br
+.ti -1c
+.RI "static final String \fBMONITOR_EVENT_AFTER_UPDATE_CHROMOSOMES2\fP"
+.br
+.ti -1c
+.RI "static final String \fBMONITOR_EVENT_BEFORE_SELECT\fP = 'before_select'"
+.br
+.ti -1c
+.RI "static final String \fBMONITOR_EVENT_AFTER_SELECT\fP = 'after_select'"
+.br
+.ti -1c
+.RI "static final String \fBMONITOR_EVENT_BEFORE_OPERATE\fP = 'before_operate'"
+.br
+.ti -1c
+.RI "static final String \fBMONITOR_EVENT_AFTER_OPERATE\fP = 'after_operate'"
+.br
+.ti -1c
+.RI "static final String \fBMONITOR_EVENT_BEFORE_BULK_EVAL\fP"
+.br
+.ti -1c
+.RI "static final String \fBMONITOR_EVENT_AFTER_BULK_EVAL\fP = 'after_bulk_eval'"
+.br
+.ti -1c
+.RI "static final String \fBMONITOR_EVENT_BEFORE_ADD_CHROMOSOME\fP"
+.br
+.ti -1c
+.RI "static final String \fBMONITOR_EVENT_READD_FITTEST\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Monitors evolution and decides when to stop the evolution cycle\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file IEvolutionMonitor\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.audit\&.IEvolutionMonitor\&.event (Stringa_monitorEvent, inta_evolutionNo, Object[]a_information)"
+Called whenever it's worth monitoring\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_monitorEvent\fP see constants at top of class 
+.br
+\fIa_evolutionNo\fP the index of the evolution round (1, 2, \&.\&.\&.) 
+.br
+\fIa_information\fP event-specific information
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.audit\&.EvolutionMonitor\fP, \fBorg\&.jgap\&.audit\&.FitnessImprovementMonitor\fP, \fBorg\&.jgap\&.audit\&.ChainedMonitors\fP, and \fBorg\&.jgap\&.audit\&.TimedMonitor\fP\&.
+.SS "\fBPopulationHistoryIndexed\fP org\&.jgap\&.audit\&.IEvolutionMonitor\&.getPopulations ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the gathered monitoring data
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.5 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.audit\&.EvolutionMonitor\fP, \fBorg\&.jgap\&.audit\&.FitnessImprovementMonitor\fP, \fBorg\&.jgap\&.audit\&.ChainedMonitors\fP, and \fBorg\&.jgap\&.audit\&.TimedMonitor\fP\&.
+.SS "boolean org\&.jgap\&.audit\&.IEvolutionMonitor\&.nextCycle (\fBPopulation\fPa_pop, List< String >a_messages)"
+Called after another evolution cycle has been executed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_pop\fP the currently evolved population 
+.br
+\fIa_messages\fP the monitor can append messages here to indicate why it asks evolution to stop 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true: continue with the evolution; false: stop evolution
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.4 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.audit\&.EvolutionMonitor\fP, \fBorg\&.jgap\&.audit\&.FitnessImprovementMonitor\fP, \fBorg\&.jgap\&.audit\&.ChainedMonitors\fP, and \fBorg\&.jgap\&.audit\&.TimedMonitor\fP\&.
+.SS "void org\&.jgap\&.audit\&.IEvolutionMonitor\&.start (\fBConfiguration\fPa_config)"
+Called just before the evolution starts\&. Setup your monitor here\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration used
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.4 
+.RE
+.PP
+
+.PP
+Implemented in \fBorg\&.jgap\&.audit\&.EvolutionMonitor\fP, \fBorg\&.jgap\&.audit\&.FitnessImprovementMonitor\fP, \fBorg\&.jgap\&.audit\&.ChainedMonitors\fP, and \fBorg\&.jgap\&.audit\&.TimedMonitor\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.audit\&.IEvolutionMonitor\&.CVS_REVISION = '$Revision: 1\&.5 $'\fC [static]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file IEvolutionMonitor\&.java\&.
+.SS "final String org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_AFTER_BULK_EVAL = 'after_bulk_eval'\fC [static]\fP"
+
+.PP
+Definition at line 54 of file IEvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.event(), and org\&.jgap\&.audit\&.EvolutionMonitor\&.event()\&.
+.SS "final String org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_AFTER_OPERATE = 'after_operate'\fC [static]\fP"
+
+.PP
+Definition at line 49 of file IEvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.event(), and org\&.jgap\&.audit\&.EvolutionMonitor\&.event()\&.
+.SS "final String org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_AFTER_SELECT = 'after_select'\fC [static]\fP"
+
+.PP
+Definition at line 45 of file IEvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.event(), and org\&.jgap\&.audit\&.EvolutionMonitor\&.event()\&.
+.SS "final String org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_AFTER_UPDATE_CHROMOSOMES1\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+      "after_update_chromosomes(1)"
+.fi
+.PP
+Definition at line 37 of file IEvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.event(), and org\&.jgap\&.audit\&.EvolutionMonitor\&.event()\&.
+.SS "final String org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_AFTER_UPDATE_CHROMOSOMES2\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+      "after_update_chromosomes(2)"
+.fi
+.PP
+Definition at line 40 of file IEvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.event(), and org\&.jgap\&.audit\&.EvolutionMonitor\&.event()\&.
+.SS "final String org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_BEFORE_ADD_CHROMOSOME\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+      "before_add_chromosome"
+.fi
+.PP
+Definition at line 56 of file IEvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.event(), and org\&.jgap\&.audit\&.EvolutionMonitor\&.event()\&.
+.SS "final String org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_BEFORE_BULK_EVAL\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+      "before_bulk_eval"
+.fi
+.PP
+Definition at line 51 of file IEvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.event(), and org\&.jgap\&.audit\&.EvolutionMonitor\&.event()\&.
+.SS "final String org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_BEFORE_OPERATE = 'before_operate'\fC [static]\fP"
+
+.PP
+Definition at line 47 of file IEvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.event(), and org\&.jgap\&.audit\&.EvolutionMonitor\&.event()\&.
+.SS "final String org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_BEFORE_SELECT = 'before_select'\fC [static]\fP"
+
+.PP
+Definition at line 43 of file IEvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.event(), and org\&.jgap\&.audit\&.EvolutionMonitor\&.event()\&.
+.SS "final String org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_BEFORE_UPDATE_CHROMOSOMES1\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+      "before_update_chromosomes(1)"
+.fi
+.PP
+Definition at line 31 of file IEvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.event(), and org\&.jgap\&.audit\&.EvolutionMonitor\&.event()\&.
+.SS "final String org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_BEFORE_UPDATE_CHROMOSOMES2\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+      "before_update_chromosomes(2)"
+.fi
+.PP
+Definition at line 34 of file IEvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.event(), and org\&.jgap\&.audit\&.EvolutionMonitor\&.event()\&.
+.SS "final String org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_READD_FITTEST\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+      "readd_fittest_chromosome"
+.fi
+.PP
+Definition at line 59 of file IEvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.event(), and org\&.jgap\&.audit\&.EvolutionMonitor\&.event()\&.
+.SS "final String org\&.jgap\&.audit\&.IEvolutionMonitor\&.MONITOR_EVENT_REMOVE_CHROMOSOME\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+      "remove_chromosome"
+.fi
+.PP
+Definition at line 28 of file IEvolutionMonitor\&.java\&.
+.PP
+Referenced by org\&.jgap\&.audit\&.FitnessImprovementMonitor\&.event(), and org\&.jgap\&.audit\&.EvolutionMonitor\&.event()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

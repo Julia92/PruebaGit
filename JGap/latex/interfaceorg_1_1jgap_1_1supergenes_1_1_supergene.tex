@@ -1,0 +1,145 @@
+\hypertarget{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene}{\section{org.\-jgap.\-supergenes.\-Supergene Interface Reference}
+\label{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene}\index{org.\-jgap.\-supergenes.\-Supergene@{org.\-jgap.\-supergenes.\-Supergene}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-supergenes.\-Supergene\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-supergenes.\-Supergene\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+boolean \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_a9a664a40144dca4dd6fd3b4170ce7570}{is\-Valid} ()
+\item 
+\hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}\mbox{[}$\,$\mbox{]} \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_a34ec660dc0d241a9eabc993ddef2ca87}{get\-Genes} ()
+\item 
+\hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_a62e038f5ed00578a997a044f49136bbd}{gene\-At} (int a\-\_\-index)
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_a56ef316d0073f74cfd2704ac407ad83f}{set\-Validator} (\hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator}{Supergene\-Validator} a\-\_\-validator)
+\item 
+\hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator}{Supergene\-Validator} \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_a97719a430d58fba89ba26ed8f4a2a490}{get\-Validator} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_a2af8daabd0a582a9d761a3437c69be66}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-14 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene}{Supergene} represents several genes, which usually control closely related aspects of the phenotype. The \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene}{Supergene} mutates only in such way, that the allele combination remains valid. Mutations, that make allele combination invalid, are rejected inside \hyperlink{interfaceorg_1_1jgap_1_1_gene_af506b6e1d6ceb3e88e522da4c79adba4}{org.\-jgap.\-Gene\#apply\-Mutation} method. \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene}{Supergene} components can also be a \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene}{Supergene}, creating the tree-\/like structures in this way. 
+
+In biology, the invalid combinations represent completely broken metabolic chains, unbalanced signaling pathways (activator without supressor) and so on. 
+
+At {\itshape least about 5 \% of the randomly generated \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene}{Supergene} suparallele values should be valid.} If the valid combinations represents too small part of all possible combinations, it can take too long to find the suitable mutation that does not brake a supergene. If you face this problem, try to split the supergene into several sub-\/supergenes.
+
+\begin{DoxyAuthor}{Author}
+Audrius Meskauskas 
+\end{DoxyAuthor}
+
+
+Definition at line 34 of file Supergene.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_a62e038f5ed00578a997a044f49136bbd}{\index{org\-::jgap\-::supergenes\-::\-Supergene@{org\-::jgap\-::supergenes\-::\-Supergene}!gene\-At@{gene\-At}}
+\index{gene\-At@{gene\-At}!org::jgap::supergenes::Supergene@{org\-::jgap\-::supergenes\-::\-Supergene}}
+\subsubsection[{gene\-At}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gene} org.\-jgap.\-supergenes.\-Supergene.\-gene\-At (
+\begin{DoxyParamCaption}
+\item[{int}]{a\-\_\-index}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_a62e038f5ed00578a997a044f49136bbd}
+Returns the \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} at the given index (locus) within the \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene}{Supergene}. The first gene is at index zero and the last gene is at the index equal to the size of this \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene}{Supergene} -\/ 1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-index} & the index of the gene value to be returned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} at the given index 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1_i_composite_gene_adad062c4c8453eb4bfafd2d7c8abd1fb}{org.\-jgap.\-I\-Composite\-Gene}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_a34ec660dc0d241a9eabc993ddef2ca87}{\index{org\-::jgap\-::supergenes\-::\-Supergene@{org\-::jgap\-::supergenes\-::\-Supergene}!get\-Genes@{get\-Genes}}
+\index{get\-Genes@{get\-Genes}!org::jgap::supergenes::Supergene@{org\-::jgap\-::supergenes\-::\-Supergene}}
+\subsubsection[{get\-Genes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gene} \mbox{[}$\,$\mbox{]} org.\-jgap.\-supergenes.\-Supergene.\-get\-Genes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_a34ec660dc0d241a9eabc993ddef2ca87}
+Get the array of genes -\/ components of this supergene. The supergene components may be supergenes itself. 
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_a5b03d0c4d103975b296d280371b901bd}{org.\-jgap.\-supergenes.\-Abstract\-Supergene}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_a97719a430d58fba89ba26ed8f4a2a490}{\index{org\-::jgap\-::supergenes\-::\-Supergene@{org\-::jgap\-::supergenes\-::\-Supergene}!get\-Validator@{get\-Validator}}
+\index{get\-Validator@{get\-Validator}!org::jgap::supergenes::Supergene@{org\-::jgap\-::supergenes\-::\-Supergene}}
+\subsubsection[{get\-Validator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Supergene\-Validator} org.\-jgap.\-supergenes.\-Supergene.\-get\-Validator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_a97719a430d58fba89ba26ed8f4a2a490}
+Gets an object, responsible for deciding if the \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene}{Supergene} allele combination is valid. If no external validator was set and the class uses its own internal validation method, it still must be able to return a validator, using the same method (typicallly, such classes just return {\itshape this}. 
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_a9ebb4d5fbce8752cba54188ad5958fcf}{org.\-jgap.\-supergenes.\-Abstract\-Supergene}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_a9a664a40144dca4dd6fd3b4170ce7570}{\index{org\-::jgap\-::supergenes\-::\-Supergene@{org\-::jgap\-::supergenes\-::\-Supergene}!is\-Valid@{is\-Valid}}
+\index{is\-Valid@{is\-Valid}!org::jgap::supergenes::Supergene@{org\-::jgap\-::supergenes\-::\-Supergene}}
+\subsubsection[{is\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-supergenes.\-Supergene.\-is\-Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_a9a664a40144dca4dd6fd3b4170ce7570}
+Test the allele combination of this supergene for validity. If a validator was previously set be calling \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_a56ef316d0073f74cfd2704ac407ad83f}{set\-Validator()}, the decission is delegated to this validator. The derived classes may have internal default validator for the case when no external validator is set. See note in the interface header.
+
+\begin{DoxyReturn}{Returns}
+true only if the supergene allele combination is valid 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_adfa0b1f704e28e3a90d187df2cf4b8b5}{org.\-jgap.\-supergenes.\-Abstract\-Supergene}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_a56ef316d0073f74cfd2704ac407ad83f}{\index{org\-::jgap\-::supergenes\-::\-Supergene@{org\-::jgap\-::supergenes\-::\-Supergene}!set\-Validator@{set\-Validator}}
+\index{set\-Validator@{set\-Validator}!org::jgap::supergenes::Supergene@{org\-::jgap\-::supergenes\-::\-Supergene}}
+\subsubsection[{set\-Validator}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-supergenes.\-Supergene.\-set\-Validator (
+\begin{DoxyParamCaption}
+\item[{{\bf Supergene\-Validator}}]{a\-\_\-validator}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_a56ef316d0073f74cfd2704ac407ad83f}
+Sets an object, responsible for deciding if the \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene}{Supergene} allele combination is valid. If it is set to null, no validation is performed (all combinations are assumed to be valid). The derived classes may have internal default validator for the case when no external validator is set. 
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_afae838561a1237ab6b39456ab0e3b8c8}{org.\-jgap.\-supergenes.\-Abstract\-Supergene}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_a2af8daabd0a582a9d761a3437c69be66}{\index{org\-::jgap\-::supergenes\-::\-Supergene@{org\-::jgap\-::supergenes\-::\-Supergene}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::supergenes::Supergene@{org\-::jgap\-::supergenes\-::\-Supergene}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-supergenes.\-Supergene.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-14 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_a2af8daabd0a582a9d761a3437c69be66}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 37 of file Supergene.\-java.
+
+
+
+The documentation for this interface was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/supergenes/\hyperlink{_supergene_8java}{Supergene.\-java}\end{DoxyCompactItemize}

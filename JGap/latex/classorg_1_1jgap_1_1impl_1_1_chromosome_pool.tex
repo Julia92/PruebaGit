@@ -1,0 +1,165 @@
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chromosome_pool}{\section{org.\-jgap.\-impl.\-Chromosome\-Pool Class Reference}
+\label{classorg_1_1jgap_1_1impl_1_1_chromosome_pool}\index{org.\-jgap.\-impl.\-Chromosome\-Pool@{org.\-jgap.\-impl.\-Chromosome\-Pool}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-impl.\-Chromosome\-Pool\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classorg_1_1jgap_1_1impl_1_1_chromosome_pool__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-impl.\-Chromosome\-Pool\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1impl_1_1_chromosome_pool__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_chromosome_pool_aac54417db26316ae6e15c3d8877f50a3}{Chromosome\-Pool} ()
+\item 
+synchronized \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} \hyperlink{classorg_1_1jgap_1_1impl_1_1_chromosome_pool_a3d6d1ebd5a974a85a62e89897a2be0a7}{acquire\-Chromosome} ()
+\item 
+synchronized void \hyperlink{classorg_1_1jgap_1_1impl_1_1_chromosome_pool_a2db14878acc50a99083385dc8bb51e68}{release\-Chromosome} (final \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome}{I\-Chromosome} a\-\_\-chromosome)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classorg_1_1jgap_1_1impl_1_1_pool}{Pool} \hyperlink{classorg_1_1jgap_1_1impl_1_1_chromosome_pool_a04c0039ba1e078a78ceecfe2e75cbb22}{m\-\_\-chromosome\-Pool}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1impl_1_1_chromosome_pool_a33d1323ce195bba5e48f029024db061b}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-12 \$\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Provides a pooling mechanism for \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} instances so that discarded \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} instances can be recycled, thus saving memory and the overhead of constructing new ones from scratch each time.
+
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 23 of file Chromosome\-Pool.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chromosome_pool_aac54417db26316ae6e15c3d8877f50a3}{\index{org\-::jgap\-::impl\-::\-Chromosome\-Pool@{org\-::jgap\-::impl\-::\-Chromosome\-Pool}!Chromosome\-Pool@{Chromosome\-Pool}}
+\index{Chromosome\-Pool@{Chromosome\-Pool}!org::jgap::impl::ChromosomePool@{org\-::jgap\-::impl\-::\-Chromosome\-Pool}}
+\subsubsection[{Chromosome\-Pool}]{\setlength{\rightskip}{0pt plus 5cm}org.\-jgap.\-impl.\-Chromosome\-Pool.\-Chromosome\-Pool (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_chromosome_pool_aac54417db26316ae6e15c3d8877f50a3}
+Constructor.
+
+\begin{DoxyAuthor}{Author}
+Neil Rostan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 39 of file Chromosome\-Pool.\-java.
+
+
+
+References org.\-jgap.\-impl.\-Chromosome\-Pool.\-m\-\_\-chromosome\-Pool.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chromosome_pool_a3d6d1ebd5a974a85a62e89897a2be0a7}{\index{org\-::jgap\-::impl\-::\-Chromosome\-Pool@{org\-::jgap\-::impl\-::\-Chromosome\-Pool}!acquire\-Chromosome@{acquire\-Chromosome}}
+\index{acquire\-Chromosome@{acquire\-Chromosome}!org::jgap::impl::ChromosomePool@{org\-::jgap\-::impl\-::\-Chromosome\-Pool}}
+\subsubsection[{acquire\-Chromosome}]{\setlength{\rightskip}{0pt plus 5cm}synchronized {\bf I\-Chromosome} org.\-jgap.\-impl.\-Chromosome\-Pool.\-acquire\-Chromosome (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_chromosome_pool_a3d6d1ebd5a974a85a62e89897a2be0a7}
+Attempts to acquire an \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} instance from the chromosome pool. It should be noted that nothing is guaranteed about the value of the \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome}'s genes and they should be treated as undefined.
+
+\begin{DoxyReturn}{Returns}
+a \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} instance from the pool or null if no \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} instances are available in the pool
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Neil Rostan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Implements \hyperlink{interfaceorg_1_1jgap_1_1_i_chromosome_pool_a8ca58eebe408999a357f4c6c8d413f9d}{org.\-jgap.\-I\-Chromosome\-Pool}.
+
+
+
+Definition at line 54 of file Chromosome\-Pool.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chromosome_pool_a2db14878acc50a99083385dc8bb51e68}{\index{org\-::jgap\-::impl\-::\-Chromosome\-Pool@{org\-::jgap\-::impl\-::\-Chromosome\-Pool}!release\-Chromosome@{release\-Chromosome}}
+\index{release\-Chromosome@{release\-Chromosome}!org::jgap::impl::ChromosomePool@{org\-::jgap\-::impl\-::\-Chromosome\-Pool}}
+\subsubsection[{release\-Chromosome}]{\setlength{\rightskip}{0pt plus 5cm}synchronized void org.\-jgap.\-impl.\-Chromosome\-Pool.\-release\-Chromosome (
+\begin{DoxyParamCaption}
+\item[{final {\bf I\-Chromosome}}]{a\-\_\-chromosome}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1impl_1_1_chromosome_pool_a2db14878acc50a99083385dc8bb51e68}
+Releases a \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} to the pool. It's not required that the \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} originated from the pool--any \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} can be released to it. This method will invoke the cleanup() method on each of the \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome}'s genes prior to adding it back to the pool.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-chromosome} & the \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} instance to be released into the pool\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Neil Rostan 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 69 of file Chromosome\-Pool.\-java.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chromosome_pool_a33d1323ce195bba5e48f029024db061b}{\index{org\-::jgap\-::impl\-::\-Chromosome\-Pool@{org\-::jgap\-::impl\-::\-Chromosome\-Pool}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::impl::ChromosomePool@{org\-::jgap\-::impl\-::\-Chromosome\-Pool}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-impl.\-Chromosome\-Pool.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-12 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_chromosome_pool_a33d1323ce195bba5e48f029024db061b}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 26 of file Chromosome\-Pool.\-java.
+
+\hypertarget{classorg_1_1jgap_1_1impl_1_1_chromosome_pool_a04c0039ba1e078a78ceecfe2e75cbb22}{\index{org\-::jgap\-::impl\-::\-Chromosome\-Pool@{org\-::jgap\-::impl\-::\-Chromosome\-Pool}!m\-\_\-chromosome\-Pool@{m\-\_\-chromosome\-Pool}}
+\index{m\-\_\-chromosome\-Pool@{m\-\_\-chromosome\-Pool}!org::jgap::impl::ChromosomePool@{org\-::jgap\-::impl\-::\-Chromosome\-Pool}}
+\subsubsection[{m\-\_\-chromosome\-Pool}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pool} org.\-jgap.\-impl.\-Chromosome\-Pool.\-m\-\_\-chromosome\-Pool\hspace{0.3cm}{\ttfamily [private]}}}\label{classorg_1_1jgap_1_1impl_1_1_chromosome_pool_a04c0039ba1e078a78ceecfe2e75cbb22}
+The internal pool in which the Chromosomes are stored. 
+
+Definition at line 31 of file Chromosome\-Pool.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-Chromosome\-Pool.\-Chromosome\-Pool().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/impl/\hyperlink{_chromosome_pool_8java}{Chromosome\-Pool.\-java}\end{DoxyCompactItemize}

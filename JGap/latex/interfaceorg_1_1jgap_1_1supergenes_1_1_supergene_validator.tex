@@ -1,0 +1,97 @@
+\hypertarget{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator}{\section{org.\-jgap.\-supergenes.\-Supergene\-Validator Interface Reference}
+\label{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator}\index{org.\-jgap.\-supergenes.\-Supergene\-Validator@{org.\-jgap.\-supergenes.\-Supergene\-Validator}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-supergenes.\-Supergene\-Validator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+boolean \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator_ac05f4997c7b03d61a3c5365baeccef91}{is\-Valid} (\hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}\mbox{[}$\,$\mbox{]} a\-\_\-genes, \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene}{Supergene} a\-\_\-for\-\_\-supergene)
+\item 
+String \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator_a9ef86d28cc29f90d7c451460a4a818fe}{get\-Persistent} ()
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator_a8718b55ab8474e3b5df097ef152a93f0}{set\-From\-Persistent} (String a\-\_\-string)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator_a5b799d0019e7300bd56fe1a2125384ad}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-3 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class, deciding, if the supergene allele combination is valid. Some classes Supergenes (like abstract\-Supergene) also implement supergene\-Validator, deciding themselfs about the gene validity. In request to returs a validator, they return {\itshape this}. Other classes may require always to set the external validator.
+
+\begin{DoxyAuthor}{Author}
+Audrius Meskauskas 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 24 of file Supergene\-Validator.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator_a9ef86d28cc29f90d7c451460a4a818fe}{\index{org\-::jgap\-::supergenes\-::\-Supergene\-Validator@{org\-::jgap\-::supergenes\-::\-Supergene\-Validator}!get\-Persistent@{get\-Persistent}}
+\index{get\-Persistent@{get\-Persistent}!org::jgap::supergenes::SupergeneValidator@{org\-::jgap\-::supergenes\-::\-Supergene\-Validator}}
+\subsubsection[{get\-Persistent}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-jgap.\-supergenes.\-Supergene\-Validator.\-get\-Persistent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator_a9ef86d28cc29f90d7c451460a4a818fe}
+\begin{DoxyReturn}{Returns}
+persistent string representation (if needed) of this validator. The method name is different allowing the same class to implement both \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene}{Supergene} and supergene\-Validator. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_aa7990463e784192581d7d7918cd0f1b1}{org.\-jgap.\-supergenes.\-Abstract\-Supergene}, and \hyperlink{classorg_1_1jgap_1_1supergenes_1_1_validator_af65e5cad1eef911e6a5b97e4fbeaf130}{org.\-jgap.\-supergenes.\-Validator}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator_ac05f4997c7b03d61a3c5365baeccef91}{\index{org\-::jgap\-::supergenes\-::\-Supergene\-Validator@{org\-::jgap\-::supergenes\-::\-Supergene\-Validator}!is\-Valid@{is\-Valid}}
+\index{is\-Valid@{is\-Valid}!org::jgap::supergenes::SupergeneValidator@{org\-::jgap\-::supergenes\-::\-Supergene\-Validator}}
+\subsubsection[{is\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-supergenes.\-Supergene\-Validator.\-is\-Valid (
+\begin{DoxyParamCaption}
+\item[{{\bf Gene}\mbox{[}$\,$\mbox{]}}]{a\-\_\-genes, }
+\item[{{\bf Supergene}}]{a\-\_\-for\-\_\-supergene}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator_ac05f4997c7b03d61a3c5365baeccef91}
+Return true if this gene combination is valid for the given supergene 
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1supergenes_1_1_validator_a8f5b2697943140ed0647bbcda7911939}{org.\-jgap.\-supergenes.\-Validator}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator_a8718b55ab8474e3b5df097ef152a93f0}{\index{org\-::jgap\-::supergenes\-::\-Supergene\-Validator@{org\-::jgap\-::supergenes\-::\-Supergene\-Validator}!set\-From\-Persistent@{set\-From\-Persistent}}
+\index{set\-From\-Persistent@{set\-From\-Persistent}!org::jgap::supergenes::SupergeneValidator@{org\-::jgap\-::supergenes\-::\-Supergene\-Validator}}
+\subsubsection[{set\-From\-Persistent}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-supergenes.\-Supergene\-Validator.\-set\-From\-Persistent (
+\begin{DoxyParamCaption}
+\item[{String}]{a\-\_\-string}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator_a8718b55ab8474e3b5df097ef152a93f0}
+Set a persistend string representation (if needed) for this validator. The method name is different allowing the same class to implement both \hyperlink{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene}{Supergene} and supergene\-Validator. 
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_a70a5435dbf92b886ab7d5bbcd2d79d09}{org.\-jgap.\-supergenes.\-Abstract\-Supergene}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator_a5b799d0019e7300bd56fe1a2125384ad}{\index{org\-::jgap\-::supergenes\-::\-Supergene\-Validator@{org\-::jgap\-::supergenes\-::\-Supergene\-Validator}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::supergenes::SupergeneValidator@{org\-::jgap\-::supergenes\-::\-Supergene\-Validator}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-supergenes.\-Supergene\-Validator.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-3 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{interfaceorg_1_1jgap_1_1supergenes_1_1_supergene_validator_a5b799d0019e7300bd56fe1a2125384ad}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 26 of file Supergene\-Validator.\-java.
+
+
+
+The documentation for this interface was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/supergenes/\hyperlink{_supergene_validator_8java}{Supergene\-Validator.\-java}\end{DoxyCompactItemize}

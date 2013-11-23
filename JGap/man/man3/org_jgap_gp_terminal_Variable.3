@@ -1,0 +1,310 @@
+.TH "org.jgap.gp.terminal.Variable" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.terminal.Variable \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVariable\fP (final GPConfiguration a_conf, String a_varName, Class a_type)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "Class \fBgetChildType\fP (\fBIGPProgram\fP a_ind, int a_chromNum)"
+.br
+.ti -1c
+.RI "boolean \fBexecute_boolean\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "int \fBexecute_int\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "long \fBexecute_long\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "float \fBexecute_float\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "double \fBexecute_double\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "Object \fBexecute_object\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "void \fBset\fP (Object a_value)"
+.br
+.ti -1c
+.RI "Object \fBgetValue\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBVariable\fP \fBgetVariable\fP (String name)"
+.br
+.ti -1c
+.RI "static \fBVariable\fP \fBcreate\fP (GPConfiguration a_conf, String a_name, Class a_type)  throws InvalidConfigurationException "
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static Hashtable \fBvars\fP = new Hashtable()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "String \fBm_name\fP"
+.br
+.ti -1c
+.RI "Object \fBm_value\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.12 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A terminal represented by a variable (x, y, z\&.\&.\&.)\&. A variable has one single value with can be influenced from outside\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file Variable\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.terminal\&.Variable\&.Variable (final GPConfigurationa_conf, Stringa_varName, Classa_type) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 44 of file Variable\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.terminal\&.Variable\&.m_name\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.terminal\&.Variable\&.create()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBVariable\fP org\&.jgap\&.gp\&.terminal\&.Variable\&.create (GPConfigurationa_conf, Stringa_name, Classa_type) throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [static]\fP"
+Creates an instance of a \fBVariable\fP\&. If a \fBVariable\fP of that name already exists, it is returned\&. Otherwise a new instance is created, its value is initialized to null, and it is placed into the static hashtable for later retrieval by name via getVariable\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_name\fP the name of the \fBVariable\fP to create 
+.br
+\fIa_type\fP the type of the \fBVariable\fP to create 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the variable object created 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 125 of file Variable\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.terminal\&.Variable\&.Variable()\&.
+.SS "boolean org\&.jgap\&.gp\&.terminal\&.Variable\&.execute_boolean (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 72 of file Variable\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.terminal\&.Variable\&.m_value\&.
+.SS "double org\&.jgap\&.gp\&.terminal\&.Variable\&.execute_double (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 88 of file Variable\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.terminal\&.Variable\&.m_value\&.
+.SS "float org\&.jgap\&.gp\&.terminal\&.Variable\&.execute_float (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 84 of file Variable\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.terminal\&.Variable\&.m_value\&.
+.SS "int org\&.jgap\&.gp\&.terminal\&.Variable\&.execute_int (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 76 of file Variable\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.terminal\&.Variable\&.m_value\&.
+.SS "long org\&.jgap\&.gp\&.terminal\&.Variable\&.execute_long (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 80 of file Variable\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.terminal\&.Variable\&.m_value\&.
+.SS "Object org\&.jgap\&.gp\&.terminal\&.Variable\&.execute_object (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 92 of file Variable\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.terminal\&.Variable\&.m_value\&.
+.SS "Class org\&.jgap\&.gp\&.terminal\&.Variable\&.getChildType (\fBIGPProgram\fPa_ind, inta_chromNum)\fC [inline]\fP"
+
+.PP
+Definition at line 68 of file Variable\&.java\&.
+.SS "String org\&.jgap\&.gp\&.terminal\&.Variable\&.getName ()\fC [inline]\fP"
+Attention: It is important to return m_name here (see GPGenotype\&.putVariable)\&.
+.PP
+\fBReturns:\fP
+.RS 4
+textual name of this command
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 64 of file Variable\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.terminal\&.Variable\&.m_name\&.
+.SS "Object org\&.jgap\&.gp\&.terminal\&.Variable\&.getValue ()\fC [inline]\fP"
+
+.PP
+Definition at line 150 of file Variable\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.terminal\&.Variable\&.m_value\&.
+.SS "static \fBVariable\fP org\&.jgap\&.gp\&.terminal\&.Variable\&.getVariable (Stringname)\fC [inline]\fP, \fC [static]\fP"
+Gets the one instance of a named variable\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP the name of the variable to get 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the named variable, or null if that name wasn't found\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 105 of file Variable\&.java\&.
+.SS "void org\&.jgap\&.gp\&.terminal\&.Variable\&.set (Objecta_value)\fC [inline]\fP"
+Sets the value of this named variable\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_value\fP the value to set this variable with
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 146 of file Variable\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.terminal\&.Variable\&.m_value\&.
+.SS "String org\&.jgap\&.gp\&.terminal\&.Variable\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 51 of file Variable\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.terminal\&.Variable\&.m_name\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.terminal\&.Variable\&.CVS_REVISION = '$Revision: 1\&.12 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 30 of file Variable\&.java\&.
+.SS "String org\&.jgap\&.gp\&.terminal\&.Variable\&.m_name\fC [private]\fP"
+Unique name of the variable\&. 
+.PP
+Definition at line 37 of file Variable\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.terminal\&.Variable\&.getName(), org\&.jgap\&.gp\&.terminal\&.Variable\&.toString(), and org\&.jgap\&.gp\&.terminal\&.Variable\&.Variable()\&.
+.SS "Object org\&.jgap\&.gp\&.terminal\&.Variable\&.m_value\fC [private]\fP"
+Current value of the variable\&. 
+.PP
+Definition at line 42 of file Variable\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.terminal\&.Variable\&.execute_boolean(), org\&.jgap\&.gp\&.terminal\&.Variable\&.execute_double(), org\&.jgap\&.gp\&.terminal\&.Variable\&.execute_float(), org\&.jgap\&.gp\&.terminal\&.Variable\&.execute_int(), org\&.jgap\&.gp\&.terminal\&.Variable\&.execute_long(), org\&.jgap\&.gp\&.terminal\&.Variable\&.execute_object(), org\&.jgap\&.gp\&.terminal\&.Variable\&.getValue(), and org\&.jgap\&.gp\&.terminal\&.Variable\&.set()\&.
+.SS "Hashtable org\&.jgap\&.gp\&.terminal\&.Variable\&.vars = new Hashtable()\fC [static]\fP"
+
+.PP
+Definition at line 32 of file Variable\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

@@ -1,0 +1,175 @@
+.TH "org.jgap.distr.grid.wan.ReceivedPacket" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.distr.grid.wan.ReceivedPacket \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBReceivedPacket\fP (String a_title, Map a_headerData, Object a_data, String a_URI)"
+.br
+.ti -1c
+.RI "Object \fBgetData\fP ()"
+.br
+.ti -1c
+.RI "Map \fBgetHeaderData\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetTitle\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetAppid\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetURI\fP ()"
+.br
+.ti -1c
+.RI "void \fBclearHeaderData\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "String \fBmakeAppid\fP (String a_title)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "String \fBm_title\fP"
+.br
+.ti -1c
+.RI "Map \fBm_headerData\fP"
+.br
+.ti -1c
+.RI "Object \fBm_data\fP"
+.br
+.ti -1c
+.RI "String \fBm_appid\fP"
+.br
+.ti -1c
+.RI "String \fBm_URI\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.1 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains header information as well as the real content\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.3\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file ReceivedPacket\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.ReceivedPacket (Stringa_title, Mapa_headerData, Objecta_data, Stringa_URI)\fC [inline]\fP"
+
+.PP
+Definition at line 34 of file ReceivedPacket\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.m_appid, org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.m_data, org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.m_headerData, org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.m_title, org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.m_URI, and org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.makeAppid()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.clearHeaderData ()\fC [inline]\fP"
+
+.PP
+Definition at line 74 of file ReceivedPacket\&.java\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.getAppid ()\fC [inline]\fP"
+
+.PP
+Definition at line 55 of file ReceivedPacket\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.m_appid\&.
+.SS "Object org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.getData ()\fC [inline]\fP"
+
+.PP
+Definition at line 43 of file ReceivedPacket\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.m_data\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.wan\&.WANUtils\&.outputRequestInformation(), and org\&.jgap\&.distr\&.grid\&.wan\&.WANUtils\&.outputResultInformation()\&.
+.SS "Map org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.getHeaderData ()\fC [inline]\fP"
+
+.PP
+Definition at line 47 of file ReceivedPacket\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.m_headerData\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.getTitle ()\fC [inline]\fP"
+
+.PP
+Definition at line 51 of file ReceivedPacket\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.m_title\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.getURI ()\fC [inline]\fP"
+
+.PP
+Definition at line 70 of file ReceivedPacket\&.java\&.
+.PP
+References org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.m_URI\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.makeAppid (Stringa_title)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 59 of file ReceivedPacket\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.ReceivedPacket()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.CVS_REVISION = '$Revision: 1\&.1 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 22 of file ReceivedPacket\&.java\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.m_appid\fC [private]\fP"
+
+.PP
+Definition at line 30 of file ReceivedPacket\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.getAppid(), and org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.ReceivedPacket()\&.
+.SS "Object org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.m_data\fC [private]\fP"
+
+.PP
+Definition at line 28 of file ReceivedPacket\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.getData(), and org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.ReceivedPacket()\&.
+.SS "Map org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.m_headerData\fC [private]\fP"
+
+.PP
+Definition at line 26 of file ReceivedPacket\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.getHeaderData(), and org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.ReceivedPacket()\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.m_title\fC [private]\fP"
+
+.PP
+Definition at line 24 of file ReceivedPacket\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.getTitle(), and org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.ReceivedPacket()\&.
+.SS "String org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.m_URI\fC [private]\fP"
+
+.PP
+Definition at line 32 of file ReceivedPacket\&.java\&.
+.PP
+Referenced by org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.getURI(), and org\&.jgap\&.distr\&.grid\&.wan\&.ReceivedPacket\&.ReceivedPacket()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

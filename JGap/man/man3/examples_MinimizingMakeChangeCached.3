@@ -1,0 +1,125 @@
+.TH "examples.MinimizingMakeChangeCached" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.MinimizingMakeChangeCached \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmakeChangeForAmount\fP (int a_targetChangeAmount)  throws Exception "
+.br
+.ti -1c
+.RI "static void \fBmain\fP (String[] args)  throws Exception "
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.2 $'"
+.br
+.ti -1c
+.RI "static final int \fBMAX_ALLOWED_EVOLUTIONS\fP = 200"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+See class MinimizingMakeChanged\&. Here a cached fitness function is used instead of an ordinary fitness function\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file MinimizingMakeChangeCached\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static void examples\&.MinimizingMakeChangeCached\&.main (String[]args) throws Exception\fC [inline]\fP, \fC [static]\fP"
+Main method\&. A single command-line argument is expected, which is the amount of change to create (in other words, 75 would be equal to 75 cents)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargs\fP amount of change in cents to create 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 145 of file MinimizingMakeChangeCached\&.java\&.
+.PP
+References examples\&.MinimizingMakeChangeCached\&.makeChangeForAmount(), and examples\&.MinimizingFitnessFunctionCached\&.MAX_BOUND\&.
+.SS "static void examples\&.MinimizingMakeChangeCached\&.makeChangeForAmount (inta_targetChangeAmount) throws Exception\fC [inline]\fP, \fC [static]\fP"
+Executes the genetic algorithm to determine the minimum number of coins necessary to make up the given target amount of change\&. The solution will then be written to System\&.out\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_targetChangeAmount\fP the target amount of change for which this method is attempting to produce the minimum number of coins 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 47 of file MinimizingMakeChangeCached\&.java\&.
+.PP
+References examples\&.MinimizingFitnessFunctionCached\&.getTotalNumberOfCoins(), and examples\&.MinimizingMakeChangeCached\&.MAX_ALLOWED_EVOLUTIONS\&.
+.PP
+Referenced by examples\&.MinimizingMakeChangeCached\&.main()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.MinimizingMakeChangeCached\&.CVS_REVISION = '$Revision: 1\&.2 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 27 of file MinimizingMakeChangeCached\&.java\&.
+.SS "final int examples\&.MinimizingMakeChangeCached\&.MAX_ALLOWED_EVOLUTIONS = 200\fC [static]\fP, \fC [private]\fP"
+The total number of times we'll let the population evolve\&. 
+.PP
+Definition at line 32 of file MinimizingMakeChangeCached\&.java\&.
+.PP
+Referenced by examples\&.MinimizingMakeChangeCached\&.makeChangeForAmount()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

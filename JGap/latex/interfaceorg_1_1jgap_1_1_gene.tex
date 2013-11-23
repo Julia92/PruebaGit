@@ -1,0 +1,499 @@
+\hypertarget{interfaceorg_1_1jgap_1_1_gene}{\section{org.\-jgap.\-Gene Interface Reference}
+\label{interfaceorg_1_1jgap_1_1_gene}\index{org.\-jgap.\-Gene@{org.\-jgap.\-Gene}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-Gene\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceorg_1_1jgap_1_1_gene__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-Gene\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceorg_1_1jgap_1_1_gene__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} \hyperlink{interfaceorg_1_1jgap_1_1_gene_ae4ddccb7bf569c0ed6cdc19def590964}{new\-Gene} ()
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1_gene_af46a0c31e0fecea483497e87ca278127}{set\-Allele} (Object a\-\_\-new\-Value)
+\item 
+Object \hyperlink{interfaceorg_1_1jgap_1_1_gene_aa06c80639659ddbcfa1cfe7b7bb109f9}{get\-Allele} ()
+\item 
+String \hyperlink{interfaceorg_1_1jgap_1_1_gene_a044aa8f0a04ee06bb04bbd35ad4c7f2f}{get\-Persistent\-Representation} ()  throws Unsupported\-Operation\-Exception
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1_gene_a057e5d6cce5ae768cbf626e0ccf70520}{set\-Value\-From\-Persistent\-Representation} (String a\-\_\-representation)  throws Unsupported\-Operation\-Exception, Unsupported\-Representation\-Exception
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1_gene_a4ef135da7549ee98139928e21adb841a}{set\-To\-Random\-Value} (\hyperlink{interfaceorg_1_1jgap_1_1_random_generator}{Random\-Generator} a\-\_\-number\-Generator)
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1_gene_a5e353bbf6a9576b702bf466a5f952b82}{cleanup} ()
+\item 
+String \hyperlink{interfaceorg_1_1jgap_1_1_gene_ac62239b4b7bf81179fd491a4c4bd1901}{to\-String} ()
+\item 
+int \hyperlink{interfaceorg_1_1jgap_1_1_gene_a7a975e180dd0ac0fd33cdc182f64bea8}{size} ()
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1_gene_af506b6e1d6ceb3e88e522da4c79adba4}{apply\-Mutation} (int index, double a\-\_\-percentage)
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1_gene_ae8405395f244a18424794e8f2e36c608}{set\-Application\-Data} (Object a\-\_\-new\-Data)
+\item 
+Object \hyperlink{interfaceorg_1_1jgap_1_1_gene_a4eb1d079f14465a2324ad41a6ee3b77a}{get\-Application\-Data} ()
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1_gene_a404ee1527c7dab2f8115f18507d0544b}{set\-Compare\-Application\-Data} (boolean a\-\_\-do\-Compare)
+\item 
+boolean \hyperlink{interfaceorg_1_1jgap_1_1_gene_a71de32c2c6bf2b71332449f20d604f81}{is\-Compare\-Application\-Data} ()
+\item 
+double \hyperlink{interfaceorg_1_1jgap_1_1_gene_aa1794038b5018cdb49998639c79cb57a}{get\-Energy} ()
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1_gene_af5c429a29c338d2ad5d5514d5beea6e7}{set\-Energy} (double a\-\_\-energy)
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1_gene_a1ef8e9cd912cc68ebe6cd246cf896633}{set\-Constraint\-Checker} (final \hyperlink{interfaceorg_1_1jgap_1_1_i_gene_constraint_checker}{I\-Gene\-Constraint\-Checker} a\-\_\-constraint\-Checker)
+\item 
+\hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} \hyperlink{interfaceorg_1_1jgap_1_1_gene_aa178414303649867b6176de80c6ba892}{get\-Configuration} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{interfaceorg_1_1jgap_1_1_gene_a771652182ee68c96d4107eee7692fee2}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-26 \$\char`\"{}
+\item 
+static final String \hyperlink{interfaceorg_1_1jgap_1_1_gene_ae49de1c9f46601f1b60d393a9ce3901a}{P\-E\-R\-S\-I\-S\-T\-E\-N\-T\-\_\-\-F\-I\-E\-L\-D\-\_\-\-D\-E\-L\-I\-M\-I\-T\-E\-R} = \char`\"{}\-:\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Genes represent the discrete components of a potential solution (the \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome}). This interface exists so that custom gene implementations can be easily plugged-\/in, which can add a great deal of flexibility and convenience for many applications. Note that it's very important that implementations of this interface also implement the equals() method. Without a proper implementation of equals(), some genetic operations will fail to work properly. 
+
+When implementing a new \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} type, extend it from \hyperlink{classorg_1_1jgap_1_1_base_gene}{org.\-jgap.\-Base\-Gene}!
+
+\begin{DoxyAuthor}{Author}
+Neil Rotstan 
+
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Definition at line 29 of file Gene.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1_gene_af506b6e1d6ceb3e88e522da4c79adba4}{\index{org\-::jgap\-::\-Gene@{org\-::jgap\-::\-Gene}!apply\-Mutation@{apply\-Mutation}}
+\index{apply\-Mutation@{apply\-Mutation}!org::jgap::Gene@{org\-::jgap\-::\-Gene}}
+\subsubsection[{apply\-Mutation}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-Gene.\-apply\-Mutation (
+\begin{DoxyParamCaption}
+\item[{int}]{index, }
+\item[{double}]{a\-\_\-percentage}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_gene_af506b6e1d6ceb3e88e522da4c79adba4}
+Applies a mutation of a given intensity (percentage) onto the atomic element at given index (Number\-Genes only have one atomic element) 
+\begin{DoxyParams}{Parameters}
+{\em index} & index of atomic element, between 0 and \hyperlink{interfaceorg_1_1jgap_1_1_gene_a7a975e180dd0ac0fd33cdc182f64bea8}{size()}-\/1 \\
+\hline
+{\em a\-\_\-percentage} & percentage of mutation (greater than -\/1 and smaller than 1).\\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1impl_1_1_composite_gene_a06e95c3f9f2d2d8784dc1ac0eaff49da}{org.\-jgap.\-impl.\-Composite\-Gene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_string_gene_aa63ee177d2ac62ad5c82d38db881ba7f}{org.\-jgap.\-impl.\-String\-Gene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_number_gene_test_1_1_number_gene_impl_a4499c0baa8d3c60ede4b70deb58fba49}{org.\-jgap.\-impl.\-Number\-Gene\-Test.\-Number\-Gene\-Impl}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_boolean_gene_a70dea740df4046662f3c4d56205e9986}{org.\-jgap.\-impl.\-Boolean\-Gene}, and \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_a7cb99b828171a8f23c191876a3fd3c46}{org.\-jgap.\-impl.\-Double\-Gene}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1_gene_a5e353bbf6a9576b702bf466a5f952b82}{\index{org\-::jgap\-::\-Gene@{org\-::jgap\-::\-Gene}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!org::jgap::Gene@{org\-::jgap\-::\-Gene}}
+\subsubsection[{cleanup}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-Gene.\-cleanup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_gene_a5e353bbf6a9576b702bf466a5f952b82}
+Executed by the genetic engine when this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} instance is no longer needed and should perform any necessary resource cleanup. 
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_aec3dc6646255f4187aa9a6b4238a9a2c}{org.\-jgap.\-supergenes.\-Abstract\-Supergene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_composite_gene_a69244d0036ad5f7f05766a3341f21841}{org.\-jgap.\-impl.\-Composite\-Gene}, and \hyperlink{classorg_1_1jgap_1_1_base_gene_a569b99cf460d27d2c1acbea2b7775975}{org.\-jgap.\-Base\-Gene}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1_gene_aa06c80639659ddbcfa1cfe7b7bb109f9}{\index{org\-::jgap\-::\-Gene@{org\-::jgap\-::\-Gene}!get\-Allele@{get\-Allele}}
+\index{get\-Allele@{get\-Allele}!org::jgap::Gene@{org\-::jgap\-::\-Gene}}
+\subsubsection[{get\-Allele}]{\setlength{\rightskip}{0pt plus 5cm}Object org.\-jgap.\-Gene.\-get\-Allele (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_gene_aa06c80639659ddbcfa1cfe7b7bb109f9}
+Retrieves the value represented by this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}. The actual type of the value is implementation-\/dependent.
+
+\begin{DoxyReturn}{Returns}
+the value of this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1impl_1_1_composite_gene_a06d9f8415a3386a04b4eebc12850dbcf}{org.\-jgap.\-impl.\-Composite\-Gene}, \hyperlink{classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_a45f21f887ad34c02fbc88d41e5d0372d}{org.\-jgap.\-supergenes.\-Abstract\-Supergene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_fixed_binary_gene_a538336e75c89f2df35bc7301f187e9a7}{org.\-jgap.\-impl.\-Fixed\-Binary\-Gene}, and \hyperlink{classorg_1_1jgap_1_1_base_gene_a35e754e8e217bdd26962e1c3c31d0169}{org.\-jgap.\-Base\-Gene}.
+
+
+
+Referenced by org.\-jgap.\-impl.\-String\-Gene\-Test.\-test\-Apply\-Mutation\-\_\-4(), org.\-jgap.\-impl.\-String\-Gene\-Test.\-test\-Apply\-Mutation\-\_\-5(), org.\-jgap.\-impl.\-Integer\-Gene\-Test.\-test\-Compare\-To\-Native\-\_\-0(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Compare\-To\-Native\-\_\-0(), org.\-jgap.\-impl.\-Integer\-Gene\-Test.\-test\-Compare\-To\-Native\-\_\-1(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Compare\-To\-Native\-\_\-1(), org.\-jgap.\-impl.\-Integer\-Gene\-Test.\-test\-Compare\-To\-Native\-\_\-2(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Compare\-To\-Native\-\_\-2(), org.\-jgap.\-impl.\-Integer\-Gene\-Test.\-test\-Compare\-To\-Native\-\_\-3(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Compare\-To\-Native\-\_\-3(), org.\-jgap.\-impl.\-Integer\-Gene\-Test.\-test\-Compare\-To\-Native\-\_\-4(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Compare\-To\-Native\-\_\-4(), org.\-jgap.\-impl.\-Integer\-Gene\-Test.\-test\-Get\-Allele\-\_\-0(), org.\-jgap.\-impl.\-Number\-Gene\-Test.\-test\-Get\-Allele\-\_\-0(), org.\-jgap.\-Base\-Gene\-Test.\-test\-Get\-Allele\-\_\-0(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Get\-Allele\-\_\-0(), org.\-jgap.\-impl.\-Fixed\-Binary\-Gene\-Test.\-test\-Get\-Allele\-\_\-0(), org.\-jgap.\-impl.\-String\-Gene\-Test.\-test\-Get\-Allele\-\_\-0(), org.\-jgap.\-impl.\-Integer\-Gene\-Test.\-test\-Get\-Allele\-\_\-1(), org.\-jgap.\-impl.\-Number\-Gene\-Test.\-test\-Get\-Allele\-\_\-1(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Get\-Allele\-\_\-1(), org.\-jgap.\-impl.\-Integer\-Gene\-Test.\-test\-Get\-Allele\-\_\-2(), org.\-jgap.\-impl.\-Number\-Gene\-Test.\-test\-Get\-Allele\-\_\-2(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Get\-Allele\-\_\-2(), org.\-jgap.\-impl.\-Fixed\-Binary\-Gene\-Test.\-test\-Get\-Allele\-\_\-2(), org.\-jgap.\-impl.\-Fixed\-Binary\-Gene\-Test.\-test\-Hash\-Code\-\_\-1(), org.\-jgap.\-impl.\-Integer\-Gene\-Test.\-test\-Integer\-Gene\-Supports\-Full\-Integer\-Range(), org.\-jgap.\-impl.\-Gaussian\-Mutation\-Operator\-Test.\-test\-Operate\-\_\-2(), org.\-jgap.\-impl.\-Map\-Gene\-Test.\-test\-Persistent\-Representation\-\_\-3(), org.\-jgap.\-impl.\-String\-Gene\-Test.\-test\-Persistent\-Representation\-\_\-6(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Set\-To\-Random\-Value\-\_\-0(), org.\-jgap.\-impl.\-Map\-Gene\-Test.\-test\-Set\-To\-Random\-Value\-\_\-0(), org.\-jgap.\-impl.\-Integer\-Gene\-Test.\-test\-Set\-To\-Random\-Value\-\_\-0(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Set\-To\-Random\-Value\-\_\-1(), org.\-jgap.\-impl.\-Integer\-Gene\-Test.\-test\-Set\-To\-Random\-Value\-\_\-1(), org.\-jgap.\-impl.\-String\-Gene\-Test.\-test\-Set\-To\-Random\-Value\-\_\-1(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-Set\-To\-Random\-Value\-\_\-2(), org.\-jgap.\-impl.\-Integer\-Gene\-Test.\-test\-Set\-To\-Random\-Value\-\_\-2(), org.\-jgap.\-impl.\-String\-Gene\-Test.\-test\-Set\-To\-Random\-Value\-\_\-2(), and org.\-jgap.\-impl.\-Integer\-Gene\-Test.\-test\-Set\-To\-Random\-Value\-\_\-5().
+
+\hypertarget{interfaceorg_1_1jgap_1_1_gene_a4eb1d079f14465a2324ad41a6ee3b77a}{\index{org\-::jgap\-::\-Gene@{org\-::jgap\-::\-Gene}!get\-Application\-Data@{get\-Application\-Data}}
+\index{get\-Application\-Data@{get\-Application\-Data}!org::jgap::Gene@{org\-::jgap\-::\-Gene}}
+\subsubsection[{get\-Application\-Data}]{\setlength{\rightskip}{0pt plus 5cm}Object org.\-jgap.\-Gene.\-get\-Application\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_gene_a4eb1d079f14465a2324ad41a6ee3b77a}
+Retrieves the application-\/specific data that is attached to this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}. Attaching application-\/specific data may be useful for some applications when it comes time to distinguish a \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} from another. J\-G\-A\-P ignores this data functionally.
+
+\begin{DoxyReturn}{Returns}
+the application-\/specific data previously attached to this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}, or null if there is no data attached
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-4 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1_base_gene_a0520139dc694dc6034aeb631ae7d70bd}{org.\-jgap.\-Base\-Gene}.
+
+
+
+Referenced by org.\-jgap.\-Base\-Gene.\-equals().
+
+\hypertarget{interfaceorg_1_1jgap_1_1_gene_aa178414303649867b6176de80c6ba892}{\index{org\-::jgap\-::\-Gene@{org\-::jgap\-::\-Gene}!get\-Configuration@{get\-Configuration}}
+\index{get\-Configuration@{get\-Configuration}!org::jgap::Gene@{org\-::jgap\-::\-Gene}}
+\subsubsection[{get\-Configuration}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Configuration} org.\-jgap.\-Gene.\-get\-Configuration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_gene_aa178414303649867b6176de80c6ba892}
+\begin{DoxyReturn}{Returns}
+the configuration used
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-0 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1_base_gene_a32a316c9cc9e273bd75182cbdf188fb6}{org.\-jgap.\-Base\-Gene}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1_gene_aa1794038b5018cdb49998639c79cb57a}{\index{org\-::jgap\-::\-Gene@{org\-::jgap\-::\-Gene}!get\-Energy@{get\-Energy}}
+\index{get\-Energy@{get\-Energy}!org::jgap::Gene@{org\-::jgap\-::\-Gene}}
+\subsubsection[{get\-Energy}]{\setlength{\rightskip}{0pt plus 5cm}double org.\-jgap.\-Gene.\-get\-Energy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_gene_aa1794038b5018cdb49998639c79cb57a}
+\begin{DoxyReturn}{Returns}
+energy of the gene
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-3 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1_base_gene_a48f71c4c1282de2ca2cf8f4009c4615a}{org.\-jgap.\-Base\-Gene}.
+
+
+
+Referenced by org.\-jgap.\-Genotype\-Test.\-test\-Random\-Initial\-Genotype\-\_\-2().
+
+\hypertarget{interfaceorg_1_1jgap_1_1_gene_a044aa8f0a04ee06bb04bbd35ad4c7f2f}{\index{org\-::jgap\-::\-Gene@{org\-::jgap\-::\-Gene}!get\-Persistent\-Representation@{get\-Persistent\-Representation}}
+\index{get\-Persistent\-Representation@{get\-Persistent\-Representation}!org::jgap::Gene@{org\-::jgap\-::\-Gene}}
+\subsubsection[{get\-Persistent\-Representation}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-jgap.\-Gene.\-get\-Persistent\-Representation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws Unsupported\-Operation\-Exception}}\label{interfaceorg_1_1jgap_1_1_gene_a044aa8f0a04ee06bb04bbd35ad4c7f2f}
+Retrieves a string representation of the value of this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} instance that includes any information required to reconstruct it at a later time, such as its value and internal state. This string will be used to represent this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} instance in X\-M\-L persistence. This is an optional method but, if not implemented, X\-M\-L persistence and possibly other features will not be available. An Unsupported\-Operation\-Exception should be thrown if no implementation is provided.
+
+\begin{DoxyReturn}{Returns}
+string representation of this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}'s current state 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unsupported\-Operation\-Exception} & to indicate that no implementation is provided for this method\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1impl_1_1_number_gene_test_1_1_number_gene_impl_a4650fd61d86fae144300e230de0a4c0b}{org.\-jgap.\-impl.\-Number\-Gene\-Test.\-Number\-Gene\-Impl}, \hyperlink{classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_a41a4e0b1cf2366722b5f3b97a1711487}{org.\-jgap.\-supergenes.\-Abstract\-Supergene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_map_gene_a0a1b56bd574314d61311ac070f7f9845}{org.\-jgap.\-impl.\-Map\-Gene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_composite_gene_ad33dc860fffad1457c3f44a8b3b031f7}{org.\-jgap.\-impl.\-Composite\-Gene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_string_gene_a79af8bfa3fb168ff61d4945b9ed4a319}{org.\-jgap.\-impl.\-String\-Gene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_fixed_binary_gene_a9c557fe781b49efc9afb7c4b5f00ad38}{org.\-jgap.\-impl.\-Fixed\-Binary\-Gene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_set_gene_a2a35ceb76a665867ea10f34492dabf44}{org.\-jgap.\-impl.\-Set\-Gene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_boolean_gene_a616c3ec92db2cc4ef9bcc6ba33b2e0a1}{org.\-jgap.\-impl.\-Boolean\-Gene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_mutiple_integer_gene_a2ee1d1c02b875f75243d7b510961990f}{org.\-jgap.\-impl.\-Mutiple\-Integer\-Gene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_integer_gene_a81f6bb7889e353d5fe2a191b2fe530bd}{org.\-jgap.\-impl.\-Integer\-Gene}, and \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_a8da36e3431c7c509e2e09285e47da105}{org.\-jgap.\-impl.\-Double\-Gene}.
+
+
+
+Referenced by org.\-jgap.\-Base\-Chromosome.\-get\-Genes\-Persistent\-Representation().
+
+\hypertarget{interfaceorg_1_1jgap_1_1_gene_a71de32c2c6bf2b71332449f20d604f81}{\index{org\-::jgap\-::\-Gene@{org\-::jgap\-::\-Gene}!is\-Compare\-Application\-Data@{is\-Compare\-Application\-Data}}
+\index{is\-Compare\-Application\-Data@{is\-Compare\-Application\-Data}!org::jgap::Gene@{org\-::jgap\-::\-Gene}}
+\subsubsection[{is\-Compare\-Application\-Data}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-Gene.\-is\-Compare\-Application\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_gene_a71de32c2c6bf2b71332449f20d604f81}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1_base_gene_acd6431c06c81bc03b4abbe32e4d9d8ef}{org.\-jgap.\-Base\-Gene}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1_gene_ae4ddccb7bf569c0ed6cdc19def590964}{\index{org\-::jgap\-::\-Gene@{org\-::jgap\-::\-Gene}!new\-Gene@{new\-Gene}}
+\index{new\-Gene@{new\-Gene}!org::jgap::Gene@{org\-::jgap\-::\-Gene}}
+\subsubsection[{new\-Gene}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gene} org.\-jgap.\-Gene.\-new\-Gene (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_gene_ae4ddccb7bf569c0ed6cdc19def590964}
+Provides an implementation-\/independent means for creating new \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} instances. The new instance that is created and returned should be setup with any implementation-\/dependent configuration that this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} instance is setup with (aside from the actual value, of course). For example, if this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} were setup with bounds on its value, then the \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} instance returned from this method should also be setup with those same bounds. This is important, as the J\-G\-A\-P core will invoke this method on each \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} in the sample \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome} in order to create each new \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} in the same respective gene position for a new \hyperlink{classorg_1_1jgap_1_1_chromosome}{Chromosome}. 
+
+It should be noted that nothing is guaranteed about the actual value of the returned \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} and it should therefore be considered to be undefined.
+
+\begin{DoxyReturn}{Returns}
+a new \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} instance of the same type and with the same setup as this concrete \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1_base_gene_a40f8f3d249145ad028892cd706ba9dae}{org.\-jgap.\-Base\-Gene}.
+
+
+
+Referenced by org.\-jgap.\-Chromosome.\-init\-From\-Gene().
+
+\hypertarget{interfaceorg_1_1jgap_1_1_gene_af46a0c31e0fecea483497e87ca278127}{\index{org\-::jgap\-::\-Gene@{org\-::jgap\-::\-Gene}!set\-Allele@{set\-Allele}}
+\index{set\-Allele@{set\-Allele}!org::jgap::Gene@{org\-::jgap\-::\-Gene}}
+\subsubsection[{set\-Allele}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-Gene.\-set\-Allele (
+\begin{DoxyParamCaption}
+\item[{Object}]{a\-\_\-new\-Value}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_gene_af46a0c31e0fecea483497e87ca278127}
+Sets the value of this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} to the new given value. The actual type of the value is implementation-\/dependent.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-new\-Value} & the new value of this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} instance\\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1impl_1_1_composite_gene_a9e22ec1330a1b2009da1f587c299ed74}{org.\-jgap.\-impl.\-Composite\-Gene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_map_gene_af102ddb4e963fc1355ea193ce414ca54}{org.\-jgap.\-impl.\-Map\-Gene}, and \hyperlink{classorg_1_1jgap_1_1impl_1_1_set_gene_a3ba3b9efa4f1348e0ff4302cceeec6ae}{org.\-jgap.\-impl.\-Set\-Gene}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1_gene_ae8405395f244a18424794e8f2e36c608}{\index{org\-::jgap\-::\-Gene@{org\-::jgap\-::\-Gene}!set\-Application\-Data@{set\-Application\-Data}}
+\index{set\-Application\-Data@{set\-Application\-Data}!org::jgap::Gene@{org\-::jgap\-::\-Gene}}
+\subsubsection[{set\-Application\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-Gene.\-set\-Application\-Data (
+\begin{DoxyParamCaption}
+\item[{Object}]{a\-\_\-new\-Data}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_gene_ae8405395f244a18424794e8f2e36c608}
+This sets the application-\/specific data that is attached to this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}. Attaching application-\/specific data may be useful for some applications when it comes time to distinguish a \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} from another. J\-G\-A\-P ignores this data functionally.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-new\-Data} & the new application-\/specific data to attach to this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-4 
+\end{DoxySince}
+\hypertarget{interfaceorg_1_1jgap_1_1_gene_a404ee1527c7dab2f8115f18507d0544b}{\index{org\-::jgap\-::\-Gene@{org\-::jgap\-::\-Gene}!set\-Compare\-Application\-Data@{set\-Compare\-Application\-Data}}
+\index{set\-Compare\-Application\-Data@{set\-Compare\-Application\-Data}!org::jgap::Gene@{org\-::jgap\-::\-Gene}}
+\subsubsection[{set\-Compare\-Application\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-Gene.\-set\-Compare\-Application\-Data (
+\begin{DoxyParamCaption}
+\item[{boolean}]{a\-\_\-do\-Compare}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_gene_a404ee1527c7dab2f8115f18507d0544b}
+Should we also consider the application data when comparing? Default is \char`\"{}false\char`\"{} as \char`\"{}true\char`\"{} means a \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} is losing its identity when application data is set differently!
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-do\-Compare} & true\-: consider application data in method compare\-To\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-4 
+\end{DoxySince}
+\hypertarget{interfaceorg_1_1jgap_1_1_gene_a1ef8e9cd912cc68ebe6cd246cf896633}{\index{org\-::jgap\-::\-Gene@{org\-::jgap\-::\-Gene}!set\-Constraint\-Checker@{set\-Constraint\-Checker}}
+\index{set\-Constraint\-Checker@{set\-Constraint\-Checker}!org::jgap::Gene@{org\-::jgap\-::\-Gene}}
+\subsubsection[{set\-Constraint\-Checker}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-Gene.\-set\-Constraint\-Checker (
+\begin{DoxyParamCaption}
+\item[{final {\bf I\-Gene\-Constraint\-Checker}}]{a\-\_\-constraint\-Checker}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_gene_a1ef8e9cd912cc68ebe6cd246cf896633}
+Sets the constraint checker to be used for this gene whenever method \hyperlink{interfaceorg_1_1jgap_1_1_gene_af46a0c31e0fecea483497e87ca278127}{set\-Allele(\-Object)} is called. 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-constraint\-Checker} & the constraint checker to be set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-6 (moved from Composite\-Gene, where it was since 2.\-0) 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1_base_gene_a334db8a543f3008719d78ee219826b65}{org.\-jgap.\-Base\-Gene}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1_gene_af5c429a29c338d2ad5d5514d5beea6e7}{\index{org\-::jgap\-::\-Gene@{org\-::jgap\-::\-Gene}!set\-Energy@{set\-Energy}}
+\index{set\-Energy@{set\-Energy}!org::jgap::Gene@{org\-::jgap\-::\-Gene}}
+\subsubsection[{set\-Energy}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-Gene.\-set\-Energy (
+\begin{DoxyParamCaption}
+\item[{double}]{a\-\_\-energy}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_gene_af5c429a29c338d2ad5d5514d5beea6e7}
+Sets the energy of the gene 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-energy} & the energy to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-3 
+\end{DoxySince}
+\hypertarget{interfaceorg_1_1jgap_1_1_gene_a4ef135da7549ee98139928e21adb841a}{\index{org\-::jgap\-::\-Gene@{org\-::jgap\-::\-Gene}!set\-To\-Random\-Value@{set\-To\-Random\-Value}}
+\index{set\-To\-Random\-Value@{set\-To\-Random\-Value}!org::jgap::Gene@{org\-::jgap\-::\-Gene}}
+\subsubsection[{set\-To\-Random\-Value}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-Gene.\-set\-To\-Random\-Value (
+\begin{DoxyParamCaption}
+\item[{{\bf Random\-Generator}}]{a\-\_\-number\-Generator}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_gene_a4ef135da7549ee98139928e21adb841a}
+Sets the value of this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} to a random legal value for the implementation. This method exists for the benefit of mutation and other operations that simply desire to randomize the value of a gene.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-number\-Generator} & The random number generator that should be used to create any random values. It's important to use this generator to maintain the user's flexibility to configure the genetic engine to use the random number generator of their choice\\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1impl_1_1_number_gene_test_1_1_number_gene_impl_a2b5cf8d97f823fbca3c0d1fb54690324}{org.\-jgap.\-impl.\-Number\-Gene\-Test.\-Number\-Gene\-Impl}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_aa60b29de6b26966ef4038bc02ccc2fd7}{org.\-jgap.\-impl.\-Double\-Gene}, and \hyperlink{classorg_1_1jgap_1_1impl_1_1_boolean_gene_a21dd7e5973db3e3a32745d3e2e3dcbb0}{org.\-jgap.\-impl.\-Boolean\-Gene}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1_gene_a057e5d6cce5ae768cbf626e0ccf70520}{\index{org\-::jgap\-::\-Gene@{org\-::jgap\-::\-Gene}!set\-Value\-From\-Persistent\-Representation@{set\-Value\-From\-Persistent\-Representation}}
+\index{set\-Value\-From\-Persistent\-Representation@{set\-Value\-From\-Persistent\-Representation}!org::jgap::Gene@{org\-::jgap\-::\-Gene}}
+\subsubsection[{set\-Value\-From\-Persistent\-Representation}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-Gene.\-set\-Value\-From\-Persistent\-Representation (
+\begin{DoxyParamCaption}
+\item[{String}]{a\-\_\-representation}
+\end{DoxyParamCaption}
+) throws Unsupported\-Operation\-Exception, {\bf Unsupported\-Representation\-Exception}}}\label{interfaceorg_1_1jgap_1_1_gene_a057e5d6cce5ae768cbf626e0ccf70520}
+Sets the value and internal state of this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} from the string representation returned by a previous invocation of the \hyperlink{interfaceorg_1_1jgap_1_1_gene_a044aa8f0a04ee06bb04bbd35ad4c7f2f}{get\-Persistent\-Representation()} method. This is an optional method but, if not implemented, X\-M\-L persistence and possibly other features will not be available. An Unsupported\-Operation\-Exception should be thrown if no implementation is provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-representation} & the string representation retrieved from a prior call to the \hyperlink{interfaceorg_1_1jgap_1_1_gene_a044aa8f0a04ee06bb04bbd35ad4c7f2f}{get\-Persistent\-Representation()} method\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unsupported\-Operation\-Exception} & to indicate that no implementation is provided for this method \\
+\hline
+{\em \hyperlink{classorg_1_1jgap_1_1_unsupported_representation_exception}{Unsupported\-Representation\-Exception}} & if this \hyperlink{interfaceorg_1_1jgap_1_1_gene}{Gene} implementation does not support the given string representation\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1impl_1_1_number_gene_test_1_1_number_gene_impl_ab5392ff8df1b30eda8285f2650667798}{org.\-jgap.\-impl.\-Number\-Gene\-Test.\-Number\-Gene\-Impl}, \hyperlink{classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_af8156c2a8b41bc9fe3e397595c513a6d}{org.\-jgap.\-supergenes.\-Abstract\-Supergene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_fixed_binary_gene_a1b079182739f988716e7bcb26664a77f}{org.\-jgap.\-impl.\-Fixed\-Binary\-Gene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_composite_gene_abd62d1ccb9e0753b93d11a89fd055d0e}{org.\-jgap.\-impl.\-Composite\-Gene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_boolean_gene_a67b5e436592a8e9fa9e17a3794ec6deb}{org.\-jgap.\-impl.\-Boolean\-Gene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_a9b71158d4e12d38732f9b60bf2ba1949}{org.\-jgap.\-impl.\-Double\-Gene}, and \hyperlink{classorg_1_1jgap_1_1impl_1_1_set_gene_aa2cb5e988d106f535d0c0a1e156d3dbc}{org.\-jgap.\-impl.\-Set\-Gene}.
+
+\hypertarget{interfaceorg_1_1jgap_1_1_gene_a7a975e180dd0ac0fd33cdc182f64bea8}{\index{org\-::jgap\-::\-Gene@{org\-::jgap\-::\-Gene}!size@{size}}
+\index{size@{size}!org::jgap::Gene@{org\-::jgap\-::\-Gene}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}int org.\-jgap.\-Gene.\-size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_gene_a7a975e180dd0ac0fd33cdc182f64bea8}
+\begin{DoxyReturn}{Returns}
+the size of the gene, i.\-e the number of atomic elements. Always 1 for numbers
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1impl_1_1_composite_gene_ac6078356e9ce615740ab4e5fcd53b86a}{org.\-jgap.\-impl.\-Composite\-Gene}, \hyperlink{classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_a8d2326c3d5ce80c73dff063f26994233}{org.\-jgap.\-supergenes.\-Abstract\-Supergene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_string_gene_a96149f0c784d464b12a634ce09a7fa49}{org.\-jgap.\-impl.\-String\-Gene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_fixed_binary_gene_a1f65b004a1004c6e5acf7ad64628a72e}{org.\-jgap.\-impl.\-Fixed\-Binary\-Gene}, and \hyperlink{classorg_1_1jgap_1_1_base_gene_a26c00775111b327b178288164ed9c667}{org.\-jgap.\-Base\-Gene}.
+
+
+
+Referenced by org.\-jgap.\-Base\-Gene\-Test.\-test\-Size\-\_\-0().
+
+\hypertarget{interfaceorg_1_1jgap_1_1_gene_ac62239b4b7bf81179fd491a4c4bd1901}{\index{org\-::jgap\-::\-Gene@{org\-::jgap\-::\-Gene}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!org::jgap::Gene@{org\-::jgap\-::\-Gene}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}String org.\-jgap.\-Gene.\-to\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1_gene_ac62239b4b7bf81179fd491a4c4bd1901}
+\begin{DoxyReturn}{Returns}
+a string representation of the gene
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\-1 (in the interface) 
+\end{DoxySince}
+
+
+Implemented in \hyperlink{classorg_1_1jgap_1_1impl_1_1_map_gene_a4b9c5182f259a969cef430fa1d66d17f}{org.\-jgap.\-impl.\-Map\-Gene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_composite_gene_ad30baf0c08afe2bba30d25ada096d88a}{org.\-jgap.\-impl.\-Composite\-Gene}, \hyperlink{classorg_1_1jgap_1_1supergenes_1_1_abstract_supergene_a67a9b1dfccb63d4b2909abdd3e8c1abe}{org.\-jgap.\-supergenes.\-Abstract\-Supergene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_string_gene_a7d7bc7856360c5889926a1cd83a38efa}{org.\-jgap.\-impl.\-String\-Gene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_boolean_gene_abf9d0e79fbf043ff7eca2d9eaee04a64}{org.\-jgap.\-impl.\-Boolean\-Gene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_mutiple_integer_gene_af833c58712332cc2c981066f6e27bc63}{org.\-jgap.\-impl.\-Mutiple\-Integer\-Gene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_integer_gene_a877a71e49546005e6cc35230fc5d470d}{org.\-jgap.\-impl.\-Integer\-Gene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_double_gene_a9819e6f329bd77276a5821b4c433cd6e}{org.\-jgap.\-impl.\-Double\-Gene}, \hyperlink{classorg_1_1jgap_1_1impl_1_1_fixed_binary_gene_a50ac7f407c3570cecf66f7b423d98187}{org.\-jgap.\-impl.\-Fixed\-Binary\-Gene}, and \hyperlink{classorg_1_1jgap_1_1_base_gene_a935dfec06cb77bff0d2a45859d6a35b7}{org.\-jgap.\-Base\-Gene}.
+
+
+
+Referenced by org.\-jgap.\-Base\-Gene\-Test.\-test\-To\-String\-\_\-0(), org.\-jgap.\-impl.\-Integer\-Gene\-Test.\-test\-To\-String\-\_\-0(), org.\-jgap.\-impl.\-Number\-Gene\-Test.\-test\-To\-String\-\_\-0(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-To\-String\-\_\-0(), org.\-jgap.\-impl.\-Boolean\-Gene\-Test.\-test\-To\-String\-\_\-0(), org.\-jgap.\-impl.\-Fixed\-Binary\-Gene\-Test.\-test\-To\-String\-\_\-0(), org.\-jgap.\-impl.\-String\-Gene\-Test.\-test\-To\-String\-\_\-0(), org.\-jgap.\-impl.\-Integer\-Gene\-Test.\-test\-To\-String\-\_\-1(), org.\-jgap.\-Base\-Gene\-Test.\-test\-To\-String\-\_\-1(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-To\-String\-\_\-1(), org.\-jgap.\-impl.\-Boolean\-Gene\-Test.\-test\-To\-String\-\_\-1(), org.\-jgap.\-impl.\-Fixed\-Binary\-Gene\-Test.\-test\-To\-String\-\_\-1(), org.\-jgap.\-Base\-Gene\-Test.\-test\-To\-String\-\_\-2(), org.\-jgap.\-impl.\-Double\-Gene\-Test.\-test\-To\-String\-\_\-2(), org.\-jgap.\-impl.\-Boolean\-Gene\-Test.\-test\-To\-String\-\_\-2(), org.\-jgap.\-impl.\-Fixed\-Binary\-Gene\-Test.\-test\-To\-String\-\_\-2(), and org.\-jgap.\-supergenes.\-Supergene\-Persistent\-Representation\-Test.\-test\-To\-String\-\_\-2().
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1_gene_a771652182ee68c96d4107eee7692fee2}{\index{org\-::jgap\-::\-Gene@{org\-::jgap\-::\-Gene}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::Gene@{org\-::jgap\-::\-Gene}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-Gene.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-26 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{interfaceorg_1_1jgap_1_1_gene_a771652182ee68c96d4107eee7692fee2}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 32 of file Gene.\-java.
+
+\hypertarget{interfaceorg_1_1jgap_1_1_gene_ae49de1c9f46601f1b60d393a9ce3901a}{\index{org\-::jgap\-::\-Gene@{org\-::jgap\-::\-Gene}!P\-E\-R\-S\-I\-S\-T\-E\-N\-T\-\_\-\-F\-I\-E\-L\-D\-\_\-\-D\-E\-L\-I\-M\-I\-T\-E\-R@{P\-E\-R\-S\-I\-S\-T\-E\-N\-T\-\_\-\-F\-I\-E\-L\-D\-\_\-\-D\-E\-L\-I\-M\-I\-T\-E\-R}}
+\index{P\-E\-R\-S\-I\-S\-T\-E\-N\-T\-\_\-\-F\-I\-E\-L\-D\-\_\-\-D\-E\-L\-I\-M\-I\-T\-E\-R@{P\-E\-R\-S\-I\-S\-T\-E\-N\-T\-\_\-\-F\-I\-E\-L\-D\-\_\-\-D\-E\-L\-I\-M\-I\-T\-E\-R}!org::jgap::Gene@{org\-::jgap\-::\-Gene}}
+\subsubsection[{P\-E\-R\-S\-I\-S\-T\-E\-N\-T\-\_\-\-F\-I\-E\-L\-D\-\_\-\-D\-E\-L\-I\-M\-I\-T\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-Gene.\-P\-E\-R\-S\-I\-S\-T\-E\-N\-T\-\_\-\-F\-I\-E\-L\-D\-\_\-\-D\-E\-L\-I\-M\-I\-T\-E\-R = \char`\"{}\-:\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{interfaceorg_1_1jgap_1_1_gene_ae49de1c9f46601f1b60d393a9ce3901a}
+Represents the delimiter that is used to separate fields in the persistent representation. 
+
+Definition at line 38 of file Gene.\-java.
+
+
+
+Referenced by org.\-jgap.\-impl.\-String\-Gene.\-get\-Business\-Key(), org.\-jgap.\-Base\-Gene.\-get\-Business\-Key(), org.\-jgap.\-impl.\-Double\-Gene.\-get\-Persistent\-Representation(), org.\-jgap.\-impl.\-Integer\-Gene.\-get\-Persistent\-Representation(), org.\-jgap.\-impl.\-Mutiple\-Integer\-Gene.\-get\-Persistent\-Representation(), org.\-jgap.\-impl.\-Set\-Gene.\-get\-Persistent\-Representation(), org.\-jgap.\-impl.\-String\-Gene.\-get\-Persistent\-Representation(), org.\-jgap.\-impl.\-Map\-Gene.\-get\-Persistent\-Representation(), org.\-jgap.\-impl.\-Number\-Gene\-Test.\-Number\-Gene\-Impl.\-get\-Persistent\-Representation(), org.\-jgap.\-impl.\-Set\-Gene.\-set\-Value\-From\-Persistent\-Representation(), org.\-jgap.\-impl.\-Double\-Gene.\-set\-Value\-From\-Persistent\-Representation(), org.\-jgap.\-impl.\-Integer\-Gene.\-set\-Value\-From\-Persistent\-Representation(), org.\-jgap.\-impl.\-Mutiple\-Integer\-Gene.\-set\-Value\-From\-Persistent\-Representation(), org.\-jgap.\-impl.\-String\-Gene.\-set\-Value\-From\-Persistent\-Representation(), org.\-jgap.\-impl.\-Map\-Gene.\-set\-Value\-From\-Persistent\-Representation(), org.\-jgap.\-impl.\-String\-Gene\-Test.\-test\-Persistent\-Representation\-\_\-5\-\_\-2(), and org.\-jgap.\-impl.\-Integer\-Gene\-Test.\-test\-Persistent\-Representation\-\_\-6().
+
+
+
+The documentation for this interface was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/\hyperlink{_gene_8java}{Gene.\-java}\end{DoxyCompactItemize}

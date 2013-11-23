@@ -1,0 +1,290 @@
+.TH "org.jgap.gp.impl.BranchTypingCross" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.impl.BranchTypingCross \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CrossMethod\fP, Serializable, Comparable, and Cloneable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBranchTypingCross\fP (\fBGPConfiguration\fP a_config)"
+.br
+.ti -1c
+.RI "\fBBranchTypingCross\fP (\fBGPConfiguration\fP a_config, boolean a_simpleChromosomeSelection)"
+.br
+.ti -1c
+.RI "\fBIGPProgram\fP[] \fBoperate\fP (final \fBIGPProgram\fP a_i1, final \fBIGPProgram\fP a_i2)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProgramChromosome\fP[] \fBdoCross\fP (\fBProgramChromosome\fP a_c0, \fBProgramChromosome\fP a_c1)  throws InvalidConfigurationException "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "boolean \fBm_simpleChromosomeSelection\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.19 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Crossing over for GP ProgramChromosomes\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file BranchTypingCross\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.BranchTypingCross (\fBGPConfiguration\fPa_config)\fC [inline]\fP"
+Standard constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.RE
+.PP
+
+.PP
+Definition at line 34 of file BranchTypingCross\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.clone(), org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.compareTo(), and org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.equals()\&.
+.SS "org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.BranchTypingCross (\fBGPConfiguration\fPa_config, booleana_simpleChromosomeSelection)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.br
+\fIa_simpleChromosomeSelection\fP true: plainly select chromosomes, false: select chromosomes proportionally to their size (=number of nodes within a chromosome)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 48 of file BranchTypingCross\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.m_simpleChromosomeSelection\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+deep clone of this instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 347 of file BranchTypingCross\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.BranchTypingCross(), and org\&.jgap\&.gp\&.CrossMethod\&.getConfiguration()\&.
+.SS "int org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.compareTo (Objecta_other)\fC [inline]\fP"
+The compareTo-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 or 1 in this case, as \fBBranchTypingCross\fP objects keep no state
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 309 of file BranchTypingCross\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.BranchTypingCross()\&.
+.SS "\fBProgramChromosome\fP [] org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.doCross (\fBProgramChromosome\fPa_c0, \fBProgramChromosome\fPa_c1) throws \fBInvalidConfigurationException\fP\fC [inline]\fP, \fC [protected]\fP"
+Crosses two chromsomes using branch-typing\&. A random point in the first chromosome is chosen, with a certain probability it will be a function and with a rest probability it will be a terminal\&. A random point in the second chromosome is chosen using the same probability distribution, but the node chosen must be of the same type as the chosen node in the first chromosome\&. If a suitable point in the second chromosome couldn't be found then the chromosomes are not crossed\&. If a resulting chromosome's depth is larger than the maximum crossover depth then that chromosome is simply copied from the original rather than crossed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_c0\fP the first chromosome to cross 
+.br
+\fIa_c1\fP the second chromosome to cross 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+an array of the two resulting chromosomes 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+solve in general 
+.RE
+.PP
+
+.PP
+Definition at line 158 of file BranchTypingCross\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CrossMethod\&.getConfiguration(), org\&.jgap\&.RandomGenerator\&.nextDouble(), and org\&.jgap\&.RandomGenerator\&.nextFloat()\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.operate()\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.equals (Objecta_other)\fC [inline]\fP"
+The equals-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+always true for non-null \fBBranchTypingCross\fP objects because they keep no state
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 327 of file BranchTypingCross\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.BranchTypingCross()\&.
+.SS "\fBIGPProgram\fP [] org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.operate (final \fBIGPProgram\fPa_i1, final \fBIGPProgram\fPa_i2)\fC [inline]\fP, \fC [virtual]\fP"
+Crosses two individuals\&. A random chromosome is chosen for crossing based on the proportion of nodes in each chromosome in the first individual\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_i1\fP the first individual to cross 
+.br
+\fIa_i2\fP the second individual to cross 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+an array of the two resulting individuals
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+try to ensure uniqueness for unique commands: after selecting first node, check if there is a unique node in the sub tree\&. If so, check if it appears in the sub tree of the second node\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CrossMethod\fP\&.
+.PP
+Definition at line 65 of file BranchTypingCross\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.doCross(), org\&.jgap\&.gp\&.IGPProgram\&.getChromosome(), org\&.jgap\&.gp\&.CrossMethod\&.getConfiguration(), org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.m_simpleChromosomeSelection, and org\&.jgap\&.gp\&.IGPProgram\&.size()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.CVS_REVISION = '$Revision: 1\&.19 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file BranchTypingCross\&.java\&.
+.SS "boolean org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.m_simpleChromosomeSelection\fC [private]\fP"
+
+.PP
+Definition at line 27 of file BranchTypingCross\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.BranchTypingCross(), and org\&.jgap\&.gp\&.impl\&.BranchTypingCross\&.operate()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

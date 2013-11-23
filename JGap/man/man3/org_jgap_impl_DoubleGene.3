@@ -1,0 +1,519 @@
+.TH "org.jgap.impl.DoubleGene" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.DoubleGene \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.impl\&.NumberGene\fP, and \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDoubleGene\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBDoubleGene\fP (final \fBConfiguration\fP a_config)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBDoubleGene\fP (final \fBConfiguration\fP a_config, final double a_lowerBound, final double a_upperBound)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBgetPersistentRepresentation\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetValueFromPersistentRepresentation\fP (String a_representation)  throws UnsupportedRepresentationException "
+.br
+.ti -1c
+.RI "double \fBdoubleValue\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetToRandomValue\fP (\fBRandomGenerator\fP a_numberGenerator)"
+.br
+.ti -1c
+.RI "void \fBapplyMutation\fP (int index, double a_percentage)"
+.br
+.ti -1c
+.RI "int \fBhashCode\fP ()"
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetLowerBound\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetUpperBound\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGene\fP \fBnewGeneInternal\fP ()"
+.br
+.ti -1c
+.RI "int \fBcompareToNative\fP (Object o1, Object o2)"
+.br
+.ti -1c
+.RI "void \fBmapValueToWithinBounds\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBm_upperBound\fP"
+.br
+.ti -1c
+.RI "double \fBm_lowerBound\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.40 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A \fBGene\fP implementation that supports a double values for its allele\&. Upper and lower bounds may optionally be provided to restrict the range of legal values allowed by this \fBGene\fP instance\&.
+.PP
+Partly copied from \fBIntegerGene\fP\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file DoubleGene\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.DoubleGene\&.DoubleGene () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new \fBDoubleGene\fP with default settings\&. No bounds will be put into effect for values (alleles) of this \fBGene\fP instance, other than the standard range of double values\&.
+.PP
+Attention: The configuration used is the one set with the static method Genotype\&.setConfiguration\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 54 of file DoubleGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.DoubleGene\&.newGeneInternal()\&.
+.SS "org\&.jgap\&.impl\&.DoubleGene\&.DoubleGene (final \fBConfiguration\fPa_config) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new \fBDoubleGene\fP with default settings\&. No bounds will be put into effect for values (alleles) of this \fBGene\fP instance, other than the standard range of double values\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 70 of file DoubleGene\&.java\&.
+.SS "org\&.jgap\&.impl\&.DoubleGene\&.DoubleGene (final \fBConfiguration\fPa_config, final doublea_lowerBound, final doublea_upperBound) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructs a new \fBDoubleGene\fP with the specified lower and upper bounds for values (alleles) of this \fBGene\fP instance\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.br
+\fIa_lowerBound\fP the lowest value that this \fBGene\fP may possess, inclusively 
+.br
+\fIa_upperBound\fP the highest value that this \fBGene\fP may possess, inclusively 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 90 of file DoubleGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.DoubleGene\&.m_lowerBound, and org\&.jgap\&.impl\&.DoubleGene\&.m_upperBound\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.impl\&.DoubleGene\&.applyMutation (intindex, doublea_percentage)\fC [inline]\fP"
+See interface \fBGene\fP for description\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIindex\fP ignored (because there is only 1 atomic element) 
+.br
+\fIa_percentage\fP percentage of mutation (greater than -1 and smaller than 1)
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 328 of file DoubleGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.DoubleGene\&.doubleValue(), org\&.jgap\&.impl\&.DoubleGene\&.m_lowerBound, org\&.jgap\&.impl\&.DoubleGene\&.m_upperBound, and org\&.jgap\&.impl\&.NumberGene\&.setAllele()\&.
+.SS "int org\&.jgap\&.impl\&.DoubleGene\&.compareToNative (Objecto1, Objecto2)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Compares to objects by first casting them into their expected type (e\&.g\&. Integer for \fBIntegerGene\fP) and then calling the compareTo-method of the casted type\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIo1\fP first object to be compared, which is always not null 
+.br
+\fIo2\fP second object to be compared, which is always not null 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a negative integer, zero, or a positive integer as this object is less than, equal to, or greater than the object provided for comparison
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.impl\&.NumberGene\fP\&.
+.PP
+Definition at line 271 of file DoubleGene\&.java\&.
+.SS "double org\&.jgap\&.impl\&.DoubleGene\&.doubleValue ()\fC [inline]\fP"
+Retrieves the double value of this \fBGene\fP, which may be more convenient in some cases than the more general \fBgetAllele()\fP method\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the double value of this \fBGene\fP 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 236 of file DoubleGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getAllele()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.DoubleGene\&.applyMutation(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testApplyMutation_0(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testApplyMutation_6(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testDoubleValue_0(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testDoubleValue_1(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testSetAllele_4(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testSetAllele_5(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testSetAllele_6(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testSetToRandomValue_1(), org\&.jgap\&.impl\&.CompositeGeneTest\&.testSetToRandomValue_2(), org\&.jgap\&.impl\&.DoubleGeneTest\&.testSetToRandomValue_3(), and org\&.jgap\&.impl\&.DoubleGeneTest\&.testSetToRandomValue_4()\&.
+.SS "double org\&.jgap\&.impl\&.DoubleGene\&.getLowerBound ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the lower bound set 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 375 of file DoubleGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.DoubleGene\&.m_lowerBound\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.DoubleGeneTest\&.testBounds_0(), and org\&.jgap\&.impl\&.DoubleGeneTest\&.testBounds_1()\&.
+.SS "String org\&.jgap\&.impl\&.DoubleGene\&.getPersistentRepresentation ()\fC [inline]\fP"
+Retrieves a string representation of this \fBGene\fP that includes any information required to reconstruct it at a later time, such as its value and internal state\&. This string will be used to represent this \fBGene\fP in XML persistence\&. This is an optional method but, if not implemented, XML persistence and possibly other features will not be available\&. An UnsupportedOperationException should be thrown if no implementation is provided\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a string representation of this \fBGene\fP's current state
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.PP
+Definition at line 133 of file DoubleGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.NumberGene\&.getInternalValue(), org\&.jgap\&.impl\&.DoubleGene\&.m_lowerBound, org\&.jgap\&.impl\&.DoubleGene\&.m_upperBound, and org\&.jgap\&.Gene\&.PERSISTENT_FIELD_DELIMITER\&.
+.SS "double org\&.jgap\&.impl\&.DoubleGene\&.getUpperBound ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the upper bound set 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 384 of file DoubleGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.DoubleGene\&.m_upperBound\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.DoubleGeneTest\&.testBounds_0(), and org\&.jgap\&.impl\&.DoubleGeneTest\&.testBounds_1()\&.
+.SS "int org\&.jgap\&.impl\&.DoubleGene\&.hashCode ()\fC [inline]\fP"
+Modified \fBhashCode()\fP function to return different hashcodes for differently ordered genes in a chromosome\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+-3 if no allele set, otherwise value return by \fBBaseGene\&.hashCode()\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 342 of file DoubleGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.NumberGene\&.getInternalValue()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.DoubleGeneTest\&.testHashCode_0(), and org\&.jgap\&.impl\&.DoubleGeneTest\&.testHashCode_1()\&.
+.SS "void org\&.jgap\&.impl\&.DoubleGene\&.mapValueToWithinBounds ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Maps the value of this \fBDoubleGene\fP to within the bounds specified by the m_upperBounds and m_lowerBounds instance variables\&. The value's relative position within the double range will be preserved within the bounds range (in other words, if the value is about halfway between the double max and min, then the resulting value will be about halfway between the upper bounds and lower bounds)\&. If the value is null or is already within the bounds, it will be left unchanged\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.impl\&.NumberGene\fP\&.
+.PP
+Definition at line 288 of file DoubleGene\&.java\&.
+.PP
+References org\&.jgap\&.BaseGene\&.getAllele(), org\&.jgap\&.BaseGene\&.getConfiguration(), org\&.jgap\&.impl\&.DoubleGene\&.m_lowerBound, org\&.jgap\&.impl\&.DoubleGene\&.m_upperBound, org\&.jgap\&.RandomGenerator\&.nextDouble(), and org\&.jgap\&.impl\&.NumberGene\&.setAllele()\&.
+.SS "\fBGene\fP org\&.jgap\&.impl\&.DoubleGene\&.newGeneInternal ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Provides an implementation-independent means for creating new \fBGene\fP instances\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a new \fBGene\fP instance of the same type and with the same setup as this concrete \fBGene\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Definition at line 108 of file DoubleGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.DoubleGene\&.DoubleGene(), org\&.jgap\&.BaseGene\&.getConfiguration(), org\&.jgap\&.impl\&.DoubleGene\&.m_lowerBound, and org\&.jgap\&.impl\&.DoubleGene\&.m_upperBound\&.
+.SS "void org\&.jgap\&.impl\&.DoubleGene\&.setToRandomValue (\fBRandomGenerator\fPa_numberGenerator)\fC [inline]\fP"
+Sets the value (allele) of this \fBGene\fP to a random Double value between the lower and upper bounds (if any) of this \fBGene\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_numberGenerator\fP the random number generator that should be used to create any random values\&. It's important to use this generator to maintain the user's flexibility to configure the genetic engine to use the random number generator of their choice
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 252 of file DoubleGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.DoubleGene\&.m_lowerBound, org\&.jgap\&.impl\&.DoubleGene\&.m_upperBound, org\&.jgap\&.RandomGenerator\&.nextDouble(), and org\&.jgap\&.impl\&.NumberGene\&.setAllele()\&.
+.SS "void org\&.jgap\&.impl\&.DoubleGene\&.setValueFromPersistentRepresentation (Stringa_representation) throws \fBUnsupportedRepresentationException\fP\fC [inline]\fP"
+Sets the value and internal state of this \fBGene\fP from the string representation returned by a previous invocation of the \fBgetPersistentRepresentation()\fP method\&. This is an optional method but, if not implemented, XML persistence and possibly other features will not be available\&. An UnsupportedOperationException should be thrown if no implementation is provided\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_representation\fP the string representation retrieved from a prior call to the \fBgetPersistentRepresentation()\fP method
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP to indicate that no implementation is provided for this method 
+.br
+\fI\fBUnsupportedRepresentationException\fP\fP if this \fBGene\fP implementation does not support the given string representation
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+unify first part of method with \fBIntegerGene\fP 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.PP
+Definition at line 167 of file DoubleGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.DoubleGene\&.m_lowerBound, org\&.jgap\&.impl\&.DoubleGene\&.m_upperBound, org\&.jgap\&.Gene\&.PERSISTENT_FIELD_DELIMITER, and org\&.jgap\&.impl\&.NumberGene\&.setAllele()\&.
+.SS "String org\&.jgap\&.impl\&.DoubleGene\&.toString ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+string representation of this \fBGene\fP's value that may be useful for display purposes
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 358 of file DoubleGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.NumberGene\&.getInternalValue(), org\&.jgap\&.impl\&.DoubleGene\&.m_lowerBound, and org\&.jgap\&.impl\&.DoubleGene\&.m_upperBound\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.DoubleGene\&.CVS_REVISION = '$Revision: 1\&.40 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 27 of file DoubleGene\&.java\&.
+.SS "double org\&.jgap\&.impl\&.DoubleGene\&.m_lowerBound\fC [private]\fP"
+The lower bounds of values represented by this \fBGene\fP\&. If not explicitly provided by the user, this should be set to Double\&.MIN_VALUE 
+.PP
+Definition at line 39 of file DoubleGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.DoubleGene\&.applyMutation(), org\&.jgap\&.impl\&.DoubleGene\&.DoubleGene(), org\&.jgap\&.impl\&.DoubleGene\&.getLowerBound(), org\&.jgap\&.impl\&.DoubleGene\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.DoubleGene\&.mapValueToWithinBounds(), org\&.jgap\&.impl\&.DoubleGene\&.newGeneInternal(), org\&.jgap\&.impl\&.DoubleGene\&.setToRandomValue(), org\&.jgap\&.impl\&.DoubleGene\&.setValueFromPersistentRepresentation(), and org\&.jgap\&.impl\&.DoubleGene\&.toString()\&.
+.SS "double org\&.jgap\&.impl\&.DoubleGene\&.m_upperBound\fC [private]\fP"
+The upper bounds of values represented by this \fBGene\fP\&. If not explicitly provided by the user, this should be set to Double\&.MAX_VALUE\&. 
+.PP
+Definition at line 33 of file DoubleGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.DoubleGene\&.applyMutation(), org\&.jgap\&.impl\&.DoubleGene\&.DoubleGene(), org\&.jgap\&.impl\&.DoubleGene\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.DoubleGene\&.getUpperBound(), org\&.jgap\&.impl\&.DoubleGene\&.mapValueToWithinBounds(), org\&.jgap\&.impl\&.DoubleGene\&.newGeneInternal(), org\&.jgap\&.impl\&.DoubleGene\&.setToRandomValue(), org\&.jgap\&.impl\&.DoubleGene\&.setValueFromPersistentRepresentation(), and org\&.jgap\&.impl\&.DoubleGene\&.toString()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

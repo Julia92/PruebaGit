@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="_without_supergene_sample_8java" kind="file">
+    <compoundname>WithoutSupergeneSample.java</compoundname>
+    <innerclass refid="classexamples_1_1supergene_1_1_without_supergene_sample" prot="package">examples::supergene::WithoutSupergeneSample</innerclass>
+    <innernamespace refid="namespaceexamples_1_1supergene">examples::supergene</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>JGAP.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>JGAP<sp/>offers<sp/>a<sp/>dual<sp/>license<sp/>model<sp/>containing<sp/>the<sp/>LGPL<sp/>as<sp/>well<sp/>as<sp/>the<sp/>MPL.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>For<sp/>licensing<sp/>information<sp/>please<sp/>see<sp/>the<sp/>file<sp/>license.txt<sp/>included<sp/>with<sp/>JGAP</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>or<sp/>have<sp/>a<sp/>look<sp/>at<sp/>the<sp/>top<sp/>of<sp/>class<sp/>org.jgap.Chromosome<sp/>which<sp/>representatively</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>includes<sp/>the<sp/>JGAP<sp/>license<sp/>policy<sp/>applicable<sp/>for<sp/>any<sp/>file<sp/>delivered<sp/>with<sp/>JGAP.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">examples.supergene;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.*;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.jgap.impl.*;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="keyword">class<sp/></highlight><highlight class="normal">WithoutSupergeneSample</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>SupergeneSample<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/>CVS_REVISION<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0.0<sp/>alpha<sp/>explosive&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>makeChangeForAmount(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_targetChangeAmount)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>with<sp/>a<sp/>DefaultConfiguration,<sp/>which<sp/>comes<sp/>setup<sp/>with<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>most<sp/>common<sp/>settings.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>Configuration<sp/>conf<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>DefaultConfiguration();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>fitness<sp/>function<sp/>we<sp/>want<sp/>to<sp/>use.<sp/>We<sp/>construct<sp/>it<sp/>with</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>target<sp/>amount<sp/>of<sp/>change<sp/>passed<sp/>in<sp/>to<sp/>this<sp/>method.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>WithoutSupergeneChangeFitFForTesting<sp/>fitnessFunction<sp/>=</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>WithoutSupergeneChangeFitFForTesting(a_targetChangeAmount);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>conf.setFitnessFunction(fitnessFunction);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>we<sp/>need<sp/>to<sp/>tell<sp/>the<sp/>Configuration<sp/>object<sp/>how<sp/>we<sp/>want<sp/>our</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Chromosomes<sp/>to<sp/>be<sp/>setup.<sp/>We<sp/>do<sp/>that<sp/>by<sp/>actually<sp/>creating<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sample<sp/>Chromosome<sp/>and<sp/>then<sp/>setting<sp/>it<sp/>on<sp/>the<sp/>Configuration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>object.<sp/>As<sp/>mentioned<sp/>earlier,<sp/>we<sp/>want<sp/>our<sp/>Chromosomes<sp/>to<sp/>each</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>have<sp/>four<sp/>genes,<sp/>one<sp/>for<sp/>each<sp/>of<sp/>the<sp/>coin<sp/>types.<sp/>We<sp/>want<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>values<sp/>(alleles)<sp/>of<sp/>those<sp/>genes<sp/>to<sp/>be<sp/>integers,<sp/>which<sp/>represent</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>how<sp/>many<sp/>coins<sp/>of<sp/>that<sp/>type<sp/>we<sp/>have.<sp/>We<sp/>therefore<sp/>use<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>IntegerGene<sp/>class<sp/>to<sp/>represent<sp/>each<sp/>of<sp/>the<sp/>genes.<sp/>That<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>also<sp/>lets<sp/>us<sp/>specify<sp/>a<sp/>lower<sp/>and<sp/>upper<sp/>bound,<sp/>which<sp/>we<sp/>set</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>sensible<sp/>values<sp/>for<sp/>each<sp/>coin<sp/>type.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>Gene[]<sp/>sampleGenes<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Gene[4];</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>sampleGenes[<ref refid="classexamples_1_1supergene_1_1_abstract_supergene_test_1a2581251d3607aad43d8b2815b8202c8e" kindref="member">DIMES</ref>]<sp/>=<sp/><ref refid="classexamples_1_1supergene_1_1_abstract_supergene_test_1a4dd26799d08a8f8d1e2bfcf047c42738" kindref="member">getDimesGene</ref>(conf);<sp/></highlight><highlight class="comment">//<sp/>Dimes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>sampleGenes[<ref refid="classexamples_1_1supergene_1_1_abstract_supergene_test_1a816ceb1de4c9bf5c3df3bac9210c380c" kindref="member">NICKELS</ref>]<sp/>=<sp/><ref refid="classexamples_1_1supergene_1_1_abstract_supergene_test_1a6d4533c657828b3d0e98dda17572dcb6" kindref="member">getNickelsGene</ref>(conf);<sp/></highlight><highlight class="comment">//<sp/>Nickels</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>sampleGenes[<ref refid="classexamples_1_1supergene_1_1_abstract_supergene_test_1aed911231f02517c09e71a453e303b655" kindref="member">QUARTERS</ref>]<sp/>=<sp/><ref refid="classexamples_1_1supergene_1_1_abstract_supergene_test_1a1b9e8ef8f0436df0feee9337f7c437bd" kindref="member">getQuartersGene</ref>(conf);<sp/></highlight><highlight class="comment">//<sp/>Quarters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>sampleGenes[<ref refid="classexamples_1_1supergene_1_1_abstract_supergene_test_1a0853afd453197d0e7db44388752d12af" kindref="member">PENNIES</ref>]<sp/>=<sp/><ref refid="classexamples_1_1supergene_1_1_abstract_supergene_test_1aac16c07ab37989c472d80acc4071dafe" kindref="member">getPenniesGene</ref>(conf);<sp/></highlight><highlight class="comment">//<sp/>Pennies</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s<sp/>=<sp/><ref refid="classexamples_1_1supergene_1_1_abstract_supergene_test_1a7f4bc155739845dcac0bc31ec952192d" kindref="member">solve</ref>(conf,<sp/>a_targetChangeAmount,<sp/>fitnessFunction,<sp/>sampleGenes);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>main(String[]<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>WithoutSupergeneSample<sp/><ref refid="classexamples_1_1supergene_1_1_abstract_supergene_test_1a92f6bbeeedeed872a2cb7cb38e6a40c2" kindref="member">test</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>WithoutSupergeneSample();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>test.test();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>System.exit(0);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/examples/src/examples/supergene/WithoutSupergeneSample.java"/>
+  </compounddef>
+</doxygen>

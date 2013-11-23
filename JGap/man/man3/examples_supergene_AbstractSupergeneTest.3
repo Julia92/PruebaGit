@@ -1,0 +1,316 @@
+.TH "examples.supergene.AbstractSupergeneTest" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.supergene.AbstractSupergeneTest \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBexamples\&.supergene\&.SupergeneSample\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "abstract int \fBmakeChangeForAmount\fP (int a_targetChangeAmount)  throws Exception"
+.br
+.ti -1c
+.RI "IChromosome \fBreport\fP (\fBSupergeneChangeFitnessFunction\fP a_fitnessFunction, Genotype a_population)"
+.br
+.ti -1c
+.RI "int \fBtest\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fBamountOfChange\fP (int a_numQuarters, int a_numDimes, int a_numNickels, int a_numPennies)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final int \fBDIMES\fP = 0"
+.br
+.ti -1c
+.RI "static final int \fBQUARTERS\fP = 1"
+.br
+.ti -1c
+.RI "static final int \fBNICKELS\fP = 2"
+.br
+.ti -1c
+.RI "static final int \fBPENNIES\fP = 3"
+.br
+.ti -1c
+.RI "static int \fBMAX_ALLOWED_EVOLUTIONS\fP = 200"
+.br
+.ti -1c
+.RI "static int \fBPOPULATION_SIZE\fP = 2000"
+.br
+.ti -1c
+.RI "static boolean \fBREPORT_ENABLED\fP = true"
+.br
+.ti -1c
+.RI "static boolean \fBEXISTING_SOLUTIONS_ONLY\fP = false"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Gene \fBgetDimesGene\fP (Configuration a_conf)"
+.br
+.ti -1c
+.RI "Gene \fBgetNickelsGene\fP (Configuration a_conf)"
+.br
+.ti -1c
+.RI "Gene \fBgetPenniesGene\fP (Configuration a_conf)"
+.br
+.ti -1c
+.RI "Gene \fBgetQuartersGene\fP (Configuration a_conf)"
+.br
+.ti -1c
+.RI "int \fBsolve\fP (Configuration a_conf, int a_targetChangeAmount, \fBSupergeneChangeFitnessFunction\fP a_fitnessFunction, Gene[] a_sampleGenes)  throws InvalidConfigurationException "
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.5 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Abstract class for testing Supergene performance\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.PP
+Audrius Meskauskas 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file AbstractSupergeneTest\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static int examples\&.supergene\&.AbstractSupergeneTest\&.amountOfChange (inta_numQuarters, inta_numDimes, inta_numNickels, inta_numPennies)\fC [inline]\fP, \fC [static]\fP"
+Compute the money value from the coin information\&. 
+.PP
+Definition at line 108 of file AbstractSupergeneTest\&.java\&.
+.PP
+Referenced by examples\&.supergene\&.Force\&.solve()\&.
+.SS "Gene examples\&.supergene\&.AbstractSupergeneTest\&.getDimesGene (Configurationa_conf)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+created Dimes gene instance 
+.RE
+.PP
+
+.PP
+Definition at line 64 of file AbstractSupergeneTest\&.java\&.
+.PP
+Referenced by examples\&.supergene\&.SupergeneSample\&.makeChangeForAmount()\&.
+.SS "Gene examples\&.supergene\&.AbstractSupergeneTest\&.getNickelsGene (Configurationa_conf)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+created Nickels gene instance 
+.RE
+.PP
+
+.PP
+Definition at line 76 of file AbstractSupergeneTest\&.java\&.
+.PP
+Referenced by examples\&.supergene\&.SupergeneSample\&.makeChangeForAmount()\&.
+.SS "Gene examples\&.supergene\&.AbstractSupergeneTest\&.getPenniesGene (Configurationa_conf)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+created Pennies (1) gene instance 
+.RE
+.PP
+
+.PP
+Definition at line 88 of file AbstractSupergeneTest\&.java\&.
+.PP
+Referenced by examples\&.supergene\&.SupergeneSample\&.makeChangeForAmount()\&.
+.SS "Gene examples\&.supergene\&.AbstractSupergeneTest\&.getQuartersGene (Configurationa_conf)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+created Quarters gene instance 
+.RE
+.PP
+
+.PP
+Definition at line 100 of file AbstractSupergeneTest\&.java\&.
+.PP
+Referenced by examples\&.supergene\&.SupergeneSample\&.makeChangeForAmount()\&.
+.SS "abstract int examples\&.supergene\&.AbstractSupergeneTest\&.makeChangeForAmount (inta_targetChangeAmount) throws Exception\fC [pure virtual]\fP"
+Executes the genetic algorithm to determine the minimum number of coins necessary to make up the given target amount of change\&. The solution will then be written to System\&.out\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_targetChangeAmount\fP the target amount of change for which this method is attempting to produce the minimum number of coins
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+absolute difference between the required and computed change amount 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+
+.PP
+Implemented in \fBexamples\&.supergene\&.SupergeneSample\fP\&.
+.PP
+Referenced by examples\&.supergene\&.AbstractSupergeneTest\&.test()\&.
+.SS "IChromosome examples\&.supergene\&.AbstractSupergeneTest\&.report (\fBSupergeneChangeFitnessFunction\fPa_fitnessFunction, Genotypea_population)\fC [inline]\fP"
+Write report on eveluation to the given stream\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_fitnessFunction\fP p_SupergeneChangeFitnessFunction 
+.br
+\fIa_population\fP Genotype 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Chromosome 
+.RE
+.PP
+
+.PP
+Definition at line 135 of file AbstractSupergeneTest\&.java\&.
+.PP
+References examples\&.supergene\&.AbstractSupergeneTest\&.DIMES, examples\&.supergene\&.AbstractChangeFitnessFunction\&.getTotalNumberOfCoins(), examples\&.supergene\&.AbstractSupergeneTest\&.NICKELS, examples\&.supergene\&.AbstractSupergeneTest\&.PENNIES, examples\&.supergene\&.AbstractSupergeneTest\&.QUARTERS, and examples\&.supergene\&.AbstractSupergeneTest\&.REPORT_ENABLED\&.
+.PP
+Referenced by examples\&.supergene\&.AbstractSupergeneTest\&.solve()\&.
+.SS "int examples\&.supergene\&.AbstractSupergeneTest\&.solve (Configurationa_conf, inta_targetChangeAmount, \fBSupergeneChangeFitnessFunction\fPa_fitnessFunction, Gene[]a_sampleGenes) throws InvalidConfigurationException\fC [inline]\fP, \fC [protected]\fP"
+Find and print the solution, return the solution error\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+absolute difference between the required and computed change 
+.RE
+.PP
+
+.PP
+Definition at line 210 of file AbstractSupergeneTest\&.java\&.
+.PP
+References examples\&.supergene\&.AbstractSupergeneTest\&.MAX_ALLOWED_EVOLUTIONS, examples\&.supergene\&.AbstractSupergeneTest\&.POPULATION_SIZE, and examples\&.supergene\&.AbstractSupergeneTest\&.report()\&.
+.PP
+Referenced by examples\&.supergene\&.SupergeneSample\&.makeChangeForAmount()\&.
+.SS "int examples\&.supergene\&.AbstractSupergeneTest\&.test ()\fC [inline]\fP"
+Test the method, returns the sum of all differences between the required and obtained excange amount\&. One exception counts as 1000 on the error score\&. 
+.PP
+Definition at line 169 of file AbstractSupergeneTest\&.java\&.
+.PP
+References examples\&.supergene\&.AbstractSupergeneTest\&.EXISTING_SOLUTIONS_ONLY, examples\&.supergene\&.AbstractSupergeneTest\&.makeChangeForAmount(), examples\&.supergene\&.AbstractSupergeneTest\&.REPORT_ENABLED, and examples\&.supergene\&.Force\&.solve()\&.
+.PP
+Referenced by examples\&.supergene\&.SupergeneSample\&.main()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.supergene\&.AbstractSupergeneTest\&.CVS_REVISION = '$Revision: 1\&.5 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 25 of file AbstractSupergeneTest\&.java\&.
+.SS "final int examples\&.supergene\&.AbstractSupergeneTest\&.DIMES = 0\fC [static]\fP"
+Gene index for the dimes gene 
+.PP
+Definition at line 30 of file AbstractSupergeneTest\&.java\&.
+.PP
+Referenced by examples\&.supergene\&.AbstractChangeFitnessFunction\&.amountOfChange(), examples\&.supergene\&.AbstractChangeFitnessFunction\&.getTotalNumberOfCoins(), examples\&.supergene\&.SupergeneSample\&.makeChangeForAmount(), and examples\&.supergene\&.AbstractSupergeneTest\&.report()\&.
+.SS "boolean examples\&.supergene\&.AbstractSupergeneTest\&.EXISTING_SOLUTIONS_ONLY = false\fC [static]\fP"
+If set to true (required for strict tests), only tasks with existing solutions will be submitted as a test tasks\&. 
+.PP
+Definition at line 162 of file AbstractSupergeneTest\&.java\&.
+.PP
+Referenced by examples\&.supergene\&.AbstractSupergeneTest\&.test()\&.
+.SS "int examples\&.supergene\&.AbstractSupergeneTest\&.MAX_ALLOWED_EVOLUTIONS = 200\fC [static]\fP"
+The total number of times we'll let the population evolve\&. 
+.PP
+Definition at line 50 of file AbstractSupergeneTest\&.java\&.
+.PP
+Referenced by examples\&.supergene\&.AbstractSupergeneTest\&.solve()\&.
+.SS "final int examples\&.supergene\&.AbstractSupergeneTest\&.NICKELS = 2\fC [static]\fP"
+Gene index for the nickels gene Only used in the alternative presentation 
+.PP
+Definition at line 40 of file AbstractSupergeneTest\&.java\&.
+.PP
+Referenced by examples\&.supergene\&.AbstractChangeFitnessFunction\&.amountOfChange(), examples\&.supergene\&.AbstractChangeFitnessFunction\&.getTotalNumberOfCoins(), and examples\&.supergene\&.AbstractSupergeneTest\&.report()\&.
+.SS "final int examples\&.supergene\&.AbstractSupergeneTest\&.PENNIES = 3\fC [static]\fP"
+Gene index for the pennies gene\&. Only used in the alternative presentation 
+.PP
+Definition at line 45 of file AbstractSupergeneTest\&.java\&.
+.PP
+Referenced by examples\&.supergene\&.AbstractChangeFitnessFunction\&.amountOfChange(), examples\&.supergene\&.AbstractChangeFitnessFunction\&.getTotalNumberOfCoins(), and examples\&.supergene\&.AbstractSupergeneTest\&.report()\&.
+.SS "int examples\&.supergene\&.AbstractSupergeneTest\&.POPULATION_SIZE = 2000\fC [static]\fP"
+Chromosome size\&. 
+.PP
+Definition at line 55 of file AbstractSupergeneTest\&.java\&.
+.PP
+Referenced by examples\&.supergene\&.AbstractSupergeneTest\&.solve()\&.
+.SS "final int examples\&.supergene\&.AbstractSupergeneTest\&.QUARTERS = 1\fC [static]\fP"
+Gene index for the quarters gene\&. 
+.PP
+Definition at line 35 of file AbstractSupergeneTest\&.java\&.
+.PP
+Referenced by examples\&.supergene\&.AbstractChangeFitnessFunction\&.amountOfChange(), examples\&.supergene\&.AbstractChangeFitnessFunction\&.getTotalNumberOfCoins(), examples\&.supergene\&.SupergeneSample\&.makeChangeForAmount(), and examples\&.supergene\&.AbstractSupergeneTest\&.report()\&.
+.SS "boolean examples\&.supergene\&.AbstractSupergeneTest\&.REPORT_ENABLED = true\fC [static]\fP"
+
+.PP
+Definition at line 57 of file AbstractSupergeneTest\&.java\&.
+.PP
+Referenced by examples\&.supergene\&.AbstractSupergeneTest\&.report(), and examples\&.supergene\&.AbstractSupergeneTest\&.test()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

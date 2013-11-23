@@ -1,0 +1,512 @@
+.TH "org.jgap.impl.BooleanGene" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.BooleanGene \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.BaseGene\fP, and \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBooleanGene\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBBooleanGene\fP (final \fBConfiguration\fP a_config)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBBooleanGene\fP (final \fBConfiguration\fP a_config, final boolean a_value)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBBooleanGene\fP (final \fBConfiguration\fP a_config, final Boolean a_value)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBsetAllele\fP (final Object a_newValue)"
+.br
+.ti -1c
+.RI "String \fBgetPersistentRepresentation\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetValueFromPersistentRepresentation\fP (String a_representation)  throws UnsupportedRepresentationException "
+.br
+.ti -1c
+.RI "boolean \fBbooleanValue\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetToRandomValue\fP (\fBRandomGenerator\fP a_numberGenerator)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "void \fBapplyMutation\fP (int a_index, double a_percentage)"
+.br
+.ti -1c
+.RI "int \fBhashCode\fP ()"
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGene\fP \fBnewGeneInternal\fP ()"
+.br
+.ti -1c
+.RI "Object \fBgetInternalValue\fP ()"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final Boolean \fBTRUE_BOOLEAN\fP = Boolean\&.valueOf(true)"
+.br
+.ti -1c
+.RI "static final Boolean \fBFALSE_BOOLEAN\fP = Boolean\&.valueOf(false)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Boolean \fBm_value\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.32 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A \fBGene\fP implementation that supports two possible values (alleles) for each gene: true and false\&. 
+.PP
+NOTE: Since this \fBGene\fP implementation only supports two different values (true and false), there's only a 50% chance that invocation of the \fBsetToRandomValue()\fP method will actually change the value of this \fBGene\fP (if it has a value)\&. As a result, it may be desirable to use a higher overall mutation rate when this \fBGene\fP implementation is in use\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 29 of file BooleanGene\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.impl\&.BooleanGene\&.BooleanGene () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Default constructor\&.
+.PP
+Attention: The configuration used is the one set with the static method Genotype\&.setConfiguration\&. 
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 62 of file BooleanGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BooleanGene\&.compareTo(), and org\&.jgap\&.impl\&.BooleanGene\&.newGeneInternal()\&.
+.SS "org\&.jgap\&.impl\&.BooleanGene\&.BooleanGene (final \fBConfiguration\fPa_config) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 74 of file BooleanGene\&.java\&.
+.SS "org\&.jgap\&.impl\&.BooleanGene\&.BooleanGene (final \fBConfiguration\fPa_config, final booleana_value) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.br
+\fIa_value\fP allele value to setup the gene with 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 87 of file BooleanGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.BooleanGene\&.m_value\&.
+.SS "org\&.jgap\&.impl\&.BooleanGene\&.BooleanGene (final \fBConfiguration\fPa_config, final Booleana_value) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_config\fP the configuration to use 
+.br
+\fIa_value\fP allele value to setup the gene with 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 101 of file BooleanGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.BooleanGene\&.m_value\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.impl\&.BooleanGene\&.applyMutation (inta_index, doublea_percentage)\fC [inline]\fP"
+Applies a mutation of a given intensity (percentage) onto the atomic element at given index 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP not used here 
+.br
+\fIa_percentage\fP percentage of mutation (greater than -1 and smaller than 1)\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 353 of file BooleanGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.BooleanGene\&.m_value\&.
+.SS "boolean org\&.jgap\&.impl\&.BooleanGene\&.booleanValue ()\fC [inline]\fP"
+Retrieves the boolean value of this \fBGene\fP\&. This may be more convenient in some cases than the more general \fBgetAllele()\fP method\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the boolean value of this \fBGene\fP 
+.RE
+.PP
+
+.PP
+Definition at line 219 of file BooleanGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.job\&.MaxFunction\&.evaluate(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testApplyMutation_0(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testApplyMutation_1(), org\&.jgap\&.impl\&.SetGeneTest\&.testApplyMutation_10(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testApplyMutation_10(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testApplyMutation_2(), org\&.jgap\&.impl\&.SetGeneTest\&.testApplyMutation_3(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testApplyMutation_3(), org\&.jgap\&.impl\&.SetGeneTest\&.testApplyMutation_4(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testApplyMutation_4(), org\&.jgap\&.impl\&.SetGeneTest\&.testApplyMutation_5(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testApplyMutation_5(), org\&.jgap\&.impl\&.SetGeneTest\&.testApplyMutation_6(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testApplyMutation_6(), org\&.jgap\&.impl\&.SetGeneTest\&.testApplyMutation_7(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testApplyMutation_7(), org\&.jgap\&.impl\&.SetGeneTest\&.testApplyMutation_8(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testApplyMutation_8(), org\&.jgap\&.impl\&.SetGeneTest\&.testApplyMutation_9(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testApplyMutation_9(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testBooleanValue_0(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testBooleanValue_1(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testBooleanValue_2(), org\&.jgap\&.impl\&.BooleanGeneTest\&.testConstruct_1(), and org\&.jgap\&.impl\&.BooleanGeneTest\&.testConstruct_2()\&.
+.SS "int org\&.jgap\&.impl\&.BooleanGene\&.compareTo (Objecta_other)\fC [inline]\fP"
+Compares this \fBBooleanGene\fP with the specified object for order\&. A false value is considered to be less than a true value\&. A null value is considered to be less than any non-null value\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the \fBBooleanGene\fP to be compared 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a negative integer, zero, or a positive integer as this object is less than, equal to, or greater than the specified object
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIClassCastException\fP if the specified object's type prevents it from being compared to this \fBBooleanGene\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 264 of file BooleanGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.BooleanGene\&.BooleanGene(), org\&.jgap\&.BaseGene\&.compareApplicationData(), org\&.jgap\&.BaseGene\&.getApplicationData(), org\&.jgap\&.BaseGene\&.isCompareApplicationData(), and org\&.jgap\&.impl\&.BooleanGene\&.m_value\&.
+.SS "Object org\&.jgap\&.impl\&.BooleanGene\&.getInternalValue ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Each \fBGene\fP implementation holds its own m_value object keeping the allele value\&. In your \fBGene\fP implementation, just return it with this method (see \fBorg\&.jgap\&.impl\&.BooleanGene\fP for example) 
+.PP
+\fBReturns:\fP
+.RS 4
+the m_value object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Definition at line 373 of file BooleanGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.BooleanGene\&.m_value\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BooleanGene\&.getPersistentRepresentation(), org\&.jgap\&.impl\&.BooleanGene\&.hashCode(), and org\&.jgap\&.impl\&.BooleanGene\&.toString()\&.
+.SS "String org\&.jgap\&.impl\&.BooleanGene\&.getPersistentRepresentation ()\fC [inline]\fP"
+Retrieves a string representation of this \fBGene\fP that includes any information required to reconstruct it at a later time, such as its value and internal state\&. This string will be used to represent this \fBGene\fP in XML persistence\&. This is an optional method but, if not implemented, XML persistence and possibly other features will not be available\&. An UnsupportedOperationException should be thrown if no implementation is provided\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a string representation of this \fBGene\fP's current state
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.PP
+Definition at line 158 of file BooleanGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.BooleanGene\&.getInternalValue()\&.
+.SS "int org\&.jgap\&.impl\&.BooleanGene\&.hashCode ()\fC [inline]\fP"
+Modified \fBhashCode()\fP function to return different hashcodes for differently ordered genes in a chromosome 
+.PP
+\fBReturns:\fP
+.RS 4
+-2 if no allele set, otherwise value return by \fBBaseGene\&.hashCode()\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 385 of file BooleanGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.BooleanGene\&.getInternalValue()\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.SetGeneTest\&.testHashCode_0(), and org\&.jgap\&.impl\&.BooleanGeneTest\&.testHashCode_0()\&.
+.SS "\fBGene\fP org\&.jgap\&.impl\&.BooleanGene\&.newGeneInternal ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Provides an implementation-independent means for creating new \fBGene\fP instances\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a new \fBGene\fP instance of the same type and with the same setup as this concrete \fBGene\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.BaseGene\fP\&.
+.PP
+Definition at line 125 of file BooleanGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.BooleanGene\&.BooleanGene(), and org\&.jgap\&.BaseGene\&.getConfiguration()\&.
+.SS "void org\&.jgap\&.impl\&.BooleanGene\&.setAllele (final Objecta_newValue)\fC [inline]\fP"
+Sets the value of this \fBGene\fP to the new given value\&. This class expects the value to be a Boolean instance\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_newValue\fP the new value of this \fBGene\fP instance 
+.RE
+.PP
+
+.PP
+Definition at line 140 of file BooleanGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.BooleanGene\&.m_value\&.
+.SS "void org\&.jgap\&.impl\&.BooleanGene\&.setToRandomValue (\fBRandomGenerator\fPa_numberGenerator)\fC [inline]\fP"
+Sets the value (allele) of this \fBGene\fP to a random legal value\&. This method exists for the benefit of mutation and other operations that simply desire to randomize the value of a gene\&. 
+.PP
+NOTE: Since this \fBGene\fP implementation only supports two different values (true and false), there's only a 50% chance that invocation of this method will actually change the value of this \fBGene\fP (if it has a value)\&. As a result, it may be desirable to use a higher overall mutation rate when this \fBGene\fP implementation is in use\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_numberGenerator\fP The random number generator that should be used to create any random values\&. It's important to use this generator to maintain the user's flexibility to configure the genetic engine to use the random number generator of their choice 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 239 of file BooleanGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.BooleanGene\&.FALSE_BOOLEAN, org\&.jgap\&.impl\&.BooleanGene\&.m_value, org\&.jgap\&.RandomGenerator\&.nextBoolean(), and org\&.jgap\&.impl\&.BooleanGene\&.TRUE_BOOLEAN\&.
+.SS "void org\&.jgap\&.impl\&.BooleanGene\&.setValueFromPersistentRepresentation (Stringa_representation) throws \fBUnsupportedRepresentationException\fP\fC [inline]\fP"
+Sets the value and internal state of this \fBGene\fP from the string representation returned by a previous invocation of the \fBgetPersistentRepresentation()\fP method\&. This is an optional method but, if not implemented, XML persistence and possibly other features will not be available\&. An UnsupportedOperationException should be thrown if no implementation is provided\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_representation\fP the string representation retrieved from a prior call to the \fBgetPersistentRepresentation()\fP method
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIUnsupportedOperationException\fP to indicate that no implementation is provided for this method 
+.br
+\fI\fBUnsupportedRepresentationException\fP\fP if this \fBGene\fP implementation does not support the given string representation
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan 
+.PP
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.IPersistentRepresentation\fP\&.
+.PP
+Definition at line 189 of file BooleanGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.BooleanGene\&.FALSE_BOOLEAN, org\&.jgap\&.impl\&.BooleanGene\&.m_value, and org\&.jgap\&.impl\&.BooleanGene\&.TRUE_BOOLEAN\&.
+.SS "String org\&.jgap\&.impl\&.BooleanGene\&.toString ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+string representation of this \fBGene\fP's value that may be useful for display purposes\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.Gene\fP\&.
+.PP
+Definition at line 401 of file BooleanGene\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.BooleanGene\&.getInternalValue()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.BooleanGene\&.CVS_REVISION = '$Revision: 1\&.32 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 32 of file BooleanGene\&.java\&.
+.SS "final Boolean org\&.jgap\&.impl\&.BooleanGene\&.FALSE_BOOLEAN = Boolean\&.valueOf(false)\fC [static]\fP, \fC [protected]\fP"
+Shared constant representing the 'false' boolean value\&. Shared constants are used to save memory so that a new Boolean object doesn't have to be constructed each time\&. 
+.PP
+Definition at line 46 of file BooleanGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BooleanGene\&.setToRandomValue(), and org\&.jgap\&.impl\&.BooleanGene\&.setValueFromPersistentRepresentation()\&.
+.SS "Boolean org\&.jgap\&.impl\&.BooleanGene\&.m_value\fC [private]\fP"
+References the internal boolean value of this \fBGene\fP\&. 
+.PP
+Definition at line 51 of file BooleanGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BooleanGene\&.applyMutation(), org\&.jgap\&.impl\&.BooleanGene\&.BooleanGene(), org\&.jgap\&.impl\&.BooleanGene\&.compareTo(), org\&.jgap\&.impl\&.BooleanGene\&.getInternalValue(), org\&.jgap\&.impl\&.BooleanGene\&.setAllele(), org\&.jgap\&.impl\&.BooleanGene\&.setToRandomValue(), and org\&.jgap\&.impl\&.BooleanGene\&.setValueFromPersistentRepresentation()\&.
+.SS "final Boolean org\&.jgap\&.impl\&.BooleanGene\&.TRUE_BOOLEAN = Boolean\&.valueOf(true)\fC [static]\fP, \fC [protected]\fP"
+Shared constant representing the 'true' boolean value\&. Shared constants are used to save memory so that a new Boolean object doesn't have to be constructed each time\&. 
+.PP
+Definition at line 39 of file BooleanGene\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.BooleanGene\&.setToRandomValue(), and org\&.jgap\&.impl\&.BooleanGene\&.setValueFromPersistentRepresentation()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

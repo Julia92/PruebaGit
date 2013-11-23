@@ -1,0 +1,389 @@
+.TH "org.jgap.gp.function.CountMatrix" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.function.CountMatrix \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandGene\fP, \fBorg\&.jgap\&.util\&.ICloneable\fP, and \fBorg\&.jgap\&.gp\&.IMutateable\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "enum \fBCountMode\fP"
+.br
+.ti -1c
+.RI "enum \fBCountType\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCountMatrix\fP (final GPConfiguration a_conf, String a_matrixName, \fBCountType\fP a_countType, \fBCountMode\fP a_countMode, char a_emptyCharacter, char a_specificCharacter)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCountMatrix\fP (final GPConfiguration a_conf, String a_matrixName, \fBCountType\fP a_countType, \fBCountMode\fP a_countMode, char a_emptyCharacter, char a_specificCharacter, int a_subChildType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "int \fBexecute_int\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "Class \fBgetChildType\fP (\fBIGPProgram\fP a_ind, int a_chromNum)"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.ti -1c
+.RI "boolean \fBequals\fP (Object a_other)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP \fBapplyMutation\fP (int index, double a_percentage)  throws InvalidConfigurationException "
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBcount\fP (char a_char)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "String \fBm_matrixName\fP"
+.br
+.ti -1c
+.RI "\fBCountType\fP \fBm_countType\fP"
+.br
+.ti -1c
+.RI "\fBCountMode\fP \fBm_countMode\fP"
+.br
+.ti -1c
+.RI "char \fBm_emptyCharacter\fP"
+.br
+.ti -1c
+.RI "char \fBm_specificCharacter\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.5 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Counts either the elements in a row, in a column or in a diagonal of a two-dimensional matrix in internal memory\&. The function can be controlled to either count empty or non-empty or a specific character\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file CountMatrix\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.function\&.CountMatrix\&.CountMatrix (final GPConfigurationa_conf, Stringa_matrixName, \fBCountType\fPa_countType, \fBCountMode\fPa_countMode, chara_emptyCharacter, chara_specificCharacter) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 42 of file CountMatrix\&.java\&.
+.SS "org\&.jgap\&.gp\&.function\&.CountMatrix\&.CountMatrix (final GPConfigurationa_conf, Stringa_matrixName, \fBCountType\fPa_countType, \fBCountMode\fPa_countMode, chara_emptyCharacter, chara_specificCharacter, inta_subChildType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Allows setting a sub child type\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP GPConfiguration 
+.br
+\fIa_matrixName\fP String 
+.br
+\fIa_subChildType\fP int 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 61 of file CountMatrix\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.IntegerClass\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBCommandGene\fP org\&.jgap\&.gp\&.function\&.CountMatrix\&.applyMutation (inta_index, doublea_percentage) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Mutates a \fBCommandGene\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP references the part of a multipart object, normally not relevant 
+.br
+\fIa_percentage\fP the mutation rate (0\&.0 to 1\&.0) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the mutant 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IMutateable\fP\&.
+.PP
+Definition at line 268 of file CountMatrix\&.java\&.
+.SS "Object org\&.jgap\&.gp\&.function\&.CountMatrix\&.clone ()\fC [inline]\fP"
+Clones the object\&. Simple and straight forward implementation here\&.
+.PP
+\fBReturns:\fP
+.RS 4
+cloned instance of this object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 257 of file CountMatrix\&.java\&.
+.SS "int org\&.jgap\&.gp\&.function\&.CountMatrix\&.compareTo (Objecta_other)\fC [inline]\fP"
+The compareTo-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+-1, 0, 1
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 211 of file CountMatrix\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.CountMatrix\&.m_countType, and org\&.jgap\&.gp\&.function\&.CountMatrix\&.m_emptyCharacter\&.
+.SS "int org\&.jgap\&.gp\&.function\&.CountMatrix\&.count (chara_char)\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIthe\fP character to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+1 if a match occured, 0 otherwise
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 163 of file CountMatrix\&.java\&.
+.SS "boolean org\&.jgap\&.gp\&.function\&.CountMatrix\&.equals (Objecta_other)\fC [inline]\fP"
+The equals-method\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP the other object to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the objects are seen as equal
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 234 of file CountMatrix\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.CountMatrix\&.m_countType, and org\&.jgap\&.gp\&.function\&.CountMatrix\&.m_emptyCharacter\&.
+.SS "int org\&.jgap\&.gp\&.function\&.CountMatrix\&.execute_int (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 92 of file CountMatrix\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.function\&.CountMatrix\&.CountType\&.MATRIX\&.
+.SS "Class org\&.jgap\&.gp\&.function\&.CountMatrix\&.getChildType (\fBIGPProgram\fPa_ind, inta_chromNum)\fC [inline]\fP"
+Determines which type a specific child of this command has\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ind\fP ignored here 
+.br
+\fIa_chromNum\fP index of child 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+type of the a_chromNum'th child
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 198 of file CountMatrix\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.IntegerClass\&.
+.SS "String org\&.jgap\&.gp\&.function\&.CountMatrix\&.getName ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+textual name of this command
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 87 of file CountMatrix\&.java\&.
+.SS "String org\&.jgap\&.gp\&.function\&.CountMatrix\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 77 of file CountMatrix\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.function\&.CountMatrix\&.CVS_REVISION = '$Revision: 1\&.5 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 31 of file CountMatrix\&.java\&.
+.SS "\fBCountMode\fP org\&.jgap\&.gp\&.function\&.CountMatrix\&.m_countMode\fC [private]\fP"
+
+.PP
+Definition at line 38 of file CountMatrix\&.java\&.
+.SS "\fBCountType\fP org\&.jgap\&.gp\&.function\&.CountMatrix\&.m_countType\fC [private]\fP"
+
+.PP
+Definition at line 37 of file CountMatrix\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.CountMatrix\&.compareTo(), and org\&.jgap\&.gp\&.function\&.CountMatrix\&.equals()\&.
+.SS "char org\&.jgap\&.gp\&.function\&.CountMatrix\&.m_emptyCharacter\fC [private]\fP"
+
+.PP
+Definition at line 39 of file CountMatrix\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.function\&.CountMatrix\&.compareTo(), and org\&.jgap\&.gp\&.function\&.CountMatrix\&.equals()\&.
+.SS "String org\&.jgap\&.gp\&.function\&.CountMatrix\&.m_matrixName\fC [private]\fP"
+Symbolic name of the matrix\&. Must correspond with a chosen name for \fBReadFromMatrix\fP\&. 
+.PP
+Definition at line 36 of file CountMatrix\&.java\&.
+.SS "char org\&.jgap\&.gp\&.function\&.CountMatrix\&.m_specificCharacter\fC [private]\fP"
+
+.PP
+Definition at line 40 of file CountMatrix\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

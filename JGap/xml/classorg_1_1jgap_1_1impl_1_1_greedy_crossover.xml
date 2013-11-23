@@ -1,0 +1,602 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="classorg_1_1jgap_1_1impl_1_1_greedy_crossover" kind="class" prot="public">
+    <compoundname>org::jgap::impl::GreedyCrossover</compoundname>
+    <basecompoundref refid="classorg_1_1jgap_1_1_base_genetic_operator" prot="public" virt="non-virtual">org.jgap.BaseGeneticOperator</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1ab6ee35a26acab5f96032250a6a5d2696" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String org.jgap.impl.GreedyCrossover.CVS_REVISION</definition>
+        <argsstring></argsstring>
+        <name>CVS_REVISION</name>
+        <initializer>= &quot;$Revision: 1.30 $&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String containing the CVS revision. Read out via reflection! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" line="58" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1ae0724b2595260dbfadadf614b82b4230" prot="package" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean org.jgap.impl.GreedyCrossover.ASSERTIONS</definition>
+        <argsstring></argsstring>
+        <name>ASSERTIONS</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Switches assertions on/off. Must be true during tests and debugging. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" line="61" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a2c851e311ad5a263c915e01d8a30aa70" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int org.jgap.impl.GreedyCrossover.m_startOffset</definition>
+        <argsstring></argsstring>
+        <name>m_startOffset</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" line="63" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" bodystart="63" bodyend="-1"/>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1abb3111b92c3d771a9a4d5320071259a6" compoundref="_greedy_crossover_8java" startline="262" endline="269">org.jgap.impl.GreedyCrossover.findNext</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a6d4b71a26f742714520a6dfa931cc8c2" compoundref="_greedy_crossover_8java" startline="291" endline="293">org.jgap.impl.GreedyCrossover.getStartOffset</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a9fc2e11874fbc8b8349c1a0d93a8b5d9" compoundref="_greedy_crossover_8java" startline="155" endline="174">org.jgap.impl.GreedyCrossover.operate</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a6f518b090d9a358f7d96b7b11e6bf785" compoundref="_greedy_crossover_8java" startline="279" endline="281">org.jgap.impl.GreedyCrossover.setStartOffset</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a5777f6e13508c61d2c1e43ee0900cbf3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.GreedyCrossover.GreedyCrossover</definition>
+        <argsstring>()</argsstring>
+        <name>GreedyCrossover</name>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor for dynamic instantiation.</para><para>Attention: The configuration used is the one set with the static method Genotype.setConfiguration.</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para><simplesectsep/><para>3.0 (since 2.0 without a_configuration) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" line="76" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" bodystart="76" bodyend="79"/>
+        <references refid="classorg_1_1jgap_1_1_genotype_1aaf3d4bf0b470aa4655e85262289443eb" compoundref="_genotype_8java" startline="520" endline="522">org.jgap.Genotype.getStaticConfiguration</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1ab1cb7c568f154dba5f43311e2c75ccfe" compoundref="_greedy_crossover_8java" startline="306" endline="323">org.jgap.impl.GreedyCrossover.compareTo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a2592b70d785e0344ac6cbc23d10c7864" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>org.jgap.impl.GreedyCrossover.GreedyCrossover</definition>
+        <argsstring>(Configuration a_configuration)</argsstring>
+        <name>GreedyCrossover</name>
+        <param>
+          <type><ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref></type>
+          <declname>a_configuration</declname>
+        </param>
+        <exceptions> throws <ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Using the given configuration.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_configuration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to use </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classorg_1_1jgap_1_1_invalid_configuration_exception" kindref="compound">InvalidConfigurationException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>3.0 (since 2.6 without a_configuration) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" line="90" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a41deed206eb483d92e5dee7d0bf537ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double org.jgap.impl.GreedyCrossover.distance</definition>
+        <argsstring>(final Object a_from, final Object a_to)</argsstring>
+        <name>distance</name>
+        <param>
+          <type>final Object</type>
+          <declname>a_from</declname>
+        </param>
+        <param>
+          <type>final Object</type>
+          <declname>a_to</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute the distance between &quot;cities&quot;, indicated by these two given genes. The default method expects the genes to be <ref refid="classorg_1_1jgap_1_1impl_1_1_integer_gene" kindref="compound">IntegerGene</ref>&apos;s and returns their absolute difference, that makes sense only for tests.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_to</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>distance between the two given cities </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" line="105" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" bodystart="105" bodyend="109"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_integer_gene_1a90c518c0ed7c08016323ea88b9fb4078" compoundref="_integer_gene_8java" startline="239" endline="241">org.jgap.impl.IntegerGene.intValue</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a6a19fa44501e6bd2d3e5be8ba7424b3a" compoundref="_greedy_crossover_8java" startline="176" endline="260">org.jgap.impl.GreedyCrossover.operate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a57adb8d442035ecae43e194f29dff43c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.GreedyCrossover.operate</definition>
+        <argsstring>(final Population a_population, final List a_candidateChromosomes)</argsstring>
+        <name>operate</name>
+        <reimplements refid="interfaceorg_1_1jgap_1_1_genetic_operator_1a0f9dfe925c4c21e07522be67d6c5d084">operate</reimplements>
+        <param>
+          <type>final <ref refid="classorg_1_1jgap_1_1_population" kindref="compound">Population</ref></type>
+          <declname>a_population</declname>
+        </param>
+        <param>
+          <type>final List</type>
+          <declname>a_candidateChromosomes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The operate method will be invoked on each of the genetic operators referenced by the current <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> object during the evolution phase. Operators are given an opportunity to run in the order that they are added to the <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref>. Implementations of this method may reference the population of Chromosomes as it was at the beginning of the evolutionary phase and/or they may instead reference the candidate Chromosomes, which are the results of prior genetic operators. In either case, only Chromosomes added to the list of candidate chromosomes will be considered for natural selection.</para><para>The parameters a_population and a_candidateChromosomes may refer to the same list of chromosomes for performance issues. Thus would mean an in-place modification. In ealier JGAP versions it was suggested never modifying the input population. Please refer to implementations delivered with JGAP to get a picture of the way non-susceptible in-place modifications are possible. If wrongly done, ConcurrentModificationException could be risen when accessing the population by an iterator in a <ref refid="interfaceorg_1_1jgap_1_1_genetic_operator" kindref="compound">GeneticOperator</ref>. Or, if population.getChromosomes().size() was used inside a loop where chromosomes were added to the input population this could lead to an infinite loop in worst case.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_population</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the population of chromosomes from the current evolution prior to exposure to any genetic operators. Chromosomes in this array should not be modified. Please, notice, that the call in <ref refid="classorg_1_1jgap_1_1_genotype_1a54a6791fbb6e13920e79f4e2dd719eb4" kindref="member">Genotype.evolve()</ref> to the implementations of <ref refid="interfaceorg_1_1jgap_1_1_genetic_operator" kindref="compound">GeneticOperator</ref> overgoes this due to performance issues </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_candidateChromosomes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the pool of chromosomes that have been selected for the next evolved population</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Neil Rotstan </para><simplesectsep/><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.0 (earlier versions referenced the <ref refid="classorg_1_1jgap_1_1_configuration" kindref="compound">Configuration</ref> object) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" line="111" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" bodystart="111" bodyend="143"/>
+        <references refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable_1aa7e7d62077e6428ad7904932b1b4f7d5">org.jgap.util.ICloneable.clone</references>
+        <references refid="classorg_1_1jgap_1_1_base_genetic_operator_1addbc6b98f572331d47397227b7a49f6a" compoundref="_base_genetic_operator_8java" startline="57" endline="59">org.jgap.BaseGeneticOperator.getConfiguration</references>
+        <references refid="classorg_1_1jgap_1_1_base_genetic_operator_1a5194e705ed206f99852bf158546646b5" compoundref="_base_genetic_operator_8java" startline="30">org.jgap.BaseGeneticOperator.m_monitorActive</references>
+        <references refid="classorg_1_1jgap_1_1_population_1a2d09529f8e93d57a0546625362ca5bee" compoundref="_population_8java" startline="267" endline="269">org.jgap.Population.size</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a9fc2e11874fbc8b8349c1a0d93a8b5d9" compoundref="_greedy_crossover_8java" startline="155" endline="174">org.jgap.impl.GreedyCrossover.operate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a9fc2e11874fbc8b8349c1a0d93a8b5d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.GreedyCrossover.operate</definition>
+        <argsstring>(final IChromosome a_firstMate, final IChromosome a_secondMate)</argsstring>
+        <name>operate</name>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+          <declname>a_firstMate</declname>
+        </param>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_i_chromosome" kindref="compound">IChromosome</ref></type>
+          <declname>a_secondMate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Performs a greedy crossover for the two given chromosoms.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_firstMate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the first chromosome to crossover on </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_secondMate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the second chromosome to crossover on </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the gene set in the chromosomes is not identical</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Audrius Meskauskas </para></simplesect>
+<simplesect kind="since"><para>2.1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" line="155" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" bodystart="155" bodyend="174"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a2c851e311ad5a263c915e01d8a30aa70" compoundref="_greedy_crossover_8java" startline="63">org.jgap.impl.GreedyCrossover.m_startOffset</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a57adb8d442035ecae43e194f29dff43c" compoundref="_greedy_crossover_8java" startline="111" endline="143">org.jgap.impl.GreedyCrossover.operate</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a6f518b090d9a358f7d96b7b11e6bf785" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void org.jgap.impl.GreedyCrossover.setStartOffset</definition>
+        <argsstring>(int a_offset)</argsstring>
+        <name>setStartOffset</name>
+        <param>
+          <type>int</type>
+          <declname>a_offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets a number of genes at the start of chromosome, that are excluded from the swapping. In the Salesman task, the first city in the list should (where the salesman leaves from) probably should not change as it is part of the list. The default value is 1.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the start offset to use </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" line="279" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" bodystart="279" bodyend="281"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a2c851e311ad5a263c915e01d8a30aa70" compoundref="_greedy_crossover_8java" startline="63">org.jgap.impl.GreedyCrossover.m_startOffset</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a6d4b71a26f742714520a6dfa931cc8c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.impl.GreedyCrossover.getStartOffset</definition>
+        <argsstring>()</argsstring>
+        <name>getStartOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets a number of genes at the start of chromosome, that are excluded from the swapping. In the Salesman task, the first city in the list should (where the salesman leaves from) probably should not change as it is part of the list. The default value is 1.</para><para><simplesect kind="return"><para>the start offset used </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" line="291" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" bodystart="291" bodyend="293"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a2c851e311ad5a263c915e01d8a30aa70" compoundref="_greedy_crossover_8java" startline="63">org.jgap.impl.GreedyCrossover.m_startOffset</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1ab1cb7c568f154dba5f43311e2c75ccfe" compoundref="_greedy_crossover_8java" startline="306" endline="323">org.jgap.impl.GreedyCrossover.compareTo</referencedby>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_test_1a6221dc391054efad6fbf07f1902b7210" compoundref="_greedy_crossover_test_8java" startline="449" endline="459">org.jgap.impl.GreedyCrossoverTest.testStartoffset_0</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1ab1cb7c568f154dba5f43311e2c75ccfe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int org.jgap.impl.GreedyCrossover.compareTo</definition>
+        <argsstring>(final Object a_other)</argsstring>
+        <name>compareTo</name>
+        <param>
+          <type>final Object</type>
+          <declname>a_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compares the given <ref refid="interfaceorg_1_1jgap_1_1_genetic_operator" kindref="compound">GeneticOperator</ref> to this <ref refid="interfaceorg_1_1jgap_1_1_genetic_operator" kindref="compound">GeneticOperator</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a_other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the instance against which to compare this instance </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a negative number if this instance is &quot;less than&quot; the given instance, zero if they are equal to each other, and a positive number if this is &quot;greater than&quot; the given instance</para></simplesect>
+<simplesect kind="author"><para>Klaus Meffert </para></simplesect>
+<simplesect kind="since"><para>2.6 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" line="306" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" bodystart="306" bodyend="323"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a6d4b71a26f742714520a6dfa931cc8c2" compoundref="_greedy_crossover_8java" startline="291" endline="293">org.jgap.impl.GreedyCrossover.getStartOffset</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a5777f6e13508c61d2c1e43ee0900cbf3" compoundref="_greedy_crossover_8java" startline="76" endline="79">org.jgap.impl.GreedyCrossover.GreedyCrossover</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_test_1af655a0f213bf8e758b44c1b76ddbb741" compoundref="_greedy_crossover_test_8java" startline="508" endline="517">org.jgap.impl.GreedyCrossoverTest.testCompareTo_0</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a6a19fa44501e6bd2d3e5be8ba7424b3a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>[]</type>
+        <definition>Gene [] org.jgap.impl.GreedyCrossover.operate</definition>
+        <argsstring>(final Gene[] a_g1, final Gene[] a_g2)</argsstring>
+        <name>operate</name>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>[]</type>
+          <declname>a_g1</declname>
+        </param>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>[]</type>
+          <declname>a_g2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" line="176" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" bodystart="176" bodyend="260"/>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a41deed206eb483d92e5dee7d0bf537ef" compoundref="_greedy_crossover_8java" startline="105" endline="109">org.jgap.impl.GreedyCrossover.distance</references>
+        <references refid="classorg_1_1jgap_1_1_base_genetic_operator_1a4db6fa1a99177114c0f19f02cd4a87ec" compoundref="_base_genetic_operator_8java" startline="72" endline="80">org.jgap.BaseGeneticOperator.equals</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1abb3111b92c3d771a9a4d5320071259a6" compoundref="_greedy_crossover_8java" startline="262" endline="269">org.jgap.impl.GreedyCrossover.findNext</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a2c851e311ad5a263c915e01d8a30aa70" compoundref="_greedy_crossover_8java" startline="63">org.jgap.impl.GreedyCrossover.m_startOffset</references>
+      </memberdef>
+      <memberdef kind="function" id="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1abb3111b92c3d771a9a4d5320071259a6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+        <definition>Gene org.jgap.impl.GreedyCrossover.findNext</definition>
+        <argsstring>(final Gene[] a_g, final Gene a_x)</argsstring>
+        <name>findNext</name>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref>[]</type>
+          <declname>a_g</declname>
+        </param>
+        <param>
+          <type>final <ref refid="interfaceorg_1_1jgap_1_1_gene" kindref="compound">Gene</ref></type>
+          <declname>a_x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" line="262" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" bodystart="262" bodyend="269"/>
+        <references refid="classorg_1_1jgap_1_1_base_genetic_operator_1a4db6fa1a99177114c0f19f02cd4a87ec" compoundref="_base_genetic_operator_8java" startline="72" endline="80">org.jgap.BaseGeneticOperator.equals</references>
+        <references refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a2c851e311ad5a263c915e01d8a30aa70" compoundref="_greedy_crossover_8java" startline="63">org.jgap.impl.GreedyCrossover.m_startOffset</references>
+        <referencedby refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a6a19fa44501e6bd2d3e5be8ba7424b3a" compoundref="_greedy_crossover_8java" startline="176" endline="260">org.jgap.impl.GreedyCrossover.operate</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The Greedy Crossover is a specific type of crossover. It can only be is applied if <itemizedlist>
+<listitem>
+<para><orderedlist>
+<listitem><para>All genes in the chromosome are different and  </para></listitem></orderedlist>
+</para></listitem>
+<listitem>
+<para><orderedlist>
+<listitem><para>The set of genes for both chromosomes is identical and only their order in the chromosome can vary.  </para></listitem></orderedlist>
+</para></listitem>
+</itemizedlist>
+</para><para>After the <ref refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover" kindref="compound">GreedyCrossover</ref>, these two conditions always remain true, so it can be applied again and again.</para><para>The algorithm throws an assertion error if the two initial chromosomes does not satisfy these conditions.</para><para>Greedy crossover can be best explained in the terms of the Traveling Salesman Problem:</para><para>The algorithm selects the first city of one parent, compares the cities leaving that city in both parents, and chooses the closer one to extend the tour. If one city has already appeared in the tour, we choose the other city. If both cities have already appeared, we randomly select a non-selected city.</para><para>See J. Grefenstette, R. Gopal, R. Rosmaita, and D. Gucht. <emphasis>Genetic algorithms for the traveling salesman problem</emphasis>. In Proceedings of the Second International Conference on Genetic Algorithms. Lawrence Eribaum Associates, Mahwah, NJ, 1985. and also <ulink url="http://ecsl.cs.unr.edu/docs/techreports/gong/node3.html">Sushil J. Louis &amp; Gong Li</ulink>}</para><para><simplesect kind="author"><para>Audrius Meskauskas </para><simplesectsep/><para>&lt;font size=&quot;-1&quot;&gt;Neil Rotstan, Klaus Meffert (reused code from <ref refid="classorg_1_1jgap_1_1impl_1_1_crossover_operator" kindref="compound">CrossoverOperator</ref>)&lt;/font&gt; </para></simplesect>
+<simplesect kind="since"><para>2.0 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="13780">
+        <label>org.jgap.GeneticOperator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_genetic_operator"/>
+        <childnode refid="13781" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13781">
+        <label>Serializable</label>
+      </node>
+      <node id="13782">
+        <label>Comparable</label>
+      </node>
+      <node id="13778">
+        <label>org.jgap.impl.GreedyCrossover</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover"/>
+        <childnode refid="13779" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13779">
+        <label>org.jgap.BaseGeneticOperator</label>
+        <link refid="classorg_1_1jgap_1_1_base_genetic_operator"/>
+        <childnode refid="13780" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13782" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="13797">
+        <label>org.jgap.IUniqueKey</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_unique_key"/>
+      </node>
+      <node id="13802">
+        <label>List</label>
+      </node>
+      <node id="13801">
+        <label>org.jgap.FitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_fitness_function"/>
+        <childnode refid="13786" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13790" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13798">
+        <label>org.jgap.RandomGenerator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_random_generator"/>
+        <childnode refid="13786" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13785">
+        <label>org.jgap.GeneticOperator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_genetic_operator"/>
+        <childnode refid="13786" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13786">
+        <label>Serializable</label>
+      </node>
+      <node id="13787">
+        <label>Comparable</label>
+      </node>
+      <node id="13783">
+        <label>org.jgap.impl.GreedyCrossover</label>
+        <link refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover"/>
+        <childnode refid="13784" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13790">
+        <label>org.jgap.util.ICloneable</label>
+        <link refid="interfaceorg_1_1jgap_1_1util_1_1_i_cloneable"/>
+        <childnode refid="13791" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13784">
+        <label>org.jgap.BaseGeneticOperator</label>
+        <link refid="classorg_1_1jgap_1_1_base_genetic_operator"/>
+        <childnode refid="13785" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13787" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13788" relation="usage">
+          <edgelabel>m_configuration</edgelabel>
+        </childnode>
+      </node>
+      <node id="13795">
+        <label>org.jgap.FitnessEvaluator</label>
+        <link refid="interfaceorg_1_1jgap_1_1_fitness_evaluator"/>
+        <childnode refid="13786" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13799">
+        <label>org.jgap.BulkFitnessFunction</label>
+        <link refid="classorg_1_1jgap_1_1_bulk_fitness_function"/>
+        <childnode refid="13786" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13790" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13791">
+        <label>Cloneable</label>
+      </node>
+      <node id="13793">
+        <label>org.jgap.IJGAPFactory</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_j_g_a_p_factory"/>
+        <childnode refid="13786" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13800">
+        <label>org.jgap.Configuration.ConfigurationConfigurable</label>
+        <link refid="classorg_1_1jgap_1_1_configuration_1_1_configuration_configurable"/>
+        <childnode refid="13786" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13792">
+        <label>org.jgap.IBreeder</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_breeder"/>
+        <childnode refid="13790" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13786" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13787" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13796">
+        <label>org.jgap.IChromosome</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome"/>
+        <childnode refid="13787" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13790" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13786" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13797" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13788">
+        <label>org.jgap.Configuration</label>
+        <link refid="classorg_1_1jgap_1_1_configuration"/>
+        <childnode refid="13789" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13786" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13790" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13787" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13792" relation="usage">
+          <edgelabel>m_breeder</edgelabel>
+        </childnode>
+        <childnode refid="13793" relation="usage">
+          <edgelabel>m_factory</edgelabel>
+        </childnode>
+        <childnode refid="13794" relation="usage">
+          <edgelabel>m_chromosomePool</edgelabel>
+        </childnode>
+        <childnode refid="13795" relation="usage">
+          <edgelabel>m_fitnessEvaluator</edgelabel>
+        </childnode>
+        <childnode refid="13796" relation="usage">
+          <edgelabel>m_sampleChromosome</edgelabel>
+        </childnode>
+        <childnode refid="13798" relation="usage">
+          <edgelabel>m_randomGenerator</edgelabel>
+        </childnode>
+        <childnode refid="13799" relation="usage">
+          <edgelabel>m_bulkObjectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="13800" relation="usage">
+          <edgelabel>m_config</edgelabel>
+        </childnode>
+        <childnode refid="13801" relation="usage">
+          <edgelabel>m_objectiveFunction</edgelabel>
+        </childnode>
+        <childnode refid="13802" relation="usage">
+          <edgelabel>m_geneticOperators</edgelabel>
+        </childnode>
+      </node>
+      <node id="13794">
+        <label>org.jgap.IChromosomePool</label>
+        <link refid="interfaceorg_1_1jgap_1_1_i_chromosome_pool"/>
+      </node>
+      <node id="13789">
+        <label>Configurable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" line="56" column="1" bodyfile="C:/Users/JulyaMaria/git/PruebaGit/JGap/LDH_Git/src/org/jgap/impl/GreedyCrossover.java" bodystart="55" bodyend="324"/>
+    <listofallmembers>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1ae0724b2595260dbfadadf614b82b4230" prot="package" virt="non-virtual"><scope>org::jgap::impl::GreedyCrossover</scope><name>ASSERTIONS</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_genetic_operator_1a061b47c0f891c0041d5ece5bc6e052f8" prot="public" virt="non-virtual"><scope>org::jgap::impl::GreedyCrossover</scope><name>BaseGeneticOperator</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1ab1cb7c568f154dba5f43311e2c75ccfe" prot="public" virt="non-virtual"><scope>org::jgap::impl::GreedyCrossover</scope><name>compareTo</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1ab6ee35a26acab5f96032250a6a5d2696" prot="private" virt="non-virtual"><scope>org::jgap::impl::GreedyCrossover</scope><name>CVS_REVISION</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a41deed206eb483d92e5dee7d0bf537ef" prot="public" virt="non-virtual"><scope>org::jgap::impl::GreedyCrossover</scope><name>distance</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_genetic_operator_1a4db6fa1a99177114c0f19f02cd4a87ec" prot="public" virt="non-virtual"><scope>org::jgap::impl::GreedyCrossover</scope><name>equals</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1abb3111b92c3d771a9a4d5320071259a6" prot="protected" virt="non-virtual"><scope>org::jgap::impl::GreedyCrossover</scope><name>findNext</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_genetic_operator_1addbc6b98f572331d47397227b7a49f6a" prot="public" virt="non-virtual"><scope>org::jgap::impl::GreedyCrossover</scope><name>getConfiguration</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a6d4b71a26f742714520a6dfa931cc8c2" prot="public" virt="non-virtual"><scope>org::jgap::impl::GreedyCrossover</scope><name>getStartOffset</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a5777f6e13508c61d2c1e43ee0900cbf3" prot="public" virt="non-virtual"><scope>org::jgap::impl::GreedyCrossover</scope><name>GreedyCrossover</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a2592b70d785e0344ac6cbc23d10c7864" prot="public" virt="non-virtual"><scope>org::jgap::impl::GreedyCrossover</scope><name>GreedyCrossover</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_genetic_operator_1a516d89e8f56eb2e58768218c7f9cf3de" prot="protected" virt="non-virtual"><scope>org::jgap::impl::GreedyCrossover</scope><name>m_monitor</name></member>
+      <member refid="classorg_1_1jgap_1_1_base_genetic_operator_1a5194e705ed206f99852bf158546646b5" prot="protected" virt="non-virtual"><scope>org::jgap::impl::GreedyCrossover</scope><name>m_monitorActive</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a2c851e311ad5a263c915e01d8a30aa70" prot="private" virt="non-virtual"><scope>org::jgap::impl::GreedyCrossover</scope><name>m_startOffset</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a57adb8d442035ecae43e194f29dff43c" prot="public" virt="non-virtual"><scope>org::jgap::impl::GreedyCrossover</scope><name>operate</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a9fc2e11874fbc8b8349c1a0d93a8b5d9" prot="public" virt="non-virtual"><scope>org::jgap::impl::GreedyCrossover</scope><name>operate</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a6a19fa44501e6bd2d3e5be8ba7424b3a" prot="protected" virt="non-virtual"><scope>org::jgap::impl::GreedyCrossover</scope><name>operate</name></member>
+      <member refid="classorg_1_1jgap_1_1impl_1_1_greedy_crossover_1a6f518b090d9a358f7d96b7b11e6bf785" prot="public" virt="non-virtual"><scope>org::jgap::impl::GreedyCrossover</scope><name>setStartOffset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,324 @@
+.TH "org.jgap.data.config.ConfigData" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.data.config.ConfigData \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBListData\fP"
+.br
+.ti -1c
+.RI "class \fBTextData\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConfigData\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddListData\fP (final String a_name, final List a_values)"
+.br
+.ti -1c
+.RI "void \fBaddTextData\fP (final String a_name, final String a_value)"
+.br
+.ti -1c
+.RI "int \fBgetNumLists\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetNumTexts\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetListNameAt\fP (final int a_index)"
+.br
+.ti -1c
+.RI "List \fBgetListValuesAt\fP (final int a_index)"
+.br
+.ti -1c
+.RI "String \fBgetTextNameAt\fP (final int a_index)"
+.br
+.ti -1c
+.RI "String \fBgetTextValueAt\fP (final int a_index)"
+.br
+.ti -1c
+.RI "void \fBsetNS\fP (final String a_ns)"
+.br
+.ti -1c
+.RI "String \fBgetNS\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "List \fBm_listData\fP"
+.br
+.ti -1c
+.RI "List \fBm_textData\fP"
+.br
+.ti -1c
+.RI "String \fBm_ns\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.6 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class to encapsulate information given by the GUI to a \fBConfigWriter\fP to persist\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file ConfigData\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.data\&.config\&.ConfigData\&.ConfigData ()\fC [inline]\fP"
+
+.PP
+Definition at line 32 of file ConfigData\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigData\&.m_listData, and org\&.jgap\&.data\&.config\&.ConfigData\&.m_textData\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.data\&.config\&.ConfigData\&.addListData (final Stringa_name, final Lista_values)\fC [inline]\fP"
+
+.PP
+Definition at line 37 of file ConfigData\&.java\&.
+.SS "void org\&.jgap\&.data\&.config\&.ConfigData\&.addTextData (final Stringa_name, final Stringa_value)\fC [inline]\fP"
+
+.PP
+Definition at line 42 of file ConfigData\&.java\&.
+.SS "String org\&.jgap\&.data\&.config\&.ConfigData\&.getListNameAt (final inta_index)\fC [inline]\fP"
+Get the name of the list at the specified index\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP index of the list 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+name of the list at the specified index 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIndexOutOfBoundsException\fP when index < 0 or index >= listData\&.size()
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 65 of file ConfigData\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigData\&.m_listData\&.
+.SS "List org\&.jgap\&.data\&.config\&.ConfigData\&.getListValuesAt (final inta_index)\fC [inline]\fP"
+Get the contents of the list at the specified index\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP index of the list 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+contents of the list at the specified index\&. 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIndexOutOfBoundsException\fP when index < 0 or index >= listData\&.size()
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 80 of file ConfigData\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigData\&.m_listData\&.
+.SS "String org\&.jgap\&.data\&.config\&.ConfigData\&.getNS ()\fC [inline]\fP"
+Get the namespace of the \fBConfigurable\fP for which this \fBConfigData\fP is being used\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The namespace of the \fBConfigurable\fP to be used while writing the config file\&.
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 137 of file ConfigData\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigData\&.m_ns\&.
+.SS "int org\&.jgap\&.data\&.config\&.ConfigData\&.getNumLists ()\fC [inline]\fP"
+
+.PP
+Definition at line 47 of file ConfigData\&.java\&.
+.SS "int org\&.jgap\&.data\&.config\&.ConfigData\&.getNumTexts ()\fC [inline]\fP"
+
+.PP
+Definition at line 51 of file ConfigData\&.java\&.
+.SS "String org\&.jgap\&.data\&.config\&.ConfigData\&.getTextNameAt (final inta_index)\fC [inline]\fP"
+Get the name of the text at the specified index\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP index of the text 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+name of the text at the specified index\&. 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIndexOutOfBoundsException\fP when index < 0 or index >= textData\&.size()
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 95 of file ConfigData\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigData\&.m_textData\&.
+.SS "String org\&.jgap\&.data\&.config\&.ConfigData\&.getTextValueAt (final inta_index)\fC [inline]\fP"
+Get the value of the text at the specified index\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP index of the text 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+value of the text at the specified index 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIIndexOutOfBoundsException\fP when index < 0 || index >= textData\&.size()
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 110 of file ConfigData\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigData\&.m_textData\&.
+.SS "void org\&.jgap\&.data\&.config\&.ConfigData\&.setNS (final Stringa_ns)\fC [inline]\fP"
+Set the namespace of the \fBConfigurable\fP for which this \fBConfigData\fP is being used\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_ns\fP namespace of the \fBConfigurable\fP to be used while writing the config file
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Siddhartha Azad 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 124 of file ConfigData\&.java\&.
+.PP
+References org\&.jgap\&.data\&.config\&.ConfigData\&.m_ns\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.data\&.config\&.ConfigData\&.CVS_REVISION = '$Revision: 1\&.6 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 23 of file ConfigData\&.java\&.
+.SS "List org\&.jgap\&.data\&.config\&.ConfigData\&.m_listData\fC [private]\fP"
+
+.PP
+Definition at line 25 of file ConfigData\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.ConfigData\&.ConfigData(), org\&.jgap\&.data\&.config\&.ConfigData\&.getListNameAt(), and org\&.jgap\&.data\&.config\&.ConfigData\&.getListValuesAt()\&.
+.SS "String org\&.jgap\&.data\&.config\&.ConfigData\&.m_ns\fC [private]\fP"
+
+.PP
+Definition at line 30 of file ConfigData\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.ConfigData\&.getNS(), and org\&.jgap\&.data\&.config\&.ConfigData\&.setNS()\&.
+.SS "List org\&.jgap\&.data\&.config\&.ConfigData\&.m_textData\fC [private]\fP"
+
+.PP
+Definition at line 27 of file ConfigData\&.java\&.
+.PP
+Referenced by org\&.jgap\&.data\&.config\&.ConfigData\&.ConfigData(), org\&.jgap\&.data\&.config\&.ConfigData\&.getTextNameAt(), and org\&.jgap\&.data\&.config\&.ConfigData\&.getTextValueAt()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

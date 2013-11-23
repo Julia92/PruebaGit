@@ -1,0 +1,143 @@
+.TH "org.jgap.util.ChromosomeFitnessComparator" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.util.ChromosomeFitnessComparator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Comparator\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChromosomeFitnessComparator\fP ()"
+.br
+.ti -1c
+.RI "\fBChromosomeFitnessComparator\fP (\fBFitnessEvaluator\fP a_evaluator)"
+.br
+.ti -1c
+.RI "int \fBcompare\fP (final Object a_chromosome1, final Object a_chromosome2)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBFitnessEvaluator\fP \fBm_fitnessEvaluator\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.9 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Simple comparator to allow the sorting of \fBChromosome\fP lists with the highest fitness value in first place of the list\&. Usage example: Collections\&.sort( population\&.getChromosomes(), new \fBChromosomeFitnessComparator()\fP );
+.PP
+\fBAuthor:\fP
+.RS 4
+Charles Kevin Hill, Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file ChromosomeFitnessComparator\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.util\&.ChromosomeFitnessComparator\&.ChromosomeFitnessComparator ()\fC [inline]\fP"
+Constructs the comparator using the \fBDefaultFitnessEvaluator\fP
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 38 of file ChromosomeFitnessComparator\&.java\&.
+.SS "org\&.jgap\&.util\&.ChromosomeFitnessComparator\&.ChromosomeFitnessComparator (\fBFitnessEvaluator\fPa_evaluator)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_evaluator\fP the fitness evaluator to use
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 48 of file ChromosomeFitnessComparator\&.java\&.
+.PP
+References org\&.jgap\&.util\&.ChromosomeFitnessComparator\&.m_fitnessEvaluator\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int org\&.jgap\&.util\&.ChromosomeFitnessComparator\&.compare (final Objecta_chromosome1, final Objecta_chromosome2)\fC [inline]\fP"
+Compares two chromosomes by using a \fBFitnessEvaluator\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_chromosome1\fP the first chromosome to compare 
+.br
+\fIa_chromosome2\fP the second chromosome to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+-1 if a_chromosome1 is fitter than a_chromosome2, 1 if it is the other way round and 0 if both are equal 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Charles Kevin Hill, Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 65 of file ChromosomeFitnessComparator\&.java\&.
+.PP
+References org\&.jgap\&.FitnessEvaluator\&.isFitter(), and org\&.jgap\&.util\&.ChromosomeFitnessComparator\&.m_fitnessEvaluator\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.util\&.ChromosomeFitnessComparator\&.CVS_REVISION = '$Revision: 1\&.9 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 28 of file ChromosomeFitnessComparator\&.java\&.
+.SS "\fBFitnessEvaluator\fP org\&.jgap\&.util\&.ChromosomeFitnessComparator\&.m_fitnessEvaluator\fC [private]\fP"
+
+.PP
+Definition at line 30 of file ChromosomeFitnessComparator\&.java\&.
+.PP
+Referenced by org\&.jgap\&.util\&.ChromosomeFitnessComparator\&.ChromosomeFitnessComparator(), and org\&.jgap\&.util\&.ChromosomeFitnessComparator\&.compare()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

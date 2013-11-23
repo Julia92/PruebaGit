@@ -1,0 +1,174 @@
+.TH "org.jgap.impl.DefaultCloneHandler" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.impl.DefaultCloneHandler \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.ICloneHandler\fP, \fBorg\&.jgap\&.util\&.ICloneable\fP, Serializable, and Comparable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "boolean \fBisHandlerFor\fP (final Object a_obj, final Class a_clazz)"
+.br
+.ti -1c
+.RI "Object \fBperform\fP (final Object a_objToClone, final Class a_class, final Object a_params)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.ti -1c
+.RI "int \fBcompareTo\fP (Object a_other)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.14 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Default clone handler supporting \fBIApplicationData\fP as well as implementations of Cloneable (for the latter: in case the clone-method is accessible via reflection)\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file DefaultCloneHandler\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Object org\&.jgap\&.impl\&.DefaultCloneHandler\&.clone ()\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+deep clone of this instance
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 151 of file DefaultCloneHandler\&.java\&.
+.PP
+Referenced by org\&.jgap\&.impl\&.DefaultCloneHandler\&.perform()\&.
+.SS "int org\&.jgap\&.impl\&.DefaultCloneHandler\&.compareTo (Objecta_other)\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_other\fP sic 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+as always
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 162 of file DefaultCloneHandler\&.java\&.
+.SS "boolean org\&.jgap\&.impl\&.DefaultCloneHandler\&.isHandlerFor (final Objecta_obj, final Classa_clazz)\fC [inline]\fP"
+Handles all implementations of \fBIApplicationData\fP as well as all of java\&.lang\&.Cloneable (for which the clone-method is accessible via reflection\&. This is not the case for package protected classes, e\&.g\&.)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_obj\fP the object to check for (maybe null) 
+.br
+\fIa_clazz\fP the class to check for whether it is handled (maybe null) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true in case class is clonable via this handler
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 43 of file DefaultCloneHandler\&.java\&.
+.SS "Object org\&.jgap\&.impl\&.DefaultCloneHandler\&.perform (final Objecta_objToClone, final Classa_class, final Objecta_params)\fC [inline]\fP"
+Performs the clone operation\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_objToClone\fP the object to clone 
+.br
+\fIa_class\fP not considered here 
+.br
+\fIa_params\fP not considered here
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.6 
+.RE
+.PP
+
+.PP
+Definition at line 100 of file DefaultCloneHandler\&.java\&.
+.PP
+References org\&.jgap\&.impl\&.DefaultCloneHandler\&.clone()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.impl\&.DefaultCloneHandler\&.CVS_REVISION = '$Revision: 1\&.14 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 29 of file DefaultCloneHandler\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

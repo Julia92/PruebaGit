@@ -1,0 +1,157 @@
+.TH "org.jgap.gp.CommandDynamicArity" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.CommandDynamicArity \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Inherited by org\&.jgap\&.gp\&.CommandDynamicArityTest\&.CommandDynamicArityImpl, \fBorg\&.jgap\&.gp\&.function\&.IfDyn\fP, \fBorg\&.jgap\&.gp\&.function\&.Mean\fP, \fBorg\&.jgap\&.gp\&.function\&.statistics\&.Kurtosis\fP, \fBorg\&.jgap\&.gp\&.function\&.statistics\&.Mean\fP, \fBorg\&.jgap\&.gp\&.function\&.statistics\&.Skewness\fP, \fBorg\&.jgap\&.gp\&.function\&.statistics\&.StandardDeviation\fP, and \fBorg\&.jgap\&.gp\&.function\&.statistics\&.Variance\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCommandDynamicArity\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "\fBCommandDynamicArity\fP (final GPConfiguration a_conf, int a_arityInitial, int a_arityMin, int a_arityMax, Class a_returnType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCommandDynamicArity\fP (final GPConfiguration a_conf, int a_arityInitial, int a_arityMin, int a_arityMax, Class a_returnType, int a_subReturnType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBCommandDynamicArity\fP (final GPConfiguration a_conf, int a_arityInitial, int a_arityMin, int a_arityMax, Class a_returnType, int a_subReturnType, int[] a_subChildTypes)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBdynamizeArity\fP ()"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.2 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Abstract base class for GP-commands with a dynamic number of children\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file CommandDynamicArity\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.CommandDynamicArity\&.CommandDynamicArity () throws Exception\fC [inline]\fP"
+Default constructor, only for dynamic instantiation\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 34 of file CommandDynamicArity\&.java\&.
+.SS "org\&.jgap\&.gp\&.CommandDynamicArity\&.CommandDynamicArity (final GPConfigurationa_conf, inta_arityInitial, inta_arityMin, inta_arityMax, Classa_returnType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 39 of file CommandDynamicArity\&.java\&.
+.SS "org\&.jgap\&.gp\&.CommandDynamicArity\&.CommandDynamicArity (final GPConfigurationa_conf, inta_arityInitial, inta_arityMin, inta_arityMax, Classa_returnType, inta_subReturnType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 45 of file CommandDynamicArity\&.java\&.
+.SS "org\&.jgap\&.gp\&.CommandDynamicArity\&.CommandDynamicArity (final GPConfigurationa_conf, inta_arityInitial, inta_arityMin, inta_arityMax, Classa_returnType, inta_subReturnType, int[]a_subChildTypes) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Allows specifying a sub return type and sub child types\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP the configuration to use 
+.br
+\fIa_arityInitial\fP the number of children of the node 
+.br
+\fIa_arityMin\fP the minimum arity allowed/required 
+.br
+\fIa_arityMax\fP the maximum arity allowed/required 
+.br
+\fIa_returnType\fP type of the return value of the node 
+.br
+\fIa_subReturnType\fP sub type of the return type, optional usage 
+.br
+\fIa_subChildTypes\fP sub type of a child, optional usage 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 68 of file CommandDynamicArity\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.setArityMax(), and org\&.jgap\&.gp\&.CommandGene\&.setArityMin()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void org\&.jgap\&.gp\&.CommandDynamicArity\&.dynamizeArity ()\fC [inline]\fP"
+Adaptation of the arity so that it represents a value within the interval [m_arityMin, m_arityMax]\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4 
+.RE
+.PP
+
+.PP
+Definition at line 96 of file CommandDynamicArity\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getArityMax(), org\&.jgap\&.gp\&.CommandGene\&.getArityMin(), org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), and org\&.jgap\&.gp\&.CommandGene\&.setArity()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.CommandDynamicArity\&.CVS_REVISION = '$Revision: 1\&.2 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 24 of file CommandDynamicArity\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

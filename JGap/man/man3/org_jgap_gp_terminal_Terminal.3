@@ -1,0 +1,513 @@
+.TH "org.jgap.gp.terminal.Terminal" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+org.jgap.gp.terminal.Terminal \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBorg\&.jgap\&.gp\&.CommandGene\fP, \fBorg\&.jgap\&.gp\&.IMutateable\fP, and \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTerminal\fP ()  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBTerminal\fP (final GPConfiguration a_conf, Class a_returnType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBTerminal\fP (final GPConfiguration a_conf, Class a_returnType, double a_minValue, double a_maxValue)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBTerminal\fP (final GPConfiguration a_conf, Class a_returnType, double a_minValue, double a_maxValue, boolean a_wholeNumbers)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBTerminal\fP (final GPConfiguration a_conf, Class a_returnType, double a_minValue, double a_maxValue, boolean a_wholeNumbers, int a_subReturnType)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "\fBTerminal\fP (final GPConfiguration a_conf, Class a_returnType, double a_minValue, double a_maxValue, boolean a_wholeNumbers, int a_subReturnType, boolean a_randomize)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "void \fBsetValue\fP (double a_value)"
+.br
+.ti -1c
+.RI "void \fBsetValue\fP (float a_value)"
+.br
+.ti -1c
+.RI "void \fBsetValue\fP (int a_value)"
+.br
+.ti -1c
+.RI "void \fBsetValue\fP (long a_value)"
+.br
+.ti -1c
+.RI "\fBCommandGene\fP \fBapplyMutation\fP (int index, double a_percentage)  throws InvalidConfigurationException "
+.br
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "int \fBexecute_int\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "long \fBexecute_long\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "float \fBexecute_float\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "double \fBexecute_double\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "Object \fBexecute_object\fP (ProgramChromosome c, int n, Object[] args)"
+.br
+.ti -1c
+.RI "Class \fBgetChildType\fP (\fBIGPProgram\fP a_ind, int a_chromNum)"
+.br
+.ti -1c
+.RI "Object \fBclone\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetRandomValue\fP (int a_value)"
+.br
+.ti -1c
+.RI "void \fBsetRandomValue\fP (long a_value)"
+.br
+.ti -1c
+.RI "void \fBsetRandomValue\fP (double a_value)"
+.br
+.ti -1c
+.RI "void \fBsetRandomValue\fP (float a_value)"
+.br
+.ti -1c
+.RI "void \fBsetRandomValue\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBm_value_float\fP"
+.br
+.ti -1c
+.RI "double \fBm_value_double\fP"
+.br
+.ti -1c
+.RI "int \fBm_value_int\fP"
+.br
+.ti -1c
+.RI "long \fBm_value_long\fP"
+.br
+.ti -1c
+.RI "double \fBm_lowerBounds\fP"
+.br
+.ti -1c
+.RI "double \fBm_upperBounds\fP"
+.br
+.ti -1c
+.RI "boolean \fBm_wholeNumbers\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.18 $'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A terminal is a static number that can be mutated\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file Terminal\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "org\&.jgap\&.gp\&.terminal\&.Terminal\&.Terminal () throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 42 of file Terminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.IntegerClass\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.terminal\&.Terminal\&.clone()\&.
+.SS "org\&.jgap\&.gp\&.terminal\&.Terminal\&.Terminal (final GPConfigurationa_conf, Classa_returnType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 47 of file Terminal\&.java\&.
+.SS "org\&.jgap\&.gp\&.terminal\&.Terminal\&.Terminal (final GPConfigurationa_conf, Classa_returnType, doublea_minValue, doublea_maxValue) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP GPConfiguration 
+.br
+\fIa_returnType\fP Class 
+.br
+\fIa_minValue\fP double 
+.br
+\fIa_maxValue\fP double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Definition at line 64 of file Terminal\&.java\&.
+.SS "org\&.jgap\&.gp\&.terminal\&.Terminal\&.Terminal (final GPConfigurationa_conf, Classa_returnType, doublea_minValue, doublea_maxValue, booleana_wholeNumbers) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP GPConfiguration 
+.br
+\fIa_returnType\fP Class 
+.br
+\fIa_minValue\fP double 
+.br
+\fIa_maxValue\fP double 
+.br
+\fIa_wholeNumbers\fP true: only return whole numbers (only relevant when using type double or float) 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 84 of file Terminal\&.java\&.
+.SS "org\&.jgap\&.gp\&.terminal\&.Terminal\&.Terminal (final GPConfigurationa_conf, Classa_returnType, doublea_minValue, doublea_maxValue, booleana_wholeNumbers, inta_subReturnType) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+Definition at line 90 of file Terminal\&.java\&.
+.SS "org\&.jgap\&.gp\&.terminal\&.Terminal\&.Terminal (final GPConfigurationa_conf, Classa_returnType, doublea_minValue, doublea_maxValue, booleana_wholeNumbers, inta_subReturnType, booleana_randomize) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_conf\fP GPConfiguration 
+.br
+\fIa_returnType\fP Class 
+.br
+\fIa_minValue\fP double 
+.br
+\fIa_maxValue\fP double 
+.br
+\fIa_wholeNumbers\fP boolean 
+.br
+\fIa_subReturnType\fP int 
+.br
+\fIa_randomize\fP true: randomize initial value 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.4\&.1 
+.RE
+.PP
+
+.PP
+Definition at line 112 of file Terminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_lowerBounds, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_upperBounds, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_wholeNumbers, and org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBCommandGene\fP org\&.jgap\&.gp\&.terminal\&.Terminal\&.applyMutation (inta_index, doublea_percentage) throws \fBInvalidConfigurationException\fP\fC [inline]\fP"
+Mutates a \fBCommandGene\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_index\fP references the part of a multipart object, normally not relevant 
+.br
+\fIa_percentage\fP the mutation rate (0\&.0 to 1\&.0) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the mutant 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBInvalidConfigurationException\fP\fP 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.0 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.IMutateable\fP\&.
+.PP
+Definition at line 203 of file Terminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.DELTA, org\&.jgap\&.gp\&.CommandGene\&.DoubleClass, org\&.jgap\&.gp\&.CommandGene\&.FloatClass, org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.getReturnType(), org\&.jgap\&.gp\&.CommandGene\&.IntegerClass, org\&.jgap\&.gp\&.CommandGene\&.LongClass, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_lowerBounds, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_upperBounds, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_double, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_float, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_int, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_long, org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue(), and org\&.jgap\&.gp\&.terminal\&.Terminal\&.setValue()\&.
+.SS "Object org\&.jgap\&.gp\&.terminal\&.Terminal\&.clone ()\fC [inline]\fP"
+Clones the object\&. Simple and straight forward implementation here\&.
+.PP
+\fBReturns:\fP
+.RS 4
+cloned instance of this object
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.util\&.ICloneable\fP\&.
+.PP
+Definition at line 381 of file Terminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.CommandGene\&.getReturnType(), org\&.jgap\&.gp\&.CommandGene\&.getSubReturnType(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_lowerBounds, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_upperBounds, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_double, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_float, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_int, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_long, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_wholeNumbers, and org\&.jgap\&.gp\&.terminal\&.Terminal\&.Terminal()\&.
+.SS "double org\&.jgap\&.gp\&.terminal\&.Terminal\&.execute_double (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 335 of file Terminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_double\&.
+.SS "float org\&.jgap\&.gp\&.terminal\&.Terminal\&.execute_float (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 331 of file Terminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_float\&.
+.SS "int org\&.jgap\&.gp\&.terminal\&.Terminal\&.execute_int (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 323 of file Terminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_int\&.
+.SS "long org\&.jgap\&.gp\&.terminal\&.Terminal\&.execute_long (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+
+.PP
+Definition at line 327 of file Terminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_long\&.
+.SS "Object org\&.jgap\&.gp\&.terminal\&.Terminal\&.execute_object (ProgramChromosomec, intn, Object[]args)\fC [inline]\fP"
+Returns a string representation of the terminal\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP ignored here 
+.br
+\fIn\fP ignored here 
+.br
+\fIargs\fP ignored here 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+StringBuffer with textual representation of terminal's value
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 350 of file Terminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.DoubleClass, org\&.jgap\&.gp\&.CommandGene\&.FloatClass, org\&.jgap\&.gp\&.CommandGene\&.getReturnType(), org\&.jgap\&.gp\&.CommandGene\&.IntegerClass, org\&.jgap\&.gp\&.CommandGene\&.LongClass, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_double, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_float, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_int, and org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_long\&.
+.SS "Class org\&.jgap\&.gp\&.terminal\&.Terminal\&.getChildType (\fBIGPProgram\fPa_ind, inta_chromNum)\fC [inline]\fP"
+
+.PP
+Definition at line 369 of file Terminal\&.java\&.
+.SS "void org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue (inta_value)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 125 of file Terminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_lowerBounds, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_upperBounds, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_int, and org\&.jgap\&.RandomGenerator\&.nextDouble()\&.
+.SS "void org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue (longa_value)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 132 of file Terminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_lowerBounds, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_upperBounds, and org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_long\&.
+.SS "void org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue (doublea_value)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 139 of file Terminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_lowerBounds, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_upperBounds, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_double, and org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_wholeNumbers\&.
+.SS "void org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue (floata_value)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 148 of file Terminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.getGPConfiguration(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_lowerBounds, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_upperBounds, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_float, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_wholeNumbers, and org\&.jgap\&.RandomGenerator\&.nextFloat()\&.
+.SS "void org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 158 of file Terminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.DoubleClass, org\&.jgap\&.gp\&.CommandGene\&.FloatClass, org\&.jgap\&.gp\&.CommandGene\&.getReturnType(), org\&.jgap\&.gp\&.CommandGene\&.IntegerClass, org\&.jgap\&.gp\&.CommandGene\&.LongClass, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_double, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_float, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_int, and org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_long\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.terminal\&.Terminal\&.applyMutation(), and org\&.jgap\&.gp\&.terminal\&.Terminal\&.Terminal()\&.
+.SS "void org\&.jgap\&.gp\&.terminal\&.Terminal\&.setValue (doublea_value)\fC [inline]\fP"
+
+.PP
+Definition at line 177 of file Terminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_double, and org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_wholeNumbers\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.terminal\&.Terminal\&.applyMutation()\&.
+.SS "void org\&.jgap\&.gp\&.terminal\&.Terminal\&.setValue (floata_value)\fC [inline]\fP"
+
+.PP
+Definition at line 186 of file Terminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_float, and org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_wholeNumbers\&.
+.SS "void org\&.jgap\&.gp\&.terminal\&.Terminal\&.setValue (inta_value)\fC [inline]\fP"
+
+.PP
+Definition at line 195 of file Terminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_int\&.
+.SS "void org\&.jgap\&.gp\&.terminal\&.Terminal\&.setValue (longa_value)\fC [inline]\fP"
+
+.PP
+Definition at line 199 of file Terminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_long\&.
+.SS "String org\&.jgap\&.gp\&.terminal\&.Terminal\&.toString ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the command\&. Especially usefull to output a resulting formula in human-readable form\&. 
+.RE
+.PP
+
+.PP
+Implements \fBorg\&.jgap\&.gp\&.CommandGene\fP\&.
+.PP
+Definition at line 304 of file Terminal\&.java\&.
+.PP
+References org\&.jgap\&.gp\&.CommandGene\&.DoubleClass, org\&.jgap\&.gp\&.CommandGene\&.FloatClass, org\&.jgap\&.gp\&.CommandGene\&.getReturnType(), org\&.jgap\&.gp\&.CommandGene\&.IntegerClass, org\&.jgap\&.gp\&.CommandGene\&.LongClass, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_double, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_float, org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_int, and org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_long\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String org\&.jgap\&.gp\&.terminal\&.Terminal\&.CVS_REVISION = '$Revision: 1\&.18 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 26 of file Terminal\&.java\&.
+.SS "double org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_lowerBounds\fC [private]\fP"
+
+.PP
+Definition at line 36 of file Terminal\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.terminal\&.Terminal\&.applyMutation(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.clone(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue(), and org\&.jgap\&.gp\&.terminal\&.Terminal\&.Terminal()\&.
+.SS "double org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_upperBounds\fC [private]\fP"
+
+.PP
+Definition at line 38 of file Terminal\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.terminal\&.Terminal\&.applyMutation(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.clone(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue(), and org\&.jgap\&.gp\&.terminal\&.Terminal\&.Terminal()\&.
+.SS "double org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_double\fC [private]\fP"
+
+.PP
+Definition at line 30 of file Terminal\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.terminal\&.Terminal\&.applyMutation(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.clone(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.execute_double(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.execute_object(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.setValue(), and org\&.jgap\&.gp\&.terminal\&.Terminal\&.toString()\&.
+.SS "float org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_float\fC [private]\fP"
+
+.PP
+Definition at line 28 of file Terminal\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.terminal\&.Terminal\&.applyMutation(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.clone(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.execute_float(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.execute_object(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.setValue(), and org\&.jgap\&.gp\&.terminal\&.Terminal\&.toString()\&.
+.SS "int org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_int\fC [private]\fP"
+
+.PP
+Definition at line 32 of file Terminal\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.terminal\&.Terminal\&.applyMutation(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.clone(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.execute_int(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.execute_object(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.setValue(), and org\&.jgap\&.gp\&.terminal\&.Terminal\&.toString()\&.
+.SS "long org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_value_long\fC [private]\fP"
+
+.PP
+Definition at line 34 of file Terminal\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.terminal\&.Terminal\&.applyMutation(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.clone(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.execute_long(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.execute_object(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.setValue(), and org\&.jgap\&.gp\&.terminal\&.Terminal\&.toString()\&.
+.SS "boolean org\&.jgap\&.gp\&.terminal\&.Terminal\&.m_wholeNumbers\fC [private]\fP"
+
+.PP
+Definition at line 40 of file Terminal\&.java\&.
+.PP
+Referenced by org\&.jgap\&.gp\&.terminal\&.Terminal\&.clone(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.setRandomValue(), org\&.jgap\&.gp\&.terminal\&.Terminal\&.setValue(), and org\&.jgap\&.gp\&.terminal\&.Terminal\&.Terminal()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

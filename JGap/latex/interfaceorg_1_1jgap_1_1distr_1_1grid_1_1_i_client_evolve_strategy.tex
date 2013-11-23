@@ -1,0 +1,131 @@
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy}{\section{org.\-jgap.\-distr.\-grid.\-I\-Client\-Evolve\-Strategy Interface Reference}
+\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy}\index{org.\-jgap.\-distr.\-grid.\-I\-Client\-Evolve\-Strategy@{org.\-jgap.\-distr.\-grid.\-I\-Client\-Evolve\-Strategy}}
+}
+
+
+Inheritance diagram for org.\-jgap.\-distr.\-grid.\-I\-Client\-Evolve\-Strategy\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for org.\-jgap.\-distr.\-grid.\-I\-Client\-Evolve\-Strategy\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_a736f4f92336bce826e0c6b663ded5f21}{initialize} (Grid\-Client a\-\_\-gc, \hyperlink{classorg_1_1jgap_1_1_configuration}{Configuration} a\-\_\-config, \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_feedback}{I\-Client\-Feedback} a\-\_\-client\-Feedback)  throws Exception
+\item 
+\hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_request}{J\-G\-A\-P\-Request}\mbox{[}$\,$\mbox{]} \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_ad6269d242d492ffe18081cd536ddf08e}{generate\-Work\-Requests} (\hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_request}{J\-G\-A\-P\-Request} m\-\_\-work\-Req, \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_request_split_strategy}{I\-Request\-Split\-Strategy} m\-\_\-split\-Strategy, Object a\-\_\-generic\-Data)  throws Exception
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_a2f3d53a1ae94c7614cf075ffb28332c1}{result\-Received} (\hyperlink{classorg_1_1jgap_1_1distr_1_1grid_1_1_j_g_a_p_result}{J\-G\-A\-P\-Result} a\-\_\-result)  throws Exception
+\item 
+boolean \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_aaff78a6a7edd2bd33d4fa3ef2da7cc3e}{is\-Evolution\-Finished} (int a\-\_\-evolutions\-Done)
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_ab76711fa41f5593d4241418d55bcb5ab}{on\-Finished} ()
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_aeaae129f864e230b293e3cf0fb1390a7}{after\-Work\-Requests\-Sent} ()  throws Exception
+\item 
+void \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_a4cdd91ebfcb0f94b57572f3243a5dfba}{evolve} ()  throws Exception
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_a706bdddddffc00f62303ebaea63d3e35}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-3 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for defining a strategy that controls how a client evolves generations.
+
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+3.\-2 
+\end{DoxySince}
+
+
+Definition at line 23 of file I\-Client\-Evolve\-Strategy.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_aeaae129f864e230b293e3cf0fb1390a7}{\index{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy@{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy}!after\-Work\-Requests\-Sent@{after\-Work\-Requests\-Sent}}
+\index{after\-Work\-Requests\-Sent@{after\-Work\-Requests\-Sent}!org::jgap::distr::grid::IClientEvolveStrategy@{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy}}
+\subsubsection[{after\-Work\-Requests\-Sent}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-distr.\-grid.\-I\-Client\-Evolve\-Strategy.\-after\-Work\-Requests\-Sent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws Exception}}\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_aeaae129f864e230b293e3cf0fb1390a7}
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_a4cdd91ebfcb0f94b57572f3243a5dfba}{\index{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy@{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy}!evolve@{evolve}}
+\index{evolve@{evolve}!org::jgap::distr::grid::IClientEvolveStrategy@{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy}}
+\subsubsection[{evolve}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-distr.\-grid.\-I\-Client\-Evolve\-Strategy.\-evolve (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) throws Exception}}\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_a4cdd91ebfcb0f94b57572f3243a5dfba}
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_ad6269d242d492ffe18081cd536ddf08e}{\index{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy@{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy}!generate\-Work\-Requests@{generate\-Work\-Requests}}
+\index{generate\-Work\-Requests@{generate\-Work\-Requests}!org::jgap::distr::grid::IClientEvolveStrategy@{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy}}
+\subsubsection[{generate\-Work\-Requests}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\-G\-A\-P\-Request} \mbox{[}$\,$\mbox{]} org.\-jgap.\-distr.\-grid.\-I\-Client\-Evolve\-Strategy.\-generate\-Work\-Requests (
+\begin{DoxyParamCaption}
+\item[{{\bf J\-G\-A\-P\-Request}}]{m\-\_\-work\-Req, }
+\item[{{\bf I\-Request\-Split\-Strategy}}]{m\-\_\-split\-Strategy, }
+\item[{Object}]{a\-\_\-generic\-Data}
+\end{DoxyParamCaption}
+) throws Exception}}\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_ad6269d242d492ffe18081cd536ddf08e}
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_a736f4f92336bce826e0c6b663ded5f21}{\index{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy@{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy}!initialize@{initialize}}
+\index{initialize@{initialize}!org::jgap::distr::grid::IClientEvolveStrategy@{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-distr.\-grid.\-I\-Client\-Evolve\-Strategy.\-initialize (
+\begin{DoxyParamCaption}
+\item[{Grid\-Client}]{a\-\_\-gc, }
+\item[{{\bf Configuration}}]{a\-\_\-config, }
+\item[{{\bf I\-Client\-Feedback}}]{a\-\_\-client\-Feedback}
+\end{DoxyParamCaption}
+) throws Exception}}\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_a736f4f92336bce826e0c6b663ded5f21}
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_aaff78a6a7edd2bd33d4fa3ef2da7cc3e}{\index{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy@{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy}!is\-Evolution\-Finished@{is\-Evolution\-Finished}}
+\index{is\-Evolution\-Finished@{is\-Evolution\-Finished}!org::jgap::distr::grid::IClientEvolveStrategy@{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy}}
+\subsubsection[{is\-Evolution\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}boolean org.\-jgap.\-distr.\-grid.\-I\-Client\-Evolve\-Strategy.\-is\-Evolution\-Finished (
+\begin{DoxyParamCaption}
+\item[{int}]{a\-\_\-evolutions\-Done}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_aaff78a6a7edd2bd33d4fa3ef2da7cc3e}
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_ab76711fa41f5593d4241418d55bcb5ab}{\index{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy@{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy}!on\-Finished@{on\-Finished}}
+\index{on\-Finished@{on\-Finished}!org::jgap::distr::grid::IClientEvolveStrategy@{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy}}
+\subsubsection[{on\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-distr.\-grid.\-I\-Client\-Evolve\-Strategy.\-on\-Finished (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_ab76711fa41f5593d4241418d55bcb5ab}
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_a2f3d53a1ae94c7614cf075ffb28332c1}{\index{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy@{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy}!result\-Received@{result\-Received}}
+\index{result\-Received@{result\-Received}!org::jgap::distr::grid::IClientEvolveStrategy@{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy}}
+\subsubsection[{result\-Received}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-distr.\-grid.\-I\-Client\-Evolve\-Strategy.\-result\-Received (
+\begin{DoxyParamCaption}
+\item[{{\bf J\-G\-A\-P\-Result}}]{a\-\_\-result}
+\end{DoxyParamCaption}
+) throws Exception}}\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_a2f3d53a1ae94c7614cf075ffb28332c1}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_a706bdddddffc00f62303ebaea63d3e35}{\index{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy@{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::distr::grid::IClientEvolveStrategy@{org\-::jgap\-::distr\-::grid\-::\-I\-Client\-Evolve\-Strategy}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-distr.\-grid.\-I\-Client\-Evolve\-Strategy.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-3 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{interfaceorg_1_1jgap_1_1distr_1_1grid_1_1_i_client_evolve_strategy_a706bdddddffc00f62303ebaea63d3e35}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 26 of file I\-Client\-Evolve\-Strategy.\-java.
+
+
+
+The documentation for this interface was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/distr/grid/\hyperlink{_i_client_evolve_strategy_8java}{I\-Client\-Evolve\-Strategy.\-java}\end{DoxyCompactItemize}

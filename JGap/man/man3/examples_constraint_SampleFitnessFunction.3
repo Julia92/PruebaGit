@@ -1,0 +1,291 @@
+.TH "examples.constraint.SampleFitnessFunction" 3 "Sat Nov 23 2013" "Version 1.2" "Práctica_5_LDH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+examples.constraint.SampleFitnessFunction \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits FitnessFunction\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSampleFitnessFunction\fP (int a_targetAmount)"
+.br
+.ti -1c
+.RI "double \fBevaluate\fP (IChromosome a_subject)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static double \fBamountOfChange\fP (IChromosome a_potentialSolution)"
+.br
+.ti -1c
+.RI "static int \fBgetNumberOfCoinsAtGene\fP (IChromosome a_potentialSolution, int a_position)"
+.br
+.ti -1c
+.RI "static int \fBgetTotalNumberOfCoins\fP (IChromosome a_potentialsolution)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final int \fBMAX_BOUND\fP = 4000"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "double \fBchangeDifferenceBonus\fP (double a_maxFitness, int a_changeDifference)"
+.br
+.ti -1c
+.RI "double \fBcomputeCoinNumberPenalty\fP (double a_maxFitness, int a_coins)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "final int \fBm_targetAmount\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final String \fBCVS_REVISION\fP = '$Revision: 1\&.1 $'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Sample fitness function for the MakeChange example\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file SampleFitnessFunction\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "examples\&.constraint\&.SampleFitnessFunction\&.SampleFitnessFunction (inta_targetAmount)\fC [inline]\fP"
+
+.PP
+Definition at line 30 of file SampleFitnessFunction\&.java\&.
+.PP
+References examples\&.constraint\&.SampleFitnessFunction\&.m_targetAmount, and examples\&.constraint\&.SampleFitnessFunction\&.MAX_BOUND\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static double examples\&.constraint\&.SampleFitnessFunction\&.amountOfChange (IChromosomea_potentialSolution)\fC [inline]\fP, \fC [static]\fP"
+Calculates the total amount of change (in cents) represented by the given potential solution and returns that amount\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_potentialSolution\fP the potential solution to evaluate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The total amount of change (in cents) represented by the given solution
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 161 of file SampleFitnessFunction\&.java\&.
+.PP
+References examples\&.constraint\&.SampleFitnessFunction\&.getNumberOfCoinsAtGene()\&.
+.PP
+Referenced by examples\&.constraint\&.SampleFitnessFunction\&.evaluate()\&.
+.SS "double examples\&.constraint\&.SampleFitnessFunction\&.changeDifferenceBonus (doublea_maxFitness, inta_changeDifference)\fC [inline]\fP, \fC [protected]\fP"
+Bonus calculation of fitness value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_maxFitness\fP maximum fitness value appliable 
+.br
+\fIa_changeDifference\fP change difference in coins for the coins problem 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+bonus for given change difference
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.3 
+.RE
+.PP
+
+.PP
+Definition at line 109 of file SampleFitnessFunction\&.java\&.
+.PP
+Referenced by examples\&.constraint\&.SampleFitnessFunction\&.evaluate()\&.
+.SS "double examples\&.constraint\&.SampleFitnessFunction\&.computeCoinNumberPenalty (doublea_maxFitness, inta_coins)\fC [inline]\fP, \fC [protected]\fP"
+Calculates the penalty to apply to the fitness value based on the ammount of coins in the solution
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_maxFitness\fP maximum fitness value allowed 
+.br
+\fIa_coins\fP number of coins in the solution 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+penalty for the fitness value base on the number of coins
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+John Serri 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 137 of file SampleFitnessFunction\&.java\&.
+.PP
+Referenced by examples\&.constraint\&.SampleFitnessFunction\&.evaluate()\&.
+.SS "double examples\&.constraint\&.SampleFitnessFunction\&.evaluate (IChromosomea_subject)\fC [inline]\fP"
+Determine the fitness of the given Chromosome instance\&. The higher the return value, the more fit the instance\&. This method should always return the same fitness value for two equivalent Chromosome instances\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_subject\fP the Chromosome instance to evaluate
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+positive double reflecting the fitness rating of the given Chromosome 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+2\&.0 (until 1\&.1: return type int) 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Neil Rotstan, Klaus Meffert, John Serri 
+.RE
+.PP
+
+.PP
+Definition at line 50 of file SampleFitnessFunction\&.java\&.
+.PP
+References examples\&.constraint\&.SampleFitnessFunction\&.amountOfChange(), examples\&.constraint\&.SampleFitnessFunction\&.changeDifferenceBonus(), examples\&.constraint\&.SampleFitnessFunction\&.computeCoinNumberPenalty(), examples\&.constraint\&.SampleFitnessFunction\&.getTotalNumberOfCoins(), examples\&.constraint\&.SampleFitnessFunction\&.m_targetAmount, and examples\&.constraint\&.SampleFitnessFunction\&.MAX_BOUND\&.
+.SS "static int examples\&.constraint\&.SampleFitnessFunction\&.getNumberOfCoinsAtGene (IChromosomea_potentialSolution, inta_position)\fC [inline]\fP, \fC [static]\fP"
+Retrieves the number of coins represented by the given potential solution at the given gene position\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_potentialSolution\fP the potential solution to evaluate 
+.br
+\fIa_position\fP the gene position to evaluate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of coins represented by the potential solution at the given gene position
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 182 of file SampleFitnessFunction\&.java\&.
+.PP
+Referenced by examples\&.constraint\&.SampleFitnessFunction\&.amountOfChange(), and examples\&.constraint\&.SampleFitnessFunction\&.getTotalNumberOfCoins()\&.
+.SS "static int examples\&.constraint\&.SampleFitnessFunction\&.getTotalNumberOfCoins (IChromosomea_potentialsolution)\fC [inline]\fP, \fC [static]\fP"
+Returns the total number of coins represented by all of the genes in the given potential solution\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_potentialsolution\fP the potential solution to evaluate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+total number of coins represented by the given Chromosome
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Klaus Meffert 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+3\&.6\&.2 
+.RE
+.PP
+
+.PP
+Definition at line 199 of file SampleFitnessFunction\&.java\&.
+.PP
+References examples\&.constraint\&.SampleFitnessFunction\&.getNumberOfCoinsAtGene()\&.
+.PP
+Referenced by examples\&.constraint\&.SampleFitnessFunction\&.evaluate()\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final String examples\&.constraint\&.SampleFitnessFunction\&.CVS_REVISION = '$Revision: 1\&.1 $'\fC [static]\fP, \fC [private]\fP"
+String containing the CVS revision\&. Read out via reflection! 
+.PP
+Definition at line 24 of file SampleFitnessFunction\&.java\&.
+.SS "final int examples\&.constraint\&.SampleFitnessFunction\&.m_targetAmount\fC [private]\fP"
+
+.PP
+Definition at line 26 of file SampleFitnessFunction\&.java\&.
+.PP
+Referenced by examples\&.constraint\&.SampleFitnessFunction\&.evaluate(), and examples\&.constraint\&.SampleFitnessFunction\&.SampleFitnessFunction()\&.
+.SS "final int examples\&.constraint\&.SampleFitnessFunction\&.MAX_BOUND = 4000\fC [static]\fP"
+
+.PP
+Definition at line 28 of file SampleFitnessFunction\&.java\&.
+.PP
+Referenced by examples\&.constraint\&.SampleFitnessFunction\&.evaluate(), and examples\&.constraint\&.SampleFitnessFunction\&.SampleFitnessFunction()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Práctica_5_LDH from the source code\&.

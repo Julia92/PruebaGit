@@ -1,0 +1,326 @@
+\hypertarget{classorg_1_1jgap_1_1data_1_1_document_builder_base}{\section{org.\-jgap.\-data.\-Document\-Builder\-Base Class Reference}
+\label{classorg_1_1jgap_1_1data_1_1_document_builder_base}\index{org.\-jgap.\-data.\-Document\-Builder\-Base@{org.\-jgap.\-data.\-Document\-Builder\-Base}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Object \hyperlink{classorg_1_1jgap_1_1data_1_1_document_builder_base_a9c17627652f63e842a01b23640244164}{build\-Document} (final \hyperlink{interfaceorg_1_1jgap_1_1data_1_1_i_data_creators}{I\-Data\-Creators} a\-\_\-dataholder, final Object a\-\_\-document)  throws Exception 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract Object \hyperlink{classorg_1_1jgap_1_1data_1_1_document_builder_base_a8e93e27975995198e29961ff13f8540c}{document\-Append\-Child} (Object a\-\_\-document, Object a\-\_\-element)
+\item 
+abstract Object \hyperlink{classorg_1_1jgap_1_1data_1_1_document_builder_base_a99c384f0c43ac1d35d6a5270f642bec9}{element\-Append\-Child} (Object a\-\_\-root\-Element, Object a\-\_\-child\-Element)
+\item 
+abstract Object \hyperlink{classorg_1_1jgap_1_1data_1_1_document_builder_base_a48956cd46c57c9385eb0ff415efb06ba}{create\-Element} (Object a\-\_\-document, Object a\-\_\-element, String a\-\_\-tag\-Name)
+\item 
+abstract void \hyperlink{classorg_1_1jgap_1_1data_1_1_document_builder_base_af3b9815c594048ebf431d69392432470}{set\-Attribute} (Object a\-\_\-element, String a\-\_\-key, String a\-\_\-value)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classorg_1_1jgap_1_1data_1_1_document_builder_base_af8fa5961d7a5d6531c085ffd4f9eb2bb}{do\-Traverse} (final \hyperlink{interfaceorg_1_1jgap_1_1data_1_1_i_data_element}{I\-Data\-Element} a\-\_\-elem, final Object a\-\_\-document, final Object a\-\_\-\-Element)  throws Exception 
+\item 
+Object \hyperlink{classorg_1_1jgap_1_1data_1_1_document_builder_base_a0e1ea86e20b5ac3273c051fb4c2a86bd}{create\-Element\-Generic} (final Object a\-\_\-document, final Object a\-\_\-element, final String a\-\_\-tag\-Name)
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classorg_1_1jgap_1_1data_1_1_document_builder_base_a4a15b7fd875043a3c021b54766f9a8ca}{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N} = \char`\"{}\$Revision\-: 1.\-8 \$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 22 of file Document\-Builder\-Base.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classorg_1_1jgap_1_1data_1_1_document_builder_base_a9c17627652f63e842a01b23640244164}{\index{org\-::jgap\-::data\-::\-Document\-Builder\-Base@{org\-::jgap\-::data\-::\-Document\-Builder\-Base}!build\-Document@{build\-Document}}
+\index{build\-Document@{build\-Document}!org::jgap::data::DocumentBuilderBase@{org\-::jgap\-::data\-::\-Document\-Builder\-Base}}
+\subsubsection[{build\-Document}]{\setlength{\rightskip}{0pt plus 5cm}Object org.\-jgap.\-data.\-Document\-Builder\-Base.\-build\-Document (
+\begin{DoxyParamCaption}
+\item[{final {\bf I\-Data\-Creators}}]{a\-\_\-dataholder, }
+\item[{final Object}]{a\-\_\-document}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classorg_1_1jgap_1_1data_1_1_document_builder_base_a9c17627652f63e842a01b23640244164}
+Builds a document from the given input (input data + existing document). 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-dataholder} & the input structure holding the data to be represented as a generic document \\
+\hline
+{\em a\-\_\-document} & the document to put the elements in \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+the document built up by adding elements
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 40 of file Document\-Builder\-Base.\-java.
+
+
+
+References org.\-jgap.\-data.\-Document\-Builder\-Base.\-do\-Traverse().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1data_1_1_document_builder_base_a9c17627652f63e842a01b23640244164_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1data_1_1_document_builder_base_a48956cd46c57c9385eb0ff415efb06ba}{\index{org\-::jgap\-::data\-::\-Document\-Builder\-Base@{org\-::jgap\-::data\-::\-Document\-Builder\-Base}!create\-Element@{create\-Element}}
+\index{create\-Element@{create\-Element}!org::jgap::data::DocumentBuilderBase@{org\-::jgap\-::data\-::\-Document\-Builder\-Base}}
+\subsubsection[{create\-Element}]{\setlength{\rightskip}{0pt plus 5cm}abstract Object org.\-jgap.\-data.\-Document\-Builder\-Base.\-create\-Element (
+\begin{DoxyParamCaption}
+\item[{Object}]{a\-\_\-document, }
+\item[{Object}]{a\-\_\-element, }
+\item[{String}]{a\-\_\-tag\-Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{classorg_1_1jgap_1_1data_1_1_document_builder_base_a48956cd46c57c9385eb0ff415efb06ba}
+Creates an element with help for a given document. 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-document} & could be used as factory to create the element with \\
+\hline
+{\em a\-\_\-element} & null or existing element as template \\
+\hline
+{\em a\-\_\-tag\-Name} & name of tag to create for the element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+created element
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Referenced by org.\-jgap.\-data.\-Document\-Builder\-Base.\-create\-Element\-Generic().
+
+\hypertarget{classorg_1_1jgap_1_1data_1_1_document_builder_base_a0e1ea86e20b5ac3273c051fb4c2a86bd}{\index{org\-::jgap\-::data\-::\-Document\-Builder\-Base@{org\-::jgap\-::data\-::\-Document\-Builder\-Base}!create\-Element\-Generic@{create\-Element\-Generic}}
+\index{create\-Element\-Generic@{create\-Element\-Generic}!org::jgap::data::DocumentBuilderBase@{org\-::jgap\-::data\-::\-Document\-Builder\-Base}}
+\subsubsection[{create\-Element\-Generic}]{\setlength{\rightskip}{0pt plus 5cm}Object org.\-jgap.\-data.\-Document\-Builder\-Base.\-create\-Element\-Generic (
+\begin{DoxyParamCaption}
+\item[{final Object}]{a\-\_\-document, }
+\item[{final Object}]{a\-\_\-element, }
+\item[{final String}]{a\-\_\-tag\-Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1data_1_1_document_builder_base_a0e1ea86e20b5ac3273c051fb4c2a86bd}
+Generically creates an element (Template Method). 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-document} & could be used as factory to create the element with \\
+\hline
+{\em a\-\_\-element} & null or existing element as template \\
+\hline
+{\em a\-\_\-tag\-Name} & name of tag to create for the element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+created element
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 99 of file Document\-Builder\-Base.\-java.
+
+
+
+References org.\-jgap.\-data.\-Document\-Builder\-Base.\-create\-Element(), org.\-jgap.\-data.\-Document\-Builder\-Base.\-document\-Append\-Child(), and org.\-jgap.\-data.\-Document\-Builder\-Base.\-element\-Append\-Child().
+
+
+
+Referenced by org.\-jgap.\-data.\-Document\-Builder\-Base.\-do\-Traverse().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1data_1_1_document_builder_base_a0e1ea86e20b5ac3273c051fb4c2a86bd_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1data_1_1_document_builder_base_a8e93e27975995198e29961ff13f8540c}{\index{org\-::jgap\-::data\-::\-Document\-Builder\-Base@{org\-::jgap\-::data\-::\-Document\-Builder\-Base}!document\-Append\-Child@{document\-Append\-Child}}
+\index{document\-Append\-Child@{document\-Append\-Child}!org::jgap::data::DocumentBuilderBase@{org\-::jgap\-::data\-::\-Document\-Builder\-Base}}
+\subsubsection[{document\-Append\-Child}]{\setlength{\rightskip}{0pt plus 5cm}abstract Object org.\-jgap.\-data.\-Document\-Builder\-Base.\-document\-Append\-Child (
+\begin{DoxyParamCaption}
+\item[{Object}]{a\-\_\-document, }
+\item[{Object}]{a\-\_\-element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{classorg_1_1jgap_1_1data_1_1_document_builder_base_a8e93e27975995198e29961ff13f8540c}
+Append a child to a given document. 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-document} & to append element on (e.\-g. org.\-w3c.\-dom.\-Document) \\
+\hline
+{\em a\-\_\-element} & to append to document (e.\-g. org.\-w3c.\-com.\-Element) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a\-\_\-document with appended element (e.\-g. org.\-w3c.\-dom.\-Document)
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Referenced by org.\-jgap.\-data.\-Document\-Builder\-Base.\-create\-Element\-Generic().
+
+\hypertarget{classorg_1_1jgap_1_1data_1_1_document_builder_base_af8fa5961d7a5d6531c085ffd4f9eb2bb}{\index{org\-::jgap\-::data\-::\-Document\-Builder\-Base@{org\-::jgap\-::data\-::\-Document\-Builder\-Base}!do\-Traverse@{do\-Traverse}}
+\index{do\-Traverse@{do\-Traverse}!org::jgap::data::DocumentBuilderBase@{org\-::jgap\-::data\-::\-Document\-Builder\-Base}}
+\subsubsection[{do\-Traverse}]{\setlength{\rightskip}{0pt plus 5cm}void org.\-jgap.\-data.\-Document\-Builder\-Base.\-do\-Traverse (
+\begin{DoxyParamCaption}
+\item[{final {\bf I\-Data\-Element}}]{a\-\_\-elem, }
+\item[{final Object}]{a\-\_\-document, }
+\item[{final Object}]{a\-\_\-\-Element}
+\end{DoxyParamCaption}
+) throws Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1data_1_1_document_builder_base_af8fa5961d7a5d6531c085ffd4f9eb2bb}
+Recursive traversing over data tree containing elements to be transformed into tags. 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-elem} & \hyperlink{interfaceorg_1_1jgap_1_1data_1_1_i_data_element}{I\-Data\-Element} \\
+\hline
+{\em a\-\_\-document} & Document \\
+\hline
+{\em a\-\_\-\-Element} & Element \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Definition at line 66 of file Document\-Builder\-Base.\-java.
+
+
+
+References org.\-jgap.\-data.\-Document\-Builder\-Base.\-create\-Element\-Generic(), and org.\-jgap.\-data.\-Document\-Builder\-Base.\-set\-Attribute().
+
+
+
+Referenced by org.\-jgap.\-data.\-Document\-Builder\-Base.\-build\-Document().
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1jgap_1_1data_1_1_document_builder_base_af8fa5961d7a5d6531c085ffd4f9eb2bb_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classorg_1_1jgap_1_1data_1_1_document_builder_base_a99c384f0c43ac1d35d6a5270f642bec9}{\index{org\-::jgap\-::data\-::\-Document\-Builder\-Base@{org\-::jgap\-::data\-::\-Document\-Builder\-Base}!element\-Append\-Child@{element\-Append\-Child}}
+\index{element\-Append\-Child@{element\-Append\-Child}!org::jgap::data::DocumentBuilderBase@{org\-::jgap\-::data\-::\-Document\-Builder\-Base}}
+\subsubsection[{element\-Append\-Child}]{\setlength{\rightskip}{0pt plus 5cm}abstract Object org.\-jgap.\-data.\-Document\-Builder\-Base.\-element\-Append\-Child (
+\begin{DoxyParamCaption}
+\item[{Object}]{a\-\_\-root\-Element, }
+\item[{Object}]{a\-\_\-child\-Element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{classorg_1_1jgap_1_1data_1_1_document_builder_base_a99c384f0c43ac1d35d6a5270f642bec9}
+Append a child to a given element. 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-root\-Element} & to append child\-Element on (e.\-g. org.\-w3c.\-com.\-Element) \\
+\hline
+{\em a\-\_\-child\-Element} & to append to root\-Element (e.\-g. org.\-w3c.\-com.\-Element) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+root\-Element with appended child\-Element (e.\-g. org.\-w3c.\-com.\-Element)
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Referenced by org.\-jgap.\-data.\-Document\-Builder\-Base.\-create\-Element\-Generic().
+
+\hypertarget{classorg_1_1jgap_1_1data_1_1_document_builder_base_af3b9815c594048ebf431d69392432470}{\index{org\-::jgap\-::data\-::\-Document\-Builder\-Base@{org\-::jgap\-::data\-::\-Document\-Builder\-Base}!set\-Attribute@{set\-Attribute}}
+\index{set\-Attribute@{set\-Attribute}!org::jgap::data::DocumentBuilderBase@{org\-::jgap\-::data\-::\-Document\-Builder\-Base}}
+\subsubsection[{set\-Attribute}]{\setlength{\rightskip}{0pt plus 5cm}abstract void org.\-jgap.\-data.\-Document\-Builder\-Base.\-set\-Attribute (
+\begin{DoxyParamCaption}
+\item[{Object}]{a\-\_\-element, }
+\item[{String}]{a\-\_\-key, }
+\item[{String}]{a\-\_\-value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{classorg_1_1jgap_1_1data_1_1_document_builder_base_af3b9815c594048ebf431d69392432470}
+Sets an attribute for a given Element. 
+\begin{DoxyParams}{Parameters}
+{\em a\-\_\-element} & the Element to set an attribute for (e.\-g. org.\-w3c.\-com.\-Element) \\
+\hline
+{\em a\-\_\-key} & the key of the attribute \\
+\hline
+{\em a\-\_\-value} & the value of the attribute\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Klaus Meffert 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2.\-0 
+\end{DoxySince}
+
+
+Referenced by org.\-jgap.\-data.\-Document\-Builder\-Base.\-do\-Traverse().
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classorg_1_1jgap_1_1data_1_1_document_builder_base_a4a15b7fd875043a3c021b54766f9a8ca}{\index{org\-::jgap\-::data\-::\-Document\-Builder\-Base@{org\-::jgap\-::data\-::\-Document\-Builder\-Base}!C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!org::jgap::data::DocumentBuilderBase@{org\-::jgap\-::data\-::\-Document\-Builder\-Base}}
+\subsubsection[{C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}final String org.\-jgap.\-data.\-Document\-Builder\-Base.\-C\-V\-S\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N = \char`\"{}\$Revision\-: 1.\-8 \$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classorg_1_1jgap_1_1data_1_1_document_builder_base_a4a15b7fd875043a3c021b54766f9a8ca}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000055}{Todo}]add new class Document\-Creator\-Base that reads in data written by \hyperlink{classorg_1_1jgap_1_1data_1_1_document_builder_base}{Document\-Builder\-Base} \end{DoxyRefDesc}
+String containing the C\-V\-S revision. Read out via reflection! 
+
+Definition at line 27 of file Document\-Builder\-Base.\-java.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+L\-D\-H\-\_\-\-Git/src/org/jgap/data/\hyperlink{_document_builder_base_8java}{Document\-Builder\-Base.\-java}\end{DoxyCompactItemize}
